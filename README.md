@@ -1,5 +1,10 @@
 # OntoUML Models Repository
 
+## Contents
+
+- [Instructions](#intructions)
+- [Documentation Example](#documentation-example)
+
 ## NOTICE
 
 The OntoUML model repository is currently being migrated to GitHub with the adoption of the [`ontouml-schema`](https://github.com/OntoUML/ontouml-schema) JSON serialization for easy model processing.
@@ -12,8 +17,9 @@ This repository collects a repository of UFO-based models. Each folder represent
 
 - A YAML file containing the metadata on the publication (detailed below)
 - The BibTex file containing the citation data for each source publication
-- Screenshots of all original diagrams made available in the publications
+- Screenshots of all original diagrams made available in the publications (these must be minified using [tinypng](https://tinypng.com/))
 - The JSON serialization of the ontology
+- The original project file of the ontology in Visual Paradigm (developed with the [`ontouml-vp-plugin`](https://github.com/OntoUML/ontouml-vp-plugin))
 - The diagrams from the Visual Paradigm project
 
 The ontology's folder name should use either the 'name of the ontology + year', or the Google Scholar citation key of the main source publication. The metadata file must follow the structure below:
@@ -30,7 +36,10 @@ purpose: "The purpose for the development of the ontology (e.g., 'conceptual cla
 context: "The context of the ontology's development (e.g., 'research', 'industry', and 'classroom')."
 main-source: "The BibTex id of the main source publication for the represented ontology."
 style: "Which styles of representation were adopted in the ontology, for example, 'specialization', in the direct specialization UFO concepts, and 'stereotyping', in the use of OntoUML stereotypes."
+urls: "An object listing URLs of related resources to the documented ontology."
 ```
+
+For more details on how to submit a model, visit our [GitHub Wiki](https://github.com/unibz-core/ontouml-models/wiki). Feel free to also post your questions as [issues](https://github.com/unibz-core/ontouml-models/issues), and to open [pull requests](https://github.com/unibz-core/ontouml-models/pulls) with your contributions.
 
 ## Documentation Example
 
@@ -43,11 +52,15 @@ nardi2015commitment/
 │   ├── diagram2.png
 │   ├── diagram3.png
 ├── new diagrams/
-│   ├── diagram1.png
-│   ├── diagram2.png
-│   ├── diagram3.png
+│   ├── nardi2013towards-diagram1.png
+│   ├── nardi2013towards-diagram2.png
+│   ├── nardi2013towards-diagram3.png
+│   ├── nardi2015commitment-diagram1.png
+│   ├── nardi2015commitment-diagram2.png
+│   ├── nardi2015commitment-diagram3.png
 ├── metadata.yaml
 ├── ontology.json
+├── ontology.vpp
 ├── references.bib
 ```
 
@@ -68,6 +81,8 @@ context: "research"
 main-source: "nardi2015commitment"
 style:
   - "ontouml"
+urls:
+  "github repo": "https://github.com/unibz-core/UFO-S"
 ```
 
 The contents of the BibTex references file can be as follows:
