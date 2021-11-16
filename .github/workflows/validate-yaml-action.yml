@@ -1,0 +1,13 @@
+name: Validate Metadata File
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: YAML Schema Validator
+        uses: nwisbeta/validate-yaml-schema@v1.0.3
+        with:
+          yamlSchemasJson: |
+            {
+              "metadata-schema.json": [**/metadata.yml]
+            }

@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "descriptions": "The title of the ontology as given by its authors or by the documenting person.\n\nExamples: `UFO-S`, `Common Ontology of Value and Risk`, `Music Ontology Refactored`",
+      "type": "string",
+      "minLength": 1
+    },
+    "created-at": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "The year of the first publication of the ontology.\n\nExample: `2014`",
+          "type": "integer"
+        }
+      ]
+    },
+    "last-update": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "The year of the most recent publication of the ontology, if different from `creation-year`.\n\nExample: `2018`",
+          "type": "integer"
+        }
+      ]
+    },
+    "domain": {
+      "descriptions": "The list of domains covered in the ontology.\n\nExamples: `services`, `value`, `risk`, `music`.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "editorial-notes": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "Notes on the ontology documentation process.\n\nExample: `Ontology was originally designed in Portuguese`.",
+          "type": "string"
+        }
+      ]
+    },
+    "types": {
+      "descriptions": "The list of types that apply to the ontology, either claimed by the authors or assessed by the documenting person.\n\nExamples: `core`, `domain`, `application`.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "language": {
+      "descriptions": "The language in which the labels of the ontology are written. This field should use IANA's standard for language tags, which are listed here: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry\n\nExamples: `en` for English, `pt-br` for Brazilian Portuguese.",
+      "type": "string"
+    },
+    "purpose": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "The list of goals that motivated the development of the ontology.\n\nExamples: `conceptual clarification`, `database design`, `api design`, `interoperability`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "context": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "The list of contexts in which the ontology was developed represented as an array.\n\nExamples: `research`, `industry`, `classroom`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "main-source": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "The BibTex id of the main source publication for the ontology, which should be available in `references.bib`; use only a single source per folder giving preference for documenting the latest version of the model.\n\nExamples: `nardi2015commitment`.",
+          "type": "string"
+        }
+      ]
+    },
+    "style": {
+      "descriptions": "The list of representation styles adopted in the ontology.\n\nExamples: `ontouml` if the ontology was designed only using OntoUML stereotypes; `ufo` if the ontology was developed by extending UFO concepts.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "urls": {
+      "oneOf": [
+        {
+          "type": null
+        },
+        {
+          "descriptions": "An object listing URLs of related resources to the documented ontology.\n\nExamples: \"github\": `\"https://github.com/unibz-core/UFO-S\"`.",
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "required": [
+    "title", "domain", "types", "language", "style"
+  ]
+}
