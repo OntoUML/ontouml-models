@@ -1,5 +1,10 @@
 # OntoUML Models Repository
 
+## Contents
+
+- [Instructions](#intructions)
+- [Documentation Example](#documentation-example)
+
 ## NOTICE
 
 The OntoUML model repository is currently being migrated to GitHub with the adoption of the [`ontouml-schema`](https://github.com/OntoUML/ontouml-schema) JSON serialization for easy model processing.
