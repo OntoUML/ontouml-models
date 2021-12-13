@@ -1,0 +1,1092 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/SEBIM#"
+     xml:base="http://www.semanticweb.org/SEBIM"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:geo="http://www.opengis.net/ont/geosparql#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="https://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:gufo1="http://purl.org/nemo/gufo#"
+     xmlns:sebim="http://www.semanticweb.org/SEBIM#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/SEBIM#">
+        <owl:imports rdf:resource="http://purl.org/nemo/gufo#/1.0.0"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#isMaterialClassificationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/SEBIM#isMaterialClassificationOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/SEBIM#MaterialClassification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/SEBIM#Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#isStyleZoneOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/SEBIM#isStyleZoneOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/SEBIM#StyleZone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#asWkt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/SEBIM#asWkt">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#hasQualityValue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/SEBIM#Geometry"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#AcousticPerformance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#AcousticPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Adjacency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Adjacency">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Area">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BicycleFacilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#BicycleFacilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BikePath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#BikePath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CityData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BuildingCertified -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#BuildingCertified">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CityData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BuildingLifecyleImpactReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#BuildingLifecyleImpactReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BusStop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#BusStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CityData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Certificate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Certificate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Certification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Certification">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#CertificationArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#CertificationArea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#CityData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#CityData">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Construction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Construction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#ConstructionDemolitionWaste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#ConstructionDemolitionWaste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#ConstructionIndoorAirQualityPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#ConstructionIndoorAirQualityPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#CoolingTowerWaterUse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#CoolingTowerWaterUse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#WaterEfficiency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Daylight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Daylight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Description -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Description">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#EnergyAtmosphere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#EnergyAtmosphere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#EnvironmentalProductDeclaration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#EnvironmentalProductDeclaration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Equipment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Floor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Floor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Geometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Geometry">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#GreenVehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#GreenVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#HeatIslandReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#HeatIslandReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#HighPrioritySite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#HighPrioritySite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Id -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Id">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#IndoorAirQualityAssessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#IndoorAirQualityAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#IndoorAirQualityStrategy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#IndoorAirQualityStrategy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#IndoorWaterUseReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#IndoorWaterUseReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#WaterEfficiency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#IntegrativeProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#IntegrativeProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#InteriorLighting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#InteriorLighting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Intersection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Intersection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LEDDCertified -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LEDDCertified">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LEEDGold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LEEDGold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LEEDPlatinum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LEEDPlatinum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LEEDSilver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LEEDSilver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LightPollutionReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LightPollutionReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LocationTransportation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LocationTransportation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LowEmittingMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#LowEmittingMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Material -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Material">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#MaterialClassification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#MaterialClassification">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#MaterialIngredients -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#MaterialIngredients">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#MaterialResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#MaterialResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#NeighborhoodDevelopmentLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#NeighborhoodDevelopmentLocation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#OpenSpace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#OpenSpace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#OutdoorWaterUseReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#OutdoorWaterUseReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#WaterEfficiency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Park -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Park">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CityData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#PbtSourceReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#PbtSourceReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#QualityTransport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#QualityTransport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#QualityView -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#QualityView">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#RainwaterManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#RainwaterManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#ReducedParkingFootprint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#ReducedParkingFootprint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#RenewableEnergyProduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#RenewableEnergyProduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#EnergyAtmosphere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Score -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Score">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SensitiveLandProtection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SensitiveLandProtection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SiteAssessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SiteAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SiteDevelopment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SiteDevelopment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SiteMasterPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SiteMasterPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SourceReductionMercury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SourceReductionMercury">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SourcingRawMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SourcingRawMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Space -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Space">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#StyleZone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#StyleZone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SurroundingDensityDiverseUses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SurroundingDensityDiverseUses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SustainableSite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#SustainableSite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#TenantDesignConstructionGuidelines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#TenantDesignConstructionGuidelines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#ThermalComfort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#ThermalComfort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#ValueIFC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#ValueIFC">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#WaterEfficiency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#WaterEfficiency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#CertificationArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#WaterMetering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#WaterMetering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/SEBIM#WaterEfficiency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Zone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/SEBIM#Zone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Andar1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Andar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Floor"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Andar2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Andar2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Floor"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Apartamento101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Apartamento101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Andar1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Apartamento102 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Apartamento102">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Andar1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Apartamento201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Apartamento201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Andar2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Apartamento202 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Apartamento202">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Andar2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#AreaEdificio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#AreaEdificio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Area"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+        <gufo1:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</gufo1:hasQualityValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#AreaVegetacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#AreaVegetacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Area"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#EspacoVegetacao"/>
+        <gufo1:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">350.0</gufo1:hasQualityValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BikePath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#BikePath">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BuildingCertified -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#BuildingCertified">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#BusStop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#BusStop">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Certificado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Certificado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#LEEDPlatinum"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Certificate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Certificate">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Certification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Certification">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#CertificationArea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#CertificationArea">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#CityData -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#CityData">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Construction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Construction">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Edifício -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Edifício">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Construction"/>
+        <gufo1:participatedIn rdf:resource="http://www.semanticweb.org/SEBIM#Certificado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Equipment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Equipment">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#EspacoVegetacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#EspacoVegetacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Zone"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Floor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Floor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Geometry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Geometry">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#IdEdificio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#IdEdificio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Id"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+        <gufo1:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">755</gufo1:hasQualityValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#LocalPontodeOnibus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#LocalPontodeOnibus">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Geometry"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#PontodeOnibus"/>
+        <asWkt rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (612393.83 7796417.21)</asWkt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Localizacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Localizacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Geometry"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+        <asWkt rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (612393.83 7796417.21)</asWkt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Material -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Material">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#MaterialClassification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#MaterialClassification">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#NomeEdificio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#NomeEdificio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Description"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+        <gufo1:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akodon</gufo1:hasQualityValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#PanielFotovoltaico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#PanielFotovoltaico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Equipment"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Park -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Park">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#PontodeOnibus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#PontodeOnibus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#BusStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#RackBike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#RackBike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#MaterialClassification"/>
+        <isMaterialClassificationOf rdf:resource="http://www.semanticweb.org/SEBIM#SuporteBicicleta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Space -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Space">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#SuporteBicicleta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#SuporteBicicleta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#Material"/>
+        <gufo1:isComponentOf rdf:resource="http://www.semanticweb.org/SEBIM#Edifício"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#VagasBicicletas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#VagasBicicletas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#ValueIFC"/>
+        <gufo1:inheresIn rdf:resource="http://www.semanticweb.org/SEBIM#SuporteBicicleta"/>
+        <gufo1:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</gufo1:hasQualityValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Vegetacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Vegetacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/SEBIM#StyleZone"/>
+        <isStyleZoneOf rdf:resource="http://www.semanticweb.org/SEBIM#EspacoVegetacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/SEBIM#Zone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/SEBIM#Zone">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#AcousticPerformance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#ConstructionIndoorAirQualityPlan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#Daylight"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#IndoorAirQualityAssessment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#IndoorAirQualityStrategy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#InteriorLighting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#LowEmittingMaterial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#QualityView"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#ThermalComfort"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#Area"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#Description"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#Geometry"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#Id"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#Score"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#BicycleFacilities"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#GreenVehicle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#HighPrioritySite"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#NeighborhoodDevelopmentLocation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#QualityTransport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#ReducedParkingFootprint"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SensitiveLandProtection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SurroundingDensityDiverseUses"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#BuildingLifecyleImpactReduction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#ConstructionDemolitionWaste"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#EnvironmentalProductDeclaration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#MaterialIngredients"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#PbtSourceReduction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SourceReductionMercury"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SourcingRawMaterial"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#CoolingTowerWaterUse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#IndoorWaterUseReduction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#OutdoorWaterUseReduction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#WaterMetering"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#EnergyAtmosphere"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#IndoorEnvironmentalQuality"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#IntegrativeProcess"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#LocationTransportation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#MaterialResource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SustainableSite"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#WaterEfficiency"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#HeatIslandReduction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#LightPollutionReduction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#OpenSpace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#RainwaterManagement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SiteAssessment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SiteDevelopment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#SiteMasterPlan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/SEBIM#TenantDesignConstructionGuidelines"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
