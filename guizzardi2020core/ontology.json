@@ -1,0 +1,157 @@
+{
+  "id" : "Ovo77b6AUBwohwBO",
+  "name" : "ontology",
+  "description" : null,
+  "type" : "Project",
+  "model" : {
+    "id" : "Ovo77b6AUBwohwBO_root",
+    "name" : "ontology",
+    "description" : null,
+    "type" : "Package",
+    "propertyAssignments" : null,
+    "contents" : [ {
+      "id" : "d_yf7b6AUBwohwbN",
+      "name" : "Agent",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "category",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : false,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "functional-complex", "collective", "relator" ]
+    }, {
+      "id" : "l4qf7b6AUBwohwbb",
+      "name" : "Action",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "event",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : null,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "event" ]
+    }, {
+      "id" : "Cq6f7b6AUBwohwbm",
+      "name" : null,
+      "description" : null,
+      "type" : "Relation",
+      "propertyAssignments" : null,
+      "stereotype" : "participation",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : [ {
+        "id" : "Cq6f7b6AUBwohwbn",
+        "name" : null,
+        "description" : null,
+        "type" : "Property",
+        "propertyAssignments" : null,
+        "stereotype" : null,
+        "isDerived" : false,
+        "isReadOnly" : true,
+        "isOrdered" : false,
+        "cardinality" : "1",
+        "propertyType" : {
+          "id" : "d_yf7b6AUBwohwbN",
+          "type" : "Class"
+        },
+        "subsettedProperties" : null,
+        "redefinedProperties" : null,
+        "aggregationKind" : "NONE"
+      }, {
+        "id" : "Cq6f7b6AUBwohwbp",
+        "name" : null,
+        "description" : null,
+        "type" : "Property",
+        "propertyAssignments" : null,
+        "stereotype" : null,
+        "isDerived" : false,
+        "isReadOnly" : false,
+        "isOrdered" : false,
+        "cardinality" : "1..*",
+        "propertyType" : {
+          "id" : "l4qf7b6AUBwohwbb",
+          "type" : "Class"
+        },
+        "subsettedProperties" : null,
+        "redefinedProperties" : null,
+        "aggregationKind" : "NONE"
+      } ]
+    } ]
+  },
+  "diagrams" : [ {
+    "id" : "Kq_77b6AUBwohwWd",
+    "name" : "My First Diagram",
+    "description" : null,
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "Ovo77b6AUBwohwBO_root",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "l4qf7b6AUBwohwba",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "l4qf7b6AUBwohwbb",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "l4qf7b6AUBwohwba_shape",
+        "type" : "Rectangle",
+        "x" : 143,
+        "y" : 206,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "d_yf7b6AUBwohwbM",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "d_yf7b6AUBwohwbN",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "d_yf7b6AUBwohwbM_shape",
+        "type" : "Rectangle",
+        "x" : 143,
+        "y" : 59,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "aq6f7b6AUBwohwbr",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "Cq6f7b6AUBwohwbm",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "aq6f7b6AUBwohwbr_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 183,
+          "y" : 100
+        }, {
+          "x" : 183,
+          "y" : 205
+        } ]
+      },
+      "source" : {
+        "id" : "d_yf7b6AUBwohwbM",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "l4qf7b6AUBwohwba",
+        "type" : "ClassView"
+      }
+    } ]
+  } ]
+}
