@@ -1,1 +1,0 @@
-Waiting the information from the author if the version to be considered is the one from the most recebt paper or the one from the specification website.
