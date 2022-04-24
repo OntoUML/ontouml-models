@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/zhou2017hazard/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Hazard Ontology";
+    mod:acronym "HO";
+    dct:issued "2017"^^xsd:gYear;
+    dct:modified "2017"^^xsd:gYear;
+    dct:subject "hazard";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "The paper in which the hazard ontology is proposed contains use cases that extend the ontology. These were not included but in the folder hazard-ontology-use-cases2017.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <zhou2017ontological>;
+    dct:conformsTo ontouml:UfoStyle.

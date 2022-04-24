@@ -1,0 +1,26 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "UFO-S";
+    dct:issued "2013"^^xsd:gYear;
+    dct:modified "2016"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0003-3149-7577>, <https://orcid.org/0000-0002-3452-553X>, <https://orcid.org/0000-0002-9819-3781>, <https://orcid.org/0000-0003-0214-8853>, <https://orcid.org/0000-0001-7118-1353>, <https://orcid.org/0000-0001-7432-7653>, <https://orcid.org/0000-0003-2528-3118>;
+    dct:subject "services";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "The project contains constraints that cannot be serialized into ontouml-schema at the moment of writing.\nAt times, there is no hint in the diagram about a relation's direction, so other diagrams are considered in the decision.\n";
+    dct:type ontouml:Core;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <nardi2014formalization>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dcat:landingPage <https://github.com/unibz-core/UFO-S>.

@@ -1,0 +1,24 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontology for Value Networks with Geographic Information";
+    dct:issued "2022"^^xsd:gYear;
+    dct:modified "2022"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0002-6537-3006>;
+    dct:subject "value networks";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "The ontology was developed in the context of a master thesis which isn't yet published.\nThe ontology contains multiples derivations of the same class, which cannot be represented in Visual Paradigm. In these cases, additional derivations were represented as dependency links and are not being currently serialized to JSON.\nThe cardinalities in derivation link were represented in UML notes.\nThere is a collection of generalizations of relators into a single category near a {disjoint} constraint. Given the context, the generalizations were interpreted as part of the same set, and the category's \"restrictedTo\" was set to \"relator\".\n";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:LanguageEngineering;
+    ontouml:context ontouml:Research;
+    dct:conformsTo ontouml:OntoumlStyle.

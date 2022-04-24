@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/amaral2020game-theory/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Game Theory Ontology";
+    dct:issued "2021"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0003-0460-2271>, <https://orcid.org/0000-0003-3655-0218>, <https://orcid.org/0000-0002-5385-5761>, <https://orcid.org/0000-0002-3452-553X>;
+    dct:subject "game theory", "risk", "value", "enterprise architecture";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "The main contribution of the paper is based on the COVER ontology, which COVER was not reproduced. However, COVER is available in this dataset as a standalone contribution.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1007/978-3-030-74196-9_5>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>.

@@ -1,0 +1,24 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/idaf2013/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Structure of the IDAF Ontology";
+    dct:issued "2013"^^xsd:gYear;
+    dct:modified "2013"^^xsd:gYear;
+    dct:subject "organizational structures";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "Model about the structure of the Agricultural and Forestry Defense Institute of Espírito Santo (in Portuguse: Instituto de Defesa Agropecuária e Florestal do Espírito Santo (IDAF)). It was developed by a PhD student in the context of a postgraduate course in ontology modeling. The model was built using information from: IDAF's website (https://idaf.es.gov.br), an informal interview with a IDAF's employee, and the laws: Lei Complementar 245 - Plano de Cargos e Salários and Lei Complementar 197 - Estrutura";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:Learning;
+    ontouml:context ontouml:Classroom;
+    dct:source <idaf2013>;
+    dct:conformsTo ontouml:OntoumlStyle.

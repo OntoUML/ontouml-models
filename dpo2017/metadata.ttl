@@ -1,0 +1,27 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/dpo2017/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Design Process Ontology";
+    mod:acronym "DPO";
+    dct:issued "2016"^^xsd:gYear;
+    dct:modified "2017"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0003-2005-8288>, <https://orcid.org/0000-0002-4408-7553>, <https://orcid.org/0000-0002-6225-9478>, <https://orcid.org/0000-0001-9919-2089>, <https://orcid.org/0000-0002-3452-553X>;
+    dct:subject "design process", "software", "software engineering";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "The ontology documented here is part of the SEON ontology network and extends the SPO and the RSRO ontologies\n";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://dev.nemo.inf.ufes.br/seon/DPO.html>, <https://doi.org/10.1007/978-3-319-49004-5_34>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/DPO.html>.

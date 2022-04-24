@@ -1,0 +1,24 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/repa2021public-administration/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Public Administration Ontology Model";
+    dct:issued "2015"^^xsd:gYear;
+    dct:modified "2021"^^xsd:gYear;
+    dct:subject "e-government", "public administration";
+    dcat:theme <http://id.loc.gov/authorities/classification/J>;
+    skos:editorialNote "A fragment of the PA ontology model.\nThe author makes use of a «viewpoint» stereotype, which an extension of OntoUML proposed in the following work: https://doi.org/10.1007/978-1-4614-7540-8_34\n";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <repa2021digital>;
+    dct:conformsTo ontouml:OntoumlStyle.

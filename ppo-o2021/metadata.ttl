@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/ppo-o2021/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "PreProcessing Operators Ontology";
+    mod:acronym "PPO-O";
+    dct:issued "2021"^^xsd:gYear;
+    dct:modified "2021"^^xsd:gYear;
+    dct:subject "data preprocessing", "data mining";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "According to the authors, \"the purpose of [PPO-O] is to identify and represent the concepts related to the preparation of \"cured\" raw data, that is, data significantly selected, more organized, easier to analyze and understand. The idea is to facilitate the generation of training and test data to be consumed by ML algorithms.\"";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <moura2021well>;
+    dct:conformsTo ontouml:OntoumlStyle.

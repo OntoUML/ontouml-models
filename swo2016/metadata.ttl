@@ -1,0 +1,27 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/swo2016/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Software Ontology";
+    mod:acronym "SwO";
+    dct:issued "2016"^^xsd:gYear;
+    dct:modified "2018"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0001-5565-3621>;
+    dct:subject "software engineering";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "The official specification is available at the link provided below. There is an upgraded version of the ontology available at its main source (duarte2018ontological) however the former was chosen to be used here because it is representable in plain OntoUML, while the latter can only be related to UFO elements. The original diagram presents concepts in green, which are not part of the SWO ontology. Hence, only the concepts from this ontology that were directly used in the SWO ontology were here used.";
+    dct:type ontouml:Core;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Interoperability;
+    ontouml:context ontouml:Research;
+    dct:source <duarte2018ontological>;
+    dct:conformsTo ontouml:UfoStyle;
+    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/SwO.html>.

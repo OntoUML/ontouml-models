@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/weigand2021artifact/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Design Science Artifact Ontology";
+    dct:issued "2020"^^xsd:gYear;
+    dct:modified "2021"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0002-6035-9045>;
+    dct:subject "design science", "IT artifact", "information systems";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "Some classes are in gray in certain diagrams and pink in other. This raises a question about the value of \"restrictedTo\" they have assigned to them. In the case of \"Technical Object\", I'm keeping the inherited/default value of \"functional complex\" in these cases as it makes sense in the context and seems to be the most reasonable choice. In the case of \"Artifact design\", however, I'm setting \"restrictedTo\" to \"relator\" as it was set to green in Visual Paradigm's OntoUML plugin, even though the context suggests it should also be a \"functional complex\".\nIn different diagrams, the «characterization» relation \"Attributed Capacities\" is set in opposite direction. We are keeping the direction from the «quality» to the «roleMixin».\n";
+    dct:type ontouml:Core;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <weigand2021designscience>;
+    dct:conformsTo ontouml:OntoumlStyle.

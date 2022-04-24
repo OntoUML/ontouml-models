@@ -1,0 +1,24 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/hazard-ontology-train-control2017/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Train Control System (Hazard Ontology Use Case)";
+    dct:issued "2017"^^xsd:gYear;
+    dct:modified "2017"^^xsd:gYear;
+    dct:subject "train control system", "safety", "hazard";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "Domain model described in the reference works used as examples for the Hazard Ontology.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <zhou2017ontological>;
+    dct:conformsTo ontouml:OntoumlStyle.

@@ -1,0 +1,26 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/ferreira2015ontoemergeplan/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontology for Emergency Plans";
+    mod:acronym "OntoEmergePlan";
+    dct:issued "2013"^^xsd:gYear;
+    dct:modified "2015"^^xsd:gYear;
+    dct:contributor <https://dblp.org/pid/183/7439>, <https://orcid.org/0000-0002-4547-7000>, <https://orcid.org/0000-0002-7930-612X>, <https://dblp.org/pid/42/7543>, <https://orcid.org/0000-0002-5385-5761>, <https://orcid.org/0000-0001-5161-8810>, <https://orcid.org/0000-0002-2992-3429>;
+    dct:subject "emergency", "risk", "security", "emergency management";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "The VP model was built over obtained XMI file. The complete model has more diagrams than the ones here modeled, however, just 9 of these were presented in the publications - these were the only ones that were re-modeled using VP. Some associations redefinitions and subsettings were not possible to be modeled because the related association end roles were not found. When imported from the XMI file, duplicated classes were identified and merged. The author comments in Portuguese were removed. Classes without any view were also removed. The class Geographical Region had two different stereotypes in two diagrams - Kind and Category. For the better representation we defined it only as a category. Some classes were defined in two different packages - the duplicates were removed. During the importation some classes were defined in the incorrect package - these were moved to their correct package.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://dblp.org/rec/conf/iscram/FerreiraMCBSCB15>, <http://objdig.ufrj.br/15/teses/867022.pdf>;
+    dct:conformsTo ontouml:OntoumlStyle.

@@ -1,0 +1,24 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/ramirez2015userfeedback/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "User Feedback Ontology";
+    dct:issued "2015"^^xsd:gYear;
+    dct:modified "2015"^^xsd:gYear;
+    dct:subject "online user feedback", "software engineering", "requirements engineering";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "The ontology contains OCL constraints represented in UML notes.\nAggregations with empty diamond were interpreted as «componentOf» relations, following OntoUML's original proposal.\nCertain classes, such as the «kind» Person, have been extracted from the text and included to diagrams.\n";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:InformationRetrieval;
+    ontouml:context ontouml:Research;
+    dct:source <ramirez2015ontology>;
+    dct:conformsTo ontouml:OntoumlStyle.

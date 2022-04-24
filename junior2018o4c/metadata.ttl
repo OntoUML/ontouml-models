@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/junior2018o4c/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontology for Concerns";
+    mod:acronym "O4C";
+    dct:issued "2018"^^xsd:gYear;
+    dct:modified "2018"^^xsd:gYear;
+    dct:subject "aspect-oriented requirements engineering", "requirements engineering", "software engineering", "concerns", "cross-cutting concerns";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "This is an interesting application of OntoUML which is essentially used to drive the development of a metamodel for automated modeling appproach. Some diagrams show the application of the ontology's concepts as a UML-based language using stereotypes.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:SoftwareEngineering;
+    ontouml:context ontouml:Research;
+    dct:source <junior2018obascid>;
+    dct:conformsTo ontouml:OntoumlStyle.

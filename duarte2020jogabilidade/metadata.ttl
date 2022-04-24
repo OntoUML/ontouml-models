@@ -1,0 +1,24 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Gameplay Ontology";
+    dct:issued "2020"^^xsd:gYear;
+    dct:contributor <https://www.linkedin.com/in/leonardo-sales-ribeiro-duarte-34aa75144/?originalSubdomain=br>;
+    dct:subject "games";
+    dcat:theme <http://id.loc.gov/authorities/classification/G>;
+    skos:editorialNote "The ontology was documented based on the version on the author's masters dissertation. The stereotype \"Situação\" was replaced by its English named version \"situation\". Associations named \"participa\" and \"dispara\" were replaced, respectively, by the stereotype \"participation\" and \"triggers\".";
+    dct:type ontouml:Domain;
+    dct:language "pt-br";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://app.uff.br/riuff/handle/1/14831>;
+    dct:conformsTo ontouml:OntoumlStyle.

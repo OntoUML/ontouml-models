@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/fischer2018ontorea/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "OntoREA© Accounting and Finance Model";
+    dct:issued "2017"^^xsd:gYear;
+    dct:modified "2019"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0003-1868-7018>, <https://dblp.org/pid/253/7047>, <https://orcid.org/0000-0003-3678-9229>, <https://orcid.org/0000-0002-9071-9523>, <https://dblp.org/pid/253/7045>, <https://dblp.org/pid/229/6915>;
+    dct:subject "finance", "accounting", "economics";
+    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    skos:editorialNote "This model corresponds to the one proposed in the 2019 paper by Schwaiger et al.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1007/978-3-030-35151-9_4>, <https://dblp.org/rec/conf/vmbo/Fischer-Pauzenberger18>, <https://doi.org/10.1007/978-3-030-02302-7_24>, <https://doi.org/10.1007/978-3-319-70241-4_6>, <https://doi.org/10.1007/978-3-319-69904-2_38>, <https://doi.org/10.7250/csimq.2017-11.02>;
+    dct:conformsTo ontouml:OntoumlStyle.

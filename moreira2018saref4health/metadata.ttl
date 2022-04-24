@@ -1,0 +1,25 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/moreira2018saref4health/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ambient Assisted Living Ontology";
+    dct:issued "2018"^^xsd:gYear;
+    dct:modified "2020"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0001-7118-1353>, <https://orcid.org/0000-0001-7432-7653>;
+    dct:subject "e-health subsystems";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "The OntoUML representation of the SAREF ontology contains OWL constraints that cannot be fully represented here.\n";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:DataPublication;
+    ontouml:context ontouml:Research;
+    dct:source <moreira2020saref4health>;
+    dct:conformsTo ontouml:OntoumlStyle.

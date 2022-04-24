@@ -1,0 +1,21 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/construction-model/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "The Construction Model";
+    dct:subject "construction";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "Model created by students for a university project.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:Learning, ontouml:ConceptualClarification;
+    ontouml:context ontouml:Classroom;
+    dct:conformsTo ontouml:OntoumlStyle.

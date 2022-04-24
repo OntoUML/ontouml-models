@@ -1,42 +1,41 @@
+@prefix : <http://purl.org/ontouml-models/dataset/spmo2017/>.
 @prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-@prefix spmo2017: <http://purl.org/ontouml-models/dataset/spmo2017/>.
-
-spmo2017:R3TVH36GAqACBQBO rdf:type ontouml:Project;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:R3TVH36GAqACBQBO rdf:type ontouml:Project;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "ontology"@en;
-    ontouml:model spmo2017:R3TVH36GAqACBQBO_root;
-    ontouml:diagram <http://purl.org/ontouml-models/dataset/spmo2017/027VH36GAqACBQWg>, spmo2017:DnGNH36GAqACBQcC, <http://purl.org/ontouml-models/dataset/spmo2017/1IVTH36GAqACBQtE>.
-spmo2017:R3TVH36GAqACBQBO_root rdf:type ontouml:Package;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:model :R3TVH36GAqACBQBO_root;
+    ontouml:diagram <http://purl.org/ontouml-models/dataset/spmo2017/027VH36GAqACBQWg>, :DnGNH36GAqACBQcC, <http://purl.org/ontouml-models/dataset/spmo2017/1IVTH36GAqACBQtE>.
+:R3TVH36GAqACBQBO_root rdf:type ontouml:Package;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "ontology"@en;
-    ontouml:containsModelElement spmo2017:hWYnHv6AUB1CSnTw.
-spmo2017:hWYnHv6AUB1CSnTw rdf:type ontouml:Package;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:containsModelElement :hWYnHv6AUB1CSnTw.
+:hWYnHv6AUB1CSnTw rdf:type ontouml:Package;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "SPMO"@en;
-    ontouml:containsModelElement spmo2017:gLMnHv6AUB1CSnVD, <http://purl.org/ontouml-models/dataset/spmo2017/4eZnHv6AUB1CSnV7>, spmo2017:qB0XHv6AUB1CSnZe, spmo2017:amsXHv6AUB1CSnZl, <http://purl.org/ontouml-models/dataset/spmo2017/.ZebH36GAqACBQ7g>.
-spmo2017:gLMnHv6AUB1CSnVD rdf:type ontouml:Package;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:containsModelElement :gLMnHv6AUB1CSnVD, <http://purl.org/ontouml-models/dataset/spmo2017/4eZnHv6AUB1CSnV7>, :qB0XHv6AUB1CSnZe, :amsXHv6AUB1CSnZl, <http://purl.org/ontouml-models/dataset/spmo2017/.ZebH36GAqACBQ7g>.
+:gLMnHv6AUB1CSnVD rdf:type ontouml:Package;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "WBS"@en;
-    ontouml:containsModelElement spmo2017:kYQ1H36GAqACBQW5, spmo2017:jZI1H36GAqACBQXK, spmo2017:ZzY1H36GAqACBQXT, <http://purl.org/ontouml-models/dataset/spmo2017/6ez1H36GAqACBQZn>, spmo2017:Q031H36GAqACBQaF, spmo2017:LPwNH36GAqACBQa0.
+    ontouml:containsModelElement :kYQ1H36GAqACBQW5, :jZI1H36GAqACBQXK, :ZzY1H36GAqACBQXT, <http://purl.org/ontouml-models/dataset/spmo2017/6ez1H36GAqACBQZn>, :Q031H36GAqACBQaF, :LPwNH36GAqACBQa0.
 <http://purl.org/ontouml-models/dataset/spmo2017/4eZnHv6AUB1CSnV7> rdf:type ontouml:Package;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Estimated Process"@en;
-    ontouml:containsModelElement spmo2017:HtXNH36GAqACBQes, <http://purl.org/ontouml-models/dataset/spmo2017/10YtH36GAqACBQfH>, spmo2017:xVMtH36GAqACBQfY, spmo2017:k4KtH36GAqACBQfl, spmo2017:s6_tH36GAqACBQhV, <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhf>, <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>, <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhz>, spmo2017:dV6dH36GAqACBQiS, <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQii>, spmo2017:tZUDH36GAqACBQlG, spmo2017:qn0DH36GAqACBQlK, spmo2017:htKDH36GAqACBQlW, <http://purl.org/ontouml-models/dataset/spmo2017/ZywTH36GAqACBQq.>, spmo2017:mJoTH36GAqACBQrE, spmo2017:sh4TH36GAqACBQrM, spmo2017:fjkTH36GAqACBQrU, spmo2017:Y41jH36GAqACBQp0, <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqZ>.
-spmo2017:qB0XHv6AUB1CSnZe rdf:type ontouml:Package;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:containsModelElement :HtXNH36GAqACBQes, <http://purl.org/ontouml-models/dataset/spmo2017/10YtH36GAqACBQfH>, :xVMtH36GAqACBQfY, :k4KtH36GAqACBQfl, :s6_tH36GAqACBQhV, <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhf>, <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>, <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhz>, :dV6dH36GAqACBQiS, <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQii>, :tZUDH36GAqACBQlG, :qn0DH36GAqACBQlK, :htKDH36GAqACBQlW, <http://purl.org/ontouml-models/dataset/spmo2017/ZywTH36GAqACBQq.>, :mJoTH36GAqACBQrE, :sh4TH36GAqACBQrM, :fjkTH36GAqACBQrU, :Y41jH36GAqACBQp0, <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqZ>.
+:qB0XHv6AUB1CSnZe rdf:type ontouml:Package;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Tracked Process"@en;
-    ontouml:containsModelElement spmo2017:iKdbH36GAqACBQ8i, <http://purl.org/ontouml-models/dataset/spmo2017/kOD7H36GAqACBQ.9>, spmo2017:fyIHH36GAqACBQ_y, spmo2017:YOPbH36GAqACBQ89, spmo2017:FArnH36GAqACBREt, spmo2017:vj_nH36GAqACBRFM, spmo2017:IIA3H36GAqACBRI7.
-spmo2017:amsXHv6AUB1CSnZl rdf:type ontouml:Package;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:containsModelElement :iKdbH36GAqACBQ8i, <http://purl.org/ontouml-models/dataset/spmo2017/kOD7H36GAqACBQ.9>, :fyIHH36GAqACBQ_y, :YOPbH36GAqACBQ89, :FArnH36GAqACBREt, :vj_nH36GAqACBRFM, :IIA3H36GAqACBRI7.
+:amsXHv6AUB1CSnZl rdf:type ontouml:Package;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed Process"@en;
-    ontouml:containsModelElement spmo2017:l5_VH36GAqACBQWz, <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>, spmo2017:WuWtH36GAqACBQf3, spmo2017:QGhtH36GAqACBQgU, spmo2017:TcptH36GAqACBQgf, spmo2017:ChNtH36GAqACBQgs, spmo2017:qlDtH36GAqACBQg3, spmo2017:HRLtH36GAqACBQhC, spmo2017:PnHtH36GAqACBQhN, spmo2017:x7rzH36GAqACBQyo, <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00>, <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2F>, spmo2017:RSvLH36GAqACBQ2O, <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2X>, spmo2017:ClQrH36GAqACBQ2g, <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>, <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t>, <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d>, spmo2017:a3j9H36GAqACBQjy, spmo2017:nQ39H36GAqACBQkS, spmo2017:zbf9H36GAqACBQko, spmo2017:yG2DH36GAqACBQl0, spmo2017:EVhDH36GAqACBQmO, spmo2017:z_RDH36GAqACBQmS, <http://purl.org/ontouml-models/dataset/spmo2017/.wkjH36GAqACBQoF>, <http://purl.org/ontouml-models/dataset/spmo2017/s9.jH36GAqACBQpU>, spmo2017:KdhjH36GAqACBQpe, spmo2017:NWRjH36GAqACBQpi, spmo2017:WaxjH36GAqACBQpm, spmo2017:uASTH36GAqACBQrv, <http://purl.org/ontouml-models/dataset/spmo2017/6OfTH36GAqACBQvC>, spmo2017:xB7LH36GAqACBQ19, <http://purl.org/ontouml-models/dataset/spmo2017/Y.crH36GAqACBQ3F>, spmo2017:fkCrH36GAqACBQ3P, spmo2017:qxqbH36GAqACBQ7O, spmo2017:uJmbH36GAqACBQ7Y, <http://purl.org/ontouml-models/dataset/spmo2017/.DHbH36GAqACBQ83>, spmo2017:Q_c7H36GAqACBQ90, spmo2017:qS2nH36GAqACBRD0, spmo2017:CwdnH36GAqACBREd, spmo2017:mHVXH36GAqACBRHk, <http://purl.org/ontouml-models/dataset/spmo2017/4ev1H36GAqACBQaS>, <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQme>, <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnE>, spmo2017:eMgjH36GAqACBQns, <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoN>, spmo2017:qiaTH36GAqACBQr9, spmo2017:lsQLH36GAqACBQzR, spmo2017:FGMLH36GAqACBQz5, spmo2017:mRNLH36GAqACBQ1Z, spmo2017:cyqrH36GAqACBQ3n, spmo2017:qMFrH36GAqACBQ5A, spmo2017:V2lrH36GAqACBQ5M, spmo2017:YAxbH36GAqACBQ72, spmo2017:xi3HH36GAqACBRBt, spmo2017:lZonH36GAqACBRCO, <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCo>, spmo2017:I4hnH36GAqACBRD6, spmo2017:NKEXH36GAqACBRFp, spmo2017:gWLXH36GAqACBRIV, spmo2017:Q5Z3H36GAqACBRLY, spmo2017:u8D3H36GAqACBRL0.
-spmo2017:kYQ1H36GAqACBQW5 rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:containsModelElement :l5_VH36GAqACBQWz, <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>, :WuWtH36GAqACBQf3, :QGhtH36GAqACBQgU, :TcptH36GAqACBQgf, :ChNtH36GAqACBQgs, :qlDtH36GAqACBQg3, :HRLtH36GAqACBQhC, :PnHtH36GAqACBQhN, :x7rzH36GAqACBQyo, <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00>, <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2F>, :RSvLH36GAqACBQ2O, <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2X>, :ClQrH36GAqACBQ2g, <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>, <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t>, <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d>, :a3j9H36GAqACBQjy, :nQ39H36GAqACBQkS, :zbf9H36GAqACBQko, :yG2DH36GAqACBQl0, :EVhDH36GAqACBQmO, :z_RDH36GAqACBQmS, <http://purl.org/ontouml-models/dataset/spmo2017/.wkjH36GAqACBQoF>, <http://purl.org/ontouml-models/dataset/spmo2017/s9.jH36GAqACBQpU>, :KdhjH36GAqACBQpe, :NWRjH36GAqACBQpi, :WaxjH36GAqACBQpm, :uASTH36GAqACBQrv, <http://purl.org/ontouml-models/dataset/spmo2017/6OfTH36GAqACBQvC>, :xB7LH36GAqACBQ19, <http://purl.org/ontouml-models/dataset/spmo2017/Y.crH36GAqACBQ3F>, :fkCrH36GAqACBQ3P, :qxqbH36GAqACBQ7O, :uJmbH36GAqACBQ7Y, <http://purl.org/ontouml-models/dataset/spmo2017/.DHbH36GAqACBQ83>, :Q_c7H36GAqACBQ90, :qS2nH36GAqACBRD0, :CwdnH36GAqACBREd, :mHVXH36GAqACBRHk, <http://purl.org/ontouml-models/dataset/spmo2017/4ev1H36GAqACBQaS>, <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQme>, <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnE>, :eMgjH36GAqACBQns, <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoN>, :qiaTH36GAqACBQr9, :lsQLH36GAqACBQzR, :FGMLH36GAqACBQz5, :mRNLH36GAqACBQ1Z, :cyqrH36GAqACBQ3n, :qMFrH36GAqACBQ5A, :V2lrH36GAqACBQ5M, :YAxbH36GAqACBQ72, :xi3HH36GAqACBRBt, :lZonH36GAqACBRCO, <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCo>, :I4hnH36GAqACBRD6, :NKEXH36GAqACBRFp, :gWLXH36GAqACBRIV, :Q5Z3H36GAqACBRLY, :u8D3H36GAqACBRL0.
+:kYQ1H36GAqACBQW5 rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Deliverable"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -45,24 +44,24 @@ spmo2017:kYQ1H36GAqACBQW5 rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:jZI1H36GAqACBQXK rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:jZI1H36GAqACBQXK rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Work Package"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:ZzY1H36GAqACBQXT rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:ZzY1H36GAqACBQXT rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Practical Result"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:HtXNH36GAqACBQes rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:HtXNH36GAqACBQes rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Scheduled Process"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -71,35 +70,35 @@ spmo2017:HtXNH36GAqACBQes rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/2gfNH36GAqACBQex>, spmo2017:hUAtH36GAqACBQe0.
+    ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/2gfNH36GAqACBQex>, :hUAtH36GAqACBQe0.
 <http://purl.org/ontouml-models/dataset/spmo2017/10YtH36GAqACBQfH> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Cost Estimated Process"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:iWktH36GAqACBQfL.
-spmo2017:xVMtH36GAqACBQfY rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:attribute :iWktH36GAqACBQfL.
+:xVMtH36GAqACBQfY rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Duration Estimated Process"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:LuCtH36GAqACBQfc.
-spmo2017:k4KtH36GAqACBQfl rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:attribute :LuCtH36GAqACBQfc.
+:k4KtH36GAqACBQfl rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Estimated Process"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:s6_tH36GAqACBQhV rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:s6_tH36GAqACBQhV rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Scope Estimated Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
@@ -107,16 +106,16 @@ spmo2017:s6_tH36GAqACBQhV rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhf> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Cost Estimated Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:prydH36GAqACBQiF.
+    ontouml:attribute :prydH36GAqACBQiF.
 <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Estimated Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
@@ -124,16 +123,16 @@ spmo2017:s6_tH36GAqACBQhV rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhz> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Duration Estimated Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:a6CdH36GAqACBQh5.
-spmo2017:dV6dH36GAqACBQiS rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:attribute :a6CdH36GAqACBQh5.
+:dV6dH36GAqACBQiS rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Scheduled Activity"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -142,45 +141,45 @@ spmo2017:dV6dH36GAqACBQiS rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:BJWdH36GAqACBQiW, spmo2017:giOdH36GAqACBQiZ.
+    ontouml:attribute :BJWdH36GAqACBQiW, :giOdH36GAqACBQiZ.
 <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQii> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Estimated Stakeholder Allocation"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:ddJdH36GAqACBQim, spmo2017:imZdH36GAqACBQip, spmo2017:xT5dH36GAqACBQis, <http://purl.org/ontouml-models/dataset/spmo2017/4VldH36GAqACBQiv>.
-spmo2017:iKdbH36GAqACBQ8i rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:attribute :ddJdH36GAqACBQim, :imZdH36GAqACBQip, :xT5dH36GAqACBQis, <http://purl.org/ontouml-models/dataset/spmo2017/4VldH36GAqACBQiv>.
+:iKdbH36GAqACBQ8i rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Tracked Process"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/.tDbH36GAqACBQ8m>, spmo2017:QUjbH36GAqACBQ8p, spmo2017:poTbH36GAqACBQ8s.
+    ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/.tDbH36GAqACBQ8m>, :QUjbH36GAqACBQ8p, :poTbH36GAqACBQ8s.
 <http://purl.org/ontouml-models/dataset/spmo2017/kOD7H36GAqACBQ.9> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Tracked Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:JJT7H36GAqACBQ_D, <http://purl.org/ontouml-models/dataset/spmo2017/3yz7H36GAqACBQ_G>, spmo2017:e8L7H36GAqACBQ_J.
-spmo2017:fyIHH36GAqACBQ_y rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:attribute :JJT7H36GAqACBQ_D, <http://purl.org/ontouml-models/dataset/spmo2017/3yz7H36GAqACBQ_G>, :e8L7H36GAqACBQ_J.
+:fyIHH36GAqACBQ_y rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Tracked Stakeholder Participation"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute spmo2017:XwEHH36GAqACBQ_8, spmo2017:GjEHH36GAqACBQ__.
-spmo2017:l5_VH36GAqACBQWz rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:attribute :XwEHH36GAqACBQ_8, :GjEHH36GAqACBQ__.
+:l5_VH36GAqACBQWz rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Software Project"@en;
     ontouml:stereotype ontouml:subkind;
     ontouml:isAbstract "false"^^xsd:boolean;
@@ -189,7 +188,7 @@ spmo2017:l5_VH36GAqACBQWz rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Intended Process"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -198,8 +197,8 @@ spmo2017:l5_VH36GAqACBQWz rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:WuWtH36GAqACBQf3 rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:WuWtH36GAqACBQf3 rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Project Process"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -208,32 +207,32 @@ spmo2017:WuWtH36GAqACBQf3 rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:QGhtH36GAqACBQgU rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:QGhtH36GAqACBQgU rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "General Project Process"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:TcptH36GAqACBQgf rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:TcptH36GAqACBQgf rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Specific Project Process"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:ChNtH36GAqACBQgs rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:ChNtH36GAqACBQgs rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Project Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:qlDtH36GAqACBQg3 rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:qlDtH36GAqACBQg3 rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Intended Activity"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -242,8 +241,8 @@ spmo2017:qlDtH36GAqACBQg3 rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:HRLtH36GAqACBQhC rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:HRLtH36GAqACBQhC rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Stakeholder"@en;
     ontouml:stereotype ontouml:roleMixin;
     ontouml:restrictedTo ontouml:functionalComplex;
@@ -252,8 +251,8 @@ spmo2017:HRLtH36GAqACBQhC rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:PnHtH36GAqACBQhN rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:PnHtH36GAqACBQhN rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Stakeholder Allocation"@en;
     ontouml:stereotype ontouml:relator;
     ontouml:restrictedTo ontouml:relator;
@@ -262,8 +261,8 @@ spmo2017:PnHtH36GAqACBQhN rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:x7rzH36GAqACBQyo rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:x7rzH36GAqACBQyo rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed Project Process"@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -273,7 +272,7 @@ spmo2017:x7rzH36GAqACBQyo rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed Process"@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -284,7 +283,7 @@ spmo2017:x7rzH36GAqACBQyo rdf:type ontouml:Class;
     ontouml:order "1"^^xsd:positiveInteger;
     ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/8RxLH36GAqACBQ1A>, <http://purl.org/ontouml-models/dataset/spmo2017/3pJLH36GAqACBQ1D>.
 <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2F> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed General Process"@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -293,8 +292,8 @@ spmo2017:x7rzH36GAqACBQyo rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:RSvLH36GAqACBQ2O rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:RSvLH36GAqACBQ2O rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed Specific Process"@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -304,7 +303,7 @@ spmo2017:RSvLH36GAqACBQ2O rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2X> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "General Intended Process"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -313,8 +312,8 @@ spmo2017:RSvLH36GAqACBQ2O rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
-spmo2017:ClQrH36GAqACBQ2g rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:ClQrH36GAqACBQ2g rdf:type ontouml:Class;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Specific Intended Process"@en;
     ontouml:stereotype ontouml:mode;
     ontouml:restrictedTo ontouml:intrinsicMode;
@@ -324,7 +323,7 @@ spmo2017:ClQrH36GAqACBQ2g rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed Activity"@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -335,7 +334,7 @@ spmo2017:ClQrH36GAqACBQ2g rdf:type ontouml:Class;
     ontouml:order "1"^^xsd:positiveInteger;
     ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/pHJ7H36GAqACBQ.h>, <http://purl.org/ontouml-models/dataset/spmo2017/mPp7H36GAqACBQ.k>.
 <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Performed Project Activity"@en;
     ontouml:isAbstract "false"^^xsd:boolean;
     ontouml:isDerived "false"^^xsd:boolean;
@@ -343,7 +342,7 @@ spmo2017:ClQrH36GAqACBQ2g rdf:type ontouml:Class;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger.
 <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d> rdf:type ontouml:Class;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Stakeholder Participation"@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -352,468 +351,468 @@ spmo2017:ClQrH36GAqACBQ2g rdf:type ontouml:Class;
     ontouml:isExtensional "false"^^xsd:boolean;
     ontouml:isPowertype "false"^^xsd:boolean;
     ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/5kAHH36GAqACBQ_h>, spmo2017:rIgHH36GAqACBQ_k.
+    ontouml:attribute <http://purl.org/ontouml-models/dataset/spmo2017/5kAHH36GAqACBQ_h>, :rIgHH36GAqACBQ_k.
 <http://purl.org/ontouml-models/dataset/spmo2017/6ez1H36GAqACBQZn> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:kYQ1H36GAqACBQW5;
-    ontouml:specific spmo2017:ZzY1H36GAqACBQXT.
-spmo2017:Q031H36GAqACBQaF rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:kYQ1H36GAqACBQW5;
-    ontouml:specific spmo2017:jZI1H36GAqACBQXK.
-spmo2017:tZUDH36GAqACBQlG rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:HtXNH36GAqACBQes;
-    ontouml:specific spmo2017:k4KtH36GAqACBQfl.
-spmo2017:qn0DH36GAqACBQlK rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :kYQ1H36GAqACBQW5;
+    ontouml:specific :ZzY1H36GAqACBQXT.
+:Q031H36GAqACBQaF rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :kYQ1H36GAqACBQW5;
+    ontouml:specific :jZI1H36GAqACBQXK.
+:tZUDH36GAqACBQlG rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :HtXNH36GAqACBQes;
+    ontouml:specific :k4KtH36GAqACBQfl.
+:qn0DH36GAqACBQlK rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/10YtH36GAqACBQfH>;
-    ontouml:specific spmo2017:k4KtH36GAqACBQfl.
-spmo2017:htKDH36GAqACBQlW rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:xVMtH36GAqACBQfY;
-    ontouml:specific spmo2017:k4KtH36GAqACBQfl.
+    ontouml:specific :k4KtH36GAqACBQfl.
+:htKDH36GAqACBQlW rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :xVMtH36GAqACBQfY;
+    ontouml:specific :k4KtH36GAqACBQfl.
 <http://purl.org/ontouml-models/dataset/spmo2017/ZywTH36GAqACBQq.> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:s6_tH36GAqACBQhV;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :s6_tH36GAqACBQhV;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
-spmo2017:mJoTH36GAqACBQrE rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:mJoTH36GAqACBQrE rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhf>;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
-spmo2017:sh4TH36GAqACBQrM rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:sh4TH36GAqACBQrM rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhz>;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
-spmo2017:fjkTH36GAqACBQrU rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:dV6dH36GAqACBQiS;
+:fjkTH36GAqACBQrU rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :dV6dH36GAqACBQiS;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
-spmo2017:a3j9H36GAqACBQjy rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:a3j9H36GAqACBQjy rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>;
-    ontouml:specific spmo2017:HtXNH36GAqACBQes.
-spmo2017:nQ39H36GAqACBQkS rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:WuWtH36GAqACBQf3;
+    ontouml:specific :HtXNH36GAqACBQes.
+:nQ39H36GAqACBQkS rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :WuWtH36GAqACBQf3;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/10YtH36GAqACBQfH>.
-spmo2017:zbf9H36GAqACBQko rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:zbf9H36GAqACBQko rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>;
-    ontouml:specific spmo2017:WuWtH36GAqACBQf3.
-spmo2017:yG2DH36GAqACBQl0 rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:WuWtH36GAqACBQf3;
-    ontouml:specific spmo2017:xVMtH36GAqACBQfY.
-spmo2017:EVhDH36GAqACBQmO rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:WuWtH36GAqACBQf3;
-    ontouml:specific spmo2017:QGhtH36GAqACBQgU.
-spmo2017:z_RDH36GAqACBQmS rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:WuWtH36GAqACBQf3;
-    ontouml:specific spmo2017:TcptH36GAqACBQgf.
+    ontouml:specific :WuWtH36GAqACBQf3.
+:yG2DH36GAqACBQl0 rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :WuWtH36GAqACBQf3;
+    ontouml:specific :xVMtH36GAqACBQfY.
+:EVhDH36GAqACBQmO rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :WuWtH36GAqACBQf3;
+    ontouml:specific :QGhtH36GAqACBQgU.
+:z_RDH36GAqACBQmS rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :WuWtH36GAqACBQf3;
+    ontouml:specific :TcptH36GAqACBQgf.
 <http://purl.org/ontouml-models/dataset/spmo2017/.wkjH36GAqACBQoF> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:qlDtH36GAqACBQg3;
-    ontouml:specific spmo2017:ChNtH36GAqACBQgs.
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :qlDtH36GAqACBQg3;
+    ontouml:specific :ChNtH36GAqACBQgs.
 <http://purl.org/ontouml-models/dataset/spmo2017/s9.jH36GAqACBQpU> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:qlDtH36GAqACBQg3;
-    ontouml:specific spmo2017:dV6dH36GAqACBQiS.
-spmo2017:KdhjH36GAqACBQpe rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:ChNtH36GAqACBQgs;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :qlDtH36GAqACBQg3;
+    ontouml:specific :dV6dH36GAqACBQiS.
+:KdhjH36GAqACBQpe rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :ChNtH36GAqACBQgs;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhz>.
-spmo2017:NWRjH36GAqACBQpi rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:ChNtH36GAqACBQgs;
+:NWRjH36GAqACBQpi rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :ChNtH36GAqACBQgs;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhf>.
-spmo2017:WaxjH36GAqACBQpm rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:ChNtH36GAqACBQgs;
-    ontouml:specific spmo2017:s6_tH36GAqACBQhV.
-spmo2017:uASTH36GAqACBQrv rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:PnHtH36GAqACBQhN;
+:WaxjH36GAqACBQpm rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :ChNtH36GAqACBQgs;
+    ontouml:specific :s6_tH36GAqACBQhV.
+:uASTH36GAqACBQrv rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :PnHtH36GAqACBQhN;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQii>.
 <http://purl.org/ontouml-models/dataset/spmo2017/6OfTH36GAqACBQvC> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:WuWtH36GAqACBQf3;
-    ontouml:specific spmo2017:k4KtH36GAqACBQfl.
-spmo2017:xB7LH36GAqACBQ19 rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :WuWtH36GAqACBQf3;
+    ontouml:specific :k4KtH36GAqACBQfl.
+:xB7LH36GAqACBQ19 rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00>;
-    ontouml:specific spmo2017:x7rzH36GAqACBQyo.
+    ontouml:specific :x7rzH36GAqACBQyo.
 <http://purl.org/ontouml-models/dataset/spmo2017/Y.crH36GAqACBQ3F> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2X>.
-spmo2017:fkCrH36GAqACBQ3P rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:fkCrH36GAqACBQ3P rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>;
-    ontouml:specific spmo2017:ClQrH36GAqACBQ2g.
-spmo2017:qxqbH36GAqACBQ7O rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:specific :ClQrH36GAqACBQ2g.
+:qxqbH36GAqACBQ7O rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00>;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2F>.
-spmo2017:uJmbH36GAqACBQ7Y rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:uJmbH36GAqACBQ7Y rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00>;
-    ontouml:specific spmo2017:RSvLH36GAqACBQ2O.
+    ontouml:specific :RSvLH36GAqACBQ2O.
 <http://purl.org/ontouml-models/dataset/spmo2017/.DHbH36GAqACBQ83> rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:x7rzH36GAqACBQyo;
-    ontouml:specific spmo2017:iKdbH36GAqACBQ8i.
-spmo2017:Q_c7H36GAqACBQ90 rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:general spmo2017:ChNtH36GAqACBQgs;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :x7rzH36GAqACBQyo;
+    ontouml:specific :iKdbH36GAqACBQ8i.
+:Q_c7H36GAqACBQ90 rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:general :ChNtH36GAqACBQgs;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
-spmo2017:qS2nH36GAqACBRD0 rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:qS2nH36GAqACBRD0 rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t>.
-spmo2017:CwdnH36GAqACBREd rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:CwdnH36GAqACBREd rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t>;
     ontouml:specific <http://purl.org/ontouml-models/dataset/spmo2017/kOD7H36GAqACBQ.9>.
-spmo2017:mHVXH36GAqACBRHk rdf:type ontouml:Generalization;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:mHVXH36GAqACBRHk rdf:type ontouml:Generalization;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:general <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d>;
-    ontouml:specific spmo2017:fyIHH36GAqACBQ_y.
+    ontouml:specific :fyIHH36GAqACBQ_y.
 <http://purl.org/ontouml-models/dataset/spmo2017/.ZebH36GAqACBQ7g> rdf:type ontouml:GeneralizationSet;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:isComplete "true"^^xsd:boolean;
     ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization spmo2017:qxqbH36GAqACBQ7O, spmo2017:uJmbH36GAqACBQ7Y.
-spmo2017:LPwNH36GAqACBQa0 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:generalization :qxqbH36GAqACBQ7O, :uJmbH36GAqACBQ7Y.
+:LPwNH36GAqACBQa0 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:LPwNH36GAqACBQa3;
-    ontouml:targetEnd spmo2017:LPwNH36GAqACBQa1;
-    ontouml:relationEnd spmo2017:LPwNH36GAqACBQa3, spmo2017:LPwNH36GAqACBQa1.
-spmo2017:Y41jH36GAqACBQp0 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :LPwNH36GAqACBQa3;
+    ontouml:targetEnd :LPwNH36GAqACBQa1;
+    ontouml:relationEnd :LPwNH36GAqACBQa3, :LPwNH36GAqACBQa1.
+:Y41jH36GAqACBQp0 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "is to produce"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:Y41jH36GAqACBQp1;
-    ontouml:targetEnd spmo2017:Y41jH36GAqACBQp3;
-    ontouml:relationEnd spmo2017:Y41jH36GAqACBQp1, spmo2017:Y41jH36GAqACBQp3.
+    ontouml:sourceEnd :Y41jH36GAqACBQp1;
+    ontouml:targetEnd :Y41jH36GAqACBQp3;
+    ontouml:relationEnd :Y41jH36GAqACBQp1, :Y41jH36GAqACBQp3.
 <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqZ> rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "is to perform"@en;
     ontouml:stereotype ontouml:mediation;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqa>;
-    ontouml:targetEnd spmo2017:ER3jH36GAqACBQqc;
-    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqa>, spmo2017:ER3jH36GAqACBQqc.
-spmo2017:YOPbH36GAqACBQ89 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:targetEnd :ER3jH36GAqACBQqc;
+    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqa>, :ER3jH36GAqACBQqc.
+:YOPbH36GAqACBQ89 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "tracked in relation to"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/YOPbH36GAqACBQ8.>;
-    ontouml:targetEnd spmo2017:YOPbH36GAqACBQ9A;
-    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/YOPbH36GAqACBQ8.>, spmo2017:YOPbH36GAqACBQ9A.
-spmo2017:FArnH36GAqACBREt rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:targetEnd :YOPbH36GAqACBQ9A;
+    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/YOPbH36GAqACBQ8.>, :YOPbH36GAqACBQ9A.
+:FArnH36GAqACBREt rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "tracked in relation to"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:FArnH36GAqACBREu;
-    ontouml:targetEnd spmo2017:FArnH36GAqACBREw;
-    ontouml:relationEnd spmo2017:FArnH36GAqACBREu, spmo2017:FArnH36GAqACBREw.
-spmo2017:vj_nH36GAqACBRFM rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :FArnH36GAqACBREu;
+    ontouml:targetEnd :FArnH36GAqACBREw;
+    ontouml:relationEnd :FArnH36GAqACBREu, :FArnH36GAqACBREw.
+:vj_nH36GAqACBRFM rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "contributes to produce"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:vj_nH36GAqACBRFN;
-    ontouml:targetEnd spmo2017:vj_nH36GAqACBRFP;
-    ontouml:relationEnd spmo2017:vj_nH36GAqACBRFN, spmo2017:vj_nH36GAqACBRFP.
-spmo2017:IIA3H36GAqACBRI7 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :vj_nH36GAqACBRFN;
+    ontouml:targetEnd :vj_nH36GAqACBRFP;
+    ontouml:relationEnd :vj_nH36GAqACBRFN, :vj_nH36GAqACBRFP.
+:IIA3H36GAqACBRI7 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "refers to"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:IIA3H36GAqACBRI8;
+    ontouml:sourceEnd :IIA3H36GAqACBRI8;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/spmo2017/IIA3H36GAqACBRI.>;
-    ontouml:relationEnd spmo2017:IIA3H36GAqACBRI8, <http://purl.org/ontouml-models/dataset/spmo2017/IIA3H36GAqACBRI.>.
+    ontouml:relationEnd :IIA3H36GAqACBRI8, <http://purl.org/ontouml-models/dataset/spmo2017/IIA3H36GAqACBRI.>.
 <http://purl.org/ontouml-models/dataset/spmo2017/4ev1H36GAqACBQaS> rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "has"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:aev1H36GAqACBQaU;
-    ontouml:targetEnd spmo2017:mev1H36GAqACBQaX;
-    ontouml:relationEnd spmo2017:aev1H36GAqACBQaU, spmo2017:mev1H36GAqACBQaX.
+    ontouml:sourceEnd :aev1H36GAqACBQaU;
+    ontouml:targetEnd :mev1H36GAqACBQaX;
+    ontouml:relationEnd :aev1H36GAqACBQaU, :mev1H36GAqACBQaX.
 <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQme> rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmh>;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmf>;
     ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmh>, <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmf>.
 <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnE> rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "defined for"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnF>;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnH>;
     ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnF>, <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnH>.
-spmo2017:eMgjH36GAqACBQns rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:eMgjH36GAqACBQns rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:eMgjH36GAqACBQnv;
-    ontouml:targetEnd spmo2017:eMgjH36GAqACBQnt;
-    ontouml:relationEnd spmo2017:eMgjH36GAqACBQnv, spmo2017:eMgjH36GAqACBQnt.
+    ontouml:sourceEnd :eMgjH36GAqACBQnv;
+    ontouml:targetEnd :eMgjH36GAqACBQnt;
+    ontouml:relationEnd :eMgjH36GAqACBQnv, :eMgjH36GAqACBQnt.
 <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoN> rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "defined for"@en;
     ontouml:isDerived "true"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoO>;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoQ>;
     ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoO>, <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoQ>.
-spmo2017:qiaTH36GAqACBQr9 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:qiaTH36GAqACBQr9 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "allocates"@en;
     ontouml:stereotype ontouml:mediation;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/qiaTH36GAqACBQr.>;
-    ontouml:targetEnd spmo2017:qiaTH36GAqACBQsA;
-    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/qiaTH36GAqACBQr.>, spmo2017:qiaTH36GAqACBQsA.
-spmo2017:lsQLH36GAqACBQzR rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:targetEnd :qiaTH36GAqACBQsA;
+    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/qiaTH36GAqACBQr.>, :qiaTH36GAqACBQsA.
+:lsQLH36GAqACBQzR rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "performed in"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:lsQLH36GAqACBQzS;
-    ontouml:targetEnd spmo2017:lsQLH36GAqACBQzU;
-    ontouml:relationEnd spmo2017:lsQLH36GAqACBQzS, spmo2017:lsQLH36GAqACBQzU.
-spmo2017:FGMLH36GAqACBQz5 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :lsQLH36GAqACBQzS;
+    ontouml:targetEnd :lsQLH36GAqACBQzU;
+    ontouml:relationEnd :lsQLH36GAqACBQzS, :lsQLH36GAqACBQzU.
+:FGMLH36GAqACBQz5 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "caused by"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:FGMLH36GAqACBQz6;
-    ontouml:targetEnd spmo2017:FGMLH36GAqACBQz8;
-    ontouml:relationEnd spmo2017:FGMLH36GAqACBQz6, spmo2017:FGMLH36GAqACBQz8.
-spmo2017:mRNLH36GAqACBQ1Z rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :FGMLH36GAqACBQz6;
+    ontouml:targetEnd :FGMLH36GAqACBQz8;
+    ontouml:relationEnd :FGMLH36GAqACBQz6, :FGMLH36GAqACBQz8.
+:mRNLH36GAqACBQ1Z rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "caused by"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:mRNLH36GAqACBQ1a;
-    ontouml:targetEnd spmo2017:mRNLH36GAqACBQ1c;
-    ontouml:relationEnd spmo2017:mRNLH36GAqACBQ1a, spmo2017:mRNLH36GAqACBQ1c.
-spmo2017:cyqrH36GAqACBQ3n rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :mRNLH36GAqACBQ1a;
+    ontouml:targetEnd :mRNLH36GAqACBQ1c;
+    ontouml:relationEnd :mRNLH36GAqACBQ1a, :mRNLH36GAqACBQ1c.
+:cyqrH36GAqACBQ3n rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/8yqrH36GAqACBQ3q>;
-    ontouml:targetEnd spmo2017:cyqrH36GAqACBQ3o;
-    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/8yqrH36GAqACBQ3q>, spmo2017:cyqrH36GAqACBQ3o.
-spmo2017:qMFrH36GAqACBQ5A rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:targetEnd :cyqrH36GAqACBQ3o;
+    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/8yqrH36GAqACBQ3q>, :cyqrH36GAqACBQ3o.
+:qMFrH36GAqACBQ5A rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:qMFrH36GAqACBQ5D;
-    ontouml:targetEnd spmo2017:qMFrH36GAqACBQ5B;
-    ontouml:relationEnd spmo2017:qMFrH36GAqACBQ5D, spmo2017:qMFrH36GAqACBQ5B.
-spmo2017:V2lrH36GAqACBQ5M rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :qMFrH36GAqACBQ5D;
+    ontouml:targetEnd :qMFrH36GAqACBQ5B;
+    ontouml:relationEnd :qMFrH36GAqACBQ5D, :qMFrH36GAqACBQ5B.
+:V2lrH36GAqACBQ5M rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:V2lrH36GAqACBQ5P;
-    ontouml:targetEnd spmo2017:V2lrH36GAqACBQ5N;
-    ontouml:relationEnd spmo2017:V2lrH36GAqACBQ5P, spmo2017:V2lrH36GAqACBQ5N.
-spmo2017:YAxbH36GAqACBQ72 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :V2lrH36GAqACBQ5P;
+    ontouml:targetEnd :V2lrH36GAqACBQ5N;
+    ontouml:relationEnd :V2lrH36GAqACBQ5P, :V2lrH36GAqACBQ5N.
+:YAxbH36GAqACBQ72 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ75>;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ73>;
     ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ75>, <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ73>.
-spmo2017:xi3HH36GAqACBRBt rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:xi3HH36GAqACBRBt rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:xi3HH36GAqACBRBw;
-    ontouml:targetEnd spmo2017:xi3HH36GAqACBRBu;
-    ontouml:relationEnd spmo2017:xi3HH36GAqACBRBw, spmo2017:xi3HH36GAqACBRBu.
-spmo2017:lZonH36GAqACBRCO rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :xi3HH36GAqACBRBw;
+    ontouml:targetEnd :xi3HH36GAqACBRBu;
+    ontouml:relationEnd :xi3HH36GAqACBRBw, :xi3HH36GAqACBRBu.
+:lZonH36GAqACBRCO rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "depends on"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:lZonH36GAqACBRCP;
-    ontouml:targetEnd spmo2017:lZonH36GAqACBRCR;
-    ontouml:relationEnd spmo2017:lZonH36GAqACBRCP, spmo2017:lZonH36GAqACBRCR.
+    ontouml:sourceEnd :lZonH36GAqACBRCP;
+    ontouml:targetEnd :lZonH36GAqACBRCR;
+    ontouml:relationEnd :lZonH36GAqACBRCP, :lZonH36GAqACBRCR.
 <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCo> rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "caused by"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCp>;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCr>;
     ontouml:relationEnd <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCp>, <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCr>.
-spmo2017:I4hnH36GAqACBRD6 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:I4hnH36GAqACBRD6 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "caused by"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:I4hnH36GAqACBRD7;
-    ontouml:targetEnd spmo2017:I4hnH36GAqACBRD9;
-    ontouml:relationEnd spmo2017:I4hnH36GAqACBRD7, spmo2017:I4hnH36GAqACBRD9.
-spmo2017:NKEXH36GAqACBRFp rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :I4hnH36GAqACBRD7;
+    ontouml:targetEnd :I4hnH36GAqACBRD9;
+    ontouml:relationEnd :I4hnH36GAqACBRD7, :I4hnH36GAqACBRD9.
+:NKEXH36GAqACBRFp rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "performed in"@en;
     ontouml:isDerived "true"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:NKEXH36GAqACBRFq;
-    ontouml:targetEnd spmo2017:NKEXH36GAqACBRFs;
-    ontouml:relationEnd spmo2017:NKEXH36GAqACBRFq, spmo2017:NKEXH36GAqACBRFs.
-spmo2017:gWLXH36GAqACBRIV rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :NKEXH36GAqACBRFq;
+    ontouml:targetEnd :NKEXH36GAqACBRFs;
+    ontouml:relationEnd :NKEXH36GAqACBRFq, :NKEXH36GAqACBRFs.
+:gWLXH36GAqACBRIV rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "refers to"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:gWLXH36GAqACBRIW;
-    ontouml:targetEnd spmo2017:gWLXH36GAqACBRIY;
-    ontouml:relationEnd spmo2017:gWLXH36GAqACBRIW, spmo2017:gWLXH36GAqACBRIY.
-spmo2017:Q5Z3H36GAqACBRLY rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :gWLXH36GAqACBRIW;
+    ontouml:targetEnd :gWLXH36GAqACBRIY;
+    ontouml:relationEnd :gWLXH36GAqACBRIW, :gWLXH36GAqACBRIY.
+:Q5Z3H36GAqACBRLY rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "participation of"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:Q5Z3H36GAqACBRLZ;
-    ontouml:targetEnd spmo2017:Q5Z3H36GAqACBRLb;
-    ontouml:relationEnd spmo2017:Q5Z3H36GAqACBRLZ, spmo2017:Q5Z3H36GAqACBRLb.
-spmo2017:u8D3H36GAqACBRL0 rdf:type ontouml:Relation;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :Q5Z3H36GAqACBRLZ;
+    ontouml:targetEnd :Q5Z3H36GAqACBRLb;
+    ontouml:relationEnd :Q5Z3H36GAqACBRLZ, :Q5Z3H36GAqACBRLb.
+:u8D3H36GAqACBRL0 rdf:type ontouml:Relation;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd spmo2017:u8D3H36GAqACBRL3;
-    ontouml:targetEnd spmo2017:u8D3H36GAqACBRL1;
-    ontouml:relationEnd spmo2017:u8D3H36GAqACBRL3, spmo2017:u8D3H36GAqACBRL1.
-spmo2017:LPwNH36GAqACBQa3 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:sourceEnd :u8D3H36GAqACBRL3;
+    ontouml:targetEnd :u8D3H36GAqACBRL1;
+    ontouml:relationEnd :u8D3H36GAqACBRL3, :u8D3H36GAqACBRL1.
+:LPwNH36GAqACBQa3 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:LPwNH36GAqACBQa3_cardinality.
-spmo2017:LPwNH36GAqACBQa3_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :LPwNH36GAqACBQa3_cardinality.
+:LPwNH36GAqACBQa3_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "2..*";
     ontouml:lowerBound "2";
     ontouml:upperBound "*".
-spmo2017:LPwNH36GAqACBQa3 ontouml:isDerived "false"^^xsd:boolean;
+:LPwNH36GAqACBQa3 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:kYQ1H36GAqACBQW5.
-spmo2017:LPwNH36GAqACBQa1 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :kYQ1H36GAqACBQW5.
+:LPwNH36GAqACBQa1 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:LPwNH36GAqACBQa1_cardinality.
-spmo2017:LPwNH36GAqACBQa1_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :LPwNH36GAqACBQa1_cardinality.
+:LPwNH36GAqACBQa1_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:LPwNH36GAqACBQa1 ontouml:isDerived "false"^^xsd:boolean;
+:LPwNH36GAqACBQa1 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType spmo2017:ZzY1H36GAqACBQXT.
+    ontouml:propertyType :ZzY1H36GAqACBQXT.
 <http://purl.org/ontouml-models/dataset/spmo2017/2gfNH36GAqACBQex> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "plannedStartDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:hUAtH36GAqACBQe0 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:hUAtH36GAqACBQe0 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "plannedEndDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:iWktH36GAqACBQfL rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:iWktH36GAqACBQfL rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "estimatedCost"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:LuCtH36GAqACBQfc rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:LuCtH36GAqACBQfc rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "estimatedDuration"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:prydH36GAqACBQiF rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:prydH36GAqACBQiF rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "estimatedCost"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:a6CdH36GAqACBQh5 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:a6CdH36GAqACBQh5 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "estimatedDuration"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:BJWdH36GAqACBQiW rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:BJWdH36GAqACBQiW rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "plannedStartDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:giOdH36GAqACBQiZ rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:giOdH36GAqACBQiZ rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "plannedEndDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:ddJdH36GAqACBQim rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:ddJdH36GAqACBQim rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "plannedStartDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:imZdH36GAqACBQip rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:imZdH36GAqACBQip rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "plannedEndDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:xT5dH36GAqACBQis rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:xT5dH36GAqACBQis rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "estimatedDuration"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/4VldH36GAqACBQiv> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "estimatedCost"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:Y41jH36GAqACBQp1 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:Y41jH36GAqACBQp1 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:Y41jH36GAqACBQp1_cardinality.
-spmo2017:Y41jH36GAqACBQp1_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :Y41jH36GAqACBQp1_cardinality.
+:Y41jH36GAqACBQp1_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1..*";
     ontouml:lowerBound "1";
     ontouml:upperBound "*".
-spmo2017:Y41jH36GAqACBQp1 ontouml:isDerived "false"^^xsd:boolean;
+:Y41jH36GAqACBQp1 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:s6_tH36GAqACBQhV.
-spmo2017:Y41jH36GAqACBQp3 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :s6_tH36GAqACBQhV.
+:Y41jH36GAqACBQp3 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:Y41jH36GAqACBQp3_cardinality.
-spmo2017:Y41jH36GAqACBQp3_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :Y41jH36GAqACBQp3_cardinality.
+:Y41jH36GAqACBQp3_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1..*";
     ontouml:lowerBound "1";
     ontouml:upperBound "*".
-spmo2017:Y41jH36GAqACBQp3 ontouml:isDerived "false"^^xsd:boolean;
+:Y41jH36GAqACBQp3 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:jZI1H36GAqACBQXK.
+    ontouml:propertyType :jZI1H36GAqACBQXK.
 <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqa> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqa_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/4R3jH36GAqACBQqa_cardinality> rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
@@ -824,76 +823,76 @@ spmo2017:Y41jH36GAqACBQp3 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQii>.
-spmo2017:ER3jH36GAqACBQqc rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:cardinality spmo2017:ER3jH36GAqACBQqc_cardinality.
-spmo2017:ER3jH36GAqACBQqc_cardinality rdf:type ontouml:Cardinality;
+:ER3jH36GAqACBQqc rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:cardinality :ER3jH36GAqACBQqc_cardinality.
+:ER3jH36GAqACBQqc_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:ER3jH36GAqACBQqc ontouml:isDerived "false"^^xsd:boolean;
+:ER3jH36GAqACBQqc ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
 <http://purl.org/ontouml-models/dataset/spmo2017/.tDbH36GAqACBQ8m> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "cost"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:QUjbH36GAqACBQ8p rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:QUjbH36GAqACBQ8p rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "duration"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:poTbH36GAqACBQ8s rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:poTbH36GAqACBQ8s rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "progressIndex"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:JJT7H36GAqACBQ_D rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:JJT7H36GAqACBQ_D rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "cost"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/3yz7H36GAqACBQ_G> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "duration"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:e8L7H36GAqACBQ_J rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:e8L7H36GAqACBQ_J rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "progressIndex"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:XwEHH36GAqACBQ_8 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:XwEHH36GAqACBQ_8 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "cost"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:GjEHH36GAqACBQ__ rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:GjEHH36GAqACBQ__ rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "duration"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/YOPbH36GAqACBQ8.> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/YOPbH36GAqACBQ8._cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/YOPbH36GAqACBQ8._cardinality> rdf:type ontouml:Cardinality;
@@ -904,87 +903,87 @@ spmo2017:GjEHH36GAqACBQ__ rdf:type ontouml:Property;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:iKdbH36GAqACBQ8i.
-spmo2017:YOPbH36GAqACBQ9A rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :iKdbH36GAqACBQ8i.
+:YOPbH36GAqACBQ9A rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:YOPbH36GAqACBQ9A_cardinality.
-spmo2017:YOPbH36GAqACBQ9A_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :YOPbH36GAqACBQ9A_cardinality.
+:YOPbH36GAqACBQ9A_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:YOPbH36GAqACBQ9A ontouml:isDerived "false"^^xsd:boolean;
+:YOPbH36GAqACBQ9A ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:k4KtH36GAqACBQfl.
-spmo2017:FArnH36GAqACBREu rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :k4KtH36GAqACBQfl.
+:FArnH36GAqACBREu rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:FArnH36GAqACBREu_cardinality.
-spmo2017:FArnH36GAqACBREu_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :FArnH36GAqACBREu_cardinality.
+:FArnH36GAqACBREu_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:FArnH36GAqACBREu ontouml:isDerived "false"^^xsd:boolean;
+:FArnH36GAqACBREu ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/kOD7H36GAqACBQ.9>.
-spmo2017:FArnH36GAqACBREw rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:FArnH36GAqACBREw rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:FArnH36GAqACBREw_cardinality.
-spmo2017:FArnH36GAqACBREw_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :FArnH36GAqACBREw_cardinality.
+:FArnH36GAqACBREw_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:FArnH36GAqACBREw ontouml:isDerived "false"^^xsd:boolean;
+:FArnH36GAqACBREw ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQhp>.
-spmo2017:vj_nH36GAqACBRFN rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:vj_nH36GAqACBRFN rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:vj_nH36GAqACBRFN_cardinality.
-spmo2017:vj_nH36GAqACBRFN_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :vj_nH36GAqACBRFN_cardinality.
+:vj_nH36GAqACBRFN_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:vj_nH36GAqACBRFN ontouml:isDerived "false"^^xsd:boolean;
+:vj_nH36GAqACBRFN ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/kOD7H36GAqACBQ.9>.
-spmo2017:vj_nH36GAqACBRFP rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:vj_nH36GAqACBRFP rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:vj_nH36GAqACBRFP_cardinality.
-spmo2017:vj_nH36GAqACBRFP_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :vj_nH36GAqACBRFP_cardinality.
+:vj_nH36GAqACBRFP_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1..*";
     ontouml:lowerBound "1";
     ontouml:upperBound "*".
-spmo2017:vj_nH36GAqACBRFP ontouml:isDerived "false"^^xsd:boolean;
+:vj_nH36GAqACBRFP ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:jZI1H36GAqACBQXK.
-spmo2017:IIA3H36GAqACBRI8 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :jZI1H36GAqACBQXK.
+:IIA3H36GAqACBRI8 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:IIA3H36GAqACBRI8_cardinality.
-spmo2017:IIA3H36GAqACBRI8_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :IIA3H36GAqACBRI8_cardinality.
+:IIA3H36GAqACBRI8_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:IIA3H36GAqACBRI8 ontouml:isDerived "false"^^xsd:boolean;
+:IIA3H36GAqACBRI8 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:fyIHH36GAqACBQ_y.
+    ontouml:propertyType :fyIHH36GAqACBQ_y.
 <http://purl.org/ontouml-models/dataset/spmo2017/IIA3H36GAqACBRI.> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/IIA3H36GAqACBRI._cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/IIA3H36GAqACBRI._cardinality> rdf:type ontouml:Cardinality;
@@ -997,75 +996,75 @@ spmo2017:IIA3H36GAqACBRI8 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQii>.
 <http://purl.org/ontouml-models/dataset/spmo2017/8RxLH36GAqACBQ1A> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "startDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/3pJLH36GAqACBQ1D> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "endDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/pHJ7H36GAqACBQ.h> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "startDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/mPp7H36GAqACBQ.k> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "endDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
 <http://purl.org/ontouml-models/dataset/spmo2017/5kAHH36GAqACBQ_h> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "startDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:rIgHH36GAqACBQ_k rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:rIgHH36GAqACBQ_k rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "endDate"@en;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none.
-spmo2017:aev1H36GAqACBQaU rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:aev1H36GAqACBQaU rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:aev1H36GAqACBQaU_cardinality.
-spmo2017:aev1H36GAqACBQaU_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :aev1H36GAqACBQaU_cardinality.
+:aev1H36GAqACBQaU_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:aev1H36GAqACBQaU ontouml:isDerived "false"^^xsd:boolean;
+:aev1H36GAqACBQaU ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:l5_VH36GAqACBQWz.
-spmo2017:mev1H36GAqACBQaX rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :l5_VH36GAqACBQWz.
+:mev1H36GAqACBQaX rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:mev1H36GAqACBQaX_cardinality.
-spmo2017:mev1H36GAqACBQaX_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :mev1H36GAqACBQaX_cardinality.
+:mev1H36GAqACBQaX_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:mev1H36GAqACBQaX ontouml:isDerived "false"^^xsd:boolean;
+:mev1H36GAqACBQaX ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:kYQ1H36GAqACBQW5.
+    ontouml:propertyType :kYQ1H36GAqACBQW5.
 <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmh> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "subProcess"@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmh_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmh_cardinality> rdf:type ontouml:Cardinality;
@@ -1076,9 +1075,9 @@ spmo2017:mev1H36GAqACBQaX ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:TcptH36GAqACBQgf.
+    ontouml:propertyType :TcptH36GAqACBQgf.
 <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmf> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmf_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/2i5DH36GAqACBQmf_cardinality> rdf:type ontouml:Cardinality;
@@ -1089,9 +1088,9 @@ spmo2017:mev1H36GAqACBQaX ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType spmo2017:QGhtH36GAqACBQgU.
+    ontouml:propertyType :QGhtH36GAqACBQgU.
 <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnF> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnF_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnF_cardinality> rdf:type ontouml:Cardinality;
@@ -1102,9 +1101,9 @@ spmo2017:mev1H36GAqACBQaX ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:WuWtH36GAqACBQf3.
+    ontouml:propertyType :WuWtH36GAqACBQf3.
 <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnH> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnH_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/91rDH36GAqACBQnH_cardinality> rdf:type ontouml:Cardinality;
@@ -1115,35 +1114,35 @@ spmo2017:mev1H36GAqACBQaX ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:l5_VH36GAqACBQWz.
-spmo2017:eMgjH36GAqACBQnv rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :l5_VH36GAqACBQWz.
+:eMgjH36GAqACBQnv rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:eMgjH36GAqACBQnv_cardinality.
-spmo2017:eMgjH36GAqACBQnv_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :eMgjH36GAqACBQnv_cardinality.
+:eMgjH36GAqACBQnv_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "2..*";
     ontouml:lowerBound "2";
     ontouml:upperBound "*".
-spmo2017:eMgjH36GAqACBQnv ontouml:isDerived "false"^^xsd:boolean;
+:eMgjH36GAqACBQnv ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:ChNtH36GAqACBQgs.
-spmo2017:eMgjH36GAqACBQnt rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :ChNtH36GAqACBQgs.
+:eMgjH36GAqACBQnt rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:eMgjH36GAqACBQnt_cardinality.
-spmo2017:eMgjH36GAqACBQnt_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :eMgjH36GAqACBQnt_cardinality.
+:eMgjH36GAqACBQnt_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:eMgjH36GAqACBQnt ontouml:isDerived "false"^^xsd:boolean;
+:eMgjH36GAqACBQnt ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType spmo2017:TcptH36GAqACBQgf.
+    ontouml:propertyType :TcptH36GAqACBQgf.
 <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoO> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoO_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoO_cardinality> rdf:type ontouml:Cardinality;
@@ -1154,9 +1153,9 @@ spmo2017:eMgjH36GAqACBQnt ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:ChNtH36GAqACBQgs.
+    ontouml:propertyType :ChNtH36GAqACBQgs.
 <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoQ> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoQ_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/8AsjH36GAqACBQoQ_cardinality> rdf:type ontouml:Cardinality;
@@ -1167,9 +1166,9 @@ spmo2017:eMgjH36GAqACBQnt ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:l5_VH36GAqACBQWz.
+    ontouml:propertyType :l5_VH36GAqACBQWz.
 <http://purl.org/ontouml-models/dataset/spmo2017/qiaTH36GAqACBQr.> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/qiaTH36GAqACBQr._cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/qiaTH36GAqACBQr._cardinality> rdf:type ontouml:Cardinality;
@@ -1180,99 +1179,99 @@ spmo2017:eMgjH36GAqACBQnt ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:PnHtH36GAqACBQhN.
-spmo2017:qiaTH36GAqACBQsA rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:cardinality spmo2017:qiaTH36GAqACBQsA_cardinality.
-spmo2017:qiaTH36GAqACBQsA_cardinality rdf:type ontouml:Cardinality;
+    ontouml:propertyType :PnHtH36GAqACBQhN.
+:qiaTH36GAqACBQsA rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:cardinality :qiaTH36GAqACBQsA_cardinality.
+:qiaTH36GAqACBQsA_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:qiaTH36GAqACBQsA ontouml:isDerived "false"^^xsd:boolean;
+:qiaTH36GAqACBQsA ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:HRLtH36GAqACBQhC.
-spmo2017:lsQLH36GAqACBQzS rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :HRLtH36GAqACBQhC.
+:lsQLH36GAqACBQzS rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:lsQLH36GAqACBQzS_cardinality.
-spmo2017:lsQLH36GAqACBQzS_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :lsQLH36GAqACBQzS_cardinality.
+:lsQLH36GAqACBQzS_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:lsQLH36GAqACBQzS ontouml:isDerived "false"^^xsd:boolean;
+:lsQLH36GAqACBQzS ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:x7rzH36GAqACBQyo.
-spmo2017:lsQLH36GAqACBQzU rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :x7rzH36GAqACBQyo.
+:lsQLH36GAqACBQzU rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:lsQLH36GAqACBQzU_cardinality.
-spmo2017:lsQLH36GAqACBQzU_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :lsQLH36GAqACBQzU_cardinality.
+:lsQLH36GAqACBQzU_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:lsQLH36GAqACBQzU ontouml:isDerived "false"^^xsd:boolean;
+:lsQLH36GAqACBQzU ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:l5_VH36GAqACBQWz.
-spmo2017:FGMLH36GAqACBQz6 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :l5_VH36GAqACBQWz.
+:FGMLH36GAqACBQz6 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:FGMLH36GAqACBQz6_cardinality.
-spmo2017:FGMLH36GAqACBQz6_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :FGMLH36GAqACBQz6_cardinality.
+:FGMLH36GAqACBQz6_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:FGMLH36GAqACBQz6 ontouml:isDerived "false"^^xsd:boolean;
+:FGMLH36GAqACBQz6 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:x7rzH36GAqACBQyo.
-spmo2017:FGMLH36GAqACBQz8 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :x7rzH36GAqACBQyo.
+:FGMLH36GAqACBQz8 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:FGMLH36GAqACBQz8_cardinality.
-spmo2017:FGMLH36GAqACBQz8_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :FGMLH36GAqACBQz8_cardinality.
+:FGMLH36GAqACBQz8_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:FGMLH36GAqACBQz8 ontouml:isDerived "false"^^xsd:boolean;
+:FGMLH36GAqACBQz8 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:WuWtH36GAqACBQf3.
-spmo2017:mRNLH36GAqACBQ1a rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :WuWtH36GAqACBQf3.
+:mRNLH36GAqACBQ1a rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:mRNLH36GAqACBQ1a_cardinality.
-spmo2017:mRNLH36GAqACBQ1a_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :mRNLH36GAqACBQ1a_cardinality.
+:mRNLH36GAqACBQ1a_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:mRNLH36GAqACBQ1a ontouml:isDerived "false"^^xsd:boolean;
+:mRNLH36GAqACBQ1a ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ00>.
-spmo2017:mRNLH36GAqACBQ1c rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:mRNLH36GAqACBQ1c rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:mRNLH36GAqACBQ1c_cardinality.
-spmo2017:mRNLH36GAqACBQ1c_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :mRNLH36GAqACBQ1c_cardinality.
+:mRNLH36GAqACBQ1c_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:mRNLH36GAqACBQ1c ontouml:isDerived "false"^^xsd:boolean;
+:mRNLH36GAqACBQ1c ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/4O6tH36GAqACBQfu>.
 <http://purl.org/ontouml-models/dataset/spmo2017/8yqrH36GAqACBQ3q> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "subProcess"@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/8yqrH36GAqACBQ3q_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/8yqrH36GAqACBQ3q_cardinality> rdf:type ontouml:Cardinality;
@@ -1283,68 +1282,68 @@ spmo2017:mRNLH36GAqACBQ1c ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:ClQrH36GAqACBQ2g.
-spmo2017:cyqrH36GAqACBQ3o rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :ClQrH36GAqACBQ2g.
+:cyqrH36GAqACBQ3o rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:cyqrH36GAqACBQ3o_cardinality.
-spmo2017:cyqrH36GAqACBQ3o_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :cyqrH36GAqACBQ3o_cardinality.
+:cyqrH36GAqACBQ3o_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:cyqrH36GAqACBQ3o ontouml:isDerived "false"^^xsd:boolean;
+:cyqrH36GAqACBQ3o ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2X>.
-spmo2017:qMFrH36GAqACBQ5D rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:cardinality spmo2017:qMFrH36GAqACBQ5D_cardinality.
-spmo2017:qMFrH36GAqACBQ5D_cardinality rdf:type ontouml:Cardinality;
+:qMFrH36GAqACBQ5D rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:cardinality :qMFrH36GAqACBQ5D_cardinality.
+:qMFrH36GAqACBQ5D_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "*".
-spmo2017:qMFrH36GAqACBQ5D ontouml:isDerived "false"^^xsd:boolean;
+:qMFrH36GAqACBQ5D ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:ClQrH36GAqACBQ2g.
-spmo2017:qMFrH36GAqACBQ5B rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
-    ontouml:cardinality spmo2017:qMFrH36GAqACBQ5B_cardinality.
-spmo2017:qMFrH36GAqACBQ5B_cardinality rdf:type ontouml:Cardinality;
+    ontouml:propertyType :ClQrH36GAqACBQ2g.
+:qMFrH36GAqACBQ5B rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
+    ontouml:cardinality :qMFrH36GAqACBQ5B_cardinality.
+:qMFrH36GAqACBQ5B_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "*".
-spmo2017:qMFrH36GAqACBQ5B ontouml:isDerived "false"^^xsd:boolean;
+:qMFrH36GAqACBQ5B ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType spmo2017:ClQrH36GAqACBQ2g.
-spmo2017:V2lrH36GAqACBQ5P rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :ClQrH36GAqACBQ2g.
+:V2lrH36GAqACBQ5P rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:V2lrH36GAqACBQ5P_cardinality.
-spmo2017:V2lrH36GAqACBQ5P_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :V2lrH36GAqACBQ5P_cardinality.
+:V2lrH36GAqACBQ5P_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "2..*";
     ontouml:lowerBound "2";
     ontouml:upperBound "*".
-spmo2017:V2lrH36GAqACBQ5P ontouml:isDerived "false"^^xsd:boolean;
+:V2lrH36GAqACBQ5P ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:qlDtH36GAqACBQg3.
-spmo2017:V2lrH36GAqACBQ5N rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :qlDtH36GAqACBQg3.
+:V2lrH36GAqACBQ5N rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:V2lrH36GAqACBQ5N_cardinality.
-spmo2017:V2lrH36GAqACBQ5N_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :V2lrH36GAqACBQ5N_cardinality.
+:V2lrH36GAqACBQ5N_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:V2lrH36GAqACBQ5N ontouml:isDerived "false"^^xsd:boolean;
+:V2lrH36GAqACBQ5N ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType spmo2017:ClQrH36GAqACBQ2g.
+    ontouml:propertyType :ClQrH36GAqACBQ2g.
 <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ75> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "subProcess"@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ75_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ75_cardinality> rdf:type ontouml:Cardinality;
@@ -1355,9 +1354,9 @@ spmo2017:V2lrH36GAqACBQ5N ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:RSvLH36GAqACBQ2O.
+    ontouml:propertyType :RSvLH36GAqACBQ2O.
 <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ73> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ73_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/4AxbH36GAqACBQ73_cardinality> rdf:type ontouml:Cardinality;
@@ -1369,60 +1368,60 @@ spmo2017:V2lrH36GAqACBQ5N ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2F>.
-spmo2017:xi3HH36GAqACBRBw rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:xi3HH36GAqACBRBw rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:xi3HH36GAqACBRBw_cardinality.
-spmo2017:xi3HH36GAqACBRBw_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :xi3HH36GAqACBRBw_cardinality.
+:xi3HH36GAqACBRBw_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "2..*";
     ontouml:lowerBound "2";
     ontouml:upperBound "*".
-spmo2017:xi3HH36GAqACBRBw ontouml:isDerived "false"^^xsd:boolean;
+:xi3HH36GAqACBRBw ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>.
-spmo2017:xi3HH36GAqACBRBu rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:xi3HH36GAqACBRBu rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:xi3HH36GAqACBRBu_cardinality.
-spmo2017:xi3HH36GAqACBRBu_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :xi3HH36GAqACBRBu_cardinality.
+:xi3HH36GAqACBRBu_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1..*";
     ontouml:lowerBound "1";
     ontouml:upperBound "*".
-spmo2017:xi3HH36GAqACBRBu ontouml:isDerived "false"^^xsd:boolean;
+:xi3HH36GAqACBRBu ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType spmo2017:RSvLH36GAqACBQ2O.
-spmo2017:lZonH36GAqACBRCP rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :RSvLH36GAqACBQ2O.
+:lZonH36GAqACBRCP rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:lZonH36GAqACBRCP_cardinality.
-spmo2017:lZonH36GAqACBRCP_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :lZonH36GAqACBRCP_cardinality.
+:lZonH36GAqACBRCP_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:lZonH36GAqACBRCP ontouml:isDerived "false"^^xsd:boolean;
+:lZonH36GAqACBRCP ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>.
-spmo2017:lZonH36GAqACBRCR rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:lZonH36GAqACBRCR rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:lZonH36GAqACBRCR_cardinality.
-spmo2017:lZonH36GAqACBRCR_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :lZonH36GAqACBRCR_cardinality.
+:lZonH36GAqACBRCR_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:lZonH36GAqACBRCR ontouml:isDerived "false"^^xsd:boolean;
+:lZonH36GAqACBRCR ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>.
 <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCp> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCp_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCp_cardinality> rdf:type ontouml:Cardinality;
@@ -1435,7 +1434,7 @@ spmo2017:lZonH36GAqACBRCR ontouml:isDerived "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>.
 <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCr> rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCr_cardinality>.
 <http://purl.org/ontouml-models/dataset/spmo2017/3AMnH36GAqACBRCr_cardinality> rdf:type ontouml:Cardinality;
@@ -1446,146 +1445,146 @@ spmo2017:lZonH36GAqACBRCR ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:qlDtH36GAqACBQg3.
-spmo2017:I4hnH36GAqACBRD7 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :qlDtH36GAqACBQg3.
+:I4hnH36GAqACBRD7 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:I4hnH36GAqACBRD7_cardinality.
-spmo2017:I4hnH36GAqACBRD7_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :I4hnH36GAqACBRD7_cardinality.
+:I4hnH36GAqACBRD7_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:I4hnH36GAqACBRD7 ontouml:isDerived "false"^^xsd:boolean;
+:I4hnH36GAqACBRD7 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t>.
-spmo2017:I4hnH36GAqACBRD9 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:I4hnH36GAqACBRD9 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:I4hnH36GAqACBRD9_cardinality.
-spmo2017:I4hnH36GAqACBRD9_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :I4hnH36GAqACBRD9_cardinality.
+:I4hnH36GAqACBRD9_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:I4hnH36GAqACBRD9 ontouml:isDerived "false"^^xsd:boolean;
+:I4hnH36GAqACBRD9 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:ChNtH36GAqACBQgs.
-spmo2017:NKEXH36GAqACBRFq rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :ChNtH36GAqACBQgs.
+:NKEXH36GAqACBRFq rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:NKEXH36GAqACBRFq_cardinality.
-spmo2017:NKEXH36GAqACBRFq_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :NKEXH36GAqACBRFq_cardinality.
+:NKEXH36GAqACBRFq_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:NKEXH36GAqACBRFq ontouml:isDerived "false"^^xsd:boolean;
+:NKEXH36GAqACBRFq ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.t>.
-spmo2017:NKEXH36GAqACBRFs rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:NKEXH36GAqACBRFs rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:NKEXH36GAqACBRFs_cardinality.
-spmo2017:NKEXH36GAqACBRFs_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :NKEXH36GAqACBRFs_cardinality.
+:NKEXH36GAqACBRFs_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:NKEXH36GAqACBRFs ontouml:isDerived "false"^^xsd:boolean;
+:NKEXH36GAqACBRFs ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:l5_VH36GAqACBQWz.
-spmo2017:gWLXH36GAqACBRIW rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :l5_VH36GAqACBQWz.
+:gWLXH36GAqACBRIW rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:gWLXH36GAqACBRIW_cardinality.
-spmo2017:gWLXH36GAqACBRIW_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :gWLXH36GAqACBRIW_cardinality.
+:gWLXH36GAqACBRIW_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:gWLXH36GAqACBRIW ontouml:isDerived "false"^^xsd:boolean;
+:gWLXH36GAqACBRIW ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d>.
-spmo2017:gWLXH36GAqACBRIY rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:gWLXH36GAqACBRIY rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:gWLXH36GAqACBRIY_cardinality.
-spmo2017:gWLXH36GAqACBRIY_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :gWLXH36GAqACBRIY_cardinality.
+:gWLXH36GAqACBRIY_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..1";
     ontouml:lowerBound "0";
     ontouml:upperBound "1".
-spmo2017:gWLXH36GAqACBRIY ontouml:isDerived "false"^^xsd:boolean;
+:gWLXH36GAqACBRIY ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:PnHtH36GAqACBQhN.
-spmo2017:Q5Z3H36GAqACBRLZ rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :PnHtH36GAqACBQhN.
+:Q5Z3H36GAqACBRLZ rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:Q5Z3H36GAqACBRLZ_cardinality.
-spmo2017:Q5Z3H36GAqACBRLZ_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :Q5Z3H36GAqACBRLZ_cardinality.
+:Q5Z3H36GAqACBRLZ_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "0..*";
     ontouml:lowerBound "0";
     ontouml:upperBound "*".
-spmo2017:Q5Z3H36GAqACBRLZ ontouml:isDerived "false"^^xsd:boolean;
+:Q5Z3H36GAqACBRLZ ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d>.
-spmo2017:Q5Z3H36GAqACBRLb rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:Q5Z3H36GAqACBRLb rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:Q5Z3H36GAqACBRLb_cardinality.
-spmo2017:Q5Z3H36GAqACBRLb_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :Q5Z3H36GAqACBRLb_cardinality.
+:Q5Z3H36GAqACBRLb_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:Q5Z3H36GAqACBRLb ontouml:isDerived "false"^^xsd:boolean;
+:Q5Z3H36GAqACBRLb ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType spmo2017:HRLtH36GAqACBQhC.
-spmo2017:u8D3H36GAqACBRL3 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:propertyType :HRLtH36GAqACBQhC.
+:u8D3H36GAqACBRL3 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:u8D3H36GAqACBRL3_cardinality.
-spmo2017:u8D3H36GAqACBRL3_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :u8D3H36GAqACBRL3_cardinality.
+:u8D3H36GAqACBRL3_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1..*";
     ontouml:lowerBound "1";
     ontouml:upperBound "*".
-spmo2017:u8D3H36GAqACBRL3 ontouml:isDerived "false"^^xsd:boolean;
+:u8D3H36GAqACBRL3 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_d>.
-spmo2017:u8D3H36GAqACBRL1 rdf:type ontouml:Property;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+:u8D3H36GAqACBRL1 rdf:type ontouml:Property;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name ""@en;
-    ontouml:cardinality spmo2017:u8D3H36GAqACBRL1_cardinality.
-spmo2017:u8D3H36GAqACBRL1_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :u8D3H36GAqACBRL1_cardinality.
+:u8D3H36GAqACBRL1_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-spmo2017:u8D3H36GAqACBRL1 ontouml:isDerived "false"^^xsd:boolean;
+:u8D3H36GAqACBRL1 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/spmo2017/OGh7H36GAqACBQ.d>.
 <http://purl.org/ontouml-models/dataset/spmo2017/027VH36GAqACBQWg> rdf:type ontouml:Diagram;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "WBS"@en;
-    ontouml:containsView spmo2017:EYQ1H36GAqACBQW4, spmo2017:p5_VH36GAqACBQWy, spmo2017:ZzY1H36GAqACBQXS, spmo2017:Fez1H36GAqACBQZo, spmo2017:C031H36GAqACBQaG, spmo2017:HPwNH36GAqACBQa5, spmo2017:jZI1H36GAqACBQXJ, spmo2017:Vev1H36GAqACBQaZ.
-spmo2017:DnGNH36GAqACBQcC rdf:type ontouml:Diagram;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:containsView :EYQ1H36GAqACBQW4, :p5_VH36GAqACBQWy, :ZzY1H36GAqACBQXS, :Fez1H36GAqACBQZo, :C031H36GAqACBQaG, :HPwNH36GAqACBQa5, :jZI1H36GAqACBQXJ, :Vev1H36GAqACBQaZ.
+:DnGNH36GAqACBQcC rdf:type ontouml:Diagram;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Estimated Process"@en;
-    ontouml:containsView <http://purl.org/ontouml-models/dataset/spmo2017/4TkTH36GAqACBQrV>, spmo2017:HtXNH36GAqACBQer, spmo2017:h3j9H36GAqACBQjz, spmo2017:JtKDH36GAqACBQlX, spmo2017:QGhtH36GAqACBQgT, spmo2017:LZUDH36GAqACBQlH, spmo2017:Ji5DH36GAqACBQmj, spmo2017:BaxjH36GAqACBQpn, spmo2017:jcptH36GAqACBQge, spmo2017:xVMtH36GAqACBQfX, spmo2017:ur1NH36GAqACBQde, spmo2017:V0YtH36GAqACBQfG, spmo2017:ChNtH36GAqACBQgr, spmo2017:WuWtH36GAqACBQf2, spmo2017:qlDtH36GAqACBQg2, spmo2017:edhjH36GAqACBQpf, spmo2017:WG2DH36GAqACBQl1, <http://purl.org/ontouml-models/dataset/spmo2017/5wkjH36GAqACBQoG>, spmo2017:aAsjH36GAqACBQoS, <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhy>, <http://purl.org/ontouml-models/dataset/spmo2017/2n0DH36GAqACBQlL>, spmo2017:E4KtH36GAqACBQfk, spmo2017:QxpNH36GAqACBQc5, spmo2017:MhRNH36GAqACBQcl, spmo2017:s6_tH36GAqACBQhU, <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQho>, spmo2017:HRLtH36GAqACBQhB, <http://purl.org/ontouml-models/dataset/spmo2017/2r1NH36GAqACBQdc>, <http://purl.org/ontouml-models/dataset/spmo2017/3RpNH36GAqACBQc3>, spmo2017:iVhDH36GAqACBQmP, spmo2017:YO6tH36GAqACBQft, spmo2017:lJoTH36GAqACBQrF, <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQih>, spmo2017:X_RDH36GAqACBQmT, <http://purl.org/ontouml-models/dataset/spmo2017/3bf9H36GAqACBQkp>, <http://purl.org/ontouml-models/dataset/spmo2017/3nHtH36GAqACBQhM>, <http://purl.org/ontouml-models/dataset/spmo2017/_Q39H36GAqACBQkT>, spmo2017:dV6dH36GAqACBQiR, spmo2017:ZASTH36GAqACBQrw, spmo2017:HlNNH36GAqACBQdl, spmo2017:jWRjH36GAqACBQpj, <http://purl.org/ontouml-models/dataset/spmo2017/5MgjH36GAqACBQnx>, spmo2017:H1rDH36GAqACBQnJ, spmo2017:BiaTH36GAqACBQsC, <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhe>, spmo2017:XlNNH36GAqACBQdp, spmo2017:iR3jH36GAqACBQqe, spmo2017:yh4TH36GAqACBQrN, <http://purl.org/ontouml-models/dataset/spmo2017/a9.jH36GAqACBQpV>, spmo2017:DywTH36GAqACBQq_, spmo2017:c41jH36GAqACBQp5, spmo2017:nlNNH36GAqACBQdn.
+    ontouml:containsView <http://purl.org/ontouml-models/dataset/spmo2017/4TkTH36GAqACBQrV>, :HtXNH36GAqACBQer, :h3j9H36GAqACBQjz, :JtKDH36GAqACBQlX, :QGhtH36GAqACBQgT, :LZUDH36GAqACBQlH, :Ji5DH36GAqACBQmj, :BaxjH36GAqACBQpn, :jcptH36GAqACBQge, :xVMtH36GAqACBQfX, :ur1NH36GAqACBQde, :V0YtH36GAqACBQfG, :ChNtH36GAqACBQgr, :WuWtH36GAqACBQf2, :qlDtH36GAqACBQg2, :edhjH36GAqACBQpf, :WG2DH36GAqACBQl1, <http://purl.org/ontouml-models/dataset/spmo2017/5wkjH36GAqACBQoG>, :aAsjH36GAqACBQoS, <http://purl.org/ontouml-models/dataset/spmo2017/A.MdH36GAqACBQhy>, <http://purl.org/ontouml-models/dataset/spmo2017/2n0DH36GAqACBQlL>, :E4KtH36GAqACBQfk, :QxpNH36GAqACBQc5, :MhRNH36GAqACBQcl, :s6_tH36GAqACBQhU, <http://purl.org/ontouml-models/dataset/spmo2017/6PEdH36GAqACBQho>, :HRLtH36GAqACBQhB, <http://purl.org/ontouml-models/dataset/spmo2017/2r1NH36GAqACBQdc>, <http://purl.org/ontouml-models/dataset/spmo2017/3RpNH36GAqACBQc3>, :iVhDH36GAqACBQmP, :YO6tH36GAqACBQft, :lJoTH36GAqACBQrF, <http://purl.org/ontouml-models/dataset/spmo2017/7O.dH36GAqACBQih>, :X_RDH36GAqACBQmT, <http://purl.org/ontouml-models/dataset/spmo2017/3bf9H36GAqACBQkp>, <http://purl.org/ontouml-models/dataset/spmo2017/3nHtH36GAqACBQhM>, <http://purl.org/ontouml-models/dataset/spmo2017/_Q39H36GAqACBQkT>, :dV6dH36GAqACBQiR, :ZASTH36GAqACBQrw, :HlNNH36GAqACBQdl, :jWRjH36GAqACBQpj, <http://purl.org/ontouml-models/dataset/spmo2017/5MgjH36GAqACBQnx>, :H1rDH36GAqACBQnJ, :BiaTH36GAqACBQsC, <http://purl.org/ontouml-models/dataset/spmo2017/2twdH36GAqACBQhe>, :XlNNH36GAqACBQdp, :iR3jH36GAqACBQqe, :yh4TH36GAqACBQrN, <http://purl.org/ontouml-models/dataset/spmo2017/a9.jH36GAqACBQpV>, :DywTH36GAqACBQq_, :c41jH36GAqACBQp5, :nlNNH36GAqACBQdn.
 <http://purl.org/ontouml-models/dataset/spmo2017/1IVTH36GAqACBQtE> rdf:type ontouml:Diagram;
-    ontouml:project spmo2017:R3TVH36GAqACBQBO;
+    ontouml:project :R3TVH36GAqACBQBO;
     ontouml:name "Tracked Process"@en;
-    ontouml:containsView spmo2017:yIA3H36GAqACBRJA, spmo2017:iKdbH36GAqACBQ8h, <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2W>, spmo2017:sQQzH36GAqACBQvS, <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.s>, spmo2017:lHVXH36GAqACBRHl, spmo2017:uh0rH36GAqACBQ24, spmo2017:OS2nH36GAqACBRD1, <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2E>, spmo2017:HpHTH36GAqACBQud, spmo2017:mBizH36GAqACBQws, spmo2017:BxqbH36GAqACBQ7P, spmo2017:s4hnH36GAqACBRD_, <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ0z>, spmo2017:E_c7H36GAqACBQ91, spmo2017:xRNLH36GAqACBQ1e, <http://purl.org/ontouml-models/dataset/spmo2017/Kw.zH36GAqACBQxz>, spmo2017:HFszH36GAqACBQwB, <http://purl.org/ontouml-models/dataset/spmo2017/.EjTH36GAqACBQtc>, spmo2017:Gh0rH36GAqACBQ22, spmo2017:Y5Z3H36GAqACBRLd, spmo2017:kgMnH36GAqACBRCt, <http://purl.org/ontouml-models/dataset/spmo2017/4HWXH36GAqACBRGf>, spmo2017:sOPbH36GAqACBQ9C, spmo2017:v_03H36GAqACBRJn, spmo2017:bsQLH36GAqACBQzW, <http://purl.org/ontouml-models/dataset/spmo2017/1i3HH36GAqACBRBy>, spmo2017:p8D3H36GAqACBRL5, spmo2017:rZebH36GAqACBQ7i, spmo2017:kWLXH36GAqACBRIa, spmo2017:CAxbH36GAqACBQ77, spmo2017:mwdnH36GAqACBREe, spmo2017:UT_nH36GAqACBRFR, <http://purl.org/ontouml-models/dataset/spmo2017/6yqrH36GAqACBQ3s>, <http://purl.org/ontouml-models/dataset/spmo2017/EOD7H36GAqACBQ.8>, <http://purl.org/ontouml-models/dataset/spmo2017/3_03H36GAqACBRJj>, spmo2017:EHWXH36GAqACBRGj, spmo2017:ClQrH36GAqACBQ2f, spmo2017:pDHbH36GAqACBQ84, spmo2017:LKEXH36GAqACBRFu, spmo2017:EHWXH36GAqACBRGl, spmo2017:x7rzH36GAqACBQyn, spmo2017:yBizH36GAqACBQwq, spmo2017:EWBzH36GAqACBQyD, spmo2017:DArnH36GAqACBREy, <http://purl.org/ontouml-models/dataset/spmo2017/lB7LH36GAqACBQ1.>, <http://purl.org/ontouml-models/dataset/spmo2017/rGMLH36GAqACBQz.>, spmo2017:YUCrH36GAqACBQ3Q, spmo2017:EQQzH36GAqACBQvQ, spmo2017:vyIHH36GAqACBQ_x, spmo2017:JdLTH36GAqACBQuD, <http://purl.org/ontouml-models/dataset/spmo2017/s.crH36GAqACBQ3G>, spmo2017:YWBzH36GAqACBQyB, spmo2017:DZonH36GAqACBRCT, <http://purl.org/ontouml-models/dataset/spmo2017/72lrH36GAqACBQ5R>, <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_c>, spmo2017:lOfTH36GAqACBQvD, spmo2017:v_03H36GAqACBRJl, <http://purl.org/ontouml-models/dataset/spmo2017/2Gh7H36GAqACBQ.c>, spmo2017:kkOzH36GAqACBQxf, spmo2017:EHWXH36GAqACBRGh, spmo2017:RSvLH36GAqACBQ2N, spmo2017:JJmbH36GAqACBQ7Z, spmo2017:jpHTH36GAqACBQub.
+    ontouml:containsView :yIA3H36GAqACBRJA, :iKdbH36GAqACBQ8h, <http://purl.org/ontouml-models/dataset/spmo2017/0IArH36GAqACBQ2W>, :sQQzH36GAqACBQvS, <http://purl.org/ontouml-models/dataset/spmo2017/5ll7H36GAqACBQ.s>, :lHVXH36GAqACBRHl, :uh0rH36GAqACBQ24, :OS2nH36GAqACBRD1, <http://purl.org/ontouml-models/dataset/spmo2017/7FXLH36GAqACBQ2E>, :HpHTH36GAqACBQud, :mBizH36GAqACBQws, :BxqbH36GAqACBQ7P, :s4hnH36GAqACBRD_, <http://purl.org/ontouml-models/dataset/spmo2017/uA.LH36GAqACBQ0z>, :E_c7H36GAqACBQ91, :xRNLH36GAqACBQ1e, <http://purl.org/ontouml-models/dataset/spmo2017/Kw.zH36GAqACBQxz>, :HFszH36GAqACBQwB, <http://purl.org/ontouml-models/dataset/spmo2017/.EjTH36GAqACBQtc>, :Gh0rH36GAqACBQ22, :Y5Z3H36GAqACBRLd, :kgMnH36GAqACBRCt, <http://purl.org/ontouml-models/dataset/spmo2017/4HWXH36GAqACBRGf>, :sOPbH36GAqACBQ9C, :v_03H36GAqACBRJn, :bsQLH36GAqACBQzW, <http://purl.org/ontouml-models/dataset/spmo2017/1i3HH36GAqACBRBy>, :p8D3H36GAqACBRL5, :rZebH36GAqACBQ7i, :kWLXH36GAqACBRIa, :CAxbH36GAqACBQ77, :mwdnH36GAqACBREe, :UT_nH36GAqACBRFR, <http://purl.org/ontouml-models/dataset/spmo2017/6yqrH36GAqACBQ3s>, <http://purl.org/ontouml-models/dataset/spmo2017/EOD7H36GAqACBQ.8>, <http://purl.org/ontouml-models/dataset/spmo2017/3_03H36GAqACBRJj>, :EHWXH36GAqACBRGj, :ClQrH36GAqACBQ2f, :pDHbH36GAqACBQ84, :LKEXH36GAqACBRFu, :EHWXH36GAqACBRGl, :x7rzH36GAqACBQyn, :yBizH36GAqACBQwq, :EWBzH36GAqACBQyD, :DArnH36GAqACBREy, <http://purl.org/ontouml-models/dataset/spmo2017/lB7LH36GAqACBQ1.>, <http://purl.org/ontouml-models/dataset/spmo2017/rGMLH36GAqACBQz.>, :YUCrH36GAqACBQ3Q, :EQQzH36GAqACBQvQ, :vyIHH36GAqACBQ_x, :JdLTH36GAqACBQuD, <http://purl.org/ontouml-models/dataset/spmo2017/s.crH36GAqACBQ3G>, :YWBzH36GAqACBQyB, :DZonH36GAqACBRCT, <http://purl.org/ontouml-models/dataset/spmo2017/72lrH36GAqACBQ5R>, <http://purl.org/ontouml-models/dataset/spmo2017/4mP7H36GAqACBQ_c>, :lOfTH36GAqACBQvD, :v_03H36GAqACBRJl, <http://purl.org/ontouml-models/dataset/spmo2017/2Gh7H36GAqACBQ.c>, :kkOzH36GAqACBQxf, :EHWXH36GAqACBRGh, :RSvLH36GAqACBQ2N, :JJmbH36GAqACBQ7Z, :jpHTH36GAqACBQub.

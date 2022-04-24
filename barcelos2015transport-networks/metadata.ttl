@@ -1,0 +1,26 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+
+<http://purl.org/ontouml-models/dataset/barcelos2015transport-networks/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Technology-independent Multi-layer Transport Networks";
+    dct:issued "2015"^^xsd:gYear;
+    dct:modified "2015"^^xsd:gYear;
+    dct:contributor <https://orcid.org/0000-0003-2736-7817>;
+    dct:subject "networks", "transport networks", "itu-t g.805";
+    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    skos:editorialNote "Imported from Enterprise Architect - all stereotypes had to be corrected. From diagram Architectural Component to A-FP the stereotypes corrections were made manually, from SN-FP to Switch OTN Structure the corrections were made through the use of the plugin functionality \"Fix Stereotypes\". Part-whole relations' constraints had to be manually corrected, as well as generalization sets, which had to be manually created. Association ends were imported as private instead of public, however this does not have any semantic impact on the models, so it was left as it is in most cases to avoid unnecessary work. Minor corrections were made to create a newer version of the ontology to be published.";
+    dct:type ontouml:Domain;
+    dct:language "en";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Interoperability;
+    ontouml:context ontouml:Research;
+    dct:source <http://repositorio.ufes.br/handle/10/9712>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>.
