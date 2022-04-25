@@ -8,18 +8,20 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Relational Database System Ontology";
     mod:acronym "RDBS-O";
     dct:issued "2018"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "The declared purpose of the ontology is \"to identify and represent key concepts of the relational database domain in the architectural scope, not covering control and execution details.\" and \"RDBS-O is being built in the context of a larger effort of building a network of ontologies on software development frameworks, in particular for object/relational frameworks [Bauer and King 2004]. Such ontologies will allow us to automate tasks such as migrating code from one framework to another or defining and detecting architectural smells in software projects\".";
+    dct:language "en";
     dct:contributor <https://orcid.org/0000-0001-7945-6489>, <https://orcid.org/0000-0003-1869-5704>, <https://orcid.org/0000-0002-4408-7553>;
     dct:subject "relational databases", "database structure";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
-    skos:editorialNote "The declared purpose of the ontology is \"to identify and represent key concepts of the relational database domain in the architectural scope, not covering control and execution details.\" and \"RDBS-O is being built in the context of a larger effort of building a network of ontologies on software development frameworks, in particular for object/relational frameworks [Bauer and King 2004]. Such ontologies will allow us to automate tasks such as migrating code from one framework to another or defining and detecting architectural smells in software projects\".";
-    dct:type ontouml:Domain;
-    dct:language "en";
     mod:designedForTask ontouml:ConceptualClarification, ontouml:SoftwareEngineering;
     ontouml:context ontouml:Research;
     dct:source <https://dblp.org/rec/conf/ontobras/AguiarFS18>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/>.

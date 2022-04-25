@@ -8,17 +8,19 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/van-wingerde2020smart-contracts/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "An ontological analysis of artifact-centric business processes managed by smart contracts";
     dct:issued "2020"^^xsd:gYear;
     dct:modified "2020"^^xsd:gYear;
+    dcat:theme lcc:T;
+    dct:language "en";
     dct:contributor <https://orcid.org/0000-0002-6035-9045>;
     dct:subject "business processes";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
-    dct:type ontouml:Domain;
-    dct:language "en";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research;
     dct:source <van2020ontological>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/van-wingerde2020smart-contracts/>.

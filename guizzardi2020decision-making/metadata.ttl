@@ -8,18 +8,20 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/guizzardi2020decision-making/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Decision Making Ontology";
     dct:issued "2020"^^xsd:gYear;
     dct:modified "2020"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The Visual Paradigm file has been provided by the authors after the publication of the associated paper. Differences between them have yet to be published as an update of the ontology.\n";
+    dct:language "en";
     dct:contributor <https://orcid.org/0000-0002-5804-5741>, <https://dblp.org/pid/278/1407>, <https://orcid.org/0000-0003-3655-0218>, <https://orcid.org/0000-0002-3452-553X>;
     dct:subject "decision making";
-    dcat:theme <http://id.loc.gov/authorities/classification/H>;
-    skos:editorialNote "The Visual Paradigm file has been provided by the authors after the publication of the associated paper. Differences between them have yet to be published as an update of the ontology.\n";
-    dct:type ontouml:Core;
-    dct:language "en";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research;
     dct:source <https://dblp.org/rec/conf/ontobras/GuizzardiCPG20>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Core.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/guizzardi2020decision-making/>.

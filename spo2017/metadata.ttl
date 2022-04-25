@@ -8,19 +8,21 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/spo2017/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Software Process Ontology";
     mod:acronym "SPO";
     dct:issued "2017"^^xsd:gYear;
     dct:modified "2017"^^xsd:gYear;
-    dct:subject "software process";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    dcat:theme lcc:T;
     skos:editorialNote "The ontology was documented based on the version available at SEON's website on 17 March 2022.";
-    dct:type ontouml:Domain;
     dct:language "en";
+    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/SPO.html>;
+    dct:subject "software process";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research;
     dct:source <https://dev.nemo.inf.ufes.br/seon/SPO.html>;
     dct:conformsTo ontouml:OntoumlStyle;
-    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/SPO.html>.
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/spo2017/>.

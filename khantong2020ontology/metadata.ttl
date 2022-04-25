@@ -8,18 +8,20 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/khantong2020ontology/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Disaster Response Ontology - Flood Response Scenarios";
     dct:issued "2019"^^xsd:gYear;
     dct:modified "2020"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The ontology was documented based on the version on the journal publication. It employs UFO for endurants, but employs DEMO theory of speech acts for perdurants.";
+    dct:language "en";
     dct:contributor <https://orcid.org/0000-0001-7874-4980>, <https://orcid.org/0000-0003-3639-1157>, <https://orcid.org/0000-0002-4974-4209>;
     dct:subject "disaster management";
-    dcat:theme <http://id.loc.gov/authorities/classification/H>;
-    skos:editorialNote "The ontology was documented based on the version on the journal publication. It employs UFO for endurants, but employs DEMO theory of speech acts for perdurants.";
-    dct:type ontouml:Domain;
-    dct:language "en";
     mod:designedForTask ontouml:DataPublication;
     ontouml:context ontouml:Research;
     dct:source <https://doi.org/10.1556/1848.2020.00004>, <https://doi.org/10.1007/s13740-019-00110-6>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/khantong2020ontology/>.

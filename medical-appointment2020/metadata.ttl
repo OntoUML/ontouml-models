@@ -8,16 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/medical-appointment2020/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Medical Appointment Ontology";
     dct:issued "2020"^^xsd:gYear;
+    dcat:theme lcc:R;
+    dct:language "pt-br";
     dct:contributor <https://orcid.org/0000-0003-3319-1715>, <https://orcid.org/0000-0001-9430-7713>, <https://orcid.org/0000-0002-0929-1874>;
     dct:subject "medical appointment";
-    dcat:theme <http://id.loc.gov/authorities/classification/R>;
-    dct:type ontouml:Domain;
-    dct:language "pt-br";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research;
     dct:source <https://dblp.org/rec/conf/cibse/ValaskiRM20>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/medical-appointment2020/>.

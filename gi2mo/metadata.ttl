@@ -8,15 +8,17 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/gi2mo/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Generic Idea and Innovation Management Ontology Refactored";
     mod:acronym "Gi2MORefactored";
-    dct:subject "creative work", "idea management";
-    dcat:theme <http://id.loc.gov/authorities/classification/H>;
+    dcat:theme lcc:H;
     skos:editorialNote "This model was done as an assignment for a course. The author required to remain anonymous. There is no information about the ontology development year. The original model exported in XMI was imported and edited with the ontouml plugin to correspond to the diagrams' images. A class without any reference was removed (Class_1).";
-    dct:type ontouml:Domain;
     dct:language "en";
+    dct:subject "creative work", "idea management";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Classroom;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/gi2mo/>.

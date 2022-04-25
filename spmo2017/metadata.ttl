@@ -8,19 +8,21 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/spmo2017/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Software Project Management Ontology";
     mod:acronym "SPMO";
     dct:issued "2017"^^xsd:gYear;
     dct:modified "2017"^^xsd:gYear;
-    dct:subject "software project management";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    dcat:theme lcc:T;
     skos:editorialNote "The ontology was documented based on the content available at the SEON website on March 2022. The versions shown on the paper have more stereotypes but are different. SPMO reuses other ontologies, namely the Software Process Ontology. However, the imported ontologies were not completely included in this project.";
-    dct:type ontouml:Domain;
     dct:language "en";
+    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/SPMO.html>;
+    dct:subject "software project management";
     mod:designedForTask ontouml:InformationRetrieval, ontouml:SoftwareEngineering;
     ontouml:context ontouml:Research;
     dct:source <https://dev.nemo.inf.ufes.br/seon/SPMO.html>;
     dct:conformsTo ontouml:UfoStyle;
-    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/SPMO.html>.
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/spmo2017/>.

@@ -8,15 +8,17 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/g809-2015/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "G.809 Model";
-    dct:subject "networking", "transmission systems";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    dcat:theme lcc:T;
     skos:editorialNote "The ontology is the outcome of classroom activity on the representation to the recommendation G.809 of the International Telecommunication Union on the standardization \"Functional architecture of connectionless layer networks\".\nAmong the references, we have included the ITU-T recommendation G.809 which should be the basis of the documented ontology.\n";
-    dct:type ontouml:Domain;
     dct:language "en";
+    dct:subject "networking", "transmission systems";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Classroom;
     dct:source <https://www.itu.int/rec/T-REC-G.809-200303-I/en>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/g809-2015/>.

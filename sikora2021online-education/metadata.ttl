@@ -8,17 +8,19 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/sikora2021online-education/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Online Education Ontology";
     dct:issued "2021"^^xsd:gYear;
     dct:modified "2021"^^xsd:gYear;
-    dct:subject "education";
-    dcat:theme <http://id.loc.gov/authorities/classification/L>;
+    dcat:theme lcc:L;
     skos:editorialNote "there is a class \"comment\" that is both a \"kind\" and a \"relator\"";
-    dct:type ontouml:Domain;
     dct:language "en";
+    dct:subject "education";
     mod:designedForTask ontouml:SoftwareEngineering;
     ontouml:context ontouml:Research;
     dct:source <filip2021modelovani>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/sikora2021online-education/>.

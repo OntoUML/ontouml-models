@@ -8,16 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/internal-affairs2013/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Internal Affairs Ontology";
     dct:issued "2013"^^xsd:gYear;
     dct:modified "2013"^^xsd:gYear;
-    dct:subject "internal affairs", "military", "organization";
-    dcat:theme <http://id.loc.gov/authorities/classification/U>;
+    dcat:theme lcc:U;
     skos:editorialNote "This model was done as an assignment for a course. The author required to remain anonymous. There is no information about the ontology's development year.";
-    dct:type ontouml:Domain;
     dct:language "en";
+    dct:subject "internal affairs", "military", "organization";
     mod:designedForTask ontouml:Learning;
     ontouml:context ontouml:Classroom;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/internal-affairs2013/>.

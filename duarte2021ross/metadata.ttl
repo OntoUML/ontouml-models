@@ -8,19 +8,21 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/duarte2021ross/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Reference Ontology of Software Systems";
     mod:acronym "ROSS";
     dct:issued "2021"^^xsd:gYear;
     dct:modified "2021"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "The paper identified as the main reference contains two ontologies: Ontology of Software Defects, Errors, and Faults (OSDEF) and the Reference Ontology of Software Systems (ROSS).";
+    dct:language "en";
     dct:contributor <https://orcid.org/0000-0001-5565-3621>, <https://orcid.org/0000-0002-3452-553X>, <https://orcid.org/0000-0003-1869-5704>, <https://orcid.org/0000-0002-4408-7553>, <https://orcid.org/0000-0002-5804-5741>;
     dct:subject "software systems", "software";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
-    skos:editorialNote "The paper identified as the main reference contains two ontologies: Ontology of Software Defects, Errors, and Faults (OSDEF) and the Reference Ontology of Software Systems (ROSS).";
-    dct:type ontouml:Domain;
-    dct:language "en";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research;
     dct:source <https://doi.org/10.1016/j.datak.2021.101892>;
-    dct:conformsTo ontouml:UfoStyle.
+    dct:conformsTo ontouml:UfoStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/duarte2021ross/>.

@@ -8,19 +8,21 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/barcelos2013normative-acts/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Normative Acts";
     dct:issued "2013"^^xsd:gYear;
     dct:modified "2013"^^xsd:gYear;
+    dcat:theme lcc:K;
+    dct:language "en";
+    dcat:landingPage <https://github.com/unibz-core/Normative_Acts_Ontology>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:contributor <https://orcid.org/0000-0003-2736-7817>, <https://orcid.org/0000-0002-5804-5741>, <https://dblp.org/pid/06/10125>;
     dct:subject "normative acts";
-    dcat:theme <http://id.loc.gov/authorities/classification/K>;
-    dct:type ontouml:Domain;
-    dct:language "en";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research, ontouml:Industry;
     dct:source <https://dblp.org/rec/conf/ontobras/BarcelosGG13>;
     dct:conformsTo ontouml:OntoumlStyle;
-    dcat:landingPage <https://github.com/unibz-core/Normative_Acts_Ontology>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>.
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/barcelos2013normative-acts/>.

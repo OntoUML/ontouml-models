@@ -8,18 +8,20 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/andersson2018value-ascription/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Value Ascription Ontology";
     dct:issued "2018"^^xsd:gYear;
     dct:modified "2018"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "There is a previous publication on Value Ascription Ontology from the same authors, which even includes a more extensive use of OntoUML. However, it was decided to focus on this one as it seems to represent a step away from the original proposal.\n";
+    dct:language "en";
     dct:contributor <https://orcid.org/0000-0002-6401-3850>, <https://orcid.org/0000-0002-7318-2496>;
     dct:subject "economics", "value", "value ascription";
-    dcat:theme <http://id.loc.gov/authorities/classification/H>;
-    skos:editorialNote "There is a previous publication on Value Ascription Ontology from the same authors, which even includes a more extensive use of OntoUML. However, it was decided to focus on this one as it seems to represent a step away from the original proposal.\n";
-    dct:type ontouml:Domain;
-    dct:language "en";
     mod:designedForTask ontouml:ConceptualClarification;
     ontouml:context ontouml:Research;
     dct:source <https://dblp.org/rec/conf/vmbo/2018>;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/andersson2018value-ascription/>.

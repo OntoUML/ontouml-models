@@ -1,0 +1,28 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://purl.org/ontouml-models/catalog> a dcat:Catalog ;
+    dct:title "OntoUML Model Dataset"@en ;
+    rdfs:label "OntoUML Model Dataset"@en ;
+    foaf:homepage <https://github.com/unibz-core/ontouml-models> ;
+    dcat:themeTaxonomy <http://id.loc.gov/authorities/classification> ;
+    dcat:distribution <https://purl.org/ontouml-models/catalog/turtle> ;
+    dct:publisher <https://www.inf.unibz.it/krdb/core/> ;
+    dct:contributor <https://orcid.org/0000-0002-5385-5761>, <https://orcid.org/0000-0003-2736-7817>, <https://orcid.org/0000-0003-2528-3118>, <https://orcid.org/0000-0002-6661-6292>, <https://orcid.org/0000-0002-0952-9571>, <https://orcid.org/0000-0002-2384-3081>, <https://orcid.org/0000-0002-3452-553X>, <https://github.com/AndrasKomaromi>, <https://orcid.org/0000-0001-5010-3081>, <https://orcid.org/0000-0003-1547-8333>, <https://dblp.org/pid/309/4924>, <https://github.com/TvanEe>, <https://orcid.org/0000-0002-8139-5977>, <https://orcid.org/0000-0003-3385-4769> ;
+
+<https://www.inf.unibz.it/krdb/core/> rdfs:label "Conceptual and Cognitive Modelling Research Group (CORE)"@en ;
+    a foaf:Organization .
+
+<https://purl.org/ontouml-models/catalog/turtle> a dcat:Distribution ;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/catalog.ttl> ;
+    dct:title "Turtle distribution of the OntoUML Model Dataset"@en ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dcat:byteSize "22870277"^^xsd:decimal ;

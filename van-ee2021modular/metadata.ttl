@@ -8,16 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
 <http://purl.org/ontouml-models/dataset/van-ee2021modular/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Modular Construction Ontology";
     dct:issued "2021"^^xsd:gYear;
     dct:modified "2021"^^xsd:gYear;
-    dct:subject "construction";
-    dcat:theme <http://id.loc.gov/authorities/classification/T>;
+    dcat:theme lcc:T;
     skos:editorialNote "From the author:\nThe ontology is designed for a Dutch company in the PDEng trajectory of Tim van Ee (t.vanee@utwente.nl). As it is (currently) developed for the specific context of the company, its generalizability for the industry might be limited.\nThe core of the ontology is based on the Building Product Ontology (BPO), the Ontology for Managing Ontologies (OMG), and several others of which the most prominent are indicated below.\nBPO - <https://w3id.org/bpo#>\nOmg - <https://w3id.org/omg#>\nFog - <https://w3id.org/fog#>\nQudt - <http://qudt.org/schema/qudt#>\nSchema - <http://schema.org#>\nSeas - <https://w3id.org/seas#>\nThe ontology is still under development, any comments, suggestions or feedback is welcome!\n---------\nFrom the reviewers:\nThe classes that had clear RDF namespaces in their names were moved into their associated packages. The same couldn't be done for associations, attributes, and instances.\nClasses whose label joined multiple RDF elements were interpreted as \"owl:sameAs\" declarations. As such, each of the classes were reproduced into their namespaces/packages and the \"owl:sameAs\" declaration was translated as generalizations of each of them into a new class. No stereotype has been given to the introduced classes to avoid too many changes on the author's original intended model.\n";
-    dct:type ontouml:Application;
     dct:language "en, nl";
+    dct:subject "construction";
     mod:designedForTask ontouml:Interoperability, ontouml:SoftwareEngineering;
     ontouml:context ontouml:Research, ontouml:Industry;
-    dct:conformsTo ontouml:OntoumlStyle.
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Application.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/van-ee2021modular/>.
