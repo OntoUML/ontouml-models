@@ -3,13 +3,13 @@ import yaml
 import csv
 
 data = []
-textFields = ['title','created-at','last-update','library-classification','language']
-listFields = ['domain']
+textFields = ['title','acronym','issued','modified','theme','language']
+listFields = ['subject','contributor','source']
 structuredListFields = {
-  'style': ['ufo', 'ontouml', 'industry'],
-  'types': ['core', 'domain', 'application'],
+  'conformsTo': ['ufo', 'ontouml', 'industry'],
+  'type': ['core', 'domain', 'application'],
   'context': ['classroom', 'research', 'industry'],
-  'purpose': ['conceptual clarification', 'data publication', 'decision support system', 'example', 'information retrieval', 'interoperability', 'language engineering', 'learning', 'ontological analysis', 'software engineering']
+  'designedForTask': ['conceptual clarification', 'data publication', 'decision support system', 'example', 'information retrieval', 'interoperability', 'language engineering', 'learning', 'ontological analysis', 'software engineering']
 }
 
 header = ['directory', *textFields, *listFields]
