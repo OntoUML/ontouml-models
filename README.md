@@ -20,8 +20,11 @@ If you have any questions about submitting new models or reusing those available
 ## Disclaimer
 
 * The OntoUML dataset is a noncommercial work created strictly for academic research purposes.
-* This license only applies to the dataset structure itself, not to the models included in the dataset.
-* The models included in the dataset were obtained directly from the authors or academic sources using open or valid licensed access.
-* This license by no means overwrites the license of the models included in the dataset, which maintain their original license.
+* This license only applies to the dataset structure itself, not to the models included in the repository.
+* Information about licensing of individual ontologies included in the catalog can be found on their related metadata.yaml file.
+* The models included in the repository were obtained directly from the authors or academic sources using open or valid licensed access.
+* This license by no means overwrites the license of the models included in the repository, which maintain their original license.
+* All catalog ontologies that are without explicit licensing information on their associated metadata.yaml file must be interpreted as being private and having a restrictive license.
+* Whoever uses the OntoUML/UFO Catalog explicitly understands and agrees with this licensing information.
 
 Models are going to be immediately removed from the dataset in case of request by the original license holders. For content removal, please send an email to pfavatobarcelos@unibz.it.
