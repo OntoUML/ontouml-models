@@ -1,0 +1,42 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Egyptian E-Government Conceptual Model";
+    dct:issued "2021"^^xsd:gYear;
+    dct:modified "2021"^^xsd:gYear;
+    dcat:theme lcc:J;
+    skos:editorialNote "The diagrams represent the accessible subfragments of the full model, about the \"traveler\" and \"student\" case studies";
+    dct:language "en";
+    dct:contributor <https://dblp.org/pid/123/8870>, <https://orcid.org/0000-0003-3581-8112>, <https://orcid.org/0000-0002-5382-1385>, <https://orcid.org/0000-0001-8311-0085>;
+    dct:subject "e-government";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Industry;
+    dct:source <https://doi.org/10.1109/ICICIS52592.2021.9694122>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/>.
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/> dcat:distribution <http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Egyptian E-Government Conceptual Model\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/haridy2021egyptian-e-government/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/> dcat:distribution <http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Egyptian E-Government Conceptual Model\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/haridy2021egyptian-e-government/ontology.json>.
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/> dcat:distribution <http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/haridy2021egyptian-e-government/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Egyptian E-Government Conceptual Model\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/haridy2021egyptian-e-government/ontology.vpp>.

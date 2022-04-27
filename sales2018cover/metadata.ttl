@@ -1,0 +1,44 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/sales2018cover/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Common Ontology of Value and Risk";
+    mod:acronym "COVER";
+    dct:issued "2018"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The ontology was documented based on the github repository.";
+    dct:language "en";
+    dcat:landingPage <https://github.com/unibz-core/value-and-risk-ontology>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://orcid.org/0000-0002-5385-5761>, <https://orcid.org/0000-0001-7932-7134>, <https://orcid.org/0000-0002-3452-553X>, <https://orcid.org/0000-0002-9819-3781>, <https://orcid.org/0000-0003-0214-8853>, <https://orcid.org/0000-0002-8698-3292>;
+    dct:subject "value", "risk";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1007/978-3-030-00847-5_11>, <https://doi.org/10.1109/EDOC.2018.00028>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Core.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/sales2018cover/>.
+<http://purl.org/ontouml-models/dataset/sales2018cover/> dcat:distribution <http://purl.org/ontouml-models/dataset/sales2018cover/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/sales2018cover/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Common Ontology of Value and Risk\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/sales2018cover/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/sales2018cover/> dcat:distribution <http://purl.org/ontouml-models/dataset/sales2018cover/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/sales2018cover/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Common Ontology of Value and Risk\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/sales2018cover/ontology.json>.
+<http://purl.org/ontouml-models/dataset/sales2018cover/> dcat:distribution <http://purl.org/ontouml-models/dataset/sales2018cover/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/sales2018cover/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Common Ontology of Value and Risk\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/sales2018cover/ontology.vpp>.

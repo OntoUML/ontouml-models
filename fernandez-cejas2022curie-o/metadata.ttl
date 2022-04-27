@@ -1,0 +1,43 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Customer Relationship, Intelligence and Experiences Ontology";
+    mod:acronym "CURIE";
+    dct:issued "2022"^^xsd:gYear;
+    dct:modified "2022"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The authors built the ontology using Visual Paradigm and, hence, there is no new diagram to be generated.";
+    dct:language "en";
+    dct:contributor <https://orcid.org/0000-0003-0149-4789>, <https://orcid.org/0000-0003-0059-7161>, <https://orcid.org/0000-0003-1235-3578>, <https://orcid.org/0000-0003-3074-1697>;
+    dct:subject "customer relationship management";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1007/s12599-022-00744-0>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/>.
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/> dcat:distribution <http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Customer Relationship, Intelligence and Experiences Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/fernandez-cejas2022curie-o/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/> dcat:distribution <http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Customer Relationship, Intelligence and Experiences Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/fernandez-cejas2022curie-o/ontology.json>.
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/> dcat:distribution <http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/fernandez-cejas2022curie-o/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Customer Relationship, Intelligence and Experiences Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/fernandez-cejas2022curie-o/ontology.vpp>.
