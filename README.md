@@ -2,33 +2,32 @@
 
 The FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research, short-named **OntoUML/UFO Catalog**, is a structured, and open-source catalog that contains OntoUML and UFO ontology models. This catalog was conceived to allow collaborative work and to be easily accessible to all its users.
 
-The objective of the catalog is to support empirical research in OntoUML and UFO, as well as for the general conceptual modeling area, by providing high-quality curated, structured, and machine-processable data on *why, where, and how* different modeling approaches are used.
+Our goal with this catalog is to support empirical research in OntoUML and UFO, as well as for the general conceptual modeling area, by providing high-quality curated, structured, and machine-processable data on *why, where, and how* different modeling approaches are used.
 
 The catalog offers a diverse collection of conceptual models, created by modelers with varying modeling skills, for a range of domains, and for different purposes. The ontology models are available in machine-readable formats (JSON and Turtle) and are accessible via permanent identifiers.
 
 This document is displayed as follows:
 
-- [OntoUML/UFO Model Catalog for Ontology-Driven Conceptual Modeling Research](#ontoumlufo-model-catalog-for-ontology-driven-conceptual-modeling-research)
-  - [The Catalog Structure](#the-catalog-structure)
-  - [How to Contribute](#how-to-contribute)
-    - [Contribute by submitting your ontology](#contribute-by-submitting-your-ontology)
-    - [Contribute by reporting an ontology](#contribute-by-reporting-an-ontology)
-    - [Contribute by reporting an application](#contribute-by-reporting-an-application)
-    - [Other ways to contribute](#other-ways-to-contribute)
-  - [Related Software Applications](#related-software-applications)
-  - [OntoUML/UFO Catalog's Administration](#ontoumlufo-catalogs-administration)
-  - [How to cite the OntoUML/UFO Catalog](#how-to-cite-the-ontoumlufo-catalog)
-  - [Acknowledgements](#acknowledgements)
-  - [License Disclaimer](#license-disclaimer)
+- [Catalog structure](#catalog-structure)
+- [How to contribute](#how-to-contribute)
+  - [Contribute by submitting your ontology](#contribute-by-submitting-your-ontology)
+  - [Contribute by reporting an ontology](#contribute-by-reporting-an-ontology)
+  - [Contribute by reporting an application](#contribute-by-reporting-an-application)
+  - [Other ways to contribute](#other-ways-to-contribute)
+- [Related software applications](#related-software-applications)
+- [Catalog administration](#catalog-administration)
+- [How to cite this catalog](#how-to-cite-this-catalog)
+- [Acknowledgements](#acknowledgements)
+- [License disclaimer](#license-disclaimer)
 
-The OntoUML/UFO Catalog repository is associated with the permanent URL <https://purl.org/ontouml-models/git>.
+The catalog github repository is associated with the permanent URL <https://purl.org/ontouml-models>.
 
-## The Catalog Structure
+## Catalog structure
 
 The whole catalog is hosted on a GitHub repository whose root directory contains: 
 
-1. catalog.ttl: is the file encoding the catalog itself in a triple-based format - i.e., the aggregated data of all ontologies that are part of the catalog;
-2. metadata.ttl: provides in a triple-based format all the catalog's metadata, and aggregates all metadata from its composing ontologies;
+1. `catalog.ttl`: is the file encoding the catalog itself in a triple-based format - i.e., the aggregated data of all ontologies that are part of the catalog;
+2. `metadata.ttl`: provides in a triple-based format all the catalog's metadata, and aggregates all metadata from its composing ontologies;
 3. list of folders - each one including all the information related to an OntoUML/UFO-based model.
 
 We provide below a representation of the catalog directory tree:
@@ -61,25 +60,25 @@ Root Directory
 
 Each ontology folder is composed of the following files:
 
-1. ontology.vpp: the Visual Paradigm project of the model; 
-2. ontology.json: contains the JSON serialization of the model exported via the [ontouml-vp-plugin](https://github.com/OntoUML/ontouml-vp-plugin);
-3. ontology.ttl: uses the [OntoUML Metamodel in OWL](https://purl.org/ontouml-models/vocabulary) to map the model's data. This is a vocabulary designed to support the serialization and exchange of OntoUML models in compliance with the [ontouml-schema](https://purl.org/ontouml-schema), which is a specification of how to serialize OntoUML models as JSON objects. This file provides a specific URI for all data from the model. These URIs are generated according to the following template: `https://purl.org/ontouml-models/dataset/<folderName>`, and its publication allows anyone to access and manipulate all the model's instances;
-4. metadata.yaml: contains the model's metadata;
-5. metadata.ttl: is an rdf-based version in turtle syntax of metadata.yaml; 
-6. references.bib: contains the BibTeX citation data for each publication about the model (this file is not required for unpublished models);
-7. original diagrams/: is a folder containing images in PNG format of the diagrams created by the authors of the model;
-8. new diagrams/: is a folder containing images in PNG format of all diagrams rebuilt on Visual Paradigm (keeping the names matching the original ones);
+1. `ontology.vpp`: the Visual Paradigm project of the model; 
+2. `ontology.json`: contains the JSON serialization of the model exported via the [ontouml-vp-plugin](https://github.com/OntoUML/ontouml-vp-plugin);
+3. `ontology.ttl`: uses the [OntoUML Metamodel in OWL](https://purl.org/ontouml-models/vocabulary) to map the model's data. This is a vocabulary designed to support the serialization and exchange of OntoUML models in compliance with the [ontouml-schema](https://purl.org/ontouml-schema), which is a specification of how to serialize OntoUML models as JSON objects. This file provides a specific URI for all data from the model. These URIs are generated according to the following template: `https://purl.org/ontouml-models/dataset/<folderName>`, and its publication allows anyone to access and manipulate all the model's instances;
+4. `metadata.yaml`: contains the model's metadata;
+5. `metadata.ttl`: is an rdf-based version in turtle syntax of metadata.yaml; 
+6. `references.bib`: contains the BibTeX citation data for each publication about the model (this file is not required for unpublished models);
+7. `original diagrams/`: is a folder containing images in PNG format of the diagrams created by the authors of the model;
+8. `new diagrams/`: is a folder containing images in PNG format of all diagrams rebuilt on Visual Paradigm (keeping the names matching the original ones);
 
 Note that the `.vpp`, the `.yaml`, and the `.bib` files are the ones provided by the collaborators. In contrast, the `.json` file is automatically generated for each model using the OntoUML [ontouml-vp-plugin](https://github.com/OntoUML/ontouml-vp-plugin/). The `.png` files hosted in the `new diagrams/` folder are automatically generated by the catalog; the same for all the `.ttl` files.
 
 Following the best practices for publishing Linked Data, we created persistent URLs for all catalog resources:
 
-- GitHub repository: https://purl.org/ontouml-models/git
+- GitHub repository: https://purl.org/ontouml-models
 - OntoUML vocabulary: https://purl.org/ontouml-models/vocabulary
 - Aggregated data: https://purl.org/ontouml-models/catalog}
 - Ontology data: `https://purl.org/ontouml-models/dataset/<folderName}>`
 
-## How to Contribute
+## How to contribute
 
 The community's contribution is fundamental for the catalog's relevance, so we highly encourage authors to contribute to this catalog with their models and tools. 
 
@@ -116,34 +115,35 @@ If you wish to contribute to this initiative by **creating and reporting an appl
 
 If you find any problems on the repository or have improvement ideas, please let us know by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
 
-## Related Software Applications
+## Related software applications
 
 Up to this moment, we have no reported applications for querying, data manipulation, or evaluation. If you want to contribute, please refer to this document's section ["Contributing by reporting an application"](#contributing-by-reporting-an-application).
 
-## OntoUML/UFO Catalog's Administration
+## Catalog administration
 
-The OntoUML/UFO Catalog is directly administrated by the Conceptual and Cognitive Modelling Research Group (CORE). Their corresponding CORE members regarding the catalog are:
+The OntoUML/UFO Catalog is maintained by the Conceptual and Cognitive Modelling Research Group (CORE), in particular by:
 
-- Claudenir Morais Fonseca      *{<cmoraisfonseca@unibz.it>}*
-- Mattia Fumagalli              *{<mfumagalli@unibz.it>}*
-- Pedro Paulo Favato Barcelos   *{<pfavatobarcelos@unibz.it>}*
-- Tiago Prince Sales            *{<tprincesales@unibz.it>}*
+- [Pedro Paulo Favato Barcelos](https://www.linkedin.com/in/pedro-paulo-favato-barcelos-668a46196/)
+- [Tiago Prince Sales](https://www.inf.unibz.it/~tpsales/)
+- [Mattia Fumagalli](https://www.mattspace.net/)
+- [Claudenir Morais Fonseca](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
 
-## How to cite the OntoUML/UFO Catalog
+For any questions or issues, [open an issue](https://github.com/unibz-core/ontouml-models/issues).
 
-For citing the OntoUML/UFO Catalog, please mention its GitHub repository's PURL: <https://purl.org/ontouml-models/git>.
+
+## How to cite this catalog
+
+Cite this catalog as: 
+
+P. P. F. Barcelos, T. P. Sales, C. M. Fonseca, M. Fumagalli, I. V. Sousa, E. Romanenko, J. Kritz, G. Guizzardi, "OntoUML/UFO Model Catalog for Ontology-Driven Conceptual Modeling Research", 2022, <https://purl.org/ontouml-models/>.
 
  <!--- This section is going to be updated in case of a related paper's approval --->
 
 ## Acknowledgements
 
-We would like to especially thank:
+We would like to thank all of the [contributors](https://github.com/unibz-core/ontouml-models/graphs/contributors) to the OntoUML/UFO Catalog, as well as all of the modelers who shared their work and allowed us to include it here.
 
-- professor Giancarlo Guizzardi for the mentoring;
-- Isadora Valle Sousa, Elena Romanenko, and Joshua Kritz for their contribution to the catalog's documentation and with data input and update;
-- Ítalo Oliveira, Thomas Derave, András Komáromi, Tim van Ee, Cristiano Silva, and Lucas Maddalena for their contributions to the OntoUML/UFO Catalog, as well as all of those who shared their work and allowed us to include it here.
-
-## License Disclaimer
+## License disclaimer
 
 Although the OntoUML/UFO Catalog is an open project with a permissive license, special attention must be given to the following licensing clauses:
 
