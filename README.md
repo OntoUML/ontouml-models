@@ -74,6 +74,8 @@ Note that the `.vpp`, the `.yaml`, and the `.bib` files are the ones provided by
 
 Following the practice of implementing [FAIR principles](https://www.go-fair.org/fair-principles/), the OntoUML/UFO catalog schema (see Fig.\ref{metamodel}) was built by using the Data Catalog Vocabulary\footnote{https://www.w3.org/TR/vocab-dcat-2/} (DCAT), the Dublin Core Terms\footnote{https://www.dublincore.org/specifications/dublin-core/dcmi-terms/} (DCT), the Simple Knowledge Organization System\footnote{https://www.w3.org/TR/skos-reference/} (SKOS), and the Metadata for Ontology Description and Publication\footnote{https://www.isibang.ac.in/ns/mod/2.0/index-en.html} (MOD).
 
+![metamodel](https://user-images.githubusercontent.com/8641647/165767408-b526fa70-efa1-4661-b752-bf910778320c.png)
+
 ### Catalog's persistent URLs
 
 Following the best practices for publishing Linked Data, we created persistent URLs for all catalog resources:
