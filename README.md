@@ -92,13 +92,11 @@ We created persistent URLs for the following resources:
 - GitHub repository: https://purl.org/ontouml-models
 - OntoUML vocabulary: https://purl.org/ontouml-models/vocabulary
 - Aggregated data: https://purl.org/ontouml-models/catalog
-- Ontology data: `https://purl.org/ontouml-models/dataset/<folderName>>`
+- Ontology data: `https://purl.org/ontouml-models/dataset/<folderName>`
 
 ## How to contribute
 
-The community's contribution is fundamental for the catalog's relevance, so we highly encourage authors to contribute to this catalog with their models and tools. 
-
-By contributing you are improving the quality of research in the areas of conceptual modeling, ontology engineering, and software design.
+Your contribution is fundamental for the catalog's success. We highly encourage authors to submit their models and tools to this catalog. With that, you will be supporting research in (ontology-driven) conceptual modeling, ontology engineering, software design, and several others.
 
 ***We greatly appreciates your contribution to this project!***
 
