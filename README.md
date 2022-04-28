@@ -12,7 +12,7 @@ This document is displayed as follows:
     - [Metadata vocabularies](#metadata-vocabularies)
     - [Catalog's persistent URLs](#catalogs-persistent-urls)
   - [How to contribute](#how-to-contribute)
-    - [Contribute by submitting your ontology](#contribute-by-submitting-your-ontology)
+    - [Contribute by submitting an ontology](#contribute-by-submitting-an-ontology)
     - [Contribute by reporting an ontology](#contribute-by-reporting-an-ontology)
     - [Contribute by reporting an application](#contribute-by-reporting-an-application)
     - [Other ways to contribute](#other-ways-to-contribute)
@@ -117,7 +117,7 @@ For providing high-quality data, a submission is required to comply with the def
 
 ### Contribute by reporting an ontology
 
-If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by creating an issue or by sending an email to pedropaulo.favatobarcelos@unibz.it.
+If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by [creating an issue](https://github.com/unibz-core/ontouml-models/issues) or by sending an email to pedropaulo.favatobarcelos@unibz.it.
 
 We provide a [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) (read-only) that registers models to be further included in the catalog. The information received from collaborators is going to be included in this list.
 
