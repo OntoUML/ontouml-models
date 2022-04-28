@@ -115,13 +115,13 @@ For providing high-quality data, a submission is required to comply with the def
 
 ### Contribute by reporting an ontology
 
-If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by [creating an issue](https://github.com/unibz-core/ontouml-models/issues) or by sending an email to pedropaulo.favatobarcelos@unibz.it.
+If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by [creating an issue](https://github.com/unibz-core/ontouml-models/issues) or by sending an email to pfavatobarcelos@unibz.it.
 
 We provide a [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) (read-only) that registers models to be further included in the catalog. The information received from collaborators is going to be included in this list.
 
 ### Contribute by reporting an application
 
-If you wish to contribute to this initiative by **creating and reporting an application** for the catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pedropaulo.favatobarcelos@unibz.it.
+If you wish to contribute to this initiative by **creating and reporting an application** for the catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pfavatobarcelos@unibz.it.
 
 ### Other ways to contribute
 
@@ -167,6 +167,6 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 * All catalog ontologies that are without explicit licensing information on their associated metadata.yaml file must be interpreted as being private and having a restrictive license.
 * Whoever uses the OntoUML/UFO Catalog explicitly understands and agrees with its licensing information.
 
-Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please send an email to any of the catalog's corresponding CORE members listed in this document's section [OntoUML/UFO Catalog's Administration](#ontoumlufo-catalogs-administration).
+Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pfavatobarcelos@unibz.it.
 
 Please access [the OntoUML/UFO Catalog's LICENSE file](https://raw.githubusercontent.com/unibz-core/ontouml-models/master/LICENSE) for the complete licensing information.
