@@ -76,8 +76,8 @@ Following the best practices for publishing Linked Data, we created persistent U
 
 - GitHub repository: https://purl.org/ontouml-models
 - OntoUML vocabulary: https://purl.org/ontouml-models/vocabulary
-- Aggregated data: https://purl.org/ontouml-models/catalog}
-- Ontology data: `https://purl.org/ontouml-models/dataset/<folderName}>`
+- Aggregated data: https://purl.org/ontouml-models/catalog
+- Ontology data: `https://purl.org/ontouml-models/dataset/<folderName>>`
 
 ## How to contribute
 
