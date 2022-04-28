@@ -74,7 +74,12 @@ Note that the `.vpp`, the `.yaml`, and the `.bib` files are the ones provided by
 
 ### Metadata vocabularies
 
-Following the practice of implementing [FAIR principles](https://www.go-fair.org/fair-principles/), the OntoUML/UFO catalog schema (see image below) was built by using the [Data Catalog Vocabulary v2](https://www.w3.org/TR/vocab-dcat-2/) (DCAT), the [Dublin Core Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) (DCT), the [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/) (SKOS), and the [Metadata for Ontology Description and Publication](https://www.isibang.ac.in/ns/mod/2.0/index-en.html) (MOD).
+Following the practice of implementing [FAIR principles](https://www.go-fair.org/fair-principles/), the OntoUML/UFO catalog schema (see image below) was built by using:
+- [Data Catalog Vocabulary v2](https://www.w3.org/TR/vocab-dcat-2/) (DCAT)
+- [Dublin Core Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) (DCT)
+- [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/) (SKOS)
+- [Metadata for Ontology Description and Publication](https://www.isibang.ac.in/ns/mod/2.0/index-en.html) (MOD)
+- [Friend of a Friend](http://xmlns.com/foaf/spec/) (FOAF)
 
 ![metamodel](https://user-images.githubusercontent.com/8641647/165767408-b526fa70-efa1-4661-b752-bf910778320c.png)
 
@@ -82,7 +87,7 @@ Each semantic artifact itself is represented by a `dcat:Dataset`, described acco
 
 ### Catalog's persistent URLs
 
-Following the best practices for publishing Linked Data, we created persistent URLs for all catalog resources:
+We created persistent URLs for the following resources:
 
 - GitHub repository: https://purl.org/ontouml-models
 - OntoUML vocabulary: https://purl.org/ontouml-models/vocabulary
@@ -95,11 +100,11 @@ The community's contribution is fundamental for the catalog's relevance, so we h
 
 By contributing you are improving the quality of research in the areas of conceptual modeling, ontology engineering, and software design.
 
-***The OntoUML/UFO Catalog Administration team greatly appreciates your contribution to this project!***
+***We greatly appreciates your contribution to this project!***
 
-### Contribute by submitting your ontology
+### Contribute by submitting an ontology
 
-Collaborate with the OntoUML/UFO Catalog is simple, and you can do this by simply sending us the following files: 
+The easiest way to contribute to this catalog is to simply send us the following: 
 1. your ontology model project; 
 2. the model's metadata information; and 
 3. the model's associated bibliography (when available).
@@ -112,7 +117,7 @@ For providing high-quality data, a submission is required to comply with the def
 
 ### Contribute by reporting an ontology
 
-If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by sending an email to any of the catalog's corresponding CORE members listed in this document's section [OntoUML/UFO Catalog's Administration](#ontoumlufo-catalogs-administration).
+If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by creating an issue or by sending an email to pedropaulo.favatobarcelos@unibz.it.
 
 We provide a [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) (read-only) that registers models to be further included in the catalog. The information received from collaborators is going to be included in this list.
 
