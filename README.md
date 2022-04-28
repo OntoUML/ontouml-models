@@ -9,6 +9,8 @@ The catalog offers a diverse collection of conceptual models, created by modeler
 This document is displayed as follows:
 
   - [Catalog structure](#catalog-structure)
+    - [Metadata vocabularies](#metadata-vocabularies)
+    - [Catalog's persistent URLs](#catalogs-persistent-urls)
   - [How to contribute](#how-to-contribute)
     - [Contribute by submitting your ontology](#contribute-by-submitting-your-ontology)
     - [Contribute by reporting an ontology](#contribute-by-reporting-an-ontology)
@@ -72,9 +74,11 @@ Note that the `.vpp`, the `.yaml`, and the `.bib` files are the ones provided by
 
 ### Metadata vocabularies
 
-Following the practice of implementing [FAIR principles](https://www.go-fair.org/fair-principles/), the OntoUML/UFO catalog schema (see Fig.\ref{metamodel}) was built by using the Data Catalog Vocabulary\footnote{https://www.w3.org/TR/vocab-dcat-2/} (DCAT), the Dublin Core Terms\footnote{https://www.dublincore.org/specifications/dublin-core/dcmi-terms/} (DCT), the Simple Knowledge Organization System\footnote{https://www.w3.org/TR/skos-reference/} (SKOS), and the Metadata for Ontology Description and Publication\footnote{https://www.isibang.ac.in/ns/mod/2.0/index-en.html} (MOD).
+Following the practice of implementing [FAIR principles](https://www.go-fair.org/fair-principles/), the OntoUML/UFO catalog schema (see image below) was built by using the [Data Catalog Vocabulary v2](https://www.w3.org/TR/vocab-dcat-2/) (DCAT), the [Dublin Core Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) (DCT), the [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/) (SKOS), and the [Metadata for Ontology Description and Publication](https://www.isibang.ac.in/ns/mod/2.0/index-en.html) (MOD).
 
 ![metamodel](https://user-images.githubusercontent.com/8641647/165767408-b526fa70-efa1-4661-b752-bf910778320c.png)
+
+Each semantic artifact itself is represented by a `dcat:Dataset`, described according to the `skos:Concept` category, and linked to a `dcat:Distribution` entity on which information such as `dcat:downloadURL` and `dcat:title` can be found.
 
 ### Catalog's persistent URLs
 
