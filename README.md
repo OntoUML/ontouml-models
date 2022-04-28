@@ -121,11 +121,11 @@ We provide a [List of UFO and OntoUML Ontology Models](https://docs.google.com/s
 
 ### Contribute by reporting an application
 
-If you wish to contribute to this initiative by **creating and reporting an application** for the catalog, please send an email to any of the catalog's corresponding CORE members listed in this document's section [OntoUML/UFO Catalog's Administration](#ontoumlufo-catalogs-administration) for the update of this page with the tool's information and access link.
+If you wish to contribute to this initiative by **creating and reporting an application** for the catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pedropaulo.favatobarcelos@unibz.it.
 
 ### Other ways to contribute
 
-If you find any problems on the repository or have improvement ideas, please let us know by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
+If you find any problems on the repository or have ideas for improvement, please let us know by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
 
 ## Related software applications
 
