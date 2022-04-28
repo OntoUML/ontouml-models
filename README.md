@@ -1,4 +1,4 @@
-# OntoUML/UFO Model Catalog for Ontology-Driven Conceptual Modeling Research
+# OntoUML/UFO Catalog
 
 The FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research, short-named **OntoUML/UFO Catalog**, is a structured, and open-source catalog that contains OntoUML and UFO ontology models. This catalog was conceived to allow collaborative work and to be easily accessible to all its users.
 
