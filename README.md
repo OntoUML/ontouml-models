@@ -165,7 +165,8 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 * The models included in the repository were obtained directly from the authors or academic sources using open or valid licensed access.
 * This license by no means overwrites the license of the models included in the repository, which maintain their original license.
 * All catalog ontologies that are without explicit licensing information on their associated metadata.yaml file must be interpreted as being private and having a restrictive license.
-* Whoever uses the OntoUML/UFO Catalog explicitly understands and agrees with its licensing information.
+* License holders sending their models to the OntoUML/UFO Catalog expressly agree that the sent content is going to be hosted and made available for other users in the terms of this license.
+* Whoever uses the OntoUML/UFO Catalog expressly understands and agrees with its licensing information.
 
 Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pfavatobarcelos@unibz.it.
 
