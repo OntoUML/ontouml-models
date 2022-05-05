@@ -159,7 +159,7 @@ We would like to thank all of the [contributors](https://github.com/unibz-core/o
 
 Although the OntoUML/UFO Catalog is an open project with a permissive license, special attention must be given to the following licensing clauses:
 
-* The OntoUML catalog is a noncommercial work created strictly for academic research purposes.
+* The OntoUML/UFO Catalog is a noncommercial work created strictly for academic research purposes.
 * This license only applies to the catalog structure itself, not to the models included in the repository.
 * Information about licensing of individual ontologies included in the catalog can be found on their related metadata.yaml file.
 * The models included in the repository were obtained directly from the authors or academic sources using open or valid licensed access.
