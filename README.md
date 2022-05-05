@@ -115,17 +115,17 @@ For providing high-quality data, a submission is required to comply with the def
 
 ### Contribute by reporting an ontology
 
-If you know a UFO or OntoUML to be included in the catalog, please share this information with us! This can be done by [creating an issue](https://github.com/unibz-core/ontouml-models/issues) or by sending an email to pfavatobarcelos@unibz.it.
+If you know a UFO or OntoUML ontology to be included in the catalog, please share this information with us! This can be done through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7) or by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
 
 We provide a [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) (read-only) that registers models to be further included in the catalog. The information received from collaborators is going to be included in this list.
 
 ### Contribute by reporting an application
 
-If you wish to contribute to this initiative by **creating and reporting an application** for the catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pfavatobarcelos@unibz.it.
+If you wish to contribute to this initiative by **creating and reporting an application** for the catalog, please inform us through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7) or [create an issue](https://github.com/unibz-core/ontouml-models/issues).
 
 ### Other ways to contribute
 
-If you find any problems on the repository or have ideas for improvement, please let us know by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
+If you find any problems on the repository or have ideas for its improvement, please let us know through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7) or by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
 
 ## Related software applications
 
@@ -159,7 +159,7 @@ We would like to thank all of the [contributors](https://github.com/unibz-core/o
 
 Although the OntoUML/UFO Catalog is an open project with a permissive license, special attention must be given to the following licensing clauses:
 
-* The OntoUML catalog is a noncommercial work created strictly for academic research purposes.
+* The OntoUML/UFO Catalog is a noncommercial work created strictly for academic research purposes.
 * This license only applies to the catalog structure itself, not to the models included in the repository.
 * Information about licensing of individual ontologies included in the catalog can be found on their related metadata.yaml file.
 * The models included in the repository were obtained directly from the authors or academic sources using open or valid licensed access.
@@ -168,6 +168,6 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 * License holders sending their models to the OntoUML/UFO Catalog expressly agree that the sent content is going to be hosted and made available for other users in the terms of this license.
 * Whoever uses the OntoUML/UFO Catalog expressly understands and agrees with its licensing information.
 
-Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or send an email to pfavatobarcelos@unibz.it.
+Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or report it trought the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
 
 Please access [the OntoUML/UFO Catalog's LICENSE file](https://raw.githubusercontent.com/unibz-core/ontouml-models/master/LICENSE) for the complete licensing information.
