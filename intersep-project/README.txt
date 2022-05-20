@@ -5,6 +5,7 @@ Useful information:
     - intersep-ontologias-desenvolvidas.zip file, downloaded from: http://intersep.nemo.inf.ufes.br/index.php/ontologia/
     - PCDV-ON v1.9 - Vítor Estêvão Silva Souza.asta file, sent by prof. Vitor Souza.
 
+When developing this dataset, please chose a more appropriated name for it.
 
 Prof. Vitor Souza already approved the inclusion of the ontology in the catalog and set its license as CC BY 4.0.
 
