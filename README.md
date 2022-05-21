@@ -135,7 +135,7 @@ Up to this moment, we have no reported applications for querying, data manipulat
 
 The OntoUML/UFO Catalog is maintained by the Conceptual and Cognitive Modelling Research Group (CORE), in particular by:
 
-- [Pedro Paulo Favato Barcelos](https://www.linkedin.com/in/pedro-paulo-favato-barcelos-668a46196/)
+- [Pedro Paulo Favato Barcelos](https://www.linkedin.com/in/pedro-paulo-favato-barcelos)
 - [Tiago Prince Sales](https://www.inf.unibz.it/~tpsales/)
 - [Mattia Fumagalli](https://www.mattspace.net/)
 - [Claudenir Morais Fonseca](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
