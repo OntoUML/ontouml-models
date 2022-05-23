@@ -109,7 +109,7 @@ The easiest way to contribute to this catalog is to simply send us the following
 
 If you wish to contribute to this initiative by submitting your ontology, please follow the instructions available in [our wiki](https://github.com/unibz-core/ontouml-models/wiki).
 
-If you wish to contribute by submitting an ontology already published, please chose one entry that has the status "*Not Started*" from the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) and follow the instructions available in [our wiki](https://github.com/unibz-core/ontouml-models/wiki).
+If you wish to contribute by submitting another ontology, please chose one entry from the "*Not Started*" or "*Started*" sheets from the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) and follow the instructions available in [our wiki](https://github.com/unibz-core/ontouml-models/wiki). Ontologies in the *Started* sheet already have files available in a branch (informed in the spreadsheet), simplifying the collaboration process.
 
 For providing high-quality data, a submission is required to comply with the defined rules to be accepted as part of the catalog. If you have any questions about submitting new models or reusing those available in this catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues).
 
@@ -135,7 +135,7 @@ Up to this moment, we have no reported applications for querying, data manipulat
 
 The OntoUML/UFO Catalog is maintained by the Conceptual and Cognitive Modelling Research Group (CORE), in particular by:
 
-- [Pedro Paulo Favato Barcelos](https://www.linkedin.com/in/pedro-paulo-favato-barcelos-668a46196/)
+- [Pedro Paulo Favato Barcelos](https://www.linkedin.com/in/pedro-paulo-favato-barcelos)
 - [Tiago Prince Sales](https://www.inf.unibz.it/~tpsales/)
 - [Mattia Fumagalli](https://www.mattspace.net/)
 - [Claudenir Morais Fonseca](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
