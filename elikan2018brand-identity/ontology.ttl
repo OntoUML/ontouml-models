@@ -351,9 +351,9 @@
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:stereotype ontouml:derivation;
     ontouml:isDerived "true"^^xsd:boolean;
-    ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/68d18f78-9f57-4a60-86fb-a56de81f4a5b>;
-    ontouml:targetEnd <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/62d7e08a-f100-48ec-871e-614a54dd4823>;
-    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/68d18f78-9f57-4a60-86fb-a56de81f4a5b>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/62d7e08a-f100-48ec-871e-614a54dd4823>.
+    ontouml:sourceEnd <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8158398e-d611-476a-aa0b-ae8e04210985>;
+    ontouml:targetEnd :b4a1365b-eea9-4376-a4eb-0a1fb3c09688;
+    ontouml:relationEnd <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8158398e-d611-476a-aa0b-ae8e04210985>, :b4a1365b-eea9-4376-a4eb-0a1fb3c09688.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/0mp31f6GAqACHQyb> rdf:type ontouml:Relation;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:stereotype ontouml:formal;
@@ -672,7 +672,12 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/u.UP1f6GAqACHQ0x> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/u.UP1f6GAqACHQ0x_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/u.UP1f6GAqACHQ0x_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "0..*";
+    ontouml:lowerBound "0";
+    ontouml:upperBound "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/u.UP1f6GAqACHQ0x> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -692,7 +697,10 @@
 :rWsP1f6GAqACHQ1G rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :rWsP1f6GAqACHQ1G_cardinality.
+:rWsP1f6GAqACHQ1G_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:rWsP1f6GAqACHQ1G ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -700,7 +708,10 @@
 :rWsP1f6GAqACHQ1I rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :rWsP1f6GAqACHQ1I_cardinality.
+:rWsP1f6GAqACHQ1I_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:rWsP1f6GAqACHQ1I ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -740,7 +751,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtD>.
+    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/9BlX1f6GAqACHQtZ>.
 :YhlX1f6GAqACHQth rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :YhlX1f6GAqACHQth_cardinality.
@@ -752,7 +763,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/9BlX1f6GAqACHQtZ>.
+    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtD>.
 :tL1X1f6GAqACHQt7 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :tL1X1f6GAqACHQt7_cardinality.
@@ -764,7 +775,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtD>.
+    ontouml:propertyType :iL1X1f6GAqACHQt1.
 :tL1X1f6GAqACHQt9 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :tL1X1f6GAqACHQt9_cardinality.
@@ -776,7 +787,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :iL1X1f6GAqACHQt1.
+    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtD>.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/.jdX1f6GAqACHQuT> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/.jdX1f6GAqACHQuT_cardinality>.
@@ -788,7 +799,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtD>.
+    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/0jdX1f6GAqACHQuN>.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/.jdX1f6GAqACHQuV> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/.jdX1f6GAqACHQuV_cardinality>.
@@ -800,7 +811,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/0jdX1f6GAqACHQuN>.
+    ontouml:propertyType <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtD>.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3t3X1f6GAqACHQvd> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3t3X1f6GAqACHQvd_cardinality>.
@@ -812,7 +823,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :JmbX1f6GAqACHQun.
+    ontouml:propertyType :Ft3X1f6GAqACHQvX.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3t3X1f6GAqACHQvf> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3t3X1f6GAqACHQvf_cardinality>.
@@ -824,7 +835,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Ft3X1f6GAqACHQvX.
+    ontouml:propertyType :JmbX1f6GAqACHQun.
 :AvvX1f6GAqACHQv5 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :AvvX1f6GAqACHQv5_cardinality.
@@ -836,7 +847,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :JmbX1f6GAqACHQun.
+    ontouml:propertyType :NPvX1f6GAqACHQvz.
 :AvvX1f6GAqACHQv7 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :AvvX1f6GAqACHQv7_cardinality.
@@ -848,7 +859,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :NPvX1f6GAqACHQvz.
+    ontouml:propertyType :JmbX1f6GAqACHQun.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/67A31f6GAqACHQwZ> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/67A31f6GAqACHQwZ_cardinality>.
@@ -860,7 +871,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :JmbX1f6GAqACHQun.
+    ontouml:propertyType :Y7A31f6GAqACHQwT.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/67A31f6GAqACHQwb> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/67A31f6GAqACHQwb_cardinality>.
@@ -872,7 +883,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Y7A31f6GAqACHQwT.
+    ontouml:propertyType :JmbX1f6GAqACHQun.
 :IA4wNf6GAqACHRAu rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :IA4wNf6GAqACHRAu_cardinality.
@@ -956,7 +967,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :QOc31f6GAqACHQxB.
+    ontouml:propertyType :uZyINf6GAqACHRDt.
 :Nh7INf6GAqACHRFK rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :Nh7INf6GAqACHRFK_cardinality.
@@ -968,7 +979,7 @@
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :uZyINf6GAqACHRDt.
+    ontouml:propertyType :QOc31f6GAqACHQxB.
 :rmnINf6GAqACHRFo rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :rmnINf6GAqACHRFo_cardinality.
@@ -980,18 +991,26 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :QOc31f6GAqACHQxB.
+    ontouml:propertyType :EyqINf6GAqACHRD5.
 :rmnINf6GAqACHRFq rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :rmnINf6GAqACHRFq_cardinality.
+:rmnINf6GAqACHRFq_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "1";
+    ontouml:lowerBound "1";
+    ontouml:upperBound "1".
+:rmnINf6GAqACHRFq ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "true"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :EyqINf6GAqACHRD5.
+    ontouml:propertyType :QOc31f6GAqACHQxB.
 :HvGv1f6GAqACHQ4w rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :HvGv1f6GAqACHQ4w_cardinality.
+:HvGv1f6GAqACHQ4w_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:HvGv1f6GAqACHQ4w ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -999,7 +1018,10 @@
 :HvGv1f6GAqACHQ4y rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :HvGv1f6GAqACHQ4y_cardinality.
+:HvGv1f6GAqACHQ4y_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:HvGv1f6GAqACHQ4y ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1007,7 +1029,10 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5D> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5D_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5D_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5D> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1015,7 +1040,10 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5F> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5F_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5F_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5sWv1f6GAqACHQ5F> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1023,7 +1051,10 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5n> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5n_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5n_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5n> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1031,7 +1062,10 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5p> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5p_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5p_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/po.v1f6GAqACHQ5p> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1039,7 +1073,10 @@
 :Fkjv1f6GAqACHQ6n rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :Fkjv1f6GAqACHQ6n_cardinality.
+:Fkjv1f6GAqACHQ6n_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:Fkjv1f6GAqACHQ6n ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1047,7 +1084,10 @@
 :Fkjv1f6GAqACHQ6p rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality :Fkjv1f6GAqACHQ6p_cardinality.
+:Fkjv1f6GAqACHQ6p_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:Fkjv1f6GAqACHQ6p ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1055,7 +1095,10 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ66> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ66_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ66_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ66> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1063,7 +1106,10 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ68> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ68_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ68_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6Izv1f6GAqACHQ68> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1079,7 +1125,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :iBGP1f6GAqACHQ1p.
+    ontouml:propertyType :HqtP1f6GAqACHQ2d.
 :UWbgNf6GAqACHQ7f rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :UWbgNf6GAqACHQ7f_cardinality.
@@ -1091,7 +1137,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :HqtP1f6GAqACHQ2d.
+    ontouml:propertyType :iBGP1f6GAqACHQ1p.
 :oyHgNf6GAqACHQ70 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :oyHgNf6GAqACHQ70_cardinality.
@@ -1103,7 +1149,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xPqP1f6GAqACHQ1d.
+    ontouml:propertyType :iBGP1f6GAqACHQ1p.
 :oyHgNf6GAqACHQ72 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :oyHgNf6GAqACHQ72_cardinality.
@@ -1115,7 +1161,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :iBGP1f6GAqACHQ1p.
+    ontouml:propertyType :xPqP1f6GAqACHQ1d.
 :KgXgNf6GAqACHQ8H rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :KgXgNf6GAqACHQ8H_cardinality.
@@ -1127,7 +1173,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xPqP1f6GAqACHQ1d.
+    ontouml:propertyType :R2OP1f6GAqACHQ11.
 :KgXgNf6GAqACHQ8J rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :KgXgNf6GAqACHQ8J_cardinality.
@@ -1139,7 +1185,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :R2OP1f6GAqACHQ11.
+    ontouml:propertyType :xPqP1f6GAqACHQ1d.
 :jX3gNf6GAqACHQ8e rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :jX3gNf6GAqACHQ8e_cardinality.
@@ -1151,7 +1197,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xPqP1f6GAqACHQ1d.
+    ontouml:propertyType :k2RP1f6GAqACHQ2B.
 :jX3gNf6GAqACHQ8g rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :jX3gNf6GAqACHQ8g_cardinality.
@@ -1163,7 +1209,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :k2RP1f6GAqACHQ2B.
+    ontouml:propertyType :xPqP1f6GAqACHQ1d.
 :wxwQNf6GAqACHQ89 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :wxwQNf6GAqACHQ89_cardinality.
@@ -1175,7 +1221,7 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :k2RP1f6GAqACHQ2B.
+    ontouml:propertyType :cQQv1f6GAqACHQ3e.
 :wxwQNf6GAqACHQ8_ rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:cardinality :wxwQNf6GAqACHQ8__cardinality.
@@ -1187,11 +1233,14 @@
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :cQQv1f6GAqACHQ3e.
+    ontouml:propertyType :k2RP1f6GAqACHQ2B.
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_c> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_c_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_c_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_c> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1199,31 +1248,34 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_e> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "1..*"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_e_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_e_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/yI.QNf6GAqACHQ_e> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :x7rP1f6GAqACHQ27.
-<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/68d18f78-9f57-4a60-86fb-a56de81f4a5b> rdf:type ontouml:Property;
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8158398e-d611-476a-aa0b-ae8e04210985> rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
-    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/68d18f78-9f57-4a60-86fb-a56de81f4a5b_cardinality>.
-<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/68d18f78-9f57-4a60-86fb-a56de81f4a5b_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8158398e-d611-476a-aa0b-ae8e04210985_cardinality>.
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8158398e-d611-476a-aa0b-ae8e04210985_cardinality> rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/68d18f78-9f57-4a60-86fb-a56de81f4a5b> ontouml:isDerived "false"^^xsd:boolean;
+<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8158398e-d611-476a-aa0b-ae8e04210985> ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :TmSwNf6GAqACHRBb.
-<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/62d7e08a-f100-48ec-871e-614a54dd4823> rdf:type ontouml:Property;
+:b4a1365b-eea9-4376-a4eb-0a1fb3c09688 rdf:type ontouml:Property;
     ontouml:project :MCqjs06GAqACHRIM;
-    ontouml:cardinality <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/62d7e08a-f100-48ec-871e-614a54dd4823_cardinality>.
-<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/62d7e08a-f100-48ec-871e-614a54dd4823_cardinality> rdf:type ontouml:Cardinality;
+    ontouml:cardinality :b4a1365b-eea9-4376-a4eb-0a1fb3c09688_cardinality.
+:b4a1365b-eea9-4376-a4eb-0a1fb3c09688_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "1";
     ontouml:lowerBound "1";
     ontouml:upperBound "1".
-<http://purl.org/ontouml-models/dataset/elikan2018brand-identity/62d7e08a-f100-48ec-871e-614a54dd4823> ontouml:isDerived "false"^^xsd:boolean;
+:b4a1365b-eea9-4376-a4eb-0a1fb3c09688 ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
@@ -1234,4 +1286,4 @@
 <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/v.qX1f6GAqACHQsL> rdf:type ontouml:Diagram;
     ontouml:project :MCqjs06GAqACHRIM;
     ontouml:name "diagram1"@en;
-    ontouml:containsView :Y7A31f6GAqACHQwS, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3WsP1f6GAqACHQ1K>, :T9coNf6GAqACHRHq, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/4ZH31f6GAqACHQzs>, :xmbX1f6GAqACHQum, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/0jdX1f6GAqACHQuM>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8Zf31f6GAqACHQ0E>, :tkjv1f6GAqACHQ6r, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6WvINf6GAqACHRFy>, :gPGX1f6GAqACHQsf, :tsWv1f6GAqACHQ5H, :Vy9QNf6GAqACHRAA, :aOvINf6GAqACHRGK, :t_m31f6GAqACHQyI, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtC>, :nUT31f6GAqACHQzJ, :ZZf31f6GAqACHQ0P, :vf9P1f6GAqACHQ2o, :HWvINf6GAqACHRF4, :vREQNf6GAqACHQ9j, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/2pEQNf6GAqACHQ9y>, :fvGv1f6GAqACHQ40, :uZyINf6GAqACHRDs, :iL1X1f6GAqACHQt0, :TGp31f6GAqACHQyV, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/R.UP1f6GAqACHQ01>, :RPqP1f6GAqACHQ1c, :QMa31f6GAqACHQx1, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/7mSwNf6GAqACHRBg>, :JuS31f6GAqACHQxe, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/mI.QNf6GAqACHQ_g>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3mbX1f6GAqACHQut>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/W2vINf6GAqACHRF.>, :Ft3X1f6GAqACHQvW, :x7rP1f6GAqACHQ26, :zxEQNf6GAqACHQ9o, :G_m31f6GAqACHQyB, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/OIzv1f6GAqACHQ6.>, :FOc31f6GAqACHQxH, :IevINf6GAqACHRGf, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8siv1f6GAqACHQ4N>, :CBGP1f6GAqACHQ1o, :kEl31f6GAqACHQy4, :cQQv1f6GAqACHQ3d, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/9BlX1f6GAqACHQtY>, :L4l31f6GAqACHQyt, :HqtP1f6GAqACHQ2c, :EyqINf6GAqACHRD4, :FJEQNf6GAqACHQ9t, :iK_UNf6GAqACHRSR, :kA4wNf6GAqACHRAy, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/1o.v1f6GAqACHQ5r>, :DKyv1f6GAqACHQ4Z, :NCsINf6GAqACHRDc, :R2OP1f6GAqACHQ10, :J1s0Nf6GAqACHRS0, :NPvX1f6GAqACHQvy, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8mp31f6GAqACHQyg>, :UZEQNf6GAqACHQ93, :QOc31f6GAqACHQxA, :hZH31f6GAqACHQz3, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/72vINf6GAqACHRGE>, :c0T31f6GAqACHQzU, :k2RP1f6GAqACHQ2A, :ETK31f6GAqACHQxr, :LOvINf6GAqACHRGQ, :RSQoNf6GAqACHRG5, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5y.X1f6GAqACHQtJ>, :OuvINf6GAqACHRGW, :punUNf6GAqACHRSK.
+    ontouml:containsView <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3WsP1f6GAqACHQ1K>, :vf9P1f6GAqACHQ2o, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8Zf31f6GAqACHQ0E>, :HWvINf6GAqACHRF4, :L4l31f6GAqACHQyt, :LOvINf6GAqACHRGQ, :tsWv1f6GAqACHQ5H, :OuvINf6GAqACHRGW, :TGp31f6GAqACHQyV, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/3mbX1f6GAqACHQut>, :J1s0Nf6GAqACHRS0, :ZZf31f6GAqACHQ0P, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/5y.X1f6GAqACHQtJ>, :iL1X1f6GAqACHQt0, :k2RP1f6GAqACHQ2A, :Ft3X1f6GAqACHQvW, :NCsINf6GAqACHRDc, :uZyINf6GAqACHRDs, :c0T31f6GAqACHQzU, :G_m31f6GAqACHQyB, :R2OP1f6GAqACHQ10, :FOc31f6GAqACHQxH, :x7rP1f6GAqACHQ26, :UZEQNf6GAqACHQ93, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/7mSwNf6GAqACHRBg>, :hZH31f6GAqACHQz3, :fvGv1f6GAqACHQ40, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/W2vINf6GAqACHRF.>, :iK_UNf6GAqACHRSR, :DKyv1f6GAqACHQ4Z, :kA4wNf6GAqACHRAy, :punUNf6GAqACHRSK, :RSQoNf6GAqACHRG5, :CBGP1f6GAqACHQ1o, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/0jdX1f6GAqACHQuM>, :ETK31f6GAqACHQxr, :FJEQNf6GAqACHQ9t, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/6WvINf6GAqACHRFy>, :kEl31f6GAqACHQy4, :zxEQNf6GAqACHQ9o, :RPqP1f6GAqACHQ1c, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8mp31f6GAqACHQyg>, :aOvINf6GAqACHRGK, :vREQNf6GAqACHQ9j, :t_m31f6GAqACHQyI, :Vy9QNf6GAqACHRAA, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/72vINf6GAqACHRGE>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/OIzv1f6GAqACHQ6.>, :NPvX1f6GAqACHQvy, :tkjv1f6GAqACHQ6r, :cQQv1f6GAqACHQ3d, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/4ZH31f6GAqACHQzs>, :HqtP1f6GAqACHQ2c, :IevINf6GAqACHRGf, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/R.UP1f6GAqACHQ01>, :Y7A31f6GAqACHQwS, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/1o.v1f6GAqACHQ5r>, :nUT31f6GAqACHQzJ, :T9coNf6GAqACHRHq, :JuS31f6GAqACHQxe, :QOc31f6GAqACHQxA, :xmbX1f6GAqACHQum, :EyqINf6GAqACHRD4, :gPGX1f6GAqACHQsf, :QMa31f6GAqACHQx1, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/mI.QNf6GAqACHQ_g>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/Uy.X1f6GAqACHQtC>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/8siv1f6GAqACHQ4N>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/9BlX1f6GAqACHQtY>, <http://purl.org/ontouml-models/dataset/elikan2018brand-identity/2pEQNf6GAqACHQ9y>.

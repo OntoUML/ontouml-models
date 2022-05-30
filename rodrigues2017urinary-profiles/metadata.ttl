@@ -1,0 +1,42 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontological Model for Urinary Profiles and Events";
+    dct:issued "2015"^^xsd:gYear;
+    dct:modified "2017"^^xsd:gYear;
+    dcat:theme lcc:R;
+    skos:editorialNote "Comparing the diagrams from the original 2015 paper and from the \"extended\" 2017 version, precisely \"Nephritic profile\", there is one missing \"is-a\" between \"Nephritic-Defining Albumin\" and \"Albumin\". I considered that it was just a lost, so I kept it as in the original paper (since they were supposed to change the layout only). It was not possible to identify what the \"Added\" keyword in \"Immune Response Event\" is.";
+    dct:language "en";
+    dct:contributor <https://orcid.org/0000-0002-0615-8306>, <https://orcid.org/0000-0002-7334-5128>, <https://orcid.org/0000-0002-9589-2616>, <https://orcid.org/0000-0002-5720-3787>, <https://orcid.org/0000-0003-1043-5203>;
+    dct:subject "medicine", "urine analysis";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1109/ICTAI.2015.148>, <http://ceur-ws.org/Vol-1908/paper3.pdf>, <https://doi.org/10.1109/ICTAI.2017.00101>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/>.
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/> dcat:distribution <http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontological Model for Urinary Profiles and Events\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/rodrigues2017urinary-profiles/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/> dcat:distribution <http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Ontological Model for Urinary Profiles and Events\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/rodrigues2017urinary-profiles/ontology.json>.
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/> dcat:distribution <http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/rodrigues2017urinary-profiles/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontological Model for Urinary Profiles and Events\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/rodrigues2017urinary-profiles/ontology.vpp>.

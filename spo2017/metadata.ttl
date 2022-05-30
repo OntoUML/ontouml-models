@@ -1,0 +1,45 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/spo2017/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Software Process Ontology";
+    mod:acronym "SPO";
+    dct:issued "1998"^^xsd:gYear;
+    dct:modified "2017"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "The ontology was documented based on the version available at SEON website on 17 March 2022.";
+    dct:language "en";
+    dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/SPO.html>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://orcid.org/0000-0002-4408-7553>, <https://dblp.org/pid/97/2784>, <https://dblp.org/pid/09/10361>, <https://orcid.org/0000-0002-3452-553X>, <https://orcid.org/0000-0003-2005-8288>, <https://orcid.org/0000-0002-6225-9478>, <https://dblp.org/pid/189/5932>, <https://dblp.org/pid/75/5043>;
+    dct:subject "software process";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Interoperability, ontouml:SoftwareEngineering;
+    ontouml:context ontouml:Research;
+    dct:source <https://www.cos.ufrj.br/uploadfile/publicacao/736.pdf>, <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/establishing_a_common_vocabulary_for_software_organizations_understand_software_processes_2005.pdf>, <https://www.inderscienceonline.com/doi/abs/10.1504/IJBPIM.2009.032281>, <http://www.inf.ufes.br/~rguizzardi/publications/guizzardi-falbo-guizzardi-IDEAS2008.pdf>, <https://dblp.org/rec/journals/jidm/BringuenteFG11>, <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/software_engineering_standards_harmonization__an_ontology_based_approach_2017.pdf>;
+    dct:conformsTo ontouml:UfoStyle, ontouml:OntoumlStyle;
+    dct:type ontouml:Core.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/spo2017/>.
+<http://purl.org/ontouml-models/dataset/spo2017/> dcat:distribution <http://purl.org/ontouml-models/dataset/spo2017/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/spo2017/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Software Process Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/spo2017/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/spo2017/> dcat:distribution <http://purl.org/ontouml-models/dataset/spo2017/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/spo2017/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Software Process Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/spo2017/ontology.json>.
+<http://purl.org/ontouml-models/dataset/spo2017/> dcat:distribution <http://purl.org/ontouml-models/dataset/spo2017/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/spo2017/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Software Process Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/spo2017/ontology.vpp>.
