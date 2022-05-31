@@ -1,0 +1,43 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Dysfuntion Analysis Ontology";
+    mod:acronym "DAO";
+    dct:issued "2020"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "License derived from the one stated in the publication.";
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by-nd/4.0/>;
+    dct:contributor <https://orcid.org/0000-0002-4003-6505>, <https://dblp.org/pid/29/3283>, <https://dblp.org/pid/128/8062>, <https://orcid.org/0000-0001-9698-5569>, <https://orcid.org/0000-0002-9726-2458>;
+    dct:subject "safety";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Interoperability;
+    ontouml:context ontouml:Industry;
+    dct:source <https://dblp.org/rec/journals/jucs/DebbechDB20>, <https://doi.org/10.1007/978-3-030-33223-5_28>;
+    dct:conformsTo ontouml:UfoStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/>.
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/> dcat:distribution <http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Dysfuntion Analysis Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/debbech2020dysfunction-analysis/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/> dcat:distribution <http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Dysfuntion Analysis Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/debbech2020dysfunction-analysis/ontology.json>.
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/> dcat:distribution <http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Dysfuntion Analysis Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/debbech2020dysfunction-analysis/ontology.vpp>.
