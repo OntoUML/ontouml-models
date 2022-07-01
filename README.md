@@ -81,7 +81,7 @@ Following the practice of implementing [FAIR principles](https://www.go-fair.org
 - [Metadata for Ontology Description and Publication](https://www.isibang.ac.in/ns/mod/2.0/index-en.html) (MOD)
 - [Friend of a Friend](http://xmlns.com/foaf/spec/) (FOAF)
 
-![metamodel](https://user-images.githubusercontent.com/8641647/165767408-b526fa70-efa1-4661-b752-bf910778320c.png)
+![catalog-schema](https://user-images.githubusercontent.com/8641647/176878091-1caf6503-da50-4e37-bf7d-ba6ba21e1f2c.png)
 
 The catalog (`dcat:Catalog`) is maintained by a community of users (`foaf:Agent`) and composed of a set of models (instances of `mod:SemanticArtefact`). These models are described by the [metadata presented in this link](https://github.com/unibz-core/ontouml-models/wiki/How-to-Contribute#the-ontology-metadata-file).
 
