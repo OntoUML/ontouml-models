@@ -96,9 +96,9 @@ We created persistent URLs for the following resources:
 
 ## How to contribute
 
-Your contribution is fundamental for the catalog's success. We highly encourage authors to submit their models and tools to this catalog. With that, you will be supporting research in (ontology-driven) conceptual modeling, ontology engineering, software design, and several others.
+Your contribution is fundamental to the catalog's success. We highly encourage authors to submit their models and tools to this catalog. With that, you will be supporting research in (ontology-driven) conceptual modeling, ontology engineering, software design, and several others.
 
-***We greatly appreciates your contribution to this project!***
+***We greatly appreciate your contribution to this project!***
 
 ### Contribute by submitting an ontology
 
@@ -111,7 +111,7 @@ If you wish to contribute to this initiative by submitting your ontology, please
 
 If you wish to contribute by submitting another ontology, please chose one entry from the "*Not Started*" or "*Started*" sheets from the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) and follow the instructions available in [our wiki](https://github.com/unibz-core/ontouml-models/wiki). Ontologies in the *Started* sheet already have files available in a branch (informed in the spreadsheet), simplifying the collaboration process.
 
-For providing high-quality data, a submission is required to comply with the defined rules to be accepted as part of the catalog. If you have any questions about submitting new models or reusing those available in this catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues).
+For providing high-quality data, submissions are required to comply with the defined rules to be accepted as part of the catalog. If you have any questions about submitting new models or reusing those available in this catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues).
 
 ### Contribute by reporting an ontology
 
@@ -125,7 +125,7 @@ If you wish to contribute to this initiative by **creating and reporting an appl
 
 ### Other ways to contribute
 
-If you find any problems on the repository or have ideas for its improvement, please let us know through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7) or by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
+If you find any problems in the repository or have ideas for its improvement, please let us know through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7) or by [creating an issue](https://github.com/unibz-core/ontouml-models/issues).
 
 ## Related software applications
 
@@ -147,7 +147,7 @@ For any questions or issues, [open an issue](https://github.com/unibz-core/ontou
 
 Please cite the OntoUML/UFO Catalog as: 
 
-*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41th International Conference Proceedings (ER 2022), 17-20 October 2022. <https://purl.org/ontouml-models/>
+*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41st International Conference Proceedings (ER 2022), 17-20 October 2022. <https://purl.org/ontouml-models/>
 
 <!--- Insert link to ER Paper as soon as it is on ResearchGate--->
 
@@ -170,6 +170,6 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 * License holders sending their models to the OntoUML/UFO Catalog expressly agree that the sent content is going to be hosted and made available for other users in the terms of this license.
 * Whoever uses the OntoUML/UFO Catalog expressly understands and agrees with its licensing information.
 
-Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or report it trought the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
+Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or report it through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
 
 Please access [the OntoUML/UFO Catalog's LICENSE file](https://raw.githubusercontent.com/unibz-core/ontouml-models/master/LICENSE) for the complete licensing information.
