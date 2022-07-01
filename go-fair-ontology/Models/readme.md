@@ -1,0 +1,7 @@
+- [Architecture](Architecture.pdf)
+- [Context](Context.pdf)
+- [Core](Core.pdf)
+- [FAIR Implementation Profile](FIP/readme.md)
+- FAIR Digital Object (WIP: @Luiz)
+- Certification (WIP: @Giancarlo and @Tiago)
+- Measurement (WIP)
