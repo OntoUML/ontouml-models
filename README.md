@@ -83,7 +83,7 @@ Following the practice of implementing [FAIR principles](https://www.go-fair.org
 
 ![metamodel](https://user-images.githubusercontent.com/8641647/165767408-b526fa70-efa1-4661-b752-bf910778320c.png)
 
-Each semantic artifact itself is represented by a `dcat:Dataset`, described according to the `skos:Concept` category, and linked to a `dcat:Distribution` entity on which information such as `dcat:downloadURL` and `dcat:title` can be found.
+The catalog (`dcat:Catalog`) is maintained by a community of users (`foaf:Agent`) and composed of a set of models (instances of `mod:SemanticArtefact`). These models are described by the [metadata presented in this link](https://github.com/unibz-core/ontouml-models/wiki/How-to-Contribute#the-ontology-metadata-file).
 
 ### Catalog's persistent URLs
 
@@ -145,11 +145,13 @@ For any questions or issues, [open an issue](https://github.com/unibz-core/ontou
 
 ## How to cite this catalog
 
-Cite this catalog as: 
+Please cite the OntoUML/UFO Catalog as: 
 
-P. P. F. Barcelos, T. P. Sales, C. M. Fonseca, M. Fumagalli, I. V. Sousa, E. Romanenko, J. Kritz, G. Guizzardi, "OntoUML/UFO Model Catalog for Ontology-Driven Conceptual Modeling Research", 2022, <https://purl.org/ontouml-models/>.
+*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41th International Conference Proceedings (ER 2022), 17-20 October 2022. <https://purl.org/ontouml-models/>
 
- <!--- This section is going to be updated in case of a related paper's approval --->
+<!--- Insert link to ER Paper as soon as it is on ResearchGate--->
+
+This paper reflects the state of the catalog as of June 2022.
 
 ## Acknowledgements
 
