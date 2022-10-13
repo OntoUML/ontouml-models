@@ -92,7 +92,7 @@ We created persistent URLs for the following resources:
 - GitHub repository: https://purl.org/ontouml-models
 - OntoUML vocabulary: https://purl.org/ontouml-models/vocabulary
 - Aggregated data: https://purl.org/ontouml-models/catalog
-- Ontology data: `https://purl.org/ontouml-models/dataset/<folderName>`
+- Ontology data: `https://purl.org/ontouml-models/<folderName>`
 
 ## How to contribute
 
