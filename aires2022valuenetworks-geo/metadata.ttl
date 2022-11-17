@@ -1,0 +1,41 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontology for Value Networks with Geographic Information";
+    dct:issued "2022"^^xsd:gYear;
+    dct:modified "2022"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The ontology was developed in the context of a master thesis which isn't yet published.\nThe ontology contains multiples derivations of the same class, which cannot be represented in Visual Paradigm. In these cases, additional derivations were represented as dependency links and are not being currently serialized to JSON.\nThe cardinalities in derivation link were represented in UML notes.\nThere is a collection of generalizations of relators into a single category near a {disjoint} constraint. Given the context, the generalizations were interpreted as part of the same set, and the category's \"restrictedTo\" was set to \"relator\".\n";
+    dct:language "en";
+    dct:contributor <https://dblp.org/pid/284/5427>;
+    dct:subject "value networks";
+    mod:designedForTask ontouml:LanguageEngineering;
+    ontouml:context ontouml:Research;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/>.
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/> dcat:distribution <http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontology for Value Networks with Geographic Information\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/aires2022valuenetworks-geo/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/> dcat:distribution <http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Ontology for Value Networks with Geographic Information\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/aires2022valuenetworks-geo/ontology.json>.
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/> dcat:distribution <http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/aires2022valuenetworks-geo/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontology for Value Networks with Geographic Information\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/aires2022valuenetworks-geo/ontology.vpp>.
