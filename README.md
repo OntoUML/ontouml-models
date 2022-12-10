@@ -131,6 +131,10 @@ If you find any problems in the repository or have ideas for its improvement, pl
 
 Up to this moment, we have no reported applications for querying, data manipulation, or evaluation. If you want to contribute, please refer to this document's section ["Contributing by reporting an application"](#contributing-by-reporting-an-application).
 
+## Works citing and using the OntoUML/UFO Catalog
+
+The list of works that use the data provided by the OntoUML/UFO Catalog to test algorithms and perform other tasks grows over time. Instead of keeping a manual list in this document, we recommend you access its [Google Scholar](https://scholar.google.com/scholar?cites=3857815022699931555&as_sdt=2005&sciodt=0,5&hl=en) and [ResearchGate](https://www.researchgate.net/publication/364289037_A_FAIR_Model_Catalog_for_Ontology-Driven_Conceptual_Modeling_Research/citations) citation lists to obtain more updated information.
+
 ## Catalog administration
 
 The OntoUML/UFO Catalog is maintained by the Conceptual and Cognitive Modelling Research Group (CORE), in particular by:
@@ -148,6 +152,10 @@ For any questions or issues, [open an issue](https://github.com/unibz-core/ontou
 Please cite the OntoUML/UFO Catalog as: 
 
 *Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41st International Conference Proceedings (ER 2022), 17-20 October 2022. <https://purl.org/ontouml-models/>
+
+For creating citations using different formats, refer to the [webpage of the paper's publisher](https://link.springer.com/chapter/10.1007/978-3-031-17995-2_1#citeas) for getting the paper's complete information. 
+
+For obtaining the paper's complete BibTeX record, we recommend downloading this information on [the same webpage](https://citation-needed.springer.com/v2/references/10.1007/978-3-031-17995-2_1?format=bibtex&flavour=citation) or accessing it on the [DBLP BibTeX record](https://dblp.org/rec/conf/er/BarcelosSFFSRKG22.html?view=bibtex).
 
 <!--- Insert link to ER Paper as soon as it is on ResearchGate--->
 
