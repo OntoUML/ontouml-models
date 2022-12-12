@@ -8,19 +8,20 @@ The catalog offers a diverse collection of conceptual models, created by modeler
 
 This document is displayed as follows:
 
-  - [Catalog structure](#catalog-structure)
-    - [Metadata vocabularies](#metadata-vocabularies)
-    - [Catalog's persistent URLs](#catalogs-persistent-urls)
-  - [How to contribute](#how-to-contribute)
-    - [Contribute by submitting an ontology](#contribute-by-submitting-an-ontology)
-    - [Contribute by reporting an ontology](#contribute-by-reporting-an-ontology)
-    - [Contribute by reporting an application](#contribute-by-reporting-an-application)
-    - [Other ways to contribute](#other-ways-to-contribute)
-  - [Related software applications](#related-software-applications)
-  - [Catalog administration](#catalog-administration)
-  - [How to cite this catalog](#how-to-cite-this-catalog)
-  - [Acknowledgements](#acknowledgements)
-  - [License disclaimer](#license-disclaimer)
+- [Catalog structure](#catalog-structure)
+  - [Metadata vocabularies](#metadata-vocabularies)
+  - [Catalog's persistent URLs](#catalogs-persistent-urls)
+- [How to contribute](#how-to-contribute)
+  - [Contribute by submitting an ontology](#contribute-by-submitting-an-ontology)
+  - [Contribute by reporting an ontology](#contribute-by-reporting-an-ontology)
+  - [Contribute by reporting an application](#contribute-by-reporting-an-application)
+  - [Other ways to contribute](#other-ways-to-contribute)
+- [Related software applications](#related-software-applications)
+- [Works citing and using the OntoUML/UFO Catalog](#works-citing-and-using-the-ontoumlufo-catalog)
+- [Catalog administration](#catalog-administration)
+- [How to cite this catalog](#how-to-cite-this-catalog)
+- [Acknowledgements](#acknowledgements)
+- [License disclaimer](#license-disclaimer)
 
 The catalog github repository is associated with the permanent URL <https://purl.org/ontouml-models>.
 
