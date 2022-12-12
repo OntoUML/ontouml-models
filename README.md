@@ -138,15 +138,14 @@ The list of works that use the data provided by the OntoUML/UFO Catalog to test 
 
 ## Catalog administration
 
-The OntoUML/UFO Catalog is maintained by the Conceptual and Cognitive Modelling Research Group (CORE), in particular by:
+The OntoUML/UFO Catalog is maintained by UFO and OntoUML researchers at the Free University of Bozen-Bolzano and at the University of Twente, in particular by:
 
-- [Pedro Paulo Favato Barcelos](https://www.linkedin.com/in/pedro-paulo-favato-barcelos)
-- [Tiago Prince Sales](https://www.inf.unibz.it/~tpsales/)
-- [Mattia Fumagalli](https://www.mattspace.net/)
-- [Claudenir Morais Fonseca](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
+- PhD. Pedro Paulo Favato Barcelos [[GitHub]](https://github.com/pedropaulofb) [[LinkedIn]](https://www.linkedin.com/in/pedro-paulo-favato-barcelos/)
+- PhD. Tiago Prince Sales [[GitHub]](https://github.com/tgoprince) [[LinkedIn]](https://www.linkedin.com/in/tiago-sales/)
+- PhD. Mattia Fumagalli [[GitHub]](https://github.com/Matt-81) [[LinkedIn]](https://www.linkedin.com/in/mattiafumagalli/)
+- PhD. Claudenir Morais Fonseca [[GitHub]](https://github.com/claudenirmf) [[LinkedIn]](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
 
-For any questions or issues, [open an issue](https://github.com/unibz-core/ontouml-models/issues).
-
+Feel free to get in contact with the administrators using the links provided. For questions or issues, you can [open an issue](https://github.com/unibz-core/ontouml-models/issues) at this repository.
 
 ## How to cite this catalog
 
@@ -179,6 +178,6 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 * License holders sending their models to the OntoUML/UFO Catalog expressly agree that the sent content is going to be hosted and made available for other users in the terms of this license.
 * Whoever uses the OntoUML/UFO Catalog expressly understands and agrees with its licensing information.
 
-Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please create an issue](https://github.com/unibz-core/ontouml-models/issues) or report it through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
+Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please [create an issue](https://github.com/unibz-core/ontouml-models/issues) or report it through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
 
 Please access [the OntoUML/UFO Catalog's LICENSE file](https://raw.githubusercontent.com/unibz-core/ontouml-models/master/LICENSE) for the complete licensing information.
