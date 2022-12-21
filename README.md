@@ -147,6 +147,8 @@ The OntoUML/UFO Catalog is maintained by UFO and OntoUML researchers at the Free
 
 Feel free to get in contact with the administrators using the links provided. For questions or issues, you can [open an issue](https://github.com/unibz-core/ontouml-models/issues) at this repository.
 
+Relevant instructions for administrating the OntoUML/UFO Catalog are presented on this specific [Wiki page](https://github.com/unibz-core/ontouml-models/wiki/Instructions-for-the-catalog's-administrators).
+
 ## How to cite this catalog
 
 Please cite the OntoUML/UFO Catalog as: 
