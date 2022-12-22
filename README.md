@@ -29,7 +29,7 @@ The catalog github repository is associated with the permanent URL <https://purl
 
 The whole catalog is hosted on a GitHub repository whose root directory contains: 
 
-1. `catalog.ttl`: is the file encoding the catalog itself in a triple-based format - i.e., the aggregated data of all ontologies that are part of the catalog;
+1. `catalog.ttl`: is the file encoding the catalog itself in a triple-based format - i.e., the aggregated data of all ontologies that are part of the catalog - its permanent identifier is https://purl.org/ontouml-models/catalog;
 2. `metadata-catalog.ttl`: a Turtle file containing the catalog's metadata;
 3. `metadata.ttl`: a Turtle file containing the catalog's metadata and the metadata from all its composing models;
 4. list of folders - each one including all the information related to an OntoUML/UFO-based model.
