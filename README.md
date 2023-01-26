@@ -110,6 +110,8 @@ The easiest way to contribute to this catalog is to simply send us the following
 
 If you wish to contribute to this initiative by submitting your ontology, please follow the instructions available in [our wiki](https://github.com/unibz-core/ontouml-models/wiki).
 
+Note that we also include anonymous ontologies in the catalog. So, if you don’t want your name to be displayed in your ontology’s metadata, you just have to inform us and we will keep the model’s authorship anonymous. It is important that, in such case, you must be the owner of the ontology’s legal rights.
+
 If you wish to contribute by submitting another ontology, please chose one entry from the "*Not Started*" or "*Started*" sheets from the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharinghttps://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) and follow the instructions available in [our wiki](https://github.com/unibz-core/ontouml-models/wiki). Ontologies in the *Started* sheet already have files available in a branch (informed in the spreadsheet), simplifying the collaboration process.
 
 For providing high-quality data, submissions are required to comply with the defined rules to be accepted as part of the catalog. If you have any questions about submitting new models or reusing those available in this catalog, please [create an issue](https://github.com/unibz-core/ontouml-models/issues).
