@@ -1,0 +1,42 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/franco2018rpg/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Role Playing Games Ontology";
+    dct:issued "2018"^^xsd:gYear;
+    dct:modified "2018"^^xsd:gYear;
+    dcat:theme lcc:G;
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/142/4729>, <https://dblp.org/pid/242/2687>, <https://dblp.org/pid/275/8015>, <https://dblp.org/pid/204/1724>, <https://dblp.org/pid/98/4928>, <https://dblp.org/pid/g/FernandodeCarvalhoGomes>, <https://dblp.org/pid/37/3973>, <https://dblp.org/pid/57/6283>;
+    dct:subject "games";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Interoperability;
+    ontouml:context ontouml:Research;
+    dct:source <http://www.sbgames.org/sbgames2018/files/papers/ComputacaoShort/188294.pdf>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/franco2018rpg/>.
+<http://purl.org/ontouml-models/dataset/franco2018rpg/> dcat:distribution <http://purl.org/ontouml-models/dataset/franco2018rpg/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/franco2018rpg/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Role Playing Games Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/franco2018rpg/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/franco2018rpg/> dcat:distribution <http://purl.org/ontouml-models/dataset/franco2018rpg/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/franco2018rpg/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Role Playing Games Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/franco2018rpg/ontology.json>.
+<http://purl.org/ontouml-models/dataset/franco2018rpg/> dcat:distribution <http://purl.org/ontouml-models/dataset/franco2018rpg/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/franco2018rpg/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Role Playing Games Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/franco2018rpg/ontology.vpp>.

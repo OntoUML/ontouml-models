@@ -1,0 +1,44 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/junior2018o4c/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontology for Concerns";
+    mod:acronym "O4C";
+    dct:issued "2018"^^xsd:gYear;
+    dct:modified "2018"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "This is an interesting application of OntoUML which is essentially used to drive the development of a metamodel for automated modeling appproach. Some diagrams show the application of the ontology's concepts as a UML-based language using stereotypes.";
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/23/7677>, <https://dblp.org/pid/p/RosangelaPenteado>;
+    dct:subject "aspect-oriented requirements engineering", "requirements engineering", "software engineering", "concerns", "cross-cutting concerns";
+    mod:designedForTask ontouml:SoftwareEngineering;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1186/s13173-017-0067-6>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/junior2018o4c/>.
+<http://purl.org/ontouml-models/dataset/junior2018o4c/> dcat:distribution <http://purl.org/ontouml-models/dataset/junior2018o4c/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/junior2018o4c/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontology for Concerns\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/junior2018o4c/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/junior2018o4c/> dcat:distribution <http://purl.org/ontouml-models/dataset/junior2018o4c/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/junior2018o4c/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Ontology for Concerns\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/junior2018o4c/ontology.json>.
+<http://purl.org/ontouml-models/dataset/junior2018o4c/> dcat:distribution <http://purl.org/ontouml-models/dataset/junior2018o4c/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/junior2018o4c/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontology for Concerns\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/junior2018o4c/ontology.vpp>.

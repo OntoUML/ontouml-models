@@ -1,0 +1,43 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Relational Database System Ontology";
+    mod:acronym "RDBS-O";
+    dct:issued "2018"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "The declared purpose of the ontology is \"to identify and represent key concepts of the relational database domain in the architectural scope, not covering control and execution details.\" and \"RDBS-O is being built in the context of a larger effort of building a network of ontologies on software development frameworks, in particular for object/relational frameworks [Bauer and King 2004]. Such ontologies will allow us to automate tasks such as migrating code from one framework to another or defining and detecting architectural smells in software projects\".";
+    dct:language "en";
+    dct:license <https://www.gnu.org/licenses/gpl-3.0.en.html>;
+    dct:contributor <https://dblp.org/pid/230/6733>, <https://dblp.org/pid/72/3662>, <https://dblp.org/pid/229/4259>;
+    dct:subject "relational databases", "database structure";
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:SoftwareEngineering;
+    ontouml:context ontouml:Research;
+    dct:source <https://dblp.org/rec/conf/ontobras/AguiarFS18>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/>.
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/> dcat:distribution <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Relational Database System Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/aguiar2018rdbs-o/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/> dcat:distribution <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Relational Database System Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/aguiar2018rdbs-o/ontology.json>.
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/> dcat:distribution <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Relational Database System Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/aguiar2018rdbs-o/ontology.vpp>.

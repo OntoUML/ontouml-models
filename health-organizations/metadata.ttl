@@ -1,0 +1,38 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/health-organizations/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Model of Health Organizations";
+    dcat:theme lcc:R;
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0>;
+    dct:subject "healthcare", "enterprise";
+    mod:designedForTask ontouml:Learning;
+    ontouml:context ontouml:Classroom;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/health-organizations/>.
+<http://purl.org/ontouml-models/dataset/health-organizations/> dcat:distribution <http://purl.org/ontouml-models/dataset/health-organizations/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/health-organizations/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Model of Health Organizations\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/health-organizations/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/health-organizations/> dcat:distribution <http://purl.org/ontouml-models/dataset/health-organizations/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/health-organizations/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Model of Health Organizations\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/health-organizations/ontology.json>.
+<http://purl.org/ontouml-models/dataset/health-organizations/> dcat:distribution <http://purl.org/ontouml-models/dataset/health-organizations/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/health-organizations/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Model of Health Organizations\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/health-organizations/ontology.vpp>.

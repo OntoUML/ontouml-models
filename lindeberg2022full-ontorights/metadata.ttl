@@ -1,0 +1,43 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Full OntoRights";
+    dct:issued "2022"^^xsd:gYear;
+    dcat:theme lcc:K;
+    skos:editorialNote "Simple OntoRights is a simplified version of Full OntoRights. The ontology incorporates much of UFO-L, a legal core ontology (Griffo, 2018),  and also to a lesser degree E-OPL, Enterprise Core Ontology (Falbo et al., 2014), and OntoCrime (Mário de Oliveira Rodrigues et al., 2020) (rodrigues2019ontocrime).";
+    dct:language "en";
+    dcat:landingPage <https://joranl.github.io/human-rights-ontology/>;
+    dct:license <https://unlicense.org/>;
+    dct:contributor <https://orcid.org/0000-0001-7806-749X>;
+    dct:subject "human rights violations";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <h>, <t>, <t>, <p>, <s>, <:>, </>, </>, <g>, <i>, <t>, <h>, <u>, <b>, <.>, <c>, <o>, <m>, </>, <J>, <o>, <r>, <a>, <n>, <L>, </>, <h>, <u>, <m>, <a>, <n>, <->, <r>, <i>, <g>, <h>, <t>, <s>, <->, <o>, <n>, <t>, <o>, <l>, <o>, <g>, <y>, </>, <b>, <l>, <o>, <b>, </>, <g>, <h>, <->, <p>, <a>, <g>, <e>, <s>, </>, <f>, <i>, <l>, <e>, <s>, </>, <L>, <i>, <n>, <d>, <e>, <b>, <e>, <r>, <g>, <%>, <2>, <0>, <2>, <0>, <2>, <2>, <%>, <2>, <0>, <O>, <n>, <t>, <o>, <l>, <o>, <g>, <y>, <%>, <2>, <0>, <D>, <e>, <s>, <i>, <g>, <n>, <%>, <2>, <0>, <M>, <a>, <s>, <t>, <e>, <r>, <%>, <2>, <0>, <T>, <h>, <e>, <s>, <i>, <s>, <.>, <p>, <d>, <f>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/>.
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/> dcat:distribution <http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Full OntoRights\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2022full-ontorights/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/> dcat:distribution <http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Full OntoRights\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2022full-ontorights/ontology.json>.
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/> dcat:distribution <http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/lindeberg2022full-ontorights/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Full OntoRights\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2022full-ontorights/ontology.vpp>.
