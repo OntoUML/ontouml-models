@@ -133,7 +133,7 @@
     ontouml:order "1"^^xsd:positiveInteger.
 :euzyk06GAqACHRgR rdf:type ontouml:Class;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
-    ontouml:name "CollaborationSession "@en;
+    ontouml:name "CollaborationSession"@en;
     ontouml:description "\nDenotes in an event in which participants interact for the purpose of collaboration "@en;
     ontouml:stereotype ontouml:event;
     ontouml:restrictedTo ontouml:event;
@@ -292,16 +292,16 @@
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:name "{essential=true}"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :dxrEs06GAqACHQ1V;
-    ontouml:targetEnd :txrEs06GAqACHQ1T;
-    ontouml:relationEnd :dxrEs06GAqACHQ1V, :txrEs06GAqACHQ1T.
+    ontouml:sourceEnd :txrEs06GAqACHQ1T;
+    ontouml:targetEnd :dxrEs06GAqACHQ1V;
+    ontouml:relationEnd :txrEs06GAqACHQ1T, :dxrEs06GAqACHQ1V.
 :HJHEs06GAqACHQ1j rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:name "{essential=true}"@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :HJHEs06GAqACHQ1m;
-    ontouml:targetEnd :HJHEs06GAqACHQ1k;
-    ontouml:relationEnd :HJHEs06GAqACHQ1m, :HJHEs06GAqACHQ1k.
+    ontouml:sourceEnd :HJHEs06GAqACHQ1k;
+    ontouml:targetEnd :HJHEs06GAqACHQ1m;
+    ontouml:relationEnd :HJHEs06GAqACHQ1k, :HJHEs06GAqACHQ1m.
 :zz0Us06GAqACHQ4K rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:name "encoded"@en;
@@ -326,9 +326,9 @@
 :fuVKk06GAqACHRix rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :fuVKk06GAqACHRi0;
-    ontouml:targetEnd :fuVKk06GAqACHRiy;
-    ontouml:relationEnd :fuVKk06GAqACHRi0, :fuVKk06GAqACHRiy.
+    ontouml:sourceEnd :fuVKk06GAqACHRiy;
+    ontouml:targetEnd :fuVKk06GAqACHRi0;
+    ontouml:relationEnd :fuVKk06GAqACHRiy, :fuVKk06GAqACHRi0.
 :NDV_M06GAqACHQpA rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:name "uses"@en;
@@ -359,8 +359,8 @@
     ontouml:relationEnd :g6cQs06GAqACHQqW, :g6cQs06GAqACHQqY.
 :doTQs06GAqACHQso rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
-    ontouml:name "/moreImportantThan"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:name "moreImportantThan"@en;
+    ontouml:isDerived "true"^^xsd:boolean;
     ontouml:sourceEnd :doTQs06GAqACHQsp;
     ontouml:targetEnd <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/9oTQs06GAqACHQsr>;
     ontouml:relationEnd :doTQs06GAqACHQsp, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/9oTQs06GAqACHQsr>.
@@ -470,6 +470,16 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :JOwos06GAqACHQxm.
+:txrEs06GAqACHQ1T rdf:type ontouml:Property;
+    ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
+    ontouml:cardinality :txrEs06GAqACHQ1T_cardinality.
+:txrEs06GAqACHQ1T_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:txrEs06GAqACHQ1T ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:isReadOnly "false"^^xsd:boolean;
+    ontouml:isOrdered "false"^^xsd:boolean;
+    ontouml:aggregationKind ontouml:shared;
+    ontouml:propertyType :OTkos06GAqACHQyS.
 :dxrEs06GAqACHQ1V rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:cardinality :dxrEs06GAqACHQ1V_cardinality.
@@ -482,12 +492,12 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :CMYos06GAqACHQxy.
-:txrEs06GAqACHQ1T rdf:type ontouml:Property;
+:HJHEs06GAqACHQ1k rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
-    ontouml:cardinality :txrEs06GAqACHQ1T_cardinality.
-:txrEs06GAqACHQ1T_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinality :HJHEs06GAqACHQ1k_cardinality.
+:HJHEs06GAqACHQ1k_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "*".
-:txrEs06GAqACHQ1T ontouml:isDerived "false"^^xsd:boolean;
+:HJHEs06GAqACHQ1k ontouml:isDerived "false"^^xsd:boolean;
     ontouml:isReadOnly "false"^^xsd:boolean;
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
@@ -504,16 +514,6 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/EE4os06GAqACHQx.>.
-:HJHEs06GAqACHQ1k rdf:type ontouml:Property;
-    ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
-    ontouml:cardinality :HJHEs06GAqACHQ1k_cardinality.
-:HJHEs06GAqACHQ1k_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:HJHEs06GAqACHQ1k ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :OTkos06GAqACHQyS.
 :zz0Us06GAqACHQ4L rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:cardinality :zz0Us06GAqACHQ4L_cardinality.
@@ -586,6 +586,17 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :Ibnyk06GAqACHRgo.
+:fuVKk06GAqACHRiy rdf:type ontouml:Property;
+    ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
+    ontouml:name "{essential=true}"@en;
+    ontouml:cardinality :fuVKk06GAqACHRiy_cardinality.
+:fuVKk06GAqACHRiy_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "*".
+:fuVKk06GAqACHRiy ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:isReadOnly "false"^^xsd:boolean;
+    ontouml:isOrdered "false"^^xsd:boolean;
+    ontouml:aggregationKind ontouml:shared;
+    ontouml:propertyType :euzyk06GAqACHRgR.
 :fuVKk06GAqACHRi0 rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:cardinality :fuVKk06GAqACHRi0_cardinality.
@@ -598,17 +609,6 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :NVqyk06GAqACHRe8.
-:fuVKk06GAqACHRiy rdf:type ontouml:Property;
-    ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
-    ontouml:name "{essential=true}"@en;
-    ontouml:cardinality :fuVKk06GAqACHRiy_cardinality.
-:fuVKk06GAqACHRiy_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:fuVKk06GAqACHRiy ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :euzyk06GAqACHRgR.
 :NDV_M06GAqACHQpB rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:cardinality :NDV_M06GAqACHQpB_cardinality.
@@ -877,8 +877,8 @@
 :vuZSk06GAqACHRcy rdf:type ontouml:Diagram;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:name "Cooperation Ontology"@en;
-    ontouml:containsView :n0Eyk06GAqACHRdt, :euzyk06GAqACHRgQ, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/08Gyk06GAqACHRfO>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/06cQs06GAqACHQqa>, :DyxQs06GAqACHQr1, :weVKk06GAqACHRi2, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/daq0._6AUB1CShVp>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/W0.Kk06GAqACHRih>, :roTQs06GAqACHQst, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/t_z0._6AUB1CShXr>, :OhwKk06GAqACHRhq, :frKws06GAqACHQuC, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/geF0._6AUB1CShW7>, :jvvyk06GAqACHRhF, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/7DV_M06GAqACHQpF>, :VLsyk06GAqACHReA, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6d0Qs06GAqACHQqL>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/_BPQs06GAqACHQtD>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/2YL7M06GAqACHQk7>, :vjygs06GAqACHQpY, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/7cGyk06GAqACHRfH>, :OBUws06GAqACHQta, :dt2yk06GAqACHRfg, :JJPyk06GAqACHRg5, :aM2_M06GAqACHQoh, :rBUws06GAqACHQtl, :KeIKk06GAqACHRh5, :NVqyk06GAqACHRe7, :Ibnyk06GAqACHRgn, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/_oYyk06GAqACHRdb>, :OgeQs06GAqACHQrP.
+    ontouml:containsView :JJPyk06GAqACHRg5, :frKws06GAqACHQuC, :jvvyk06GAqACHRhF, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/_BPQs06GAqACHQtD>, :KeIKk06GAqACHRh5, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/daq0._6AUB1CShVp>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/t_z0._6AUB1CShXr>, :vjygs06GAqACHQpY, :euzyk06GAqACHRgQ, :Ibnyk06GAqACHRgn, :dt2yk06GAqACHRfg, :aM2_M06GAqACHQoh, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6d0Qs06GAqACHQqL>, :VLsyk06GAqACHReA, :OgeQs06GAqACHQrP, :OBUws06GAqACHQta, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/W0.Kk06GAqACHRih>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/7cGyk06GAqACHRfH>, :NVqyk06GAqACHRe7, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/7DV_M06GAqACHQpF>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/2YL7M06GAqACHQk7>, :DyxQs06GAqACHQr1, :roTQs06GAqACHQst, :weVKk06GAqACHRi2, :rBUws06GAqACHQtl, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/08Gyk06GAqACHRfO>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/geF0._6AUB1CShW7>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/_oYyk06GAqACHRdb>, :OhwKk06GAqACHRhq, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/06cQs06GAqACHQqa>, :n0Eyk06GAqACHRdt.
 <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/5SyIs06GAqACHQuc> rdf:type ontouml:Diagram;
     ontouml:project <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/6LJSk06GAqACHRO2>;
     ontouml:name "Communication Ontology"@en;
-    ontouml:containsView :OTkos06GAqACHQyR, :JOwos06GAqACHQxl, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/0NpIs06GAqACHQvi>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/21pIs06GAqACHQvE>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/61pIs06GAqACHQvB>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/3z0Us06GAqACHQ4P>, :H1pIs06GAqACHQvZ, :EE4os06GAqACHQx9, :iNpIs06GAqACHQvo, :XVgos06GAqACHQxZ, :rxrEs06GAqACHQ1X, :jNpIs06GAqACHQwC, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/_odEs06GAqACHQ1E>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/9Lhks06GAqACHQ3h>, :LzREs06GAqACHQ0W, :hE6ks06GAqACHQ2w, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/4apks06GAqACHQ30>, :CMYos06GAqACHQxx, :fJHEs06GAqACHQ1o, :Wquos06GAqACHQzR, :tNpIs06GAqACHQv9, :Fvmks06GAqACHQ28, :HEOos06GAqACHQzG, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/i1pIs06GAqACHQu.>, :SDVEs06GAqACHQ0x, :azBks06GAqACHQ3W.
+    ontouml:containsView :jNpIs06GAqACHQwC, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/i1pIs06GAqACHQu.>, :Fvmks06GAqACHQ28, :fJHEs06GAqACHQ1o, :JOwos06GAqACHQxl, :EE4os06GAqACHQx9, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/4apks06GAqACHQ30>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/_odEs06GAqACHQ1E>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/3z0Us06GAqACHQ4P>, :H1pIs06GAqACHQvZ, :tNpIs06GAqACHQv9, :SDVEs06GAqACHQ0x, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/0NpIs06GAqACHQvi>, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/21pIs06GAqACHQvE>, :iNpIs06GAqACHQvo, :Wquos06GAqACHQzR, :rxrEs06GAqACHQ1X, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/9Lhks06GAqACHQ3h>, :HEOos06GAqACHQzG, :CMYos06GAqACHQxx, :hE6ks06GAqACHQ2w, :OTkos06GAqACHQyR, :LzREs06GAqACHQ0W, :XVgos06GAqACHQxZ, :azBks06GAqACHQ3W, <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/61pIs06GAqACHQvB>.

@@ -159,7 +159,7 @@
     ontouml:relationEnd :rxAF2X6GAqACAxnX, :rxAF2X6GAqACAxnZ.
 :pxXF2X6GAqACAxoB rdf:type ontouml:Relation;
     ontouml:project :x52Z2X6GAqACAxTS;
-    ontouml:name "provides "@en;
+    ontouml:name "provides"@en;
     ontouml:stereotype ontouml:mediation;
     ontouml:isDerived "false"^^xsd:boolean;
     ontouml:sourceEnd :pxXF2X6GAqACAxoC;
@@ -183,9 +183,9 @@
 :P0Nl2X6GAqACAxp_ rdf:type ontouml:Relation;
     ontouml:project :x52Z2X6GAqACAxTS;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :P0Nl2X6GAqACAxqC;
-    ontouml:targetEnd :P0Nl2X6GAqACAxqA;
-    ontouml:relationEnd :P0Nl2X6GAqACAxqC, :P0Nl2X6GAqACAxqA.
+    ontouml:sourceEnd :P0Nl2X6GAqACAxqA;
+    ontouml:targetEnd :P0Nl2X6GAqACAxqC;
+    ontouml:relationEnd :P0Nl2X6GAqACAxqA, :P0Nl2X6GAqACAxqC.
 :doMV2X6GAqACAxrH rdf:type ontouml:Relation;
     ontouml:project :x52Z2X6GAqACAxTS;
     ontouml:name "externaly dependent in"@en;
@@ -417,18 +417,6 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/chartered-service/3gR52X6GAqACAxlm>.
-:P0Nl2X6GAqACAxqC rdf:type ontouml:Property;
-    ontouml:project :x52Z2X6GAqACAxTS;
-    ontouml:cardinality :P0Nl2X6GAqACAxqC_cardinality.
-:P0Nl2X6GAqACAxqC_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:P0Nl2X6GAqACAxqC ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :nYOl2X6GAqACAxpc.
 :P0Nl2X6GAqACAxqA rdf:type ontouml:Property;
     ontouml:project :x52Z2X6GAqACAxTS;
     ontouml:cardinality :P0Nl2X6GAqACAxqA_cardinality.
@@ -441,6 +429,18 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:composite;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/chartered-service/3gR52X6GAqACAxlm>.
+:P0Nl2X6GAqACAxqC rdf:type ontouml:Property;
+    ontouml:project :x52Z2X6GAqACAxTS;
+    ontouml:cardinality :P0Nl2X6GAqACAxqC_cardinality.
+:P0Nl2X6GAqACAxqC_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "1..*";
+    ontouml:lowerBound "1";
+    ontouml:upperBound "*".
+:P0Nl2X6GAqACAxqC ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:isReadOnly "false"^^xsd:boolean;
+    ontouml:isOrdered "false"^^xsd:boolean;
+    ontouml:aggregationKind ontouml:none;
+    ontouml:propertyType :nYOl2X6GAqACAxpc.
 :doMV2X6GAqACAxrI rdf:type ontouml:Property;
     ontouml:project :x52Z2X6GAqACAxTS;
     ontouml:cardinality :doMV2X6GAqACAxrI_cardinality.
@@ -564,4 +564,4 @@
 <http://purl.org/ontouml-models/dataset/chartered-service/J.eZ2X6GAqACAxit> rdf:type ontouml:Diagram;
     ontouml:project :x52Z2X6GAqACAxTS;
     ontouml:name "diagram1"@en;
-    ontouml:containsView :MXmV2X6GAqACAxrv, :D7S52X6GAqACAxkf, :aV1Z2X6GAqACAxjB, :ToMV2X6GAqACAxrM, :wA252X6GAqACAxlI, :C4FZ2X6GAqACAxi1, :VfXZ2X6GAqACAxjx, :VxXF2X6GAqACAxoG, <http://purl.org/ontouml-models/dataset/chartered-service/Z.0l2X6GAqACAxpA>, :gMNl2X6GAqACAxqE, :fqgl2X6GAqACAxoj, :b6fl2X6GAqACAxqa, :k4q12X6GAqACAxur, :nxAF2X6GAqACAxnb, :Wnw12X6GAqACAxuD, :y9NV2X6GAqACAxsr, :VofZ2X6GAqACAxkI, :XgR52X6GAqACAxll, :aEl52X6GAqACAxmE, :BPD52X6GAqACAxmi, :Xe_V2X6GAqACAxt2, <http://purl.org/ontouml-models/dataset/chartered-service/6ea52X6GAqACAxku>, :nYOl2X6GAqACAxpb, :IGJV2X6GAqACAxsI, <http://purl.org/ontouml-models/dataset/chartered-service/2i352X6GAqACAxm_>.
+    ontouml:containsView :k4q12X6GAqACAxur, <http://purl.org/ontouml-models/dataset/chartered-service/Z.0l2X6GAqACAxpA>, :ToMV2X6GAqACAxrM, :Xe_V2X6GAqACAxt2, :aEl52X6GAqACAxmE, :VfXZ2X6GAqACAxjx, :BPD52X6GAqACAxmi, :gMNl2X6GAqACAxqE, :XgR52X6GAqACAxll, :nYOl2X6GAqACAxpb, :aV1Z2X6GAqACAxjB, :wA252X6GAqACAxlI, :b6fl2X6GAqACAxqa, :VxXF2X6GAqACAxoG, <http://purl.org/ontouml-models/dataset/chartered-service/6ea52X6GAqACAxku>, <http://purl.org/ontouml-models/dataset/chartered-service/2i352X6GAqACAxm_>, :fqgl2X6GAqACAxoj, :nxAF2X6GAqACAxnb, :Wnw12X6GAqACAxuD, :C4FZ2X6GAqACAxi1, :MXmV2X6GAqACAxrv, :VofZ2X6GAqACAxkI, :IGJV2X6GAqACAxsI, :D7S52X6GAqACAxkf, :y9NV2X6GAqACAxsr.

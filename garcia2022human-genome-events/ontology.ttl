@@ -231,9 +231,9 @@
     ontouml:project :Rz9VxT6GAqACNQBO;
     ontouml:name ""@en;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :NVkxSr6EifjQiQpv;
-    ontouml:targetEnd :NVkxSr6EifjQiQpt;
-    ontouml:relationEnd :NVkxSr6EifjQiQpv, :NVkxSr6EifjQiQpt.
+    ontouml:sourceEnd :NVkxSr6EifjQiQpt;
+    ontouml:targetEnd :NVkxSr6EifjQiQpv;
+    ontouml:relationEnd :NVkxSr6EifjQiQpt, :NVkxSr6EifjQiQpv.
 :EZtB6r6EifjQiRDg rdf:type ontouml:Relation;
     ontouml:project :Rz9VxT6GAqACNQBO;
     ontouml:stereotype ontouml:participation;
@@ -409,20 +409,8 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/4sQrxT6GAqACNQ2g>.
-:NVkxSr6EifjQiQpv rdf:type ontouml:Property;
-    ontouml:project :Rz9VxT6GAqACNQBO;
-    ontouml:name "2..*"@en;
-    ontouml:cardinality :NVkxSr6EifjQiQpv_cardinality.
-:NVkxSr6EifjQiQpv_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:NVkxSr6EifjQiQpv ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :eX6rxT6GAqACNQ3f.
 :NVkxSr6EifjQiQpt rdf:type ontouml:Property;
     ontouml:project :Rz9VxT6GAqACNQBO;
-    ontouml:name "*"@en;
     ontouml:cardinality :NVkxSr6EifjQiQpt_cardinality.
 :NVkxSr6EifjQiQpt_cardinality rdf:type ontouml:Cardinality;
     ontouml:cardinalityValue "*".
@@ -431,6 +419,18 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
     ontouml:propertyType :HDWrxT6GAqACNQ3q.
+:NVkxSr6EifjQiQpv rdf:type ontouml:Property;
+    ontouml:project :Rz9VxT6GAqACNQBO;
+    ontouml:cardinality :NVkxSr6EifjQiQpv_cardinality.
+:NVkxSr6EifjQiQpv_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "2..*";
+    ontouml:lowerBound "2";
+    ontouml:upperBound "*".
+:NVkxSr6EifjQiQpv ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:isReadOnly "false"^^xsd:boolean;
+    ontouml:isOrdered "false"^^xsd:boolean;
+    ontouml:aggregationKind ontouml:none;
+    ontouml:propertyType :eX6rxT6GAqACNQ3f.
 :EZtB6r6EifjQiRDh rdf:type ontouml:Property;
     ontouml:project :Rz9VxT6GAqACNQBO;
     ontouml:cardinality :EZtB6r6EifjQiRDh_cardinality.
@@ -526,4 +526,4 @@
 :GtD1xT6GAqACNQWd rdf:type ontouml:Diagram;
     ontouml:project :Rz9VxT6GAqACNQBO;
     ontouml:name "OntoUML - CSHG"@en;
-    ontouml:containsView :dFNLxT6GAqACNQ0t, :V2kHxT6GAqACNQ9z, :L539xT6GAqACNQkz, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/8g.h6r6EifjQiRGB>, :XJwh6r6EifjQiREz, :sUezxT6GAqACNQwS, :HqYQFT6AUB2yDgpW, :SZtB6r6EifjQiRDl, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/4sQrxT6GAqACNQ2f>, :LVkxSr6EifjQiQpx, :N_3LxT6GAqACNQ2H, :xpFzxT6GAqACNQwm, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/5_.h6r6EifjQiRGH>, :wqdezIGAUBwIBgxG, :vnlLxT6GAqACNQ0c, :ExTrxT6GAqACNQ5G, :uX6rxT6GAqACNQ3e, :dcjLxT6GAqACNQ1U, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/2ESHxT6GAqACNQ.X>, :RIgB6r6EifjQiRBf, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/kBY.6r6EifjQiQ8Q>, :C7uB6r6EifjQiRCu, :dHAQFT6AUB2yDgpC, :bJrB6r6EifjQiREI, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/.1dLxT6GAqACNQ08>, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/3cd.6r6EifjQiRAs>, :HDWrxT6GAqACNQ3p, :Va3LxT6GAqACNQ2B, :lDLezIGAUBwIBgxa, :RGerxT6GAqACNQ32, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/Og.rxT6GAqACNQ38>.
+    ontouml:containsView :bJrB6r6EifjQiREI, :N_3LxT6GAqACNQ2H, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/2ESHxT6GAqACNQ.X>, :dcjLxT6GAqACNQ1U, :C7uB6r6EifjQiRCu, :wqdezIGAUBwIBgxG, :sUezxT6GAqACNQwS, :XJwh6r6EifjQiREz, :Va3LxT6GAqACNQ2B, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/kBY.6r6EifjQiQ8Q>, :RIgB6r6EifjQiRBf, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/5_.h6r6EifjQiRGH>, :vnlLxT6GAqACNQ0c, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/Og.rxT6GAqACNQ38>, :ExTrxT6GAqACNQ5G, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/8g.h6r6EifjQiRGB>, :SZtB6r6EifjQiRDl, :dFNLxT6GAqACNQ0t, :LVkxSr6EifjQiQpx, :V2kHxT6GAqACNQ9z, :L539xT6GAqACNQkz, :HqYQFT6AUB2yDgpW, :lDLezIGAUBwIBgxa, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/3cd.6r6EifjQiRAs>, :uX6rxT6GAqACNQ3e, :dHAQFT6AUB2yDgpC, :RGerxT6GAqACNQ32, :HDWrxT6GAqACNQ3p, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/.1dLxT6GAqACNQ08>, <http://purl.org/ontouml-models/dataset/garcia2022human-genome-events/4sQrxT6GAqACNQ2f>, :xpFzxT6GAqACNQwm.

@@ -216,7 +216,7 @@
     ontouml:name ": nature {disjoint, complete}"@en;
     ontouml:isComplete "false"^^xsd:boolean;
     ontouml:isDisjoint "false"^^xsd:boolean;
-    ontouml:generalization <http://purl.org/ontouml-models/dataset/swo2016/9LGr7v6GAqACAwsk>, :OJmr7v6GAqACAwso, :gX6r7v6GAqACAwsg, <http://purl.org/ontouml-models/dataset/swo2016/4wur7v6GAqACAwsw>, :zyWr7v6GAqACAwss.
+    ontouml:generalization :OJmr7v6GAqACAwso, :gX6r7v6GAqACAwsg, <http://purl.org/ontouml-models/dataset/swo2016/4wur7v6GAqACAwsw>, <http://purl.org/ontouml-models/dataset/swo2016/9LGr7v6GAqACAwsk>, :zyWr7v6GAqACAwss.
 :Fy3JP76AUBgIYwqr rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
     ontouml:name "constituted of"@en;
@@ -276,9 +276,9 @@
 :xVLLrv6GAqACAwqz rdf:type ontouml:Relation;
     ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :xVLLrv6GAqACAwq2;
-    ontouml:targetEnd :xVLLrv6GAqACAwq0;
-    ontouml:relationEnd :xVLLrv6GAqACAwq2, :xVLLrv6GAqACAwq0.
+    ontouml:sourceEnd :xVLLrv6GAqACAwq0;
+    ontouml:targetEnd :xVLLrv6GAqACAwq2;
+    ontouml:relationEnd :xVLLrv6GAqACAwq0, :xVLLrv6GAqACAwq2.
 :Ty3JP76AUBgIYwqt rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
     ontouml:cardinality :Ty3JP76AUBgIYwqt_cardinality.
@@ -471,18 +471,6 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :NlkJP76AUBgIYwoY.
-:xVLLrv6GAqACAwq2 rdf:type ontouml:Property;
-    ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
-    ontouml:cardinality :xVLLrv6GAqACAwq2_cardinality.
-:xVLLrv6GAqACAwq2_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "2..*";
-    ontouml:lowerBound "2";
-    ontouml:upperBound "*".
-:xVLLrv6GAqACAwq2 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :a44Lrv6GAqACAwpc.
 :xVLLrv6GAqACAwq0 rdf:type ontouml:Property;
     ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
     ontouml:cardinality :xVLLrv6GAqACAwq0_cardinality.
@@ -495,7 +483,19 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:shared;
     ontouml:propertyType :kICLrv6GAqACAwp1.
+:xVLLrv6GAqACAwq2 rdf:type ontouml:Property;
+    ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
+    ontouml:cardinality :xVLLrv6GAqACAwq2_cardinality.
+:xVLLrv6GAqACAwq2_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "2..*";
+    ontouml:lowerBound "2";
+    ontouml:upperBound "*".
+:xVLLrv6GAqACAwq2 ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:isReadOnly "false"^^xsd:boolean;
+    ontouml:isOrdered "false"^^xsd:boolean;
+    ontouml:aggregationKind ontouml:none;
+    ontouml:propertyType :a44Lrv6GAqACAwpc.
 :MMpxP76AUBgIYwmA rdf:type ontouml:Diagram;
     ontouml:project <http://purl.org/ontouml-models/dataset/swo2016/gZ.xP76AUBgIYwWe>;
     ontouml:name "Software Ontology"@en;
-    ontouml:containsView :BKsr7v6GAqACAwr4, :wB9xP76AUBgIYwmV, :XaTpP76AUBgIYwuU, :qyjxP76AUBgIYwmg, :F25pP76AUBgIYwti, :KesZP76AUBgIYwwa, :NlkJP76AUBgIYwoX, :okoJP76AUBgIYwn2, :N41JP76AUBgIYwpm, :lVLLrv6GAqACAwq4, :VP1JP76AUBgIYwp6, <http://purl.org/ontouml-models/dataset/swo2016/1Vzr7v6GAqACAwtZ>, <http://purl.org/ontouml-models/dataset/swo2016/U.1JP76AUBgIYwpw>, <http://purl.org/ontouml-models/dataset/swo2016/ov1pP76AUBgIYwt.>, :kICLrv6GAqACAwp0, :Ntorrv6GAqACAwrc, :NkFpP76AUBgIYwts, :O3mLrv6GAqACAwqP, :c_3JP76AUBgIYwq8, :mRlZP76AUBgIYwxg, :ckQJP76AUBgIYwnV, <http://purl.org/ontouml-models/dataset/swo2016/2gUpP76AUBgIYwsK>, :swur7v6GAqACAwsx, :GbwJP76AUBgIYwnr, :gK3JP76AUBgIYwqy, :yAwJP76AUBgIYwng, :pynpP76AUBgIYwu0, <http://purl.org/ontouml-models/dataset/swo2016/0FHpP76AUBgIYwuq>, :a44Lrv6GAqACAwpb, :vyVZP76AUBgIYwxq, :JJmr7v6GAqACAwsp, :zRTxP76AUBgIYwmr, :vR8r7v6GAqACAwsG, :nMEJP76AUBgIYwoM, :I2_xP76AUBgIYwnK, <http://purl.org/ontouml-models/dataset/swo2016/7yWr7v6GAqACAwst>, :pB2Lrv6GAqACAwqT, <http://purl.org/ontouml-models/dataset/swo2016/8zyLrv6GAqACAwp.>, :MX6r7v6GAqACAwsh, :MU4JP76AUBgIYwoB, :nLGr7v6GAqACAwsl, :fL9Lrv6GAqACAwqm.
+    ontouml:containsView :fL9Lrv6GAqACAwqm, :Ntorrv6GAqACAwrc, :KesZP76AUBgIYwwa, :I2_xP76AUBgIYwnK, <http://purl.org/ontouml-models/dataset/swo2016/ov1pP76AUBgIYwt.>, :MU4JP76AUBgIYwoB, :pB2Lrv6GAqACAwqT, :nLGr7v6GAqACAwsl, :zRTxP76AUBgIYwmr, <http://purl.org/ontouml-models/dataset/swo2016/7yWr7v6GAqACAwst>, <http://purl.org/ontouml-models/dataset/swo2016/U.1JP76AUBgIYwpw>, :a44Lrv6GAqACAwpb, <http://purl.org/ontouml-models/dataset/swo2016/2gUpP76AUBgIYwsK>, :kICLrv6GAqACAwp0, :qyjxP76AUBgIYwmg, :yAwJP76AUBgIYwng, :NkFpP76AUBgIYwts, :mRlZP76AUBgIYwxg, :okoJP76AUBgIYwn2, :c_3JP76AUBgIYwq8, :N41JP76AUBgIYwpm, :GbwJP76AUBgIYwnr, :gK3JP76AUBgIYwqy, :JJmr7v6GAqACAwsp, <http://purl.org/ontouml-models/dataset/swo2016/8zyLrv6GAqACAwp.>, :XaTpP76AUBgIYwuU, :ckQJP76AUBgIYwnV, :F25pP76AUBgIYwti, :nMEJP76AUBgIYwoM, :pynpP76AUBgIYwu0, <http://purl.org/ontouml-models/dataset/swo2016/1Vzr7v6GAqACAwtZ>, :vyVZP76AUBgIYwxq, :swur7v6GAqACAwsx, :MX6r7v6GAqACAwsh, :VP1JP76AUBgIYwp6, :BKsr7v6GAqACAwr4, :O3mLrv6GAqACAwqP, :lVLLrv6GAqACAwq4, :vR8r7v6GAqACAwsG, <http://purl.org/ontouml-models/dataset/swo2016/0FHpP76AUBgIYwuq>, :NlkJP76AUBgIYwoX, :wB9xP76AUBgIYwmV.

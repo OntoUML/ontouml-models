@@ -615,13 +615,13 @@
     ontouml:name ""@en;
     ontouml:isComplete "true"^^xsd:boolean;
     ontouml:isDisjoint "false"^^xsd:boolean;
-    ontouml:generalization :P_94p36GAqACBTTI, :o5t4p36GAqACBTTC.
+    ontouml:generalization :o5t4p36GAqACBTTC, :P_94p36GAqACBTTI.
 :xMeEp36GAqACBTVw rdf:type ontouml:GeneralizationSet;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:name ""@en;
     ontouml:isComplete "false"^^xsd:boolean;
     ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization :vo_4p36GAqACBTUJ, :XQv4p36GAqACBTUB, :dfv4p36GAqACBTUF, :t734p36GAqACBTT9.
+    ontouml:generalization :vo_4p36GAqACBTUJ, :dfv4p36GAqACBTUF, :XQv4p36GAqACBTUB, :t734p36GAqACBTT9.
 <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/0nzAJ36GAqACBRzM> rdf:type ontouml:Relation;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:name "describes"@en;
@@ -774,9 +774,9 @@
 :ZyEwJ36GAqACBSYU rdf:type ontouml:Relation;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :ZyEwJ36GAqACBSYX;
-    ontouml:targetEnd :ZyEwJ36GAqACBSYV;
-    ontouml:relationEnd :ZyEwJ36GAqACBSYX, :ZyEwJ36GAqACBSYV.
+    ontouml:sourceEnd :ZyEwJ36GAqACBSYV;
+    ontouml:targetEnd :ZyEwJ36GAqACBSYX;
+    ontouml:relationEnd :ZyEwJ36GAqACBSYV, :ZyEwJ36GAqACBSYX.
 :eFhwJ36GAqACBSZq rdf:type ontouml:Relation;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:name "describes"@en;
@@ -1382,6 +1382,18 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :LGAQJ36GAqACBR1P.
+:ZyEwJ36GAqACBSYV rdf:type ontouml:Property;
+    ontouml:project :F421x36GAqACBRiy;
+    ontouml:cardinality :ZyEwJ36GAqACBSYV_cardinality.
+:ZyEwJ36GAqACBSYV_cardinality rdf:type ontouml:Cardinality;
+    ontouml:cardinalityValue "1";
+    ontouml:lowerBound "1";
+    ontouml:upperBound "1".
+:ZyEwJ36GAqACBSYV ontouml:isDerived "false"^^xsd:boolean;
+    ontouml:isReadOnly "false"^^xsd:boolean;
+    ontouml:isOrdered "false"^^xsd:boolean;
+    ontouml:aggregationKind ontouml:composite;
+    ontouml:propertyType :YbAwJ36GAqACBSYC.
 :ZyEwJ36GAqACBSYX rdf:type ontouml:Property;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:name ""@en;
@@ -1395,18 +1407,6 @@
     ontouml:isOrdered "false"^^xsd:boolean;
     ontouml:aggregationKind ontouml:none;
     ontouml:propertyType :qrggJ36GAqACBR0I.
-:ZyEwJ36GAqACBSYV rdf:type ontouml:Property;
-    ontouml:project :F421x36GAqACBRiy;
-    ontouml:cardinality :ZyEwJ36GAqACBSYV_cardinality.
-:ZyEwJ36GAqACBSYV_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:ZyEwJ36GAqACBSYV ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :YbAwJ36GAqACBSYC.
 :eFhwJ36GAqACBSZr rdf:type ontouml:Property;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:name ""@en;
@@ -1642,4 +1642,4 @@
 <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/4paAJ36GAqACBRyN> rdf:type ontouml:Diagram;
     ontouml:project :F421x36GAqACBRiy;
     ontouml:name "RDBS-O"@en;
-    ontouml:containsView :y6CYp36GAqACBSnu, :hO7QJ36GAqACBSXn, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/3FPop36GAqACBSm6>, :Fg1QJ36GAqACBSXQ, :OVqop36GAqACBSlI, :kY6wJ36GAqACBSZG, :zE5Qp36GAqACBSc5, :obAwJ36GAqACBSYB, :Z13kp36GAqACBT_v, :nmhAJ36GAqACBRye, :AuOwp36GAqACBSfU, :YCKYp36GAqACBSn3, :VeDop36GAqACBSmW, :h30Ip36GAqACBShn, :E5t4p36GAqACBTTD, :vK0op36GAqACBSkt, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/2rrwp36GAqACBSgS>, :apHQp36GAqACBSdz, :zfv4p36GAqACBTUG, :E57cp36GAqACBUNu, :dyEwJ36GAqACBSYZ, :C_m0p36GAqACBUDS, :qCLUp36GAqACBUBx, :P7qsp36GAqACBUJD, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/L734p36GAqACBTT.>, :gBcop36GAqACBSk2, :K3YYp36GAqACBSnT, :l1lop36GAqACBSmE, :p3Rop36GAqACBSlp, :OnzAJ36GAqACBRzR, :btwop36GAqACBSkb, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/JK04p36GAqACBSr.>, :h1sgJ36GAqACBR0w, :FstoJ36GAqACBSbc, :EO6wp36GAqACBSfE, :NFhwJ36GAqACBSZv, :dxHkp36GAqACBT_f, :hpNop36GAqACBSmN, :H71AJ36GAqACBRy1, :vCEwp36GAqACBSen, :ak_kp36GAqACBUAB, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/h.qUp36GAqACBUA5>, :CMjQJ36GAqACBSXc, :FRCwJ36GAqACBSY2, :oAD4p36GAqACBTTJ, :u4G8p36GAqACBUPF, :SF2op36GAqACBSlR, :Ulm4p36GAqACBTR6, :ECBop36GAqACBSlg, :C5zwJ36GAqACBSbA, :x4rop36GAqACBSmf, :LldEp36GAqACBTWp, :zzH0p36GAqACBUEd, :Pu7op36GAqACBSmo, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/_Qv4p36GAqACBTUC>, :GV5Up36GAqACBUBd, :Waskp36GAqACBT92, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/86vgJ36GAqACBR1D>, :NIl4p36GAqACBTSt, :K4iwp36GAqACBSe2, :G6iop36GAqACBSk_, :LapAJ36GAqACBRyo, :FBoIp36GAqACBSg9, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/jL1wp36GAqACBSf.>, :epBIp36GAqACBSiu, :Eklwp36GAqACBSf1, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/9IzQp36GAqACBSdk>, :STzsp36GAqACBUKc, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8SzIp36GAqACBSjv>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/zK.4p36GAqACBTSG>, :wXL4p36GAqACBTTV, :R5YgJ36GAqACBR0a, :j87wp36GAqACBSge, :nB2wJ36GAqACBSZU, :SA_AJ36GAqACBRz6, :JMa4p36GAqACBTRw, :dXJcp36GAqACBUM3, :Q44op36GAqACBSkk, :NNcYp36GAqACBSnl, :bdAYp36GAqACBSnD, :AisUp36GAqACBUAZ, :wY_4p36GAqACBTUK, :o5rEp36GAqACBTW5, :dMeEp36GAqACBTVy, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8Rwcp36GAqACBULV>, :otKcp36GAqACBUL8, :o4WQp36GAqACBScO, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/2mhUp36GAqACBUBR>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/3ZfMp36GAqACBUH1>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8_48p36GAqACBUOk>, :Mtnop36GAqACBSmx, :C5aMp36GAqACBUFk, :NLs4p36GAqACBSsE, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/6cQEp36GAqACBTUO>, :KDSQp36GAqACBSb_, :bXXQJ36GAqACBSXu, :zG9oJ36GAqACBSbs, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8xIEp36GAqACBTUY>, :RSwwp36GAqACBSeV, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/0hU0p36GAqACBUCg>, :KrggJ36GAqACBR0H, :Y6pop36GAqACBSly, :zGAQJ36GAqACBR1O, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/1z2QJ36GAqACBSWl>, :cpZ4p36GAqACBTSn, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/93DUp36GAqACBUBl>, :FFUYp36GAqACBSnc, :I39Mp36GAqACBUG_, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/5qCQJ36GAqACBSV_>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/2U5op36GAqACBSl7>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/7sHwJ36GAqACBSbK>, :jUFEp36GAqACBTWP, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/66RQJ36GAqACBSW4>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/I4Fkp36GAqACBT.x>.
+    ontouml:containsView :hO7QJ36GAqACBSXn, :NIl4p36GAqACBTSt, :Z13kp36GAqACBT_v, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/3FPop36GAqACBSm6>, :epBIp36GAqACBSiu, :STzsp36GAqACBUKc, :l1lop36GAqACBSmE, :SF2op36GAqACBSlR, :FRCwJ36GAqACBSY2, :apHQp36GAqACBSdz, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/1z2QJ36GAqACBSWl>, :FstoJ36GAqACBSbc, :Pu7op36GAqACBSmo, :KrggJ36GAqACBR0H, :SA_AJ36GAqACBRz6, :E5t4p36GAqACBTTD, :OnzAJ36GAqACBRzR, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8Rwcp36GAqACBULV>, :EO6wp36GAqACBSfE, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/6cQEp36GAqACBTUO>, :obAwJ36GAqACBSYB, :btwop36GAqACBSkb, :YCKYp36GAqACBSn3, :p3Rop36GAqACBSlp, :Fg1QJ36GAqACBSXQ, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/93DUp36GAqACBUBl>, :KDSQp36GAqACBSb_, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8SzIp36GAqACBSjv>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/I4Fkp36GAqACBT.x>, :FFUYp36GAqACBSnc, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/66RQJ36GAqACBSW4>, :H71AJ36GAqACBRy1, :C5zwJ36GAqACBSbA, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/2mhUp36GAqACBUBR>, :dMeEp36GAqACBTVy, :h30Ip36GAqACBShn, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/0hU0p36GAqACBUCg>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/2U5op36GAqACBSl7>, :y6CYp36GAqACBSnu, :C5aMp36GAqACBUFk, :K4iwp36GAqACBSe2, :bXXQJ36GAqACBSXu, :kY6wJ36GAqACBSZG, :NLs4p36GAqACBSsE, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/jL1wp36GAqACBSf.>, :Q44op36GAqACBSkk, :jUFEp36GAqACBTWP, :VeDop36GAqACBSmW, :gBcop36GAqACBSk2, :o4WQp36GAqACBScO, :NFhwJ36GAqACBSZv, :oAD4p36GAqACBTTJ, :qCLUp36GAqACBUBx, :I39Mp36GAqACBUG_, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/2rrwp36GAqACBSgS>, :RSwwp36GAqACBSeV, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8xIEp36GAqACBTUY>, :j87wp36GAqACBSge, :FBoIp36GAqACBSg9, :CMjQJ36GAqACBSXc, :vCEwp36GAqACBSen, :NNcYp36GAqACBSnl, :K3YYp36GAqACBSnT, :dxHkp36GAqACBT_f, :P7qsp36GAqACBUJD, :dyEwJ36GAqACBSYZ, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/86vgJ36GAqACBR1D>, :u4G8p36GAqACBUPF, :LapAJ36GAqACBRyo, :G6iop36GAqACBSk_, :zGAQJ36GAqACBR1O, :R5YgJ36GAqACBR0a, :nB2wJ36GAqACBSZU, :ECBop36GAqACBSlg, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/L734p36GAqACBTT.>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/7sHwJ36GAqACBSbK>, :hpNop36GAqACBSmN, :JMa4p36GAqACBTRw, :ak_kp36GAqACBUAB, :zfv4p36GAqACBTUG, :AuOwp36GAqACBSfU, :zG9oJ36GAqACBSbs, :nmhAJ36GAqACBRye, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/9IzQp36GAqACBSdk>, :otKcp36GAqACBUL8, :wXL4p36GAqACBTTV, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/_Qv4p36GAqACBTUC>, :x4rop36GAqACBSmf, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/3ZfMp36GAqACBUH1>, :Eklwp36GAqACBSf1, :Waskp36GAqACBT92, :zE5Qp36GAqACBSc5, :o5rEp36GAqACBTW5, :OVqop36GAqACBSlI, :dXJcp36GAqACBUM3, :h1sgJ36GAqACBR0w, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/5qCQJ36GAqACBSV_>, :Mtnop36GAqACBSmx, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/JK04p36GAqACBSr.>, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/h.qUp36GAqACBUA5>, :vK0op36GAqACBSkt, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/8_48p36GAqACBUOk>, :GV5Up36GAqACBUBd, :cpZ4p36GAqACBTSn, <http://purl.org/ontouml-models/dataset/aguiar2018rdbs-o/zK.4p36GAqACBTSG>, :zzH0p36GAqACBUEd, :wY_4p36GAqACBTUK, :E57cp36GAqACBUNu, :AisUp36GAqACBUAZ, :bdAYp36GAqACBSnD, :Ulm4p36GAqACBTR6, :LldEp36GAqACBTWp, :Y6pop36GAqACBSly, :C_m0p36GAqACBUDS.
