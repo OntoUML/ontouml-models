@@ -36,8 +36,8 @@ The whole catalog is hosted on a GitHub repository whose root directory contains
 
 We provide below a representation of the catalog directory tree:
 
-```txt
-/
+```
+catalog/
 |   catalog-metadata.ttl
 |   catalog.ttl
 |   metadata.ttl
