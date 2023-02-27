@@ -1,0 +1,122 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix osh: <http://purl.org/ontouml-models/shapes> .
+
+osh:ModelShape rdf:type sh:NodeShape ;
+    sh:targetClass mod:SemanticArtefact ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:title ;
+        sh:minCount 1 ;
+        sh:or ([ sh:datatype rdf:langString ; ]
+            [ sh:datatype xsd:string ; ]) ;
+    ] ;
+    sh:property [
+        sh:path mod:acronym ;
+        sh:or ([ sh:datatype rdf:langString ; ]
+            [ sh:datatype xsd:string ; ]) ;
+    ] ;
+    sh:property [
+        sh:path dct:issued ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or ([ sh:datatype xsd:dateTime ; ]
+            [ sh:datatype xsd:date ; ]
+            [ sh:datatype xsd:gYearMonth ; ]
+            [ sh:datatype xsd:gYear ; ]) ;
+    ] ;
+    sh:property [
+        sh:path dct:modified ;
+        sh:maxCount 1 ;
+        sh:or ([ sh:datatype xsd:dateTime ; ]
+            [ sh:datatype xsd:date ; ]
+            [ sh:datatype xsd:gYearMonth ; ]
+            [ sh:datatype xsd:gYear ; ]) ;
+    ] ;
+    sh:property [
+        sh:path dct:contributor ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path dcat:theme ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^http://id.loc.gov/authorities/classification/";
+    ] ;
+    sh:property [
+        sh:path dct:subject ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path skos:editorialNote ;
+        sh:or ([ sh:datatype rdf:langString ; ]
+            [ sh:datatype xsd:string ; ]) ;
+    ] ;
+    sh:property [
+        sh:path dct:type ;
+        sh:in ( ontouml:Domain 
+                ontouml:Application 
+                ontouml:Domain ) ;
+    ] ;
+    sh:property [
+        sh:path dct:language ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path mod:designedForTask ;
+        sh:in ( ontouml:ConceptualClarification
+                ontouml:DataPublication
+                ontouml:DecisionSupportSystem
+                ontouml:Example
+                ontouml:InformationRetrieval
+                ontouml:Interoperability
+                ontouml:LanguageEngineering
+                ontouml:Learning
+                ontouml:OntologicalAnalysis
+                ontouml:SoftwareEngineering ) ;
+    ] ;
+    sh:property [
+        sh:path ontouml:context ;
+        sh:in ( ontouml:Classroom 
+                ontouml:Industry 
+                ontouml:Research ) ;
+    ] ;
+    sh:property [
+        sh:path dct:source ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:conformsTo ;
+        sh:in ( ontouml:OntoumlStyle 
+                ontouml:UfoStyle ) ;
+    ] ;
+    sh:property [
+        sh:path dcat:landingPage ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https?://"
+    ] ;
+    sh:property [
+        sh:path dct:license ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path dcat:distribution ;
+        sh:nodeKind sh:IRI ;
+        sh:class dcat:Distribution ;
+    ] .
