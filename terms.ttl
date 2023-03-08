@@ -1,4 +1,4 @@
-@prefix omt: <https://purl.org/ontouml-models/terms/> .
+@prefix omt: <https://w3id.org/ontouml-catalog/file/terms.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,21 +7,29 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<https://purl.org/ontouml-models/terms> a owl:Ontology ;
-                                        dct:identifier "https://purl.org/ontouml-models/terms"^^xsd:anyURI ;
-                                        dct:title "OntoUML/UFO Catalog Metadata Vocabulary" ;
+<https://w3id.org/ontouml-catalog/file/terms.ttl#> a owl:Ontology ;
+                                        dct:identifier "https://w3id.org/ontouml-catalog/file/terms.ttl#"^^xsd:anyURI ;
+                                        dct:title "OntoUML/UFO Catalog Metadata Vocabulary"@en ;
                                         dct:description "Metadata entities and properties to describe models in the OntoUML/UFO Catalog."@en ;
-                                        owl:versionIRI <https://purl.org/ontouml-models/terms/1.0> ;
-                                        owl:versionInfo "1.0"@en ;
+                                        dcat:landingPage <https://w3id.org/ontouml-catalog> ; 
                                         dct:creator <https://orcid.org/0000-0002-5385-5761> ,
                                                     <https://orcid.org/0000-0003-2736-7817> ;
+                                        dct:contributor <https://orcid.org/0000-0003-3385-4769>;
+                                        dct:publisher <https://www.utwente.nl/eemcs/scs/> ;
+                                        owl:versionIRI <https://w3id.org/ontouml-catalog/file/terms.ttl#/1.0> ;
+                                        owl:versionInfo "1.0"@en ;
                                         dct:created "2022-04-03"^^xsd:date ;
-                                        dct:modified "2023-03-03"^^xsd:date ;
+                                        dct:modified "2023-03-08"^^xsd:date ;
+                                        dcat:keyword "OntoUML"@en, "Metamodel"@en, "Ontology-Driven Conceptual Modeling"@en ;
                                         dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
                                         vann:preferredNamespacePrefix "omt"@en ;
-                                        vann:preferredNamespaceUri "https://purl.org/ontouml-models/terms/"^^xsd:anyURI .
-
+                                        vann:preferredNamespaceUri "https://w3id.org/ontouml-catalog/file/terms.ttl#"^^xsd:anyURI ;
+                                        skos:changeNote "file scope re-defined to contain only the OntoUML catalog terms in OWL"@en ;
+                                        skos:changeNote "dct:contributor, dcat:keyword, skos:changeNote, dct:isReferencedBy metadata added"@en ; 
+                                        dct:isReferencedBy <https://doi.org/10.1007/978-3-031-17995-2_1> .
+                            
 omt:context a owl:ObjectProperty ;
             rdfs:range omt:OntologyDevelopmentContext .
 
