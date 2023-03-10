@@ -1,111 +1,124 @@
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix osh: <http://purl.org/ontouml-models/shapes> .
+@prefix dash:     <http://datashapes.org/dash#> .
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix osh:      <http://purl.org/ontouml-models/shapes> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 
-osh:ModelCatalogShape rdf:type sh:NodeShape ;
-    sh:targetClass dcat:Catalog ;
-    sh:property [
-        sh:path dct:identifier ;
-        sh:minCount 1 ;
-    ] ;
-    sh:property [
-        sh:path dct:title ;
-        sh:minCount 1 ;
-        sh:or ([ sh:datatype rdf:langString ; ]
-                [ sh:datatype xsd:string ; ]) ;
-    ] ;
-    sh:property [
-        sh:path dct:alternative ;
-        sh:or ([ sh:datatype rdf:langString ; ]
-                [ sh:datatype xsd:string ; ]) ;
-    ] ;
-    sh:property [
-        sh:path dct:description ;
-        sh:or ([ sh:datatype rdf:langString ; ]
-                [ sh:datatype xsd:string ; ]) ;
-    ] ;
-    sh:property [
-        sh:path foaf:homepage ;
-        sh:nodeKind sh:IRI ;
-        sh:pattern "^https?://"
-    ] ;
-    sh:property [
-        sh:path dcat:themeTaxonomy ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path dct:bibliographicCitation ;
-        sh:or ([ sh:datatype rdf:langString ; ]
-                [ sh:datatype xsd:string ; ]) ;
-    ] ;
-    sh:property [
-        sh:path dct:issued ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:or ([ sh:datatype xsd:dateTime ; ]
-            [ sh:datatype xsd:date ; ]
-            [ sh:datatype xsd:gYearMonth ; ]
-            [ sh:datatype xsd:gYear ; ]) ;
-    ] ;
-    sh:property [
-        sh:path dct:modified ;
-        sh:maxCount 1 ;
-        sh:or ([ sh:datatype xsd:dateTime ; ]
-            [ sh:datatype xsd:date ; ]
-            [ sh:datatype xsd:gYearMonth ; ]
-            [ sh:datatype xsd:gYear ; ]) ;
-    ] ;
-    sh:property [
-        sh:path dcat:contactPoint ;
-        sh:qualifiedValueShape [
-            sh:property [
-                sh:path vcard:hasEmail ;
-                sh:minCount 1 ;
-            ] ;
-            sh:property [
-                sh:path vcard:fn ;
-            ] ;
-        ] ;
-    ] ;
-    sh:property [
-        sh:path dct:publisher ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path dct:creator ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path dct:contributor ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path dct:accessRights ;
-    ] ;
-    sh:property [
-        sh:path dct:license ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path dcat:distribution ;
-        sh:nodeKind sh:IRI ;
-        sh:class dcat:Distribution ;
-    ] ;
-    sh:property [
-        sh:path dct:dataset ;
-        sh:nodeKind sh:IRI ;
-        sh:class mod:SemanticArtefact ;
-    ] .
+osh:OntoumlCatalogShape a sh:NodeShape ;
+  sh:targetClass dcat:Catalog ;
+  sh:property
+  [
+    sh:name "Access Rights" ;
+    sh:description "Information about who access the resource or an indication of its security status.";
+    sh:path dct:accessRights ;
+    sh:or (
+      [ sh:nodeKind sh:IRI ; ]
+      [ sh:datatype xsd:string ; ]
+    ) ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Contributor" ;
+    sh:description "The entity responsible for making contributions to the resource.";
+    sh:path dct:publisher ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Creator" ;
+    sh:description "The entity responsible for producing the resource.";
+    sh:path dct:creator ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Contact Points" ;
+    sh:description "Relevant contact information for the resource.";
+    sh:path dcat:contactPoint ;
+    sh:node osh:ContactPoint ;
+    sh:minCount 1 ;
+    dash:editor dash:BlankNodeEditor ;
+  ],
+  [
+    sh:name "Bibliographic Citation" ;
+    sh:description "A bibliographic citation about the catalog, which can be in some specific language.";
+    sh:path dct:bibliographicCitation ;
+    sh:or (
+      # [ sh:datatype rdf:langString ; ]
+      [ sh:datatype xsd:string ; ]
+    ) ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  # [
+  #   sh:name "Theme Taxonomy" ;
+  #   sh:description "A taxonomy defining the themes that describe the items in the catalog.";
+  #   sh:path dcat:themeTaxonomy ;
+  #   sh:minCount 1 ;
+  #   sh:nodeKind sh:IRI ;
+  #   dash:editor dash:URIEditor ;
+  #   dash:viewer dash:LabelViewer ;
+  # ],
+  [
+    sh:name "Homepage" ;
+    sh:description "A homepage of the resource, which can be in some specific language. It must start with \"http://\" or \"https://\".";
+    sh:path foaf:homepage ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^https?://" ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Description" ;
+    sh:description "A description of the resource, which can be in some specific language.";
+    sh:path dct:description ;
+    sh:or (
+      # [ sh:datatype rdf:langString ; ]
+      [ sh:datatype xsd:string ; ]
+    ) ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ],
+  [
+    sh:name "Alternative Title" ;
+    sh:description "An alternative title of the resource, which can be in some specific language.";
+    sh:path dct:alternative ;
+    sh:or (
+      # [ sh:datatype rdf:langString ; ]
+      [ sh:datatype xsd:string ; ]
+    ) ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ]
+  .
+
+osh:ContactPoint a sh:NodeShape ;
+  sh:targetClass vcard:VCard ;
+  sh:property [
+    sh:name "E-mail" ;
+    sh:description "The email address as a mailto URI." ;
+    sh:path vcard:hasEmail ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^mailto:" ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Name" ;
+    sh:description "The formatted text corresponding to the name of the contact." ;
+    sh:path vcard:fn ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] .
