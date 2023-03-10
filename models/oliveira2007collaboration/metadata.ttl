@@ -1,0 +1,43 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Towards a collaboration ontology";
+    dct:issued "2007"^^xsd:gYear;
+    dct:modified "2007"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "This ontology has an interest example of datatype that may have as instances values that are enumarated or not. Maybe this sort of \"categories\" of qualities mapped into continuous or discrete spaces should be captured through qualities.";
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/75/5043>, <https://www.linkedin.com/in/felipefo>, <https://dblp.org/pid/00/7501>;
+    dct:subject "collaboration", "cooperation", "communication";
+    mod:designedForTask ontouml:Interoperability;
+    ontouml:context ontouml:Research;
+    dct:source <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/towards_a_collaboration_ontology_2007.pdf>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/>.
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/> dcat:distribution <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Towards a collaboration ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/oliveira2007collaboration/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/> dcat:distribution <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Towards a collaboration ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/oliveira2007collaboration/ontology.json>.
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/> dcat:distribution <http://purl.org/ontouml-models/dataset/oliveira2007collaboration/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/oliveira2007collaboration/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Towards a collaboration ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/oliveira2007collaboration/ontology.vpp>.

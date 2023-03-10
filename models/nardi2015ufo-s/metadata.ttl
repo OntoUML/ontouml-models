@@ -1,0 +1,45 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Commitment-based Reference Ontology for Services";
+    mod:acronym "UFO-S";
+    dct:issued "2013"^^xsd:gYear;
+    dct:modified "2016"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The project contains constraints that cannot be serialized into ontouml-schema at the moment of writing.\nAt times, there is no hint in the diagram about a relation's direction, so other diagrams are considered in the decision.\n";
+    dct:language "en";
+    dcat:landingPage <https://github.com/unibz-core/UFO-S>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/65/4688>, <https://dblp.org/pid/229/4259>, <https://dblp.org/pid/11/78>, <https://dblp.org/pid/91/3408>, <https://dblp.org/pid/65/6778>, <https://dblp.org/pid/s/MartenvanSinderen>, <https://dblp.org/pid/p/LuisFerreiraPires>, <https://dblp.org/pid/169/2246>;
+    dct:subject "services";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1016/j.is.2015.01.012>, <https://doi.org/10.1109/EDOC.2013.28>, <https://doi.org/10.1016/j.is.2015.09.008>, <https://nemo.inf.ufes.br/files/ufo_s_techreport.pdf>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Core.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/nardi2015ufo-s/>.
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/> dcat:distribution <http://purl.org/ontouml-models/dataset/nardi2015ufo-s/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Commitment-based Reference Ontology for Services\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/nardi2015ufo-s/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/> dcat:distribution <http://purl.org/ontouml-models/dataset/nardi2015ufo-s/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Commitment-based Reference Ontology for Services\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/nardi2015ufo-s/ontology.json>.
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/> dcat:distribution <http://purl.org/ontouml-models/dataset/nardi2015ufo-s/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/nardi2015ufo-s/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Commitment-based Reference Ontology for Services\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/nardi2015ufo-s/ontology.vpp>.

@@ -1,0 +1,43 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/silveira2021oap/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontologia de Referência para Arquiteturas Pedagógicas";
+    mod:acronym "OAP";
+    dct:issued "2021"^^xsd:gYear;
+    dcat:theme lcc:L;
+    skos:editorialNote "The ontology was documented based on the authors' paper. Diagram 2 was included on authors' request specified in issue 177 of the GitHub repository.";
+    dct:language "pt-br, en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/286/2286>, <https://dblp.org/pid/80/6127>, <https://dblp.org/pid/157/9229>, <https://dblp.org/pid/58/7028>;
+    dct:subject "pedagogical architectures", "pedagogy";
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://sol.sbc.org.br/index.php/sbie/article/view/18040/17874>;
+    dct:conformsTo ontouml:OntoumlStyle;
+    dct:type ontouml:Domain.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/silveira2021oap/>.
+<http://purl.org/ontouml-models/dataset/silveira2021oap/> dcat:distribution <http://purl.org/ontouml-models/dataset/silveira2021oap/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silveira2021oap/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontologia de Referência para Arquiteturas Pedagógicas\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silveira2021oap/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/silveira2021oap/> dcat:distribution <http://purl.org/ontouml-models/dataset/silveira2021oap/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silveira2021oap/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Ontologia de Referência para Arquiteturas Pedagógicas\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silveira2021oap/ontology.json>.
+<http://purl.org/ontouml-models/dataset/silveira2021oap/> dcat:distribution <http://purl.org/ontouml-models/dataset/silveira2021oap/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silveira2021oap/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontologia de Referência para Arquiteturas Pedagógicas\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silveira2021oap/ontology.vpp>.
