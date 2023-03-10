@@ -1,0 +1,143 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix osh: <http://purl.org/ontouml-models/shapes> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+osh:ModelShape a sh:NodeShape ;
+    sh:targetClass mod:SemanticArtefact, dcat:Dataset ;
+    sh:property 
+    [
+        sh:name "Contributor" ;
+        sh:description "The entity responsible for making contributions to the resource.";
+        sh:path dct:publisher ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        dash:editor dash:URIEditor ;
+        dash:viewer dash:LabelViewer ;
+    ],
+    [
+        sh:name "Editorial Note" ;
+        sh:description "Information that aids in administrative housekeeping, such as reminders of editorial work still to be done, or warnings in the event that future editorial changes might be made" ;
+        sh:path skos:editorialNote ;
+        sh:or ([ sh:datatype rdf:langString ; ] [ sh:datatype xsd:string ; ]) ;
+        dash:editor dash:TextFieldWithLangEditor ;
+        dash:viewer dash:LiteralViewer ;
+    ],
+    [
+        sh:name "Source" ;
+        sh:description "A related resource from which the described resource is derived." ;
+        sh:path dct:source ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        dash:editor dash:URIEditor ;
+        dash:viewer dash:HyperlinkViewer ;
+    ],
+    [
+        sh:name "Landing Page" ;
+        sh:description "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information. It must start with \"http://\" or \"https://\"." ;
+        sh:path dcat:landingPage ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https?://" ;
+        dash:editor dash:URIEditor ;
+        dash:viewer dash:HyperlinkViewer ;
+    ],
+    [
+        sh:name "Conforms to" ;
+        sh:description "The list of representation styles adopted in the model. The allowed values for this field are: \"ontouml\", for models that use OntoUML's stereotypes; and \"ufo\", for pure UML models that specialize UFO's types and relations." ;
+        sh:path dct:conformsTo ;
+        sh:maxCount 1 ;
+        sh:in ( 
+            ontouml:OntoumlStyle 
+            ontouml:UfoStyle
+        ) ;
+        dash:editor dash:EnumSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ],
+    [
+        sh:name "Context" ;
+        sh:description "The list of contexts in which the model was developed. The allowed values for this field are: \"research\", \"industry\", \"classroom\"." ;
+        sh:path ontouml:context ;
+        sh:in (
+            ontouml:Classroom
+            ontouml:Industry
+            ontouml:Research
+        ) ;
+        dash:editor dash:EnumSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ],
+    [
+        sh:name "Designed for Task" ;
+        sh:description "The list of goals that motivated the development of the model. The allowed values are \"conceptual clarification\", \"data publication\", \"decision support system\", \"example\", \"information retrieval\", \"interoperability\", \"language engineering\", \"learning\", \"ontological analysis\", and \"software engineering\"." ;
+        sh:path mod:designedForTask ;
+        sh:in (
+            ontouml:ConceptualClarification
+            ontouml:DataPublication
+            ontouml:DecisionSupportSystem
+            ontouml:Example
+            ontouml:InformationRetrieval
+            ontouml:Interoperability
+            ontouml:LanguageEngineering
+            ontouml:Learning
+            ontouml:OntologicalAnalysis
+            ontouml:SoftwareEngineering
+        ) ;
+        dash:editor dash:EnumSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ],
+    [
+        sh:name "Type" ;
+        sh:description "The list of types in which the model can have categories. Since OntoUML and UFO are frequently used for building core and domain ontologies, these are among the allowed values for this field (the other allowed value is application)." ;
+        sh:path dct:type ;
+        sh:maxCount 1 ;
+        sh:in ( ontouml:Domain ontouml:Application ontouml:Domain ) ;
+        dash:editor dash:EnumSelectEditor ;
+        dash:viewer dash:LabelViewer ;
+    ],
+    [
+        sh:name "Language" ;
+        sh:description "The language in which the lexical labels of the model are written (using the IANA Language Sub Tag Registry). E.g., \"en\", \"pt\"." ;
+        sh:path dct:language ;
+        sh:datatype xsd:string ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LiteralViewer ;
+    ],
+    [
+        sh:name "Subject" ;
+        sh:description "A list of strings that identify the domains covered by the model. E.g., \"robotic\", \"technology\", \"services\", \"risk\"." ;
+        sh:path dct:subject ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LiteralViewer ;
+    ],
+    [
+        sh:name "Theme" ;
+        sh:description "The central theme of the model according to the Library of Congress Classification (LCC) system. E.g., \"Class S - Agriculture\", \"Class T - Technology\". LCC is available as a skos:ConceptScheme and each of its classes as instances of skos:Concept. The used URI must be prefixed by <http://id.loc.gov/authorities/classification/>." ;
+        sh:path dcat:theme ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^http://id.loc.gov/authorities/classification/";
+        dash:editor dash:URIEditor ;
+        dash:viewer dash:HyperlinkViewer ;
+    ],
+    [
+        sh:name "Acronym" ;
+        sh:description "The acronym one can use to refer to the model. E.g., \"RDBS-O\", \"COVER\", \"ROT\"." ;
+        sh:path mod:acronym ;
+        sh:or (
+            # [ sh:datatype rdf:langString ; ]
+            [ sh:datatype xsd:string ; ]
+        ) ;
+        dash:editor dash:TextFieldEditor ;
+        dash:viewer dash:LiteralViewer ;
+    ]
+    .
