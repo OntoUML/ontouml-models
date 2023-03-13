@@ -6,19 +6,18 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purl.org/ontouml-models/catalog> rdf:type dcat:Catalog ;
+<https://w3id.org/ontouml-models/catalog> rdf:type dcat:Catalog ;
     dct:title "FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research"@en ;
     rdfs:label "FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research"@en ;
     dct:alternative "OntoUML/UFO Catalog"@en ;
     rdfs:label "OntoUML/UFO Catalog"@en ;
     dct:description "The FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research, short-named OntoUML/UFO Catalog, is a structured and open-source catalog that contains OntoUML and UFO ontology models. It was designed to support empirical research in OntoUML and UFO, as well as for the general conceptual modeling area, by providing high-quality curated, structured, and machine-processable data on why, where, and how different modeling approaches are used. The catalog offers a diverse collection of models, created by modelers with varying modeling skills, for a range of domains, and for different purposes. The models are available in machine-readable formats (JSON and Turtle) and are accessible via permanent identifiers."@en ;
-    dct:identifier "https://purl.org/ontouml-models/catalog"^^xsd:anyURI ;
+    dct:identifier "https://w3id.org/ontouml-models/catalog"^^xsd:anyURI ;
     foaf:homepage <https://github.com/unibz-core/ontouml-models> ;
     dcat:themeTaxonomy <http://id.loc.gov/authorities/classification> ;
     dct:bibliographicCitation "Barcelos, P.P.F. et al. (2022). A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research. In: Ralyté, J., Chakravarthy, S., Mohania, M., Jeusfeld, M.A., Karlapalem, K. (eds) Conceptual Modeling. ER 2022. Lecture Notes in Computer Science, vol 13607. Springer, Cham. https://doi.org/10.1007/978-3-031-17995-2_1"@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
-    dcat:distribution <https://purl.org/ontouml-models/catalog/turtle> ;
     dct:issued "2019-06-18"^^xsd:date ;
     dct:modified "2023-02-21"^^xsd:date ;
     dcat:contactPoint [
@@ -188,7 +187,3 @@
                 <http://purl.org/ontouml-models/dataset/duarte2021ross/> ,
                 <http://purl.org/ontouml-models/dataset/debbech2020dysfunction-analysis/> .
 
-<https://purl.org/ontouml-models/catalog/turtle> a dcat:Distribution ;
-    dct:title "Turtle distribution of the OntoUML Model Catalog"@en ;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/catalog.ttl> .
