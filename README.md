@@ -25,7 +25,7 @@ This document is displayed as follows:
 - [Acknowledgements](#acknowledgements)
 - [License disclaimer](#license-disclaimer)
 
-The catalog github repository is associated with the permanent URL <https://purl.org/ontouml-models>.
+The catalog github repository is associated with the permanent URL <https://w3id.org/ontouml-models>.
 
 ## Catalog structure
 
@@ -66,7 +66,7 @@ Each ontology folder is composed of the following files:
 
 1. `ontology.vpp`: the Visual Paradigm project of the model; 
 2. `ontology.json`: contains the JSON serialization of the model exported via the [ontouml-vp-plugin](https://github.com/OntoUML/ontouml-vp-plugin);
-3. `ontology.ttl`: uses the [OntoUML Metamodel in OWL](https://purl.org/ontouml-models/vocabulary) to map the model's data. This is a vocabulary designed to support the serialization and exchange of OntoUML models in compliance with the [ontouml-schema](https://purl.org/ontouml-schema), which is a specification of how to serialize OntoUML models as JSON objects. This file provides a specific URI for all data from the model. These URIs are generated according to the following template: `https://purl.org/ontouml-models/<folderName>`, and its publication allows anyone to access and manipulate all the model's instances;
+3. `ontology.ttl`: uses the [OntoUML Metamodel in OWL](https://w3id.org/ontouml) to map the model's data. This is a vocabulary designed to support the serialization and exchange of OntoUML models in compliance with the [ontouml-schema](https://purl.org/ontouml-schema), which is a specification of how to serialize OntoUML models as JSON objects. This file provides a specific URI for all data from the model, and its publication allows anyone to access and manipulate all the model's instances;
 4. `metadata.yaml`: contains the model's metadata;
 5. `metadata.ttl`: is an rdf-based version in turtle syntax of metadata.yaml; 
 6. `references.bib`: contains the BibTeX citation data for each publication about the model (this file is not required for unpublished models);
@@ -92,10 +92,8 @@ The catalog (`dcat:Catalog`) is maintained by a community of users (`foaf:Agent`
 
 We created persistent URLs for the following resources:
 
-- GitHub repository: https://purl.org/ontouml-models
-- OntoUML vocabulary: https://purl.org/ontouml-models/vocabulary
-- Aggregated data: https://w3id.org/ontouml-models/catalog
-- Ontology data: `https://purl.org/ontouml-models/<folderName>`
+- GitHub repository: https://w3id.org/ontouml-models
+- OntoUML vocabulary: https://w3id.org/ontouml
 
 ## How to contribute
 
@@ -157,7 +155,7 @@ Relevant instructions for administrating the OntoUML/UFO Catalog are presented o
 
 Please cite the OntoUML/UFO Catalog as: 
 
-*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41st International Conference Proceedings (ER 2022), 17-20 October 2022. <https://purl.org/ontouml-models/>
+*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41st International Conference Proceedings (ER 2022), 17-20 October 2022. <https://w3id.org/ontouml-models/>
 
 For creating citations using different formats, refer to the [webpage of the paper's publisher](https://link.springer.com/chapter/10.1007/978-3-031-17995-2_1#citeas) for getting the paper's complete information. 
 
