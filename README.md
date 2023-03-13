@@ -184,4 +184,4 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 
 Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please [create an issue](https://github.com/OntoUML/ontouml-models/issues) or report it through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
 
-Please access [the OntoUML/UFO Catalog's LICENSE file](https://raw.githubusercontent.com/unibz-core/ontouml-models/master/LICENSE) for the complete licensing information.
+Please access [the OntoUML/UFO Catalog's LICENSE file](https://w3id.org/ontouml-models/file/LICENSE) for the complete licensing information.
