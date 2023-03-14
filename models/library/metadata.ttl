@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/library/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/library/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Library Ontology";
     dcat:theme lcc:Z;
     skos:editorialNote "In the original model, there were 2 Employee Loan (one role, and one relator). In the new model, the role was renamed to Employee_Loan.";
@@ -21,19 +20,19 @@
     ontouml:context ontouml:Classroom;
     dct:conformsTo ontouml:OntoumlStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/library/>.
-<http://purl.org/ontouml-models/dataset/library/> dcat:distribution <http://purl.org/ontouml-models/dataset/library/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/library/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/library/>.
+<https://w3id.org/ontouml-models/model/library/> dcat:distribution <https://w3id.org/ontouml-models/turtle/library/>.
+<https://w3id.org/ontouml-models/turtle/library/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Library Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/library/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/library/> dcat:distribution <http://purl.org/ontouml-models/dataset/library/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/library/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/library>.
+<https://w3id.org/ontouml-models/model/library/> dcat:distribution <https://w3id.org/ontouml-models/json/library/>.
+<https://w3id.org/ontouml-models/json/library/> a dcat:Distribution;
     dct:title "JSON distribution of \"Library Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/library/ontology.json>.
-<http://purl.org/ontouml-models/dataset/library/> dcat:distribution <http://purl.org/ontouml-models/dataset/library/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/library/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Library Ontology\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/library>.
+<https://w3id.org/ontouml-models/model/library/> dcat:distribution <https://w3id.org/ontouml-models/vpp/library/>.
+<https://w3id.org/ontouml-models/vpp/library/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Library Ontology\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/library/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/library>.

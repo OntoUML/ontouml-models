@@ -1,22 +1,21 @@
-@prefix dash:     <http://datashapes.org/dash#> .
-@prefix dcat:     <http://www.w3.org/ns/dcat#> .
-@prefix dct:      <http://purl.org/dc/terms/> .
-@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
-@prefix osh:      <http://purl.org/ontouml-models/shapes> .
-@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:       <http://www.w3.org/ns/shacl#> .
-@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-osh:OntoumlResourceShape a sh:NodeShape ;
+<https://w3id.org/ontouml-models/shape/Resource> a sh:NodeShape ;
   sh:targetClass dcat:Resource ;
   sh:property
   [
     sh:name "Access Rights" ;
     sh:description "Information about who access the resource or an indication of its security status.";
     sh:path dct:accessRights ;
-    sh:or ([ sh:nodeKind sh:IRI ; ] [ sh:datatype xsd:string ; ]) ;
+    sh:or (
+      [ sh:nodeKind sh:IRI ; ]
+      [ sh:datatype xsd:string ; ]
+    ) ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ],
@@ -28,13 +27,12 @@ osh:OntoumlResourceShape a sh:NodeShape ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     dash:editor dash:URIEditor ;
-    dash:viewer dash:HyperlinkViewer ;
+    dash:viewer dash:URIViewer ;
   ],
   [
     sh:name "Publisher" ;
     sh:description "The entity responsible for making the item available.";
     sh:path dct:publisher ;
-    sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI ;
     dash:editor dash:URIEditor ;
@@ -72,36 +70,18 @@ osh:OntoumlResourceShape a sh:NodeShape ;
   [
     sh:name "Description" ;
     sh:description "An account of the resource.";
-    sh:path dct:title ;
-    # sh:uniqueLang true ;
+    sh:path dct:description ;
     sh:maxCount 1 ;
-    sh:or (
-      # [ sh:datatype rdf:langString ; ]
-      [ sh:datatype xsd:string ; ]
-    ) ;
+    sh:datatype xsd:string ;
     dash:editor dash:TextAreaEditor ;
-    dash:viewer dash:LiteralViewer ;
   ],
-  # [
-  #   sh:name "Identifier" ;
-  #   sh:description "An identifier of the given resource.";
-  #   sh:path dct:identifier ;
-  #   sh:minCount 1 ;
-  #   dash:editor dash:TextFieldEditor ;
-  #   dash:viewer dash:LiteralViewer ;
-  # ],
   [
     sh:name "Title" ;
     sh:description "The title of the resource, which can be in some specific language.";
     sh:path dct:title ;
-    # sh:uniqueLang true ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
-    sh:or (
-      # [ sh:datatype rdf:langString ; ]
-      [ sh:datatype xsd:string ; ]
-    ) ;
+    sh:datatype xsd:string ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LiteralViewer ;
   ]
   .

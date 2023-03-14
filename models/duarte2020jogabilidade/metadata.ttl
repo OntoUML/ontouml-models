@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/duarte2020jogabilidade/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Gameplay Ontology";
     dct:issued "2020"^^xsd:gYear;
     dcat:theme lcc:G;
@@ -24,19 +23,19 @@
     dct:source <https://app.uff.br/riuff/handle/1/14831>;
     dct:conformsTo ontouml:OntoumlStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/>.
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/> dcat:distribution <http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/duarte2020jogabilidade/>.
+<https://w3id.org/ontouml-models/model/duarte2020jogabilidade/> dcat:distribution <https://w3id.org/ontouml-models/turtle/duarte2020jogabilidade/>.
+<https://w3id.org/ontouml-models/turtle/duarte2020jogabilidade/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Gameplay Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/duarte2020jogabilidade/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/> dcat:distribution <http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/duarte2020jogabilidade>.
+<https://w3id.org/ontouml-models/model/duarte2020jogabilidade/> dcat:distribution <https://w3id.org/ontouml-models/json/duarte2020jogabilidade/>.
+<https://w3id.org/ontouml-models/json/duarte2020jogabilidade/> a dcat:Distribution;
     dct:title "JSON distribution of \"Gameplay Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/duarte2020jogabilidade/ontology.json>.
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/> dcat:distribution <http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/duarte2020jogabilidade/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Gameplay Ontology\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/duarte2020jogabilidade>.
+<https://w3id.org/ontouml-models/model/duarte2020jogabilidade/> dcat:distribution <https://w3id.org/ontouml-models/vpp/duarte2020jogabilidade/>.
+<https://w3id.org/ontouml-models/vpp/duarte2020jogabilidade/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Gameplay Ontology\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/duarte2020jogabilidade/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/duarte2020jogabilidade>.

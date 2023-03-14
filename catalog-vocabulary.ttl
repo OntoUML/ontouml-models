@@ -1,63 +1,71 @@
-@prefix omt: <https://purl.org/ontouml-models/terms/> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix mod: <https://w3id.org/mod#> .
 
-<https://purl.org/ontouml-models/terms> a owl:Ontology ;
-                                        dct:identifier "https://purl.org/ontouml-models/terms"^^xsd:anyURI ;
-                                        dct:title "OntoUML/UFO Catalog Metadata Vocabulary" ;
-                                        dct:description "Metadata entities and properties to describe models in the OntoUML/UFO Catalog."@en ;
-                                        owl:versionIRI <https://purl.org/ontouml-models/terms/1.0> ;
-                                        owl:versionInfo "1.0"@en ;
-                                        dct:creator <https://orcid.org/0000-0002-5385-5761> ,
-                                                    <https://orcid.org/0000-0003-2736-7817> ;
-                                        dct:created "2022-04-03"^^xsd:date ;
-                                        dct:modified "2023-03-03"^^xsd:date ;
-                                        dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
-                                        vann:preferredNamespacePrefix "omt"@en ;
-                                        vann:preferredNamespaceUri "https://purl.org/ontouml-models/terms/"^^xsd:anyURI .
+<https://w3id.org/ontouml-models/vocabulary> a owl:Ontology ;
+                                             dct:title "OntoUML/UFO Catalog Metadata Vocabulary"@en ;
+                                             dct:description "Metadata entities and properties to describe models in the OntoUML/UFO Catalog."@en ;
+                                             dct:identifier "https://w3id.org/ontouml-models/vocabulary"^^xsd:anyURI ;
+                                             dcat:landingPage <https://w3id.org/ontouml-models> ; 
+                                             dcat:keyword "OntoUML"@en, "Metamodel"@en, "Ontology-Driven Conceptual Modeling"@en ;
+                                             dct:creator <https://orcid.org/0000-0002-5385-5761> , 
+                                                         <https://orcid.org/0000-0003-2736-7817> ,
+                                                         <https://orcid.org/0000-0003-2528-3118> ,
+                                                         <https://orcid.org/0000-0003-3385-4769> ;
+                                             dct:isReferencedBy <https://doi.org/10.1007/978-3-031-17995-2_1> ;
+                                             dct:license <https://creativecommons.org/licenses/by/4.0> ;
+                                             dct:created "2022-04-03"^^xsd:date ;
+                                             dct:modified "2023-03-14"^^xsd:date ;
+                                             owl:versionInfo "1.0"@en ;
+                                             owl:versionIRI <https://w3id.org/ontouml-models/vocabulary/1.0> ;
+                                             vann:preferredNamespacePrefix "ocmv"@en ;
+                                             vann:preferredNamespaceUri "https://w3id.org/ontouml-models/vocabulary#"^^xsd:anyURI .
 
-omt:context a owl:ObjectProperty ;
-            rdfs:range omt:OntologyDevelopmentContext .
+ocmv:context a owl:ObjectProperty ;
+             rdfs:domain mod:SemanticArtefact ;
+             rdfs:range ocmv:OntologyDevelopmentContext .
 
-omt:MetadataElement a owl:Class ;
-                    rdfs:comment "An element used in the metadata description of OntoUML models."@en .
+ocmv:MetadataElement a owl:Class ;
+                     rdfs:comment "An element used in the metadata description of OntoUML models."@en .
 
-omt:OntologyDevelopmentContext a owl:Class ;
-                                rdfs:subClassOf omt:MetadataElement .
+ocmv:OntologyDevelopmentContext a owl:Class ;
+                                rdfs:subClassOf ocmv:MetadataElement .
 
-omt:Classroom a omt:OntologyDevelopmentContext .
-omt:Industry a omt:OntologyDevelopmentContext .
-omt:Research a omt:OntologyDevelopmentContext .
+ocmv:Classroom a ocmv:OntologyDevelopmentContext .
+ocmv:Industry a ocmv:OntologyDevelopmentContext .
+ocmv:Research a ocmv:OntologyDevelopmentContext .
 
-omt:OntologyPurpose a owl:Class ;
-                    rdfs:subClassOf omt:MetadataElement .
+ocmv:OntologyPurpose a owl:Class ;
+                     rdfs:subClassOf ocmv:MetadataElement .
 
-omt:ConceptualClarification a omt:OntologyPurpose .
-omt:DataPublication a omt:OntologyPurpose .
-omt:DecisionSupportSystem a omt:OntologyPurpose .
-omt:Example a omt:OntologyPurpose .
-omt:InformationRetrieval a omt:OntologyPurpose .
-omt:Interoperability a omt:OntologyPurpose .
-omt:LanguageEngineering a omt:OntologyPurpose .
-omt:Learning a omt:OntologyPurpose .
-omt:OntologicalAnalysis a omt:OntologyPurpose .
-omt:SoftwareEngineering a omt:OntologyPurpose .
+ocmv:ConceptualClarification a ocmv:OntologyPurpose .
+ocmv:DataPublication a ocmv:OntologyPurpose .
+ocmv:DecisionSupportSystem a ocmv:OntologyPurpose .
+ocmv:Example a ocmv:OntologyPurpose .
+ocmv:InformationRetrieval a ocmv:OntologyPurpose .
+ocmv:Interoperability a ocmv:OntologyPurpose .
+ocmv:LanguageEngineering a ocmv:OntologyPurpose .
+ocmv:Learning a ocmv:OntologyPurpose .
+ocmv:OntologicalAnalysis a ocmv:OntologyPurpose .
+ocmv:SoftwareEngineering a ocmv:OntologyPurpose .
 
-omt:OntologyType a owl:Class ;
-                rdfs:subClassOf omt:MetadataElement .
+ocmv:OntologyType a owl:Class ;
+                  rdfs:subClassOf ocmv:MetadataElement .
 
-omt:Application a omt:OntologyType .
-omt:Core a omt:OntologyType .
-omt:Domain a omt:OntologyType .
+ocmv:Application a ocmv:OntologyType .
+ocmv:Core a ocmv:OntologyType .
+ocmv:Domain a ocmv:OntologyType .
 
-omt:OntologyRepresentationStyle a owl:Class ;
-                                rdfs:subClassOf omt:MetadataElement .
+ocmv:OntologyRepresentationStyle a owl:Class ;
+                                 rdfs:subClassOf ocmv:MetadataElement .
 
-omt:OntoumlStyle a omt:OntologyRepresentationStyle .
-omt:UfoStyle a omt:OntologyRepresentationStyle .
+ocmv:OntoumlStyle a ocmv:OntologyRepresentationStyle .
+ocmv:UfoStyle a ocmv:OntologyRepresentationStyle .

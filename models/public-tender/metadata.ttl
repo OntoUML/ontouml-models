@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/public-tender/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/public-tender/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Public Tender Model";
     dcat:theme lcc:J;
     dct:language "en";
@@ -20,19 +19,19 @@
     ontouml:context ontouml:Classroom;
     dct:conformsTo ontouml:OntoumlStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/public-tender/>.
-<http://purl.org/ontouml-models/dataset/public-tender/> dcat:distribution <http://purl.org/ontouml-models/dataset/public-tender/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/public-tender/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/public-tender/>.
+<https://w3id.org/ontouml-models/model/public-tender/> dcat:distribution <https://w3id.org/ontouml-models/turtle/public-tender/>.
+<https://w3id.org/ontouml-models/turtle/public-tender/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Public Tender Model\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/public-tender/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/public-tender/> dcat:distribution <http://purl.org/ontouml-models/dataset/public-tender/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/public-tender/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/public-tender>.
+<https://w3id.org/ontouml-models/model/public-tender/> dcat:distribution <https://w3id.org/ontouml-models/json/public-tender/>.
+<https://w3id.org/ontouml-models/json/public-tender/> a dcat:Distribution;
     dct:title "JSON distribution of \"Public Tender Model\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/public-tender/ontology.json>.
-<http://purl.org/ontouml-models/dataset/public-tender/> dcat:distribution <http://purl.org/ontouml-models/dataset/public-tender/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/public-tender/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Public Tender Model\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/public-tender>.
+<https://w3id.org/ontouml-models/model/public-tender/> dcat:distribution <https://w3id.org/ontouml-models/vpp/public-tender/>.
+<https://w3id.org/ontouml-models/vpp/public-tender/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Public Tender Model\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/public-tender/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/public-tender>.

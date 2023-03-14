@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/guizzardi2022ufo/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "OntoUML Examples";
     dct:issued "2021"^^xsd:gYear;
     dcat:theme lcc:A;
@@ -24,19 +23,19 @@
     dct:source <https://doi.org/10.3233/AO-210256>;
     dct:conformsTo ontouml:OntoumlStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/guizzardi2022ufo/>.
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/> dcat:distribution <http://purl.org/ontouml-models/dataset/guizzardi2022ufo/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/guizzardi2022ufo/>.
+<https://w3id.org/ontouml-models/model/guizzardi2022ufo/> dcat:distribution <https://w3id.org/ontouml-models/turtle/guizzardi2022ufo/>.
+<https://w3id.org/ontouml-models/turtle/guizzardi2022ufo/> a dcat:Distribution;
     dct:title "Turtle distribution of \"OntoUML Examples\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/guizzardi2022ufo/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/> dcat:distribution <http://purl.org/ontouml-models/dataset/guizzardi2022ufo/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/guizzardi2022ufo>.
+<https://w3id.org/ontouml-models/model/guizzardi2022ufo/> dcat:distribution <https://w3id.org/ontouml-models/json/guizzardi2022ufo/>.
+<https://w3id.org/ontouml-models/json/guizzardi2022ufo/> a dcat:Distribution;
     dct:title "JSON distribution of \"OntoUML Examples\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/guizzardi2022ufo/ontology.json>.
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/> dcat:distribution <http://purl.org/ontouml-models/dataset/guizzardi2022ufo/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2022ufo/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"OntoUML Examples\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/guizzardi2022ufo>.
+<https://w3id.org/ontouml-models/model/guizzardi2022ufo/> dcat:distribution <https://w3id.org/ontouml-models/vpp/guizzardi2022ufo/>.
+<https://w3id.org/ontouml-models/vpp/guizzardi2022ufo/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"OntoUML Examples\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/guizzardi2022ufo/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/guizzardi2022ufo>.

@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/debbech2019gosmo/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Goal-Oriented Safety Management Ontology";
     mod:acronym "GOSMO";
     dct:issued "2019"^^xsd:gYear;
@@ -25,19 +24,19 @@
     dct:source <https://doi.org/10.5220/0007932502870297>, <https://doi.org/10.17706/jcp.14.4.257-267>;
     dct:conformsTo ontouml:UfoStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/debbech2019gosmo/>.
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/> dcat:distribution <http://purl.org/ontouml-models/dataset/debbech2019gosmo/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/debbech2019gosmo/>.
+<https://w3id.org/ontouml-models/model/debbech2019gosmo/> dcat:distribution <https://w3id.org/ontouml-models/turtle/debbech2019gosmo/>.
+<https://w3id.org/ontouml-models/turtle/debbech2019gosmo/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Goal-Oriented Safety Management Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/debbech2019gosmo/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/> dcat:distribution <http://purl.org/ontouml-models/dataset/debbech2019gosmo/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/debbech2019gosmo>.
+<https://w3id.org/ontouml-models/model/debbech2019gosmo/> dcat:distribution <https://w3id.org/ontouml-models/json/debbech2019gosmo/>.
+<https://w3id.org/ontouml-models/json/debbech2019gosmo/> a dcat:Distribution;
     dct:title "JSON distribution of \"Goal-Oriented Safety Management Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/debbech2019gosmo/ontology.json>.
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/> dcat:distribution <http://purl.org/ontouml-models/dataset/debbech2019gosmo/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/debbech2019gosmo/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Goal-Oriented Safety Management Ontology\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/debbech2019gosmo>.
+<https://w3id.org/ontouml-models/model/debbech2019gosmo/> dcat:distribution <https://w3id.org/ontouml-models/vpp/debbech2019gosmo/>.
+<https://w3id.org/ontouml-models/vpp/debbech2019gosmo/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Goal-Oriented Safety Management Ontology\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/debbech2019gosmo/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/debbech2019gosmo>.

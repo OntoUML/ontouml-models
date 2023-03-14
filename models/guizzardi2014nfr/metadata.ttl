@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/guizzardi2014nfr/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Non-Functional Requirements Ontology";
     dct:issued "2014"^^xsd:gYear;
     dct:modified "2014"^^xsd:gYear;
@@ -25,19 +24,19 @@
     dct:source <https://doi.org/10.3233/978-1-61499-438-1-344>;
     dct:conformsTo ontouml:UfoStyle;
     dct:type ontouml:Core.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/guizzardi2014nfr/>.
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/> dcat:distribution <http://purl.org/ontouml-models/dataset/guizzardi2014nfr/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/guizzardi2014nfr/>.
+<https://w3id.org/ontouml-models/model/guizzardi2014nfr/> dcat:distribution <https://w3id.org/ontouml-models/turtle/guizzardi2014nfr/>.
+<https://w3id.org/ontouml-models/turtle/guizzardi2014nfr/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Non-Functional Requirements Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/guizzardi2014nfr/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/> dcat:distribution <http://purl.org/ontouml-models/dataset/guizzardi2014nfr/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/guizzardi2014nfr>.
+<https://w3id.org/ontouml-models/model/guizzardi2014nfr/> dcat:distribution <https://w3id.org/ontouml-models/json/guizzardi2014nfr/>.
+<https://w3id.org/ontouml-models/json/guizzardi2014nfr/> a dcat:Distribution;
     dct:title "JSON distribution of \"Non-Functional Requirements Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/guizzardi2014nfr/ontology.json>.
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/> dcat:distribution <http://purl.org/ontouml-models/dataset/guizzardi2014nfr/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/guizzardi2014nfr/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Non-Functional Requirements Ontology\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/guizzardi2014nfr>.
+<https://w3id.org/ontouml-models/model/guizzardi2014nfr/> dcat:distribution <https://w3id.org/ontouml-models/vpp/guizzardi2014nfr/>.
+<https://w3id.org/ontouml-models/vpp/guizzardi2014nfr/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Non-Functional Requirements Ontology\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/guizzardi2014nfr/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/guizzardi2014nfr>.

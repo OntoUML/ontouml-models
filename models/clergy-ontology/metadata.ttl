@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/clergy-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/clergy-ontology/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Clergy Ontology";
     dcat:theme lcc:B;
     skos:editorialNote "This model was done as an assignment for a course. The author required to remain anonymous. There is no information about the ontology's development year. Recreated from available images. The available XMI file was not used.";
@@ -21,19 +20,19 @@
     ontouml:context ontouml:Classroom;
     dct:conformsTo ontouml:OntoumlStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/clergy-ontology/>.
-<http://purl.org/ontouml-models/dataset/clergy-ontology/> dcat:distribution <http://purl.org/ontouml-models/dataset/clergy-ontology/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/clergy-ontology/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/clergy-ontology/>.
+<https://w3id.org/ontouml-models/model/clergy-ontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/clergy-ontology/>.
+<https://w3id.org/ontouml-models/turtle/clergy-ontology/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Clergy Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/clergy-ontology/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/clergy-ontology/> dcat:distribution <http://purl.org/ontouml-models/dataset/clergy-ontology/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/clergy-ontology/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/clergy-ontology>.
+<https://w3id.org/ontouml-models/model/clergy-ontology/> dcat:distribution <https://w3id.org/ontouml-models/json/clergy-ontology/>.
+<https://w3id.org/ontouml-models/json/clergy-ontology/> a dcat:Distribution;
     dct:title "JSON distribution of \"Clergy Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/clergy-ontology/ontology.json>.
-<http://purl.org/ontouml-models/dataset/clergy-ontology/> dcat:distribution <http://purl.org/ontouml-models/dataset/clergy-ontology/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/clergy-ontology/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Clergy Ontology\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/clergy-ontology>.
+<https://w3id.org/ontouml-models/model/clergy-ontology/> dcat:distribution <https://w3id.org/ontouml-models/vpp/clergy-ontology/>.
+<https://w3id.org/ontouml-models/vpp/clergy-ontology/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Clergy Ontology\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/clergy-ontology/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/clergy-ontology>.

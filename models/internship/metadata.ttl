@@ -1,5 +1,4 @@
-@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
-@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -10,7 +9,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<http://purl.org/ontouml-models/dataset/internship/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/internship/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Internship Ontology";
     dcat:theme lcc:H;
     skos:editorialNote "The ontology was documented based on the provided file.";
@@ -21,19 +20,19 @@
     ontouml:context ontouml:Classroom;
     dct:conformsTo ontouml:OntoumlStyle;
     dct:type ontouml:Domain.
-<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/internship/>.
-<http://purl.org/ontouml-models/dataset/internship/> dcat:distribution <http://purl.org/ontouml-models/dataset/internship/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/internship/distribution/ttl> a dcat:Distribution;
+<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/internship/>.
+<https://w3id.org/ontouml-models/model/internship/> dcat:distribution <https://w3id.org/ontouml-models/turtle/internship/>.
+<https://w3id.org/ontouml-models/turtle/internship/> a dcat:Distribution;
     dct:title "Turtle distribution of \"Internship Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/internship/ontology.ttl>.
-<http://purl.org/ontouml-models/dataset/internship/> dcat:distribution <http://purl.org/ontouml-models/dataset/internship/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/internship/distribution/ttl> a dcat:Distribution;
+    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/internship>.
+<https://w3id.org/ontouml-models/model/internship/> dcat:distribution <https://w3id.org/ontouml-models/json/internship/>.
+<https://w3id.org/ontouml-models/json/internship/> a dcat:Distribution;
     dct:title "JSON distribution of \"Internship Ontology\""@en;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/internship/ontology.json>.
-<http://purl.org/ontouml-models/dataset/internship/> dcat:distribution <http://purl.org/ontouml-models/dataset/internship/distribution/ttl>.
-<http://purl.org/ontouml-models/dataset/internship/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Internship Ontology\""@en;
+    dcat:downloadURL <https://w3id.org/ontouml-models/json/internship>.
+<https://w3id.org/ontouml-models/model/internship/> dcat:distribution <https://w3id.org/ontouml-models/vpp/internship/>.
+<https://w3id.org/ontouml-models/vpp/internship/> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Internship Ontology\""@en;
     dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/internship/ontology.vpp>.
+    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/internship>.
