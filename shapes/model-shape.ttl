@@ -1,16 +1,14 @@
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix osh: <https://w3id.org/ontouml-models/shape/model#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-osh:ModelShape a sh:NodeShape ;
+<https://w3id.org/ontouml-models/shape/Model> a sh:NodeShape ;
     sh:targetClass mod:SemanticArtefact, dcat:Dataset ;
     sh:property 
     [
@@ -55,8 +53,8 @@ osh:ModelShape a sh:NodeShape ;
         sh:path dct:conformsTo ;
         sh:maxCount 1 ;
         sh:in ( 
-            ontouml:OntoumlStyle 
-            ontouml:UfoStyle
+            ocmv:OntoumlStyle 
+            ocmv:UfoStyle
         ) ;
         dash:editor dash:EnumSelectEditor ;
         dash:viewer dash:LabelViewer ;
@@ -64,11 +62,11 @@ osh:ModelShape a sh:NodeShape ;
     [
         sh:name "Context" ;
         sh:description "The list of contexts in which the model was developed. The allowed values for this field are: \"research\", \"industry\", \"classroom\"." ;
-        sh:path ontouml:context ;
+        sh:path ocmv:context ;
         sh:in (
-            ontouml:Classroom
-            ontouml:Industry
-            ontouml:Research
+            ocmv:Classroom
+            ocmv:Industry
+            ocmv:Research
         ) ;
         dash:editor dash:EnumSelectEditor ;
         dash:viewer dash:LabelViewer ;
@@ -78,16 +76,16 @@ osh:ModelShape a sh:NodeShape ;
         sh:description "The list of goals that motivated the development of the model. The allowed values are \"conceptual clarification\", \"data publication\", \"decision support system\", \"example\", \"information retrieval\", \"interoperability\", \"language engineering\", \"learning\", \"ontological analysis\", and \"software engineering\"." ;
         sh:path mod:designedForTask ;
         sh:in (
-            ontouml:ConceptualClarification
-            ontouml:DataPublication
-            ontouml:DecisionSupportSystem
-            ontouml:Example
-            ontouml:InformationRetrieval
-            ontouml:Interoperability
-            ontouml:LanguageEngineering
-            ontouml:Learning
-            ontouml:OntologicalAnalysis
-            ontouml:SoftwareEngineering
+            ocmv:ConceptualClarification
+            ocmv:DataPublication
+            ocmv:DecisionSupportSystem
+            ocmv:Example
+            ocmv:InformationRetrieval
+            ocmv:Interoperability
+            ocmv:LanguageEngineering
+            ocmv:Learning
+            ocmv:OntologicalAnalysis
+            ocmv:SoftwareEngineering
         ) ;
         dash:editor dash:EnumSelectEditor ;
         dash:viewer dash:LabelViewer ;
@@ -97,7 +95,7 @@ osh:ModelShape a sh:NodeShape ;
         sh:description "The list of types in which the model can have categories. Since OntoUML and UFO are frequently used for building core and domain ontologies, these are among the allowed values for this field (the other allowed value is application)." ;
         sh:path dct:type ;
         sh:maxCount 1 ;
-        sh:in ( ontouml:Domain ontouml:Application ontouml:Domain ) ;
+        sh:in ( ocmv:Domain ocmv:Application ocmv:Domain ) ;
         dash:editor dash:EnumSelectEditor ;
         dash:viewer dash:LabelViewer ;
     ],
@@ -110,9 +108,9 @@ osh:ModelShape a sh:NodeShape ;
         dash:viewer dash:LiteralViewer ;
     ],
     [
-        sh:name "Subject" ;
+        sh:name "Keyword" ;
         sh:description "A list of strings that identify the domains covered by the model. E.g., \"robotic\", \"technology\", \"services\", \"risk\"." ;
-        sh:path dct:subject ;
+        sh:path dcat:keyword ;
         sh:minCount 1 ;
         sh:datatype xsd:string ;
         dash:editor dash:TextFieldEditor ;
