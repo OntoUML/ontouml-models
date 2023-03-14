@@ -12,7 +12,10 @@
     sh:name "Access Rights" ;
     sh:description "Information about who access the resource or an indication of its security status.";
     sh:path dct:accessRights ;
-    sh:or ([ sh:nodeKind sh:IRI ; ] [ sh:datatype xsd:string ; ]) ;
+    sh:or (
+      [ sh:nodeKind sh:IRI ; ]
+      [ sh:datatype xsd:string ; ]
+    ) ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ],
@@ -24,13 +27,12 @@
     sh:minCount 1 ;
     sh:maxCount 1 ;
     dash:editor dash:URIEditor ;
-    dash:viewer dash:HyperlinkViewer ;
+    dash:viewer dash:URIViewer ;
   ],
   [
     sh:name "Publisher" ;
     sh:description "The entity responsible for making the item available.";
     sh:path dct:publisher ;
-    sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI ;
     dash:editor dash:URIEditor ;
@@ -68,36 +70,18 @@
   [
     sh:name "Description" ;
     sh:description "An account of the resource.";
-    sh:path dct:title ;
-    # sh:uniqueLang true ;
+    sh:path dct:description ;
     sh:maxCount 1 ;
-    sh:or (
-      # [ sh:datatype rdf:langString ; ]
-      [ sh:datatype xsd:string ; ]
-    ) ;
+    sh:datatype xsd:string ;
     dash:editor dash:TextAreaEditor ;
-    dash:viewer dash:LiteralViewer ;
   ],
-  # [
-  #   sh:name "Identifier" ;
-  #   sh:description "An identifier of the given resource.";
-  #   sh:path dct:identifier ;
-  #   sh:minCount 1 ;
-  #   dash:editor dash:TextFieldEditor ;
-  #   dash:viewer dash:LiteralViewer ;
-  # ],
   [
     sh:name "Title" ;
     sh:description "The title of the resource, which can be in some specific language.";
     sh:path dct:title ;
-    # sh:uniqueLang true ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
-    sh:or (
-      # [ sh:datatype rdf:langString ; ]
-      [ sh:datatype xsd:string ; ]
-    ) ;
+    sh:datatype xsd:string ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LiteralViewer ;
   ]
   .

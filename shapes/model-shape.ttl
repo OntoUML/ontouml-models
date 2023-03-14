@@ -14,9 +14,7 @@
     [
         sh:name "Contributor" ;
         sh:description "The entity responsible for making contributions to the resource.";
-        sh:path dct:publisher ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
+        sh:path dct:contributor ;
         sh:nodeKind sh:IRI ;
         dash:editor dash:URIEditor ;
         dash:viewer dash:LabelViewer ;
@@ -25,8 +23,9 @@
         sh:name "Editorial Note" ;
         sh:description "Information that aids in administrative housekeeping, such as reminders of editorial work still to be done, or warnings in the event that future editorial changes might be made" ;
         sh:path skos:editorialNote ;
-        sh:or ([ sh:datatype rdf:langString ; ] [ sh:datatype xsd:string ; ]) ;
-        dash:editor dash:TextFieldWithLangEditor ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LiteralViewer ;
     ],
     [
@@ -36,7 +35,7 @@
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         dash:editor dash:URIEditor ;
-        dash:viewer dash:HyperlinkViewer ;
+        dash:viewer dash:URIViewer ;
     ],
     [
         sh:name "Landing Page" ;
@@ -45,19 +44,18 @@
         sh:nodeKind sh:IRI ;
         sh:pattern "^https?://" ;
         dash:editor dash:URIEditor ;
-        dash:viewer dash:HyperlinkViewer ;
+        dash:viewer dash:URIViewer ;
     ],
     [
         sh:name "Conforms to" ;
         sh:description "The list of representation styles adopted in the model. The allowed values for this field are: \"ontouml\", for models that use OntoUML's stereotypes; and \"ufo\", for pure UML models that specialize UFO's types and relations." ;
         sh:path dct:conformsTo ;
-        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
         sh:in ( 
             ocmv:OntoumlStyle 
             ocmv:UfoStyle
         ) ;
         dash:editor dash:EnumSelectEditor ;
-        dash:viewer dash:LabelViewer ;
     ],
     [
         sh:name "Context" ;
@@ -75,6 +73,7 @@
         sh:name "Designed for Task" ;
         sh:description "The list of goals that motivated the development of the model. The allowed values are \"conceptual clarification\", \"data publication\", \"decision support system\", \"example\", \"information retrieval\", \"interoperability\", \"language engineering\", \"learning\", \"ontological analysis\", and \"software engineering\"." ;
         sh:path mod:designedForTask ;
+        sh:nodeKind sh:IRI ;
         sh:in (
             ocmv:ConceptualClarification
             ocmv:DataPublication
@@ -94,8 +93,13 @@
         sh:name "Type" ;
         sh:description "The list of types in which the model can have categories. Since OntoUML and UFO are frequently used for building core and domain ontologies, these are among the allowed values for this field (the other allowed value is application)." ;
         sh:path dct:type ;
+        sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;
-        sh:in ( ocmv:Domain ocmv:Application ocmv:Domain ) ;
+        sh:in ( 
+            ocmv:Domain
+            ocmv:Application
+            ocmv:Core
+        ) ;
         dash:editor dash:EnumSelectEditor ;
         dash:viewer dash:LabelViewer ;
     ],
@@ -125,16 +129,13 @@
         sh:nodeKind sh:IRI ;
         sh:pattern "^http://id.loc.gov/authorities/classification/";
         dash:editor dash:URIEditor ;
-        dash:viewer dash:HyperlinkViewer ;
+        dash:viewer dash:LabelViewer ;
     ],
     [
         sh:name "Acronym" ;
         sh:description "The acronym one can use to refer to the model. E.g., \"RDBS-O\", \"COVER\", \"ROT\"." ;
         sh:path mod:acronym ;
-        sh:or (
-            # [ sh:datatype rdf:langString ; ]
-            [ sh:datatype xsd:string ; ]
-        ) ;
+        sh:datatype xsd:string ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LiteralViewer ;
     ]
