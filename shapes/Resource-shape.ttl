@@ -13,7 +13,10 @@
     sh:name "Editorial Note" ;
     sh:description "Information that aids in administrative housekeeping, such as reminders of editorial work still to be done, or warnings in the event that future editorial changes might be made" ;
     sh:path skos:editorialNote ;
-    sh:datatype xsd:string ;
+    sh:or (
+      [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
+    ) ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ],
@@ -24,6 +27,7 @@
     sh:or (
       [ sh:nodeKind sh:IRI ; ]
       [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
     ) ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
@@ -106,7 +110,10 @@
     sh:name "Alternative Title" ;
     sh:description "An alternative title of the resource, which can be in some specific language.";
     sh:path dct:alternative ;
-    sh:datatype xsd:string ;
+    sh:or (
+      [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
+    ) ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ],

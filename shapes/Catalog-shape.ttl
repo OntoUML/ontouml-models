@@ -43,7 +43,10 @@
     sh:name "Bibliographic Citation" ;
     sh:description "A bibliographic citation about the catalog, which can be in some specific language.";
     sh:path dct:bibliographicCitation ;
-    sh:datatype xsd:string ;
+    sh:or (
+      [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
+    ) ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ],
