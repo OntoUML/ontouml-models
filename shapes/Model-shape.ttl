@@ -13,7 +13,7 @@
     sh:property
     [
         sh:name "Language" ;
-        sh:description "The language in which the name of the elements in the model are written. Use a literal value consisting of an IETF Best Current Practice 47 language tag, such as \"en\" and \"pt\". See https://tools.ietf.org/html/bcp47" ;
+        sh:description "The language in which the names of the elements in the model are written. Use a literal value consisting of a language tag as defined by the IETF Best Current Practice 47, such as \"en\" and \"pt\". See \"https://tools.ietf.org/html/bcp47\"" ;
         sh:path dct:language ;
         sh:datatype xsd:string ;
         dash:editor dash:TextFieldEditor ;
@@ -97,7 +97,7 @@
     ],
     [
         sh:name "Theme" ;
-        sh:description "The central theme of the model according to the Library of Congress Classification (LCC) system. E.g., \"Class S - Agriculture\", \"Class T - Technology\". LCC is available as a skos:ConceptScheme and each of its classes as instances of skos:Concept. The used URI must be prefixed by <http://id.loc.gov/authorities/classification/>." ;
+        sh:description "The central theme of the model according to the Library of Congress Classification (LCC) system. E.g., \"Class S - Agriculture\", \"Class T - Technology\". LCC is available as a skos:ConceptScheme and each of its classes as instances of skos:Concept. The used URI must be prefixed by \"http://id.loc.gov/authorities/classification\"." ;
         sh:path dcat:theme ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
