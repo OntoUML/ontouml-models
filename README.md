@@ -155,7 +155,7 @@ Relevant instructions for administrating the OntoUML/UFO Catalog are presented o
 
 Please cite the OntoUML/UFO Catalog as: 
 
-*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). **A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research**. 41st International Conference Proceedings (ER 2022), 17-20 October 2022. <https://w3id.org/ontouml-models/>
+*Barcelos, P. P. F., Sales, T. P., Fumagalli, M., Fonseca, C. M., Sousa, I. V., Romanenko, E., Kritz, J., & Guizzardi, G.* (2022). A FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research. In: Ralyté, J., Chakravarthy, S., Mohania, M., Jeusfeld, M.A., Karlapalem, K. (eds) Conceptual Modeling. ER 2022. Lecture Notes in Computer Science, vol 13607. Springer, Cham. <https://doi.org/10.1007/978-3-031-17995-2_1>. Permanent URL: <https://w3id.org/ontouml-models/>.
 
 For creating citations using different formats, refer to the [webpage of the paper's publisher](https://link.springer.com/chapter/10.1007/978-3-031-17995-2_1#citeas) for getting the paper's complete information. 
 
