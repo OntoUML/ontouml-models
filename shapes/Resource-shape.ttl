@@ -71,8 +71,10 @@
     sh:name "Description" ;
     sh:description "An account of the resource.";
     sh:path dct:description ;
-    sh:maxCount 1 ;
-    sh:datatype xsd:string ;
+    sh:or (
+      [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
+    ) ;
     dash:editor dash:TextAreaEditor ;
   ],
   [
@@ -80,8 +82,10 @@
     sh:description "The title of the resource, which can be in some specific language.";
     sh:path dct:title ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:datatype xsd:string ;
+    sh:or (
+      [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
+    ) ;
     dash:editor dash:TextFieldEditor ;
   ]
   .
