@@ -7,7 +7,16 @@
 
 <https://w3id.org/ontouml-models/shape/Resource> a sh:NodeShape ;
   sh:targetClass dcat:Resource ;
+  
   sh:property
+  [
+    sh:name "Editorial Note" ;
+    sh:description "Information that aids in administrative housekeeping, such as reminders of editorial work still to be done, or warnings in the event that future editorial changes might be made" ;
+    sh:path skos:editorialNote ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ],
   [
     sh:name "Access Rights" ;
     sh:description "Information about who access the resource or an indication of its security status.";
@@ -34,6 +43,22 @@
     sh:description "The entity responsible for making the item available.";
     sh:path dct:publisher ;
     sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Contributor" ;
+    sh:description "The entity responsible for making contributions to the resource.";
+    sh:path dct:contributor ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Creator" ;
+    sh:description "The entity responsible for producing the resource.";
+    sh:path dct:creator ;
     sh:nodeKind sh:IRI ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
@@ -76,6 +101,14 @@
       [ sh:datatype rdf:langString ; ]
     ) ;
     dash:editor dash:TextAreaEditor ;
+  ],
+  [
+    sh:name "Alternative Title" ;
+    sh:description "An alternative title of the resource, which can be in some specific language.";
+    sh:path dct:alternative ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ],
   [
     sh:name "Title" ;

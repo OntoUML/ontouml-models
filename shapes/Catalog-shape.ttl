@@ -11,22 +11,6 @@
   sh:targetClass dcat:Catalog ;
   sh:property
   [
-    sh:name "Contributor" ;
-    sh:description "The entity responsible for making contributions to the resource.";
-    sh:path dct:contributor ;
-    sh:nodeKind sh:IRI ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ],
-  [
-    sh:name "Creator" ;
-    sh:description "The entity responsible for producing the resource.";
-    sh:path dct:creator ;
-    sh:nodeKind sh:IRI ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ],
-  [
     sh:name "Contact Points" ;
     sh:description "Relevant contact information for the resource.";
     sh:path dcat:contactPoint ;
@@ -71,13 +55,5 @@
     sh:pattern "^https?://" ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
-  ],
-  [
-    sh:name "Alternative Title" ;
-    sh:description "An alternative title of the resource, which can be in some specific language.";
-    sh:path dct:alternative ;
-    sh:datatype xsd:string ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LiteralViewer ;
   ]
   .
