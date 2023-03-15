@@ -142,10 +142,10 @@ The list of works that use the data provided by the OntoUML/UFO Catalog to test 
 
 The OntoUML/UFO Catalog is maintained by UFO and OntoUML researchers at the Free University of Bozen-Bolzano and at the University of Twente, in particular by:
 
-- Dr. Pedro Paulo Favato Barcelos [[GitHub]](https://github.com/pedropaulofb) [[LinkedIn]](https://www.linkedin.com/in/pedro-paulo-favato-barcelos/)
-- Dr. Tiago Prince Sales [[GitHub]](https://github.com/tgoprince) [[LinkedIn]](https://www.linkedin.com/in/tiago-sales/)
-- Dr. Mattia Fumagalli [[GitHub]](https://github.com/Matt-81) [[LinkedIn]](https://www.linkedin.com/in/mattiafumagalli/)
-- Dr. Claudenir Morais Fonseca [[GitHub]](https://github.com/claudenirmf) [[LinkedIn]](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
+- [Pedro Paulo F. Barcelos](https://orcid.org/0000-0003-2736-7817) [[GitHub]](https://github.com/pedropaulofb) [[LinkedIn]](https://www.linkedin.com/in/pedro-paulo-favato-barcelos/)
+- [Tiago Prince Sales](https://orcid.org/0000-0002-5385-5761) [[GitHub]](https://github.com/tgoprince) [[LinkedIn]](https://www.linkedin.com/in/tiago-sales/)
+- [Mattia Fummagali](https://orcid.org/0000-0003-3385-4769) [[GitHub]](https://github.com/Matt-81) [[LinkedIn]](https://www.linkedin.com/in/mattiafumagalli/)
+- [Claudenir M. Fonseca](https://orcid.org/0000-0003-2528-3118) [[GitHub]](https://github.com/claudenirmf) [[LinkedIn]](https://www.linkedin.com/in/claudenir-fonseca-52b251216/)
 
 Feel free to get in contact with the administrators using the links provided. For questions or issues, you can [open an issue](https://github.com/OntoUML/ontouml-models/issues) at this repository.
 
