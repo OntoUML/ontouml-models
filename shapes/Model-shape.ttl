@@ -13,7 +13,7 @@
     sh:property
     [
         sh:name "Language" ;
-        sh:description "The language in which the lexical labels of the model are written (using the IANA Language Sub Tag Registry). E.g., \"en\", \"pt\"." ;
+        sh:description "The language in which the name of the elements in the model are written. Use a literal value consisting of an IETF Best Current Practice 47 language tag, such as \"en\" and \"pt\". See https://tools.ietf.org/html/bcp47" ;
         sh:path dct:language ;
         sh:datatype xsd:string ;
         dash:editor dash:TextFieldEditor ;
@@ -23,7 +23,10 @@
         sh:name "Bibliographic Citation" ;
         sh:description "A bibliographic citation about the catalog, which can be in some specific language.";
         sh:path dct:bibliographicCitation ;
-        sh:datatype xsd:string ;
+        sh:or (
+            [ sh:datatype xsd:string ; ]
+            [ sh:datatype rdf:langString ; ]
+        ) ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LiteralViewer ;
     ], 
