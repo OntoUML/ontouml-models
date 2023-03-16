@@ -51,12 +51,12 @@
     dash:viewer dash:LiteralViewer ;
   ],
   [
-    sh:name "Homepage" ;
-    sh:description "A homepage of the resource, which can be in some specific language. It must start with \"http://\" or \"https://\".";
-    sh:path foaf:homepage ;
-    sh:nodeKind sh:IRI ;
-    sh:pattern "^https?://" ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+      sh:name "Landing Page" ;
+      sh:description "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information. It must start with \"http://\" or \"https://\"." ;
+      sh:path dcat:landingPage ;
+      sh:nodeKind sh:IRI ;
+      sh:pattern "^https?://" ;
+      dash:editor dash:URIEditor ;
+      dash:viewer dash:URIViewer ;
   ]
   .
