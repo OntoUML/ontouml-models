@@ -1,0 +1,63 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/shape/Model> a sh:NodeShape ;
+    sh:targetClass mod:SemanticArtefact, dcat:Dataset ;
+    sh:property
+    [
+      sh:name "Contact Points" ;
+      sh:description "Relevant contact information for the resource.";
+      sh:path dcat:contactPoint ;
+      sh:node [
+        a sh:NodeShape ;
+        sh:targetClass vcard:VCard ;
+        sh:property [
+          sh:name "E-mail" ;
+          sh:description "The email address as a mailto URI." ;
+          sh:path vcard:hasEmail ;
+          sh:nodeKind sh:IRI ;
+          sh:pattern "^mailto:" ;
+          sh:minCount 1 ;
+          dash:editor dash:URIEditor ;
+          dash:viewer dash:LabelViewer ;
+        ],
+        [
+          sh:name "Name" ;
+          sh:description "The formatted text corresponding to the name of the contact." ;
+          sh:path vcard:fn ;
+          sh:nodeKind sh:Literal ;
+          dash:editor dash:TextFieldEditor ;
+          dash:viewer dash:LiteralViewer ;
+        ]
+      ] ;
+      dash:editor dash:BlankNodeEditor ;
+    ],
+    [
+      sh:name "Bibliographic Citation" ;
+      sh:description "A bibliographic citation about the catalog, which can be in some specific language.";
+      sh:path dct:bibliographicCitation ;
+      sh:or (
+        [ sh:datatype xsd:string ; ]
+        [ sh:datatype rdf:langString ; ]
+      ) ;
+      dash:editor dash:TextFieldEditor ;
+      dash:viewer dash:LiteralViewer ;
+    ], 
+    [
+      sh:name "Landing Page" ;
+      sh:description "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information. It must start with \"http://\" or \"https://\"." ;
+      sh:path dcat:landingPage ;
+      sh:nodeKind sh:IRI ;
+      sh:pattern "^https?://" ;
+      dash:editor dash:URIEditor ;
+      dash:viewer dash:URIViewer ;
+    ]
+    .
