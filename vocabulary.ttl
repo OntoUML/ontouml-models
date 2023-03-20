@@ -29,6 +29,10 @@
                                              vann:preferredNamespacePrefix "ocmv"@en ;
                                              vann:preferredNamespaceUri "https://w3id.org/ontouml-models/vocabulary#"^^xsd:anyURI .
 
+ocmv:isComplete rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "Used to indicate if a distribution is complete (i.e., containing all data) or incomplete (i.e., containing partial data)."@en .
+
 ocmv:context a owl:ObjectProperty ;
              rdfs:domain mod:SemanticArtefact ;
              rdfs:range ocmv:OntologyDevelopmentContext .
