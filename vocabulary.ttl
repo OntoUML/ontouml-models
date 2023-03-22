@@ -30,54 +30,102 @@
                                              vann:preferredNamespaceUri "https://w3id.org/ontouml-models/vocabulary#"^^xsd:anyURI .
 
 ocmv:isComplete rdf:type owl:DatatypeProperty ;
+            rdfs:label "is complete"@en ;
             rdfs:range xsd:boolean ;
             rdfs:comment "Used to indicate if a distribution is complete (i.e., containing all data) or incomplete (i.e., containing partial data)."@en .
 
 ocmv:context a owl:ObjectProperty ;
+             rdfs:label "context"@en ;
              rdfs:domain mod:SemanticArtefact ;
              rdfs:range ocmv:OntologyDevelopmentContext .
 
 ocmv:representationStyle a owl:ObjectProperty ;
+                         rdfs:label "representation style"@en ;
                          rdfs:domain mod:SemanticArtefact ;
                          rdfs:range ocmv:OntologyRepresentationStyle .
 
 ocmv:ontologyType a owl:ObjectProperty ;
-                         rdfs:domain mod:SemanticArtefact ;
-                         rdfs:range ocmv:OntologyType .
+                  rdfs:label "ontology type"@en ;
+                  rdfs:domain mod:SemanticArtefact ;
+                  rdfs:range ocmv:OntologyType .
+
+ocmv:conformsToSchema a owl:ObjectProperty ;
+                      rdfs:label "conforms to schema"@en ;
+                      rdfs:comment "Identifies a schema upon which the distribution can be validated against. E.g. a JSON Schema document, a SHACL shape, and a XML Schema document."@en ;
+                      skos:scopeNote "The identified schema should be compatible with the media type of the distribution. That is, if a distribution is in JSON, the schema cannot be a SHACL shape or an XML Schema." ;
+                      rdfs:domain mod:Distribution ;
+                      rdfs:range rdfs:Resource .
 
 ocmv:MetadataElement a owl:Class ;
+                     rdfs:label "Metadata Element"@en ;
                      rdfs:comment "An element used in the metadata description of OntoUML models."@en .
 
 ocmv:OntologyDevelopmentContext a owl:Class ;
+                                rdfs:label "Ontology Development Context"@en ;
                                 rdfs:subClassOf ocmv:MetadataElement .
 
-ocmv:Classroom a ocmv:OntologyDevelopmentContext .
-ocmv:Industry a ocmv:OntologyDevelopmentContext .
-ocmv:Research a ocmv:OntologyDevelopmentContext .
+ocmv:Classroom a ocmv:OntologyDevelopmentContext ;
+               rdfs:label "Classroom"@en .
+
+ocmv:Industry a ocmv:OntologyDevelopmentContext ;
+              rdfs:label "Industry"@en .
+
+ocmv:Research a ocmv:OntologyDevelopmentContext ;
+              rdfs:label "Research"@en .
 
 ocmv:OntologyPurpose a owl:Class ;
+                     rdfs:label "Ontology Purpose"@en ;
                      rdfs:subClassOf ocmv:MetadataElement .
 
-ocmv:ConceptualClarification a ocmv:OntologyPurpose .
-ocmv:DataPublication a ocmv:OntologyPurpose .
-ocmv:DecisionSupportSystem a ocmv:OntologyPurpose .
-ocmv:Example a ocmv:OntologyPurpose .
-ocmv:InformationRetrieval a ocmv:OntologyPurpose .
-ocmv:Interoperability a ocmv:OntologyPurpose .
-ocmv:LanguageEngineering a ocmv:OntologyPurpose .
-ocmv:Learning a ocmv:OntologyPurpose .
-ocmv:OntologicalAnalysis a ocmv:OntologyPurpose .
-ocmv:SoftwareEngineering a ocmv:OntologyPurpose .
+ocmv:ConceptualClarification a ocmv:OntologyPurpose ;
+                             rdfs:label "Conceptual Clarification"@en .
+
+ocmv:DataPublication a ocmv:OntologyPurpose ;
+                     rdfs:label "Data Publication"@en .
+
+ocmv:DecisionSupportSystem a ocmv:OntologyPurpose ;
+                           rdfs:label "Decision Support System"@en .
+
+ocmv:Example a ocmv:OntologyPurpose ;
+             rdfs:label "Example"@en .
+         
+ocmv:InformationRetrieval a ocmv:OntologyPurpose ;
+                          rdfs:label "Information Retrieval"@en .
+         
+ocmv:Interoperability a ocmv:OntologyPurpose ;
+                      rdfs:label "Interoperability"@en .
+         
+ocmv:LanguageEngineering a ocmv:OntologyPurpose ;
+                         rdfs:label "Language Engineering"@en .
+         
+ocmv:Learning a ocmv:OntologyPurpose ;
+              rdfs:label "Learning"@en .
+         
+ocmv:OntologicalAnalysis a ocmv:OntologyPurpose ;
+                         rdfs:label "Ontological Analysis"@en .
+         
+ocmv:SoftwareEngineering a ocmv:OntologyPurpose ;
+                         rdfs:label "Software Engineering"@en .
 
 ocmv:OntologyType a owl:Class ;
+                  rdfs:label "Ontology Type"@en ;
                   rdfs:subClassOf ocmv:MetadataElement .
 
-ocmv:Application a ocmv:OntologyType .
-ocmv:Core a ocmv:OntologyType .
-ocmv:Domain a ocmv:OntologyType .
+ocmv:Application a ocmv:OntologyType ;
+                 rdfs:label "Application Ontology"@en .
+
+ocmv:Core a ocmv:OntologyType ;
+          rdfs:label "Core Ontology"@en .
+
+ocmv:Domain a ocmv:OntologyType ;
+            rdfs:label "Domain Ontology"@en .
 
 ocmv:OntologyRepresentationStyle a owl:Class ;
+                                 rdfs:label "Ontology Representation Style"@en ;
                                  rdfs:subClassOf ocmv:MetadataElement .
 
-ocmv:OntoumlStyle a ocmv:OntologyRepresentationStyle .
-ocmv:UfoStyle a ocmv:OntologyRepresentationStyle .
+ocmv:OntoumlStyle a ocmv:OntologyRepresentationStyle ;
+                  rdfs:label "OntoUML Style"@en .
+
+ocmv:UfoStyle a ocmv:OntologyRepresentationStyle ;
+              rdfs:label "UFO Style"@en .
