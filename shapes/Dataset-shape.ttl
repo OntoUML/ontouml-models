@@ -13,6 +13,14 @@
     sh:targetClass mod:SemanticArtefact, dcat:Dataset ;
     sh:property
     [
+      sh:name "Landing Page" ;
+      sh:description "A URL of a service in which the data and metadata of dataset are stored." ;
+      sh:path ocmv:storageUrl ;
+      sh:pattern "^https?://" ;
+      dash:editor dash:URIEditor ;
+      dash:viewer dash:URIViewer ;
+    ],
+    [
       sh:name "Contact Points" ;
       sh:description "Relevant contact information for the resource.";
       sh:path dcat:contactPoint ;

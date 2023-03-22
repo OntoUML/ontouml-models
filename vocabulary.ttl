@@ -56,6 +56,12 @@ ocmv:conformsToSchema a owl:ObjectProperty ;
                       rdfs:domain mod:Distribution ;
                       rdfs:range rdfs:Resource .
 
+ocmv:storageUrl a owl:DatatypeProperty ;
+                rdfs:label "storage URL"@en ;
+                rdfs:comment "Identifies a URL of a service in which the data and metadata of dataset are stored."@en ;
+                rdfs:domain dcat:Dataset ;
+                rdfs:range xsd:anyURI .
+
 ocmv:MetadataElement a owl:Class ;
                      rdfs:label "Metadata Element"@en ;
                      rdfs:comment "An element used in the metadata description of OntoUML models."@en .
