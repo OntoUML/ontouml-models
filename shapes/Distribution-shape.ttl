@@ -2,6 +2,7 @@
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 <https://w3id.org/ontouml-models/shape/Distribution> a sh:NodeShape ;
@@ -21,6 +22,14 @@
       sh:description "A URL providing instructions on how to process the distribution file. This property should be used whenever the IANA media type does not provide sufficient information on how to open the distribution file." ;
       sh:path dct:format ;
       sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+      dash:editor dash:URIEditor ;
+      dash:viewer dash:LabelViewer ;
+    ] ,
+    [
+      sh:name "Conforms to schema" ;
+      sh:description "A URL identifying a schema upon which the distribution can be validated against. E.g. a JSON Schema document, a SHACL shape, and a XML Schema document. The schema must be compatible with the media type of the distribution. That is, if a distribution is in JSON, the schema cannot be a SHACL shape or an XML Schema." ;
+      sh:path ocmv:conformsToSchema ;
       sh:nodeKind sh:IRI ;
       dash:editor dash:URIEditor ;
       dash:viewer dash:LabelViewer ;
