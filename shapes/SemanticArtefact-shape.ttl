@@ -101,7 +101,10 @@
         sh:description "A list of strings that identify the domains covered by the model. E.g., \"robotic\", \"technology\", \"services\", \"risk\"." ;
         sh:path dcat:keyword ;
         sh:minCount 1 ;
-        sh:datatype xsd:string ;
+        sh:or (
+            [ sh:datatype xsd:string ; ]
+            [ sh:datatype rdf:langString ; ]
+        ) ;
         dash:editor dash:TextFieldEditor ;
         dash:viewer dash:LiteralViewer ;
     ],
