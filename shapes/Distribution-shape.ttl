@@ -4,6 +4,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/shape/Distribution> a sh:NodeShape ;
   sh:targetClass dcat:Distribution ;
@@ -14,7 +15,7 @@
       sh:path ocmv:isComplete ;
       sh:minCount 1 ;
       sh:maxCount 1 ;
-      sh:in ( "true"^^xsd:boolean "true"^^xsd:boolean ) ;
+      sh:in ( "true"^^xsd:boolean "false"^^xsd:boolean ) ;
       dash:editor dash:EnumSelectEditor ;
       dash:viewer dash:LiteralViewer ;
     ] ,
