@@ -12,7 +12,7 @@
   sh:property
   [
     sh:name "Editorial Note" ;
-    sh:description "Information that aids in administrative housekeeping, such as reminders of editorial work still to be done, or warnings in the event that future editorial changes might be made" ;
+    sh:description "Determines a general note relative to the resource documentation process. Accepts literals of the type \texttt{xsd:string} and \texttt{rdf:langString}. E.g., \"The model was originally designed in Portuguese and translated by the publisher.\"@en." ;
     sh:path skos:editorialNote ;
     sh:or (
       [ sh:datatype xsd:string ; ]
@@ -23,7 +23,7 @@
   ],
   [
     sh:name "Access Rights" ;
-    sh:description "Information about who access the resource or an indication of its security status.";
+    sh:description "Identifies a dct:RightsStatement or a text concerning who and how the resource can be accessed. E.g., the statement \"http://publications.europa.eu/resource/authority/access-right/PUBLIC\" states something is publicly accessible by everyone.";
     sh:path dct:accessRights ;
     sh:or (
       [ sh:nodeKind sh:IRI ; ]
@@ -35,7 +35,7 @@
   ],
   [
     sh:name "License" ;
-    sh:description "A legal document giving official permission to do something with the resource." ;
+    sh:description "Identifies a legal document under which the resource is made available. E.g., \"https://creativecommons.org/licenses/by/4.0/\"." ;
     sh:path dct:license ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
@@ -45,7 +45,7 @@
   ],
   [
     sh:name "Publisher" ;
-    sh:description "The entity responsible for making the item available.";
+    sh:description "Identifies the \texttt{foaf:Agent} who added the resource to the catalog. The publisher does not need to have created or contributed to the resource";
     sh:path dct:publisher ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI ;
@@ -54,7 +54,7 @@
   ],
   [
     sh:name "Contributor" ;
-    sh:description "The entity responsible for making contributions to the resource.";
+    sh:description "Identifies a foaf:Agent who contributed to the development of the resource. When available, we recommend using a contributor's identifier from DBLP (e.g., \"https://dblp.org/pid/96/8280\") or ORCID (e.g., \"https://orcid.org/0000-0003-2736-7817\").";
     sh:path dct:contributor ;
     sh:nodeKind sh:IRI ;
     dash:editor dash:URIEditor ;

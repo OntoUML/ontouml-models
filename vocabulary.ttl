@@ -32,7 +32,7 @@
 ocmv:isComplete rdf:type owl:DatatypeProperty ;
             rdfs:label "is complete"@en ;
             rdfs:range xsd:boolean ;
-            rdfs:comment "Used to indicate if a distribution is complete (i.e., containing all data) or incomplete (i.e., containing partial data)."@en .
+            rdfs:comment "Determines if a distribution contains all data from the dcat:Dataset it materializes."@en .
 
 ocmv:context a owl:ObjectProperty ;
              rdfs:label "context"@en ;
@@ -58,7 +58,7 @@ ocmv:conformsToSchema a owl:ObjectProperty ;
 
 ocmv:storageUrl a owl:DatatypeProperty ;
                 rdfs:label "storage URL"@en ;
-                rdfs:comment "Identifies a URL of a service in which the data and metadata of dataset are stored."@en ;
+                rdfs:comment "Determines the URL of a service in which the data and metadata of the dcat:Dataset are stored."@en ;
                 rdfs:domain dcat:Dataset ;
                 rdfs:range xsd:anyURI .
 

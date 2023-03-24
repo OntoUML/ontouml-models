@@ -9,6 +9,16 @@
   sh:targetClass dcat:Distribution ;
   sh:property
     [
+      sh:name "Is complete" ;
+      sh:description "Determines if a distribution contains all data from the dcat:Dataset it materializes." ;
+      sh:path ocmv:isComplete ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:in ( "true"^^xsd:boolean "true"^^xsd:boolean ) ;
+      dash:editor dash:EnumSelectEditor ;
+      dash:viewer dash:LiteralViewer ;
+    ] ,
+    [
       sh:name "Download URL" ;
       sh:description "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType" ;
       sh:path dcat:downloadURL ;
