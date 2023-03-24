@@ -17,24 +17,11 @@
     skos:editorialNote "From the author:\nThe ontology is designed for a Dutch company in the PDEng trajectory of Tim van Ee (t.vanee@utwente.nl). As it is (currently) developed for the specific context of the company, its generalizability for the industry might be limited.\nThe core of the ontology is based on the Building Product Ontology (BPO), the Ontology for Managing Ontologies (OMG), and several others of which the most prominent are indicated below.\nBPO - <https://w3id.org/bpo#>\nOmg - <https://w3id.org/omg#>\nFog - <https://w3id.org/fog#>\nQudt - <http://qudt.org/schema/qudt#>\nSchema - <http://schema.org#>\nSeas - <https://w3id.org/seas#>\nThe ontology is still under development, any comments, suggestions or feedback is welcome!\n---------\nFrom the reviewers:\nThe classes that had clear RDF namespaces in their names were moved into their associated packages. The same couldn't be done for associations, attributes, and instances.\nClasses whose label joined multiple RDF elements were interpreted as \"owl:sameAs\" declarations. As such, each of the classes were reproduced into their namespaces/packages and the \"owl:sameAs\" declaration was translated as generalizations of each of them into a new class. No stereotype has been given to the introduced classes to avoid too many changes on the author's original intended model.\n";
     dct:language "en, nl";
     dct:contributor <https://www.linkedin.com/in/tim-van-ee-911887136/>;
-    dcat:keyword "construction";
+    dcat:keyword "construction"@en;
     mod:designedForTask ocmv:Interoperability, ocmv:SoftwareEngineering;
     ocmv:context ocmv:Research, ocmv:Industry;
     ocmv:representationStyle ocmv:OntoumlStyle;
-    ocmv:ontologyType ocmv:Application.
-<https://w3id.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/van-ee2021modular/>.
-<https://w3id.org/ontouml-models/model/van-ee2021modular/> dcat:distribution <https://w3id.org/ontouml-models/turtle/van-ee2021modular/>.
-<https://w3id.org/ontouml-models/turtle/van-ee2021modular/> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Modular Construction Ontology\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://w3id.org/ontouml-models/turtle/van-ee2021modular>.
-<https://w3id.org/ontouml-models/model/van-ee2021modular/> dcat:distribution <https://w3id.org/ontouml-models/json/van-ee2021modular/>.
-<https://w3id.org/ontouml-models/json/van-ee2021modular/> a dcat:Distribution;
-    dct:title "JSON distribution of \"Modular Construction Ontology\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://w3id.org/ontouml-models/json/van-ee2021modular>.
-<https://w3id.org/ontouml-models/model/van-ee2021modular/> dcat:distribution <https://w3id.org/ontouml-models/vpp/van-ee2021modular/>.
-<https://w3id.org/ontouml-models/vpp/van-ee2021modular/> a dcat:Distribution;
-    dct:title "Visual Paradigm distribution of \"Modular Construction Ontology\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://w3id.org/ontouml-models/vpp/van-ee2021modular>.
+    ocmv:ontologyType ocmv:Application;
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/van-ee2021modular>.
+<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/van-ee2021modular/>.
+<https://w3id.org/ontouml-models/model/van-ee2021modular/> dcat:distribution <https://w3id.org/ontouml-models/turtle/van-ee2021modular/>, <https://w3id.org/ontouml-models/json/van-ee2021modular/>, <https://w3id.org/ontouml-models/vpp/van-ee2021modular/>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/attribute-clases>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/bpo-attribute,-2dlist-section->, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/bpo-ontology>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/element-class>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/entity-classes>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/geometry-classes-2>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/geometry-classes>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/product-classes>, <https://w3id.org/ontouml-models/original-diagram/van-ee2021modular/projectdecompositionemergo>.
