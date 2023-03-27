@@ -3,56 +3,55 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/shape/Distribution> a sh:NodeShape ;
   sh:targetClass dcat:Distribution ;
   sh:property
-    [
-      sh:name "Is complete" ;
-      sh:description "Determines if a distribution contains all data from the dcat:Dataset it materializes." ;
-      sh:path ocmv:isComplete ;
-      sh:minCount 1 ;
-      sh:maxCount 1 ;
-      sh:in ( "true"^^xsd:boolean "false"^^xsd:boolean ) ;
-      dash:editor dash:EnumSelectEditor ;
-      dash:viewer dash:LiteralViewer ;
-    ] ,
-    [
-      sh:name "Download URL" ;
-      sh:description "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType" ;
-      sh:path dcat:downloadURL ;
-      sh:minCount 1 ;
-      sh:nodeKind sh:IRI ;
-      dash:editor dash:URIEditor ;
-      dash:viewer dash:URIViewer ;
-    ] ,
-    [
-      sh:name "Format" ;
-      sh:description "A URL providing instructions on how to process the distribution file. This property should be used whenever the IANA media type does not provide sufficient information on how to open the distribution file." ;
-      sh:path dct:format ;
-      sh:maxCount 1 ;
-      sh:nodeKind sh:IRI ;
-      dash:editor dash:URIEditor ;
-      dash:viewer dash:LabelViewer ;
-    ] ,
-    [
-      sh:name "Conforms to schema" ;
-      sh:description "A URL identifying a schema upon which the distribution can be validated against. E.g. a JSON Schema document, a SHACL shape, and a XML Schema document. The schema must be compatible with the media type of the distribution. That is, if a distribution is in JSON, the schema cannot be a SHACL shape or an XML Schema." ;
-      sh:path ocmv:conformsToSchema ;
-      sh:nodeKind sh:IRI ;
-      dash:editor dash:URIEditor ;
-      dash:viewer dash:LabelViewer ;
-    ] ,
-    [
-      sh:name "Media Type" ;
-      sh:description "The media type of the distribution as defined by IANA. Distributions whose format are not listed with a specific media type must be assigned \"application/octet-stream\" when representing sequences of bits, or \"text/plain\" when representing human-readable text files. The URI must start with \"https://www.iana.org/assignments/media-types/\"." ;
-      sh:path dcat:mediaType ;
-      sh:minCount 1 ;
-      sh:maxCount 1 ;
-      sh:nodeKind sh:IRI ;
-      sh:pattern "^https://www.iana.org/assignments/media-types/" ;
-      dash:editor dash:URIEditor ;
-      dash:viewer dash:LabelViewer ;
-    ] .
+  [
+    sh:name "Is complete" ;
+    sh:description "Determines if a distribution contains all data from the dcat:Dataset it materializes." ;
+    sh:path ocmv:isComplete ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "true"^^xsd:boolean "false"^^xsd:boolean ) ;
+    dash:editor dash:EnumSelectEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ] ,
+  [
+    sh:name "Download URL" ;
+    sh:description "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType" ;
+    sh:path dcat:downloadURL ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:URIViewer ;
+  ] ,
+  [
+    sh:name "Format" ;
+    sh:description "A URL providing instructions on how to process the distribution file. This property should be used whenever the IANA media type does not provide sufficient information on how to open the distribution file." ;
+    sh:path dct:format ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] ,
+  [
+    sh:name "Conforms to schema" ;
+    sh:description "A URL identifying a schema upon which the distribution can be validated against. E.g. a JSON Schema document, a SHACL shape, and a XML Schema document. The schema must be compatible with the media type of the distribution. That is, if a distribution is in JSON, the schema cannot be a SHACL shape or an XML Schema." ;
+    sh:path ocmv:conformsToSchema ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] ,
+  [
+    sh:name "Media Type" ;
+    sh:description "The media type of the distribution as defined by IANA. Distributions whose format are not listed with a specific media type must be assigned \"application/octet-stream\" when representing sequences of bits, or \"text/plain\" when representing human-readable text files. The URI must start with \"https://www.iana.org/assignments/media-types/\"." ;
+    sh:path dcat:mediaType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] .

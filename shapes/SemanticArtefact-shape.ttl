@@ -5,115 +5,114 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/shape/SemanticArtefact> a sh:NodeShape ;
-    sh:targetClass mod:SemanticArtefact, dcat:Dataset ;
-    sh:property
-    [
-        sh:name "Language" ;
-        sh:description "The language in which the names of the elements in the model are written. Use a literal value consisting of a language tag as defined by the IETF Best Current Practice 47, such as \"en\" and \"pt\". See \"https://tools.ietf.org/html/bcp47\"" ;
-        sh:path dct:language ;
-        sh:datatype xsd:string ;
-        dash:editor dash:TextFieldEditor ;
-        dash:viewer dash:LiteralViewer ;
-    ],
-    [
-        sh:name "Source" ;
-        sh:description "A related resource from which the described resource is derived." ;
-        sh:path dct:source ;
-        sh:nodeKind sh:IRI ;
-        dash:editor dash:URIEditor ;
-        dash:viewer dash:URIViewer ;
-    ],
-    [
-        sh:name "Designed for Task" ;
-        sh:description "The list of goals that motivated the development of the model. The allowed values are \"conceptual clarification\", \"data publication\", \"decision support system\", \"example\", \"information retrieval\", \"interoperability\", \"language engineering\", \"learning\", \"ontological analysis\", and \"software engineering\"." ;
-        sh:path mod:designedForTask ;
-        sh:nodeKind sh:IRI ;
-        sh:in (
-            ocmv:ConceptualClarification
-            ocmv:DataPublication
-            ocmv:DecisionSupportSystem
-            ocmv:Example
-            ocmv:InformationRetrieval
-            ocmv:Interoperability
-            ocmv:LanguageEngineering
-            ocmv:Learning
-            ocmv:OntologicalAnalysis
-            ocmv:SoftwareEngineering
-        ) ;
-        dash:editor dash:EnumSelectEditor ;
-        dash:viewer dash:LabelViewer ;
-    ],
-    [
-        sh:name "Context" ;
-        sh:description "The list of contexts in which the model was developed. The allowed values for this field are: \"research\", \"industry\", \"classroom\"." ;
-        sh:path ocmv:context ;
-        sh:in (
-            ocmv:Classroom
-            ocmv:Industry
-            ocmv:Research
-        ) ;
-        dash:editor dash:EnumSelectEditor ;
-        dash:viewer dash:LabelViewer ;
-    ],
-    [
-        sh:name "Representation Style" ;
-        sh:description "The list of representation styles adopted in the model. The allowed values for this field are: ocmv:OntoumlStyle, for models that use OntoUML's stereotypes; and ocmv:UfoStyle, for pure UML models that specialize UFO's types and relations." ;
-        sh:path ocmv:representationStyle ;
-        sh:nodeKind sh:IRI ;
-        sh:in ( 
-            ocmv:OntoumlStyle 
-            ocmv:UfoStyle
-        ) ;
-        dash:editor dash:EnumSelectEditor ;
-        dash:viewer dash:LabelViewer ;
-    ],
-    [
-        sh:name "Ontology Type" ;
-        sh:description "The type of the model according to how general it is. Allowed values: ocmv:Core for core ontologies, ocmv:Domain for domain ontologies, and ocmv:Application for application ontologies." ;
-        sh:path dct:ontologyType ;
-        sh:nodeKind sh:IRI ;
-        sh:maxCount 1 ;
-        sh:in ( 
-            ocmv:Domain
-            ocmv:Application
-            ocmv:Core
-        ) ;
-        dash:editor dash:EnumSelectEditor ;
-        dash:viewer dash:LabelViewer ;
-    ],
-    [
-        sh:name "Theme" ;
-        sh:description "The central theme of the model according to the Library of Congress Classification (LCC) system. E.g., \"Class S - Agriculture\", \"Class T - Technology\". LCC is available as a skos:ConceptScheme and each of its classes as instances of skos:Concept. The used URI must be prefixed by \"http://id.loc.gov/authorities/classification\"." ;
-        sh:path dcat:theme ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:nodeKind sh:IRI ;
-        sh:pattern "^http://id.loc.gov/authorities/classification/";
-        dash:editor dash:URIEditor ;
-        dash:viewer dash:LabelViewer ;
-    ],
-    [
-        sh:name "Keyword" ;
-        sh:description "A list of strings that identify the domains covered by the model. E.g., \"robotic\", \"technology\", \"services\", \"risk\"." ;
-        sh:path dcat:keyword ;
-        sh:minCount 1 ;
-        sh:or (
-            [ sh:datatype xsd:string ; ]
-            [ sh:datatype rdf:langString ; ]
-        ) ;
-        dash:editor dash:TextFieldEditor ;
-        dash:viewer dash:LiteralViewer ;
-    ],
-    [
-        sh:name "Acronym" ;
-        sh:description "The acronym one can use to refer to the model. E.g., \"RDBS-O\", \"COVER\", \"ROT\"." ;
-        sh:path mod:acronym ;
-        sh:datatype xsd:string ;
-        dash:editor dash:TextFieldEditor ;
-        dash:viewer dash:LiteralViewer ;
-    ]
-    .
+  sh:targetClass mod:SemanticArtefact ;
+  sh:property
+  [
+    sh:name "Language" ;
+    sh:description "The language in which the names of the elements in the model are written. Use a literal value consisting of a language tag as defined by the IETF Best Current Practice 47, such as \"en\" and \"pt\". See \"https://tools.ietf.org/html/bcp47\"" ;
+    sh:path dct:language ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ],
+  [
+    sh:name "Source" ;
+    sh:description "A related resource from which the described resource is derived." ;
+    sh:path dct:source ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:URIViewer ;
+  ],
+  [
+    sh:name "Designed for Task" ;
+    sh:description "The list of goals that motivated the development of the model. The allowed values are \"conceptual clarification\", \"data publication\", \"decision support system\", \"example\", \"information retrieval\", \"interoperability\", \"language engineering\", \"learning\", \"ontological analysis\", and \"software engineering\"." ;
+    sh:path mod:designedForTask ;
+    sh:nodeKind sh:IRI ;
+    sh:in (
+      ocmv:ConceptualClarification
+      ocmv:DataPublication
+      ocmv:DecisionSupportSystem
+      ocmv:Example
+      ocmv:InformationRetrieval
+      ocmv:Interoperability
+      ocmv:LanguageEngineering
+      ocmv:Learning
+      ocmv:OntologicalAnalysis
+      ocmv:SoftwareEngineering
+    ) ;
+    dash:editor dash:EnumSelectEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Context" ;
+    sh:description "The list of contexts in which the model was developed. The allowed values for this field are: \"research\", \"industry\", \"classroom\"." ;
+    sh:path ocmv:context ;
+    sh:in (
+      ocmv:Classroom
+      ocmv:Industry
+      ocmv:Research
+    ) ;
+    dash:editor dash:EnumSelectEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Representation Style" ;
+    sh:description "The list of representation styles adopted in the model. The allowed values for this field are: ocmv:OntoumlStyle, for models that use OntoUML's stereotypes; and ocmv:UfoStyle, for pure UML models that specialize UFO's types and relations." ;
+    sh:path ocmv:representationStyle ;
+    sh:nodeKind sh:IRI ;
+    sh:in ( 
+      ocmv:OntoumlStyle 
+      ocmv:UfoStyle
+    ) ;
+    dash:editor dash:EnumSelectEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Ontology Type" ;
+    sh:description "The type of the model according to how general it is. Allowed values: ocmv:Core for core ontologies, ocmv:Domain for domain ontologies, and ocmv:Application for application ontologies." ;
+    sh:path dct:ontologyType ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+    sh:in ( 
+      ocmv:Domain
+      ocmv:Application
+      ocmv:Core
+    ) ;
+    dash:editor dash:EnumSelectEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Theme" ;
+    sh:description "The central theme of the model according to the Library of Congress Classification (LCC) system. E.g., \"Class S - Agriculture\", \"Class T - Technology\". LCC is available as a skos:ConceptScheme and each of its classes as instances of skos:Concept. The used URI must be prefixed by \"http://id.loc.gov/authorities/classification\"." ;
+    sh:path dcat:theme ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^http://id.loc.gov/authorities/classification/";
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Keyword" ;
+    sh:description "A list of strings that identify the domains covered by the model. E.g., \"robotic\", \"technology\", \"services\", \"risk\"." ;
+    sh:path dcat:keyword ;
+    sh:minCount 1 ;
+    sh:or (
+      [ sh:datatype xsd:string ; ]
+      [ sh:datatype rdf:langString ; ]
+    ) ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ],
+  [
+    sh:name "Acronym" ;
+    sh:description "The acronym one can use to refer to the model. E.g., \"RDBS-O\", \"COVER\", \"ROT\"." ;
+    sh:path mod:acronym ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ]
+  .
