@@ -54,7 +54,7 @@ ocmv:ontologyType a owl:ObjectProperty ;
 
 ocmv:conformsToSchema a owl:ObjectProperty ;
                       rdfs:label "conforms to schema"@en ;
-                      rdfs:comment "Identifies a schema upon which the distribution can be validated against. E.g. a JSON Schema document, a SHACL shape, and a XML Schema document."@en ;
+                      rdfs:comment "Identifies a schema upon which the distribution can be validated against. E.g. a JSON Schema document, a SHACL shape, and an XML Schema document."@en ;
                       skos:scopeNote "The identified schema should be compatible with the media type of the distribution. That is, if a distribution is in JSON, the schema cannot be a SHACL shape or an XML Schema." ;
                       rdfs:domain mod:Distribution ;
                       rdfs:range rdfs:Resource .
@@ -110,7 +110,7 @@ ocmv:Example a ocmv:OntologyPurpose ;
          
 ocmv:InformationRetrieval a ocmv:OntologyPurpose ;
                           rdfs:label "Information Retrieval"@en ;
-                          rdfs:comment "Determines if the artefact was created to support the design of a information retrieval system."@en .
+                          rdfs:comment "Determines if the artefact was created to support the design of an information retrieval system."@en .
          
 ocmv:Interoperability a ocmv:OntologyPurpose ;
                       rdfs:label "Interoperability"@en ;
@@ -130,12 +130,12 @@ ocmv:OntologicalAnalysis a ocmv:OntologyPurpose ;
 
 ocmv:SoftwareEngineering a ocmv:OntologyPurpose ;
                          rdfs:label "Software Engineering"@en ;
-                         rdfs:comment "Determines if the artefact was created during the development of an information system. For instance, it a conceptual model used to generate a relational database."@en.
+                         rdfs:comment "Determines if the artefact was created during the development of an information system. For instance, a conceptual model used to generate a relational database."@en.
 
 ocmv:OntologyType a owl:Class ;
                   rdfs:label "Ontology Type"@en ;
                   rdfs:subClassOf ocmv:MetadataElement ;
-                  rdfs:comment "Identifies the categorization of the artifacts according to its scope."@en .
+                  rdfs:comment "Identifies the categorization of the artifacts according to their scopes."@en .
 
 ocmv:Application a ocmv:OntologyType ;
                  rdfs:label "Application Ontology"@en ;
