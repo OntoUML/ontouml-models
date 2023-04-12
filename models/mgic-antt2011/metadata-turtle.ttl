@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,8 +8,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/mgic-antt2011/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+<https://w3id.org/ontouml-models/distribution/468a3f7f-81ea-4ea9-8122-8d4bdd1391f3/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/58ff1fcc-6454-4fba-9fcf-751348abb276>;
+    dct:issued "2011"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:title "Turtle distribution of National Agency of Terrestrial Transportation (ANTT) Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/mgic-antt2011/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:36:13.216119756Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:36:13.216119756Z"^^xsd:dateTime .
