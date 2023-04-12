@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/garcia2022human-genome-events/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/25f4911f-d6b6-4b16-819e-b034b1efb1aa/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Ontologically enriched version of Conceptual Schema of the Human Genome";
     mod:acronym "CSHG";
     dct:issued "2022"^^xsd:gYear;
@@ -23,6 +26,7 @@
     dct:source <https://doi.org/10.1007/978-3-031-07481-3_4>, <https://doi.org/10.1109/access.2020.3034793>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/garcia2022human-genome-events>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/garcia2022human-genome-events/>.
-<https://w3id.org/ontouml-models/model/garcia2022human-genome-events/> dcat:distribution <https://w3id.org/ontouml-models/turtle/garcia2022human-genome-events/>, <https://w3id.org/ontouml-models/json/garcia2022human-genome-events/>, <https://w3id.org/ontouml-models/vpp/garcia2022human-genome-events/>, <https://w3id.org/ontouml-models/original-diagram/garcia2022human-genome-events/ontouml-cshg>, <https://w3id.org/ontouml-models/new-diagram/garcia2022human-genome-events/ontouml-cshg>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/garcia2022human-genome-events>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:20:40.150984979Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:20:40.150984979Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/25f4911f-d6b6-4b16-819e-b034b1efb1aa> dcat:distribution <https://w3id.org/ontouml-models/distribution/06876e11-699e-41d2-a986-0f06992ab537/>, <https://w3id.org/ontouml-models/distribution/1263a7a9-ee92-40b6-bea8-9a0fe57e2ea2/>, <https://w3id.org/ontouml-models/distribution/7a66a9af-3f13-4cd8-9a54-97d93e1d3ad0/>, <https://w3id.org/ontouml-models/distribution/afeab776-0464-46c8-a7be-4e3d0f183082>, <https://w3id.org/ontouml-models/distribution/915f675b-c012-460b-b0d8-20a2182e05ce>
