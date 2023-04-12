@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/digitaldoctor2022/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/fab3c0bc-ab82-4c78-b120-c2c66c427a10/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Digital Doctor Ontology";
     dct:issued "2022"^^xsd:gYear;
     dct:modified "2022"^^xsd:gYear;
@@ -22,6 +24,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/digitaldoctor2022>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/digitaldoctor2022/>.
-<https://w3id.org/ontouml-models/model/digitaldoctor2022/> dcat:distribution <https://w3id.org/ontouml-models/turtle/digitaldoctor2022/>, <https://w3id.org/ontouml-models/json/digitaldoctor2022/>, <https://w3id.org/ontouml-models/vpp/digitaldoctor2022/>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/medicalprocedure>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/medicalproceduretrigger>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/taxonomy>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/user>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/digitaldoctor2022>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:15:36.698257382Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:15:36.698257382Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/fab3c0bc-ab82-4c78-b120-c2c66c427a10> dcat:distribution <https://w3id.org/ontouml-models/distribution/a66e14cf-3a0d-4782-943d-12c169ef8f2e/>, <https://w3id.org/ontouml-models/distribution/3bd958fd-03ad-4dac-8221-acce04a7eb41/>, <https://w3id.org/ontouml-models/distribution/d27050fe-b902-4ae7-866b-2cfafc58e4bc/>, <https://w3id.org/ontouml-models/distribution/940eac00-9ec0-43e5-a874-e5ef5976311a>, <https://w3id.org/ontouml-models/distribution/940eac00-9ec0-43e5-a874-e5ef5976311atrigger>, <https://w3id.org/ontouml-models/distribution/d8c0b8b3-899c-44b5-90eb-394445c5c302>, <https://w3id.org/ontouml-models/distribution/b6b1f18f-0700-4999-881a-5abb3c2f3d50>
