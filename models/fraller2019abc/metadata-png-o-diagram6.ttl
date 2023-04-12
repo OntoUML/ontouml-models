@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/fraller2019abc/diagram6> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/4f88f079-ecda-42bc-96e3-7ec83d307d46> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/3ba9b438-b603-49b8-a29f-0197111753ce>;
+    dct:issued "2019"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'diagram6' from the Capacity-Based Activity-Based Costing System Model (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/fraller2019abc/original-diagrams/diagram6.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:19:38.770655725Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:19:38.770655725Z"^^xsd:dateTime .
