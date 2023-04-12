@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/gomes2022digital-technology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/a2110fc2-6dbb-4c21-8ef3-35976e3acda0/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Digital Technology";
     dct:issued "2022"^^xsd:gYear;
     dcat:theme lcc:T;
@@ -23,6 +25,7 @@
     dct:source <https://doi.org/10.1007/978-3-031-17995-2_7>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/gomes2022digital-technology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/gomes2022digital-technology/>.
-<https://w3id.org/ontouml-models/model/gomes2022digital-technology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/gomes2022digital-technology/>, <https://w3id.org/ontouml-models/json/gomes2022digital-technology/>, <https://w3id.org/ontouml-models/vpp/gomes2022digital-technology/>, <https://w3id.org/ontouml-models/original-diagram/gomes2022digital-technology/diagram1>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/gomes2022digital-technology>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:21:09.010812746Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:21:09.010812746Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/a2110fc2-6dbb-4c21-8ef3-35976e3acda0> dcat:distribution <https://w3id.org/ontouml-models/distribution/24eb4f63-92fb-4805-a83d-858602471865/>, <https://w3id.org/ontouml-models/distribution/a7ae4b6a-e4c2-4d57-8c5f-5d8c55afa76f/>, <https://w3id.org/ontouml-models/distribution/069b9921-43f7-4c07-8741-f8d1c0f17f80/>, <https://w3id.org/ontouml-models/distribution/08fb2eb7-3374-4322-a1c2-66e019dc4170>
