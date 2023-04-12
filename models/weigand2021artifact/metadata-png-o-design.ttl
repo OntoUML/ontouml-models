@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/weigand2021artifact/design> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/b12f13ec-e2b2-4a37-8a33-8e45f4211e0c> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/d298127f-6c68-43f8-9284-4bdb385af4a9>;
+    dct:issued "2020"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'design' from the Design Science Artifact Ontology (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/weigand2021artifact/original-diagrams/design.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:50:41.189692431Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:50:41.189692431Z"^^xsd:dateTime .
