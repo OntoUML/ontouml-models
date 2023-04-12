@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/unimatch-ontology2022/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/6ca3eb04-c554-459f-ab61-54aff06c3fbb/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Predictive System for University Admissions \"UniMatch\"";
     mod:acronym "UniMatch";
     dct:issued "2023"^^xsd:gYear;
@@ -23,6 +25,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Application;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/unimatch-ontology2022>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/unimatch-ontology2022/>.
-<https://w3id.org/ontouml-models/model/unimatch-ontology2022/> dcat:distribution <https://w3id.org/ontouml-models/turtle/unimatch-ontology2022/>, <https://w3id.org/ontouml-models/json/unimatch-ontology2022/>, <https://w3id.org/ontouml-models/vpp/unimatch-ontology2022/>, <https://w3id.org/ontouml-models/original-diagram/unimatch-ontology2022/unimatch-model>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/unimatch-ontology2022>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:48:50.85287189Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:48:50.85287189Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/6ca3eb04-c554-459f-ab61-54aff06c3fbb> dcat:distribution <https://w3id.org/ontouml-models/distribution/0d709ae4-5e96-45ab-a693-4bb4ac15b3e9/>, <https://w3id.org/ontouml-models/distribution/32965e00-5e12-4bdc-9716-33e0b2742fd5/>, <https://w3id.org/ontouml-models/distribution/4af4123a-d51f-4971-91be-3820d2084d73/>, <https://w3id.org/ontouml-models/distribution/88da6ff9-270b-4b0e-a623-167d6417792b>
