@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/fischer2018ontorea/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/5d28d694-c3b1-4cd6-b1d7-61de286a6183/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "OntoREA© Accounting and Finance Model";
     dct:issued "2017"^^xsd:gYear;
     dct:modified "2019"^^xsd:gYear;
@@ -23,6 +26,7 @@
     dct:source <https://doi.org/10.1007/978-3-030-35151-9_4>, <https://dblp.org/rec/conf/vmbo/Fischer-Pauzenberger18>, <https://doi.org/10.1007/978-3-030-02302-7_24>, <https://doi.org/10.1007/978-3-319-70241-4_6>, <https://doi.org/10.1007/978-3-319-69904-2_38>, <https://doi.org/10.7250/csimq.2017-11.02>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/fischer2018ontorea>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/fischer2018ontorea/>.
-<https://w3id.org/ontouml-models/model/fischer2018ontorea/> dcat:distribution <https://w3id.org/ontouml-models/turtle/fischer2018ontorea/>, <https://w3id.org/ontouml-models/json/fischer2018ontorea/>, <https://w3id.org/ontouml-models/vpp/fischer2018ontorea/>, <https://w3id.org/ontouml-models/original-diagram/fischer2018ontorea/ontorea-accounting-and-finance-model>, <https://w3id.org/ontouml-models/new-diagram/fischer2018ontorea/ontorea©-accounting-and-finance-model>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/fischer2018ontorea>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:18:46.739341902Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:18:46.739341902Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/5d28d694-c3b1-4cd6-b1d7-61de286a6183> dcat:distribution <https://w3id.org/ontouml-models/distribution/66753c4a-6192-4d11-bdde-50e6d44070e5/>, <https://w3id.org/ontouml-models/distribution/f820113e-bd68-44ec-86f5-7b96e6216c5e/>, <https://w3id.org/ontouml-models/distribution/4d5721a6-88db-4b77-8538-4b56bb456a63/>, <https://w3id.org/ontouml-models/distribution/438fd1cc-b5bc-498d-8ffe-c2ca1ddcd195>, <https://w3id.org/ontouml-models/distribution/d41d06db-9365-4d84-ae16-439c795b452b>
