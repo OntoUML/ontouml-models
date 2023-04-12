@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/duarte2018osdef/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/786449b9-cb5b-4bb6-9d8a-0863ad9df2fb/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Ontology of Software Defects, Errors and Failures";
     mod:acronym "OSDEF";
     dct:issued "2018"^^xsd:gYear;
@@ -24,6 +27,7 @@
     dct:source <https://doi.org/10.1007/978-3-030-00847-5_25>, <https://doi.org/10.1016/j.datak.2021.101892>;
     ocmv:representationStyle ocmv:UfoStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/duarte2018osdef>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/duarte2018osdef/>.
-<https://w3id.org/ontouml-models/model/duarte2018osdef/> dcat:distribution <https://w3id.org/ontouml-models/turtle/duarte2018osdef/>, <https://w3id.org/ontouml-models/json/duarte2018osdef/>, <https://w3id.org/ontouml-models/vpp/duarte2018osdef/>, <https://w3id.org/ontouml-models/original-diagram/duarte2018osdef/diagram1>, <https://w3id.org/ontouml-models/new-diagram/duarte2018osdef/osdef>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/duarte2018osdef>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:16:00.854154726Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:16:00.854154726Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/786449b9-cb5b-4bb6-9d8a-0863ad9df2fb> dcat:distribution <https://w3id.org/ontouml-models/distribution/1b8cab81-de9f-48e6-9e0f-5834d6b86a0d/>, <https://w3id.org/ontouml-models/distribution/d544fa56-4e01-46d8-bcd5-ac485effc918/>, <https://w3id.org/ontouml-models/distribution/a1ee3ea1-50f1-45e1-9c18-625d6732575c/>, <https://w3id.org/ontouml-models/distribution/d46452de-347c-4c9b-892e-d489ff947b1a>, <https://w3id.org/ontouml-models/distribution/871b111b-b96e-4254-beae-cb9cba03d4e0>
