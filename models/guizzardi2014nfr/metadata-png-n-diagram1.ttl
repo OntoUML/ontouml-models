@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/new-diagram/guizzardi2014nfr/diagram1> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/b102ed72-dbe5-46e4-86e8-6822351beb4d> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/8c7ff682-5822-4114-b268-f904e05504ec>;
+    dct:issued "2014"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'diagram1' from the Non-Functional Requirements Ontology (Visual Paradigm version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/guizzardi2014nfr/new-diagrams/diagram1.png>;
-    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en.
+    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:22:46.230750881Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:22:46.230750881Z"^^xsd:dateTime .
