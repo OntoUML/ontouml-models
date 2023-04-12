@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/project-management-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/eab553bd-ec72-4fcf-9200-674c25c2ec8b/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Project Management Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/project-management-ontology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/project-management-ontology/>.
-<https://w3id.org/ontouml-models/model/project-management-ontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/project-management-ontology/>, <https://w3id.org/ontouml-models/json/project-management-ontology/>, <https://w3id.org/ontouml-models/vpp/project-management-ontology/>, <https://w3id.org/ontouml-models/original-diagram/project-management-ontology/diagram1>, <https://w3id.org/ontouml-models/new-diagram/project-management-ontology/project-management-ontology>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/project-management-ontology>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:39:59.34501217Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:39:59.34501217Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/eab553bd-ec72-4fcf-9200-674c25c2ec8b> dcat:distribution <https://w3id.org/ontouml-models/distribution/b559480e-a1c5-4d86-ba1b-5e59659aaa88/>, <https://w3id.org/ontouml-models/distribution/5bd98262-7b04-45f3-b60a-ca1d4cbacb17/>, <https://w3id.org/ontouml-models/distribution/7da32a87-5548-4b3a-962f-3c7a6fef1134/>, <https://w3id.org/ontouml-models/distribution/e94ea5b4-ef3c-4c50-98c5-36822bdab33a>, <https://w3id.org/ontouml-models/distribution/2699c562-5e1f-4a12-9ffb-553890f5dc55>
