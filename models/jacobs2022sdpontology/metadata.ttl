@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/jacobs2022sdpontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/010c971e-fcbd-413f-a114-6afd89263b85/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Software Development Project Ontology";
     mod:acronym "SDP-Ontology";
     dct:issued "2022"^^xsd:gYear;
@@ -24,6 +26,7 @@
     dct:source <http://essay.utwente.nl/93228/1/Jacobs_MA_EEMCS.pdf>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/jacobs2022sdpontology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/jacobs2022sdpontology/>.
-<https://w3id.org/ontouml-models/model/jacobs2022sdpontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/jacobs2022sdpontology/>, <https://w3id.org/ontouml-models/json/jacobs2022sdpontology/>, <https://w3id.org/ontouml-models/vpp/jacobs2022sdpontology/>, <https://w3id.org/ontouml-models/original-diagram/jacobs2022sdpontology/development-team>, <https://w3id.org/ontouml-models/original-diagram/jacobs2022sdpontology/programming-languages_frameworks>, <https://w3id.org/ontouml-models/original-diagram/jacobs2022sdpontology/software-project>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/jacobs2022sdpontology>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:24:41.402047898Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:24:41.402047898Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/010c971e-fcbd-413f-a114-6afd89263b85> dcat:distribution <https://w3id.org/ontouml-models/distribution/ab248093-26e4-47c4-b074-0fdc811068c5/>, <https://w3id.org/ontouml-models/distribution/28669869-0d02-496e-9188-ca9a4c0673f5/>, <https://w3id.org/ontouml-models/distribution/2cbd1970-8061-41bb-a222-ef86b7ec1677/>, <https://w3id.org/ontouml-models/distribution/a9de491e-77f5-4070-8ac6-1201ac6ed97e>, <https://w3id.org/ontouml-models/distribution/8a49543d-7e20-43c2-b446-4a6d086bb70c>, <https://w3id.org/ontouml-models/distribution/db3674f2-5ad4-40e0-adaa-db657b93d1d4>
