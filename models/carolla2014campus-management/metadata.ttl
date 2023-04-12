@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/carolla2014campus-management/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/52a5b7f0-d0f6-48d4-83ca-2fa13bb226c6/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Campus Management System Reference Data Model";
     dct:issued "2014"^^xsd:gYear;
     dct:modified "2014"^^xsd:gYear;
@@ -23,6 +26,7 @@
     dct:source <https://core.ac.uk/display/211832003>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/carolla2014campus-management>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/carolla2014campus-management/>.
-<https://w3id.org/ontouml-models/model/carolla2014campus-management/> dcat:distribution <https://w3id.org/ontouml-models/turtle/carolla2014campus-management/>, <https://w3id.org/ontouml-models/json/carolla2014campus-management/>, <https://w3id.org/ontouml-models/vpp/carolla2014campus-management/>, <https://w3id.org/ontouml-models/original-diagram/carolla2014campus-management/diagram1>, <https://w3id.org/ontouml-models/new-diagram/carolla2014campus-management/diagram>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/carolla2014campus-management>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:11:55.349725755Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:11:55.349725755Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/52a5b7f0-d0f6-48d4-83ca-2fa13bb226c6> dcat:distribution <https://w3id.org/ontouml-models/distribution/acb8e1a1-87ea-4cc9-96f7-f6dd9239c8a8/>, <https://w3id.org/ontouml-models/distribution/4e518f02-baaa-45c0-851a-5aa556238591/>, <https://w3id.org/ontouml-models/distribution/421859aa-dea8-4ed7-998d-779c0c54e193/>, <https://w3id.org/ontouml-models/distribution/671ceaa7-58b8-4635-9e99-a8eb8f0f0682>, <https://w3id.org/ontouml-models/distribution/d6a2c9d2-fa1b-493e-b18b-4d6c30ad2c7d>
