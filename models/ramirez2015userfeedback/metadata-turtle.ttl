@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/ramirez2015userfeedback/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/769aad8c-8fb3-469d-ace4-dc6e6be1de0e/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/d8177f23-9732-4809-b0b4-f5f666744199>;
+    dct:issued "2015"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of User Feedback Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/ramirez2015userfeedback/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:41:27.164263665Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:41:27.164263665Z"^^xsd:dateTime .
