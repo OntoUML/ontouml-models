@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/elikan2018brand-identity/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/c2b04dc4-36ac-4739-86d8-17ecbd691855/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Brand Identity Ontology";
     dct:issued "2018"^^xsd:gYear;
     dct:modified "2019"^^xsd:gYear;
@@ -24,6 +26,7 @@
     dct:source <https://dblp.org/rec/conf/vmbo/ElikanP18>, <https://serval.unil.ch/en/notice/serval:BIB_33C796025F84>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/elikan2018brand-identity>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/elikan2018brand-identity/>.
-<https://w3id.org/ontouml-models/model/elikan2018brand-identity/> dcat:distribution <https://w3id.org/ontouml-models/turtle/elikan2018brand-identity/>, <https://w3id.org/ontouml-models/json/elikan2018brand-identity/>, <https://w3id.org/ontouml-models/vpp/elikan2018brand-identity/>, <https://w3id.org/ontouml-models/original-diagram/elikan2018brand-identity/diagram1>, <https://w3id.org/ontouml-models/new-diagram/elikan2018brand-identity/diagram1>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/elikan2018brand-identity>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:17:14.468764974Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:17:14.468764974Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/c2b04dc4-36ac-4739-86d8-17ecbd691855> dcat:distribution <https://w3id.org/ontouml-models/distribution/80d50504-a379-4edc-8bb0-363d4455879a/>, <https://w3id.org/ontouml-models/distribution/f5be6e21-f9b6-4fbe-97ea-0b3eeac4a4a9/>, <https://w3id.org/ontouml-models/distribution/d3516517-f39b-4038-8721-75f3dd3baeb2/>, <https://w3id.org/ontouml-models/distribution/c1cd7c1c-5b94-4c9a-9391-b79974841a49>, <https://w3id.org/ontouml-models/distribution/58121bd8-d716-4f35-aca4-d288404be226>
