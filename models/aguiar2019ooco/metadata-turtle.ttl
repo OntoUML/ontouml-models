@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/aguiar2019ooco/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/b1413290-431c-45c8-84ef-1aa9f100a037/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/7ffd8f80-7d81-44b4-908c-db691edb8439>;
+    dct:issued "2019"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://www.gnu.org/licenses/gpl-3.0.en.html>;
     dct:title "Turtle distribution of Reference Ontology on Object-Oriented Code"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/aguiar2019ooco/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:01:23.364200222Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:01:23.364200222Z"^^xsd:dateTime .
