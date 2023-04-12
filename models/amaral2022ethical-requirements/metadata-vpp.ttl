@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/amaral2022ethical-requirements/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/e89a9bf7-b157-4e3a-91b3-45b4ccea00af/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/cab7ba28-c4b4-465b-8f40-9e5b8298833f>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Reference Ontology of Ethical Requirements"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/amaral2022ethical-requirements/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:03:52.784936286Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:03:52.784936286Z"^^xsd:dateTime .
