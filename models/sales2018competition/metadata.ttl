@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/sales2018competition/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/cdf36dce-7457-4d33-9ba5-47c92e4ace4c/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Ontology of Competition";
     dct:issued "2018"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -22,6 +24,7 @@
     dct:source <https://dblp.org/rec/conf/vmbo/SalesGGM18>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/sales2018competition>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/sales2018competition/>.
-<https://w3id.org/ontouml-models/model/sales2018competition/> dcat:distribution <https://w3id.org/ontouml-models/turtle/sales2018competition/>, <https://w3id.org/ontouml-models/json/sales2018competition/>, <https://w3id.org/ontouml-models/vpp/sales2018competition/>, <https://w3id.org/ontouml-models/original-diagram/sales2018competition/a-model-fragment-on-market-competition>, <https://w3id.org/ontouml-models/original-diagram/sales2018competition/a-model-fragment-on-potential-competition>, <https://w3id.org/ontouml-models/original-diagram/sales2018competition/a-preliminary-ontouml-model-of-competition>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/sales2018competition>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:44:10.90702061Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:44:10.90702061Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/cdf36dce-7457-4d33-9ba5-47c92e4ace4c> dcat:distribution <https://w3id.org/ontouml-models/distribution/55227acc-9952-4daf-a15f-c8badb36905c/>, <https://w3id.org/ontouml-models/distribution/6f638c6d-557d-470e-aa4d-a02598a45d9a/>, <https://w3id.org/ontouml-models/distribution/59739c6f-fdf1-4a7e-b16f-7d1717df172f/>, <https://w3id.org/ontouml-models/distribution/095b8f5f-ad2b-4e9a-b79f-330910e09792>, <https://w3id.org/ontouml-models/distribution/87476f1d-55fa-44ed-87b2-5ebbc1a5e215>, <https://w3id.org/ontouml-models/distribution/0eb32b95-bd5f-42fb-a38d-dd4431756d6f>
