@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/cmpo2017/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/9a70cf6f-dccc-41cf-ad09-5cc939af63de/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Configuration Management Process Ontology";
     mod:acronym "CMPO";
     dct:issued "2012"^^xsd:gYear;
@@ -26,6 +28,7 @@
     dct:source <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/software_engineering_standards_harmonization__an_ontology_based_approach_2017.pdf>, <https://dl.acm.org/doi/pdf/10.1145/2245276.2245344>, <https://doi.org/10.1007/978-3-319-49004-5_34>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/cmpo2017>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/cmpo2017/>.
-<https://w3id.org/ontouml-models/model/cmpo2017/> dcat:distribution <https://w3id.org/ontouml-models/turtle/cmpo2017/>, <https://w3id.org/ontouml-models/json/cmpo2017/>, <https://w3id.org/ontouml-models/vpp/cmpo2017/>, <https://w3id.org/ontouml-models/original-diagram/cmpo2017/diagram1>, <https://w3id.org/ontouml-models/new-diagram/cmpo2017/diagram1>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/cmpo2017>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:12:55.765039273Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:12:55.765039273Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/9a70cf6f-dccc-41cf-ad09-5cc939af63de> dcat:distribution <https://w3id.org/ontouml-models/distribution/ae048271-2da3-4573-b240-ba305a6d2014/>, <https://w3id.org/ontouml-models/distribution/0858315a-b7df-4ffd-bcd8-8ab123515517/>, <https://w3id.org/ontouml-models/distribution/08bdca26-a7c8-4d98-a823-6dc735612eda/>, <https://w3id.org/ontouml-models/distribution/dba57563-61ea-48a8-aed4-615da92e0b31>, <https://w3id.org/ontouml-models/distribution/9786f495-c53c-4096-9778-a83b1248a14f>
