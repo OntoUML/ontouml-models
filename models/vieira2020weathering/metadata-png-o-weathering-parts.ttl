@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/vieira2020weathering/weathering-parts> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/5ef60d11-9ed6-4ef4-8436-072074c02cb5> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/654755c9-0668-4bc9-90a4-dd2f7f066f56>;
+    dct:issued "2020"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'weathering parts' from the Weathering Ontology (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/vieira2020weathering/original-diagrams/weathering-parts.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:50:20.711018518Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:50:20.711018518Z"^^xsd:dateTime .
