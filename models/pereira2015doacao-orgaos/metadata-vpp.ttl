@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/pereira2015doacao-orgaos/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
+<https://w3id.org/ontouml-models/distribution/c6ac4bf7-f647-4a8f-82e7-a3e26efcee3d/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/4377c369-716b-49df-ba62-a60a96aa1e43>;
+    dct:issued "2015"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Ontologia de Doação de Órgão e Tecidos"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/pereira2015doacao-orgaos/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:38:46.699534647Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:38:46.699534647Z"^^xsd:dateTime .
