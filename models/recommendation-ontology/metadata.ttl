@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/recommendation-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/2910592f-9999-4c1f-849a-1f745887250b/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Recommendation Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:T;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/recommendation-ontology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/recommendation-ontology/>.
-<https://w3id.org/ontouml-models/model/recommendation-ontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/recommendation-ontology/>, <https://w3id.org/ontouml-models/json/recommendation-ontology/>, <https://w3id.org/ontouml-models/vpp/recommendation-ontology/>, <https://w3id.org/ontouml-models/original-diagram/recommendation-ontology/diagram1>, <https://w3id.org/ontouml-models/new-diagram/recommendation-ontology/recommendation-ontology>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/recommendation-ontology>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:41:49.762028Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:41:49.762028Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/2910592f-9999-4c1f-849a-1f745887250b> dcat:distribution <https://w3id.org/ontouml-models/distribution/544ab9d3-73df-48b4-9ad8-ded532e20b2f/>, <https://w3id.org/ontouml-models/distribution/d3da0034-8cb6-403f-af2e-3176865452a1/>, <https://w3id.org/ontouml-models/distribution/bd94a7e3-30e8-47f7-9eb3-ee5cf7b8879e/>, <https://w3id.org/ontouml-models/distribution/357db013-47f6-4c1f-8b38-3beb4e7872a3>, <https://w3id.org/ontouml-models/distribution/f5458d27-9355-4084-96f1-cf7f59086a65>
