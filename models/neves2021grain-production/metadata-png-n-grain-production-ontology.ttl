@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/new-diagram/neves2021grain-production/grain-production-ontology> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/bb42bb91-df21-44f7-8509-21935b31eba9> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/9004e458-9169-414c-b60f-70783f568448>;
+    dct:issued "2021"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'grain production ontology' from the Grain Production Ontology (Visual Paradigm version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/neves2021grain-production/new-diagrams/grain-production-ontology.png>;
-    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en.
+    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:37:24.70217702Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:37:24.70217702Z"^^xsd:dateTime .
