@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/zanetti2019orm-o/diagram2> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/d1da3a0c-bea6-43a8-9d5c-ac87a502308a> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/319b014c-e74d-4a30-a262-43c4e1dd4efa>;
+    dct:issued "2019"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'diagram2' from the Object/Relational Mapping Ontology (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/zanetti2019orm-o/original-diagrams/diagram2.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:50:58.962688801Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:50:58.962688801Z"^^xsd:dateTime .
