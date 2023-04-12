@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,8 +8,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/zanetti2019orm-o/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+<https://w3id.org/ontouml-models/distribution/426d9d1f-3e13-4c2b-9fb5-13137ea18895/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/319b014c-e74d-4a30-a262-43c4e1dd4efa>;
+    dct:issued "2019"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:title "Turtle distribution of Object/Relational Mapping Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/zanetti2019orm-o/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:51:02.42355613Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:51:02.42355613Z"^^xsd:dateTime .
