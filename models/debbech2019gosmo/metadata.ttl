@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/debbech2019gosmo/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/0e332dfe-e72b-43e2-865f-b331864da082/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Goal-Oriented Safety Management Ontology";
     mod:acronym "GOSMO";
     dct:issued "2019"^^xsd:gYear;
@@ -24,6 +26,7 @@
     dct:source <https://doi.org/10.5220/0007932502870297>, <https://doi.org/10.17706/jcp.14.4.257-267>;
     ocmv:representationStyle ocmv:UfoStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/debbech2019gosmo>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/debbech2019gosmo/>.
-<https://w3id.org/ontouml-models/model/debbech2019gosmo/> dcat:distribution <https://w3id.org/ontouml-models/turtle/debbech2019gosmo/>, <https://w3id.org/ontouml-models/json/debbech2019gosmo/>, <https://w3id.org/ontouml-models/vpp/debbech2019gosmo/>, <https://w3id.org/ontouml-models/original-diagram/debbech2019gosmo/diagram1>, <https://w3id.org/ontouml-models/new-diagram/debbech2019gosmo/diagram1>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/debbech2019gosmo>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:13:16.479556494Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:13:16.479556494Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/0e332dfe-e72b-43e2-865f-b331864da082> dcat:distribution <https://w3id.org/ontouml-models/distribution/524443a6-01c1-4210-a812-315a281ddd80/>, <https://w3id.org/ontouml-models/distribution/cc3f3a64-6b5f-4475-844e-514ab3729797/>, <https://w3id.org/ontouml-models/distribution/dcc87a6a-b662-4fbb-b740-4cd98013d505/>, <https://w3id.org/ontouml-models/distribution/536711ce-4d21-40a1-acea-af7f0849b879>, <https://w3id.org/ontouml-models/distribution/07f762c9-c66e-4496-8cf6-2c280c616848>
