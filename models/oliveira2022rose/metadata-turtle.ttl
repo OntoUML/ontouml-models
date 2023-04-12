@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/oliveira2022rose/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/066c58c1-cc9e-4edf-8410-1abadf302bb3/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/b40cf898-b81d-46d4-921f-845a5959e3dd>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://mit-license.org/>;
     dct:title "Turtle distribution of Ontology of Security from a Risk Treatment Perspective"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/oliveira2022rose/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:38:20.991059305Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:38:20.991059305Z"^^xsd:dateTime .
