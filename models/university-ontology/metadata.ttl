@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/university-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/04c2497a-d6be-4dc4-9e8e-8ce1ed1bcb42/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "University Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:L;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/university-ontology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/university-ontology/>.
-<https://w3id.org/ontouml-models/model/university-ontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/university-ontology/>, <https://w3id.org/ontouml-models/json/university-ontology/>, <https://w3id.org/ontouml-models/vpp/university-ontology/>, <https://w3id.org/ontouml-models/original-diagram/university-ontology/diagram1>, <https://w3id.org/ontouml-models/original-diagram/university-ontology/diagram2>, <https://w3id.org/ontouml-models/new-diagram/university-ontology/academic-roles>, <https://w3id.org/ontouml-models/new-diagram/university-ontology/disciplines>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/university-ontology>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:48:58.669787488Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:48:58.669787488Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/04c2497a-d6be-4dc4-9e8e-8ce1ed1bcb42> dcat:distribution <https://w3id.org/ontouml-models/distribution/0b81e9c1-bae0-4d7e-bfe7-c9f6e8617c83/>, <https://w3id.org/ontouml-models/distribution/78687693-fe29-4d3f-b751-f505ab8f5d79/>, <https://w3id.org/ontouml-models/distribution/ac3d7cf8-f58d-46bb-a819-a22182dd5d2e/>, <https://w3id.org/ontouml-models/distribution/b3742484-a263-448d-b19c-ff51d7b2c545>, <https://w3id.org/ontouml-models/distribution/8dee5c43-033a-4f70-9577-3c3b58b4169f>, <https://w3id.org/ontouml-models/distribution/9e93247c-aa9c-4a7e-b47d-e3338053f4a0>, <https://w3id.org/ontouml-models/distribution/33bfe182-dbd2-4502-a6b3-6691da8e2cd8>
