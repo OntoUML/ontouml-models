@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/gi2mo/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/66fb6802-a77a-4269-9bc9-bbd920c32a7d/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/46e4f801-127a-45ed-b0a1-26fde83ccc4f>;
+    dct:issued "2013"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Generic Idea and Innovation Management Ontology Refactored"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/gi2mo/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:21:07.166155144Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:21:07.166155144Z"^^xsd:dateTime .
