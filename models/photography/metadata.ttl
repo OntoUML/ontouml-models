@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/photography/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/c6d0f413-0b15-4fcc-909c-54a6ab037ffd/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Photography Collection Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -20,6 +22,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/photography>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/photography/>.
-<https://w3id.org/ontouml-models/model/photography/> dcat:distribution <https://w3id.org/ontouml-models/turtle/photography/>, <https://w3id.org/ontouml-models/json/photography/>, <https://w3id.org/ontouml-models/vpp/photography/>, <https://w3id.org/ontouml-models/original-diagram/photography/diagram1>, <https://w3id.org/ontouml-models/new-diagram/photography/diagram1>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/photography>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:38:58.469071438Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:38:58.469071438Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/c6d0f413-0b15-4fcc-909c-54a6ab037ffd> dcat:distribution <https://w3id.org/ontouml-models/distribution/3d5135cc-96f4-4098-8149-2f19f9558221/>, <https://w3id.org/ontouml-models/distribution/e6f93866-69cf-4bbb-88f1-2d28c2a2bcaa/>, <https://w3id.org/ontouml-models/distribution/bf56d76b-5791-42c8-8b0e-a25730289c65/>, <https://w3id.org/ontouml-models/distribution/eb43eab4-abf6-4559-bcd4-5dd8323b418d>, <https://w3id.org/ontouml-models/distribution/744d0a62-60a7-44a2-a9de-de7fc4e071d6>
