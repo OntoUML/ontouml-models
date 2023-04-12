@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/it-infrastructure/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/f8ec03f8-36f1-4eae-a617-00001638a843/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "IT Infrastructure Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:T;
@@ -20,6 +22,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/it-infrastructure>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/it-infrastructure/>.
-<https://w3id.org/ontouml-models/model/it-infrastructure/> dcat:distribution <https://w3id.org/ontouml-models/turtle/it-infrastructure/>, <https://w3id.org/ontouml-models/json/it-infrastructure/>, <https://w3id.org/ontouml-models/vpp/it-infrastructure/>, <https://w3id.org/ontouml-models/original-diagram/it-infrastructure/diagram1>, <https://w3id.org/ontouml-models/original-diagram/it-infrastructure/diagram1>, <https://w3id.org/ontouml-models/new-diagram/it-infrastructure/it-infrastructure>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/it-infrastructure>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:24:30.933827775Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:24:30.933827775Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/f8ec03f8-36f1-4eae-a617-00001638a843> dcat:distribution <https://w3id.org/ontouml-models/distribution/cbbc93a2-b738-4fcf-8c35-ecc4d9c1cfd4/>, <https://w3id.org/ontouml-models/distribution/371c2914-8b79-4cbf-a7f4-f5b089c5cf12/>, <https://w3id.org/ontouml-models/distribution/2309121a-d63a-4ab3-950b-2caf01a20418/>, <https://w3id.org/ontouml-models/distribution/4f3c45ee-7248-45e7-96d9-8818873913ea>, <https://w3id.org/ontouml-models/distribution/4f3c45ee-7248-45e7-96d9-8818873913ea>, <https://w3id.org/ontouml-models/distribution/fe4e312a-9fba-42a0-818b-39975100d47e>
