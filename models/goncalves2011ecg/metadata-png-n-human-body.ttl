@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/new-diagram/goncalves2011ecg/human-body> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/0f3f3864-2c5f-4edd-882e-7c4e381eb244> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/3a69d564-c8e7-4983-8880-676e171e9b4f>;
+    dct:issued "2007"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     dct:license <https://creativecommons.org/licenses/by/4.0>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'human body' from the Electrocardiogram (ECG) Ontology (Visual Paradigm version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/goncalves2011ecg/new-diagrams/human-body.png>;
-    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en.
+    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:21:31.173350887Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:21:31.173350887Z"^^xsd:dateTime .
