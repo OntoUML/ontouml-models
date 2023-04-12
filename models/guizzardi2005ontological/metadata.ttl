@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/guizzardi2005ontological/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/33b31da5-59ba-4d98-b73e-f5453bec076c/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Example of Integrated Ontology";
     dct:issued "2005"^^xsd:gYear;
     dct:modified "2005"^^xsd:gYear;
@@ -23,6 +25,7 @@
     dct:source <http://doc.utwente.nl/50826>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/guizzardi2005ontological>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/guizzardi2005ontological/>.
-<https://w3id.org/ontouml-models/model/guizzardi2005ontological/> dcat:distribution <https://w3id.org/ontouml-models/turtle/guizzardi2005ontological/>, <https://w3id.org/ontouml-models/json/guizzardi2005ontological/>, <https://w3id.org/ontouml-models/vpp/guizzardi2005ontological/>, <https://w3id.org/ontouml-models/original-diagram/guizzardi2005ontological/diagram1>, <https://w3id.org/ontouml-models/new-diagram/guizzardi2005ontological/integrated-ontology>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/guizzardi2005ontological>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:22:33.703706698Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:22:33.703706698Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/33b31da5-59ba-4d98-b73e-f5453bec076c> dcat:distribution <https://w3id.org/ontouml-models/distribution/8d0f8c2a-867b-4a69-87ea-ec8199a8a06e/>, <https://w3id.org/ontouml-models/distribution/f5f5724f-24d6-43c1-bc1a-146717f6d860/>, <https://w3id.org/ontouml-models/distribution/a99b7411-b782-48a8-9663-a207f052490e/>, <https://w3id.org/ontouml-models/distribution/f693db3c-36c1-4338-bd3b-763818b999e9>, <https://w3id.org/ontouml-models/distribution/954405fd-5332-4de4-8cd8-ebae258d7fea>
