@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/dpo2017/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/068db197-0147-4cff-aab5-83afcf604fc4/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Design Process Ontology";
     mod:acronym "DPO";
     dct:issued "2016"^^xsd:gYear;
@@ -26,6 +28,7 @@
     dct:source <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/software_engineering_standards_harmonization__an_ontology_based_approach_2017.pdf>, <https://doi.org/10.1007/978-3-319-49004-5_34>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/dpo2017>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/dpo2017/>.
-<https://w3id.org/ontouml-models/model/dpo2017/> dcat:distribution <https://w3id.org/ontouml-models/turtle/dpo2017/>, <https://w3id.org/ontouml-models/json/dpo2017/>, <https://w3id.org/ontouml-models/vpp/dpo2017/>, <https://w3id.org/ontouml-models/original-diagram/dpo2017/design-process-ontology-(dpo)>, <https://w3id.org/ontouml-models/new-diagram/dpo2017/design-process-ontology-(dpo)>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/dpo2017>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:15:50.508066367Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:15:50.508066367Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/068db197-0147-4cff-aab5-83afcf604fc4> dcat:distribution <https://w3id.org/ontouml-models/distribution/43b12cd3-cc53-49f8-806f-daf9675d9ea2/>, <https://w3id.org/ontouml-models/distribution/abcd9565-899e-42fe-8bd9-06d3283d6985/>, <https://w3id.org/ontouml-models/distribution/ae03d7bb-5c3a-4b23-941a-bf52e691c8d7/>, <https://w3id.org/ontouml-models/distribution/dfc4e06e-6c4e-495e-8b62-ffa5f774cf7c>, <https://w3id.org/ontouml-models/distribution/8c454c4f-86bd-477c-b3b9-fda9f07473c3>
