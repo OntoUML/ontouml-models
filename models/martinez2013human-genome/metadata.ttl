@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/martinez2013human-genome/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/9212ce83-9c5f-4a28-9a19-f1b7ac4ef05f/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Conceptual Schema of Human Genome";
     mod:acronym "CSHG";
     dct:issued "2013"^^xsd:gYear;
@@ -23,6 +26,7 @@
     dct:source <https://doi.org/10.1007/978-3-642-41924-9_40>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/martinez2013human-genome>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/martinez2013human-genome/>.
-<https://w3id.org/ontouml-models/model/martinez2013human-genome/> dcat:distribution <https://w3id.org/ontouml-models/turtle/martinez2013human-genome/>, <https://w3id.org/ontouml-models/json/martinez2013human-genome/>, <https://w3id.org/ontouml-models/vpp/martinez2013human-genome/>, <https://w3id.org/ontouml-models/original-diagram/martinez2013human-genome/variation-core-concepts>, <https://w3id.org/ontouml-models/original-diagram/martinez2013human-genome/variation-insertion>, <https://w3id.org/ontouml-models/new-diagram/martinez2013human-genome/variation-core-concepts>, <https://w3id.org/ontouml-models/new-diagram/martinez2013human-genome/variation-insertion>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/martinez2013human-genome>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:27:39.99307268Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:27:39.99307268Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/9212ce83-9c5f-4a28-9a19-f1b7ac4ef05f> dcat:distribution <https://w3id.org/ontouml-models/distribution/10e18a4a-0f15-46e7-a446-ef2afa4f1e9f/>, <https://w3id.org/ontouml-models/distribution/c11f1a03-47d9-4db5-8b47-2b40becb1abd/>, <https://w3id.org/ontouml-models/distribution/03af5a50-d0b8-4bb0-9cd5-2eb93367268d/>, <https://w3id.org/ontouml-models/distribution/28a54ad2-e7ba-45d9-a693-c3b2ed3ffe64>, <https://w3id.org/ontouml-models/distribution/66efc429-5f38-466f-bd03-cc55e30fb8ef>, <https://w3id.org/ontouml-models/distribution/660d2264-6e54-4fda-809b-d5d335ef3645>, <https://w3id.org/ontouml-models/distribution/00a1d2ad-849c-480b-8040-e0f1aee7069c>
