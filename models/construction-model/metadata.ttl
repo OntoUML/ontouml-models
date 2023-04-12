@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/construction-model/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/6f85f7ab-078d-4fe3-b1a1-ee38cef7842b/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "The Construction Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:T;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/construction-model>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/construction-model/>.
-<https://w3id.org/ontouml-models/model/construction-model/> dcat:distribution <https://w3id.org/ontouml-models/turtle/construction-model/>, <https://w3id.org/ontouml-models/json/construction-model/>, <https://w3id.org/ontouml-models/vpp/construction-model/>, <https://w3id.org/ontouml-models/original-diagram/construction-model/diagram1>, <https://w3id.org/ontouml-models/new-diagram/construction-model/the-construction-model->.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/construction-model>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:13:06.000570394Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:13:06.000570394Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/6f85f7ab-078d-4fe3-b1a1-ee38cef7842b> dcat:distribution <https://w3id.org/ontouml-models/distribution/43025562-c627-47ac-8e0b-106babe7083c/>, <https://w3id.org/ontouml-models/distribution/0485e161-6961-454b-9353-56363a800945/>, <https://w3id.org/ontouml-models/distribution/48605fd5-9577-4a6d-8e6b-6b7039b13789/>, <https://w3id.org/ontouml-models/distribution/57f211af-7338-4287-b7d8-1bf9cb9472c5>, <https://w3id.org/ontouml-models/distribution/def3382d-cc87-49e7-b304-0dea675091eb>
