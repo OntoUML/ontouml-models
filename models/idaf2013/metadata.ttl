@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/idaf2013/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/5e86b97e-2c37-4472-a4e8-ed0b50039cf4/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "Structure of the IDAF Ontology";
     dct:issued "2013"^^xsd:gYear;
     dct:modified "2013"^^xsd:gYear;
@@ -23,6 +25,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/idaf2013>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/idaf2013/>.
-<https://w3id.org/ontouml-models/model/idaf2013/> dcat:distribution <https://w3id.org/ontouml-models/turtle/idaf2013/>, <https://w3id.org/ontouml-models/json/idaf2013/>, <https://w3id.org/ontouml-models/vpp/idaf2013/>, <https://w3id.org/ontouml-models/original-diagram/idaf2013/diagram1>, <https://w3id.org/ontouml-models/original-diagram/idaf2013/diagram2>, <https://w3id.org/ontouml-models/new-diagram/idaf2013/diagram1>, <https://w3id.org/ontouml-models/new-diagram/idaf2013/diagram2>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/idaf2013>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:23:47.878560694Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:23:47.878560694Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/5e86b97e-2c37-4472-a4e8-ed0b50039cf4> dcat:distribution <https://w3id.org/ontouml-models/distribution/f61ab430-1543-4d15-b82b-574821e70354/>, <https://w3id.org/ontouml-models/distribution/2ea4b47f-6b58-4aca-895c-24e6ed467da2/>, <https://w3id.org/ontouml-models/distribution/1ae34e1b-a4a7-4ff6-8f20-ebcf17396b1e/>, <https://w3id.org/ontouml-models/distribution/a3c945ab-29a4-4869-875b-536cc9d823be>, <https://w3id.org/ontouml-models/distribution/f93d246e-b656-413c-b012-485bd8312711>, <https://w3id.org/ontouml-models/distribution/635ffb9c-3f7e-44c6-809c-851b1203e8c2>, <https://w3id.org/ontouml-models/distribution/be86d80a-cc04-4c6e-b412-3da0f64a86b7>
