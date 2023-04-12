@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/neves2020nwpontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/d443e72d-2b76-4d10-bf11-959787e9ba02/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/5f487ccc-6625-4bfd-a6f8-c700d4606fdc>;
     dct:title "NWPOntology";
     dct:issued "2020"^^xsd:gYear;
     dct:modified "2020"^^xsd:gYear;
@@ -24,6 +26,7 @@
     dct:source <https://dblp.org/rec/conf/ontobras/NevesBC20>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/neves2020nwpontology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/neves2020nwpontology/>.
-<https://w3id.org/ontouml-models/model/neves2020nwpontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/neves2020nwpontology/>, <https://w3id.org/ontouml-models/json/neves2020nwpontology/>, <https://w3id.org/ontouml-models/vpp/neves2020nwpontology/>, <https://w3id.org/ontouml-models/original-diagram/neves2020nwpontology/diagram1>, <https://w3id.org/ontouml-models/new-diagram/neves2020nwpontology/diagram1>.
+    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/neves2020nwpontology>;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:37:11.731200667Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:37:11.731200667Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/d443e72d-2b76-4d10-bf11-959787e9ba02> dcat:distribution <https://w3id.org/ontouml-models/distribution/e8acf77c-2a8d-4957-8814-feca30686134/>, <https://w3id.org/ontouml-models/distribution/0cbbda11-beaa-4135-b973-f8a584a3c15f/>, <https://w3id.org/ontouml-models/distribution/4a589029-15ae-43c1-8d2d-25cd6c76cfd0/>, <https://w3id.org/ontouml-models/distribution/9975883c-cb1c-4324-9c09-4b032da8b592>, <https://w3id.org/ontouml-models/distribution/f541d281-7bbb-47ab-b377-ebea3274ff71>
