@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/santos2020valuenetworks/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+<https://w3id.org/ontouml-models/distribution/77b40e42-f3c2-4a40-986f-f606af96f35c/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/1569536e-f363-44d1-9c61-9cc7aacfe930>;
+    dct:issued "2020"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Ontology for Value Networks with Corporate Responsibility"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/santos2020valuenetworks/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued  <https://w3id.org/fdp/fdp-o#metadataIssued> "2023-04-12T19:44:58.675156515Z"^^xsd:dateTime;
+    fdpo:metadataModified  <https://w3id.org/fdp/fdp-o#metadataModified> "2023-04-12T19:44:58.675156515Z"^^xsd:dateTime .
