@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/qam/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/0b6d6128-81e6-4985-8f0e-bd5af9a295f3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Quality Assurance Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Application;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/qam"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/qam/>.
-<https://w3id.org/ontouml-models/model/qam/> dcat:distribution <https://w3id.org/ontouml-models/turtle/qam/>, <https://w3id.org/ontouml-models/json/qam/>, <https://w3id.org/ontouml-models/vpp/qam/>, <https://w3id.org/ontouml-models/original-diagram/qam/diagram1>, <https://w3id.org/ontouml-models/new-diagram/qam/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/qam"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:10:41.704909005Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:10:41.704909005Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/0b6d6128-81e6-4985-8f0e-bd5af9a295f3> dcat:distribution <https://w3id.org/ontouml-models/distribution/f39081f9-416d-4d2f-832f-1b82d4a7d4cf/>, <https://w3id.org/ontouml-models/distribution/1e518491-06c2-410d-9869-96e3f778abec/>, <https://w3id.org/ontouml-models/distribution/160ad523-d919-4ec6-9614-e0ddc55304c1/>, <https://w3id.org/ontouml-models/distribution/882c2e30-eeea-4f93-9e39-bbf34c29d6b6>, <https://w3id.org/ontouml-models/distribution/bbeae61c-c1e6-4d74-b402-e1c57a8bddf9>.
