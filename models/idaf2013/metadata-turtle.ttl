@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/idaf2013/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/e21e8a3e-17dd-40e0-9c26-5f643723fcd7/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/291e45be-4c9d-41b1-a237-f3f47714226d>;
+    dct:issued "2013"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Structure of the IDAF Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/idaf2013/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:55:00.900647533Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:55:00.900647533Z"^^xsd:dateTime .
