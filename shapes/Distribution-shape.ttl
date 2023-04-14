@@ -14,9 +14,9 @@
     sh:path ocmv:isComplete ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
-    sh:in ( "true"^^xsd:boolean "false"^^xsd:boolean ) ;
-    dash:editor dash:EnumSelectEditor ;
-    dash:viewer dash:LiteralViewer ;
+    sh:datatype xsd:boolean ;
+    # dash:editor dash:BooleanSelectEditor ;
+    # dash:viewer dash:LiteralViewer ;
   ] ,
   [
     sh:name "Download URL" ;
