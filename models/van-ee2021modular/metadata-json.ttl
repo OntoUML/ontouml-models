@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/van-ee2021modular/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+<https://w3id.org/ontouml-models/distribution/15762e63-c636-4839-a60e-199fff2c104e/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/c6ec6f27-cffa-4a38-9927-8e6b921e996a>;
+    dct:issued "2021"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Modular Construction Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/van-ee2021modular/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:19:00.326467876Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:19:00.326467876Z"^^xsd:dateTime .
