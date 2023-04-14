@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/social-contract/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/3a5e93f8-8a29-47cb-be7d-9c5609d754a8/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Social Contract Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -20,6 +22,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/social-contract"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/social-contract/>.
-<https://w3id.org/ontouml-models/model/social-contract/> dcat:distribution <https://w3id.org/ontouml-models/turtle/social-contract/>, <https://w3id.org/ontouml-models/json/social-contract/>, <https://w3id.org/ontouml-models/vpp/social-contract/>, <https://w3id.org/ontouml-models/original-diagram/social-contract/social-contract>, <https://w3id.org/ontouml-models/new-diagram/social-contract/social-contract>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/social-contract"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:16:06.210053842Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:16:06.210053842Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/3a5e93f8-8a29-47cb-be7d-9c5609d754a8> dcat:distribution <https://w3id.org/ontouml-models/distribution/5e09f3d1-bec6-435a-9bdf-f1f183210914/>, <https://w3id.org/ontouml-models/distribution/31f8df7d-c3b6-45f2-884b-7466fd6d0bfc/>, <https://w3id.org/ontouml-models/distribution/7fb87c89-ce4c-456f-bd51-2d9fa28d26f8/>, <https://w3id.org/ontouml-models/distribution/3d8e86ec-1652-40b9-9019-f31f23ba9491>, <https://w3id.org/ontouml-models/distribution/fd91e758-9a0d-43da-912c-872d8f8110c3>.

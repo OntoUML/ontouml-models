@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/real-estate-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/4b53123f-83f0-493a-951e-5c9d70ae6bda/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Real Estate Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/real-estate-ontology"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/real-estate-ontology/>.
-<https://w3id.org/ontouml-models/model/real-estate-ontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/real-estate-ontology/>, <https://w3id.org/ontouml-models/json/real-estate-ontology/>, <https://w3id.org/ontouml-models/vpp/real-estate-ontology/>, <https://w3id.org/ontouml-models/original-diagram/real-estate-ontology/diagram1>, <https://w3id.org/ontouml-models/new-diagram/real-estate-ontology/realstatemodel>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/real-estate-ontology"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:11:29.34266465Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:11:29.34266465Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/4b53123f-83f0-493a-951e-5c9d70ae6bda> dcat:distribution <https://w3id.org/ontouml-models/distribution/0e7bd522-511e-4f27-859f-3cfc1f900302/>, <https://w3id.org/ontouml-models/distribution/033f38a4-bf80-4796-9692-99d4e8043633/>, <https://w3id.org/ontouml-models/distribution/673c3c56-0853-414f-a9fb-28c95ad6e694/>, <https://w3id.org/ontouml-models/distribution/1eb26eab-7adc-42fa-ac3b-c698eb2c8d89>, <https://w3id.org/ontouml-models/distribution/4901a3d3-c5ef-4f7d-8c6d-369a0f8d631a>.

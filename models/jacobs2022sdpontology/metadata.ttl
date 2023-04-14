@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/jacobs2022sdpontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/d6c9a835-4c50-42a2-a383-952cd9de8497/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Software Development Project Ontology";
     mod:acronym "SDP-Ontology";
     dct:issued "2022"^^xsd:gYear;
@@ -24,6 +26,7 @@
     dct:source <http://essay.utwente.nl/93228/1/Jacobs_MA_EEMCS.pdf>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/jacobs2022sdpontology"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/jacobs2022sdpontology/>.
-<https://w3id.org/ontouml-models/model/jacobs2022sdpontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/jacobs2022sdpontology/>, <https://w3id.org/ontouml-models/json/jacobs2022sdpontology/>, <https://w3id.org/ontouml-models/vpp/jacobs2022sdpontology/>, <https://w3id.org/ontouml-models/original-diagram/jacobs2022sdpontology/development-team>, <https://w3id.org/ontouml-models/original-diagram/jacobs2022sdpontology/programming-languages_frameworks>, <https://w3id.org/ontouml-models/original-diagram/jacobs2022sdpontology/software-project>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/jacobs2022sdpontology"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:55:41.202203183Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:55:41.202203183Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/d6c9a835-4c50-42a2-a383-952cd9de8497> dcat:distribution <https://w3id.org/ontouml-models/distribution/e7762868-a760-4436-8d95-8f30014886fc/>, <https://w3id.org/ontouml-models/distribution/55847996-1bc1-4c78-a012-9436fd44c215/>, <https://w3id.org/ontouml-models/distribution/1c7cb20c-2e46-4afc-a246-6a9013c03e1e/>, <https://w3id.org/ontouml-models/distribution/6cd9be72-784e-4921-8848-52fda1fd473f>, <https://w3id.org/ontouml-models/distribution/e96c7d36-e6c6-4d2f-bae0-092b840c1d88>, <https://w3id.org/ontouml-models/distribution/8aeb12cc-33aa-4071-84d2-a9f1463a017a>.

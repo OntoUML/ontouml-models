@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/new-diagram/haridy2021egyptian-e-government/diagram1> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/4a0f35ac-cc48-4596-9c27-a3c387d03b88> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/5f85d9aa-67ac-4315-b60d-0212ea910320>;
+    dct:issued "2021"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'diagram1' from the Egyptian E-Government Conceptual Model (Visual Paradigm version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/haridy2021egyptian-e-government/new-diagrams/diagram1.png>;
-    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en.
+    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en;
+    fdpo:metadataIssued "2023-04-14T17:54:31.864812669Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:54:31.864812669Z"^^xsd:dateTime .

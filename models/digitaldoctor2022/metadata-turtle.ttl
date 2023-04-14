@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/digitaldoctor2022/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/7c79b244-496b-47a2-8bc0-1e9b16c71d0a/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/f898284f-601b-4492-a515-cc39de252d1c>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Digital Doctor Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/digitaldoctor2022/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:47:15.262567734Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:47:15.262567734Z"^^xsd:dateTime .

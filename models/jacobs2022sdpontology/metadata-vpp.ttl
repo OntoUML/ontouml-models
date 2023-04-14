@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/jacobs2022sdpontology/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/1c7cb20c-2e46-4afc-a246-6a9013c03e1e/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/d6c9a835-4c50-42a2-a383-952cd9de8497>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:license <https://creativecommons.org/licenses/by/4.0>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Software Development Project Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/jacobs2022sdpontology/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:55:51.655555136Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:55:51.655555136Z"^^xsd:dateTime .

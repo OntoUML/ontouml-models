@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/mgic-antt2011/serviço-em-concessão> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/a5c1559d-9adf-460a-9b4b-e6e7468b6443> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/c24e2b86-6c7a-43ac-a604-5dd1d4ab9217>;
+    dct:issued "2011"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'serviço em concessão' from the National Agency of Terrestrial Transportation (ANTT) Ontology (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/mgic-antt2011/original-diagrams/serviço-em-concessão.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued "2023-04-14T18:05:29.580656375Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:05:29.580656375Z"^^xsd:dateTime .

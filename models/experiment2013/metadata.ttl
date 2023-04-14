@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/experiment2013/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/34ed86ed-d667-41d2-9eef-cbe8f238e1f9/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Experiment Model";
     dct:issued "2013"^^xsd:gYear;
     dct:modified "2013"^^xsd:gYear;
@@ -22,6 +24,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/experiment2013"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/experiment2013/>.
-<https://w3id.org/ontouml-models/model/experiment2013/> dcat:distribution <https://w3id.org/ontouml-models/turtle/experiment2013/>, <https://w3id.org/ontouml-models/json/experiment2013/>, <https://w3id.org/ontouml-models/vpp/experiment2013/>, <https://w3id.org/ontouml-models/original-diagram/experiment2013/diagram1>, <https://w3id.org/ontouml-models/new-diagram/experiment2013/experiment>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/experiment2013"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:48:51.320766634Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:48:51.320766634Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/34ed86ed-d667-41d2-9eef-cbe8f238e1f9> dcat:distribution <https://w3id.org/ontouml-models/distribution/8221fc87-d4d9-49b1-b67e-1e672f9f2724/>, <https://w3id.org/ontouml-models/distribution/68c85e81-ae62-4a09-aafb-79545a360312/>, <https://w3id.org/ontouml-models/distribution/a88b9fd9-70d7-402e-94df-bb773cf792cb/>, <https://w3id.org/ontouml-models/distribution/0a5bbc67-bfe4-46a6-aee1-277ef6270e5d>, <https://w3id.org/ontouml-models/distribution/e14e35e1-d5c7-43cb-8a8f-6c10236ec3d5>.

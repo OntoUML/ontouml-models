@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/health-organizations/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/c6d2e61a-4904-47ec-8935-2e2e56669220/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Model of Health Organizations";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:R;
@@ -20,6 +22,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/health-organizations"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/health-organizations/>.
-<https://w3id.org/ontouml-models/model/health-organizations/> dcat:distribution <https://w3id.org/ontouml-models/turtle/health-organizations/>, <https://w3id.org/ontouml-models/json/health-organizations/>, <https://w3id.org/ontouml-models/vpp/health-organizations/>, <https://w3id.org/ontouml-models/original-diagram/health-organizations/diagram1>, <https://w3id.org/ontouml-models/new-diagram/health-organizations/brazilian-health-organization>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/health-organizations"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:54:42.123428087Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:54:42.123428087Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/c6d2e61a-4904-47ec-8935-2e2e56669220> dcat:distribution <https://w3id.org/ontouml-models/distribution/6b943f53-9faf-4526-9dcc-fcaecb133821/>, <https://w3id.org/ontouml-models/distribution/a3013f40-395d-43e7-a3a9-25f8429fa3da/>, <https://w3id.org/ontouml-models/distribution/cf6a96d3-f409-452b-9b30-43073fbd575f/>, <https://w3id.org/ontouml-models/distribution/d9d43e88-911f-456d-be76-9530074dbd85>, <https://w3id.org/ontouml-models/distribution/34977fd7-d922-4760-be52-a73e86684e1a>.

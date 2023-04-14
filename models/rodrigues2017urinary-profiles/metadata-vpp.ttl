@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/rodrigues2017urinary-profiles/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
+<https://w3id.org/ontouml-models/distribution/78c22b1b-5af5-4780-be81-d35b544a83f3/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/ab12ac77-6476-4b22-9c2b-bb70a9c6f26d>;
+    dct:issued "2015"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Ontological Model for Urinary Profiles and Events"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/rodrigues2017urinary-profiles/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:12:36.657120939Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:12:36.657120939Z"^^xsd:dateTime .

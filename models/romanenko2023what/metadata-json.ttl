@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/romanenko2023what/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/f94c18dc-8c06-4e55-b600-3ebec1683cc5/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/f7a6d395-077a-4a83-b554-f169733c2329>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     dct:license <https://www.gnu.org/licenses/gpl-3.0.en.html>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Library management system"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/romanenko2023what/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:13:30.449698894Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:13:30.449698894Z"^^xsd:dateTime .

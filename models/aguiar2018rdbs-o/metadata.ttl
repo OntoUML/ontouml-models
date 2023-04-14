@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/aguiar2018rdbs-o/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/1c0413cd-ce41-4822-a227-68cddf6074e6/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Relational Database System Ontology";
     mod:acronym "RDBS-O";
     dct:issued "2018"^^xsd:gYear;
@@ -24,6 +26,7 @@
     dct:source <https://dblp.org/rec/conf/ontobras/AguiarFS18>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/aguiar2018rdbs-o"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/aguiar2018rdbs-o/>.
-<https://w3id.org/ontouml-models/model/aguiar2018rdbs-o/> dcat:distribution <https://w3id.org/ontouml-models/turtle/aguiar2018rdbs-o/>, <https://w3id.org/ontouml-models/json/aguiar2018rdbs-o/>, <https://w3id.org/ontouml-models/vpp/aguiar2018rdbs-o/>, <https://w3id.org/ontouml-models/original-diagram/aguiar2018rdbs-o/rdbs-o>, <https://w3id.org/ontouml-models/new-diagram/aguiar2018rdbs-o/rdbs-o>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/aguiar2018rdbs-o"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:33:45.214914024Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:33:45.214914024Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/1c0413cd-ce41-4822-a227-68cddf6074e6> dcat:distribution <https://w3id.org/ontouml-models/distribution/20be03e0-f14f-41a4-bd63-4641247fd4e5/>, <https://w3id.org/ontouml-models/distribution/fd4de7bd-700d-4fb5-946d-eaab891acd97/>, <https://w3id.org/ontouml-models/distribution/b7e06b20-a92c-4ba0-87ab-6c8f5796d0ff/>, <https://w3id.org/ontouml-models/distribution/da38673e-deb3-499b-94d3-e7a36b72a86c>, <https://w3id.org/ontouml-models/distribution/66c4bf35-4102-45cd-841a-5ff2be8ac11c>.

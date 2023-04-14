@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/internal-affairs2013/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/2a2976ce-dbbc-4462-a1fd-bc061dcfae2f/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/c150fd37-6fa4-4b0a-a2d0-7aff5e6a6cde>;
+    dct:issued "2013"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Internal Affairs Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/internal-affairs2013/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:55:17.938336793Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:55:17.938336793Z"^^xsd:dateTime .
