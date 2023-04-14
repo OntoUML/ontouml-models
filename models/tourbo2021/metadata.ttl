@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/tourbo2021/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/3c99f544-a5b2-4bd2-bcde-7c689d077c62/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Tour Guide Booking Ontology";
     mod:acronym "TourBo";
     dct:issued "2021"^^xsd:gYear;
@@ -24,6 +26,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/tourbo2021>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/tourbo2021/>.
-<https://w3id.org/ontouml-models/model/tourbo2021/> dcat:distribution <https://w3id.org/ontouml-models/turtle/tourbo2021/>, <https://w3id.org/ontouml-models/json/tourbo2021/>, <https://w3id.org/ontouml-models/vpp/tourbo2021/>, <https://w3id.org/ontouml-models/original-diagram/tourbo2021/view0_create_and_book_itinenrary>, <https://w3id.org/ontouml-models/original-diagram/tourbo2021/view1_taxonomy_activity>, <https://w3id.org/ontouml-models/original-diagram/tourbo2021/view2_datatypes>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/tourbo2021"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:18:18.342435956Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:18:18.342435956Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/3c99f544-a5b2-4bd2-bcde-7c689d077c62> dcat:distribution <https://w3id.org/ontouml-models/distribution/e7e3a7a1-9277-4f49-b381-eeefcbbca142/>, <https://w3id.org/ontouml-models/distribution/b6e234b9-2acc-495a-8964-834c834bee85/>, <https://w3id.org/ontouml-models/distribution/d60969e4-5f31-49a5-8228-9817f264e74b/>, <https://w3id.org/ontouml-models/distribution/f9782efa-ca85-4077-b494-55cc569d15c9>, <https://w3id.org/ontouml-models/distribution/d2aeee45-2029-4279-b26e-f35c6b76ec0f>, <https://w3id.org/ontouml-models/distribution/9e49edad-3b96-4334-b1dd-d2d87239b76e>.

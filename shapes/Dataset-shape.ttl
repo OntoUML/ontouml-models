@@ -25,9 +25,13 @@
     sh:name "Storage URL" ;
     sh:description "A URL of a service in which the data and metadata of dataset are stored." ;
     sh:path ocmv:storageUrl ;
+    sh:or (
+      [ sh:datatype xsd:anyURI ; ]
+      [ sh:nodeKind sh:Literal ; ]
+    ) ;
     sh:pattern "^https?://" ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:URIViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ],
   [
     sh:name "Contact Points" ;

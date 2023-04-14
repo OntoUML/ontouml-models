@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/qam/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/1e518491-06c2-410d-9869-96e3f778abec/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/0b6d6128-81e6-4985-8f0e-bd5af9a295f3>;
+    dct:issued "2013"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     dct:license <https://creativecommons.org/licenses/by/4.0>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Quality Assurance Model"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/qam/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:10:42.956604864Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:10:42.956604864Z"^^xsd:dateTime .

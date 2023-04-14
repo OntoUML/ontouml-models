@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/online-mentoring/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/68e2c350-96a5-495f-b573-b2b14bfde3e2/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Online Mentoring Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:L;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/online-mentoring>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/online-mentoring/>.
-<https://w3id.org/ontouml-models/model/online-mentoring/> dcat:distribution <https://w3id.org/ontouml-models/turtle/online-mentoring/>, <https://w3id.org/ontouml-models/json/online-mentoring/>, <https://w3id.org/ontouml-models/vpp/online-mentoring/>, <https://w3id.org/ontouml-models/original-diagram/online-mentoring/online-mentoring-model>, <https://w3id.org/ontouml-models/new-diagram/online-mentoring/online-mentoring>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/online-mentoring"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:08:18.555620709Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:08:18.555620709Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/68e2c350-96a5-495f-b573-b2b14bfde3e2> dcat:distribution <https://w3id.org/ontouml-models/distribution/0edd8dd8-5606-43d8-b525-033a487323f7/>, <https://w3id.org/ontouml-models/distribution/8cdffeeb-6c5a-4eaa-bdc9-791a36e15f02/>, <https://w3id.org/ontouml-models/distribution/96bac99f-b93f-42bd-9d4b-6a106dfa4f18/>, <https://w3id.org/ontouml-models/distribution/1efc856e-13d1-4ef6-8100-524f26f20698>, <https://w3id.org/ontouml-models/distribution/41c931c6-70f7-4917-9b45-8f5ed7ed99f3>.

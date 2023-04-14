@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/duarte2021ross/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/3adf4afc-9f96-403d-914a-72e41547f673/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Reference Ontology of Software Systems";
     mod:acronym "ROSS";
     dct:issued "2021"^^xsd:gYear;
@@ -24,6 +27,7 @@
     dct:source <https://doi.org/10.1016/j.datak.2021.101892>;
     ocmv:representationStyle ocmv:UfoStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/duarte2021ross>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/duarte2021ross/>.
-<https://w3id.org/ontouml-models/model/duarte2021ross/> dcat:distribution <https://w3id.org/ontouml-models/turtle/duarte2021ross/>, <https://w3id.org/ontouml-models/json/duarte2021ross/>, <https://w3id.org/ontouml-models/vpp/duarte2021ross/>, <https://w3id.org/ontouml-models/original-diagram/duarte2021ross/business-layer>, <https://w3id.org/ontouml-models/original-diagram/duarte2021ross/complex-system>, <https://w3id.org/ontouml-models/original-diagram/duarte2021ross/machine-layer>, <https://w3id.org/ontouml-models/original-diagram/duarte2021ross/system-layer>, <https://w3id.org/ontouml-models/new-diagram/duarte2021ross/business-layer>, <https://w3id.org/ontouml-models/new-diagram/duarte2021ross/complex-system>, <https://w3id.org/ontouml-models/new-diagram/duarte2021ross/machine-layer>, <https://w3id.org/ontouml-models/new-diagram/duarte2021ross/system-layer>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/duarte2021ross"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:48:05.774060027Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:48:05.774060027Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/3adf4afc-9f96-403d-914a-72e41547f673> dcat:distribution <https://w3id.org/ontouml-models/distribution/48151b6e-a47c-422a-932c-2cc0d141dae2/>, <https://w3id.org/ontouml-models/distribution/42793b9c-2cea-4252-bc24-2124d8405515/>, <https://w3id.org/ontouml-models/distribution/594e4432-4153-4ef5-892e-36dca41de0a3/>, <https://w3id.org/ontouml-models/distribution/67d4cd33-db9a-44aa-823e-a13ffd91cb88>, <https://w3id.org/ontouml-models/distribution/eced4c7b-4bdd-44b6-bc03-4a2e4e6c152f>, <https://w3id.org/ontouml-models/distribution/c2284a4f-6272-4ce9-8d08-22b6e4b5cd14>, <https://w3id.org/ontouml-models/distribution/5614c367-5efd-4d21-9eb7-0fe1e0c375ab>, <https://w3id.org/ontouml-models/distribution/cc2fd660-4e55-4e2a-a6d8-678498e5c614>, <https://w3id.org/ontouml-models/distribution/3ee098a3-27bd-498d-ae3a-c69f112384b0>, <https://w3id.org/ontouml-models/distribution/de1872c6-dc9c-4f75-8d9b-f910d42dba1f>, <https://w3id.org/ontouml-models/distribution/89a71d40-70cc-4256-9343-56c1860808e3>.

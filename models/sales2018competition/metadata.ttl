@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/sales2018competition/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/664d2c61-a600-4730-848d-83e46f7dec6e/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Ontology of Competition";
     dct:issued "2018"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -22,6 +24,7 @@
     dct:source <https://dblp.org/rec/conf/vmbo/SalesGGM18>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/sales2018competition>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/sales2018competition/>.
-<https://w3id.org/ontouml-models/model/sales2018competition/> dcat:distribution <https://w3id.org/ontouml-models/turtle/sales2018competition/>, <https://w3id.org/ontouml-models/json/sales2018competition/>, <https://w3id.org/ontouml-models/vpp/sales2018competition/>, <https://w3id.org/ontouml-models/original-diagram/sales2018competition/a-model-fragment-on-market-competition>, <https://w3id.org/ontouml-models/original-diagram/sales2018competition/a-model-fragment-on-potential-competition>, <https://w3id.org/ontouml-models/original-diagram/sales2018competition/a-preliminary-ontouml-model-of-competition>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/sales2018competition"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:13:56.116457511Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:13:56.116457511Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/664d2c61-a600-4730-848d-83e46f7dec6e> dcat:distribution <https://w3id.org/ontouml-models/distribution/ce97de16-6275-4aba-9389-c7f91c830dba/>, <https://w3id.org/ontouml-models/distribution/169e7a10-45ea-4375-ac19-362e940f19bb/>, <https://w3id.org/ontouml-models/distribution/106f274f-ba03-4055-a922-e00c6173d16f/>, <https://w3id.org/ontouml-models/distribution/f20db634-0f02-4cf9-a820-57aa7d0b759c>, <https://w3id.org/ontouml-models/distribution/1e7637b7-cf81-4da3-a5ad-b1cc97f04a8f>, <https://w3id.org/ontouml-models/distribution/f21f0dc2-4fa4-4d17-9882-31b1c4a6fd00>.

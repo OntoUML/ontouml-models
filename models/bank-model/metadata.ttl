@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/bank-model/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/db57ef4e-b335-4fcd-9935-609e932ba8e8/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Bank Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/bank-model>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/bank-model/>.
-<https://w3id.org/ontouml-models/model/bank-model/> dcat:distribution <https://w3id.org/ontouml-models/turtle/bank-model/>, <https://w3id.org/ontouml-models/json/bank-model/>, <https://w3id.org/ontouml-models/vpp/bank-model/>, <https://w3id.org/ontouml-models/original-diagram/bank-model/banking>, <https://w3id.org/ontouml-models/new-diagram/bank-model/banking>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/bank-model"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:37:32.234964024Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:37:32.234964024Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/db57ef4e-b335-4fcd-9935-609e932ba8e8> dcat:distribution <https://w3id.org/ontouml-models/distribution/3212e572-0bf6-43cd-824c-d533db24bd19/>, <https://w3id.org/ontouml-models/distribution/158a3063-48a4-4f2a-914a-abb9f6f8dff1/>, <https://w3id.org/ontouml-models/distribution/5637c70a-a015-40dc-bae6-03b8966fc355/>, <https://w3id.org/ontouml-models/distribution/08ee5527-2216-409e-9cd5-3f6460455699>, <https://w3id.org/ontouml-models/distribution/3e3d2bb5-a7c0-498c-92d4-44605794a525>.

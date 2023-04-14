@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/8353ae58-e924-4b13-8cbe-7078e59830ac/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "OntoUML Model Representing a Subset of Criminal Investigation Domain";
     dct:issued "2022"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -23,6 +25,7 @@
     dct:source <https://doi.org/10.1016/j.datak.2022.102040>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/fumagalli2022criminal-investigation>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation/>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation/> dcat:distribution <https://w3id.org/ontouml-models/turtle/fumagalli2022criminal-investigation/>, <https://w3id.org/ontouml-models/json/fumagalli2022criminal-investigation/>, <https://w3id.org/ontouml-models/vpp/fumagalli2022criminal-investigation/>, <https://w3id.org/ontouml-models/original-diagram/fumagalli2022criminal-investigation/criminal-investigation>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/fumagalli2022criminal-investigation"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:51:20.341343389Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:51:20.341343389Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/8353ae58-e924-4b13-8cbe-7078e59830ac> dcat:distribution <https://w3id.org/ontouml-models/distribution/74bb1cb5-3c79-4b91-8c51-2907287519fd/>, <https://w3id.org/ontouml-models/distribution/2fe28a11-d2f0-4cac-bdef-b71788369fd9/>, <https://w3id.org/ontouml-models/distribution/b8687fb1-d444-43f1-a4e8-37e894f98a5a/>, <https://w3id.org/ontouml-models/distribution/6f1246f7-6091-4130-b872-06be5a749f72>.

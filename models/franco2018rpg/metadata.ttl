@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/franco2018rpg/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/0aa4b475-184e-4452-a030-56b7bd4fd931/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Role Playing Games Ontology";
     dct:issued "2018"^^xsd:gYear;
     dct:modified "2018"^^xsd:gYear;
@@ -23,6 +25,7 @@
     dct:source <http://www.sbgames.org/sbgames2018/files/papers/ComputacaoShort/188294.pdf>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/franco2018rpg>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/franco2018rpg/>.
-<https://w3id.org/ontouml-models/model/franco2018rpg/> dcat:distribution <https://w3id.org/ontouml-models/turtle/franco2018rpg/>, <https://w3id.org/ontouml-models/json/franco2018rpg/>, <https://w3id.org/ontouml-models/vpp/franco2018rpg/>, <https://w3id.org/ontouml-models/original-diagram/franco2018rpg/diagram1>, <https://w3id.org/ontouml-models/new-diagram/franco2018rpg/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/franco2018rpg"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:50:53.734972107Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:50:53.734972107Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/0aa4b475-184e-4452-a030-56b7bd4fd931> dcat:distribution <https://w3id.org/ontouml-models/distribution/bc948025-aae9-463a-af79-a70b2c80f885/>, <https://w3id.org/ontouml-models/distribution/c38e95ac-9523-4435-990b-fd654dc4efca/>, <https://w3id.org/ontouml-models/distribution/f4f4c7c4-6fb6-425e-ad47-ad65da5a121a/>, <https://w3id.org/ontouml-models/distribution/e24e6d0b-2844-4894-a881-62d9fdbf54c5>, <https://w3id.org/ontouml-models/distribution/692da264-db2e-4ba1-b846-a4f035d21371>.

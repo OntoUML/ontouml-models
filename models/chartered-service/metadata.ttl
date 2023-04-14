@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/chartered-service/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/81ee57e0-d340-4da4-826b-f99e361652d5/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Chartered Service Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/chartered-service>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/chartered-service/>.
-<https://w3id.org/ontouml-models/model/chartered-service/> dcat:distribution <https://w3id.org/ontouml-models/turtle/chartered-service/>, <https://w3id.org/ontouml-models/json/chartered-service/>, <https://w3id.org/ontouml-models/vpp/chartered-service/>, <https://w3id.org/ontouml-models/original-diagram/chartered-service/diagram1>, <https://w3id.org/ontouml-models/new-diagram/chartered-service/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/chartered-service"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:44:24.770123474Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:44:24.770123474Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/81ee57e0-d340-4da4-826b-f99e361652d5> dcat:distribution <https://w3id.org/ontouml-models/distribution/e9788338-9faa-44f7-9c1a-b4b8d18132be/>, <https://w3id.org/ontouml-models/distribution/cc6a7aa2-cee7-4d07-a7ae-dcc8f267e19f/>, <https://w3id.org/ontouml-models/distribution/7b6290ff-a5c6-449a-9171-3d0c3a0da006/>, <https://w3id.org/ontouml-models/distribution/c6c45430-2f49-41d3-84b6-a3e656ec7fe6>, <https://w3id.org/ontouml-models/distribution/888003cf-595f-466a-a63c-c897612da9c1>.

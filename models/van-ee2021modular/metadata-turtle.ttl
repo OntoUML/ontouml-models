@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,8 +8,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/van-ee2021modular/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+<https://w3id.org/ontouml-models/distribution/9b158615-87dd-4118-8eb0-2481a53029f7/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/c6ec6f27-cffa-4a38-9927-8e6b921e996a>;
+    dct:issued "2021"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:title "Turtle distribution of Modular Construction Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/van-ee2021modular/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:19:16.0170111Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:19:16.0170111Z"^^xsd:dateTime .

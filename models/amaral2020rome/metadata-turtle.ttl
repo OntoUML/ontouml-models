@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/amaral2020rome/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/a46f55b3-84a1-4a39-a35f-f26fe9004ff0/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/d7a95e79-d01a-42cd-b059-400f314a8038>;
+    dct:issued "2020"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Reference Ontology of Money and Virtual Currencies"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/amaral2020rome/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:36:16.045515991Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:36:16.045515991Z"^^xsd:dateTime .

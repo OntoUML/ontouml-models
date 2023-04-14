@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/clergy-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/931db746-c36d-4077-bde7-1c317bfa5bcd/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Clergy Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:B;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/clergy-ontology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/clergy-ontology/>.
-<https://w3id.org/ontouml-models/model/clergy-ontology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/clergy-ontology/>, <https://w3id.org/ontouml-models/json/clergy-ontology/>, <https://w3id.org/ontouml-models/vpp/clergy-ontology/>, <https://w3id.org/ontouml-models/original-diagram/clergy-ontology/diagram1>, <https://w3id.org/ontouml-models/new-diagram/clergy-ontology/clergy-ontology>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/clergy-ontology"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:44:33.540768813Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:44:33.540768813Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/931db746-c36d-4077-bde7-1c317bfa5bcd> dcat:distribution <https://w3id.org/ontouml-models/distribution/568d3128-1436-4d7c-a3e5-c2d66f4b630b/>, <https://w3id.org/ontouml-models/distribution/f2a049dd-f81b-402f-bdcc-40083970b596/>, <https://w3id.org/ontouml-models/distribution/7242f040-363d-4614-ae53-fddeb675d19b/>, <https://w3id.org/ontouml-models/distribution/111f1523-39dd-4fd2-b2bf-8970aaffb372>, <https://w3id.org/ontouml-models/distribution/3a6016dd-25c6-4ba5-912f-8f9eb0ca83c7>.

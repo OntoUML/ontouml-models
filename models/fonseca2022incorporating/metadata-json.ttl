@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/fonseca2022incorporating/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/cf1def54-3256-4f9d-a43b-7648ad200574/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/ad016e7d-9ec8-42e3-b3e1-6d60cf178a78>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Examples of Multi-level Modeling"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/fonseca2022incorporating/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:50:08.247324038Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:50:08.247324038Z"^^xsd:dateTime .

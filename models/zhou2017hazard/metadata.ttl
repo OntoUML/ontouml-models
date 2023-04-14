@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/zhou2017hazard/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/e28bed62-0a6b-49a4-a3a9-01c8e4f527e3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Hazard Ontology";
     mod:acronym "HO";
     dct:issued "2017"^^xsd:gYear;
@@ -24,6 +27,7 @@
     dct:source <http://urn.kb.se/resolve?urn=urn:nbn:se:mdh:diva-37386>, <https://doi.org/10.1109/ICSRS.2017.8272856>, <https://doi.org/10.1109/SEAA.2017.48>;
     ocmv:representationStyle ocmv:UfoStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/zhou2017hazard>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/zhou2017hazard/>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard/> dcat:distribution <https://w3id.org/ontouml-models/turtle/zhou2017hazard/>, <https://w3id.org/ontouml-models/json/zhou2017hazard/>, <https://w3id.org/ontouml-models/vpp/zhou2017hazard/>, <https://w3id.org/ontouml-models/original-diagram/zhou2017hazard/hazard-ontology>, <https://w3id.org/ontouml-models/new-diagram/zhou2017hazard/hazard-ontology>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/zhou2017hazard"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:21:04.152104584Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:21:04.152104584Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/e28bed62-0a6b-49a4-a3a9-01c8e4f527e3> dcat:distribution <https://w3id.org/ontouml-models/distribution/93bbe0fc-3e47-4037-b4bf-1fb5b88664b1/>, <https://w3id.org/ontouml-models/distribution/d9c7230e-3e8b-4be3-a9e9-8be974d68086/>, <https://w3id.org/ontouml-models/distribution/20051c47-c7b7-4ec9-bb5f-cc09e110ebb8/>, <https://w3id.org/ontouml-models/distribution/577739c1-9341-4224-9f8b-dce26d195383>, <https://w3id.org/ontouml-models/distribution/16ed48c3-b042-41cc-a9d4-04301817795e>.

@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/sousa2022triponto/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/5cf371b9-49ce-4d94-8718-80c8743ec335/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "TripOnto";
     mod:acronym "TripOnto";
     dct:issued "2022"^^xsd:gYear;
@@ -23,6 +25,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/sousa2022triponto>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/sousa2022triponto/>.
-<https://w3id.org/ontouml-models/model/sousa2022triponto/> dcat:distribution <https://w3id.org/ontouml-models/turtle/sousa2022triponto/>, <https://w3id.org/ontouml-models/json/sousa2022triponto/>, <https://w3id.org/ontouml-models/vpp/sousa2022triponto/>, <https://w3id.org/ontouml-models/original-diagram/sousa2022triponto/diagram1>, <https://w3id.org/ontouml-models/original-diagram/sousa2022triponto/diagram2>, <https://w3id.org/ontouml-models/original-diagram/sousa2022triponto/diagram3>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/sousa2022triponto"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:16:15.916321656Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:16:15.916321656Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/5cf371b9-49ce-4d94-8718-80c8743ec335> dcat:distribution <https://w3id.org/ontouml-models/distribution/ca5096a4-78f7-419a-95e2-1d5b95a09560/>, <https://w3id.org/ontouml-models/distribution/6d7929de-2a65-4d58-a213-28228ccd7739/>, <https://w3id.org/ontouml-models/distribution/b1ebfa41-3481-48d0-a3ca-1ab6d12c4882/>, <https://w3id.org/ontouml-models/distribution/98303ee6-4572-4c52-83c9-aa918b49cb9b>, <https://w3id.org/ontouml-models/distribution/a4fa5a47-4c4c-4af2-a8f3-ba1c8e784e24>, <https://w3id.org/ontouml-models/distribution/6b45540a-3bbd-4f45-b000-bc7c1ed2a73c>.

@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/mello2022monotheism/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/01b11d4e-3eb1-4aae-ab31-5daa5220fffc/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Ontology of Monotheism";
     dct:issued "2022"^^xsd:gYear;
     dct:modified "2022"^^xsd:gYear;
@@ -23,6 +25,7 @@
     dct:source <https://repositorio.ufsc.br/handle/123456789/230921>;
     ocmv:representationStyle ocmv:UfoStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/mello2022monotheism>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/mello2022monotheism/>.
-<https://w3id.org/ontouml-models/model/mello2022monotheism/> dcat:distribution <https://w3id.org/ontouml-models/turtle/mello2022monotheism/>, <https://w3id.org/ontouml-models/json/mello2022monotheism/>, <https://w3id.org/ontouml-models/vpp/mello2022monotheism/>, <https://w3id.org/ontouml-models/original-diagram/mello2022monotheism/diagram1>, <https://w3id.org/ontouml-models/new-diagram/mello2022monotheism/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/mello2022monotheism"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:58:35.678649277Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:58:35.678649277Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/01b11d4e-3eb1-4aae-ab31-5daa5220fffc> dcat:distribution <https://w3id.org/ontouml-models/distribution/feb7c004-899f-4d76-a93f-9ba0ecb4f07c/>, <https://w3id.org/ontouml-models/distribution/1183b185-8ef8-4fb5-99cb-9d456d3a8f5c/>, <https://w3id.org/ontouml-models/distribution/fcd2bc30-4b0e-48a1-80f8-943af9e93887/>, <https://w3id.org/ontouml-models/distribution/cdbf61bf-ad17-404a-87e1-488446a11fff>, <https://w3id.org/ontouml-models/distribution/6fcfe50a-d29f-4f06-b3c1-cb84c94e4f43>.

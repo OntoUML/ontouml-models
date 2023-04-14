@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/zanetti2019orm-o/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
+<https://w3id.org/ontouml-models/distribution/3a1005fe-971a-44f0-adc6-168a3477adb7/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/c528d763-ff22-4d52-9e03-e881b41805ce>;
+    dct:issued "2019"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Object/Relational Mapping Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/zanetti2019orm-o/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:20:39.259307356Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:20:39.259307356Z"^^xsd:dateTime .

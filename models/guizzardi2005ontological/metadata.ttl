@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/guizzardi2005ontological/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/f829c6e9-1dd6-48ce-8403-421efbe15f25/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Example of Integrated Ontology";
     dct:issued "2005"^^xsd:gYear;
     dct:modified "2005"^^xsd:gYear;
@@ -23,6 +25,7 @@
     dct:source <http://doc.utwente.nl/50826>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/guizzardi2005ontological>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/guizzardi2005ontological/>.
-<https://w3id.org/ontouml-models/model/guizzardi2005ontological/> dcat:distribution <https://w3id.org/ontouml-models/turtle/guizzardi2005ontological/>, <https://w3id.org/ontouml-models/json/guizzardi2005ontological/>, <https://w3id.org/ontouml-models/vpp/guizzardi2005ontological/>, <https://w3id.org/ontouml-models/original-diagram/guizzardi2005ontological/diagram1>, <https://w3id.org/ontouml-models/new-diagram/guizzardi2005ontological/integrated-ontology>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/guizzardi2005ontological"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:53:38.368628574Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:53:38.368628574Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/f829c6e9-1dd6-48ce-8403-421efbe15f25> dcat:distribution <https://w3id.org/ontouml-models/distribution/2a797116-72db-4193-873d-54f2f4e63972/>, <https://w3id.org/ontouml-models/distribution/373840f6-a399-4e28-8a87-7a0db2c71bae/>, <https://w3id.org/ontouml-models/distribution/0492b692-3ddf-4356-b887-48b3e103dc3c/>, <https://w3id.org/ontouml-models/distribution/d636bb5c-fed6-454b-9f24-8e2c640ab813>, <https://w3id.org/ontouml-models/distribution/a3e83380-6caa-454a-8a33-717ed6ce9e65>.

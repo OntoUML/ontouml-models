@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/garcia2022human-genome-events/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/765516ef-53fe-4933-a0e5-0a38079d25c3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Ontologically enriched version of Conceptual Schema of the Human Genome";
     mod:acronym "CSHG";
     dct:issued "2022"^^xsd:gYear;
@@ -23,6 +26,7 @@
     dct:source <https://doi.org/10.1007/978-3-031-07481-3_4>, <https://doi.org/10.1109/access.2020.3034793>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/garcia2022human-genome-events>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/garcia2022human-genome-events/>.
-<https://w3id.org/ontouml-models/model/garcia2022human-genome-events/> dcat:distribution <https://w3id.org/ontouml-models/turtle/garcia2022human-genome-events/>, <https://w3id.org/ontouml-models/json/garcia2022human-genome-events/>, <https://w3id.org/ontouml-models/vpp/garcia2022human-genome-events/>, <https://w3id.org/ontouml-models/original-diagram/garcia2022human-genome-events/ontouml-cshg>, <https://w3id.org/ontouml-models/new-diagram/garcia2022human-genome-events/ontouml-cshg>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/garcia2022human-genome-events"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:51:47.230441279Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:51:47.230441279Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/765516ef-53fe-4933-a0e5-0a38079d25c3> dcat:distribution <https://w3id.org/ontouml-models/distribution/6d9762e4-6f5e-413d-aa9a-aaaeebc5f070/>, <https://w3id.org/ontouml-models/distribution/c398450e-3de4-4f5e-8504-86ad9977fd22/>, <https://w3id.org/ontouml-models/distribution/e061842e-e597-49c1-8c55-b80ae19eb3a4/>, <https://w3id.org/ontouml-models/distribution/08eafe8a-3279-43bc-93ca-affd8d2f4a75>, <https://w3id.org/ontouml-models/distribution/35bdbc97-7a8e-4b06-a0db-0e102b867966>.

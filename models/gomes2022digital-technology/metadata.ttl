@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/gomes2022digital-technology/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/b4b680b4-5bf6-47cd-9d53-b89277ca1ae3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Digital Technology";
     dct:issued "2022"^^xsd:gYear;
     dcat:theme lcc:T;
@@ -23,6 +25,7 @@
     dct:source <https://doi.org/10.1007/978-3-031-17995-2_7>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/gomes2022digital-technology>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/gomes2022digital-technology/>.
-<https://w3id.org/ontouml-models/model/gomes2022digital-technology/> dcat:distribution <https://w3id.org/ontouml-models/turtle/gomes2022digital-technology/>, <https://w3id.org/ontouml-models/json/gomes2022digital-technology/>, <https://w3id.org/ontouml-models/vpp/gomes2022digital-technology/>, <https://w3id.org/ontouml-models/original-diagram/gomes2022digital-technology/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/gomes2022digital-technology"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:52:15.48303727Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:52:15.48303727Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/b4b680b4-5bf6-47cd-9d53-b89277ca1ae3> dcat:distribution <https://w3id.org/ontouml-models/distribution/80b00c56-c5aa-4ea2-9186-522bc006bdce/>, <https://w3id.org/ontouml-models/distribution/a4f591a6-5e99-4e49-9717-f78da3ee0461/>, <https://w3id.org/ontouml-models/distribution/7497f2fc-66a6-49b5-815d-fe06ff82df90/>, <https://w3id.org/ontouml-models/distribution/a7c532ac-725c-4305-906c-f5e62fecdff3>.

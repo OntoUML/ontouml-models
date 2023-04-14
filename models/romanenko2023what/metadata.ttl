@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/romanenko2023what/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/f7a6d395-077a-4a83-b554-f169733c2329/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Library management system";
     dct:issued "2022"^^xsd:gYear;
     dct:modified "2023"^^xsd:gYear;
@@ -23,6 +25,7 @@
     ocmv:context ocmv:Research;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/romanenko2023what>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/romanenko2023what/>.
-<https://w3id.org/ontouml-models/model/romanenko2023what/> dcat:distribution <https://w3id.org/ontouml-models/turtle/romanenko2023what/>, <https://w3id.org/ontouml-models/json/romanenko2023what/>, <https://w3id.org/ontouml-models/vpp/romanenko2023what/>, <https://w3id.org/ontouml-models/original-diagram/romanenko2023what/library>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/romanenko2023what"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:13:29.215812785Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:13:29.215812785Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/f7a6d395-077a-4a83-b554-f169733c2329> dcat:distribution <https://w3id.org/ontouml-models/distribution/2f5d69a4-8724-401b-8d2e-e5181da2de22/>, <https://w3id.org/ontouml-models/distribution/f94c18dc-8c06-4e55-b600-3ebec1683cc5/>, <https://w3id.org/ontouml-models/distribution/9c72c4c4-4889-4aa4-8510-55a900c8d56f/>, <https://w3id.org/ontouml-models/distribution/4aa3d54c-dd8f-4ba5-ab45-e0a6fdf0dd55>.

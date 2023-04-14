@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/barcelos2013normative-acts/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/2092feea-b4b2-4c24-9e7b-1f6f829c9808/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/bbf816c7-da70-4f18-9c45-376612673f38>;
+    dct:issued "2013"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Normative Acts"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/barcelos2013normative-acts/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:38:02.037930322Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:38:02.037930322Z"^^xsd:dateTime .

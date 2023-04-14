@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/guizzardi2014nfr/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/19f963af-95c2-40ce-ab4d-6e9360c66e82/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/0e262d1c-b8aa-49ec-8ad7-12f97ecb3269>;
+    dct:issued "2014"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Non-Functional Requirements Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/guizzardi2014nfr/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:53:53.494228311Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:53:53.494228311Z"^^xsd:dateTime .

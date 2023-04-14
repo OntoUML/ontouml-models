@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/abel2015petroleum-system/petroleum-system> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/7e48f61c-5004-4c94-9c9c-d78c6e0b5443> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/7ed5893a-ead6-4de1-b9c1-635e7af3de00>;
+    dct:issued "2015"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'petroleum system' from the Petroleum System Model (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/abel2015petroleum-system/original-diagrams/petroleum-system.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued "2023-04-14T17:33:24.802284319Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:33:24.802284319Z"^^xsd:dateTime .

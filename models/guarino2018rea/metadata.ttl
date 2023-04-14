@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/guarino2018rea/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/3f07650f-fc02-409b-9101-35063fce9692/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Ontological Analysis of REA";
     dct:issued "2018"^^xsd:gYear;
     dct:modified "2018"^^xsd:gYear;
@@ -23,6 +25,7 @@
     dct:source <https://dblp.org/rec/conf/vmbo/GuarinoGS18>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Core;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/guarino2018rea>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/guarino2018rea/>.
-<https://w3id.org/ontouml-models/model/guarino2018rea/> dcat:distribution <https://w3id.org/ontouml-models/turtle/guarino2018rea/>, <https://w3id.org/ontouml-models/json/guarino2018rea/>, <https://w3id.org/ontouml-models/vpp/guarino2018rea/>, <https://w3id.org/ontouml-models/original-diagram/guarino2018rea/rea-core-ontology-duality>, <https://w3id.org/ontouml-models/new-diagram/guarino2018rea/rea-core-ontology-duality>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/guarino2018rea"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:53:29.102292Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:53:29.102292Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/3f07650f-fc02-409b-9101-35063fce9692> dcat:distribution <https://w3id.org/ontouml-models/distribution/91345ba4-e724-4593-ad3a-cc41d99b77f6/>, <https://w3id.org/ontouml-models/distribution/7ecabe5d-774e-4e36-a87b-8beee85038df/>, <https://w3id.org/ontouml-models/distribution/7dc67587-70b9-4aaf-836e-e236d0b97f46/>, <https://w3id.org/ontouml-models/distribution/d5879ad8-0e05-4490-9906-531eda15e0a1>, <https://w3id.org/ontouml-models/distribution/ee0c7212-381a-444f-8928-e00306e6dcee>.

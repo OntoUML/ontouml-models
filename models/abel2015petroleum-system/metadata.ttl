@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/abel2015petroleum-system/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/7ed5893a-ead6-4de1-b9c1-635e7af3de00/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Petroleum System Model";
     dct:issued "2015"^^xsd:gYear;
     dct:modified "2015"^^xsd:gYear;
@@ -23,6 +26,7 @@
     dct:source <https://doi.org/10.1007/s12145-015-0211-9>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/abel2015petroleum-system>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/abel2015petroleum-system/>.
-<https://w3id.org/ontouml-models/model/abel2015petroleum-system/> dcat:distribution <https://w3id.org/ontouml-models/turtle/abel2015petroleum-system/>, <https://w3id.org/ontouml-models/json/abel2015petroleum-system/>, <https://w3id.org/ontouml-models/vpp/abel2015petroleum-system/>, <https://w3id.org/ontouml-models/original-diagram/abel2015petroleum-system/petroleum-system>, <https://w3id.org/ontouml-models/new-diagram/abel2015petroleum-system/petroleum-system>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/abel2015petroleum-system"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:33:19.190667802Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:33:19.190667802Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/7ed5893a-ead6-4de1-b9c1-635e7af3de00> dcat:distribution <https://w3id.org/ontouml-models/distribution/f5c87f00-66fa-47a9-a0a8-07b88588b095/>, <https://w3id.org/ontouml-models/distribution/ccddedaa-6508-41ee-a621-9d7f56c06419/>, <https://w3id.org/ontouml-models/distribution/f9818d9f-291d-4938-9f3c-daa369604f24/>, <https://w3id.org/ontouml-models/distribution/7e48f61c-5004-4c94-9c9c-d78c6e0b5443>, <https://w3id.org/ontouml-models/distribution/8decbca5-511b-48a0-97a4-727bd60b36a3>.

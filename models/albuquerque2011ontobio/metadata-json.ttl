@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/albuquerque2011ontobio/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+<https://w3id.org/ontouml-models/distribution/faf6213a-d88b-4399-a12b-e6ea29a4ad01/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/f3d40402-e30d-4bbc-8792-5566bc8c30e9>;
+    dct:issued "2011"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of OntoBio"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/albuquerque2011ontobio/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:34:38.539952272Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:34:38.539952272Z"^^xsd:dateTime .

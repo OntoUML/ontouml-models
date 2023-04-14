@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
 
 <https://w3id.org/ontouml-models/shape/Resource> a sh:NodeShape ;
   sh:targetClass dcat:Resource ;
@@ -66,6 +67,30 @@
     sh:nodeKind sh:IRI ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
+  ],
+  [
+    sh:name "Metadata Modified" ;
+    sh:description "Date on which the resource's metadata was changed.";
+    sh:path fdpo:metadataModified ;
+    sh:or (
+      [ sh:datatype xsd:dateTime ; ]
+      [ sh:datatype xsd:date ; ]
+      [ sh:datatype xsd:gYearMonth ; ]
+      [ sh:datatype xsd:gYear ; ]
+    ) ;
+    dash:viewer dash:LiteralViewer ;
+  ],
+  [
+    sh:name "Metadata Issued" ;
+    sh:description "Date of formal issuance of the resource's metadata.";
+    sh:path fdpo:metadataIssued ;
+    sh:or (
+      [ sh:datatype xsd:dateTime ; ]
+      [ sh:datatype xsd:date ; ]
+      [ sh:datatype xsd:gYearMonth ; ]
+      [ sh:datatype xsd:gYear ; ]
+    ) ;
+    dash:viewer dash:LiteralViewer ;
   ],
   [
     sh:name "Modified" ;

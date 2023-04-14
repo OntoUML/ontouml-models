@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/rodrigues2019ontocrime/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/d63d8962-9386-4529-a871-fbcae4b69257/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/f0f7917c-32c0-411d-a4b0-cd2159fd1cf2>;
+    dct:issued "2019"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Brazilian Criminal Law Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/rodrigues2019ontocrime/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:13:05.499408315Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:13:05.499408315Z"^^xsd:dateTime .

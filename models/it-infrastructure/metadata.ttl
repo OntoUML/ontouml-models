@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/it-infrastructure/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/3c25eb5e-58d7-43cf-8027-31bd0827044e/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "IT Infrastructure Model";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:T;
@@ -20,6 +22,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/it-infrastructure>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/it-infrastructure/>.
-<https://w3id.org/ontouml-models/model/it-infrastructure/> dcat:distribution <https://w3id.org/ontouml-models/turtle/it-infrastructure/>, <https://w3id.org/ontouml-models/json/it-infrastructure/>, <https://w3id.org/ontouml-models/vpp/it-infrastructure/>, <https://w3id.org/ontouml-models/original-diagram/it-infrastructure/diagram1>, <https://w3id.org/ontouml-models/original-diagram/it-infrastructure/diagram1>, <https://w3id.org/ontouml-models/new-diagram/it-infrastructure/it-infrastructure>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/it-infrastructure"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:55:31.456581686Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:55:31.456581686Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/3c25eb5e-58d7-43cf-8027-31bd0827044e> dcat:distribution <https://w3id.org/ontouml-models/distribution/cdaa0242-2fd2-4d5b-b54a-06e70629160d/>, <https://w3id.org/ontouml-models/distribution/b18a0d63-ef7f-45fb-bce2-e867e615501f/>, <https://w3id.org/ontouml-models/distribution/953428fe-61d6-4a46-ba55-087edee45343/>, <https://w3id.org/ontouml-models/distribution/d5e79a3d-c331-490a-99fc-bd24e5eb1ebb>, <https://w3id.org/ontouml-models/distribution/d5e79a3d-c331-490a-99fc-bd24e5eb1ebb>, <https://w3id.org/ontouml-models/distribution/70363fb3-6585-42c9-a253-7ec7f0de358a>.

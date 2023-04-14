@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/digitaldoctor2022/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/f898284f-601b-4492-a515-cc39de252d1c/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Digital Doctor Ontology";
     dct:issued "2022"^^xsd:gYear;
     dct:modified "2022"^^xsd:gYear;
@@ -22,6 +24,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/digitaldoctor2022>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/digitaldoctor2022/>.
-<https://w3id.org/ontouml-models/model/digitaldoctor2022/> dcat:distribution <https://w3id.org/ontouml-models/turtle/digitaldoctor2022/>, <https://w3id.org/ontouml-models/json/digitaldoctor2022/>, <https://w3id.org/ontouml-models/vpp/digitaldoctor2022/>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/medicalprocedure>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/medicalproceduretrigger>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/taxonomy>, <https://w3id.org/ontouml-models/original-diagram/digitaldoctor2022/user>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/digitaldoctor2022"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:47:06.131419285Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:47:06.131419285Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/f898284f-601b-4492-a515-cc39de252d1c> dcat:distribution <https://w3id.org/ontouml-models/distribution/7c79b244-496b-47a2-8bc0-1e9b16c71d0a/>, <https://w3id.org/ontouml-models/distribution/34ba922b-2709-48f5-981f-4a785f2f70d2/>, <https://w3id.org/ontouml-models/distribution/3052b8af-0e57-4d49-90d8-28d0b58ef479/>, <https://w3id.org/ontouml-models/distribution/8ec27c6b-9b5f-45a3-9bf3-f763e5c9a897>, <https://w3id.org/ontouml-models/distribution/8ec27c6b-9b5f-45a3-9bf3-f763e5c9a897trigger>, <https://w3id.org/ontouml-models/distribution/585f2497-a4b0-4dbf-93ff-acc15bb6875d>, <https://w3id.org/ontouml-models/distribution/b73a887f-2564-4d83-8b48-afadadeac447>.

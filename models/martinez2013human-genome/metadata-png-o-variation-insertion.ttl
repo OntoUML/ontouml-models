@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/martinez2013human-genome/variation-insertion> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/6a4cb048-3228-452d-aff0-0c4bb6a4489a> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/7509f026-5e24-48e7-a995-ab2f419ce4d7>;
+    dct:issued "2013"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'variation insertion' from the Conceptual Schema of Human Genome (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/martinez2013human-genome/original-diagrams/variation-insertion.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued "2023-04-14T17:58:30.799842238Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:58:30.799842238Z"^^xsd:dateTime .

@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/cgts2021sebim/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/71fdda05-0b9e-4c78-8436-4e470b1e6208/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Semantic Building Information Modeling Ontology";
     mod:acronym "SEBIM";
     dct:issued "2021"^^xsd:gYear;
@@ -26,6 +28,7 @@
     dct:source <https://dblp.org/rec/conf/ontobras/BaxS21>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain, ocmv:Application;
-    ocmv:storageUrl <https://github.com/OntoUML/ontouml-models/tree/master/models/cgts2021sebim>.
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/cgts2021sebim/>.
-<https://w3id.org/ontouml-models/model/cgts2021sebim/> dcat:distribution <https://w3id.org/ontouml-models/turtle/cgts2021sebim/>, <https://w3id.org/ontouml-models/json/cgts2021sebim/>, <https://w3id.org/ontouml-models/vpp/cgts2021sebim/>, <https://w3id.org/ontouml-models/original-diagram/cgts2021sebim/diagram1>, <https://w3id.org/ontouml-models/new-diagram/cgts2021sebim/sebim>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/cgts2021sebim"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:44:15.882875807Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:44:15.882875807Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/71fdda05-0b9e-4c78-8436-4e470b1e6208> dcat:distribution <https://w3id.org/ontouml-models/distribution/7cb3817d-6732-4371-a8a1-91180018dc4c/>, <https://w3id.org/ontouml-models/distribution/c235165c-d113-40a5-8f83-a665ba417cb1/>, <https://w3id.org/ontouml-models/distribution/9a2d3707-d55e-4e58-9076-e1f03e351f3e/>, <https://w3id.org/ontouml-models/distribution/8376a2f0-45aa-40af-b283-f78344d11d4c>, <https://w3id.org/ontouml-models/distribution/3068e6bf-bd1e-4ca2-a319-b10f80c244ed>.
