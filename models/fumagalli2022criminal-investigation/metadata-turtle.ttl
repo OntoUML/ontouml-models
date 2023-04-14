@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/fumagalli2022criminal-investigation/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/74bb1cb5-3c79-4b91-8c51-2907287519fd/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/8353ae58-e924-4b13-8cbe-7078e59830ac>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of OntoUML Model Representing a Subset of Criminal Investigation Domain"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/fumagalli2022criminal-investigation/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:51:24.774292058Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:51:24.774292058Z"^^xsd:dateTime .
