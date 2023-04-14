@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/cmpo2017/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/e9047c5f-2c8c-45cf-90e3-208c9791bba8/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Configuration Management Process Ontology";
     mod:acronym "CMPO";
     dct:issued "2012"^^xsd:gYear;
@@ -26,6 +28,7 @@
     dct:source <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/software_engineering_standards_harmonization__an_ontology_based_approach_2017.pdf>, <https://dl.acm.org/doi/pdf/10.1145/2245276.2245344>, <https://doi.org/10.1007/978-3-319-49004-5_34>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/cmpo2017"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/cmpo2017/>.
-<https://w3id.org/ontouml-models/model/cmpo2017/> dcat:distribution <https://w3id.org/ontouml-models/turtle/cmpo2017/>, <https://w3id.org/ontouml-models/json/cmpo2017/>, <https://w3id.org/ontouml-models/vpp/cmpo2017/>, <https://w3id.org/ontouml-models/original-diagram/cmpo2017/diagram1>, <https://w3id.org/ontouml-models/new-diagram/cmpo2017/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/cmpo2017"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:44:42.359074731Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:44:42.359074731Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/e9047c5f-2c8c-45cf-90e3-208c9791bba8> dcat:distribution <https://w3id.org/ontouml-models/distribution/5df65aff-1413-44ab-bc14-236531846377/>, <https://w3id.org/ontouml-models/distribution/95ad44c2-f9de-4500-a5b7-51130f4ce226/>, <https://w3id.org/ontouml-models/distribution/f58f37ed-5158-4d76-916b-da03e2bb3cd7/>, <https://w3id.org/ontouml-models/distribution/286a887a-eddd-4c48-bf9f-06b43282abf9>, <https://w3id.org/ontouml-models/distribution/46fb95af-530c-470b-b254-098eafa5c205>.
