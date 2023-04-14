@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/ferreira2015ontoemergeplan/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+<https://w3id.org/ontouml-models/distribution/5e0b2be9-5c02-474d-871b-439641499a82/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/dddeec28-4c7c-4e5f-b22e-b536fa79ac72>;
+    dct:issued "2013"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Ontology for Emergency Plans"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/ferreira2015ontoemergeplan/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:49:24.418722586Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:49:24.418722586Z"^^xsd:dateTime .
