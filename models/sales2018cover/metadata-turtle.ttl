@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/sales2018cover/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/f84cb3d6-0a40-4ca4-9a97-b2add219c016/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/ef85708e-02ce-40b4-8fdb-57799201ee28>;
+    dct:issued "2018"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Turtle distribution of Common Ontology of Value and Risk"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/sales2018cover/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:14:38.642887287Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:14:38.642887287Z"^^xsd:dateTime .
