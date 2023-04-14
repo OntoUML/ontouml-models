@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/new-diagram/duarte2021ross/machine-layer> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/de1872c6-dc9c-4f75-8d9b-f910d42dba1f> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/3adf4afc-9f96-403d-914a-72e41547f673>;
+    dct:issued "2021"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'machine layer' from the Reference Ontology of Software Systems (Visual Paradigm version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/duarte2021ross/new-diagrams/machine-layer.png>;
-    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en.
+    skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en;
+    fdpo:metadataIssued "2023-04-14T17:48:11.655395981Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:48:11.655395981Z"^^xsd:dateTime .
