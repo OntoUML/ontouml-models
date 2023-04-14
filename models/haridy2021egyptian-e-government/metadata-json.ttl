@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/haridy2021egyptian-e-government/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+<https://w3id.org/ontouml-models/distribution/74deef99-cf3e-43ad-905f-1fb158585e00/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/5f85d9aa-67ac-4315-b60d-0212ea910320>;
+    dct:issued "2021"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Egyptian E-Government Conceptual Model"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/haridy2021egyptian-e-government/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:54:30.276780556Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:54:30.276780556Z"^^xsd:dateTime .
