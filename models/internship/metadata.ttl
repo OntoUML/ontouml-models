@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/internship/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/b6660078-f212-4051-b469-279863bb5e33/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Internship Ontology";
     dct:issued "2013"^^xsd:gYear;
     dcat:theme lcc:H;
@@ -21,6 +23,7 @@
     ocmv:context ocmv:Classroom;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/internship"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/internship/>.
-<https://w3id.org/ontouml-models/model/internship/> dcat:distribution <https://w3id.org/ontouml-models/turtle/internship/>, <https://w3id.org/ontouml-models/json/internship/>, <https://w3id.org/ontouml-models/vpp/internship/>, <https://w3id.org/ontouml-models/original-diagram/internship/diagram1>, <https://w3id.org/ontouml-models/new-diagram/internship/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/internship"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T17:55:21.574008302Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:55:21.574008302Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/b6660078-f212-4051-b469-279863bb5e33> dcat:distribution <https://w3id.org/ontouml-models/distribution/afae5dde-8be6-4122-b0e8-c6b447789de9/>, <https://w3id.org/ontouml-models/distribution/212cb5e1-a6ed-43e8-bde5-75d1b5d671b0/>, <https://w3id.org/ontouml-models/distribution/3f082a6f-fe6f-4141-837f-f4e39755a8f8/>, <https://w3id.org/ontouml-models/distribution/769d34cb-8b1c-4743-8768-6f66318a4a93>, <https://w3id.org/ontouml-models/distribution/f1790e4f-605b-436b-80c0-39e9e35ef7c2>.
