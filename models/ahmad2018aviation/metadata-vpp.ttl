@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/ahmad2018aviation/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
+<https://w3id.org/ontouml-models/distribution/cb1161ec-9638-4496-8334-de3dd75be0c5/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/660ad6c4-dbc1-43e7-b582-d7eb9ec43739>;
+    dct:issued "2018"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Aviation Safety Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/ahmad2018aviation/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:34:22.528566895Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:34:22.528566895Z"^^xsd:dateTime .
