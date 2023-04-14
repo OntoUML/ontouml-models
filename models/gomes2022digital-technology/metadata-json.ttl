@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/gomes2022digital-technology/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/a4f591a6-5e99-4e49-9717-f78da3ee0461/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/b4b680b4-5bf6-47cd-9d53-b89277ca1ae3>;
+    dct:issued "2022"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Digital Technology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/gomes2022digital-technology/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:52:16.742825026Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:52:16.742825026Z"^^xsd:dateTime .
