@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/vpp/barros2020programming/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/fa05d72c-19cd-40ef-b0f3-7720475e3e36/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/65a05fab-35fe-4eff-bf19-2eb0aea54022>;
+    dct:issued "2020"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/octet-stream>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:format <https://www.file-extension.info/format/vpp>;
     dct:title "Visual Paradigm distribution of Ontology of Nationality according to the Federal Constitution of Brazil"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/barros2020programming/ontology.vpp>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:43:00.686856503Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:43:00.686856503Z"^^xsd:dateTime .
