@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,10 +8,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/json/music-ontology/> a dcat:Distribution;
+<https://w3id.org/ontouml-models/distribution/aabc4dad-2beb-477b-b8a7-4aed656cf520/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/daca2352-8735-4a4b-a1c2-952862fb594f>;
+    dct:issued "2013"^^xsd:gYear;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     ocmv:conformsToSchema <http://purl.org/ontouml-schema>;
     dct:title "JSON distribution of Music Ontology"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/music-ontology/ontology.json>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T18:06:28.088524575Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:06:28.088524575Z"^^xsd:dateTime .
