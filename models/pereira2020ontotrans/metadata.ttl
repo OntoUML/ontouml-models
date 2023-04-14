@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix lcc: <http://id.loc.gov/authorities/classification/>.
@@ -9,7 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/model/pereira2020ontotrans/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/0a01a029-1863-498e-aba5-6e9580f94dc5/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "OntoTrans";
     dct:issued "2020"^^xsd:gYear;
     dct:modified "2020"^^xsd:gYear;
@@ -22,6 +25,7 @@
     dct:source <https://dblp.org/rec/conf/amcis/PereiraCBN19>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/pereira2020ontotrans"^^xsd:anyURI .
-<https://w3id.org/ontouml-models> dcat:dataset <https://w3id.org/ontouml-models/model/pereira2020ontotrans/>.
-<https://w3id.org/ontouml-models/model/pereira2020ontotrans/> dcat:distribution <https://w3id.org/ontouml-models/turtle/pereira2020ontotrans/>, <https://w3id.org/ontouml-models/json/pereira2020ontotrans/>, <https://w3id.org/ontouml-models/vpp/pereira2020ontotrans/>, <https://w3id.org/ontouml-models/original-diagram/pereira2020ontotrans/diagram1>, <https://w3id.org/ontouml-models/new-diagram/pereira2020ontotrans/diagram1>.
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/pereira2020ontotrans"^^xsd:anyURI ;
+    fdpo:metadataIssued "2023-04-14T18:08:40.480778512Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:08:40.480778512Z"^^xsd:dateTime .
+    <https://w3id.org/ontouml-models/model/0a01a029-1863-498e-aba5-6e9580f94dc5> dcat:distribution <https://w3id.org/ontouml-models/distribution/d5a06614-857b-474b-b32b-5336aa4338bf/>, <https://w3id.org/ontouml-models/distribution/e4eb323d-5ebe-4ef5-a32a-06f6324d447e/>, <https://w3id.org/ontouml-models/distribution/9a202f11-e289-4069-938e-fdd72d40f5b7/>, <https://w3id.org/ontouml-models/distribution/27d53ec1-fd5b-45b1-afc8-5689d662d2a9>, <https://w3id.org/ontouml-models/distribution/b0681911-8fbc-469e-8285-752cca933862>.
