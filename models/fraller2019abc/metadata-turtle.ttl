@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,8 +8,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/turtle/fraller2019abc/> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+<https://w3id.org/ontouml-models/distribution/5511de05-7efc-49bc-bd8a-b76e16667238/> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/dbd5fed6-8332-458f-90ec-b9270e7b6fdc>;
+    dct:issued "2019"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
     dct:title "Turtle distribution of Capacity-Based Activity-Based Costing System Model"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/fraller2019abc/ontology.ttl>;
-    ocmv:isComplete "true"^^xsd:boolean.
+    ocmv:isComplete "true"^^xsd:boolean;
+    fdpo:metadataIssued "2023-04-14T17:50:50.267540831Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:50:50.267540831Z"^^xsd:dateTime .
