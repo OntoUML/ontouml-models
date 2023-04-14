@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/andersson2018value-ascription/value-ascription-ontology> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/4d50c81a-e5fe-47a8-927f-ef85ca3313a8> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/3df10e52-a7e6-4e42-a5e5-c34495a5826b>;
+    dct:issued "2018"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'value ascription ontology' from the Value Ascription Ontology (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/andersson2018value-ascription/original-diagrams/value-ascription-ontology.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued "2023-04-14T17:36:37.053459698Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T17:36:37.053459698Z"^^xsd:dateTime .
