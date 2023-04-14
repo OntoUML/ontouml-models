@@ -1,3 +1,4 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
@@ -7,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<https://w3id.org/ontouml-models/original-diagram/niederkofler2019dssapple/apple> a dcat:Distribution;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
+<https://w3id.org/ontouml-models/distribution/29e15945-6397-47e0-a698-8294c6d0d5db> a dcat:Distribution;
+    dct:isPartOf <https://w3id.org/ontouml-models/model/5f97c733-db8a-44cc-b94d-a28b7d3e85cc>;
+    dct:issued "2019"^^xsd:gYear;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;    dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>;
     ocmv:isComplete "false"^^xsd:boolean;
     dct:title "PNG distribution of diagram 'apple' from the DSSApple Ontology (original version)"@en;
     dcat:downloadURL <https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/niederkofler2019dssapple/original-diagrams/apple.png>;
-    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en.
+    skos:editorialNote "This image depicts the diagram as originally represented by its author(s)."@en;
+    fdpo:metadataIssued "2023-04-14T18:07:37.608416878Z"^^xsd:dateTime;
+    fdpo:metadataModified "2023-04-14T18:07:37.608416878Z"^^xsd:dateTime .
