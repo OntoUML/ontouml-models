@@ -115,7 +115,7 @@ This repository contains OntoUML and UFO models and all their distributions, ser
 
 ### Catalog Releases
 
-The catalog also offers releases comprising all its data and metadata compiled into a single Turtle file. Releases are tagged after the following nomenclature `<YYYY><MM><DD>` and can be directly accessed via the permanent identifier https://w3id.org/ontouml-models/release/*\<release_tag\>*.
+The catalog also offers releases comprising all its data and metadata compiled into a single Turtle file. Releases are tagged after the following nomenclature `<YYYY><MM><DD>` and can be accessed via the permanent identifier https://w3id.org/ontouml-models/release/_<release_tag>_.
 
 ### Data Schemas
 
@@ -290,8 +290,8 @@ We created persistent URLs for the following resources:
 - OntoUML vocabulary: https://w3id.org/ontouml
 - Catalog's releases:
   - Latest release: https://w3id.org/ontouml-models/release
-  - Specific release: https://w3id.org/ontouml-models/release/*\<release_tag\>*
-    - *\<release_tag\>* must be substituted by a release tag (e.g., 20230602)
+  - Specific release: https://w3id.org/ontouml-models/release/_<release_tag>_
+    - *\<release_tag\>* must be substituted by a release tag string (e.g., '20230602')
 - Catalog’s vocabulary TTL file: https://w3id.org/ontouml-models/vocabulary
 - Shape TTL files:
   - https://w3id.org/ontouml-models/shape/Catalog
