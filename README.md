@@ -154,9 +154,10 @@ As we could not satisfy the metadata needs of our stakeholders using the existin
 - Turtle file: https://w3id.org/ontouml-models/vocabulary
 - Specification: https://w3id.org/ontouml-models/vocabulary/docs
 - Git repository: https://w3id.org/ontouml-models/vocabulary/git
-- Versions:
-  - Latest: https://w3id.org/ontouml-models/vocabulary/latest
-  - Specific: https://w3id.org/ontouml-models/vocabulary/v\<n\> (where \<n\> is the intended version number)
+- Releases:
+  - Latest release: https://w3id.org/ontouml-models/vocabulary/latest
+  - Specific release: https://w3id.org/ontouml-models/vocabulary/release/_<version_number>_
+    - _<version_number>_ must be substituted by a release version number starting with the letter 'v' (e.g., 'v1.0.0')
 
 The elements defined there are identified below by the prefix **ocmv**.
 
