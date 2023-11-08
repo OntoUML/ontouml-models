@@ -1,0 +1,42 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/silva2021sebim/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Semantic BIM";
+    mod:acronym "SEBIM";
+    dct:issued "2021"^^xsd:gYear;
+    dct:modified "2023"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "Based on the BIM structure and manual for LEED certification.";
+    dct:language "en";
+    dcat:landingPage <https://github.com/cgtsbr/sebim>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/278/1460>, <https://dblp.org/pid/121/5314>;
+    mod:designedForTask ontouml:DecisionSupportSystem, ontouml:InformationRetrieval, ontouml:Interoperability;
+    ontouml:context ontouml:Research, ontouml:Industry;
+    dct:source <https://repositorio.ufmg.br/handle/1843/51648>, <https://repositorio.ufmg.br/handle/1843/51649>, <https://repositorio.ufmg.br/handle/1843/59093>, <https://repositorio.ufmg.br/handle/1843/59670>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/silva2021sebim/>.
+<http://purl.org/ontouml-models/dataset/silva2021sebim/> dcat:distribution <http://purl.org/ontouml-models/dataset/silva2021sebim/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silva2021sebim/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Semantic BIM\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2021sebim/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/silva2021sebim/> dcat:distribution <http://purl.org/ontouml-models/dataset/silva2021sebim/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silva2021sebim/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Semantic BIM\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2021sebim/ontology.json>.
+<http://purl.org/ontouml-models/dataset/silva2021sebim/> dcat:distribution <http://purl.org/ontouml-models/dataset/silva2021sebim/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silva2021sebim/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Semantic BIM\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2021sebim/ontology.vpp>.

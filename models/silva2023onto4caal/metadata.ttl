@@ -1,0 +1,40 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Requirements Ontology for AAL Systems";
+    mod:acronym "Onto4CALL";
+    dct:issued "2023"^^xsd:gYear;
+    dcat:theme lcc:T;
+    dct:language "en";
+    dcat:landingPage <https://github.com/timoteogomes/Nota-o-UML-da-Onto4CAAL,https://github.com/timoteogomes/Notacao-UML-da-Onto4Elev>;
+    dct:license <https://creativecommons.org/licenses/by-nc-nd/3.0/br/>;
+    dct:contributor <https://dblp.org/pid/237/7238>, <https://dblp.org/pid/31/5316>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:DecisionSupportSystem, ontouml:Interoperability;
+    ontouml:context ontouml:Research;
+    dct:source <https://repositorio.ufpe.br/handle/123456789/50033>, <https://doi.org/10.1093/comjnl/bxad053>, <http://wer.inf.puc-rio.br/WERpapers/artigos/artigos_WER22/WER_2022_Camera_ready_paper_34.pdf>, <http://www.inf.puc-rio.br/~wer/WERpapers/artigos/artigos_WER21/WER_2021_paper_16.pdf>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/silva2023onto4caal/>.
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/> dcat:distribution <http://purl.org/ontouml-models/dataset/silva2023onto4caal/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Requirements Ontology for AAL Systems\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4caal/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/> dcat:distribution <http://purl.org/ontouml-models/dataset/silva2023onto4caal/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Requirements Ontology for AAL Systems\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4caal/ontology.json>.
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/> dcat:distribution <http://purl.org/ontouml-models/dataset/silva2023onto4caal/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/silva2023onto4caal/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Requirements Ontology for AAL Systems\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4caal/ontology.vpp>.
