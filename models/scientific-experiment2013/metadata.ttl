@@ -1,0 +1,37 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Scientific Experiment Ontology";
+    dct:issued "2013"^^xsd:gYear;
+    dcat:theme lcc:Q;
+    skos:editorialNote "Ontology created during an Ontology Engineering lecture by students who wanted to remain anonymous. The ontology was build in a different editor tool and imported to Visual Paradigm, the current diagrammation may not exactly match the original one.";
+    dct:language "pt-br";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Learning;
+    ontouml:context ontouml:Classroom.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/scientific-experiment2013/>.
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/> dcat:distribution <http://purl.org/ontouml-models/dataset/scientific-experiment2013/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Scientific Experiment Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/scientific-experiment2013/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/> dcat:distribution <http://purl.org/ontouml-models/dataset/scientific-experiment2013/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Scientific Experiment Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/scientific-experiment2013/ontology.json>.
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/> dcat:distribution <http://purl.org/ontouml-models/dataset/scientific-experiment2013/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/scientific-experiment2013/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Scientific Experiment Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/scientific-experiment2013/ontology.vpp>.
