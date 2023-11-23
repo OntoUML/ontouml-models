@@ -1,0 +1,40 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/demori2023miscon/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Military Scenario Ontology";
+    mod:acronym "MiScOn";
+    dct:issued "2023"^^xsd:gYear;
+    dcat:theme lcc:U;
+    skos:editorialNote "This model contains a n-ary relation. These relations are not supported by the current JSON exportation feature. Hence, to be able to generate the ontology.json file, this n-ary relation was temporarily excluded (but it is kept in the vpp file).";
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/342/7506>, <https://dblp.org/pid/166/2068>, <https://dblp.org/pid/125/7740>, <https://dblp.org/pid/352/9170>, <https://dblp.org/pid/352/9879>, <https://dblp.org/pid/35/9023>, <https://dblp.org/pid/96/3201>, <https://dblp.org/pid/c/MariaClaudiaReisCavalcanti>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:DecisionSupportSystem, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.5220/0012088600003541>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/demori2023miscon/>.
+<http://purl.org/ontouml-models/dataset/demori2023miscon/> dcat:distribution <http://purl.org/ontouml-models/dataset/demori2023miscon/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/demori2023miscon/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Military Scenario Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/demori2023miscon/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/demori2023miscon/> dcat:distribution <http://purl.org/ontouml-models/dataset/demori2023miscon/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/demori2023miscon/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Military Scenario Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/demori2023miscon/ontology.json>.
+<http://purl.org/ontouml-models/dataset/demori2023miscon/> dcat:distribution <http://purl.org/ontouml-models/dataset/demori2023miscon/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/demori2023miscon/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Military Scenario Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/demori2023miscon/ontology.vpp>.
