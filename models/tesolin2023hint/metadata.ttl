@@ -1,0 +1,40 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Heterogeneous wIreless Network onTology";
+    mod:acronym "hint";
+    dct:issued "2023"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "This model contains a n-ary relation. These relations are not supported by the current JSON exportation feature. Hence, to be able to generate the ontology.json file, this n-ary relation was temporarily excluded (but it is kept in the vpp file).";
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/166/2068>, <https://dblp.org/pid/342/7506>, <https://dblp.org/pid/125/7740>, <https://dblp.org/pid/c/MariaClaudiaReisCavalcanti>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:DecisionSupportSystem, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.1016/j.future.2023.08.008>, <https://ceur-ws.org/Vol-3346/Paper6.pdf>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/tesolin2023hint/>.
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/> dcat:distribution <http://purl.org/ontouml-models/dataset/tesolin2023hint/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Heterogeneous wIreless Network onTology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/tesolin2023hint/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/> dcat:distribution <http://purl.org/ontouml-models/dataset/tesolin2023hint/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Heterogeneous wIreless Network onTology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/tesolin2023hint/ontology.json>.
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/> dcat:distribution <http://purl.org/ontouml-models/dataset/tesolin2023hint/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/tesolin2023hint/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Heterogeneous wIreless Network onTology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/tesolin2023hint/ontology.vpp>.
