@@ -1,7 +1,5 @@
-import os
+MANDATORY_FILES = ["metadata.ttl", "metadata.yaml", "ontology.json", "ontology.ttl", "ontology.vpp", ]
 
-mandatory_files = ["metadata.ttl", "metadata.yaml", "ontology.json", "ontology.ttl", "ontology.vpp", ]
-
-models_folder = os.path.join("..", "models")
-original_diagrams_folder = "original-diagrams"
-new_diagrams_folder = "new-diagrams"
+MODELS_FOLDER = "models"
+ORIGINAL_DIAGRAMS_FOLDER = "original-diagrams"
+NEW_DIAGRAMS_FOLDER = "new-diagrams"

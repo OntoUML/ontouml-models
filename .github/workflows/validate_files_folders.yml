@@ -33,9 +33,5 @@ jobs:
           pip install -r scripts/requirements.txt
 
 
-      - name: Testing with pytest
-        run: |
-          python -m scripts.validate_mandatory_files
-          python ./scripts/validate_mandatory_files.py
-          pwd
-          ls .
+      - name: Validating mandatory files and folders
+        run: python -m scripts.validate_mandatory_files
