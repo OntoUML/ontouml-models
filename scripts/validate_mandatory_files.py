@@ -3,8 +3,8 @@ import sys
 
 from loguru import logger
 
-from scripts.constants import models_folder, mandatory_files, original_diagrams_folder, new_diagrams_folder
-from scripts.utils import check_file_extensions
+from .constants import models_folder, mandatory_files, original_diagrams_folder, new_diagrams_folder
+from .utils import check_file_extensions
 
 # Remove the default handler and add a new handler with a custom format
 logger.remove()
