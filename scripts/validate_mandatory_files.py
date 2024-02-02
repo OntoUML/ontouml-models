@@ -3,13 +3,15 @@ import sys
 
 from loguru import logger
 
-from .constants import models_folder, mandatory_files, original_diagrams_folder, new_diagrams_folder
-from .utils import check_file_extensions
+from scripts.constants import models_folder, mandatory_files, original_diagrams_folder, new_diagrams_folder
+from scripts.utils import check_file_extensions
 
 # Remove the default handler and add a new handler with a custom format
 logger.remove()
 logger.add(sys.stderr, format="{time} | {level} - {message}")
 
+import sys
+sys.path.insert(0, 'scripts')
 
 def check_original_diagrams_folder(folder):
     has_error = False

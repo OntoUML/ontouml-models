@@ -34,4 +34,8 @@ jobs:
 
 
       - name: Testing with pytest
-        run: python ./scripts/validate_mandatory_files.py
+        run: |
+          python -m scripts.validate_mandatory_files
+          python ./scripts/validate_mandatory_files.py
+          pwd
+          ls .
