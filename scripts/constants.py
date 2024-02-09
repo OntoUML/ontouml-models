@@ -1,4 +1,4 @@
-MANDATORY_FILES = ["metadata.ttl", "metadata.yaml", "ontology.json", "ontology.ttl", "ontology.vpp", ]
+MANDATORY_FILES = ["metadata.yaml", "ontology.json", "ontology.ttl", "ontology.vpp", ]
 
 MODELS_FOLDER = "models"
 ORIGINAL_DIAGRAMS_FOLDER = "original-diagrams"

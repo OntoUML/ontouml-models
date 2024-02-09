@@ -1,17 +1,10 @@
 import os
-import sys
 
 from loguru import logger
 
 from scripts.constants import MODELS_FOLDER, MANDATORY_FILES, ORIGINAL_DIAGRAMS_FOLDER, NEW_DIAGRAMS_FOLDER
 from scripts.utils import check_file_extensions
 
-# Remove the default handler and add a new handler with a custom format
-logger.remove()
-logger.add(sys.stderr, format="{time} | {level} - {message}")
-
-import sys
-sys.path.insert(0, 'scripts')
 
 def check_original_diagrams_folder(folder):
     has_error = False
@@ -53,11 +46,9 @@ def check_new_diagrams_folder(folder):
 
 def check_files_in_subfolders():
     has_error = False
-    logger.info("Verifying if all datasets contain all mandatory files.")
+    logger.info("Verifying if all datasets contain all mandatory manually-inputted files.")
 
     # Get the list of all sub-folders in the parent folder
-    print("here")
-    print(os.path.abspath(MODELS_FOLDER))
     subfolders = [f.name for f in os.scandir(MODELS_FOLDER) if f.is_dir()]
 
     for folder in subfolders:
@@ -79,5 +70,6 @@ def check_files_in_subfolders():
         exit(1)
 
 
-# Call the function with the path to your parent folder
-check_files_in_subfolders()
+if __name__ == "__main__":
+    # Call the function with the path to your parent folder
+    check_files_in_subfolders()
