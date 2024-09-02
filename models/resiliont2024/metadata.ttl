@@ -1,0 +1,41 @@
+@prefix ontouml: <https://purl.org/ontouml-models/vocabulary/>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<http://purl.org/ontouml-models/dataset/resiliont2024/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Resilience Core Ontology";
+    mod:acronym "ResiliOnt";
+    dct:issued "2024"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "Uploaded version 0.7.0";
+    dct:language "en";
+    dcat:landingPage <https://w3id.org/resiliont/git>;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0>;
+    dct:contributor <https://dblp.org/pid/96/8280>, <https://dblp.org/pid/63/9777>, <https://dblp.org/pid/212/6684>, <https://dblp.org/pid/134/4947>, <https://dblp.org/pid/95/6356>, <https://dblp.org/pid/72/6796>, <https://dblp.org/pid/11/78>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <https://w3id.org/resiliont/er2024paper>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <http://purl.org/ontouml-models/dataset/resiliont2024/>.
+<http://purl.org/ontouml-models/dataset/resiliont2024/> dcat:distribution <http://purl.org/ontouml-models/dataset/resiliont2024/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/resiliont2024/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Resilience Core Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/resiliont2024/ontology.ttl>.
+<http://purl.org/ontouml-models/dataset/resiliont2024/> dcat:distribution <http://purl.org/ontouml-models/dataset/resiliont2024/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/resiliont2024/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Resilience Core Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/resiliont2024/ontology.json>.
+<http://purl.org/ontouml-models/dataset/resiliont2024/> dcat:distribution <http://purl.org/ontouml-models/dataset/resiliont2024/distribution/ttl>.
+<http://purl.org/ontouml-models/dataset/resiliont2024/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Resilience Core Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/resiliont2024/ontology.vpp>.
