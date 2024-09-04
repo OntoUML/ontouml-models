@@ -1,0 +1,40 @@
+@prefix ontouml: <https://w3id.org/ontouml#>.
+@prefix dataset: <https://purl.org/ontouml-models/dataset/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "EUCAIM's Hyper-Ontology (Core Layer)";
+    dct:issued "2024"^^xsd:gYear;
+    dcat:theme <undefined>;
+    skos:editorialNote "The Core Layer of EUCAIM's Hyper-Ontology aims to ground an application ontology for the oncology domain on mCODE Ontological Conceptual Model, maintaining semantic interoperability.";
+    dct:language "en";
+    dcat:landingPage <https://catalogue.eucaim.cancerimage.eu/#/,https://doi.org/10.5281/zenodo.11109765>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/199/9510.html>, <https://dblp.org/pid/118/0942.html>, <https://dblp.org/pid/43/1967.html>, <https://dblp.org/pid/d/ChristelDanielLeBozec.html>, <https://dblp.org/pid/96/1080.html>, <https://dblp.org/pid/12/11202.html>, <https://dblp.org/pid/83/4811.html>, <https://dblp.org/pid/47/2102.html>, <https://dblp.org/pid/20/3693.html>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:Interoperability, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research, ontouml:Industry;
+    dct:source <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/el-ghosh-et-al-towards-semantic-interoperability-among-heterogeneous-cancer-data-models-using-a-layered-modular-hyper-ontology.pdf>, <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/el-ghosh-et-al-grounding-a-hyper-ontology-on-mcode-ontological-conceptual-model-and-foundational-ontologies-for-semantic-interoperability-in-the-oncology-domain.pdf>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/elghosh2024eucaim/>.
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> dcat:distribution <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> dcat:distribution <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.json>.
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> dcat:distribution <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.vpp>.
