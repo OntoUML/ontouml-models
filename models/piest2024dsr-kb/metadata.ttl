@@ -1,0 +1,38 @@
+@prefix ontouml: <https://w3id.org/ontouml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Domain Reference Ontology for Design Science Research Knowledge Bases";
+    mod:acronym "DSR-KB";
+    dct:issued "2024"^^xsd:gYear;
+    dcat:theme lcc:Q;
+    dct:language "en";
+    dcat:landingPage <https://github.com/SebastianPiest/dsr-kb>;
+    dct:license <https://opensource.org/licenses/MIT>;
+    dct:contributor <https://dblp.org/pid/187/6481>, <https://dblp.org/pid/377/0420>, <https://dblp.org/pid/63/5160>, <https://www.linkedin.com/in/ricardo-junior-cunha/>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/piest-et-al-a-domain-reference-ontology-for-design-science-research-knowledge-bases.pdf>.
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/> dcat:distribution <https://w3id.org/ontouml-models/model/piest2024dsr-kb/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Domain Reference Ontology for Design Science Research Knowledge Bases\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/piest2024dsr-kb/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/> dcat:distribution <https://w3id.org/ontouml-models/model/piest2024dsr-kb/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Domain Reference Ontology for Design Science Research Knowledge Bases\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/piest2024dsr-kb/ontology.json>.
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/> dcat:distribution <https://w3id.org/ontouml-models/model/piest2024dsr-kb/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/piest2024dsr-kb/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Domain Reference Ontology for Design Science Research Knowledge Bases\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/piest2024dsr-kb/ontology.vpp>.
