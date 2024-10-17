@@ -1,32 +1,39 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix ontouml: <https://w3id.org/ontouml#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
 
-<https://w3id.org/ontouml-models/model/c093a0a3-8145-45a4-b48d-94b8ccb482b3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
-    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/> a dcat:Dataset, mod:SemanticArtefact;
     dct:title "Full OntoRights";
     dct:issued "2022"^^xsd:gYear;
+    dct:modified "2023"^^xsd:gYear;
     dcat:theme lcc:K;
-    skos:editorialNote "Simple OntoRights is a simplified version of Full OntoRights. The ontology incorporates much of UFO-L, a legal core ontology (Griffo, 2018),  and also to a lesser degree E-OPL, Enterprise Core Ontology (Falbo et al., 2014), and OntoCrime (Mário de Oliveira Rodrigues et al., 2020) (rodrigues2019ontocrime).";
+    skos:editorialNote "The ontology incorporates much of UFO-L, a legal core ontology (Griffo, 2018), and also to a lesser degree E-OPL, Enterprise Core Ontology (Falbo et al., 2014), and OntoCrime (Mário de Oliveira Rodrigues et al., 2020) (rodrigues2019ontocrime).";
     dct:language "en";
     dcat:landingPage <https://joranl.github.io/human-rights-ontology/>;
     dct:license <https://unlicense.org/>;
     dct:contributor <https://orcid.org/0000-0001-7806-749X>;
-    dcat:keyword "human rights violations"@en;
-    mod:designedForTask ocmv:ConceptualClarification;
-    ocmv:context ocmv:Research;
-    dct:source <https://github.com/JoranL/human-rights-ontology/blob/gh-pages/files/Lindeberg%202022%20Ontology%20Design%20Master%20Thesis.pdf>;
-    ocmv:representationStyle ocmv:OntoumlStyle;
-    ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/lindeberg2022full-ontorights"^^xsd:anyURI ;
-    fdpo:metadataIssued "2023-04-14T17:57:15.538627823Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:57:15.538627823Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/c093a0a3-8145-45a4-b48d-94b8ccb482b3> dcat:distribution <https://w3id.org/ontouml-models/distribution/b4eda674-7cfb-4f2c-aa08-377ed99454c2/>, <https://w3id.org/ontouml-models/distribution/8c2de3f9-23c1-4aee-a27d-8a42251864fc/>, <https://w3id.org/ontouml-models/distribution/abedbac5-fdce-4e18-bd21-e36a6a9dc942/>, <https://w3id.org/ontouml-models/distribution/06d27341-ff38-4579-8bee-c63ad084c26a>, <https://w3id.org/ontouml-models/distribution/1680bd7f-4752-42d5-b6c3-f9ac8a3f7ac3>, <https://w3id.org/ontouml-models/distribution/056272b1-72af-4da3-9b0b-2417a98d2619>, <https://w3id.org/ontouml-models/distribution/38cdec2e-14aa-486b-a12b-e6bfadd239e6>, <https://w3id.org/ontouml-models/distribution/73150657-dd1c-414a-8337-b8e3b81f468d>, <https://w3id.org/ontouml-models/distribution/1f12105c-8507-44c6-a032-af5096a0a1d5>, <https://w3id.org/ontouml-models/distribution/cc8fb496-c1fe-4309-8e4f-94777fb187c9>, <https://w3id.org/ontouml-models/distribution/55c785bb-c21e-475e-a93b-754b0d1bbff7>, <https://w3id.org/ontouml-models/distribution/f542b394-630a-4fce-be51-3ed175ed3222>, <https://w3id.org/ontouml-models/distribution/b9aa62bd-4082-4c14-9e49-ee18f6bf4ab9>, <https://w3id.org/ontouml-models/distribution/96d663ab-0b8a-413a-8490-e0ecee4619e4>, <https://w3id.org/ontouml-models/distribution/9d0cafda-71e1-4dc9-ba93-5b86c23ebb6f>, <https://w3id.org/ontouml-models/distribution/6f12538a-9849-4fb9-ab4f-417973971105>, <https://w3id.org/ontouml-models/distribution/5044bcfb-4a33-41c1-8a7d-d650d281b279>, <https://w3id.org/ontouml-models/distribution/efb523bd-97a7-4d2e-932c-9232e07e15e1>, <https://w3id.org/ontouml-models/distribution/fb44ac2b-8fe6-4298-8515-8a4c7de71e40>, <https://w3id.org/ontouml-models/distribution/c8889c05-fbf8-4abf-9dac-263f3903aca9>.
+    mod:designedForTask ontouml:ConceptualClarification;
+    ontouml:context ontouml:Research;
+    dct:source <https://github.com/JoranL/human-rights-ontology/blob/gh-pages/files/Lindeberg%202022%20Ontology%20Design%20Master%20Thesis.pdf>,<https://doi.org/10.1093/jhuman/huae019>,<https://doi.org/10.1007/978-3-031-21488-2_15>.
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Full OntoRights\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2022full-ontorights/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/distribution/ttl> a dcat:Distribution;
+    dct:title "JSON distribution of \"Full OntoRights\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2022full-ontorights/ontology.json>.
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/lindeberg2022full-ontorights/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Full OntoRights\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2022full-ontorights/ontology.vpp>.
