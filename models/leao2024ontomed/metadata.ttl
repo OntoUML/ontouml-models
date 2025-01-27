@@ -1,0 +1,38 @@
+@prefix ontouml: <https://w3id.org/ontouml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/leao2024ontomed/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Ontology for Medication Interaction Decision Support";
+    mod:acronym "OntoMed";
+    dct:issued "2024"^^xsd:gYear;
+    dcat:theme lcc:R;
+    skos:editorialNote "This work is the result of a scientific initiation project and represents the initial version of the ontology in Portuguese. The ontology remains under development, with plans for further refinements and the creation of versions in English in the future.";
+    dct:language "pt-br";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://www.linkedin.com/in/renzo-henrique-guzzo-le%C3%A3o-193aa4234/>, <https://dblp.org/pid/36/6967>, <https://dblp.org/pid/91/3408>;
+    mod:designedForTask ontouml:DecisionSupportSystem, ontouml:ConceptualClarification, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <https://doi.org/10.5753/eries.2024.244714>.
+<https://w3id.org/ontouml-models/model/leao2024ontomed/> dcat:distribution <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Ontology for Medication Interaction Decision Support\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/leao2024ontomed/> dcat:distribution <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/json>.
+<https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/json> a dcat:Distribution;
+    dct:title "JSON distribution of \"Ontology for Medication Interaction Decision Support\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.json>.
+<https://w3id.org/ontouml-models/model/leao2024ontomed/> dcat:distribution <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/vpp>.
+<https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/vpp> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Ontology for Medication Interaction Decision Support\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.vpp>.
