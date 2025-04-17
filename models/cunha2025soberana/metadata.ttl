@@ -1,0 +1,40 @@
+@prefix ontouml: <https://w3id.org/ontouml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/cunha2025soberana/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Soberana Domain Reference Ontology for describing an International Data Spaces Ecosystem";
+    mod:acronym "SBRN";
+    dct:issued "2023"^^xsd:gYear;
+    dct:modified "2025"^^xsd:gYear;
+    dcat:theme lcc:H;
+    skos:editorialNote "The ontology was developed under the SABiO methodology, based on UFO, and represented in OntoUML. Its semantic consistency was verified using the OntoUML plugin in Visual Paradigm.";
+    dct:language "en";
+    dct:license <https://opensource.org/license/mit>;
+    dct:contributor <https://dblp.org/pid/393/9680>, <https://dblp.org/pid/63/5160>, <https://dblp.org/pid/74/7740>;
+    mod:designedForTask ontouml:ConceptualClarification, ontouml:OntologicalAnalysis;
+    ontouml:context ontouml:Research;
+    dct:source <https://repositorio.ufersa.edu.br/handle/prefix/10158>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/cunha2025soberana/>.
+<https://w3id.org/ontouml-models/model/cunha2025soberana/> dcat:distribution <https://w3id.org/ontouml-models/model/cunha2025soberana/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/cunha2025soberana/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Soberana Domain Reference Ontology for describing an International Data Spaces Ecosystem\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/cunha2025soberana/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/cunha2025soberana/> dcat:distribution <https://w3id.org/ontouml-models/model/cunha2025soberana/distribution/json>.
+<https://w3id.org/ontouml-models/model/cunha2025soberana/distribution/json> a dcat:Distribution;
+    dct:title "JSON distribution of \"Soberana Domain Reference Ontology for describing an International Data Spaces Ecosystem\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/cunha2025soberana/ontology.json>.
+<https://w3id.org/ontouml-models/model/cunha2025soberana/> dcat:distribution <https://w3id.org/ontouml-models/model/cunha2025soberana/distribution/vpp>.
+<https://w3id.org/ontouml-models/model/cunha2025soberana/distribution/vpp> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Soberana Domain Reference Ontology for describing an International Data Spaces Ecosystem\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/cunha2025soberana/ontology.vpp>.
