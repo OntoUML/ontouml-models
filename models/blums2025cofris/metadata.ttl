@@ -1,0 +1,38 @@
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/blums2025cofris/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Core Ontology for Financial Reporting Information Systems 3.0";
+    mod:acronym "COFRIS 3.0";
+    dct:issued "2025"^^xsd:gYear;
+    dcat:theme lcc:H;
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/184/4586>, <https://dblp.org/pid/70/260>;
+    mod:designedForTask ocmv:ConceptualClarification, ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    dct:source <https://www.utwente.nl/en/eemcs/vmbo2025/papers/vmbo-2025-paper-9-2.pdf>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/blums2025cofris/>.
+<https://w3id.org/ontouml-models/model/blums2025cofris/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2025cofris/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/blums2025cofris/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Core Ontology for Financial Reporting Information Systems 3.0\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2025cofris/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/blums2025cofris/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2025cofris/distribution/json>.
+<https://w3id.org/ontouml-models/model/blums2025cofris/distribution/json> a dcat:Distribution;
+    dct:title "JSON distribution of \"Core Ontology for Financial Reporting Information Systems 3.0\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2025cofris/ontology.json>.
+<https://w3id.org/ontouml-models/model/blums2025cofris/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2025cofris/distribution/vpp>.
+<https://w3id.org/ontouml-models/model/blums2025cofris/distribution/vpp> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Core Ontology for Financial Reporting Information Systems 3.0\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2025cofris/ontology.vpp>.
