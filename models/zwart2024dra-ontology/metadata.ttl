@@ -1,0 +1,39 @@
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Domain Ontology for Drug Repurposing Analysis";
+    mod:acronym "DRA-Ontology";
+    dct:issued "2024"^^xsd:gYear;
+    dcat:theme lcc:Q;
+    skos:editorialNote "Developed as part of a Master's research focused on improving the pedrictions and related explanations generated in a GNN-based machine learning pipeline (i.e. RD-explainer).";
+    dct:language "en";
+    dcat:landingPage <https://github.com/rosazwart/XAI-FO>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/304/7074>, <https://orcid.org/0000-0003-1795-5930>, <https://dblp.org/pid/157/9485>, <https://dblp.org/pid/354/5718>, <https://dblp.org/pid/134/4947>, <https://dblp.org/pid/125/5986>, <https://dblp.org/pid/49/5917>, <https://dblp.org/pid/68/84>, <https://dblp.org/pid/81/3332>, <https://dblp.org/pid/09/2013>;
+    mod:designedForTask ocmv:ConceptualClarification, ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    dct:source <https://doi.org/10.21203/rs.3.rs-5622649/v1>.
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/> dcat:distribution <https://w3id.org/ontouml-models/model/zwart2024dra-ontology/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Domain Ontology for Drug Repurposing Analysis\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/zwart2024dra-ontology/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/> dcat:distribution <https://w3id.org/ontouml-models/model/zwart2024dra-ontology/distribution/json>.
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/distribution/json> a dcat:Distribution;
+    dct:title "JSON distribution of \"Domain Ontology for Drug Repurposing Analysis\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/zwart2024dra-ontology/ontology.json>.
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/> dcat:distribution <https://w3id.org/ontouml-models/model/zwart2024dra-ontology/distribution/vpp>.
+<https://w3id.org/ontouml-models/model/zwart2024dra-ontology/distribution/vpp> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Domain Ontology for Drug Repurposing Analysis\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/zwart2024dra-ontology/ontology.vpp>.
