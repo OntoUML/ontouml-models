@@ -1,37 +1,60 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/> a dcat:Dataset, mod:SemanticArtefact;
-    dct:title "Ontologia para Integração de Dados de Evasão Escolar, Desempenho Acadêmico e Concessão de Auxílios Socioeconômicos";
-    mod:acronym "Onto-Educacional";
-    dct:issued "2024"^^xsd:gYear;
-    dcat:theme lcc:H;
-    dct:language "pt-br";
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/368/9900>, <https://dblp.org/pid/121/5314>;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:InformationRetrieval, ocmv:Interoperability;
-    ocmv:context ocmv:Research;
-    dct:source <https://www.inf.ufrgs.br/ontobras/wp-content/uploads/2024/10/ontobras_2024_paper_4.pdf>.
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/> dcat:distribution <https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Ontologia para Integração de Dados de Evasão Escolar, Desempenho Acadêmico e Concessão de Auxílios Socioeconômicos\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/melo2024onto-educational/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/> dcat:distribution <https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Ontologia para Integração de Dados de Evasão Escolar, Desempenho Acadêmico e Concessão de Auxílios Socioeconômicos\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/melo2024onto-educational/ontology.json>.
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/> dcat:distribution <https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/vpp> a dcat:Distribution;
-    dct:title "Visual Paradigm distribution of \"Ontologia para Integração de Dados de Evasão Escolar, Desempenho Acadêmico e Concessão de Auxílios Socioeconômicos\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/melo2024onto-educational/ontology.vpp>.
+<https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a> a dcat:Resource,
+    dcat:Dataset, <https://w3id.org/mod#SemanticArtefact>;
+  dcterms:contributor <https://dblp.org/pid/121/5314>, <https://dblp.org/pid/368/9900>;
+  dcterms:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+  dcterms:issued "2024"^^xsd:gYear;
+  dcterms:language "pt-br";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:source <https://www.inf.ufrgs.br/ontobras/wp-content/uploads/2024/10/ontobras_2024_paper_4.pdf>;
+  dcterms:title "Ontologia para IntegraÃ§Ã£o de Dados de EvasÃ£o Escolar, Desempenho AcadÃªmico e ConcessÃ£o de AuxÃ­lios SocioeconÃ´micos";
+  dcat:keyword "melo2024onto-educational"@en;
+  dcat:theme <http://id.loc.gov/authorities/classification/H>;
+  <https://w3id.org/mod#acronym> "Onto-Educacional";
+  <https://w3id.org/mod#designedForTask> <https://w3id.org/ontouml-models/vocabulary#ConceptualClarification>,
+    <https://w3id.org/ontouml-models/vocabulary#InformationRetrieval>, <https://w3id.org/ontouml-models/vocabulary#Interoperability>;
+  <https://w3id.org/ontouml-models/vocabulary#context> <https://w3id.org/ontouml-models/vocabulary#Research>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a#identifier>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia para IntegraÃ§Ã£o de Dados de EvasÃ£o Escolar, Desempenho AcadÃªmico e ConcessÃ£o de AuxÃ­lios SocioeconÃ´micos";
+  dcterms:accessRights <https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a#accessRights>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2025-06-12T12:14:26.287444245Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2025-06-12T12:14:26.287444245Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/vpp>
+  a dcat:Distribution;
+  dcterms:title "Visual Paradigm distribution of \"Ontologia para IntegraÃ§Ã£o de Dados de EvasÃ£o Escolar, Desempenho AcadÃªmico e ConcessÃ£o de AuxÃ­lios SocioeconÃ´micos\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/melo2024onto-educational/ontology.vpp>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/melo2024onto-educational/distribution/ttl>
+  a dcat:Distribution;
+  dcterms:title "JSON distribution of \"Ontologia para IntegraÃ§Ã£o de Dados de EvasÃ£o Escolar, Desempenho AcadÃªmico e ConcessÃ£o de AuxÃ­lios SocioeconÃ´micos\""@en,
+    "Turtle distribution of \"Ontologia para IntegraÃ§Ã£o de Dados de EvasÃ£o Escolar, Desempenho AcadÃªmico e ConcessÃ£o de AuxÃ­lios SocioeconÃ´micos\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/melo2024onto-educational/ontology.json>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/melo2024onto-educational/ontology.ttl>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a" .
+
+<https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "http://publications.europa.eu/resource/authority/access-right/PUBLIC" .
+
+<https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://w3id.org/ontouml-models/model/aa303f13-3dff-4b2b-820c-301d80d3de4a/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777> .

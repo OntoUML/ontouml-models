@@ -1,37 +1,64 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<https://w3id.org/ontouml-models/model/soares2024fair/> a dcat:Dataset, mod:SemanticArtefact;
-    dct:title "Conceptual Model of a FAIR Metadata Schema";
-    mod:acronym "FAIR Metadata Schema";
-    dct:issued "2024"^^xsd:gYear;
-    dcat:theme lcc:T;
-    dct:language "en";
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/331/1678>, <https://dblp.org/pid/p/LuisFerreiraPires>, <https://dblp.org/pid/68/84>, <https://dblp.org/pid/63/9777>, <https://dblp.org/pid/205/0604>, <https://dblp.org/pid/15/5508>, <https://dblp.org/pid/19/6474>, <https://dblp.org/pid/44/1984>, <https://dblp.org/pid/331/1865>, <https://dblp.org/pid/121/5232>, <https://dblp.org/pid/92/5149>, <https://dblp.org/pid/77/7381>, <https://dblp.org/pid/00/2863>, <https://dblp.org/pid/91/10025>, <https://dblp.org/pid/181/6647>, <https://dblp.org/pid/331/1682>, <https://dblp.org/pid/89/2110>, <https://dblp.org/pid/92/3940>, <https://dblp.org/pid/82/9539> ;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:Interoperability;
-    ocmv:context ocmv:Research;
-    dct:source <https://ceur-ws.org/Vol-3849/forum4.pdf>.
-<https://w3id.org/ontouml-models/model/soares2024fair/> dcat:distribution <https://w3id.org/ontouml-models/model/soares2024fair/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/soares2024fair/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Conceptual Model of a FAIR Metadata Schema\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/soares2024fair/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/soares2024fair/> dcat:distribution <https://w3id.org/ontouml-models/model/soares2024fair/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/soares2024fair/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Conceptual Model of a FAIR Metadata Schema\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/soares2024fair/ontology.json>.
-<https://w3id.org/ontouml-models/model/soares2024fair/> dcat:distribution <https://w3id.org/ontouml-models/model/soares2024fair/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0> a dcat:Resource,
+    dcat:Dataset, <https://w3id.org/mod#SemanticArtefact>;
+  dcterms:contributor <https://dblp.org/pid/00/2863>, <https://dblp.org/pid/121/5232>,
+    <https://dblp.org/pid/15/5508>, <https://dblp.org/pid/181/6647>, <https://dblp.org/pid/19/6474>,
+    <https://dblp.org/pid/205/0604>, <https://dblp.org/pid/331/1678>, <https://dblp.org/pid/331/1682>,
+    <https://dblp.org/pid/331/1865>, <https://dblp.org/pid/44/1984>, <https://dblp.org/pid/63/9777>,
+    <https://dblp.org/pid/68/84>, <https://dblp.org/pid/77/7381>, <https://dblp.org/pid/82/9539>,
+    <https://dblp.org/pid/89/2110>, <https://dblp.org/pid/91/10025>, <https://dblp.org/pid/92/3940>,
+    <https://dblp.org/pid/92/5149>, <https://dblp.org/pid/p/LuisFerreiraPires>;
+  dcterms:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+  dcterms:issued "2024"^^xsd:gYear;
+  dcterms:language "en";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:source <https://ceur-ws.org/Vol-3849/forum4.pdf>;
+  dcterms:title "Conceptual Model of a FAIR Metadata Schema";
+  dcat:keyword "soares2024fair"@en;
+  dcat:theme <http://id.loc.gov/authorities/classification/T>;
+  <https://w3id.org/mod#acronym> "FAIR Metadata Schema";
+  <https://w3id.org/mod#designedForTask> <https://w3id.org/ontouml-models/vocabulary#ConceptualClarification>,
+    <https://w3id.org/ontouml-models/vocabulary#Interoperability>;
+  <https://w3id.org/ontouml-models/vocabulary#context> <https://w3id.org/ontouml-models/vocabulary#Research>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0#identifier>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Conceptual Model of a FAIR Metadata Schema";
+  dcterms:accessRights <https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0#accessRights>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2025-06-12T12:14:39.524990038Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2025-06-12T12:14:39.524990038Z"^^xsd:dateTime .
+
 <https://w3id.org/ontouml-models/model/soares2024fair/distribution/vpp> a dcat:Distribution;
-    dct:title "Visual Paradigm distribution of \"Conceptual Model of a FAIR Metadata Schema\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/soares2024fair/ontology.vpp>.
+  dcterms:title "Visual Paradigm distribution of \"Conceptual Model of a FAIR Metadata Schema\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/soares2024fair/ontology.vpp>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/soares2024fair/distribution/ttl> a dcat:Distribution;
+  dcterms:title "JSON distribution of \"Conceptual Model of a FAIR Metadata Schema\""@en,
+    "Turtle distribution of \"Conceptual Model of a FAIR Metadata Schema\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/soares2024fair/ontology.json>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/soares2024fair/ontology.ttl>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0" .
+
+<https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "http://publications.europa.eu/resource/authority/access-right/PUBLIC" .
+
+<https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://w3id.org/ontouml-models/model/35ded3e7-fc19-4ead-9b4f-4e7c5b5e39f0/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777> .

@@ -1,38 +1,64 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<https://w3id.org/ontouml-models/model/leao2024ontomed/> a dcat:Dataset, mod:SemanticArtefact;
-    dct:title "Ontology for Medication Interaction Decision Support";
-    mod:acronym "OntoMed";
-    dct:issued "2024"^^xsd:gYear;
-    dcat:theme lcc:R;
-    skos:editorialNote "This work is the result of a scientific initiation project and represents the initial version of the ontology in Portuguese. The ontology remains under development, with plans for further refinements and the creation of versions in English in the future.";
-    dct:language "pt-br";
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://www.linkedin.com/in/renzo-henrique-guzzo-le%C3%A3o-193aa4234/>, <https://dblp.org/pid/36/6967>, <https://dblp.org/pid/91/3408>;
-    mod:designedForTask ocmv:DecisionSupportSystem, ocmv:ConceptualClarification, ocmv:OntologicalAnalysis;
-    ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.5753/eries.2024.244714>.
-<https://w3id.org/ontouml-models/model/leao2024ontomed/> dcat:distribution <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Ontology for Medication Interaction Decision Support\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/leao2024ontomed/> dcat:distribution <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/json>.
+<https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95> a dcat:Resource,
+    dcat:Dataset, <https://w3id.org/mod#SemanticArtefact>;
+  dcterms:contributor <https://dblp.org/pid/36/6967>, <https://dblp.org/pid/91/3408>,
+    <https://www.linkedin.com/in/renzo-henrique-guzzo-le%C3%A3o-193aa4234/>;
+  dcterms:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+  dcterms:issued "2024"^^xsd:gYear;
+  dcterms:language "pt-br";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:source <https://doi.org/10.5753/eries.2024.244714>;
+  dcterms:title "Ontology for Medication Interaction Decision Support";
+  <http://www.w3.org/2004/02/skos/core#editorialNote> "This work is the result of a scientific initiation project and represents the initial version of the ontology in Portuguese. The ontology remains under development, with plans for further refinements and the creation of versions in English in the future.";
+  dcat:keyword "leao2024ontomed"@en;
+  dcat:theme <http://id.loc.gov/authorities/classification/R>;
+  <https://w3id.org/mod#acronym> "OntoMed";
+  <https://w3id.org/mod#designedForTask> <https://w3id.org/ontouml-models/vocabulary#ConceptualClarification>,
+    <https://w3id.org/ontouml-models/vocabulary#DecisionSupportSystem>, <https://w3id.org/ontouml-models/vocabulary#OntologicalAnalysis>;
+  <https://w3id.org/ontouml-models/vocabulary#context> <https://w3id.org/ontouml-models/vocabulary#Research>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95#identifier>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Ontology for Medication Interaction Decision Support";
+  dcterms:accessRights <https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95#accessRights>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2025-06-12T12:14:22.711817885Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2025-06-12T12:14:22.711817885Z"^^xsd:dateTime .
+
 <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/json> a dcat:Distribution;
-    dct:title "JSON distribution of \"Ontology for Medication Interaction Decision Support\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.json>.
-<https://w3id.org/ontouml-models/model/leao2024ontomed/> dcat:distribution <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/vpp>.
+  dcterms:title "JSON distribution of \"Ontology for Medication Interaction Decision Support\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.json>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/ttl> a dcat:Distribution;
+  dcterms:title "Turtle distribution of \"Ontology for Medication Interaction Decision Support\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.ttl>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
 <https://w3id.org/ontouml-models/model/leao2024ontomed/distribution/vpp> a dcat:Distribution;
-    dct:title "Visual Paradigm distribution of \"Ontology for Medication Interaction Decision Support\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.vpp>.
+  dcterms:title "Visual Paradigm distribution of \"Ontology for Medication Interaction Decision Support\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/leao2024ontomed/ontology.vpp>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95" .
+
+<https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "http://publications.europa.eu/resource/authority/access-right/PUBLIC" .
+
+<https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://w3id.org/ontouml-models/model/b2eff957-5a0c-48df-9b7d-d0b3d2396c95/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777> .

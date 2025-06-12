@@ -1,38 +1,59 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> a dcat:Dataset, mod:SemanticArtefact;
-    dct:title "EUCAIM's Hyper-Ontology (Core Layer)";
-    dct:issued "2024"^^xsd:gYear;
-    dcat:theme lcc:R;
-    skos:editorialNote "The Core Layer of EUCAIM's Hyper-Ontology aims to ground an application ontology for the oncology domain on mCODE Ontological Conceptual Model, maintaining semantic interoperability.";
-    dct:language "en";
-    dcat:landingPage <https://doi.org/10.5281/zenodo.11109765>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/199/9510.html>, <https://dblp.org/pid/118/0942.html>, <https://dblp.org/pid/43/1967.html>, <https://dblp.org/pid/d/ChristelDanielLeBozec.html>, <https://dblp.org/pid/96/1080.html>, <https://dblp.org/pid/12/11202.html>, <https://dblp.org/pid/83/4811.html>, <https://dblp.org/pid/47/2102.html>, <https://dblp.org/pid/20/3693.html>;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:Interoperability, ocmv:OntologicalAnalysis;
-    ocmv:context ocmv:Research, ocmv:Industry;
-    dct:source <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/el-ghosh-et-al-towards-semantic-interoperability-among-heterogeneous-cancer-data-models-using-a-layered-modular-hyper-ontology.pdf>, <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/el-ghosh-et-al-grounding-a-hyper-ontology-on-mcode-ontological-conceptual-model-and-foundational-ontologies-for-semantic-interoperability-in-the-oncology-domain.pdf>.
-<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> dcat:distribution <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174> a dcat:Resource,
+    dcat:Dataset, <https://w3id.org/mod#SemanticArtefact>;
+  dcterms:contributor <https://dblp.org/pid/118/0942.html>, <https://dblp.org/pid/12/11202.html>,
+    <https://dblp.org/pid/199/9510.html>, <https://dblp.org/pid/20/3693.html>, <https://dblp.org/pid/43/1967.html>,
+    <https://dblp.org/pid/47/2102.html>, <https://dblp.org/pid/83/4811.html>, <https://dblp.org/pid/96/1080.html>,
+    <https://dblp.org/pid/d/ChristelDanielLeBozec.html>;
+  dcterms:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+  dcterms:issued "2024"^^xsd:gYear;
+  dcterms:language "en";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:source <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/el-ghosh-et-al-grounding-a-hyper-ontology-on-mcode-ontological-conceptual-model-and-foundational-ontologies-for-semantic-interoperability-in-the-oncology-domain.pdf>,
+    <https://www.utwente.nl/en/eemcs/fois2024/resources/papers/el-ghosh-et-al-towards-semantic-interoperability-among-heterogeneous-cancer-data-models-using-a-layered-modular-hyper-ontology.pdf>;
+  dcterms:title "EUCAIM's Hyper-Ontology (Core Layer)";
+  <http://www.w3.org/2004/02/skos/core#editorialNote> "The Core Layer of EUCAIM's Hyper-Ontology aims to ground an application ontology for the oncology domain on mCODE Ontological Conceptual Model, maintaining semantic interoperability.";
+  dcat:keyword "elghosh2024eucaim"@en;
+  dcat:landingPage <https://doi.org/10.5281/zenodo.11109765>;
+  dcat:theme <http://id.loc.gov/authorities/classification/R>;
+  <https://w3id.org/mod#designedForTask> <https://w3id.org/ontouml-models/vocabulary#ConceptualClarification>,
+    <https://w3id.org/ontouml-models/vocabulary#Interoperability>, <https://w3id.org/ontouml-models/vocabulary#OntologicalAnalysis>;
+  <https://w3id.org/ontouml-models/vocabulary#context> <https://w3id.org/ontouml-models/vocabulary#Industry>,
+    <https://w3id.org/ontouml-models/vocabulary#Research>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174#identifier>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "EUCAIM's Hyper-Ontology (Core Layer)";
+  dcterms:accessRights <https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174#accessRights>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2025-06-12T12:14:19.097334521Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2025-06-12T12:14:19.097334521Z"^^xsd:dateTime .
+
 <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> dcat:distribution <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.json>.
-<https://w3id.org/ontouml-models/model/elghosh2024eucaim/> dcat:distribution <https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/elghosh2024eucaim/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.vpp>.
+  dcterms:title "JSON distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en,
+    "Turtle distribution of \"EUCAIM's Hyper-Ontology (Core Layer)\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.json>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.ttl>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/elghosh2024eucaim/ontology.vpp>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174" .
+
+<https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "http://publications.europa.eu/resource/authority/access-right/PUBLIC" .
+
+<https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://w3id.org/ontouml-models/model/a789c0c8-7c1b-4ed4-bc06-462ad7746174/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777> .

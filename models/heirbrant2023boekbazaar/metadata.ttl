@@ -1,38 +1,56 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/> a dcat:Dataset, mod:SemanticArtefact;
-    dct:title "Boekbazaar Ontology";
-    dct:issued "2023"^^xsd:gYear;
-    dcat:theme lcc:H;
-    skos:editorialNote "Ontology created during an Ontology Engineering lecture by students who wanted to remain anonymous. The ontology was build in a different editor tool and imported to Visual Paradigm, the current diagrammation may not exactly match the original one.";
-    dct:language "en";
-    dcat:landingPage <https://boekbazaar.be/home>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://www.linkedin.com/in/joachim-heirbrant-532aa1233/>, <https://dblp.org/pid/251/5991>, <https://dblp.org/pid/95/6356>;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:InformationRetrieval, ocmv:SoftwareEngineering;
-    ocmv:context ocmv:Industry, ocmv:Research;
-    dct:source <https://lib.ugent.be/catalog/rug01:003144709>, <https://lib.ugent.be/fulltxt/RUG01/003/144/709/RUG01-003144709_2023_0001_AC.pdf>.
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/> dcat:distribution <https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Boekbazaar Ontology\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/heirbrant2023boekbazaar/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/> dcat:distribution <https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Boekbazaar Ontology\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/heirbrant2023boekbazaar/ontology.json>.
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/> dcat:distribution <https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Boekbazaar Ontology\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/heirbrant2023boekbazaar/ontology.vpp>.
+<https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a> a dcat:Resource,
+    dcat:Dataset, <https://w3id.org/mod#SemanticArtefact>;
+  dcterms:contributor <https://dblp.org/pid/251/5991>, <https://dblp.org/pid/95/6356>,
+    <https://www.linkedin.com/in/joachim-heirbrant-532aa1233/>;
+  dcterms:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+  dcterms:issued "2023"^^xsd:gYear;
+  dcterms:language "en";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:source <https://lib.ugent.be/catalog/rug01:003144709>, <https://lib.ugent.be/fulltxt/RUG01/003/144/709/RUG01-003144709_2023_0001_AC.pdf>;
+  dcterms:title "Boekbazaar Ontology";
+  <http://www.w3.org/2004/02/skos/core#editorialNote> "Ontology created during an Ontology Engineering lecture by students who wanted to remain anonymous. The ontology was build in a different editor tool and imported to Visual Paradigm, the current diagrammation may not exactly match the original one.";
+  dcat:keyword "heirbrant2023boekbazaar"@en;
+  dcat:landingPage <https://boekbazaar.be/home>;
+  dcat:theme <http://id.loc.gov/authorities/classification/H>;
+  <https://w3id.org/mod#designedForTask> <https://w3id.org/ontouml-models/vocabulary#ConceptualClarification>,
+    <https://w3id.org/ontouml-models/vocabulary#InformationRetrieval>, <https://w3id.org/ontouml-models/vocabulary#SoftwareEngineering>;
+  <https://w3id.org/ontouml-models/vocabulary#context> <https://w3id.org/ontouml-models/vocabulary#Industry>,
+    <https://w3id.org/ontouml-models/vocabulary#Research>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a#identifier>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Boekbazaar Ontology";
+  dcterms:accessRights <https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a#accessRights>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2025-06-12T12:14:22.129717054Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2025-06-12T12:14:22.129717054Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/heirbrant2023boekbazaar/distribution/ttl> a
+    dcat:Distribution;
+  dcterms:title "JSON distribution of \"Boekbazaar Ontology\""@en, "Turtle distribution of \"Boekbazaar Ontology\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/heirbrant2023boekbazaar/ontology.json>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/heirbrant2023boekbazaar/ontology.ttl>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/heirbrant2023boekbazaar/ontology.vpp>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a" .
+
+<https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "http://publications.europa.eu/resource/authority/access-right/PUBLIC" .
+
+<https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://w3id.org/ontouml-models/model/47a8d9b1-6c0a-4af7-aa54-c0bd5757260a/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777> .

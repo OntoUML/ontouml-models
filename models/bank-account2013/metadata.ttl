@@ -1,35 +1,50 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<https://w3id.org/ontouml-models/model/bank-account2013/> a dcat:Dataset, mod:SemanticArtefact;
-    dct:title "Bank Account Ontology";
-    dct:issued "2013"^^xsd:gYear;
-    dcat:theme lcc:H;
-    skos:editorialNote "Ontology created during an Ontology Engineering lecture by students who wanted to remain anonymous. The ontology was build in a different editor tool and imported to Visual Paradigm, the current diagrammation may not exacly match the original one.";
-    dct:language "pt-br";
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:Learning;
-    ocmv:context ocmv:Classroom.
-<https://w3id.org/ontouml-models/model/bank-account2013/> dcat:distribution <https://w3id.org/ontouml-models/model/bank-account2013/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be> a dcat:Resource,
+    dcat:Dataset, <https://w3id.org/mod#SemanticArtefact>;
+  dcterms:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+  dcterms:issued "2013"^^xsd:gYear;
+  dcterms:language "pt-br";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:title "Bank Account Ontology";
+  <http://www.w3.org/2004/02/skos/core#editorialNote> "Ontology created during an Ontology Engineering lecture by students who wanted to remain anonymous. The ontology was build in a different editor tool and imported to Visual Paradigm, the current diagrammation may not exacly match the original one.";
+  dcat:keyword "bank-account2013"@en;
+  dcat:theme <http://id.loc.gov/authorities/classification/H>;
+  <https://w3id.org/mod#designedForTask> <https://w3id.org/ontouml-models/vocabulary#ConceptualClarification>,
+    <https://w3id.org/ontouml-models/vocabulary#Learning>;
+  <https://w3id.org/ontouml-models/vocabulary#context> <https://w3id.org/ontouml-models/vocabulary#Classroom>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be#identifier>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Bank Account Ontology";
+  dcterms:accessRights <https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be#accessRights>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2025-06-12T12:14:14.784485811Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2025-06-12T12:14:14.784485811Z"^^xsd:dateTime .
+
 <https://w3id.org/ontouml-models/model/bank-account2013/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Bank Account Ontology\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/bank-account2013/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/bank-account2013/> dcat:distribution <https://w3id.org/ontouml-models/model/bank-account2013/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/bank-account2013/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Bank Account Ontology\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/bank-account2013/ontology.json>.
-<https://w3id.org/ontouml-models/model/bank-account2013/> dcat:distribution <https://w3id.org/ontouml-models/model/bank-account2013/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/bank-account2013/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Bank Account Ontology\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/bank-account2013/ontology.vpp>.
+  dcterms:title "JSON distribution of \"Bank Account Ontology\""@en, "Turtle distribution of \"Bank Account Ontology\""@en;
+  dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/bank-account2013/ontology.json>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/bank-account2013/ontology.ttl>,
+    <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/bank-account2013/ontology.vpp>;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+  <https://w3id.org/ontouml-models/vocabulary#isComplete> true .
+
+<https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be" .
+
+<https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "http://publications.europa.eu/resource/authority/access-right/PUBLIC" .
+
+<https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<https://w3id.org/ontouml-models/model/c2eb9c1f-051c-467e-be63-fcdb8e3e14be/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777> .
