@@ -8,7 +8,9 @@ The goal of the OntoUML/UFO Catalog is to support empirical research in OntoUML 
 
 The catalog offers a diverse collection of models, created by modelers with varying modeling skills, for a range of domains and different purposes. The models are available in machine-readable formats (JSON and Turtle) and are accessible via permanent identifiers.
 
-The catalog has two data services through which we store and publish its content: this Git repository for data storage, and a FAIR Data Point (FDP) for data discovery. While we outline the FDP in this document, the focus of this documentation is on the catalog’s repository. 
+The catalog has two data services through which we store and publish its content: this Git repository for data storage, and a FAIR Data Point (FDP) for data discovery. While we outline the FDP in this document, the focus of this documentation is on the catalog’s repository.
+
+An overview of the catalog is provided by a dashboard at the persistent URL: <a href='http://w3id.org/ontouml-models/dashboard' target='_blank'>http://w3id.org/ontouml-models/dashboard</a>.
 
 ## Table of Contents
 
