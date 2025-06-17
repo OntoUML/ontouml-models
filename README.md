@@ -10,7 +10,7 @@ The catalog offers a diverse collection of models, created by modelers with vary
 
 The catalog has two data services through which we store and publish its content: this Git repository for data storage, and a FAIR Data Point (FDP) for data discovery. While we outline the FDP in this document, the focus of this documentation is on the catalog’s repository.
 
-An overview of the catalog is provided by a dashboard at the persistent URL: <a href='http://w3id.org/ontouml-models/dashboard' target='_blank'>http://w3id.org/ontouml-models/dashboard</a>.
+An overview of the catalog is provided by a dashboard at the persistent URL [http://w3id.org/ontouml-models/dashboard](http://w3id.org/ontouml-models/dashboard).
 
 ## Table of Contents
 
