@@ -1,0 +1,40 @@
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/felice2025memonto/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "Memory Ontology";
+    mod:acronym "Mem'Onto";
+    dct:issued "2025"^^xsd:gYear;
+    dcat:theme lcc:B;
+    skos:editorialNote "Mem'Onto is grounded on UFO and is adapted from CoTOn (Cognitive Theory Ontology from Ravenschlag et al., 2023).";
+    dct:language "en";
+    dcat:landingPage <https://w3id.org/memonto>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://orcid.org/0009-0001-9829-2034>, <https://orcid.org/0009-0005-2910-1539>, <https://orcid.org/0000-0003-2840-005X>;
+    mod:designedForTask ocmv:ConceptualClarification, ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    dct:source <https://gitlab.com/sfsoline.felice/memonto/-/blob/main/Towards_a_Semantic_Representation_of_Memory_Entities.pdf> .
+<https://purl.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/felice2025memonto/>.
+<https://w3id.org/ontouml-models/model/felice2025memonto/> dcat:distribution <https://w3id.org/ontouml-models/model/felice2025memonto/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/felice2025memonto/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"Memory Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/felice2025memonto/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/felice2025memonto/> dcat:distribution <https://w3id.org/ontouml-models/model/felice2025memonto/distribution/json>.
+<https://w3id.org/ontouml-models/model/felice2025memonto/distribution/json> a dcat:Distribution;
+    dct:title "JSON distribution of \"Memory Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/felice2025memonto/ontology.json>.
+<https://w3id.org/ontouml-models/model/felice2025memonto/> dcat:distribution <https://w3id.org/ontouml-models/model/felice2025memonto/distribution/vpp>.
+<https://w3id.org/ontouml-models/model/felice2025memonto/distribution/vpp> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"Memory Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/felice2025memonto/ontology.vpp>.
