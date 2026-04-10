@@ -1,0 +1,40 @@
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mod: <https://w3id.org/mod#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+
+<https://w3id.org/ontouml-models/model/shaked2025trades/> a dcat:Dataset, mod:SemanticArtefact;
+    dct:title "TRADES Ontology";
+    mod:acronym "TRADES";
+    dct:issued "2025"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "Type-level ontology obtained by translating the TRADES executable metamodel into OntoUML, aiming to make explicit the domain knowledge and practices embedded in TRADES. Covers the ontology fragments that underpin TRADES capabilities discussed in the paper, including threat/mitigation specification, risk scoring, and vulnerability management.";
+    dct:language "en";
+    dcat:landingPage <https://github.com/UKRI-DSbD/TRADES>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/224/5770>;
+    mod:designedForTask ocmv:ConceptualClarification, ocmv:OntologicalAnalysis, ocmv:DecisionSupportSystem;
+    ocmv:context ocmv:Research;
+    dct:source <https://doi.org/10.1177/15705838251394801>.
+<https://purl.org/ontouml-models/catalog> dcat:dataset <https://w3id.org/ontouml-models/model/shaked2025trades/>.
+<https://w3id.org/ontouml-models/model/shaked2025trades/> dcat:distribution <https://w3id.org/ontouml-models/model/shaked2025trades/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/shaked2025trades/distribution/ttl> a dcat:Distribution;
+    dct:title "Turtle distribution of \"TRADES Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/shaked2025trades/ontology.ttl>.
+<https://w3id.org/ontouml-models/model/shaked2025trades/> dcat:distribution <https://w3id.org/ontouml-models/model/shaked2025trades/distribution/ttl>.
+<https://w3id.org/ontouml-models/model/shaked2025trades/distribution/json> a dcat:Distribution;
+    dct:title "JSON distribution of \"TRADES Ontology\""@en;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/shaked2025trades/ontology.json>.
+<https://w3id.org/ontouml-models/model/shaked2025trades/> dcat:distribution <https://w3id.org/ontouml-models/model/shaked2025trades/distribution/json>.
+<https://w3id.org/ontouml-models/model/shaked2025trades/distribution/vpp> a dcat:Distribution;
+    dct:title "Visual Paradigm distribution of \"TRADES Ontology\""@en;
+    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
+    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/shaked2025trades/ontology.vpp>.
