@@ -1,0 +1,78 @@
+{
+  "id": "project_1",
+  "name": "Example Project",
+  "description": null,
+  "type": "Project",
+  "model": {
+    "id": "package_1",
+    "name": "Examples Package",
+    "description": null,
+    "type": "Package",
+    "contents": [
+      {
+        "id": "class_agent",
+        "name": "Agent",
+        "description": null,
+        "type": "Class",
+        "stereotype": "category",
+        "isAbstract": false,
+        "isDerived": false,
+        "properties": [
+          {
+            "id": "att_name",
+            "name": "name",
+            "description": null,
+            "type": "Property",
+            "stereotype": null,
+            "isDerived": false,
+            "aggregationKind": "NONE",
+            "cardinality": "*",
+            "isOrdered": false,
+            "isReadOnly": false,
+            "propertyType": null,
+            "subsettedProperties": [],
+            "redefinedProperties": []
+          }
+        ],
+        "isExtensional": false,
+        "isPowertype": false,
+        "order": "1",
+        "literals": [],
+        "restrictedTo": ["functional-complex"]
+      },
+      {
+        "id": "class_person",
+        "name": "Person",
+        "description": null,
+        "type": "Class",
+        "stereotype": "kind",
+        "isAbstract": false,
+        "isDerived": false,
+        "properties": [],
+        "isExtensional": false,
+        "isPowertype": false,
+        "order": "1",
+        "literals": [],
+        "restrictedTo": ["functional-complex"]
+      },
+      {
+        "id": "gen_person_agent",
+        "name": null,
+        "description": null,
+        "type": "Generalization",
+        "general": {"id": "class_agent", "type": "Class"},
+        "specific": {"id": "class_person", "type": "Class"}
+      },
+      {
+        "id": "gs_agent_types",
+        "name": "agent_types",
+        "description": null,
+        "type": "GeneralizationSet",
+        "isDisjoint": true,
+        "isComplete": true,
+        "generalizations": [{"id": "gen_person_agent", "type": "Generalization"}],
+        "categorizer": null
+      }
+    ]
+  }
+}

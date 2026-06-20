@@ -1,0 +1,83 @@
+# OntoUML/UFO Catalog dataset metadata template.
+# Save this file as models/<model-slug>/metadata.yaml.
+
+# Optional. If omitted, the script infers:
+# https://w3id.org/ontouml-models/model/<model-slug>/
+iri: https://w3id.org/ontouml-models/model/example-model/
+
+title:
+  value: Example OntoUML Model
+  lang: en
+
+# Optional alternative title(s).
+alternative:
+  - value: Example Model
+    lang: en
+
+description:
+  value: Short description of the model and its scope.
+  lang: en
+
+# Required. Accepted forms: YYYY, YYYY-MM, YYYY-MM-DD, or xsd:dateTime-like value.
+issued: 2024
+
+# Optional. Same accepted forms as issued.
+modified: 2024
+
+# Required. Must be an absolute URI.
+license: https://creativecommons.org/licenses/by/4.0/
+
+# Optional.
+access_rights: http://publications.europa.eu/resource/authority/access-right/PUBLIC
+
+# Required. Use one LCC class, for example H, T, K, Q, or a full LCC URI.
+theme: H
+
+# Required. Literal values may have language tags.
+keywords:
+  - value: example
+    lang: en
+  - value: ontology-driven conceptual modeling
+    lang: en
+
+# Recommended.
+language: en
+
+# Optional.
+acronym: EXM
+
+# Optional.
+editorial_note:
+  value: Explain relevant cataloging decisions, if any.
+  lang: en
+
+# Optional provenance fields. Prefer persistent identifiers such as ORCID, DBLP, DOI.
+creators:
+  - https://orcid.org/0000-0000-0000-0000
+contributors:
+  - https://orcid.org/0000-0000-0000-0000
+publisher: https://orcid.org/0000-0000-0000-0000
+source:
+  - https://doi.org/10.1000/example
+
+# Optional dataset fields.
+landing_page: https://example.org/model-page
+bibliographic_citation:
+  value: Author, A. (2024). Example publication title.
+  lang: en
+storage_url: https://github.com/OntoUML/ontouml-models/tree/master/models/example-model
+
+# Optional contact points.
+contact_points:
+  - name: Example Curator
+    email: curator@example.org
+
+# Recommended controlled values.
+designed_for_task:
+  - ConceptualClarification
+context:
+  - Research
+representation_style:
+  - OntoumlStyle
+ontology_type:
+  - Domain
