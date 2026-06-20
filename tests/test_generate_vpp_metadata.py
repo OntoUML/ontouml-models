@@ -39,8 +39,12 @@ class GenerateVppMetadataTest(TestCase):
 
             generated = gvm.generate_for_dataset(dataset, repository_root=root)
 
-            self.assertEqual(generated.output_path, dataset / "metadata-vpp.ttl")
+            expected_output_path = dataset / "metadata-vpp.ttl"
             self.assertTrue(generated.output_path.exists())
+            self.assertTrue(
+                generated.output_path.samefile(expected_output_path),
+                f"{generated.output_path} does not refer to {expected_output_path}",
+            )
 
             graph = Graph().parse(generated.output_path, format="turtle")
             distribution = generated.distribution_uri
