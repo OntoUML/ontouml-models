@@ -13,13 +13,14 @@ Run from the repository root, for example:
     python scripts/generate_png_metadata.py --all --models-dir models
 
 The generated RDF follows the distribution metadata pattern already used in the
-catalog for JSON, Turtle, and VPP distributions:
+catalog for JSON, Turtle, VPP, and PNG distributions:
 
 - the distribution is typed as dcat:Distribution;
 - the distribution points back to the model with dct:isPartOf;
 - model-level dct:issued and dct:license are copied to the distribution;
 - the distribution receives dcat:mediaType, dcat:downloadURL, dct:title,
-  ocmv:isComplete, fdpo:metadataIssued, and fdpo:metadataModified.
+  skos:editorialNote, ocmv:isComplete, fdpo:metadataIssued, and
+  fdpo:metadataModified.
 
 Only RDFLib is required for RDF graph creation and Turtle serialization. PNG
 validation and dimension extraction are performed with the Python standard
@@ -43,7 +44,7 @@ from typing import List, Optional, Sequence, Tuple
 from urllib.parse import quote
 
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
-from rdflib.namespace import DCTERMS as DCT, RDF, XSD
+from rdflib.namespace import DCTERMS as DCT, RDF, SKOS, XSD
 
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
 FDPO = Namespace("https://w3id.org/fdp/fdp-o#")
@@ -58,6 +59,16 @@ DISTRIBUTION_BASE = "https://w3id.org/ontouml-models/distribution/"
 DIAGRAM_SOURCES = {
     "original-diagrams": "o",
     "new-diagrams": "n",
+}
+
+SOURCE_VERSION_LABELS = {
+    "o": "original version",
+    "n": "Visual Paradigm version",
+}
+
+EDITORIAL_NOTES = {
+    "o": "This image depicts the diagram as originally represented by its author(s).",
+    "n": "This image depicts a version of the original diagram re-created in the Visual Paradigm editor.",
 }
 
 CONTROL_CHARS = re.compile(r"[\x00-\x1f\x7f]")
@@ -96,9 +107,11 @@ class ModelMetadata:
 
 @dataclass(frozen=True)
 class ExistingDistributionMetadata:
-    """Reusable identifiers and timestamps found in an existing metadata file."""
+    """Reusable metadata found in an existing distribution metadata file."""
 
     uri: Optional[URIRef]
+    title: Optional[Literal]
+    editorial_note: Optional[Literal]
     metadata_issued: Optional[Literal]
     metadata_modified: Optional[Literal]
 
@@ -129,11 +142,11 @@ class GeneratedFile:
 def bind_prefixes(graph: Graph) -> None:
     """Bind prefixes used by catalog distribution metadata."""
 
-    graph.bind("fdpo", FDPO)
     graph.bind("dcat", DCAT)
     graph.bind("dct", DCT)
+    graph.bind("fdpo", FDPO)
     graph.bind("ocmv", OCMV)
-    graph.bind("rdf", RDF)
+    graph.bind("skos", SKOS)
     graph.bind("xsd", XSD)
     graph.bind("spdx", SPDX)
     graph.bind("schema", SCHEMA)
@@ -369,10 +382,22 @@ def download_url(config: Config, dataset_folder: Path, source_dir: str, filename
 
 
 def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetadata:
-    """Read reusable metadata from an existing target file, if present."""
+    """Read reusable metadata from an existing target file, if present.
+
+    RDFLib normalizes xsd:dateTime values when parsing, which can shorten
+    nanosecond timestamps such as 2023-04-14T17:33:22.898648451Z. The catalog
+    already contains such lexical forms, so timestamp literals are extracted from
+    the original Turtle text and reinserted with normalize=False.
+    """
 
     if not path.exists():
-        return ExistingDistributionMetadata(uri=None, metadata_issued=None, metadata_modified=None)
+        return ExistingDistributionMetadata(
+            uri=None,
+            title=None,
+            editorial_note=None,
+            metadata_issued=None,
+            metadata_modified=None,
+        )
 
     graph = Graph()
     try:
@@ -390,14 +415,33 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
             f"Existing distribution URI does not follow catalog distribution URI pattern in {path}: {distribution}"
         )
 
-    metadata_issued = first_literal(graph, distribution, FDPO.metadataIssued) if distribution else None
-    metadata_modified = first_literal(graph, distribution, FDPO.metadataModified) if distribution else None
+    text = path.read_text(encoding="utf-8")
+    title = first_literal(graph, distribution, DCT.title) if distribution else None
+    editorial = first_literal(graph, distribution, SKOS.editorialNote) if distribution else None
+    metadata_issued = existing_datetime_literal(text, "metadataIssued")
+    metadata_modified = existing_datetime_literal(text, "metadataModified")
 
     return ExistingDistributionMetadata(
         uri=distribution,
+        title=title,
+        editorial_note=editorial,
         metadata_issued=metadata_issued,
         metadata_modified=metadata_modified,
     )
+
+
+def existing_datetime_literal(turtle_text: str, local_name: str) -> Optional[Literal]:
+    """Return an existing fdpo dateTime literal while preserving its lexical form."""
+
+    patterns = [
+        rf"\bfdpo:{re.escape(local_name)}\s+\"([^\"]+)\"\^\^xsd:dateTime",
+        rf"<https://w3id\.org/fdp/fdp-o#{re.escape(local_name)}>\s+\"([^\"]+)\"\^\^<http://www\.w3\.org/2001/XMLSchema#dateTime>",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, turtle_text)
+        if match:
+            return Literal(match.group(1), datatype=XSD.dateTime, normalize=False)
+    return None
 
 
 def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config) -> List[DiagramFile]:
@@ -434,7 +478,7 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
 
             output_path = dataset_folder / f"metadata-png-{prefix}-{stem}.ttl"
             if output_path.exists() and not config.overwrite:
-                existing = ExistingDistributionMetadata(uri=None, metadata_issued=None, metadata_modified=None)
+                existing = ExistingDistributionMetadata(uri=None, title=None, editorial_note=None, metadata_issued=None, metadata_modified=None)
                 dist_uri = new_distribution_uri(model.uri, source_dir, png_path.name)
             else:
                 existing = read_existing_distribution_metadata(output_path)
@@ -484,7 +528,7 @@ def current_metadata_timestamp() -> Literal:
     """Return the current UTC timestamp as xsd:dateTime."""
 
     value = datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z")
-    return Literal(value, datatype=XSD.dateTime)
+    return Literal(value, datatype=XSD.dateTime, normalize=False)
 
 
 def configured_metadata_timestamp(config: Config) -> Literal:
@@ -496,7 +540,7 @@ def configured_metadata_timestamp(config: Config) -> Literal:
                 "--metadata-timestamp must be an xsd:dateTime lexical value, "
                 "for example 2024-01-02T03:04:05Z"
             )
-        return Literal(config.metadata_timestamp, datatype=XSD.dateTime)
+        return Literal(config.metadata_timestamp, datatype=XSD.dateTime, normalize=False)
     return current_metadata_timestamp()
 
 
@@ -506,7 +550,7 @@ def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config:
     graph = Graph()
     bind_prefixes(graph)
 
-    title = f"PNG {source_label(diagram.prefix)} diagram distribution of {model.title} ({diagram.stem})"
+    title = diagram_title(model, diagram)
     metadata_timestamp = configured_metadata_timestamp(config)
     metadata_issued = diagram.existing_metadata.metadata_issued or metadata_timestamp
     # Preserve existing metadataModified by default to make regeneration stable.
@@ -517,17 +561,26 @@ def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config:
     graph.add((diagram.distribution_uri, RDF.type, DCAT.Distribution))
     graph.add((diagram.distribution_uri, DCT.isPartOf, model.uri))
     graph.add((diagram.distribution_uri, DCT.issued, model.issued))
-    graph.add((diagram.distribution_uri, DCAT.mediaType, PNG_MEDIA_TYPE))
     graph.add((diagram.distribution_uri, DCT.license, model.license_uri))
-    graph.add((diagram.distribution_uri, DCT.title, Literal(title, lang="en")))
-    graph.add((diagram.distribution_uri, DCAT.downloadURL, diagram.download_url))
+    graph.add((diagram.distribution_uri, DCAT.mediaType, PNG_MEDIA_TYPE))
     graph.add((diagram.distribution_uri, OCMV.isComplete, Literal(False, datatype=XSD.boolean)))
+    graph.add((diagram.distribution_uri, DCT.title, diagram.existing_metadata.title or Literal(title, lang="en")))
+    graph.add((diagram.distribution_uri, DCAT.downloadURL, diagram.download_url))
+    graph.add((
+        diagram.distribution_uri,
+        SKOS.editorialNote,
+        diagram.existing_metadata.editorial_note or Literal(editorial_note(diagram.prefix), lang="en"),
+    ))
     graph.add((diagram.distribution_uri, FDPO.metadataIssued, metadata_issued))
     graph.add((diagram.distribution_uri, FDPO.metadataModified, metadata_modified))
 
     if config.include_file_metadata:
         width, height = read_png_dimensions(diagram.path)
-        graph.add((diagram.distribution_uri, DCAT.byteSize, Literal(Decimal(os.path.getsize(diagram.path)), datatype=XSD.decimal)))
+        graph.add((
+            diagram.distribution_uri,
+            DCAT.byteSize,
+            Literal(Decimal(os.path.getsize(diagram.path)), datatype=XSD.decimal),
+        ))
         graph.add((diagram.distribution_uri, SCHEMA.width, Literal(width, datatype=XSD.integer)))
         graph.add((diagram.distribution_uri, SCHEMA.height, Literal(height, datatype=XSD.integer)))
         checksum = BNode()
@@ -539,14 +592,30 @@ def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config:
     return graph
 
 
-def source_label(prefix: str) -> str:
-    """Return a human-readable label for a diagram source prefix."""
+def diagram_title(model: ModelMetadata, diagram: DiagramFile) -> str:
+    """Return a catalog-style title for a PNG diagram distribution."""
 
-    if prefix == "o":
-        return "original"
-    if prefix == "n":
-        return "new"
-    return prefix
+    label = diagram_label(diagram.stem)
+    version = source_version_label(diagram.prefix)
+    return f"PNG distribution of diagram '{label}' from the {model.title} ({version})"
+
+
+def diagram_label(stem: str) -> str:
+    """Return a human-readable diagram label derived from a filename stem."""
+
+    return re.sub(r"[\s_-]+", " ", stem).strip()
+
+
+def source_version_label(prefix: str) -> str:
+    """Return the catalog label used for the source diagram version."""
+
+    return SOURCE_VERSION_LABELS.get(prefix, prefix)
+
+
+def editorial_note(prefix: str) -> str:
+    """Return the catalog editorial note used for the source diagram version."""
+
+    return EDITORIAL_NOTES.get(prefix, "This image depicts a diagram distribution of the model.")
 
 
 def write_graph(graph: Graph, target: Path, config: Config) -> None:
