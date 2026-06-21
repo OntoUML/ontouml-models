@@ -81,7 +81,7 @@ The default editorial notes are:
 
 ## Distribution identifiers
 
-Existing target metadata files keep their current distribution URI. This avoids changing already published W3IDs.
+Existing target metadata files keep their current distribution URI. This avoids changing already published W3IDs. Existing catalog PNG distribution identifiers were historically generated as opaque UUIDs, and many of them are UUIDv4 values. The script treats all existing distribution identifiers as persistent opaque identifiers and never replaces them during regeneration.
 
 For new PNG metadata files, the script creates a deterministic UUIDv5 distribution URI under:
 
@@ -95,7 +95,11 @@ The deterministic UUID input is:
 <model-uri>|<diagram-folder>/<png-filename>
 ```
 
-This makes generation reproducible while preserving the catalog's established UUID-based distribution URI pattern.
+For example, if the same PNG filename exists in both `original-diagrams` and `new-diagrams`, the generated UUIDs differ because the diagram folder is part of the UUID input.
+
+This differs from the catalog's likely original JavaScript generation approach, which appears to have generated UUIDv4 identifiers for new distribution metadata. This is not a compatibility problem because the URI pattern remains the same and UUIDs are treated as opaque identifiers. The compatibility rule is: preserve existing distribution URIs; use deterministic UUIDv5 only when creating metadata for PNG diagrams that do not already have a metadata file.
+
+The UUIDv5 approach makes new-file generation reproducible while preserving the catalog's established UUID-based distribution URI pattern.
 
 ## Download URLs
 
@@ -198,7 +202,7 @@ python scripts/generate_png_metadata.py models/<model-directory> \
   --models-dir-name models
 ```
 
-Use a fixed timestamp for new metadata files. The value must use an `xsd:dateTime` lexical form such as `2024-01-02T03:04:05Z`:
+Use a fixed timestamp for new metadata files, or for existing metadata files that do not already contain `fdpo:metadataIssued` or `fdpo:metadataModified`. The value must use an `xsd:dateTime` lexical form such as `2024-01-02T03:04:05Z`:
 
 ```bash
 python scripts/generate_png_metadata.py models/<model-directory> \
@@ -231,7 +235,7 @@ python ../../scripts/generate_png_metadata.py
 | `--strict` | No | off | Fail if an expected diagram folder is missing or empty. |
 | `--dry-run` | No | off | Validate inputs and report files that would be generated without writing them. |
 | `--include-file-metadata` | No | off | Also add optional byte size, SHA-256 checksum, width, and height triples. |
-| `--metadata-timestamp VALUE` | No | current UTC timestamp | `xsd:dateTime` value used for `fdpo:metadataIssued` and `fdpo:metadataModified` on new files. |
+| `--metadata-timestamp VALUE` | No | current UTC timestamp | `xsd:dateTime` value used for `fdpo:metadataIssued` and `fdpo:metadataModified` on new files, or on existing files where those values are missing. |
 
 ## Input assumptions
 
@@ -256,7 +260,7 @@ new-diagrams/
 
 In normal mode, a missing or empty `original-diagrams` or `new-diagrams` folder is tolerated as long as at least one PNG diagram is found. Use `--strict` to fail if either expected diagram folder is missing or empty.
 
-Only direct `.png` files inside these folders are processed. Nested files are not scanned.
+Only direct PNG files inside these folders are processed. The `.png` extension is matched case-insensitively. Nested files are not scanned.
 
 ## Error handling
 
@@ -288,7 +292,7 @@ RDFLib serializes Turtle using its own formatting. Regenerated files may therefo
 - whitespace before `;` and `.`;
 - omission of unused prefixes;
 - predicate order;
-- compact boolean syntax, e.g., `ocmv:isComplete false` instead of `"false"^^xsd:boolean`.
+- compact boolean syntax, e.g., `ocmv:isComplete false`, which is Turtle shorthand for an `xsd:boolean` false literal.
 
 These are Turtle serialization differences and do not change the RDF graph.
 
