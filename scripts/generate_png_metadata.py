@@ -112,6 +112,7 @@ class ExistingDistributionMetadata:
     uri: Optional[URIRef]
     title: Optional[Literal]
     editorial_note: Optional[Literal]
+    download_url: Optional[URIRef]
     metadata_issued: Optional[Literal]
     metadata_modified: Optional[Literal]
 
@@ -349,9 +350,13 @@ def sha256_hex(path: Path) -> str:
 
 
 def quoted_path(*segments: str) -> str:
-    """Quote URL path segments while preserving path separators."""
+    """Quote URL path segments while preserving path separators.
 
-    return "/".join(quote(segment, safe="") for segment in segments)
+    Commas are left unescaped because they are valid path characters and existing
+    catalog raw GitHub URLs use them unescaped in diagram filenames.
+    """
+
+    return "/".join(quote(segment, safe=",") for segment in segments)
 
 
 def split_repository_path(path: str) -> List[str]:
@@ -395,6 +400,7 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
             uri=None,
             title=None,
             editorial_note=None,
+            download_url=None,
             metadata_issued=None,
             metadata_modified=None,
         )
@@ -418,6 +424,7 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
     text = path.read_text(encoding="utf-8")
     title = first_literal(graph, distribution, DCT.title) if distribution else None
     editorial = first_literal(graph, distribution, SKOS.editorialNote) if distribution else None
+    download = first_uri(graph, distribution, DCAT.downloadURL) if distribution else None
     metadata_issued = existing_datetime_literal(text, "metadataIssued")
     metadata_modified = existing_datetime_literal(text, "metadataModified")
 
@@ -425,6 +432,7 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
         uri=distribution,
         title=title,
         editorial_note=editorial,
+        download_url=download,
         metadata_issued=metadata_issued,
         metadata_modified=metadata_modified,
     )
@@ -478,12 +486,20 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
 
             output_path = dataset_folder / f"metadata-png-{prefix}-{stem}.ttl"
             if output_path.exists() and not config.overwrite:
-                existing = ExistingDistributionMetadata(uri=None, title=None, editorial_note=None, metadata_issued=None, metadata_modified=None)
+                existing = ExistingDistributionMetadata(
+                    uri=None,
+                    title=None,
+                    editorial_note=None,
+                    download_url=None,
+                    metadata_issued=None,
+                    metadata_modified=None,
+                )
                 dist_uri = new_distribution_uri(model.uri, source_dir, png_path.name)
             else:
                 existing = read_existing_distribution_metadata(output_path)
                 dist_uri = existing.uri or new_distribution_uri(model.uri, source_dir, png_path.name)
-            dload = download_url(config, dataset_folder, source_dir, png_path.name)
+            generated_download_url = download_url(config, dataset_folder, source_dir, png_path.name)
+            dload = existing.download_url or generated_download_url
 
             existing_output = seen_outputs.get(output_path)
             if existing_output is not None:
