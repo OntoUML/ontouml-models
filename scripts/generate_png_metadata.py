@@ -167,9 +167,13 @@ def validate_dataset_folder(dataset_folder: Path) -> Path:
 
     dataset_folder = dataset_folder.resolve()
     if not dataset_folder.exists():
-        raise MetadataGenerationError(f"Dataset folder does not exist: {dataset_folder}")
+        raise MetadataGenerationError(
+            f"Dataset folder does not exist: {dataset_folder}"
+        )
     if not dataset_folder.is_dir():
-        raise MetadataGenerationError(f"Dataset path is not a directory: {dataset_folder}")
+        raise MetadataGenerationError(
+            f"Dataset path is not a directory: {dataset_folder}"
+        )
     return dataset_folder
 
 
@@ -190,7 +194,9 @@ def load_model_metadata(dataset_folder: Path, config: Config) -> ModelMetadata:
 
     metadata_path = dataset_folder / "metadata.yaml"
     if not metadata_path.exists():
-        raise MetadataGenerationError(f"Missing required canonical metadata file: {metadata_path}")
+        raise MetadataGenerationError(
+            f"Missing required canonical metadata file: {metadata_path}"
+        )
 
     data = load_yaml_mapping(metadata_path)
 
@@ -233,7 +239,9 @@ def load_model_metadata(dataset_folder: Path, config: Config) -> ModelMetadata:
     )
     issued_literal = yaml_issued_literal(issued_value)
     if issued_literal is None:
-        raise MetadataGenerationError(f"Missing required issued date in {metadata_path}")
+        raise MetadataGenerationError(
+            f"Missing required issued date in {metadata_path}"
+        )
 
     uri_value = yaml_first_value(
         data,
@@ -292,7 +300,9 @@ def load_yaml_mapping(path: Path) -> Mapping[str, Any]:
     if data is None:
         raise MetadataGenerationError(f"Canonical metadata file is empty: {path}")
     if not isinstance(data, Mapping):
-        raise MetadataGenerationError(f"Canonical metadata file must contain a YAML mapping: {path}")
+        raise MetadataGenerationError(
+            f"Canonical metadata file must contain a YAML mapping: {path}"
+        )
     return data
 
 
@@ -442,7 +452,11 @@ def yaml_license_uri(value: Any) -> Optional[URIRef]:
         "creativecommonszero10universaldomainpublicdedication": "https://creativecommons.org/publicdomain/zero/1.0/",
         "mit": "http://spdx.org/licenses/MIT",
     }
-    return URIRef(licenses[canonical_yaml_key(text)]) if canonical_yaml_key(text) in licenses else None
+    return (
+        URIRef(licenses[canonical_yaml_key(text)])
+        if canonical_yaml_key(text) in licenses
+        else None
+    )
 
 
 def yaml_license_text(value: Any) -> Optional[str]:
@@ -451,7 +465,16 @@ def yaml_license_text(value: Any) -> Optional[str]:
     if value is None:
         return None
     if isinstance(value, Mapping):
-        for key in ("uri", "url", "licenseUri", "licenseUrl", "id", "identifier", "spdx", "value"):
+        for key in (
+            "uri",
+            "url",
+            "licenseUri",
+            "licenseUrl",
+            "id",
+            "identifier",
+            "spdx",
+            "value",
+        ):
             text = yaml_license_text(yaml_mapping_get(value, key))
             if text:
                 return text
@@ -470,7 +493,9 @@ def yaml_license_text(value: Any) -> Optional[str]:
     return text or None
 
 
-def first_literal(graph: Graph, subject: URIRef, predicate: URIRef) -> Optional[Literal]:
+def first_literal(
+    graph: Graph, subject: URIRef, predicate: URIRef
+) -> Optional[Literal]:
     """Return the first literal object for subject/predicate, if present."""
 
     for value in graph.objects(subject, predicate):
@@ -492,14 +517,20 @@ def validate_png_name(path: Path) -> str:
     """Validate a PNG filename and return the stem used in metadata names."""
 
     if path.suffix.lower() != ".png":
-        raise MetadataGenerationError(f"Unsupported diagram file extension; expected .png: {path}")
+        raise MetadataGenerationError(
+            f"Unsupported diagram file extension; expected .png: {path}"
+        )
 
     name = path.name
     stem = path.stem
     if not stem:
-        raise MetadataGenerationError(f"Unsupported PNG filename with empty stem: {path}")
+        raise MetadataGenerationError(
+            f"Unsupported PNG filename with empty stem: {path}"
+        )
     if CONTROL_CHARS.search(name):
-        raise MetadataGenerationError(f"Unsupported PNG filename with control characters: {path}")
+        raise MetadataGenerationError(
+            f"Unsupported PNG filename with control characters: {path}"
+        )
     if name in {".", ".."} or stem in {".", ".."}:
         raise MetadataGenerationError(f"Unsupported PNG filename: {path}")
     return stem
@@ -523,11 +554,15 @@ def read_png_dimensions(path: Path) -> Tuple[int, int]:
 
             chunk_type, chunk_data = read_png_chunk(stream, path)
             if chunk_type != b"IHDR" or len(chunk_data) != 13:
-                raise MetadataGenerationError(f"PNG file does not contain a valid IHDR chunk: {path}")
+                raise MetadataGenerationError(
+                    f"PNG file does not contain a valid IHDR chunk: {path}"
+                )
 
             width, height = struct.unpack(">II", chunk_data[:8])
             if width <= 0 or height <= 0:
-                raise MetadataGenerationError(f"PNG file has invalid dimensions {width}x{height}: {path}")
+                raise MetadataGenerationError(
+                    f"PNG file has invalid dimensions {width}x{height}: {path}"
+                )
 
             while True:
                 chunk_type, _chunk_data = read_png_chunk(stream, path)
@@ -550,7 +585,9 @@ def read_png_chunk(stream, path: Path) -> Tuple[bytes, bytes]:
     length = struct.unpack(">I", length_bytes)[0]
     chunk_type = stream.read(4)
     if len(chunk_type) != 4:
-        raise MetadataGenerationError(f"Unreadable or truncated PNG chunk header: {path}")
+        raise MetadataGenerationError(
+            f"Unreadable or truncated PNG chunk header: {path}"
+        )
 
     chunk_data = stream.read(length)
     if len(chunk_data) != length:
@@ -615,12 +652,18 @@ def new_distribution_uri(model_uri: URIRef, source_dir: str, filename: str) -> U
     return URIRef(f"{DISTRIBUTION_BASE}{uuid.uuid5(uuid.NAMESPACE_URL, name)}/")
 
 
-def download_url(config: Config, dataset_folder: Path, source_dir: str, filename: str) -> URIRef:
+def download_url(
+    config: Config, dataset_folder: Path, source_dir: str, filename: str
+) -> URIRef:
     """Create the raw GitHub download URL for a diagram file."""
 
     model_slug = dataset_folder.name
-    path = quoted_path(*split_repository_path(config.models_dir_name), model_slug, source_dir, filename)
-    return URIRef(f"https://raw.githubusercontent.com/{config.repository}/{config.branch}/{path}")
+    path = quoted_path(
+        *split_repository_path(config.models_dir_name), model_slug, source_dir, filename
+    )
+    return URIRef(
+        f"https://raw.githubusercontent.com/{config.repository}/{config.branch}/{path}"
+    )
 
 
 def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetadata:
@@ -647,11 +690,19 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
     try:
         graph.parse(path)
     except Exception as exc:  # noqa: BLE001 - surface RDFLib parse errors clearly
-        raise MetadataGenerationError(f"Could not parse existing metadata file {path}: {exc}") from exc
+        raise MetadataGenerationError(
+            f"Could not parse existing metadata file {path}: {exc}"
+        ) from exc
 
-    subjects = [subject for subject in graph.subjects(RDF.type, DCAT.Distribution) if isinstance(subject, URIRef)]
+    subjects = [
+        subject
+        for subject in graph.subjects(RDF.type, DCAT.Distribution)
+        if isinstance(subject, URIRef)
+    ]
     if len(subjects) > 1:
-        raise MetadataGenerationError(f"Expected at most one dcat:Distribution in {path}, found {len(subjects)}")
+        raise MetadataGenerationError(
+            f"Expected at most one dcat:Distribution in {path}, found {len(subjects)}"
+        )
 
     distribution = subjects[0] if subjects else None
     if distribution and not str(distribution).startswith(DISTRIBUTION_BASE):
@@ -661,8 +712,12 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
 
     text = path.read_text(encoding="utf-8")
     title = first_literal(graph, distribution, DCT.title) if distribution else None
-    editorial = first_literal(graph, distribution, SKOS.editorialNote) if distribution else None
-    download = first_uri(graph, distribution, DCAT.downloadURL) if distribution else None
+    editorial = (
+        first_literal(graph, distribution, SKOS.editorialNote) if distribution else None
+    )
+    download = (
+        first_uri(graph, distribution, DCAT.downloadURL) if distribution else None
+    )
     license_uri = first_uri(graph, distribution, DCT.license) if distribution else None
     metadata_issued = existing_datetime_literal(text, "metadataIssued")
     metadata_modified = existing_datetime_literal(text, "metadataModified")
@@ -692,7 +747,9 @@ def existing_datetime_literal(turtle_text: str, local_name: str) -> Optional[Lit
     return None
 
 
-def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config) -> List[DiagramFile]:
+def collect_diagrams(
+    dataset_folder: Path, model: ModelMetadata, config: Config
+) -> List[DiagramFile]:
     """Collect diagram files in catalog-supported diagram folders.
 
     All diagram-level validation is completed before any output file is written.
@@ -711,9 +768,15 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
             missing_or_empty.append(f"missing folder: {folder}")
             continue
         if not folder.is_dir():
-            raise MetadataGenerationError(f"Diagram path exists but is not a directory: {folder}")
+            raise MetadataGenerationError(
+                f"Diagram path exists but is not a directory: {folder}"
+            )
 
-        png_files = sorted(path for path in folder.iterdir() if path.is_file() and path.suffix.lower() == ".png")
+        png_files = sorted(
+            path
+            for path in folder.iterdir()
+            if path.is_file() and path.suffix.lower() == ".png"
+        )
         if not png_files:
             missing_or_empty.append(f"empty folder: {folder}")
             continue
@@ -738,8 +801,12 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
                 dist_uri = new_distribution_uri(model.uri, source_dir, png_path.name)
             else:
                 existing = read_existing_distribution_metadata(output_path)
-                dist_uri = existing.uri or new_distribution_uri(model.uri, source_dir, png_path.name)
-            generated_download_url = download_url(config, dataset_folder, source_dir, png_path.name)
+                dist_uri = existing.uri or new_distribution_uri(
+                    model.uri, source_dir, png_path.name
+                )
+            generated_download_url = download_url(
+                config, dataset_folder, source_dir, png_path.name
+            )
             dload = existing.download_url or generated_download_url
 
             existing_output = seen_outputs.get(output_path)
@@ -770,8 +837,12 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
             )
 
     if not diagrams:
-        details = "; ".join(missing_or_empty) if missing_or_empty else "no PNG files found"
-        raise MetadataGenerationError(f"No PNG diagrams found in {dataset_folder} ({details})")
+        details = (
+            "; ".join(missing_or_empty) if missing_or_empty else "no PNG files found"
+        )
+        raise MetadataGenerationError(
+            f"No PNG diagrams found in {dataset_folder} ({details})"
+        )
 
     if config.strict and missing_or_empty:
         raise MetadataGenerationError(
@@ -784,7 +855,11 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
 def current_metadata_timestamp() -> Literal:
     """Return the current UTC timestamp as xsd:dateTime."""
 
-    value = datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z")
+    value = (
+        datetime.now(timezone.utc)
+        .isoformat(timespec="microseconds")
+        .replace("+00:00", "Z")
+    )
     return Literal(value, datatype=XSD.dateTime, normalize=False)
 
 
@@ -797,11 +872,15 @@ def configured_metadata_timestamp(config: Config) -> Literal:
                 "--metadata-timestamp must be an xsd:dateTime lexical value, "
                 "for example 2024-01-02T03:04:05Z"
             )
-        return Literal(config.metadata_timestamp, datatype=XSD.dateTime, normalize=False)
+        return Literal(
+            config.metadata_timestamp, datatype=XSD.dateTime, normalize=False
+        )
     return current_metadata_timestamp()
 
 
-def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config: Config) -> Graph:
+def build_distribution_graph(
+    model: ModelMetadata, diagram: DiagramFile, config: Config
+) -> Graph:
     """Build RDF metadata for one PNG diagram distribution."""
 
     graph = Graph()
@@ -813,7 +892,9 @@ def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config:
     # Preserve existing metadataModified by default to make regeneration stable.
     # Pass --metadata-timestamp with a new value after intentional changes if a
     # maintained modified timestamp is required.
-    metadata_modified = diagram.existing_metadata.metadata_modified or metadata_timestamp
+    metadata_modified = (
+        diagram.existing_metadata.metadata_modified or metadata_timestamp
+    )
 
     graph.add((diagram.distribution_uri, RDF.type, DCAT.Distribution))
     graph.add((diagram.distribution_uri, DCT.isPartOf, model.uri))
@@ -822,26 +903,55 @@ def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config:
     if license_uri is not None:
         graph.add((diagram.distribution_uri, DCT.license, license_uri))
     graph.add((diagram.distribution_uri, DCAT.mediaType, PNG_MEDIA_TYPE))
-    graph.add((diagram.distribution_uri, OCMV.isComplete, Literal(False, datatype=XSD.boolean)))
-    graph.add((diagram.distribution_uri, DCT.title, diagram.existing_metadata.title or Literal(title, lang="en")))
+    graph.add(
+        (
+            diagram.distribution_uri,
+            OCMV.isComplete,
+            Literal(False, datatype=XSD.boolean),
+        )
+    )
+    graph.add(
+        (
+            diagram.distribution_uri,
+            DCT.title,
+            diagram.existing_metadata.title or Literal(title, lang="en"),
+        )
+    )
     graph.add((diagram.distribution_uri, DCAT.downloadURL, diagram.download_url))
-    graph.add((
-        diagram.distribution_uri,
-        SKOS.editorialNote,
-        diagram.existing_metadata.editorial_note or Literal(editorial_note(diagram.prefix), lang="en"),
-    ))
+    graph.add(
+        (
+            diagram.distribution_uri,
+            SKOS.editorialNote,
+            diagram.existing_metadata.editorial_note
+            or Literal(editorial_note(diagram.prefix), lang="en"),
+        )
+    )
     graph.add((diagram.distribution_uri, FDPO.metadataIssued, metadata_issued))
     graph.add((diagram.distribution_uri, FDPO.metadataModified, metadata_modified))
 
     if config.include_file_metadata:
         width, height = read_png_dimensions(diagram.path)
-        graph.add((
-            diagram.distribution_uri,
-            DCAT.byteSize,
-            Literal(Decimal(os.path.getsize(diagram.path)), datatype=XSD.decimal),
-        ))
-        graph.add((diagram.distribution_uri, SCHEMA.width, Literal(width, datatype=XSD.integer)))
-        graph.add((diagram.distribution_uri, SCHEMA.height, Literal(height, datatype=XSD.integer)))
+        graph.add(
+            (
+                diagram.distribution_uri,
+                DCAT.byteSize,
+                Literal(Decimal(os.path.getsize(diagram.path)), datatype=XSD.decimal),
+            )
+        )
+        graph.add(
+            (
+                diagram.distribution_uri,
+                SCHEMA.width,
+                Literal(width, datatype=XSD.integer),
+            )
+        )
+        graph.add(
+            (
+                diagram.distribution_uri,
+                SCHEMA.height,
+                Literal(height, datatype=XSD.integer),
+            )
+        )
         checksum = BNode()
         graph.add((diagram.distribution_uri, SPDX.checksum, checksum))
         graph.add((checksum, RDF.type, SPDX.Checksum))
@@ -874,14 +984,18 @@ def source_version_label(prefix: str) -> str:
 def editorial_note(prefix: str) -> str:
     """Return the catalog editorial note used for the source diagram version."""
 
-    return EDITORIAL_NOTES.get(prefix, "This image depicts a diagram distribution of the model.")
+    return EDITORIAL_NOTES.get(
+        prefix, "This image depicts a diagram distribution of the model."
+    )
 
 
 def write_graph(graph: Graph, target: Path, config: Config) -> None:
     """Serialize a graph to Turtle."""
 
     if target.exists() and not config.overwrite:
-        raise MetadataGenerationError(f"Metadata file already exists and overwrite is disabled: {target}")
+        raise MetadataGenerationError(
+            f"Metadata file already exists and overwrite is disabled: {target}"
+        )
     if config.dry_run:
         return
 
@@ -900,12 +1014,19 @@ def process_dataset(dataset_folder: Path, config: Config) -> List[GeneratedFile]
     model = load_model_metadata(dataset_folder, config)
     diagrams = collect_diagrams(dataset_folder, model, config)
 
-    existing_targets = [diagram.output_path for diagram in diagrams if diagram.output_path.exists()]
+    existing_targets = [
+        diagram.output_path for diagram in diagrams if diagram.output_path.exists()
+    ]
     if existing_targets and not config.overwrite:
         joined = ", ".join(str(path) for path in existing_targets)
-        raise MetadataGenerationError(f"Metadata file already exists and overwrite is disabled: {joined}")
+        raise MetadataGenerationError(
+            f"Metadata file already exists and overwrite is disabled: {joined}"
+        )
 
-    planned = [(diagram, build_distribution_graph(model, diagram, config)) for diagram in diagrams]
+    planned = [
+        (diagram, build_distribution_graph(model, diagram, config))
+        for diagram in diagrams
+    ]
 
     generated: List[GeneratedFile] = []
     for diagram, graph in planned:
@@ -927,7 +1048,11 @@ def discover_datasets(models_dir: Path) -> List[Path]:
         raise MetadataGenerationError(f"Models directory does not exist: {models_dir}")
     if not models_dir.is_dir():
         raise MetadataGenerationError(f"Models path is not a directory: {models_dir}")
-    return sorted(path for path in models_dir.iterdir() if path.is_dir() and (path / "metadata.yaml").exists())
+    return sorted(
+        path
+        for path in models_dir.iterdir()
+        if path.is_dir() and (path / "metadata.yaml").exists()
+    )
 
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
@@ -1001,7 +1126,9 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 def resolve_targets(args: argparse.Namespace) -> List[Path]:
     if args.all:
         if args.datasets:
-            raise MetadataGenerationError("Use either --all or explicit dataset folders, not both.")
+            raise MetadataGenerationError(
+                "Use either --all or explicit dataset folders, not both."
+            )
         return discover_datasets(args.models_dir)
 
     if args.datasets:

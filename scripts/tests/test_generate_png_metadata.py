@@ -12,7 +12,10 @@ import pytest
 def load_module():
     script = None
     for parent in Path(__file__).resolve().parents:
-        for candidate in (parent / "generate_png_metadata.py", parent / "scripts" / "generate_png_metadata.py"):
+        for candidate in (
+            parent / "generate_png_metadata.py",
+            parent / "scripts" / "generate_png_metadata.py",
+        ):
             if candidate.exists():
                 script = candidate
                 break
@@ -40,7 +43,12 @@ def png_chunk(chunk_type: bytes, data: bytes) -> bytes:
 def minimal_png() -> bytes:
     signature = b"\x89PNG\r\n\x1a\n"
     ihdr = struct.pack(">IIBBBBB", 1, 1, 8, 6, 0, 0, 0)
-    return signature + png_chunk(b"IHDR", ihdr) + png_chunk(b"IDAT", b"") + png_chunk(b"IEND", b"")
+    return (
+        signature
+        + png_chunk(b"IHDR", ihdr)
+        + png_chunk(b"IDAT", b"")
+        + png_chunk(b"IEND", b"")
+    )
 
 
 def write_metadata_yaml(
@@ -97,7 +105,9 @@ def test_png_metadata_regeneration_preserves_existing_catalog_values(tmp_path: P
     generated = module.process_dataset(dataset, module.Config())
 
     assert len(generated) == 2
-    original = (dataset / "metadata-png-o-petroleum-system.ttl").read_text(encoding="utf-8")
+    original = (dataset / "metadata-png-o-petroleum-system.ttl").read_text(
+        encoding="utf-8"
+    )
 
     assert "ocmv:isComplete false" in original
     assert "Existing original PNG title" in original
@@ -123,7 +133,10 @@ def test_png_metadata_generation_uses_yaml_defaults_for_new_files(tmp_path: Path
         'skos:editorialNote "This image depicts a version of the original diagram re-created in the Visual Paradigm editor."@en'
         in new
     )
-    assert "PNG distribution of diagram 'petroleum system' from the Petroleum System Model (Visual Paradigm version)" in new
+    assert (
+        "PNG distribution of diagram 'petroleum system' from the Petroleum System Model (Visual Paradigm version)"
+        in new
+    )
 
 
 def test_png_metadata_generation_does_not_require_metadata_ttl(tmp_path: Path):
@@ -132,16 +145,22 @@ def test_png_metadata_generation_does_not_require_metadata_ttl(tmp_path: Path):
 
     assert not (dataset / "metadata.ttl").exists()
 
-    module.process_dataset(dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z"))
+    module.process_dataset(
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+    )
 
     assert (dataset / "metadata-png-n-petroleum-system.ttl").exists()
 
 
-def test_png_metadata_regeneration_preserves_existing_download_url_with_comma(tmp_path: Path):
+def test_png_metadata_regeneration_preserves_existing_download_url_with_comma(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = tmp_path / "models" / "alpinebits2022"
     (dataset / "original-diagrams").mkdir(parents=True)
-    (dataset / "original-diagrams" / "lifts,-ski-slopes,-and-snowparks.png").write_bytes(minimal_png())
+    (
+        dataset / "original-diagrams" / "lifts,-ski-slopes,-and-snowparks.png"
+    ).write_bytes(minimal_png())
     write_metadata_yaml(
         dataset,
         slug="alpinebits",
@@ -169,21 +188,33 @@ def test_png_metadata_regeneration_preserves_existing_download_url_with_comma(tm
 
     module.process_dataset(dataset, module.Config())
 
-    regenerated = (dataset / "metadata-png-o-lifts,-ski-slopes,-and-snowparks.ttl").read_text(encoding="utf-8")
+    regenerated = (
+        dataset / "metadata-png-o-lifts,-ski-slopes,-and-snowparks.ttl"
+    ).read_text(encoding="utf-8")
     assert "lifts,-ski-slopes,-and-snowparks.png" in regenerated
     assert "lifts%2C-ski-slopes%2C-and-snowparks.png" not in regenerated
 
 
-def test_png_metadata_generation_keeps_commas_unescaped_in_new_download_urls(tmp_path: Path):
+def test_png_metadata_generation_keeps_commas_unescaped_in_new_download_urls(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = tmp_path / "models" / "new-comma-model"
     (dataset / "original-diagrams").mkdir(parents=True)
-    (dataset / "original-diagrams" / "lifts,-ski-slopes,-and-snowparks.png").write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="new-comma", title="New Comma Model", issued="2024")
+    (
+        dataset / "original-diagrams" / "lifts,-ski-slopes,-and-snowparks.png"
+    ).write_bytes(minimal_png())
+    write_metadata_yaml(
+        dataset, slug="new-comma", title="New Comma Model", issued="2024"
+    )
 
-    module.process_dataset(dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z"))
+    module.process_dataset(
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+    )
 
-    generated = (dataset / "metadata-png-o-lifts,-ski-slopes,-and-snowparks.ttl").read_text(encoding="utf-8")
+    generated = (
+        dataset / "metadata-png-o-lifts,-ski-slopes,-and-snowparks.ttl"
+    ).read_text(encoding="utf-8")
     assert "lifts,-ski-slopes,-and-snowparks.png" in generated
     assert "lifts%2C-ski-slopes%2C-and-snowparks.png" not in generated
 
@@ -193,9 +224,17 @@ def test_png_metadata_generation_tolerates_missing_model_license(tmp_path: Path)
     dataset = tmp_path / "models" / "missing-license-model"
     (dataset / "original-diagrams").mkdir(parents=True)
     (dataset / "original-diagrams" / "diagram.png").write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="missing-license", title="Missing License Model", issued="2024", license_value=None)
+    write_metadata_yaml(
+        dataset,
+        slug="missing-license",
+        title="Missing License Model",
+        issued="2024",
+        license_value=None,
+    )
 
-    module.process_dataset(dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z"))
+    module.process_dataset(
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+    )
 
     generated = (dataset / "metadata-png-o-diagram.ttl").read_text(encoding="utf-8")
     assert "dct:license" not in generated
@@ -207,9 +246,17 @@ def test_png_metadata_generation_can_require_model_license(tmp_path: Path):
     dataset = tmp_path / "models" / "missing-license-model"
     (dataset / "original-diagrams").mkdir(parents=True)
     (dataset / "original-diagrams" / "diagram.png").write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="missing-license", title="Missing License Model", issued="2024", license_value=None)
+    write_metadata_yaml(
+        dataset,
+        slug="missing-license",
+        title="Missing License Model",
+        issued="2024",
+        license_value=None,
+    )
 
-    with pytest.raises(module.MetadataGenerationError, match="Missing required license"):
+    with pytest.raises(
+        module.MetadataGenerationError, match="Missing required license"
+    ):
         module.process_dataset(dataset, module.Config(require_license=True))
 
 
@@ -226,7 +273,9 @@ def test_discover_datasets_uses_metadata_yaml(tmp_path: Path):
     assert module.discover_datasets(models) == [with_yaml]
 
 
-def test_yaml_metadata_loader_accepts_nested_language_map_and_license_id(tmp_path: Path):
+def test_yaml_metadata_loader_accepts_nested_language_map_and_license_id(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = tmp_path / "models" / "nested-yaml-model"
     (dataset / "original-diagrams").mkdir(parents=True)
@@ -247,7 +296,9 @@ rights:
         encoding="utf-8",
     )
 
-    module.process_dataset(dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z"))
+    module.process_dataset(
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+    )
 
     generated = (dataset / "metadata-png-o-diagram.ttl").read_text(encoding="utf-8")
     assert "Nested YAML Model" in generated
@@ -255,7 +306,9 @@ rights:
     assert "https://creativecommons.org/licenses/by/4.0/" in generated
 
 
-def test_cli_all_dry_run_processes_metadata_yaml_datasets(tmp_path: Path, capsys: pytest.CaptureFixture[str]):
+def test_cli_all_dry_run_processes_metadata_yaml_datasets(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+):
     module = load_module()
     models = tmp_path / "models"
     first = models / "first-model"
@@ -279,29 +332,47 @@ def test_cli_all_dry_run_processes_metadata_yaml_datasets(tmp_path: Path, capsys
     assert not (second / "metadata-png-o-diagram.ttl").exists()
 
 
-def test_png_metadata_generation_url_quotes_spaces_and_apostrophes_but_not_commas(tmp_path: Path):
+def test_png_metadata_generation_url_quotes_spaces_and_apostrophes_but_not_commas(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = tmp_path / "models" / "special-name-model"
     (dataset / "original-diagrams").mkdir(parents=True)
     filename = "AUX - Object at Risk's Vulnerability, Manifestation.png"
     (dataset / "original-diagrams" / filename).write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="special-name-model", title="Special Name Model", issued="2024")
-
-    module.process_dataset(dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z"))
-
-    generated = (dataset / "metadata-png-o-AUX - Object at Risk's Vulnerability, Manifestation.ttl").read_text(
-        encoding="utf-8"
+    write_metadata_yaml(
+        dataset, slug="special-name-model", title="Special Name Model", issued="2024"
     )
-    assert "AUX%20-%20Object%20at%20Risk%27s%20Vulnerability,%20Manifestation.png" in generated
+
+    module.process_dataset(
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+    )
+
+    generated = (
+        dataset
+        / "metadata-png-o-AUX - Object at Risk's Vulnerability, Manifestation.ttl"
+    ).read_text(encoding="utf-8")
+    assert (
+        "AUX%20-%20Object%20at%20Risk%27s%20Vulnerability,%20Manifestation.png"
+        in generated
+    )
     assert "%2C" not in generated
 
 
-def test_existing_png_license_is_preserved_when_model_license_is_missing(tmp_path: Path):
+def test_existing_png_license_is_preserved_when_model_license_is_missing(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = tmp_path / "models" / "existing-license-model"
     (dataset / "original-diagrams").mkdir(parents=True)
     (dataset / "original-diagrams" / "diagram.png").write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="existing-license-model", title="Existing License Model", issued="2024", license_value=None)
+    write_metadata_yaml(
+        dataset,
+        slug="existing-license-model",
+        title="Existing License Model",
+        issued="2024",
+        license_value=None,
+    )
     (dataset / "metadata-png-o-diagram.ttl").write_text(
         """
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
@@ -328,7 +399,9 @@ def test_existing_full_iri_timestamps_are_preserved(tmp_path: Path):
     dataset = tmp_path / "models" / "full-iri-timestamp-model"
     (dataset / "original-diagrams").mkdir(parents=True)
     (dataset / "original-diagrams" / "diagram.png").write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="full-iri-timestamp-model", title="Timestamp Model", issued="2024")
+    write_metadata_yaml(
+        dataset, slug="full-iri-timestamp-model", title="Timestamp Model", issued="2024"
+    )
     (dataset / "metadata-png-o-diagram.ttl").write_text(
         """
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
@@ -352,11 +425,15 @@ def test_include_file_metadata_emits_dimensions_byte_size_and_checksum(tmp_path:
     dataset = tmp_path / "models" / "file-metadata-model"
     (dataset / "original-diagrams").mkdir(parents=True)
     (dataset / "original-diagrams" / "diagram.png").write_bytes(minimal_png())
-    write_metadata_yaml(dataset, slug="file-metadata-model", title="File Metadata Model", issued="2024")
+    write_metadata_yaml(
+        dataset, slug="file-metadata-model", title="File Metadata Model", issued="2024"
+    )
 
     module.process_dataset(
         dataset,
-        module.Config(metadata_timestamp="2024-01-02T03:04:05Z", include_file_metadata=True),
+        module.Config(
+            metadata_timestamp="2024-01-02T03:04:05Z", include_file_metadata=True
+        ),
     )
 
     generated = (dataset / "metadata-png-o-diagram.ttl").read_text(encoding="utf-8")
@@ -372,7 +449,9 @@ def test_invalid_png_fails_before_any_metadata_file_is_written(tmp_path: Path):
     (dataset / "original-diagrams").mkdir(parents=True)
     (dataset / "original-diagrams" / "a-valid.png").write_bytes(minimal_png())
     (dataset / "original-diagrams" / "z-invalid.png").write_bytes(b"not a png")
-    write_metadata_yaml(dataset, slug="invalid-png-model", title="Invalid PNG Model", issued="2024")
+    write_metadata_yaml(
+        dataset, slug="invalid-png-model", title="Invalid PNG Model", issued="2024"
+    )
 
     with pytest.raises(module.MetadataGenerationError, match="invalid PNG"):
         module.process_dataset(dataset, module.Config())

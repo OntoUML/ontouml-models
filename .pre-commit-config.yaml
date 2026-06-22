@@ -1,0 +1,81 @@
+minimum_pre_commit_version: "3.2.0"
+
+# The catalog intentionally contains binary model artifacts and image files.
+# Exclude them globally so text hooks do not try to inspect generated/binary content.
+exclude: |
+  (?x)^(
+    .*\.vpp$|
+    .*\.png$|
+    .*\.jpg$|
+    .*\.jpeg$|
+    .*\.gif$|
+    .*\.pdf$|
+    .*\.zip$|
+    .*\.jar$|
+    .*\.pyc$|
+    .*__pycache__/.*|
+    .*\.pytest_cache/.*
+  )$
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=10240"]
+        # Large PNG/VPP files are legitimate catalog artifacts.
+        exclude: ^models/.*\.(png|vpp)$
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-yaml
+      - id: debug-statements
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: forbid-submodules
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: name-tests-test
+        args: ["--pytest-test-first"]
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.18
+    hooks:
+      - id: ruff-check
+        args: ["--fix", "--exit-non-zero-on-fix"]
+        files: ^scripts/.*\.py$
+      - id: ruff-format
+        files: ^scripts/.*\.py$
+
+  - repo: local
+    hooks:
+      - id: check-turtle-syntax
+        name: check Turtle syntax
+        entry: python scripts/hooks/check_turtle.py
+        language: python
+        additional_dependencies:
+          - rdflib>=6.0
+        files: \.ttl$
+
+      - id: test-png-metadata-generator
+        name: test PNG metadata generator
+        entry: python -m pytest -q scripts/tests/test_generate_png_metadata.py
+        language: python
+        additional_dependencies:
+          - pyyaml>=6.0
+          - pytest>=7.0
+          - rdflib>=6.0
+        pass_filenames: false
+        always_run: true
+        stages: [manual]
