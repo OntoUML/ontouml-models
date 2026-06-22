@@ -40,6 +40,8 @@ keyword:
 
 The script also checks expected catalog-template fields, including `acronym`, `modified`, `contributor`, `editorialNote`, `ontologyType`, `language`, `designedForTask`, `context`, `source`, `representationStyle`, and `landingPage`. Missing expected but non-mandatory fields are warnings by default. Use `--missing-expected-fields error` or `--strict` to make them fatal.
 
+Some older catalog datasets have no license value. This is semantically incomplete, but the validator must not invent license metadata. Use `--allow-missing-license` to report a missing or empty `license` as a warning instead of an error when validating legacy datasets.
+
 ## Supported field spelling
 
 The repository currently contains metadata files using names such as:
@@ -56,7 +58,9 @@ The converter also accepts snake_case aliases such as `editorial_note`, `ontolog
 
 The optional `iri` field may be either an absolute HTTP(S) IRI or a local slug accepted by the YAML-to-Turtle converter. A local slug must not contain a URI prefix.
 
-`landingPage` is treated as a scalar URI field, not a list, because the current YAML-to-Turtle converter reads it as one value and passes it directly to URI validation. A one-item list is therefore safe to unwrap with `--fix`; a multi-item list remains an error because selecting one landing page would be unsafe.
+`landingPage` may be empty, a single HTTP(S) URI, or a YAML list of HTTP(S) URIs. The underlying RDF property has no maximum-count constraint in the catalog SHACL shape, so multiple landing pages are allowed. `--fix` therefore does not unwrap `landingPage` lists.
+
+`language` may be a single language tag, a comma-separated scalar used by existing catalog files, or a YAML list of language tags. For example, `language: en, pt-br` is accepted.
 
 ## Safe automatic fixes
 
@@ -67,7 +71,7 @@ Safe fixes include:
 - adding missing non-mandatory expected fields with empty YAML values, e.g. `acronym:` rather than `acronym: null`;
 - wrapping scalar values in lists where the catalog template expects a vector/list;
 - unwrapping one-item lists where the catalog template expects a scalar URI, for example `license:
- - https://creativecommons.org/licenses/by/4.0/` to `license: https://creativecommons.org/licenses/by/4.0/`; this also applies to `landingPage`, which the current converter treats as a single URI field;
+ - https://creativecommons.org/licenses/by/4.0/` to `license: https://creativecommons.org/licenses/by/4.0/`; this does **not** apply to `landingPage`, which may have multiple values;
 - normalizing controlled values to the catalog style, for example `Domain` to `domain`;
 - normalizing compact `theme` values such as `H`, `lcc:H`, or an LCC URI to the full catalog label, e.g. `Class H - Social Sciences`;
 - replacing known license shorthands such as `CC-BY-4.0` with their canonical URI;
@@ -175,6 +179,12 @@ Promote policy warnings to errors during validation:
 python scripts/validate_metadata_yaml.py --all --strict
 ```
 
+Relax missing license values for legacy datasets where the license cannot be safely inferred:
+
+```bash
+python scripts/validate_metadata_yaml.py models/<model-directory> --allow-missing-license
+```
+
 ## Command-line arguments
 
 | Argument | Required | Default | Meaning |
@@ -188,6 +198,7 @@ python scripts/validate_metadata_yaml.py --all --strict
 | `--unknown-fields {error,warning,ignore}` | No | `error` | Policy for unknown top-level fields. |
 | `--missing-expected-fields {error,warning,ignore}` | No | `warning` | Policy for expected but non-mandatory fields that are absent. |
 | `--strict` | No | off | Promote warnings to errors. |
+| `--allow-missing-license` | No | off | Report missing or empty `license` values as warnings instead of errors for legacy datasets. |
 | `--fail-on-warning` | No | off | Return exit code 1 when warnings are present. |
 
 ## Exit codes
@@ -210,6 +221,12 @@ After existing metadata files have been normalized, a stricter workflow can use:
 
 ```bash
 python scripts/validate_metadata_yaml.py --all --models-dir models --strict
+```
+
+For legacy-wide checks before license metadata has been curated, use:
+
+```bash
+python scripts/validate_metadata_yaml.py --all --models-dir models --allow-missing-license
 ```
 
 Do not use `--fix` in CI unless the workflow is explicitly designed to commit generated changes.

@@ -130,6 +130,7 @@ class Config:
     fail_on_warning: bool = False
     unknown_fields: UnknownPolicy = "error"
     missing_expected_fields: UnknownPolicy = "warning"
+    allow_missing_license: bool = False
 
 
 class MetadataYamlLoader(yaml.SafeLoader):
@@ -278,7 +279,6 @@ SINGLE_URI_FIELDS: set[str] = {
     "iri",
     "license",
     "publisher",
-    "landing_page",
     "storage_url",
     "is_part_of",
 }
@@ -295,7 +295,7 @@ LITERAL_FIELDS: set[str] = {
 
 DATE_FIELDS: set[str] = {"issued", "modified", "metadata_issued", "metadata_modified"}
 
-URL_LIST_FIELDS: set[str] = {"contributor", "creator", "source"}
+URL_LIST_FIELDS: set[str] = {"contributor", "creator", "source", "landing_page"}
 
 DESIGNED_FOR_TASKS: dict[str, str] = {
     "conceptualclarification": "conceptual clarification",
@@ -875,15 +875,23 @@ class MetadataYamlValidator:
                 ):
                     continue
                 severity = self.missing_expected_severity(canonical)
+                missing_license_relaxed = (
+                    canonical == "license" and self.config.allow_missing_license
+                )
                 self.add_issue(
                     result,
                     severity,
                     "missing_field",
                     PREFERRED_FIELD_NAME[canonical],
-                    f"Expected metadata field {PREFERRED_FIELD_NAME[canonical]!r} is missing.",
+                    f"Expected metadata field {PREFERRED_FIELD_NAME[canonical]!r} is missing."
+                    if not missing_license_relaxed
+                    else "License field is missing. Older catalog datasets may lack license metadata; add a license only when it can be determined safely.",
                     "Add the field. Use null only when the information is genuinely unavailable."
                     if canonical not in REQUIRED_VALUE_FIELDS
-                    else "Add a non-empty value for this mandatory field.",
+                    else "Add a non-empty value for this mandatory field."
+                    if not missing_license_relaxed
+                    else "Keep the field absent unless the license can be verified from the source.",
+                    promotable=not missing_license_relaxed,
                 )
                 if self.config.fix and canonical not in REQUIRED_VALUE_FIELDS:
                     self.insert_missing_expected_field(output, canonical, result)
@@ -925,6 +933,8 @@ class MetadataYamlValidator:
         )
 
     def missing_expected_severity(self, canonical: str) -> Severity:
+        if canonical == "license" and self.config.allow_missing_license:
+            return "warning"
         if canonical in REQUIRED_VALUE_FIELDS:
             return "error"
         if self.config.strict or self.config.missing_expected_fields == "error":
@@ -950,13 +960,21 @@ class MetadataYamlValidator:
         preferred = PREFERRED_FIELD_NAME[canonical]
 
         if canonical in REQUIRED_VALUE_FIELDS and is_missing_value(value):
+            missing_license_relaxed = (
+                canonical == "license" and self.config.allow_missing_license
+            )
             self.add_issue(
                 result,
-                "error",
+                "warning" if missing_license_relaxed else "error",
                 "missing_value",
                 preferred,
-                f"Mandatory field {preferred!r} must have a non-empty value.",
-                "Provide a value; the tool does not guess mandatory metadata.",
+                f"Mandatory field {preferred!r} must have a non-empty value."
+                if not missing_license_relaxed
+                else "License is missing. Older catalog datasets may lack license metadata; add a license only when it can be determined safely.",
+                "Provide a value; the tool does not guess mandatory metadata."
+                if not missing_license_relaxed
+                else "Keep the empty value unless the license can be verified from the source.",
+                promotable=not missing_license_relaxed,
             )
             return
 
@@ -1138,7 +1156,9 @@ class MetadataYamlValidator:
         self, canonical: str, value: Any, result: ValidationResult
     ) -> None:
         preferred = PREFERRED_FIELD_NAME[canonical]
-        if not isinstance(value, list):
+        scalar_is_allowed = canonical == "landing_page"
+
+        if not isinstance(value, list) and not scalar_is_allowed:
             self.add_issue(
                 result,
                 "warning",
@@ -1147,6 +1167,7 @@ class MetadataYamlValidator:
                 f"{preferred!r} is expected as a list, even when there is only one value.",
                 "Use a YAML list. The --fix option can wrap the scalar in a list.",
             )
+
         seen: set[str] = set()
         for index, item in enumerate(as_list(value)):
             field = f"{preferred}[{index}]" if isinstance(value, list) else preferred
@@ -1278,8 +1299,18 @@ class MetadataYamlValidator:
 
     def validate_language_field(self, value: Any, result: ValidationResult) -> None:
         preferred = PREFERRED_FIELD_NAME["language"]
-        values = value if isinstance(value, list) else [value]
-        if not values:
+        raw_values = value if isinstance(value, list) else [value]
+        values: list[tuple[Any, str]] = []
+
+        for index, item in enumerate(raw_values):
+            field = f"{preferred}[{index}]" if isinstance(value, list) else preferred
+            if isinstance(item, str) and "," in item:
+                for part_index, part in enumerate(item.split(",")):
+                    values.append((part.strip(), f"{field}:{part_index}"))
+            else:
+                values.append((item, field))
+
+        if not values or all(is_missing_value(item) for item, _field in values):
             self.add_issue(
                 result,
                 "error",
@@ -1288,15 +1319,15 @@ class MetadataYamlValidator:
                 "Expected at least one language tag.",
             )
             return
-        for index, item in enumerate(values):
-            field = f"{preferred}[{index}]" if isinstance(value, list) else preferred
+
+        for item, field in values:
             if not isinstance(item, str) or not LANGUAGE_RE.fullmatch(item.strip()):
                 self.add_issue(
                     result,
                     "error",
                     "invalid_language",
                     field,
-                    "Expected a BCP 47/IANA-like language tag such as 'en', 'pt-BR', or 'en-GB'.",
+                    "Expected a BCP 47/IANA-like language tag such as 'en', 'pt-BR', or 'en-GB'. Multiple languages may be written as a comma-separated scalar, e.g. 'en, pt-br', or as a YAML list.",
                 )
 
     def validate_contact_points(self, value: Any, result: ValidationResult) -> None:
@@ -1412,9 +1443,13 @@ class MetadataYamlValidator:
         field_name: Optional[str],
         message: str,
         suggestion: Optional[str] = None,
+        *,
+        promotable: bool = True,
     ) -> None:
-        if severity == "warning" and (
-            self.config.strict or self.config.fail_on_warning
+        if (
+            promotable
+            and severity == "warning"
+            and (self.config.strict or self.config.fail_on_warning)
         ):
             severity = "error"
         result.issues.append(
@@ -1665,6 +1700,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="Promote warnings to errors. Useful for CI after the catalog has been normalized.",
     )
     parser.add_argument(
+        "--allow-missing-license",
+        action="store_true",
+        help="Report missing or empty license values as warnings instead of errors. Use for legacy datasets when the license cannot be safely inferred.",
+    )
+    parser.add_argument(
         "--fail-on-warning",
         action="store_true",
         help="Return exit code 1 when warnings are present, without changing their reported severity.",
@@ -1685,6 +1725,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             fail_on_warning=False,  # keep reported severity stable; exit handling uses args.fail_on_warning
             unknown_fields=args.unknown_fields,
             missing_expected_fields=args.missing_expected_fields,
+            allow_missing_license=args.allow_missing_license,
         )
         validator = MetadataYamlValidator(config)
         results = [validator.validate_dataset(target) for target in targets]

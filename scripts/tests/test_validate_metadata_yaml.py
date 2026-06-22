@@ -449,7 +449,7 @@ def test_fix_preserves_multiline_editorial_note_as_block_scalar(
     assert 'category\'s "restrictedTo"' in loaded["editorialNote"]
 
 
-def test_fix_unwraps_single_item_landing_page_list(
+def test_landing_page_allows_multiple_values(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
     dataset = tmp_path / "models" / "landing-page-list"
@@ -457,17 +457,53 @@ def test_fix_unwraps_single_item_landing_page_list(
         dataset,
         VALID_METADATA.replace(
             "landingPage: https://example.org/model",
-            "landingPage:\n  - https://example.org/model",
+            "landingPage:\n  - https://example.org/model\n  - https://example.org/extra",
         ),
     )
 
     exit_code = validator.main([str(dataset), "--fix"])
 
-    capsys.readouterr()
+    captured = capsys.readouterr()
     fixed = metadata_path.read_text(encoding="utf-8")
+    loaded = validator.yaml.load(fixed, Loader=validator.MetadataYamlLoader)
     assert exit_code == 0
-    assert "landingPage: https://example.org/model" in fixed
-    assert "landingPage:\n - https://example.org/model" not in fixed
+    assert "invalid_type" not in captured.out
+    assert loaded["landingPage"] == [
+        "https://example.org/model",
+        "https://example.org/extra",
+    ]
+
+
+def test_comma_separated_language_tags_are_accepted(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "multi-language"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace("language: en", "language: en, pt-br"),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "invalid_language" not in captured.out
+
+
+def test_language_list_is_accepted(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "language-list"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace("language: en", "language:\n  - en\n  - pt-br"),
+    )
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "invalid_language" not in captured.out
 
 
 def test_invalid_theme_message_names_repository_style(
@@ -487,3 +523,70 @@ def test_invalid_theme_message_names_repository_style(
     assert exit_code == 1
     assert "Expected the repository-style LCC class label" in captured.out
     assert "accepted only as fixable input" in captured.out
+
+
+def test_allow_missing_license_relaxes_absent_license(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "legacy-no-license"
+    write_metadata(
+        dataset,
+        """
+        title: Legacy model
+        issued: 2020
+        theme: Class H - Social Sciences
+        keyword:
+          - legacy
+        """,
+    )
+
+    exit_code = validator.main(
+        [
+            str(dataset),
+            "--allow-missing-license",
+            "--missing-expected-fields",
+            "ignore",
+        ]
+    )
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "WARNING license [missing_field]" in captured.out
+    assert "ERROR   license" not in captured.out
+
+
+def test_allow_missing_license_relaxes_empty_license_even_in_strict_mode(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "legacy-empty-license"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "license: https://creativecommons.org/licenses/by/4.0/", "license:"
+        ),
+    )
+
+    exit_code = validator.main([str(dataset), "--allow-missing-license", "--strict"])
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "WARNING license [missing_value]" in captured.out
+    assert "ERROR   license" not in captured.out
+
+
+def test_missing_license_remains_error_without_relaxing_argument(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "strict-no-license"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "license: https://creativecommons.org/licenses/by/4.0/", "license:"
+        ),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "ERROR   license [missing_value]" in captured.out
