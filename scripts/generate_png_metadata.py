@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Generate RDF/Turtle metadata for OntoUML catalog PNG diagram distributions.
 
 The script scans one or more model dataset folders and creates one metadata file
