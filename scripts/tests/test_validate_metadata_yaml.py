@@ -39,7 +39,7 @@ contributor:
   - https://dblp.org/pid/81/4277
 keyword:
   - trust
-theme: H
+theme: Class H - Social Sciences
 editorialNote: Curated for the catalog.
 ontologyType:
   - domain
@@ -96,7 +96,7 @@ def test_invalid_yaml_duplicate_key_is_error(
         title: B
         issued: 2024
         license: https://creativecommons.org/licenses/by/4.0/
-        theme: H
+        theme: Class H - Social Sciences
         keyword:
           - test
         """,
@@ -119,7 +119,7 @@ def test_missing_required_field_is_error(
         """
         title: Missing license
         issued: 2024
-        theme: H
+        theme: Class H - Social Sciences
         keyword:
           - test
         """,
@@ -146,7 +146,7 @@ def test_fix_normalizes_safe_scalar_and_theme_values(
         modified: 2024
         contributor: https://dblp.org/pid/81/4277
         keyword: trust
-        theme: Class H - Social Sciences
+        theme: H
         editorialNote: note
         ontologyType: Domain
         language: en
@@ -165,13 +165,50 @@ def test_fix_normalizes_safe_scalar_and_theme_values(
     fixed = metadata_path.read_text(encoding="utf-8")
     assert exit_code == 0
     assert "fixed:" in captured.out
-    assert "theme: H" in fixed
+    assert "theme: Class H - Social Sciences" in fixed
     assert "license: https://creativecommons.org/licenses/by/4.0/" in fixed
-    assert "contributor:\n- https://dblp.org/pid/81/4277" in fixed
-    assert "keyword:\n- trust" in fixed
-    assert "ontologyType:\n- domain" in fixed
-    assert "designedForTask:\n- conceptual clarification" in fixed
-    assert "representationStyle:\n- ontouml" in fixed
+    assert "contributor:\n - https://dblp.org/pid/81/4277" in fixed
+    assert "keyword:\n - trust" in fixed
+    assert "ontologyType:\n - domain" in fixed
+    assert "designedForTask:\n - conceptual clarification" in fixed
+    assert "representationStyle:\n - ontouml" in fixed
+
+
+def test_fix_preserves_catalog_empty_value_style(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "empty-style"
+    metadata_path = write_metadata(
+        dataset,
+        """
+        title: Empty style
+        acronym:
+        issued: 2024
+        modified: 2024
+        contributor: https://dblp.org/pid/81/4277
+        keyword: trust
+        theme: H
+        editorialNote:
+        ontologyType: Domain
+        language: en
+        designedForTask: ConceptualClarification
+        context: Research
+        source: https://doi.org/10.1000/example
+        representationStyle: OntoumlStyle
+        landingPage: https://example.org/model
+        license: CC-BY-4.0
+        """,
+    )
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    capsys.readouterr()
+    fixed = metadata_path.read_text(encoding="utf-8")
+    assert exit_code == 0
+    assert "acronym:\n" in fixed
+    assert "editorialNote:\n" in fixed
+    assert "acronym: null" not in fixed
+    assert "editorialNote: null" not in fixed
 
 
 def test_fix_dry_run_does_not_write(
@@ -180,7 +217,7 @@ def test_fix_dry_run_does_not_write(
     dataset = tmp_path / "models" / "dry"
     metadata_path = write_metadata(
         dataset,
-        VALID_METADATA.replace("theme: H", "theme: Class H - Social Sciences"),
+        VALID_METADATA.replace("theme: Class H - Social Sciences", "theme: H"),
     )
     before = metadata_path.read_text(encoding="utf-8")
 
@@ -283,3 +320,45 @@ def test_nonexistent_explicit_path_is_setup_error(
     captured = capsys.readouterr()
     assert exit_code == 2
     assert "Input path does not exist" in captured.err
+
+
+def test_fix_unwraps_single_item_license_list(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "license-list"
+    metadata_path = write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "license: https://creativecommons.org/licenses/by/4.0/",
+            "license:\n  - https://creativecommons.org/licenses/by/4.0/",
+        ),
+    )
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    captured = capsys.readouterr()
+    fixed = metadata_path.read_text(encoding="utf-8")
+    assert exit_code == 0
+    assert "fixed:" in captured.out
+    assert "license: https://creativecommons.org/licenses/by/4.0/" in fixed
+    assert "license:\n - https://creativecommons.org/licenses/by/4.0/" not in fixed
+
+
+def test_single_item_license_list_requires_fix_without_fix_mode(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "license-list-no-fix"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "license: https://creativecommons.org/licenses/by/4.0/",
+            "license:\n  - https://creativecommons.org/licenses/by/4.0/",
+        ),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "single_uri_as_list" in captured.out
+    assert "--fix option can unwrap" in captured.out

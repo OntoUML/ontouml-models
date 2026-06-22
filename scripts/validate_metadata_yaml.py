@@ -469,14 +469,28 @@ def valid_date_like(value: Any) -> bool:
     return False
 
 
+def lcc_label_for_code(code: str) -> Optional[str]:
+    """Return the repository-style LCC class label for a compact class code."""
+
+    compact = code.strip().strip("/").upper()
+    if not compact:
+        return None
+    class_code = compact[0]
+    label = LCC_CLASSES.get(class_code)
+    if label is None:
+        return None
+    return f"Class {class_code} - {label}"
+
+
 def normalize_theme_value(
     value: Any,
 ) -> tuple[Optional[str], Optional[str], Optional[str]]:
     """Return normalized theme, warning, error.
 
-    The normalized value is the compact LCC code expected by metadata_yaml_to_ttl.py.
-    Existing catalog labels such as 'Class H - Social Sciences' are accepted and
-    can be fixed deterministically to 'H'.
+    The normalized value follows the original repository's metadata.yaml style,
+    e.g. ``Class H - Social Sciences``. Compact values such as ``H`` or
+    ``lcc:H`` and id.loc.gov URIs are accepted, but ``--fix`` expands them to
+    the full class label used in existing catalog metadata files.
     """
 
     if not isinstance(value, str):
@@ -491,8 +505,18 @@ def normalize_theme_value(
 
     uri_match = LCC_URI_RE.fullmatch(text)
     if uri_match:
-        code = uri_match.group(1).upper().strip("/")
-        return code, None, None
+        label = lcc_label_for_code(uri_match.group(1))
+        if label is None:
+            return (
+                None,
+                None,
+                f"Unsupported Library of Congress Classification code {uri_match.group(1)!r}.",
+            )
+        return (
+            label,
+            "Use the full LCC class label used by the catalog metadata.yaml files.",
+            None,
+        )
 
     label_match = LCC_LABEL_RE.fullmatch(text)
     if label_match:
@@ -505,25 +529,32 @@ def normalize_theme_value(
                 None,
                 f"Unsupported Library of Congress Classification code {code!r}.",
             )
+        normalized = f"Class {code} - {canonical_label}"
         if label.casefold() != canonical_label.casefold():
             return (
-                code,
+                normalized,
                 f"The LCC label differs from the canonical label {canonical_label!r}.",
                 None,
             )
-        return (
-            code,
-            "Use the compact LCC code to match metadata YAML conversion, e.g. theme: H.",
-            None,
-        )
+        if text != normalized:
+            return (
+                normalized,
+                "Use the canonical capitalization of the full LCC class label.",
+                None,
+            )
+        return normalized, None, None
 
     if text.lower().startswith("lcc:"):
         text = text.split(":", 1)[1]
     code = text.strip("/").upper()
     if re.fullmatch(r"[A-Z][A-Z0-9.-]*", code):
-        first = code[0]
-        if first in LCC_CLASSES:
-            return code, None, None
+        label = lcc_label_for_code(code)
+        if label is not None:
+            return (
+                label,
+                "Use the full LCC class label used by the catalog metadata.yaml files.",
+                None,
+            )
     return (
         None,
         None,
@@ -951,15 +982,29 @@ class MetadataYamlValidator:
     ) -> None:
         preferred = PREFERRED_FIELD_NAME[canonical]
         if isinstance(value, list):
-            self.add_issue(
-                result,
-                "error",
-                "invalid_type",
-                preferred,
-                f"{preferred!r} must be a single HTTP(S) URI, not a list.",
-                "Keep a single URI value.",
-            )
-            return
+            if len(value) == 1:
+                if self.config.fix:
+                    value = value[0]
+                else:
+                    self.add_issue(
+                        result,
+                        "error",
+                        "single_uri_as_list",
+                        preferred,
+                        f"{preferred!r} must be a single HTTP(S) URI, not a one-item list.",
+                        "Use a scalar URI value. The --fix option can unwrap a one-item list safely.",
+                    )
+                    return
+            else:
+                self.add_issue(
+                    result,
+                    "error",
+                    "invalid_type",
+                    preferred,
+                    f"{preferred!r} must be a single HTTP(S) URI, not a list with {len(value)} values.",
+                    "Keep exactly one URI value; this cannot be fixed automatically because choosing one value would be unsafe.",
+                )
+                return
         if canonical == "theme":
             return
         if not isinstance(value, str) or not value.strip():
@@ -1203,6 +1248,14 @@ class MetadataYamlValidator:
         fixed = value
 
         if (
+            canonical in SINGLE_URI_FIELDS
+            and isinstance(fixed, list)
+            and len(fixed) == 1
+        ):
+            fixed = fixed[0]
+            changed = True
+            message = f"Unwrapped one-item YAML list for scalar field {preferred!r}."
+        elif (
             canonical in LIST_FIELDS
             and fixed is not None
             and not isinstance(fixed, list)
@@ -1239,7 +1292,7 @@ class MetadataYamlValidator:
             if normalized and not error and fixed != normalized:
                 fixed = normalized
                 changed = True
-                message = "Normalized theme to the compact Library of Congress Classification code."
+                message = "Normalized theme to the full Library of Congress Classification class label."
 
         if canonical == "license" and isinstance(fixed, str):
             alias = LICENSE_ALIASES.get(canonical_token(fixed))
@@ -1317,16 +1370,49 @@ def _dataset_for_metadata_path(path: Path) -> Path:
     return path.parent if path.name == "metadata.yaml" else path
 
 
+class CatalogYamlDumper(yaml.SafeDumper):
+    """YAML dumper configured to minimize style churn in catalog metadata files."""
+
+    def increase_indent(self, flow: bool = False, indentless: bool = False) -> Any:
+        # Force block sequences to be indented under their parent key. PyYAML uses
+        # two spaces; write_yaml post-processes this to the one-space style already
+        # used throughout the original catalog metadata.yaml files.
+        return super().increase_indent(flow, False)
+
+
+def _represent_empty_null(
+    dumper: CatalogYamlDumper, value: None
+) -> yaml.nodes.ScalarNode:
+    """Represent null as an empty YAML value, e.g. ``acronym:`` not ``acronym: null``."""
+
+    return dumper.represent_scalar("tag:yaml.org,2002:null", "")
+
+
+CatalogYamlDumper.add_representer(type(None), _represent_empty_null)
+
+
+def _restore_catalog_sequence_indent(text: str) -> str:
+    """Convert PyYAML's two-space top-level sequence indent to catalog style."""
+
+    lines = []
+    for line in text.splitlines():
+        if line.startswith("  - ") or line == "  -":
+            lines.append(" " + line[2:])
+        else:
+            lines.append(line)
+    return "\n".join(lines) + "\n"
+
+
 def write_yaml(path: Path, data: Mapping[str, Any]) -> None:
-    text = yaml.safe_dump(
+    text = yaml.dump(
         dict(data),
+        Dumper=CatalogYamlDumper,
         sort_keys=False,
         allow_unicode=True,
-        width=120,
+        width=4096,
         default_flow_style=False,
     )
-    if not text.endswith("\n"):
-        text += "\n"
+    text = _restore_catalog_sequence_indent(text)
     path.write_text(text, encoding="utf-8")
 
 

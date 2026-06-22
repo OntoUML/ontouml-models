@@ -26,15 +26,15 @@ The validator is intentionally YAML-level tooling. RDF/SHACL validation should s
 
 ## Mandatory fields
 
-The minimum mandatory fields are aligned with the current `metadata_yaml_to_ttl.py` conversion logic and the metadata YAML documentation:
+The minimum mandatory fields are aligned with the catalog metadata schema and the existing repository metadata.yaml files:
 
 ```yaml
 title: Reference Ontology of Trust
 issued: 2019
 license: https://creativecommons.org/licenses/by/4.0/
-theme: H
+theme: Class H - Social Sciences
 keyword:
-  - trust
+ - trust
 ```
 
 The script also checks expected catalog-template fields, including `acronym`, `modified`, `contributor`, `editorialNote`, `ontologyType`, `language`, `designedForTask`, `context`, `source`, `representationStyle`, and `landingPage`. Missing expected but non-mandatory fields are warnings by default. Use `--missing-expected-fields error` or `--strict` to make them fatal.
@@ -61,15 +61,17 @@ Use `--fix` to apply deterministic fixes only. The script does **not** guess mis
 
 Safe fixes include:
 
-- adding missing non-mandatory expected fields with `null` values;
+- adding missing non-mandatory expected fields with empty YAML values, e.g. `acronym:` rather than `acronym: null`;
 - wrapping scalar values in lists where the catalog template expects a vector/list;
+- unwrapping one-item lists where the catalog template expects a scalar URI, for example `license:
+ - https://creativecommons.org/licenses/by/4.0/` to `license: https://creativecommons.org/licenses/by/4.0/`;
 - normalizing controlled values to the catalog style, for example `Domain` to `domain`;
-- normalizing existing `theme` labels such as `Class H - Social Sciences` to compact LCC codes such as `H`;
+- normalizing compact `theme` values such as `H`, `lcc:H`, or an LCC URI to the full catalog label, e.g. `Class H - Social Sciences`;
 - replacing known license shorthands such as `CC-BY-4.0` with their canonical URI;
 - trimming surrounding whitespace in scalar strings;
 - rewriting recognized aliases to repository-preferred field names.
 
-The fix mode rewrites YAML with PyYAML. Comments and hand-formatted spacing are not preserved. Run it only when this is acceptable.
+The fix mode rewrites YAML with PyYAML plus catalog-specific post-processing. It preserves the repository convention of one leading space before top-level list markers (` - value`) and empty values as `field:` rather than `field: null`. Comments and some hand-formatted spacing are not preserved. Run it only when this is acceptable.
 
 Preview fixes without writing files:
 
@@ -81,6 +83,37 @@ Apply fixes:
 
 ```bash
 python scripts/validate_metadata_yaml.py models/<model-directory> --fix
+```
+
+## YAML formatting produced by `--fix`
+
+The original repository metadata files use one leading space before list markers:
+
+```yaml
+contributor:
+ - https://dblp.org/pid/81/4277
+```
+
+This is valid YAML and is the style preserved by the fixer. The previous implementation emitted PyYAML's default style without that leading space; that was valid YAML, but it caused unnecessary repository-wide diffs and did not follow the catalog's established formatting.
+
+Empty optional values are written as:
+
+```yaml
+acronym:
+editorialNote:
+```
+
+not as:
+
+```yaml
+acronym: null
+editorialNote: null
+```
+
+The `theme` field is written using the full Library of Congress class label used in existing catalog metadata files:
+
+```yaml
+theme: Class H - Social Sciences
 ```
 
 ## Usage
