@@ -17,14 +17,21 @@ catalog for JSON, Turtle, VPP, and PNG distributions:
 
 - the distribution is typed as dcat:Distribution;
 - the distribution points back to the model with dct:isPartOf;
-- model-level dct:issued and dct:license are copied to the distribution;
+- model-level dct:issued is copied from metadata.yaml to the distribution;
+- model-level dct:license is copied from metadata.yaml when available;
 - the distribution receives dcat:mediaType, dcat:downloadURL, dct:title,
   skos:editorialNote, ocmv:isComplete, fdpo:metadataIssued, and
   fdpo:metadataModified.
 
-Only RDFLib is required for RDF graph creation and Turtle serialization. PNG
-validation and dimension extraction are performed with the Python standard
-library so that no image-processing dependency is needed.
+The model-level source of truth is metadata.yaml. Existing metadata-png-*.ttl
+files are read only to preserve stable distribution identifiers and curated
+PNG-level values during regeneration. The script does not read or update
+metadata.ttl.
+
+RDFLib is used for RDF graph creation and Turtle serialization. PyYAML is used
+for metadata.yaml parsing. PNG validation and dimension extraction are performed
+with the Python standard library so that no image-processing dependency is
+needed.
 """
 
 from __future__ import annotations
@@ -40,15 +47,15 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from decimal import Decimal
 from pathlib import Path
-from typing import List, Optional, Sequence, Tuple
+from typing import Any, List, Mapping, Optional, Sequence, Tuple
 from urllib.parse import quote
 
+import yaml
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS as DCT, RDF, SKOS, XSD
 
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
 FDPO = Namespace("https://w3id.org/fdp/fdp-o#")
-MOD = Namespace("https://w3id.org/mod#")
 OCMV = Namespace("https://w3id.org/ontouml-models/vocabulary#")
 SPDX = Namespace("http://spdx.org/rdf/terms#")
 SCHEMA = Namespace("https://schema.org/")
@@ -93,6 +100,7 @@ class Config:
     dry_run: bool = False
     include_file_metadata: bool = False
     metadata_timestamp: Optional[str] = None
+    require_license: bool = False
 
 
 @dataclass(frozen=True)
@@ -101,7 +109,7 @@ class ModelMetadata:
 
     uri: URIRef
     title: str
-    license_uri: URIRef
+    license_uri: Optional[URIRef]
     issued: Literal
 
 
@@ -113,6 +121,7 @@ class ExistingDistributionMetadata:
     title: Optional[Literal]
     editorial_note: Optional[Literal]
     download_url: Optional[URIRef]
+    license_uri: Optional[URIRef]
     metadata_issued: Optional[Literal]
     metadata_modified: Optional[Literal]
 
@@ -176,61 +185,289 @@ def normalize_model_uri(uri: URIRef) -> URIRef:
     return URIRef(str(uri).rstrip("/"))
 
 
-def load_model_metadata(dataset_folder: Path) -> ModelMetadata:
-    """Load model URI, title, issued date, and license from metadata.ttl."""
+def load_model_metadata(dataset_folder: Path, config: Config) -> ModelMetadata:
+    """Load model URI, title, issued date, and optional license from metadata.yaml."""
 
-    metadata_path = dataset_folder / "metadata.ttl"
+    metadata_path = dataset_folder / "metadata.yaml"
     if not metadata_path.exists():
-        raise MetadataGenerationError(f"Missing required model metadata file: {metadata_path}")
+        raise MetadataGenerationError(f"Missing required canonical metadata file: {metadata_path}")
 
-    graph = Graph()
-    try:
-        graph.parse(metadata_path)
-    except Exception as exc:  # noqa: BLE001 - surface RDFLib parse errors clearly
-        raise MetadataGenerationError(f"Could not parse {metadata_path}: {exc}") from exc
+    data = load_yaml_mapping(metadata_path)
 
-    candidates = list(graph.subjects(RDF.type, MOD.SemanticArtefact))
-    if not candidates:
-        candidates = [
-            subject
-            for subject in graph.subjects(RDF.type, DCAT.Dataset)
-            if isinstance(subject, URIRef) and (subject, DCT.title, None) in graph
-        ]
-
-    if not candidates:
-        raise MetadataGenerationError(
-            f"Could not find a model subject typed as mod:SemanticArtefact or dcat:Dataset in {metadata_path}"
-        )
-
-    uri_candidates = [subject for subject in candidates if isinstance(subject, URIRef)]
-    if not uri_candidates:
-        raise MetadataGenerationError(f"Model subject must be an IRI in {metadata_path}")
-
-    # Prefer the catalog's standard model URI pattern when several candidates exist.
-    selected_model_uri = next(
-        (subject for subject in uri_candidates if "/ontouml-models/model/" in str(subject)),
-        uri_candidates[0],
+    title_value = yaml_first_value(
+        data,
+        paths=(
+            ("title",),
+            ("model", "title"),
+            ("metadata", "title"),
+            ("resource", "title"),
+            ("ontology", "title"),
+            ("name",),
+        ),
+        recursive_keys=("title", "name"),
     )
-    model_uri = normalize_model_uri(selected_model_uri)
+    title = yaml_text(title_value)
+    if not title:
+        raise MetadataGenerationError(f"Missing required title in {metadata_path}")
 
-    title_literal = first_literal(graph, selected_model_uri, DCT.title) or first_literal(graph, model_uri, DCT.title)
-    if title_literal is None or not str(title_literal).strip():
-        raise MetadataGenerationError(f"Missing required dct:title for {selected_model_uri} in {metadata_path}")
-
-    issued_literal = first_literal(graph, selected_model_uri, DCT.issued) or first_literal(graph, model_uri, DCT.issued)
+    issued_value = yaml_first_value(
+        data,
+        paths=(
+            ("issued",),
+            ("dateIssued",),
+            ("issuedDate",),
+            ("issued_date",),
+            ("date",),
+            ("metadata", "issued"),
+            ("metadata", "dateIssued"),
+            ("metadata", "date"),
+            ("model", "issued"),
+            ("model", "dateIssued"),
+            ("resource", "issued"),
+            ("resource", "dateIssued"),
+            ("publication", "issued"),
+            ("publication", "date"),
+            ("publicationDate",),
+        ),
+        recursive_keys=("issued", "dateIssued", "issuedDate", "publicationDate"),
+    )
+    issued_literal = yaml_issued_literal(issued_value)
     if issued_literal is None:
-        raise MetadataGenerationError(f"Missing required dct:issued for {selected_model_uri} in {metadata_path}")
+        raise MetadataGenerationError(f"Missing required issued date in {metadata_path}")
 
-    license_ref = first_uri(graph, selected_model_uri, DCT.license) or first_uri(graph, model_uri, DCT.license)
-    if license_ref is None:
-        raise MetadataGenerationError(f"Missing required dct:license for {selected_model_uri} in {metadata_path}")
+    uri_value = yaml_first_value(
+        data,
+        paths=(
+            ("uri",),
+            ("modelUri",),
+            ("model", "uri"),
+            ("model", "id"),
+            ("metadata", "uri"),
+            ("resource", "uri"),
+            ("id",),
+        ),
+        recursive_keys=("modelUri", "uri"),
+    )
+    model_uri = yaml_model_uri(uri_value, dataset_folder.name)
+
+    license_value = yaml_first_value(
+        data,
+        paths=(
+            ("license",),
+            ("licenseUrl",),
+            ("licenseUri",),
+            ("metadata", "license"),
+            ("metadata", "licenseUrl"),
+            ("metadata", "licenseUri"),
+            ("model", "license"),
+            ("resource", "license"),
+            ("rights", "license"),
+            ("rights", "licenseUrl"),
+            ("rights", "licenseUri"),
+        ),
+        recursive_keys=("license", "licenseUrl", "licenseUri"),
+    )
+    license_ref = yaml_license_uri(license_value)
+    if license_ref is None and config.require_license:
+        raise MetadataGenerationError(f"Missing required license in {metadata_path}")
 
     return ModelMetadata(
         uri=model_uri,
-        title=str(title_literal).strip(),
+        title=title,
         license_uri=license_ref,
         issued=issued_literal,
     )
+
+
+def load_yaml_mapping(path: Path) -> Mapping[str, Any]:
+    """Load a YAML file and ensure its root node is a mapping."""
+
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except yaml.YAMLError as exc:
+        raise MetadataGenerationError(f"Could not parse {path}: {exc}") from exc
+    except OSError as exc:
+        raise MetadataGenerationError(f"Could not read {path}: {exc}") from exc
+
+    if data is None:
+        raise MetadataGenerationError(f"Canonical metadata file is empty: {path}")
+    if not isinstance(data, Mapping):
+        raise MetadataGenerationError(f"Canonical metadata file must contain a YAML mapping: {path}")
+    return data
+
+
+def canonical_yaml_key(value: object) -> str:
+    """Return a normalized key for permissive YAML field matching."""
+
+    return re.sub(r"[^a-z0-9]", "", str(value).lower())
+
+
+def yaml_mapping_get(mapping: Mapping[str, Any], key: str) -> Any:
+    """Return a mapping value using case-insensitive, punctuation-insensitive key matching."""
+
+    wanted = canonical_yaml_key(key)
+    for candidate, value in mapping.items():
+        if canonical_yaml_key(candidate) == wanted:
+            return value
+    return None
+
+
+def yaml_value_at_path(data: Any, path: Sequence[str]) -> Any:
+    """Return a YAML value by a normalized key path, or None when absent."""
+
+    current = data
+    for key in path:
+        if not isinstance(current, Mapping):
+            return None
+        current = yaml_mapping_get(current, key)
+        if current is None:
+            return None
+    return current
+
+
+def yaml_recursive_find(data: Any, keys: Sequence[str]) -> Any:
+    """Return the first scalar-like value found recursively for one of the given keys."""
+
+    wanted = {canonical_yaml_key(key) for key in keys}
+    if isinstance(data, Mapping):
+        for key, value in data.items():
+            if canonical_yaml_key(key) in wanted and value is not None:
+                return value
+        for value in data.values():
+            found = yaml_recursive_find(value, keys)
+            if found is not None:
+                return found
+    elif isinstance(data, list):
+        for value in data:
+            found = yaml_recursive_find(value, keys)
+            if found is not None:
+                return found
+    return None
+
+
+def yaml_first_value(
+    data: Mapping[str, Any],
+    *,
+    paths: Sequence[Sequence[str]],
+    recursive_keys: Sequence[str] = (),
+) -> Any:
+    """Return the first matching value from explicit paths, then from recursive key search."""
+
+    for path in paths:
+        value = yaml_value_at_path(data, path)
+        if value is not None:
+            return value
+    if recursive_keys:
+        return yaml_recursive_find(data, recursive_keys)
+    return None
+
+
+def yaml_text(value: Any) -> Optional[str]:
+    """Extract human-readable text from common YAML scalar or language-map forms."""
+
+    if value is None:
+        return None
+    if isinstance(value, Mapping):
+        for key in ("en", "eng", "english", "value", "label", "title", "name"):
+            nested = yaml_mapping_get(value, key)
+            text = yaml_text(nested)
+            if text:
+                return text
+        for nested in value.values():
+            text = yaml_text(nested)
+            if text:
+                return text
+        return None
+    if isinstance(value, list):
+        for item in value:
+            text = yaml_text(item)
+            if text:
+                return text
+        return None
+    text = str(value).strip()
+    return text or None
+
+
+def yaml_issued_literal(value: Any) -> Optional[Literal]:
+    """Convert a YAML issued-date value to the RDF literal used for dct:issued."""
+
+    text = yaml_text(value)
+    if not text:
+        return None
+    if re.fullmatch(r"\d{4}", text):
+        return Literal(text, datatype=XSD.gYear)
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
+        return Literal(text, datatype=XSD.date)
+    if XSD_DATETIME.match(text):
+        return Literal(text, datatype=XSD.dateTime, normalize=False)
+    return Literal(text)
+
+
+def yaml_model_uri(value: Any, dataset_slug: str) -> URIRef:
+    """Return the model URI from YAML, falling back to the dataset folder name."""
+
+    text = yaml_text(value)
+    if text and re.match(r"https?://", text):
+        return normalize_model_uri(URIRef(text))
+    if text and "/ontouml-models/model/" in text:
+        return normalize_model_uri(URIRef(text))
+
+    # If the canonical YAML does not expose the full IRI, the catalog folder name
+    # is the stable model slug used in the standard model URI pattern.
+    slug = text or dataset_slug
+    slug = str(slug).strip().strip("/")
+    if not slug:
+        slug = dataset_slug
+    return normalize_model_uri(URIRef(f"https://w3id.org/ontouml-models/model/{slug}/"))
+
+
+def yaml_license_uri(value: Any) -> Optional[URIRef]:
+    """Extract a license URI from common YAML license forms."""
+
+    text = yaml_license_text(value)
+    if not text:
+        return None
+    text = text.strip()
+    if re.match(r"https?://", text):
+        return URIRef(text)
+
+    licenses = {
+        "ccby40": "https://creativecommons.org/licenses/by/4.0/",
+        "creativecommonsattribution40international": "https://creativecommons.org/licenses/by/4.0/",
+        "ccbysa40": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "creativecommonsattributionsharealike40international": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "ccbysa30": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "creativecommonsattributionsharealike30unported": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "cc010": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "creativecommonszero10universaldomainpublicdedication": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "mit": "http://spdx.org/licenses/MIT",
+    }
+    return URIRef(licenses[canonical_yaml_key(text)]) if canonical_yaml_key(text) in licenses else None
+
+
+def yaml_license_text(value: Any) -> Optional[str]:
+    """Extract a license string, preferring URI/URL fields over labels."""
+
+    if value is None:
+        return None
+    if isinstance(value, Mapping):
+        for key in ("uri", "url", "licenseUri", "licenseUrl", "id", "identifier", "spdx", "value"):
+            text = yaml_license_text(yaml_mapping_get(value, key))
+            if text:
+                return text
+        for nested in value.values():
+            text = yaml_license_text(nested)
+            if text:
+                return text
+        return None
+    if isinstance(value, list):
+        for item in value:
+            text = yaml_license_text(item)
+            if text:
+                return text
+        return None
+    text = str(value).strip()
+    return text or None
 
 
 def first_literal(graph: Graph, subject: URIRef, predicate: URIRef) -> Optional[Literal]:
@@ -401,6 +638,7 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
             title=None,
             editorial_note=None,
             download_url=None,
+            license_uri=None,
             metadata_issued=None,
             metadata_modified=None,
         )
@@ -425,6 +663,7 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
     title = first_literal(graph, distribution, DCT.title) if distribution else None
     editorial = first_literal(graph, distribution, SKOS.editorialNote) if distribution else None
     download = first_uri(graph, distribution, DCAT.downloadURL) if distribution else None
+    license_uri = first_uri(graph, distribution, DCT.license) if distribution else None
     metadata_issued = existing_datetime_literal(text, "metadataIssued")
     metadata_modified = existing_datetime_literal(text, "metadataModified")
 
@@ -433,6 +672,7 @@ def read_existing_distribution_metadata(path: Path) -> ExistingDistributionMetad
         title=title,
         editorial_note=editorial,
         download_url=download,
+        license_uri=license_uri,
         metadata_issued=metadata_issued,
         metadata_modified=metadata_modified,
     )
@@ -491,6 +731,7 @@ def collect_diagrams(dataset_folder: Path, model: ModelMetadata, config: Config)
                     title=None,
                     editorial_note=None,
                     download_url=None,
+                    license_uri=None,
                     metadata_issued=None,
                     metadata_modified=None,
                 )
@@ -577,7 +818,9 @@ def build_distribution_graph(model: ModelMetadata, diagram: DiagramFile, config:
     graph.add((diagram.distribution_uri, RDF.type, DCAT.Distribution))
     graph.add((diagram.distribution_uri, DCT.isPartOf, model.uri))
     graph.add((diagram.distribution_uri, DCT.issued, model.issued))
-    graph.add((diagram.distribution_uri, DCT.license, model.license_uri))
+    license_uri = diagram.existing_metadata.license_uri or model.license_uri
+    if license_uri is not None:
+        graph.add((diagram.distribution_uri, DCT.license, license_uri))
     graph.add((diagram.distribution_uri, DCAT.mediaType, PNG_MEDIA_TYPE))
     graph.add((diagram.distribution_uri, OCMV.isComplete, Literal(False, datatype=XSD.boolean)))
     graph.add((diagram.distribution_uri, DCT.title, diagram.existing_metadata.title or Literal(title, lang="en")))
@@ -654,7 +897,7 @@ def process_dataset(dataset_folder: Path, config: Config) -> List[GeneratedFile]
     """
 
     dataset_folder = validate_dataset_folder(dataset_folder)
-    model = load_model_metadata(dataset_folder)
+    model = load_model_metadata(dataset_folder, config)
     diagrams = collect_diagrams(dataset_folder, model, config)
 
     existing_targets = [diagram.output_path for diagram in diagrams if diagram.output_path.exists()]
@@ -678,13 +921,13 @@ def process_dataset(dataset_folder: Path, config: Config) -> List[GeneratedFile]
 
 
 def discover_datasets(models_dir: Path) -> List[Path]:
-    """Discover model dataset folders under models_dir by metadata.ttl presence."""
+    """Discover model dataset folders under models_dir by metadata.yaml presence."""
 
     if not models_dir.exists():
         raise MetadataGenerationError(f"Models directory does not exist: {models_dir}")
     if not models_dir.is_dir():
         raise MetadataGenerationError(f"Models path is not a directory: {models_dir}")
-    return sorted(path for path in models_dir.iterdir() if path.is_dir() and (path / "metadata.ttl").exists())
+    return sorted(path for path in models_dir.iterdir() if path.is_dir() and (path / "metadata.yaml").exists())
 
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
@@ -695,7 +938,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         "datasets",
         nargs="*",
         type=Path,
-        help="Dataset folder(s) to process. If omitted, the current directory is used when it contains metadata.ttl.",
+        help="Dataset folder(s) to process. If omitted, the current directory is used when it contains metadata.yaml.",
     )
     parser.add_argument(
         "--all",
@@ -747,6 +990,11 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         "--metadata-timestamp",
         help="xsd:dateTime value used for fdpo:metadataIssued and fdpo:metadataModified on new files.",
     )
+    parser.add_argument(
+        "--require-license",
+        action="store_true",
+        help="Fail if metadata.yaml does not provide a usable license. By default, missing licenses are tolerated and dct:license is omitted unless an existing PNG metadata file already has one.",
+    )
     return parser.parse_args(argv)
 
 
@@ -760,7 +1008,7 @@ def resolve_targets(args: argparse.Namespace) -> List[Path]:
         return list(args.datasets)
 
     cwd = Path.cwd()
-    if (cwd / "metadata.ttl").exists():
+    if (cwd / "metadata.yaml").exists():
         return [cwd]
 
     raise MetadataGenerationError(
@@ -779,6 +1027,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         dry_run=args.dry_run,
         include_file_metadata=args.include_file_metadata,
         metadata_timestamp=args.metadata_timestamp,
+        require_license=args.require_license,
     )
 
     try:

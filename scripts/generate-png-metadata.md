@@ -24,8 +24,8 @@ The generated distribution includes:
 
 - `rdf:type dcat:Distribution`
 - `dct:isPartOf`, pointing to the model dataset
-- `dct:issued`, copied from the model-level `metadata.ttl`
-- `dct:license`, copied from the model-level `metadata.ttl`
+- `dct:issued`, derived from the model-level `metadata.yaml`
+- `dct:license`, copied from existing PNG metadata or derived from model-level `metadata.yaml` when available
 - `dct:title`
 - `skos:editorialNote`
 - `dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>`
@@ -34,7 +34,21 @@ The generated distribution includes:
 - `fdpo:metadataIssued`
 - `fdpo:metadataModified`
 
-The script does **not** add a model-level `dcat:distribution` triple to the generated PNG metadata file. In the current catalog convention, distribution metadata files point back to the model with `dct:isPartOf`; the model-level metadata file is where `dcat:distribution` links are maintained.
+The script does **not** read or update `metadata.ttl`, and it does **not** add model-level `dcat:distribution` triples. Distribution metadata files point back to the model with `dct:isPartOf`; the separate `metadata.ttl` generation step should read the generated `metadata-png-*.ttl` files and add the corresponding model-level `dcat:distribution` links.
+
+## Pipeline role
+
+The intended generation pipeline is:
+
+```text
+metadata.yaml + PNG files
+  -> metadata-png-*.ttl
+
+metadata.yaml + metadata-png-*.ttl + other distribution metadata
+  -> metadata.ttl
+```
+
+In this pipeline, `metadata.yaml` is the canonical input file. The `metadata-png-*.ttl` files are generated distribution metadata files. The model-level `metadata.ttl` file is a later aggregation product and should not be used as an input by this PNG generator.
 
 ## Existing metadata preservation
 
@@ -44,11 +58,12 @@ When regenerating an existing PNG metadata file, the script preserves curated va
 - `dct:title`;
 - `skos:editorialNote`;
 - `dcat:downloadURL`;
+- `dct:license`;
 - the exact lexical values of `fdpo:metadataIssued` and `fdpo:metadataModified`.
 
 Preserving the exact timestamp lexical values avoids changes such as nanosecond truncation or conversion from `Z` to `+00:00` when existing `xsd:dateTime` literals are parsed.
 
-For existing files, the script still regenerates the remaining required triples from the model metadata and script defaults, including `dct:isPartOf`, `dct:issued`, `dct:license`, `dcat:mediaType`, and `ocmv:isComplete`.
+For existing files, the script still regenerates the remaining triples from the model metadata and script defaults, including `dct:isPartOf`, `dct:issued`, `dcat:mediaType`, and `ocmv:isComplete`. The script preserves an existing PNG-level `dct:license`; if none exists, it copies the model-level `dct:license` when available.
 
 ## Defaults for new PNG metadata files
 
@@ -148,10 +163,10 @@ PNG validation always checks the PNG signature, IHDR chunk, chunk boundaries, CR
 Install the automation dependencies:
 
 ```bash
-python -m pip install -r requirements-automation.txt
+python -m pip install -r scripts/requirements-automation.txt
 ```
 
-The PNG metadata generator requires `rdflib`. Tests require `pytest`. Both are listed in `requirements-automation.txt`.
+The PNG metadata generator requires `rdflib` and `PyYAML`. Tests require `pytest`. All are listed in `scripts/requirements-automation.txt`.
 
 ## Usage
 
@@ -215,7 +230,13 @@ Add optional file-derived metadata:
 python scripts/generate_png_metadata.py models/<model-directory> --include-file-metadata
 ```
 
-Run from inside a dataset folder that contains `metadata.ttl`:
+Require model-level license metadata:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> --require-license
+```
+
+Run from inside a dataset folder that contains `metadata.yaml`:
 
 ```bash
 python ../../scripts/generate_png_metadata.py
@@ -225,7 +246,7 @@ python ../../scripts/generate_png_metadata.py
 
 | Argument | Required | Default | Meaning |
 | --- | --- | --- | --- |
-| `datasets` | No | current directory if it contains `metadata.ttl` | One or more model dataset folders to process. |
+| `datasets` | No | current directory if it contains `metadata.yaml` | One or more model dataset folders to process. |
 | `--all` | No | off | Process all dataset folders below `--models-dir`. Cannot be combined with explicit dataset folders. |
 | `--models-dir PATH` | No | `models` | Models directory used with `--all`. |
 | `--repository OWNER/REPO` | No | `OntoUML/ontouml-models` | GitHub repository used for generated `dcat:downloadURL` values. |
@@ -236,20 +257,23 @@ python ../../scripts/generate_png_metadata.py
 | `--dry-run` | No | off | Validate inputs and report files that would be generated without writing them. |
 | `--include-file-metadata` | No | off | Also add optional byte size, SHA-256 checksum, width, and height triples. |
 | `--metadata-timestamp VALUE` | No | current UTC timestamp | `xsd:dateTime` value used for `fdpo:metadataIssued` and `fdpo:metadataModified` on new files, or on existing files where those values are missing. |
+| `--require-license` | No | off | Fail if model-level `metadata.yaml` does not provide a usable license. By default, missing licenses are tolerated and `dct:license` is omitted unless an existing PNG metadata file already has one. |
 
 ## Input assumptions
 
 Each dataset folder must contain:
 
 ```text
-metadata.ttl
+metadata.yaml
 ```
 
-The model-level `metadata.ttl` must identify the model as `mod:SemanticArtefact` or `dcat:Dataset`, and must provide:
+The model-level `metadata.yaml` must provide enough information for the script to determine:
 
-- `dct:title`
-- `dct:issued`
-- `dct:license`
+- the model title;
+- the model issued date;
+- the model URI, or an identifier/slug from which the standard catalog model URI can be derived.
+
+A model-level license is recommended and is copied to generated PNG metadata when available. It is tolerated as missing by default so batch generation can still process catalog entries without model-level license metadata. Use `--require-license` to make a missing or unusable model-level license a fatal error.
 
 Each dataset must contain at least one PNG file in one of these folders:
 
@@ -267,10 +291,10 @@ Only direct PNG files inside these folders are processed. The `.png` extension i
 The script fails with a non-zero exit code for critical problems, including:
 
 - missing dataset folder;
-- missing or unparsable `metadata.ttl`;
-- missing model `dct:title`;
-- missing model `dct:issued`;
-- missing model `dct:license`;
+- missing or unparsable `metadata.yaml`;
+- missing model title in `metadata.yaml`;
+- missing model issued date in `metadata.yaml`;
+- missing or unusable model license in `metadata.yaml`, only when `--require-license` is used;
 - no PNG diagrams found;
 - unsupported PNG filenames with control characters;
 - unreadable, invalid, or truncated PNG files;
@@ -315,11 +339,11 @@ would generate: <metadata-file> <- <png-file>
 Run the PNG metadata generator tests:
 
 ```bash
-python -m pytest -q tests/test_generate_png_metadata.py
+python -m pytest -q scripts/tests/test_generate_png_metadata.py
 ```
 
 Optional syntax check:
 
 ```bash
-python -m py_compile scripts/generate_png_metadata.py tests/test_generate_png_metadata.py
+python -m py_compile scripts/generate_png_metadata.py scripts/tests/test_generate_png_metadata.py
 ```
