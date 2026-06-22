@@ -1,0 +1,349 @@
+# Generate PNG distribution metadata
+
+This repository contains one RDF/Turtle metadata file for each PNG diagram distribution of a model.
+
+The generator implemented in `scripts/generate_png_metadata.py` scans one or more model dataset folders and creates these files:
+
+| Source PNG folder | Generated metadata file |
+| --- | --- |
+| `original-diagrams/<diagram>.png` | `metadata-png-o-<diagram>.ttl` |
+| `new-diagrams/<diagram>.png` | `metadata-png-n-<diagram>.ttl` |
+
+`<diagram>` is the PNG filename stem, i.e., the filename without the `.png` extension. For example:
+
+```text
+models/example/new-diagrams/main-diagram.png
+models/example/metadata-png-n-main-diagram.ttl
+```
+
+## Generated RDF semantics
+
+For each PNG file, the script creates a `dcat:Distribution` metadata file following the same RDF pattern used by existing generated distribution files such as `metadata-json.ttl`, `metadata-turtle.ttl`, and `metadata-vpp.ttl`.
+
+The generated distribution includes:
+
+- `rdf:type dcat:Distribution`
+- `dct:isPartOf`, pointing to the model dataset
+- `dct:issued`, derived from the model-level `metadata.yaml`
+- `dct:license`, copied from existing PNG metadata or derived from model-level `metadata.yaml` when available
+- `dct:title`
+- `skos:editorialNote`
+- `dcat:mediaType <https://www.iana.org/assignments/media-types/image/png>`
+- `dcat:downloadURL`, pointing to the raw GitHub URL of the PNG file
+- `ocmv:isComplete false`, because PNG diagrams are not complete materializations of the model
+- `fdpo:metadataIssued`
+- `fdpo:metadataModified`
+
+The script does **not** read or update `metadata.ttl`, and it does **not** add model-level `dcat:distribution` triples. Distribution metadata files point back to the model with `dct:isPartOf`; the separate `metadata.ttl` generation step should read the generated `metadata-png-*.ttl` files and add the corresponding model-level `dcat:distribution` links.
+
+## Pipeline role
+
+The intended generation pipeline is:
+
+```text
+metadata.yaml + PNG files
+  -> metadata-png-*.ttl
+
+metadata.yaml + metadata-png-*.ttl + other distribution metadata
+  -> metadata.ttl
+```
+
+In this pipeline, `metadata.yaml` is the canonical input file. The `metadata-png-*.ttl` files are generated distribution metadata files. The model-level `metadata.ttl` file is a later aggregation product and should not be used as an input by this PNG generator.
+
+## Existing metadata preservation
+
+When regenerating an existing PNG metadata file, the script preserves curated values that should not be changed accidentally:
+
+- the existing distribution URI;
+- `dct:title`;
+- `skos:editorialNote`;
+- `dcat:downloadURL`;
+- `dct:license`;
+- the exact lexical values of `fdpo:metadataIssued` and `fdpo:metadataModified`.
+
+Preserving the exact timestamp lexical values avoids changes such as nanosecond truncation or conversion from `Z` to `+00:00` when existing `xsd:dateTime` literals are parsed.
+
+For existing files, the script still regenerates the remaining triples from the model metadata and script defaults, including `dct:isPartOf`, `dct:issued`, `dcat:mediaType`, and `ocmv:isComplete`. The script preserves an existing PNG-level `dct:license`; if none exists, it copies the model-level `dct:license` when available.
+
+## Defaults for new PNG metadata files
+
+For new files, the script generates a catalog-style title:
+
+```text
+PNG distribution of diagram '<diagram label>' from the <model title> (<version>)
+```
+
+The diagram label is derived from the filename stem by replacing spaces, underscores, and hyphens with spaces. For example:
+
+| PNG filename | Diagram label |
+| --- | --- |
+| `petroleum-system.png` | `petroleum system` |
+| `lifts,-ski-slopes,-and-snowparks.png` | `lifts, ski slopes, and snowparks` |
+
+The version suffix is determined by the source folder:
+
+| Source folder | Version label |
+| --- | --- |
+| `original-diagrams` | `original version` |
+| `new-diagrams` | `Visual Paradigm version` |
+
+The default editorial notes are:
+
+| Source folder | Default `skos:editorialNote` |
+| --- | --- |
+| `original-diagrams` | `This image depicts the diagram as originally represented by its author(s).` |
+| `new-diagrams` | `This image depicts a version of the original diagram re-created in the Visual Paradigm editor.` |
+
+## Distribution identifiers
+
+Existing target metadata files keep their current distribution URI. This avoids changing already published W3IDs. Existing catalog PNG distribution identifiers were historically generated as opaque UUIDs, and many of them are UUIDv4 values. The script treats all existing distribution identifiers as persistent opaque identifiers and never replaces them during regeneration.
+
+For new PNG metadata files, the script creates a deterministic UUIDv5 distribution URI under:
+
+```text
+https://w3id.org/ontouml-models/distribution/<uuid>/
+```
+
+The deterministic UUID input is:
+
+```text
+<model-uri>|<diagram-folder>/<png-filename>
+```
+
+For example, if the same PNG filename exists in both `original-diagrams` and `new-diagrams`, the generated UUIDs differ because the diagram folder is part of the UUID input.
+
+This differs from the catalog's likely original JavaScript generation approach, which appears to have generated UUIDv4 identifiers for new distribution metadata. This is not a compatibility problem because the URI pattern remains the same and UUIDs are treated as opaque identifiers. The compatibility rule is: preserve existing distribution URIs; use deterministic UUIDv5 only when creating metadata for PNG diagrams that do not already have a metadata file.
+
+The UUIDv5 approach makes new-file generation reproducible while preserving the catalog's established UUID-based distribution URI pattern.
+
+## Download URLs
+
+For new metadata files, `dcat:downloadURL` values are generated as raw GitHub URLs using:
+
+- `--repository`
+- `--branch`
+- `--models-dir-name`
+- the dataset folder name
+- the diagram source folder
+- the PNG filename
+
+By default, generated URLs point to:
+
+```text
+https://raw.githubusercontent.com/OntoUML/ontouml-models/master/models/<model-directory>/<diagram-folder>/<png-filename>
+```
+
+Existing `dcat:downloadURL` values are preserved when regenerating existing metadata files.
+
+When generating new URLs, path segments are URL-quoted where needed, but commas are left unescaped to match the existing catalog style. For example, the script generates:
+
+```text
+lifts,-ski-slopes,-and-snowparks.png
+```
+
+not:
+
+```text
+lifts%2C-ski-slopes%2C-and-snowparks.png
+```
+
+## Optional file-derived metadata
+
+By default, the script does not add image dimensions, file size, or checksum metadata because these are not part of the current required distribution metadata shape. Use `--include-file-metadata` to emit optional file-derived triples:
+
+- `dcat:byteSize`
+- `schema:width`
+- `schema:height`
+- `spdx:checksum` with SHA-256
+
+PNG validation always checks the PNG signature, IHDR chunk, chunk boundaries, CRC values, and IEND chunk before any metadata is written. This validation uses only the Python standard library.
+
+## Requirements
+
+Install the automation dependencies:
+
+```bash
+python -m pip install -r scripts/requirements.txt
+```
+
+The PNG metadata generator requires `rdflib` and `PyYAML`. Tests require `pytest`. All are listed in `scripts/requirements.txt`.
+
+## Usage
+
+Run from the repository root.
+
+Generate metadata for one dataset folder:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory>
+```
+
+Generate metadata for multiple dataset folders:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-1> models/<model-2>
+```
+
+Generate metadata for all dataset folders under `models/`:
+
+```bash
+python scripts/generate_png_metadata.py --all --models-dir models
+```
+
+Preview generation without writing files:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> --dry-run
+```
+
+Fail when a generated file already exists. This check is atomic at dataset level: no metadata files are written if any target already exists:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> --no-overwrite
+```
+
+Use a different repository or branch in generated `dcat:downloadURL` values:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> \
+  --repository pedropaulofb/ontouml-models-dev \
+  --branch master
+```
+
+Use a different repository-relative models path in generated `dcat:downloadURL` values:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> \
+  --models-dir-name models
+```
+
+Use a fixed timestamp for new metadata files, or for existing metadata files that do not already contain `fdpo:metadataIssued` or `fdpo:metadataModified`. The value must use an `xsd:dateTime` lexical form such as `2024-01-02T03:04:05Z`:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> \
+  --metadata-timestamp 2024-01-02T03:04:05Z
+```
+
+Add optional file-derived metadata:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> --include-file-metadata
+```
+
+Require model-level license metadata:
+
+```bash
+python scripts/generate_png_metadata.py models/<model-directory> --require-license
+```
+
+Run from inside a dataset folder that contains `metadata.yaml`:
+
+```bash
+python ../../scripts/generate_png_metadata.py
+```
+
+## Command-line arguments
+
+| Argument | Required | Default | Meaning |
+| --- | --- | --- | --- |
+| `datasets` | No | current directory if it contains `metadata.yaml` | One or more model dataset folders to process. |
+| `--all` | No | off | Process all dataset folders below `--models-dir`. Cannot be combined with explicit dataset folders. |
+| `--models-dir PATH` | No | `models` | Models directory used with `--all`. |
+| `--repository OWNER/REPO` | No | `OntoUML/ontouml-models` | GitHub repository used for generated `dcat:downloadURL` values. |
+| `--branch BRANCH` | No | `master` | Git branch used for generated `dcat:downloadURL` values. |
+| `--models-dir-name PATH` | No | `models` | Repository-relative models path used inside generated `dcat:downloadURL` values. |
+| `--no-overwrite` | No | overwrite enabled | Fail if a target metadata file already exists. |
+| `--strict` | No | off | Fail if an expected diagram folder is missing or empty. |
+| `--dry-run` | No | off | Validate inputs and report files that would be generated without writing them. |
+| `--include-file-metadata` | No | off | Also add optional byte size, SHA-256 checksum, width, and height triples. |
+| `--metadata-timestamp VALUE` | No | current UTC timestamp | `xsd:dateTime` value used for `fdpo:metadataIssued` and `fdpo:metadataModified` on new files, or on existing files where those values are missing. |
+| `--require-license` | No | off | Fail if model-level `metadata.yaml` does not provide a usable license. By default, missing licenses are tolerated and `dct:license` is omitted unless an existing PNG metadata file already has one. |
+
+## Input assumptions
+
+Each dataset folder must contain:
+
+```text
+metadata.yaml
+```
+
+The model-level `metadata.yaml` must provide enough information for the script to determine:
+
+- the model title;
+- the model issued date;
+- the model URI, or an identifier/slug from which the standard catalog model URI can be derived.
+
+A model-level license is recommended and is copied to generated PNG metadata when available. It is tolerated as missing by default so batch generation can still process catalog entries without model-level license metadata. Use `--require-license` to make a missing or unusable model-level license a fatal error.
+
+Each dataset must contain at least one PNG file in one of these folders:
+
+```text
+original-diagrams/
+new-diagrams/
+```
+
+In normal mode, a missing or empty `original-diagrams` or `new-diagrams` folder is tolerated as long as at least one PNG diagram is found. Use `--strict` to fail if either expected diagram folder is missing or empty.
+
+Only direct PNG files inside these folders are processed. The `.png` extension is matched case-insensitively. Nested files are not scanned.
+
+## Error handling
+
+The script fails with a non-zero exit code for critical problems, including:
+
+- missing dataset folder;
+- missing or unparsable `metadata.yaml`;
+- missing model title in `metadata.yaml`;
+- missing model issued date in `metadata.yaml`;
+- missing or unusable model license in `metadata.yaml`, only when `--require-license` is used;
+- no PNG diagrams found;
+- unsupported PNG filenames with control characters;
+- unreadable, invalid, or truncated PNG files;
+- duplicate generated metadata paths;
+- duplicate generated distribution URIs;
+- invalid `--metadata-timestamp` values;
+- malformed existing PNG metadata files;
+- existing target files when `--no-overwrite` is used.
+
+## Atomicity
+
+For each processed dataset, the script completes input validation and builds all RDF graphs before writing any target file. This prevents partial generation when a later diagram is invalid, when `--strict` fails, when `--no-overwrite` detects an existing target, or when optional file-derived metadata cannot be computed.
+
+## Serialization notes
+
+RDFLib serializes Turtle using its own formatting. Regenerated files may therefore differ from older manually generated files in non-semantic ways, such as:
+
+- prefix order;
+- whitespace before `;` and `.`;
+- omission of unused prefixes;
+- predicate order;
+- compact boolean syntax, e.g., `ocmv:isComplete false`, which is Turtle shorthand for an `xsd:boolean` false literal.
+
+These are Turtle serialization differences and do not change the RDF graph.
+
+## Terminal output
+
+For each generated file, the script prints:
+
+```text
+generated: <metadata-file> <- <png-file>
+```
+
+In dry-run mode, it prints:
+
+```text
+would generate: <metadata-file> <- <png-file>
+```
+
+## Run tests
+
+Run the PNG metadata generator tests:
+
+```bash
+python -m pytest -q scripts/tests/test_generate_png_metadata.py
+```
+
+Optional syntax check:
+
+```bash
+python -m py_compile scripts/generate_png_metadata.py scripts/tests/test_generate_png_metadata.py
+```
