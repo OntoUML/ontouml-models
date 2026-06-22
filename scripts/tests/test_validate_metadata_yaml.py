@@ -490,6 +490,45 @@ def test_comma_separated_language_tags_are_accepted(
     assert "invalid_language" not in captured.out
 
 
+def test_fix_converts_comma_separated_language_tags_to_list(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "fix-language"
+    metadata_path = write_metadata(
+        dataset,
+        VALID_METADATA.replace("language: en", "language: en, pt-br"),
+    )
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    captured = capsys.readouterr()
+    fixed = metadata_path.read_text(encoding="utf-8")
+    loaded = validator.yaml.load(fixed, Loader=validator.MetadataYamlLoader)
+    assert exit_code == 0
+    assert "fixed:" in captured.out
+    assert "language:\n - en\n - pt-br" in fixed
+    assert loaded["language"] == ["en", "pt-br"]
+
+
+def test_fix_does_not_convert_invalid_comma_separated_language_tags(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "invalid-language"
+    metadata_path = write_metadata(
+        dataset,
+        VALID_METADATA.replace("language: en", "language: en, not a tag"),
+    )
+    before = metadata_path.read_text(encoding="utf-8")
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    captured = capsys.readouterr()
+    after = metadata_path.read_text(encoding="utf-8")
+    assert exit_code == 1
+    assert "invalid_language" in captured.out
+    assert before == after
+
+
 def test_language_list_is_accepted(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:

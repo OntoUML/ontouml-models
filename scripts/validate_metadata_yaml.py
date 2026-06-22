@@ -1327,7 +1327,7 @@ class MetadataYamlValidator:
                     "error",
                     "invalid_language",
                     field,
-                    "Expected a BCP 47/IANA-like language tag such as 'en', 'pt-BR', or 'en-GB'. Multiple languages may be written as a comma-separated scalar, e.g. 'en, pt-br', or as a YAML list.",
+                    "Expected a BCP 47/IANA-like language tag such as 'en', 'pt-BR', or 'en-GB'. Multiple languages may be written as a comma-separated scalar, e.g. 'en, pt-br', or as a YAML list; --fix normalizes comma-separated multi-language scalars to lists when all tags are valid.",
                 )
 
     def validate_contact_points(self, value: Any, result: ValidationResult) -> None:
@@ -1413,6 +1413,17 @@ class MetadataYamlValidator:
                 fixed = alias
                 changed = True
                 message = "Replaced license shorthand with its canonical URI."
+
+        if canonical == "language" and isinstance(fixed, str) and "," in fixed:
+            language_values = [part.strip() for part in fixed.split(",")]
+            if (
+                len(language_values) > 1
+                and all(language_values)
+                and all(LANGUAGE_RE.fullmatch(part) for part in language_values)
+            ):
+                fixed = language_values
+                changed = True
+                message = "Converted comma-separated language tags to a YAML list."
 
         if isinstance(fixed, str) and "\n" not in fixed:
             stripped = fixed.strip()

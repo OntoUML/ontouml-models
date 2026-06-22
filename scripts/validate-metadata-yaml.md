@@ -60,7 +60,15 @@ The optional `iri` field may be either an absolute HTTP(S) IRI or a local slug a
 
 `landingPage` may be empty, a single HTTP(S) URI, or a YAML list of HTTP(S) URIs. The underlying RDF property has no maximum-count constraint in the catalog SHACL shape, so multiple landing pages are allowed. `--fix` therefore does not unwrap `landingPage` lists.
 
-`language` may be a single language tag, a comma-separated scalar used by existing catalog files, or a YAML list of language tags. For example, `language: en, pt-br` is accepted.
+`language` may be a single language tag, a comma-separated scalar used by existing catalog files, or a YAML list of language tags. For example, `language: en, pt-br` is accepted. When `--fix` is used, comma-separated multi-language scalars are normalized to YAML lists, but only when every language tag is valid:
+
+```yaml
+language:
+ - en
+ - pt-br
+```
+
+Single-language scalars such as `language: en` are kept as scalars to avoid unnecessary churn.
 
 ## Safe automatic fixes
 
@@ -70,6 +78,7 @@ Safe fixes include:
 
 - adding missing non-mandatory expected fields with empty YAML values, e.g. `acronym:` rather than `acronym: null`;
 - wrapping scalar values in lists where the catalog template expects a vector/list;
+- converting comma-separated multi-language scalar values into YAML lists when every language tag is valid;
 - unwrapping one-item lists where the catalog template expects a scalar URI, for example `license:
  - https://creativecommons.org/licenses/by/4.0/` to `license: https://creativecommons.org/licenses/by/4.0/`; this does **not** apply to `landingPage`, which may have multiple values;
 - normalizing controlled values to the catalog style, for example `Domain` to `domain`;
