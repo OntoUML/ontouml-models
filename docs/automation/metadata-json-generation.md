@@ -153,7 +153,7 @@ python scripts/generate_metadata_json_ttl.py models/example --no-overwrite
 Install the automation dependencies with:
 
 ```bash
-python -m pip install -r requirements-automation.txt
+python -m pip install -r scripts/requirements.txt
 ```
 
 ## Validation against repository examples

@@ -7,7 +7,7 @@ This repository uses [pre-commit](https://pre-commit.com/) to run lightweight ch
 Install the repository automation dependencies, including the pre-commit CLI:
 
 ```bash
-python -m pip install -r scripts/requirements-automation.txt
+python -m pip install -r scripts/requirements.txt
 ```
 
 Install the Git hook:
@@ -69,5 +69,5 @@ The PNG metadata generator tests are configured as a manual pre-commit hook beca
 There is no separate `requirements-pre-commit.txt` file. The pre-commit CLI and the automation/test dependencies are listed together in:
 
 ```text
-scripts/requirements-automation.txt
+scripts/requirements.txt
 ```

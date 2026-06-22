@@ -163,10 +163,10 @@ PNG validation always checks the PNG signature, IHDR chunk, chunk boundaries, CR
 Install the automation dependencies:
 
 ```bash
-python -m pip install -r scripts/requirements-automation.txt
+python -m pip install -r scripts/requirements.txt
 ```
 
-The PNG metadata generator requires `rdflib` and `PyYAML`. Tests require `pytest`. All are listed in `scripts/requirements-automation.txt`.
+The PNG metadata generator requires `rdflib` and `PyYAML`. Tests require `pytest`. All are listed in `scripts/requirements.txt`.
 
 ## Usage
 

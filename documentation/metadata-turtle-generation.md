@@ -117,7 +117,7 @@ Warnings are printed when the script cannot compute a repository-relative path f
 Install the minimal dependencies in an isolated environment:
 
 ```bash
-python -m pip install -r requirements-automation.txt
+python -m pip install -r scripts/requirements.txt
 ```
 
 Run tests:

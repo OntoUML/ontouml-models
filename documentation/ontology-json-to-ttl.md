@@ -30,7 +30,7 @@ models/<dataset-folder>/ontology.ttl
 Install the automation dependencies from the repository root:
 
 ```bash
-pip install -r requirements-automation.txt
+pip install -r scripts/requirements.txt
 ```
 
 The script requires RDFLib. It also supports the official `ontouml-json2graph`
