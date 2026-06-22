@@ -362,3 +362,128 @@ def test_single_item_license_list_requires_fix_without_fix_mode(
     assert exit_code == 1
     assert "single_uri_as_list" in captured.out
     assert "--fix option can unwrap" in captured.out
+
+
+def test_modified_before_issued_is_error(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "date-order"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace("issued: 2019", "issued: 2024").replace(
+            "modified: 2022", "modified: 2023"
+        ),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "modified_before_issued" in captured.out
+    assert "modified date must be greater than or equal" in captured.out
+
+
+def test_modified_same_year_as_more_precise_issued_is_accepted(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "date-precision"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace("issued: 2019", "issued: 2024-05-10").replace(
+            "modified: 2022", "modified: 2024"
+        ),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "modified_before_issued" not in captured.out
+
+
+def test_fix_preserves_multiline_editorial_note_as_block_scalar(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "multiline-note"
+    metadata_path = write_metadata(
+        dataset,
+        """
+        title: Multiline note
+        acronym:
+        issued: 2024
+        modified: 2024
+        contributor:
+         - https://dblp.org/pid/81/4277
+        keyword:
+         - test
+        theme: H
+        editorialNote: |
+         The ontology was developed in the context of a master thesis which isn't yet published.
+         The category's "restrictedTo" was set to "relator".
+        ontologyType:
+         - Domain
+        language: en
+        designedForTask:
+         - conceptual clarification
+        context:
+         - research
+        source:
+        representationStyle:
+         - OntoumlStyle
+        landingPage:
+        license: https://creativecommons.org/licenses/by/4.0/
+        """,
+    )
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    capsys.readouterr()
+    fixed = metadata_path.read_text(encoding="utf-8")
+    assert exit_code == 0
+    assert "editorialNote: |" in fixed
+    assert "isn''t" not in fixed
+    assert "category''s" not in fixed
+    assert " The ontology was developed" in fixed
+    loaded = validator.yaml.load(fixed, Loader=validator.MetadataYamlLoader)
+    assert "isn't yet published" in loaded["editorialNote"]
+    assert 'category\'s "restrictedTo"' in loaded["editorialNote"]
+
+
+def test_fix_unwraps_single_item_landing_page_list(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "landing-page-list"
+    metadata_path = write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "landingPage: https://example.org/model",
+            "landingPage:\n  - https://example.org/model",
+        ),
+    )
+
+    exit_code = validator.main([str(dataset), "--fix"])
+
+    capsys.readouterr()
+    fixed = metadata_path.read_text(encoding="utf-8")
+    assert exit_code == 0
+    assert "landingPage: https://example.org/model" in fixed
+    assert "landingPage:\n - https://example.org/model" not in fixed
+
+
+def test_invalid_theme_message_names_repository_style(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "invalid-theme"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "theme: Class H - Social Sciences", "theme: Social Sciences"
+        ),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "Expected the repository-style LCC class label" in captured.out
+    assert "accepted only as fixable input" in captured.out

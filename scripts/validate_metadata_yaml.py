@@ -52,6 +52,10 @@ class MetadataYamlError(RuntimeError):
     """Raised when validation cannot continue because of a tool/setup problem."""
 
 
+class LiteralBlockString(str):
+    """String marker used to serialize multiline text as a YAML block scalar."""
+
+
 @dataclass(frozen=True)
 class Issue:
     """One validation or lint issue."""
@@ -469,6 +473,64 @@ def valid_date_like(value: Any) -> bool:
     return False
 
 
+def comparable_date_parts(value: Any) -> Optional[tuple[tuple[int, ...], int]]:
+    """Return comparable date parts and precision, or None for unsupported values.
+
+    Comparison uses the precision common to both values. For example, YYYY is
+    compared at year precision, while YYYY-MM values are compared at year-month
+    precision. This avoids treating ``modified: 2022`` as earlier than
+    ``issued: 2022-05`` when the author only provided year-level information.
+    """
+
+    if isinstance(value, bool) or value is None:
+        return None
+    text = scalar_text(value)
+    if DATE_YEAR_RE.fullmatch(text):
+        return (int(text),), 1
+
+    year_month = DATE_YEAR_MONTH_RE.fullmatch(text)
+    if year_month:
+        year, month = map(int, year_month.groups())
+        try:
+            _dt.date(year, month, 1)
+        except ValueError:
+            return None
+        return (year, month), 2
+
+    date_match = DATE_RE.fullmatch(text)
+    if date_match:
+        year, month, day = map(int, date_match.groups())
+        try:
+            _dt.date(year, month, day)
+        except ValueError:
+            return None
+        return (year, month, day), 3
+
+    date_time = DATE_TIME_RE.fullmatch(text)
+    if date_time:
+        year, month, day = map(int, date_time.group(1).split("-"))
+        hour, minute, second = map(int, date_time.group(2, 3, 4))
+        try:
+            _dt.date(year, month, day)
+            _dt.time(hour, minute, second)
+        except ValueError:
+            return None
+        return (year, month, day, hour, minute, second), 6
+
+    return None
+
+
+def is_modified_before_issued(issued: Any, modified: Any) -> bool:
+    issued_parts = comparable_date_parts(issued)
+    modified_parts = comparable_date_parts(modified)
+    if issued_parts is None or modified_parts is None:
+        return False
+    issued_tuple, issued_precision = issued_parts
+    modified_tuple, modified_precision = modified_parts
+    precision = min(issued_precision, modified_precision)
+    return modified_tuple[:precision] < issued_tuple[:precision]
+
+
 def lcc_label_for_code(code: str) -> Optional[str]:
     """Return the repository-style LCC class label for a compact class code."""
 
@@ -558,7 +620,8 @@ def normalize_theme_value(
     return (
         None,
         None,
-        "Expected an LCC code such as 'H', 'lcc:H', an id.loc.gov LCC URI, or an existing catalog label such as 'Class H - Social Sciences'.",
+        "Expected the repository-style LCC class label, e.g. 'Class H - Social Sciences'. "
+        "Compact values such as 'H', 'lcc:H', or id.loc.gov LCC URIs are accepted only as fixable input with --fix.",
     )
 
 
@@ -841,6 +904,8 @@ class MetadataYamlValidator:
                     output[preferred] = fixed
                     self.add_fix(result, "normalize_value", preferred, message)
 
+        self.validate_date_order(canonical_values, result)
+
         if self.config.fix:
             # Reorder template fields first to reduce churn and keep deterministic output.
             output = self.reorder_output(output)
@@ -975,6 +1040,23 @@ class MetadataYamlValidator:
                 field_name,
                 "Expected YYYY, YYYY-MM, YYYY-MM-DD, or an xsd:dateTime-like value.",
                 "Use a valid calendar date or year, preserving existing FDP timestamp lexical forms where needed.",
+            )
+
+    def validate_date_order(
+        self, values: Mapping[str, Any], result: ValidationResult
+    ) -> None:
+        issued = values.get("issued")
+        modified = values.get("modified")
+        if is_missing_value(issued) or is_missing_value(modified):
+            return
+        if is_modified_before_issued(issued, modified):
+            self.add_issue(
+                result,
+                "error",
+                "modified_before_issued",
+                PREFERRED_FIELD_NAME["modified"],
+                "The modified date must be greater than or equal to the issued date.",
+                "Use a modified year/date that is the same as or later than issued.",
             )
 
     def validate_single_uri_field(
@@ -1178,7 +1260,7 @@ class MetadataYamlValidator:
                 "invalid_type",
                 preferred,
                 "theme must contain exactly one scalar LCC value, not a list.",
-                "Use a single compact LCC code such as H.",
+                "Use one repository-style LCC class label such as 'Class H - Social Sciences'.",
             )
             return
         normalized, warning, error = normalize_theme_value(value)
@@ -1301,7 +1383,7 @@ class MetadataYamlValidator:
                 changed = True
                 message = "Replaced license shorthand with its canonical URI."
 
-        if isinstance(fixed, str):
+        if isinstance(fixed, str) and "\n" not in fixed:
             stripped = fixed.strip()
             if stripped != fixed:
                 fixed = stripped
@@ -1391,28 +1473,75 @@ def _represent_empty_null(
 CatalogYamlDumper.add_representer(type(None), _represent_empty_null)
 
 
-def _restore_catalog_sequence_indent(text: str) -> str:
-    """Convert PyYAML's two-space top-level sequence indent to catalog style."""
+def _represent_literal_block_string(
+    dumper: CatalogYamlDumper, value: LiteralBlockString
+) -> yaml.nodes.ScalarNode:
+    """Represent multiline text using YAML block scalar syntax."""
 
-    lines = []
+    return dumper.represent_scalar("tag:yaml.org,2002:str", str(value), style="|")
+
+
+CatalogYamlDumper.add_representer(LiteralBlockString, _represent_literal_block_string)
+
+
+def _prepare_yaml_value(key: str, value: Any) -> Any:
+    """Prepare selected values for repository-style YAML serialization."""
+
+    if isinstance(value, Mapping):
+        return {
+            nested_key: _prepare_yaml_value(str(nested_key), nested_value)
+            for nested_key, nested_value in value.items()
+        }
+    if isinstance(value, list):
+        return [_prepare_yaml_value(key, item) for item in value]
+    if (
+        key in {"editorialNote", "editorial_note", "skos:editorialNote"}
+        and isinstance(value, str)
+        and "\n" in value
+    ):
+        return LiteralBlockString(value)
+    return value
+
+
+def _prepare_yaml_data(data: Mapping[str, Any]) -> dict[str, Any]:
+    return {key: _prepare_yaml_value(str(key), value) for key, value in data.items()}
+
+
+def _restore_catalog_yaml_style(text: str) -> str:
+    """Restore the list and block-scalar indentation style used in the catalog."""
+
+    lines: list[str] = []
+    in_block_scalar = False
+    block_scalar_re = re.compile(r"^[^\s:#][^:#]*:\s*[|>][-+]?")
+
     for line in text.splitlines():
+        if in_block_scalar:
+            if line and not line.startswith(" "):
+                in_block_scalar = False
+            elif line.startswith("  "):
+                line = " " + line[2:]
+
         if line.startswith("  - ") or line == "  -":
-            lines.append(" " + line[2:])
-        else:
-            lines.append(line)
+            line = " " + line[2:]
+
+        lines.append(line)
+
+        if not in_block_scalar and block_scalar_re.match(line):
+            in_block_scalar = True
+
     return "\n".join(lines) + "\n"
 
 
 def write_yaml(path: Path, data: Mapping[str, Any]) -> None:
     text = yaml.dump(
-        dict(data),
+        _prepare_yaml_data(data),
         Dumper=CatalogYamlDumper,
         sort_keys=False,
         allow_unicode=True,
         width=4096,
         default_flow_style=False,
     )
-    text = _restore_catalog_sequence_indent(text)
+    text = _restore_catalog_yaml_style(text)
     path.write_text(text, encoding="utf-8")
 
 

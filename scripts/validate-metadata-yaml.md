@@ -15,6 +15,7 @@ For each selected dataset folder, the script checks:
 - non-empty values for mandatory fields;
 - field types, such as scalar values versus YAML lists;
 - date-like values used by catalog metadata;
+- `modified` date/year values that are earlier than `issued`;
 - HTTP(S) URI fields;
 - Library of Congress Classification values in `theme`;
 - controlled values for `ontologyType`, `designedForTask`, `context`, and `representationStyle`;
@@ -55,6 +56,8 @@ The converter also accepts snake_case aliases such as `editorial_note`, `ontolog
 
 The optional `iri` field may be either an absolute HTTP(S) IRI or a local slug accepted by the YAML-to-Turtle converter. A local slug must not contain a URI prefix.
 
+`landingPage` is treated as a scalar URI field, not a list, because the current YAML-to-Turtle converter reads it as one value and passes it directly to URI validation. A one-item list is therefore safe to unwrap with `--fix`; a multi-item list remains an error because selecting one landing page would be unsafe.
+
 ## Safe automatic fixes
 
 Use `--fix` to apply deterministic fixes only. The script does **not** guess missing mandatory metadata.
@@ -64,7 +67,7 @@ Safe fixes include:
 - adding missing non-mandatory expected fields with empty YAML values, e.g. `acronym:` rather than `acronym: null`;
 - wrapping scalar values in lists where the catalog template expects a vector/list;
 - unwrapping one-item lists where the catalog template expects a scalar URI, for example `license:
- - https://creativecommons.org/licenses/by/4.0/` to `license: https://creativecommons.org/licenses/by/4.0/`;
+ - https://creativecommons.org/licenses/by/4.0/` to `license: https://creativecommons.org/licenses/by/4.0/`; this also applies to `landingPage`, which the current converter treats as a single URI field;
 - normalizing controlled values to the catalog style, for example `Domain` to `domain`;
 - normalizing compact `theme` values such as `H`, `lcc:H`, or an LCC URI to the full catalog label, e.g. `Class H - Social Sciences`;
 - replacing known license shorthands such as `CC-BY-4.0` with their canonical URI;
@@ -114,6 +117,16 @@ The `theme` field is written using the full Library of Congress class label used
 
 ```yaml
 theme: Class H - Social Sciences
+```
+
+Compact values such as `H`, `lcc:H`, or an id.loc.gov LCC URI are accepted as fixable input only. With `--fix`, they are expanded to the full repository-style label.
+
+Multiline `editorialNote` values are serialized as YAML block scalars instead of single-quoted multiline scalars. This avoids churn such as doubled apostrophes (`isn''t`) while keeping the output valid YAML:
+
+```yaml
+editorialNote: |
+ The ontology was developed in the context of a master thesis which isn't yet published.
+ The cardinalities in derivation link were represented in UML notes.
 ```
 
 ## Usage
