@@ -105,7 +105,9 @@ def test_regeneration_preserves_existing_catalog_managed_values(tmp_path: Path):
     write_metadata_yaml(dataset)
     write_existing_metadata_ttl(dataset)
 
-    result = module.convert_dataset(dataset, module.Config())
+    result = module.convert_dataset(
+        dataset, module.Config(metadata_timestamp="2026-01-31T12:00:00Z")
+    )
 
     generated = (dataset / "metadata.ttl").read_text(encoding="utf-8")
     assert result.written is True
@@ -121,7 +123,11 @@ def test_regeneration_preserves_existing_catalog_managed_values(tmp_path: Path):
         in generated
     )
     assert "https://w3id.org/ontouml-models/distribution/one/" in generated
-    assert "2023-04-14T17:35:28.608937306Z" in generated
+    assert (
+        'fdpo:metadataIssued "2023-04-14T17:35:28.608937306Z"^^xsd:dateTime'
+        in generated
+    )
+    assert 'fdpo:metadataModified "2026-01-31T12:00:00Z"^^xsd:dateTime' in generated
     assert (
         "https://github.com/OntoUML/ontouml-models/tree/master/models/amaral2019rot"
         in generated
@@ -299,7 +305,9 @@ def test_check_mode_reports_needed_update_without_writing(
     write_existing_metadata_ttl(dataset)
     before = (dataset / "metadata.ttl").read_text(encoding="utf-8")
 
-    exit_code = module.main([str(dataset), "--check"])
+    exit_code = module.main(
+        [str(dataset), "--check", "--metadata-timestamp", "2026-01-31T12:00:00Z"]
+    )
     after = (dataset / "metadata.ttl").read_text(encoding="utf-8")
     captured = capsys.readouterr()
 
@@ -407,7 +415,16 @@ def test_json_check_mode_outputs_clean_json_without_diff(
     write_metadata_yaml(dataset)
     write_existing_metadata_ttl(dataset)
 
-    exit_code = module.main([str(dataset), "--check", "--format", "json"])
+    exit_code = module.main(
+        [
+            str(dataset),
+            "--check",
+            "--format",
+            "json",
+            "--metadata-timestamp",
+            "2026-01-31T12:00:00Z",
+        ]
+    )
     captured = capsys.readouterr()
     payload = json.loads(captured.out)
 
@@ -486,7 +503,9 @@ def test_language_maps_are_supported_for_literal_fields(tmp_path: Path):
     )
     (dataset / "metadata.yaml").write_text(yaml_text, encoding="utf-8")
 
-    module.convert_dataset(dataset, module.Config())
+    module.convert_dataset(
+        dataset, module.Config(metadata_timestamp="2026-01-31T12:00:00Z")
+    )
 
     generated = (dataset / "metadata.ttl").read_text(encoding="utf-8")
     assert 'dct:title "Reference Ontology of Trust"@en' in generated
@@ -833,7 +852,9 @@ def test_existing_catalog_metadata_ttl_cases_preserve_legacy_catalog_values(
     dataset = tmp_path / "models" / folder
     write_catalog_metadata_pair(dataset, yaml_text, old_ttl)
 
-    module.convert_dataset(dataset, module.Config())
+    module.convert_dataset(
+        dataset, module.Config(metadata_timestamp="2026-01-31T12:00:00Z")
+    )
 
     generated = (dataset / "metadata.ttl").read_text(encoding="utf-8")
     assert f"https://w3id.org/ontouml-models/model/{model_uuid}/" in generated
@@ -842,7 +863,8 @@ def test_existing_catalog_metadata_ttl_cases_preserve_legacy_catalog_values(
         in generated
     )
     assert expected_theme in generated
-    assert expected_timestamp in generated
+    assert f'fdpo:metadataIssued "{expected_timestamp}"^^xsd:dateTime' in generated
+    assert 'fdpo:metadataModified "2026-01-31T12:00:00Z"^^xsd:dateTime' in generated
     assert f"models/{folder}" in generated
     assert "metadata-turtle.ttl" not in generated
     assert_parseable_turtle(dataset / "metadata.ttl")
@@ -1001,3 +1023,81 @@ def test_comma_separated_language_scalar_matches_validator_behavior(tmp_path: Pa
     assert 'dct:language "en",\n                 "pt-BR"' in generated
     assert 'dcat:keyword "trust"@en' in generated
     assert_parseable_turtle(dataset / "metadata.ttl")
+
+
+def test_unchanged_file_preserves_existing_metadata_modified_with_new_timestamp(
+    tmp_path: Path,
+):
+    module = load_module()
+    dataset = tmp_path / "models" / "unchanged-timestamps"
+    write_metadata_yaml(dataset)
+
+    module.convert_dataset(
+        dataset,
+        module.Config(metadata_timestamp="2026-01-31T12:00:00Z"),
+    )
+    first_text = (dataset / "metadata.ttl").read_text(encoding="utf-8")
+
+    result = module.convert_dataset(
+        dataset,
+        module.Config(metadata_timestamp="2026-02-01T12:00:00Z"),
+    )
+    second_text = (dataset / "metadata.ttl").read_text(encoding="utf-8")
+
+    assert result.changed is False
+    assert result.written is False
+    assert first_text == second_text
+    assert 'fdpo:metadataIssued "2026-01-31T12:00:00Z"^^xsd:dateTime' in second_text
+    assert 'fdpo:metadataModified "2026-01-31T12:00:00Z"^^xsd:dateTime' in second_text
+    assert "2026-02-01T12:00:00Z" not in second_text
+
+
+def test_changed_file_preserves_metadata_issued_and_updates_metadata_modified(
+    tmp_path: Path,
+):
+    module = load_module()
+    dataset = tmp_path / "models" / "changed-timestamps"
+    write_metadata_yaml(dataset)
+
+    module.convert_dataset(
+        dataset,
+        module.Config(metadata_timestamp="2026-01-31T12:00:00Z"),
+    )
+    yaml_text = (dataset / "metadata.yaml").read_text(encoding="utf-8")
+    (dataset / "metadata.yaml").write_text(
+        yaml_text.replace("Reference Ontology of Trust", "Updated Trust Ontology"),
+        encoding="utf-8",
+    )
+
+    result = module.convert_dataset(
+        dataset,
+        module.Config(metadata_timestamp="2026-02-01T12:00:00Z"),
+    )
+
+    generated = (dataset / "metadata.ttl").read_text(encoding="utf-8")
+    assert result.changed is True
+    assert result.written is True
+    assert 'dct:title "Updated Trust Ontology"' in generated
+    assert 'fdpo:metadataIssued "2026-01-31T12:00:00Z"^^xsd:dateTime' in generated
+    assert 'fdpo:metadataModified "2026-02-01T12:00:00Z"^^xsd:dateTime' in generated
+
+
+def test_changed_existing_file_requires_timestamp_to_update_metadata_modified(
+    tmp_path: Path,
+):
+    module = load_module()
+    dataset = tmp_path / "models" / "changed-without-timestamp"
+    write_metadata_yaml(dataset)
+
+    module.convert_dataset(
+        dataset,
+        module.Config(metadata_timestamp="2026-01-31T12:00:00Z"),
+    )
+    yaml_text = (dataset / "metadata.yaml").read_text(encoding="utf-8")
+    (dataset / "metadata.yaml").write_text(
+        yaml_text.replace("Reference Ontology of Trust", "Updated Trust Ontology"),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(module.MetadataConversionError, match="metadataModified"):
+        module.convert_dataset(dataset, module.Config())
