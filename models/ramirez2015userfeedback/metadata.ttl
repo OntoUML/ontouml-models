@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/d8502133-b2b2-4b8a-b96f-dd8285863b23/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -16,17 +15,36 @@
     dct:issued "2015"^^xsd:gYear;
     dct:modified "2015"^^xsd:gYear;
     dcat:theme lcc:T;
-    skos:editorialNote "The ontology contains OCL constraints represented in UML notes.\nAggregations with empty diamond were interpreted as «componentOf» relations, following OntoUML's original proposal.\nCertain classes, such as the «kind» Person, have been extracted from the text and included to diagrams.\n";
+    skos:editorialNote """The ontology contains OCL constraints represented in UML notes.
+Aggregations with empty diamond were interpreted as «componentOf» relations, following OntoUML's original proposal.
+Certain classes, such as the «kind» Person, have been extracted from the text and included to diagrams.
+""";
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/04/8766>, <https://dblp.org/pid/16/4754>, <https://dblp.org/pid/75/5043>;
-    dcat:keyword "online user feedback"@en, "software engineering"@en, "requirements engineering"@en;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:InformationRetrieval;
-    ocmv:context ocmv:Research;
+    dct:contributor <https://dblp.org/pid/04/8766>,
+                    <https://dblp.org/pid/16/4754>,
+                    <https://dblp.org/pid/75/5043>;
+    dcat:keyword "online user feedback"@en,
+                 "software engineering"@en,
+                 "requirements engineering"@en;
     dct:source <https://doi.org/10.3233/AO-150150>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:InformationRetrieval;
+    ocmv:context ocmv:Research;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/ramirez2015userfeedback"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/ramirez2015userfeedback"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:11:00.927415824Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:11:00.927415824Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/d8502133-b2b2-4b8a-b96f-dd8285863b23> dcat:distribution <https://w3id.org/ontouml-models/distribution/ef1031db-2b7e-4262-a46c-691c642110eb/>, <https://w3id.org/ontouml-models/distribution/1055e22a-4139-4fa3-b850-8a9c3f88e302/>, <https://w3id.org/ontouml-models/distribution/08ccba6f-a750-4c1a-afc4-a49233f5a56d/>, <https://w3id.org/ontouml-models/distribution/65b65a29-9d2e-4755-a340-d6d314e235b5>, <https://w3id.org/ontouml-models/distribution/7bb3feb9-c5fa-479f-888e-2aad79f66a2f>, <https://w3id.org/ontouml-models/distribution/291a2894-b9c1-4dfc-bd91-203e4747b379>, <https://w3id.org/ontouml-models/distribution/79901ad5-26a3-4c54-b9c6-b0e420b8ecc3>, <https://w3id.org/ontouml-models/distribution/586ce6ce-9ba6-4719-837e-f98c7b246210>, <https://w3id.org/ontouml-models/distribution/32357034-636e-4b74-b7e8-26a99fccdf44>, <https://w3id.org/ontouml-models/distribution/bc8fe631-b7c7-4362-8702-134284b90f98>, <https://w3id.org/ontouml-models/distribution/b4378f85-c054-4115-abe0-0895d468ced0>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/d8502133-b2b2-4b8a-b96f-dd8285863b23> dcat:distribution <https://w3id.org/ontouml-models/distribution/ef1031db-2b7e-4262-a46c-691c642110eb/>,
+                      <https://w3id.org/ontouml-models/distribution/1055e22a-4139-4fa3-b850-8a9c3f88e302/>,
+                      <https://w3id.org/ontouml-models/distribution/08ccba6f-a750-4c1a-afc4-a49233f5a56d/>,
+                      <https://w3id.org/ontouml-models/distribution/65b65a29-9d2e-4755-a340-d6d314e235b5>,
+                      <https://w3id.org/ontouml-models/distribution/7bb3feb9-c5fa-479f-888e-2aad79f66a2f>,
+                      <https://w3id.org/ontouml-models/distribution/291a2894-b9c1-4dfc-bd91-203e4747b379>,
+                      <https://w3id.org/ontouml-models/distribution/79901ad5-26a3-4c54-b9c6-b0e420b8ecc3>,
+                      <https://w3id.org/ontouml-models/distribution/586ce6ce-9ba6-4719-837e-f98c7b246210>,
+                      <https://w3id.org/ontouml-models/distribution/32357034-636e-4b74-b7e8-26a99fccdf44>,
+                      <https://w3id.org/ontouml-models/distribution/bc8fe631-b7c7-4362-8702-134284b90f98>,
+                      <https://w3id.org/ontouml-models/distribution/b4378f85-c054-4115-abe0-0895d468ced0> .

@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/d88fe48c-d574-43b4-85d6-a6e1aeaa6726/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -21,14 +20,35 @@
     dct:language "en";
     dcat:landingPage <https://github.com/unibz-core/trust-ontology>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/81/4277>, <https://dblp.org/pid/134/4947>, <https://dblp.org/pid/11/78>, <https://dblp.org/pid/33/8219>, <https://dblp.org/pid/91/3408>, <https://dblp.org/pid/75/5043>, <https://dblp.org/pid/m/JohnMylopoulos>;
+    dct:contributor <https://dblp.org/pid/81/4277>,
+                    <https://dblp.org/pid/134/4947>,
+                    <https://dblp.org/pid/11/78>,
+                    <https://dblp.org/pid/33/8219>,
+                    <https://dblp.org/pid/91/3408>,
+                    <https://dblp.org/pid/75/5043>,
+                    <https://dblp.org/pid/m/JohnMylopoulos>;
     dcat:keyword "trust"@en;
+    dct:source <https://doi.org/10.1007/978-3-030-33246-4_1>,
+               <https://dblp.org/rec/conf/vmbo/AmaralSGP21>,
+               <https://doi.org/10.1007/978-3-030-63479-7_6>,
+               <https://doi.org/10.1007/978-3-030-62522-1_25>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1007/978-3-030-33246-4_1>, <https://dblp.org/rec/conf/vmbo/AmaralSGP21>, <https://doi.org/10.1007/978-3-030-63479-7_6>, <https://doi.org/10.1007/978-3-030-62522-1_25>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/amaral2019rot"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/amaral2019rot"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:35:28.608937306Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:35:28.608937306Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/d88fe48c-d574-43b4-85d6-a6e1aeaa6726> dcat:distribution <https://w3id.org/ontouml-models/distribution/78713112-cf7e-45f1-8c74-c7b5906f5b7c/>, <https://w3id.org/ontouml-models/distribution/7c83f03b-c170-49d2-9dd9-0a600be6cc96/>, <https://w3id.org/ontouml-models/distribution/48c920df-896e-43db-baa4-adcc206d1b3d/>, <https://w3id.org/ontouml-models/distribution/669a3a1a-fd31-436e-8f31-932b4119de47>, <https://w3id.org/ontouml-models/distribution/59c1c3b5-7621-45a0-b1b9-2538e01c1b3c>, <https://w3id.org/ontouml-models/distribution/56072ed6-b5ff-467d-8424-965d41535e23>, <https://w3id.org/ontouml-models/distribution/dc069a25-ecdb-400e-83e1-5e77a4286b28>, <https://w3id.org/ontouml-models/distribution/72eba497-015a-4513-8364-3f2db1d58a2e>, <https://w3id.org/ontouml-models/distribution/abfd6260-2036-4561-9aef-2e5699d19c0e>, <https://w3id.org/ontouml-models/distribution/2a78d0c1-b55f-49bf-a915-1490005b1de8>, <https://w3id.org/ontouml-models/distribution/412737ce-27ad-44af-a1ea-d25b919d0c5f>, <https://w3id.org/ontouml-models/distribution/aba47a58-1fa8-4281-a03c-5455bd860a03>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/d88fe48c-d574-43b4-85d6-a6e1aeaa6726> dcat:distribution <https://w3id.org/ontouml-models/distribution/78713112-cf7e-45f1-8c74-c7b5906f5b7c/>,
+                      <https://w3id.org/ontouml-models/distribution/7c83f03b-c170-49d2-9dd9-0a600be6cc96/>,
+                      <https://w3id.org/ontouml-models/distribution/48c920df-896e-43db-baa4-adcc206d1b3d/>,
+                      <https://w3id.org/ontouml-models/distribution/669a3a1a-fd31-436e-8f31-932b4119de47>,
+                      <https://w3id.org/ontouml-models/distribution/59c1c3b5-7621-45a0-b1b9-2538e01c1b3c>,
+                      <https://w3id.org/ontouml-models/distribution/56072ed6-b5ff-467d-8424-965d41535e23>,
+                      <https://w3id.org/ontouml-models/distribution/dc069a25-ecdb-400e-83e1-5e77a4286b28>,
+                      <https://w3id.org/ontouml-models/distribution/72eba497-015a-4513-8364-3f2db1d58a2e>,
+                      <https://w3id.org/ontouml-models/distribution/abfd6260-2036-4561-9aef-2e5699d19c0e>,
+                      <https://w3id.org/ontouml-models/distribution/2a78d0c1-b55f-49bf-a915-1490005b1de8>,
+                      <https://w3id.org/ontouml-models/distribution/412737ce-27ad-44af-a1ea-d25b919d0c5f>,
+                      <https://w3id.org/ontouml-models/distribution/aba47a58-1fa8-4281-a03c-5455bd860a03> .

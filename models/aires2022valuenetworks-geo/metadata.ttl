@@ -1,31 +1,41 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/3886f70e-5a91-411d-a50e-370eb4f93c5a/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Ontology for Value Networks with Geographic Information";
     dct:issued "2022"^^xsd:gYear;
     dct:modified "2022"^^xsd:gYear;
     dcat:theme lcc:H;
-    skos:editorialNote "The ontology was developed in the context of a master thesis which isn't yet published.\nThe ontology contains multiples derivations of the same class, which cannot be represented in Visual Paradigm. In these cases, additional derivations were represented as dependency links and are not being currently serialized to JSON.\nThe cardinalities in derivation link were represented in UML notes.\nThere is a collection of generalizations of relators into a single category near a {disjoint} constraint. Given the context, the generalizations were interpreted as part of the same set, and the category's \"restrictedTo\" was set to \"relator\".\n";
+    skos:editorialNote """The ontology was developed in the context of a master thesis which isn't yet published.
+The ontology contains multiples derivations of the same class, which cannot be represented in Visual Paradigm. In these cases, additional derivations were represented as dependency links and are not being currently serialized to JSON.
+The cardinalities in derivation link were represented in UML notes.
+There is a collection of generalizations of relators into a single category near a {disjoint} constraint. Given the context, the generalizations were interpreted as part of the same set, and the category's "restrictedTo" was set to "relator".
+""";
     dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:contributor <https://dblp.org/pid/284/5427>;
     dcat:keyword "value networks"@en;
     mod:designedForTask ocmv:LanguageEngineering;
     ocmv:context ocmv:Research;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/aires2022valuenetworks-geo"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/aires2022valuenetworks-geo"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:34:24.406334322Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:34:24.406334322Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/3886f70e-5a91-411d-a50e-370eb4f93c5a> dcat:distribution <https://w3id.org/ontouml-models/distribution/3109bec0-7e3c-4773-9cb2-7d982b38f11e/>, <https://w3id.org/ontouml-models/distribution/b49051c3-8f8a-468b-9802-2131a4d9ada9/>, <https://w3id.org/ontouml-models/distribution/18584c3c-f9c9-4548-8d63-2a4e1bccd7b9/>, <https://w3id.org/ontouml-models/distribution/81c4321a-1e4e-483c-926b-c671bffdefcb>, <https://w3id.org/ontouml-models/distribution/8a296356-6da0-4e20-819a-25634676e462>, <https://w3id.org/ontouml-models/distribution/9d0309ef-011c-411f-a990-517d17404b42>, <https://w3id.org/ontouml-models/distribution/71b2894f-8e29-476a-b11f-6d401db22f76>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/3886f70e-5a91-411d-a50e-370eb4f93c5a> dcat:distribution <https://w3id.org/ontouml-models/distribution/3109bec0-7e3c-4773-9cb2-7d982b38f11e/>,
+                      <https://w3id.org/ontouml-models/distribution/b49051c3-8f8a-468b-9802-2131a4d9ada9/>,
+                      <https://w3id.org/ontouml-models/distribution/18584c3c-f9c9-4548-8d63-2a4e1bccd7b9/>,
+                      <https://w3id.org/ontouml-models/distribution/81c4321a-1e4e-483c-926b-c671bffdefcb>,
+                      <https://w3id.org/ontouml-models/distribution/8a296356-6da0-4e20-819a-25634676e462>,
+                      <https://w3id.org/ontouml-models/distribution/9d0309ef-011c-411f-a990-517d17404b42>,
+                      <https://w3id.org/ontouml-models/distribution/71b2894f-8e29-476a-b11f-6d401db22f76> .

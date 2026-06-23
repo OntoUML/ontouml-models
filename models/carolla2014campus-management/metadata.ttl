@@ -1,32 +1,39 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/e58213c9-beec-47f7-ac55-b5530bad3930/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Campus Management System Reference Data Model";
     dct:issued "2014"^^xsd:gYear;
     dct:modified "2014"^^xsd:gYear;
     dcat:theme lcc:L;
-    skos:editorialNote "A derivation relation could not have its cardinalities properly represented, so a note element was used.\nThe original diagram does not present all stereotypes explained in the text.\n";
+    skos:editorialNote """A derivation relation could not have its cardinalities properly represented, so a note element was used.
+The original diagram does not present all stereotypes explained in the text.
+""";
     dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:contributor <https://dblp.org/pid/83/4571>;
-    dcat:keyword "education"@en, "university"@en;
+    dcat:keyword "education"@en,
+                 "university"@en;
+    dct:source <https://core.ac.uk/display/211832003>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://core.ac.uk/display/211832003>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/carolla2014campus-management"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/carolla2014campus-management"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:43:48.856037859Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:43:48.856037859Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/e58213c9-beec-47f7-ac55-b5530bad3930> dcat:distribution <https://w3id.org/ontouml-models/distribution/ef15add8-be4c-413a-8927-beb28f0371ec/>, <https://w3id.org/ontouml-models/distribution/82cd6931-d4d4-43a8-b06f-709890f7c8a1/>, <https://w3id.org/ontouml-models/distribution/63ae8809-3ac9-4cfe-9cee-7f03c99fc433/>, <https://w3id.org/ontouml-models/distribution/f9e9075c-adff-4a53-bc18-2266715ec689>, <https://w3id.org/ontouml-models/distribution/1b78a165-6b20-42a9-b4d7-9ab1d291620d>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/e58213c9-beec-47f7-ac55-b5530bad3930> dcat:distribution <https://w3id.org/ontouml-models/distribution/ef15add8-be4c-413a-8927-beb28f0371ec/>,
+                      <https://w3id.org/ontouml-models/distribution/82cd6931-d4d4-43a8-b06f-709890f7c8a1/>,
+                      <https://w3id.org/ontouml-models/distribution/63ae8809-3ac9-4cfe-9cee-7f03c99fc433/>,
+                      <https://w3id.org/ontouml-models/distribution/f9e9075c-adff-4a53-bc18-2266715ec689>,
+                      <https://w3id.org/ontouml-models/distribution/1b78a165-6b20-42a9-b4d7-9ab1d291620d> .

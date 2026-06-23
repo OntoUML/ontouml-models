@@ -1,32 +1,40 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/54af0ca8-e341-4457-b0dc-2594425a6489/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Public Administration Ontology Model";
     dct:issued "2015"^^xsd:gYear;
     dct:modified "2021"^^xsd:gYear;
     dcat:theme lcc:J;
-    skos:editorialNote "A fragment of the PA ontology model.\nThe author makes use of a «viewpoint» stereotype, which an extension of OntoUML proposed in the following work: https://doi.org/10.1007/978-1-4614-7540-8_34\n";
+    skos:editorialNote """A fragment of the PA ontology model.
+The author makes use of a «viewpoint» stereotype, which an extension of OntoUML proposed in the following work: https://doi.org/10.1007/978-1-4614-7540-8_34
+""";
     dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:contributor <https://dblp.org/pid/08/5518>;
-    dcat:keyword "e-government"@en, "public administration"@en;
+    dcat:keyword "e-government"@en,
+                 "public administration"@en;
+    dct:source <https://doi.org/10.1007/978-3-030-49640-1_6>,
+               <https://doi.org/10.1007/978-3-319-21915-8_3>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1007/978-3-030-49640-1_6>, <https://doi.org/10.1007/978-3-319-21915-8_3>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/repa2021public-administration"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/repa2021public-administration"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:11:48.05622345Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:11:48.05622345Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/54af0ca8-e341-4457-b0dc-2594425a6489> dcat:distribution <https://w3id.org/ontouml-models/distribution/44c92bf9-fa31-4f0d-ab28-a476b9c45e2a/>, <https://w3id.org/ontouml-models/distribution/e6ccc1da-6edf-43a9-9dc1-5353b40016cc/>, <https://w3id.org/ontouml-models/distribution/50f30200-a708-430f-b0d6-4910b513eb64/>, <https://w3id.org/ontouml-models/distribution/a964add5-9dec-4d83-b160-c6433f730292>, <https://w3id.org/ontouml-models/distribution/c3388ee5-20ac-450a-9487-e7f505bb991f>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/54af0ca8-e341-4457-b0dc-2594425a6489> dcat:distribution <https://w3id.org/ontouml-models/distribution/44c92bf9-fa31-4f0d-ab28-a476b9c45e2a/>,
+                      <https://w3id.org/ontouml-models/distribution/e6ccc1da-6edf-43a9-9dc1-5353b40016cc/>,
+                      <https://w3id.org/ontouml-models/distribution/50f30200-a708-430f-b0d6-4910b513eb64/>,
+                      <https://w3id.org/ontouml-models/distribution/a964add5-9dec-4d83-b160-c6433f730292>,
+                      <https://w3id.org/ontouml-models/distribution/c3388ee5-20ac-450a-9487-e7f505bb991f> .

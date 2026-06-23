@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/4768da76-c638-4fb1-b0c8-5a4f98872ef4/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -20,14 +19,24 @@
     skos:editorialNote "This is an interesting application of OntoUML which is essentially used to drive the development of a metamodel for automated modeling appproach. Some diagrams show the application of the ontology's concepts as a UML-based language using stereotypes.";
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/23/7677>, <https://dblp.org/pid/p/RosangelaPenteado>;
-    dcat:keyword "aspect-oriented requirements engineering"@en, "requirements engineering"@en, "software engineering"@en, "concerns"@en, "cross-cutting concerns"@en;
+    dct:contributor <https://dblp.org/pid/23/7677>,
+                    <https://dblp.org/pid/p/RosangelaPenteado>;
+    dcat:keyword "aspect-oriented requirements engineering"@en,
+                 "requirements engineering"@en,
+                 "software engineering"@en,
+                 "concerns"@en,
+                 "cross-cutting concerns"@en;
+    dct:source <https://doi.org/10.1186/s13173-017-0067-6>;
     mod:designedForTask ocmv:SoftwareEngineering;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1186/s13173-017-0067-6>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/junior2018o4c"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/junior2018o4c"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:55:53.501867523Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:55:53.501867523Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/4768da76-c638-4fb1-b0c8-5a4f98872ef4> dcat:distribution <https://w3id.org/ontouml-models/distribution/fde1054c-f762-4fe4-8f67-47d286d11b5b/>, <https://w3id.org/ontouml-models/distribution/9cec5304-f105-4a8e-a18a-cf340e8ad533/>, <https://w3id.org/ontouml-models/distribution/7ef8bf76-0173-468f-bbca-d178786d5d99/>, <https://w3id.org/ontouml-models/distribution/06ba2a4e-5ee2-47bf-991f-1d6b6507935b>, <https://w3id.org/ontouml-models/distribution/7b4e9a81-35a7-490b-ad2d-45c5d083221e>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/4768da76-c638-4fb1-b0c8-5a4f98872ef4> dcat:distribution <https://w3id.org/ontouml-models/distribution/fde1054c-f762-4fe4-8f67-47d286d11b5b/>,
+                      <https://w3id.org/ontouml-models/distribution/9cec5304-f105-4a8e-a18a-cf340e8ad533/>,
+                      <https://w3id.org/ontouml-models/distribution/7ef8bf76-0173-468f-bbca-d178786d5d99/>,
+                      <https://w3id.org/ontouml-models/distribution/06ba2a4e-5ee2-47bf-991f-1d6b6507935b>,
+                      <https://w3id.org/ontouml-models/distribution/7b4e9a81-35a7-490b-ad2d-45c5d083221e> .

@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/db8cf905-98d1-4ba5-acff-587d4fc91890/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -21,12 +20,23 @@
     dct:license <https://creativecommons.org/licenses/by/4.0>;
     dct:contributor <https://a-komaromi.medium.com>;
     dcat:keyword "philosophy"@en;
+    dct:source <https://philosophy-models.blog/2019/01/19/some-aspects-of-platos-philosophy-presented-in-owl-bfo-model/>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://philosophy-models.blog/2019/01/19/some-aspects-of-platos-philosophy-presented-in-owl-bfo-model/>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/plato-ontology2019"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/plato-ontology2019"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:08:59.193512262Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:08:59.193512262Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/db8cf905-98d1-4ba5-acff-587d4fc91890> dcat:distribution <https://w3id.org/ontouml-models/distribution/9918a840-5572-4a1e-b8fb-d6ca7a1bf784/>, <https://w3id.org/ontouml-models/distribution/cf902cc0-a64f-4ce4-af25-2d8ff263e1ff/>, <https://w3id.org/ontouml-models/distribution/07f5324b-adb1-48a9-9e5d-b8c20305b260/>, <https://w3id.org/ontouml-models/distribution/7d918b35-ee77-4f32-be17-4cc6bd7716d2>, <https://w3id.org/ontouml-models/distribution/a7c607d1-541c-408c-a888-5b2ebec71303>, <https://w3id.org/ontouml-models/distribution/4a481f2b-88dd-47a1-a85f-b1f09aabfa8c>, <https://w3id.org/ontouml-models/distribution/1775e670-f2ca-4d72-a086-f8e7ffc40cc3>, <https://w3id.org/ontouml-models/distribution/2478ce4d-473c-484b-b391-f0a014fcec45>, <https://w3id.org/ontouml-models/distribution/5b7c71ec-1493-440f-b41e-65fed6a0aacd>, <https://w3id.org/ontouml-models/distribution/333214b2-910b-4aaa-89e1-c34d037292c6>, <https://w3id.org/ontouml-models/distribution/eef5b48e-3ef3-4b69-a468-917492b83fc5>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/db8cf905-98d1-4ba5-acff-587d4fc91890> dcat:distribution <https://w3id.org/ontouml-models/distribution/9918a840-5572-4a1e-b8fb-d6ca7a1bf784/>,
+                      <https://w3id.org/ontouml-models/distribution/cf902cc0-a64f-4ce4-af25-2d8ff263e1ff/>,
+                      <https://w3id.org/ontouml-models/distribution/07f5324b-adb1-48a9-9e5d-b8c20305b260/>,
+                      <https://w3id.org/ontouml-models/distribution/7d918b35-ee77-4f32-be17-4cc6bd7716d2>,
+                      <https://w3id.org/ontouml-models/distribution/a7c607d1-541c-408c-a888-5b2ebec71303>,
+                      <https://w3id.org/ontouml-models/distribution/4a481f2b-88dd-47a1-a85f-b1f09aabfa8c>,
+                      <https://w3id.org/ontouml-models/distribution/1775e670-f2ca-4d72-a086-f8e7ffc40cc3>,
+                      <https://w3id.org/ontouml-models/distribution/2478ce4d-473c-484b-b391-f0a014fcec45>,
+                      <https://w3id.org/ontouml-models/distribution/5b7c71ec-1493-440f-b41e-65fed6a0aacd>,
+                      <https://w3id.org/ontouml-models/distribution/333214b2-910b-4aaa-89e1-c34d037292c6>,
+                      <https://w3id.org/ontouml-models/distribution/eef5b48e-3ef3-4b69-a468-917492b83fc5> .

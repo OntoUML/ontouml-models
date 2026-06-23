@@ -1,32 +1,44 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/e3e0f697-53e8-45dc-8d32-bf282b5434cb/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Decision Making Ontology Extended with Intuitive Decision Making";
     dct:issued "2021"^^xsd:gYear;
     dct:modified "2021"^^xsd:gYear;
     dcat:theme lcc:H;
-    skos:editorialNote "The Visual Paradigm file contains several notes in natural language but they do not represent actual constraints. Some of this information is in Portuguese.\nThe ontology contains ternary relations that are ignored by the current serialization.\n";
+    skos:editorialNote """The Visual Paradigm file contains several notes in natural language but they do not represent actual constraints. Some of this information is in Portuguese.
+The ontology contains ternary relations that are ignored by the current serialization.
+""";
     dct:language "en";
-    dct:contributor <https://dblp.org/pid/30/11293>, <https://dblp.org/pid/78/4279>, <https://dblp.org/pid/b/FAraujoBaiao>, <https://dblp.org/pid/75/5043>;
-    dcat:keyword "decision making"@en, "intuitive decision making"@en, "behavioral economics"@en, "bias"@en;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/30/11293>,
+                    <https://dblp.org/pid/78/4279>,
+                    <https://dblp.org/pid/b/FAraujoBaiao>,
+                    <https://dblp.org/pid/75/5043>;
+    dcat:keyword "decision making"@en,
+                 "intuitive decision making"@en,
+                 "behavioral economics"@en,
+                 "bias"@en;
+    dct:source <https://dblp.org/rec/conf/ontobras/RamosCBG21>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://dblp.org/rec/conf/ontobras/RamosCBG21>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Core;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/ramos2021bias"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/ramos2021bias"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:11:19.922357852Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:11:19.922357852Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/e3e0f697-53e8-45dc-8d32-bf282b5434cb> dcat:distribution <https://w3id.org/ontouml-models/distribution/d17cb65c-4e65-4f05-9f99-87e6bc2339c6/>, <https://w3id.org/ontouml-models/distribution/7e275e7a-0431-473f-8b67-ba5f2d2f3cc1/>, <https://w3id.org/ontouml-models/distribution/19bfdac0-b684-4932-bc30-c636dba1361d/>, <https://w3id.org/ontouml-models/distribution/f7f8aee3-3360-42d3-8498-24b1916bf761>, <https://w3id.org/ontouml-models/distribution/93d3202d-2430-4d7d-935f-636eee74d614>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/e3e0f697-53e8-45dc-8d32-bf282b5434cb> dcat:distribution <https://w3id.org/ontouml-models/distribution/d17cb65c-4e65-4f05-9f99-87e6bc2339c6/>,
+                      <https://w3id.org/ontouml-models/distribution/7e275e7a-0431-473f-8b67-ba5f2d2f3cc1/>,
+                      <https://w3id.org/ontouml-models/distribution/19bfdac0-b684-4932-bc30-c636dba1361d/>,
+                      <https://w3id.org/ontouml-models/distribution/f7f8aee3-3360-42d3-8498-24b1916bf761>,
+                      <https://w3id.org/ontouml-models/distribution/93d3202d-2430-4d7d-935f-636eee74d614> .

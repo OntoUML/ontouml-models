@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/407f7c94-9ebb-44f1-adef-47cc0c22d89d/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -18,14 +17,26 @@
     skos:editorialNote "Created from vpp file sent by one of the authors. The activity diagram and the COVER diagram were deleted from the vpp project. The model sanitizer was used for correcting the stereotypes. As requested by the authors, a type was corrected in one of the diagrams (\"Nonmaleficence\" was with written with s instead of c).";
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/75/5043>, <https://dblp.org/pid/81/4277>, <https://dblp.org/pid/11/78>, <https://dblp.org/pid/m/JohnMylopoulos>;
-    dcat:keyword "requirements"@en, "ethics"@en, "software engineering"@en;
+    dct:contributor <https://dblp.org/pid/75/5043>,
+                    <https://dblp.org/pid/81/4277>,
+                    <https://dblp.org/pid/11/78>,
+                    <https://dblp.org/pid/m/JohnMylopoulos>;
+    dcat:keyword "requirements"@en,
+                 "ethics"@en,
+                 "software engineering"@en;
+    dct:source <https://doi.org/10.1007/978-3-031-07475-2_15>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1007/978-3-031-07475-2_15>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/amaral2022ethical-requirements"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/amaral2022ethical-requirements"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:36:19.551858786Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:36:19.551858786Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/407f7c94-9ebb-44f1-adef-47cc0c22d89d> dcat:distribution <https://w3id.org/ontouml-models/distribution/b92781f6-ac50-40ef-b15b-5f901f20bac8/>, <https://w3id.org/ontouml-models/distribution/76593568-c576-4098-b845-c2335fa3e6b3/>, <https://w3id.org/ontouml-models/distribution/327eb447-9f42-4d2b-ae76-0255ea71a42a/>, <https://w3id.org/ontouml-models/distribution/dd5cd5a3-ec14-45a5-857a-544088f329cd>, <https://w3id.org/ontouml-models/distribution/e1f480b6-4ca6-4ec3-af33-91abf439ac0f>, <https://w3id.org/ontouml-models/distribution/165983b9-92a4-4257-b803-46864ea1fcab>, <https://w3id.org/ontouml-models/distribution/9ee6a4cb-487a-41e1-a925-c84669a02b2a>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/407f7c94-9ebb-44f1-adef-47cc0c22d89d> dcat:distribution <https://w3id.org/ontouml-models/distribution/b92781f6-ac50-40ef-b15b-5f901f20bac8/>,
+                      <https://w3id.org/ontouml-models/distribution/76593568-c576-4098-b845-c2335fa3e6b3/>,
+                      <https://w3id.org/ontouml-models/distribution/327eb447-9f42-4d2b-ae76-0255ea71a42a/>,
+                      <https://w3id.org/ontouml-models/distribution/dd5cd5a3-ec14-45a5-857a-544088f329cd>,
+                      <https://w3id.org/ontouml-models/distribution/e1f480b6-4ca6-4ec3-af33-91abf439ac0f>,
+                      <https://w3id.org/ontouml-models/distribution/165983b9-92a4-4257-b803-46864ea1fcab>,
+                      <https://w3id.org/ontouml-models/distribution/9ee6a4cb-487a-41e1-a925-c84669a02b2a> .

@@ -1,32 +1,38 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/27838506-29aa-4445-a1fe-73e710c9c186/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Core Value Ontology";
     dct:issued "2016"^^xsd:gYear;
     dct:modified "2016"^^xsd:gYear;
     dcat:theme lcc:H;
     skos:editorialNote "The paper first presents the Core Value Ontology (Fig. 9) and then presents an instantiation of this ontology for the healthcare domain (Fig. 10). Both diagrams were reproduced.";
     dct:language "en";
-    dct:contributor <https://dblp.org/pid/95/6356>, <https://dblp.org/pid/131/1200>, <https://dblp.org/pid/11/78>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/95/6356>,
+                    <https://dblp.org/pid/131/1200>,
+                    <https://dblp.org/pid/11/78>;
     dcat:keyword "value"@en;
+    dct:source <https://doi.org/10.1007/978-3-319-47717-6_16>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1007/978-3-319-47717-6_16>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Core;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/gailly2016value"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/gailly2016value"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:51:37.704953847Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:51:37.704953847Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/27838506-29aa-4445-a1fe-73e710c9c186> dcat:distribution <https://w3id.org/ontouml-models/distribution/9535f276-2f73-4268-893e-5778df89b8ce/>, <https://w3id.org/ontouml-models/distribution/b63c3030-9de1-4272-bcb6-05ca764001db/>, <https://w3id.org/ontouml-models/distribution/a3e752a4-6990-4d4d-8730-b19a92441fbe/>, <https://w3id.org/ontouml-models/distribution/b4dcfd16-d911-47a5-9922-d2896c943176>, <https://w3id.org/ontouml-models/distribution/e97baa9a-9831-404b-8b43-982b78aae293>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/27838506-29aa-4445-a1fe-73e710c9c186> dcat:distribution <https://w3id.org/ontouml-models/distribution/9535f276-2f73-4268-893e-5778df89b8ce/>,
+                      <https://w3id.org/ontouml-models/distribution/b63c3030-9de1-4272-bcb6-05ca764001db/>,
+                      <https://w3id.org/ontouml-models/distribution/a3e752a4-6990-4d4d-8730-b19a92441fbe/>,
+                      <https://w3id.org/ontouml-models/distribution/b4dcfd16-d911-47a5-9922-d2896c943176>,
+                      <https://w3id.org/ontouml-models/distribution/e97baa9a-9831-404b-8b43-982b78aae293> .
