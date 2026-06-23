@@ -1,37 +1,46 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Legal Enforcement Meta-Model";
     dct:issued "2024"^^xsd:gYear;
     dcat:theme lcc:K;
     skos:editorialNote "This meta-model is originally composed of three distinct project files. To be included into the catalog, these projects were merged into a single one. The authors state that the projects include both slight adaptations of previous modelling efforts by other authors, and their own contributions representing how supervisory authorities and the court system enforces legislation.";
     dct:language "en-gb";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://orcid.org/0000-0001-7194-9617>, <https://orcid.org/0000-0001-7806-749X>, <https://orcid.org/0000-0001-9044-5836>, <https://orcid.org/0000-0002-7416-8725>, <https://orcid.org/0000-0003-3290-2597>;
+    dct:contributor <https://orcid.org/0000-0001-7194-9617>,
+                    <https://orcid.org/0000-0001-7806-749X>,
+                    <https://orcid.org/0000-0001-9044-5836>,
+                    <https://orcid.org/0000-0002-7416-8725>,
+                    <https://orcid.org/0000-0003-3290-2597>;
+    dcat:keyword "organisational rules"@en,
+                 "legislation"@en,
+                 "law"@en,
+                 "legal enforcement"@en;
+    dct:source <https://doi.org/10.1007/978-3-031-75599-6_20>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1007/978-3-031-75599-6_20>.
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Legal Enforcement Meta-Model\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2024legal-enforcement/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Legal Enforcement Meta-Model\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2024legal-enforcement/ontology.json>.
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/vpp> a dcat:Distribution;
-    dct:title "Visual Paradigm distribution of \"Legal Enforcement Meta-Model\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2024legal-enforcement/ontology.vpp>.
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Application;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/lindeberg2024legal-enforcement"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-23T12:00:00Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/> dcat:distribution <https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/ttl>,
+                      <https://www.iana.org/assignments/media-types/text/turtle>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2024legal-enforcement/ontology.ttl>,
+                      <https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/>,
+                      <https://www.iana.org/assignments/media-types/application/json>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2024legal-enforcement/ontology.json>,
+                      <https://w3id.org/ontouml-models/model/lindeberg2024legal-enforcement/distribution/vpp>,
+                      <https://www.visual-paradigm.com/vpp>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/lindeberg2024legal-enforcement/ontology.vpp> .

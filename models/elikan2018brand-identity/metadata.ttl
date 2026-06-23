@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/ebdd4665-72c7-4c33-aa4a-d31b5c088981/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -16,17 +15,29 @@
     dct:issued "2018"^^xsd:gYear;
     dct:modified "2019"^^xsd:gYear;
     dcat:theme lcc:H;
-    skos:editorialNote "The original ontology's diagram contains multiple derivations of the same relator. The association class element of UML cannot be used for this and, as such, one of the derivations had to be represented through a dependency link.\nPackages were inferred from the text rather than the diagram in the source work.\n";
+    skos:editorialNote """The original ontology's diagram contains multiple derivations of the same relator. The association class element of UML cannot be used for this and, as such, one of the derivations had to be represented through a dependency link.
+Packages were inferred from the text rather than the diagram in the source work.
+""";
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/220/4496>, <https://dblp.org/pid/10/2240>;
-    dcat:keyword "business"@en, "branding"@en, "marketing"@en, "startup"@en;
+    dct:contributor <https://dblp.org/pid/220/4496>,
+                    <https://dblp.org/pid/10/2240>;
+    dcat:keyword "business"@en,
+                 "branding"@en,
+                 "marketing"@en,
+                 "startup"@en;
+    dct:source <https://dblp.org/rec/conf/vmbo/ElikanP18>,
+               <https://serval.unil.ch/en/notice/serval:BIB_33C796025F84>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://dblp.org/rec/conf/vmbo/ElikanP18>, <https://serval.unil.ch/en/notice/serval:BIB_33C796025F84>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/elikan2018brand-identity"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/elikan2018brand-identity"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:48:33.608954495Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:48:33.608954495Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/ebdd4665-72c7-4c33-aa4a-d31b5c088981> dcat:distribution <https://w3id.org/ontouml-models/distribution/6c606e4b-d92c-4a95-a7a5-9d9cce5eba55/>, <https://w3id.org/ontouml-models/distribution/12602c70-0749-4fee-ac9d-5a649665225f/>, <https://w3id.org/ontouml-models/distribution/0e480ca5-cbed-47d1-968b-8dfb10ff9a26/>, <https://w3id.org/ontouml-models/distribution/bfe8cfed-fd07-4226-9d06-03a38303776d>, <https://w3id.org/ontouml-models/distribution/291cee48-55c1-4f0f-8249-d1406633218c>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/ebdd4665-72c7-4c33-aa4a-d31b5c088981> dcat:distribution <https://w3id.org/ontouml-models/distribution/6c606e4b-d92c-4a95-a7a5-9d9cce5eba55/>,
+                      <https://w3id.org/ontouml-models/distribution/12602c70-0749-4fee-ac9d-5a649665225f/>,
+                      <https://w3id.org/ontouml-models/distribution/0e480ca5-cbed-47d1-968b-8dfb10ff9a26/>,
+                      <https://w3id.org/ontouml-models/distribution/bfe8cfed-fd07-4226-9d06-03a38303776d>,
+                      <https://w3id.org/ontouml-models/distribution/291cee48-55c1-4f0f-8249-d1406633218c> .

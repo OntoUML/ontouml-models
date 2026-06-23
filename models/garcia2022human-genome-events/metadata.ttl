@@ -1,32 +1,43 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/765516ef-53fe-4933-a0e5-0a38079d25c3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Ontologically enriched version of Conceptual Schema of the Human Genome";
     mod:acronym "CSHG";
     dct:issued "2022"^^xsd:gYear;
     dcat:theme lcc:Q;
     skos:editorialNote "The original diagram in vpp format was sent by the author. The only necessary action was the substitution of the generic categories by the same ones from the vp ontouml plugin. Metadata validated by the model author.";
     dct:language "en";
-    dct:contributor <https://dblp.org/pid/201/2998.html>, <https://dblp.org/pid/11/78>, <https://dblp.org/pid/p/OscarPastor>, <https://dblp.org/pid/41/1781>, <https://dblp.org/pid/25/929-2>;
-    dcat:keyword "human genome"@en, "biological event"@en, "biological pathways"@en;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/201/2998.html>,
+                    <https://dblp.org/pid/11/78>,
+                    <https://dblp.org/pid/p/OscarPastor>,
+                    <https://dblp.org/pid/41/1781>,
+                    <https://dblp.org/pid/25/929-2>;
+    dcat:keyword "human genome"@en,
+                 "biological event"@en,
+                 "biological pathways"@en;
+    dct:source <https://doi.org/10.1007/978-3-031-07481-3_4>,
+               <https://doi.org/10.1109/access.2020.3034793>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1007/978-3-031-07481-3_4>, <https://doi.org/10.1109/access.2020.3034793>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/garcia2022human-genome-events"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/garcia2022human-genome-events"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:51:47.230441279Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:51:47.230441279Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/765516ef-53fe-4933-a0e5-0a38079d25c3> dcat:distribution <https://w3id.org/ontouml-models/distribution/6d9762e4-6f5e-413d-aa9a-aaaeebc5f070/>, <https://w3id.org/ontouml-models/distribution/c398450e-3de4-4f5e-8504-86ad9977fd22/>, <https://w3id.org/ontouml-models/distribution/e061842e-e597-49c1-8c55-b80ae19eb3a4/>, <https://w3id.org/ontouml-models/distribution/08eafe8a-3279-43bc-93ca-affd8d2f4a75>, <https://w3id.org/ontouml-models/distribution/35bdbc97-7a8e-4b06-a0db-0e102b867966>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/765516ef-53fe-4933-a0e5-0a38079d25c3> dcat:distribution <https://w3id.org/ontouml-models/distribution/6d9762e4-6f5e-413d-aa9a-aaaeebc5f070/>,
+                      <https://w3id.org/ontouml-models/distribution/c398450e-3de4-4f5e-8504-86ad9977fd22/>,
+                      <https://w3id.org/ontouml-models/distribution/e061842e-e597-49c1-8c55-b80ae19eb3a4/>,
+                      <https://w3id.org/ontouml-models/distribution/08eafe8a-3279-43bc-93ca-affd8d2f4a75>,
+                      <https://w3id.org/ontouml-models/distribution/35bdbc97-7a8e-4b06-a0db-0e102b867966> .

@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/7f3cddbe-6810-45a9-9a7d-08b996705c77/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -16,17 +15,24 @@
     dct:issued "2020"^^xsd:gYear;
     dct:modified "2020"^^xsd:gYear;
     dcat:theme lcc:Q;
-    skos:editorialNote "";
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/278/1718>, <https://dblp.org/pid/117/6100>, <https://dblp.org/pid/43/7740>;
+    dct:contributor <https://dblp.org/pid/278/1718>,
+                    <https://dblp.org/pid/117/6100>,
+                    <https://dblp.org/pid/43/7740>;
     dcat:keyword "weather prediction"@en;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:Interoperability;
-    ocmv:context ocmv:Research;
     dct:source <https://dblp.org/rec/conf/ontobras/NevesBC20>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability;
+    ocmv:context ocmv:Research;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/neves2020nwpontology"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/neves2020nwpontology"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:07:07.247861482Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:07:07.247861482Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/7f3cddbe-6810-45a9-9a7d-08b996705c77> dcat:distribution <https://w3id.org/ontouml-models/distribution/3196e4b2-9bf3-4c27-b5fe-72951bfb0d3f/>, <https://w3id.org/ontouml-models/distribution/7540d5b3-3712-4606-ae9d-8aa0bd2d6b82/>, <https://w3id.org/ontouml-models/distribution/3e955514-56df-457e-94b3-3da2f0517b97/>, <https://w3id.org/ontouml-models/distribution/2b8f8376-3147-407d-a1e4-98cde1592438>, <https://w3id.org/ontouml-models/distribution/8c9c8bd2-3388-4731-a7f3-618f05579c0d>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/7f3cddbe-6810-45a9-9a7d-08b996705c77> dcat:distribution <https://w3id.org/ontouml-models/distribution/3196e4b2-9bf3-4c27-b5fe-72951bfb0d3f/>,
+                      <https://w3id.org/ontouml-models/distribution/7540d5b3-3712-4606-ae9d-8aa0bd2d6b82/>,
+                      <https://w3id.org/ontouml-models/distribution/3e955514-56df-457e-94b3-3da2f0517b97/>,
+                      <https://w3id.org/ontouml-models/distribution/2b8f8376-3147-407d-a1e4-98cde1592438>,
+                      <https://w3id.org/ontouml-models/distribution/8c9c8bd2-3388-4731-a7f3-618f05579c0d> .

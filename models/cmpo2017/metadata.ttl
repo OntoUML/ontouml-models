@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/e9047c5f-2c8c-45cf-90e3-208c9791bba8/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -21,14 +20,27 @@
     dct:language "en";
     dcat:landingPage <https://dev.nemo.inf.ufes.br/seon/CMPO.html>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/63/9777>, <https://dblp.org/pid/37/528>, <https://dblp.org/pid/229/4259>, <https://dblp.org/pid/189/5932>, <https://dblp.org/pid/97/7540>, <https://dblp.org/pid/11/78>;
+    dct:contributor <https://dblp.org/pid/63/9777>,
+                    <https://dblp.org/pid/37/528>,
+                    <https://dblp.org/pid/229/4259>,
+                    <https://dblp.org/pid/189/5932>,
+                    <https://dblp.org/pid/97/7540>,
+                    <https://dblp.org/pid/11/78>;
     dcat:keyword "configuration management"@en;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:Interoperability;
+    dct:source <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/software_engineering_standards_harmonization__an_ontology_based_approach_2017.pdf>,
+               <https://dl.acm.org/doi/pdf/10.1145/2245276.2245344>,
+               <https://doi.org/10.1007/978-3-319-49004-5_34>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability;
     ocmv:context ocmv:Research;
-    dct:source <https://nemo.inf.ufes.br/wp-content/papercite-data/pdf/software_engineering_standards_harmonization__an_ontology_based_approach_2017.pdf>, <https://dl.acm.org/doi/pdf/10.1145/2245276.2245344>, <https://doi.org/10.1007/978-3-319-49004-5_34>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/cmpo2017"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/cmpo2017"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:44:42.359074731Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:44:42.359074731Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/e9047c5f-2c8c-45cf-90e3-208c9791bba8> dcat:distribution <https://w3id.org/ontouml-models/distribution/5df65aff-1413-44ab-bc14-236531846377/>, <https://w3id.org/ontouml-models/distribution/95ad44c2-f9de-4500-a5b7-51130f4ce226/>, <https://w3id.org/ontouml-models/distribution/f58f37ed-5158-4d76-916b-da03e2bb3cd7/>, <https://w3id.org/ontouml-models/distribution/286a887a-eddd-4c48-bf9f-06b43282abf9>, <https://w3id.org/ontouml-models/distribution/46fb95af-530c-470b-b254-098eafa5c205>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/e9047c5f-2c8c-45cf-90e3-208c9791bba8> dcat:distribution <https://w3id.org/ontouml-models/distribution/5df65aff-1413-44ab-bc14-236531846377/>,
+                      <https://w3id.org/ontouml-models/distribution/95ad44c2-f9de-4500-a5b7-51130f4ce226/>,
+                      <https://w3id.org/ontouml-models/distribution/f58f37ed-5158-4d76-916b-da03e2bb3cd7/>,
+                      <https://w3id.org/ontouml-models/distribution/286a887a-eddd-4c48-bf9f-06b43282abf9>,
+                      <https://w3id.org/ontouml-models/distribution/46fb95af-530c-470b-b254-098eafa5c205> .

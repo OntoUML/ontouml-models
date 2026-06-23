@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/c71c375d-a9b6-4a3c-b10b-376357286b51/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -18,14 +17,27 @@
     dcat:theme lcc:H;
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/33/7322>, <https://dblp.org/pid/223/7406>, <https://dblp.org/pid/57/2960>;
-    dcat:keyword "business"@en, "finance"@en;
-    mod:designedForTask ocmv:OntologicalAnalysis, ocmv:Interoperability;
-    ocmv:context ocmv:Research;
+    dct:contributor <https://dblp.org/pid/33/7322>,
+                    <https://dblp.org/pid/223/7406>,
+                    <https://dblp.org/pid/57/2960>;
+    dcat:keyword "business"@en,
+                 "finance"@en;
     dct:source <https://doi.org/10.3233/AO-180198>;
+    mod:designedForTask ocmv:OntologicalAnalysis,
+                        ocmv:Interoperability;
+    ocmv:context ocmv:Research;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/laurier2018rea"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/laurier2018rea"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:56:50.049232045Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:56:50.049232045Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/c71c375d-a9b6-4a3c-b10b-376357286b51> dcat:distribution <https://w3id.org/ontouml-models/distribution/d9996b63-d792-4fa3-aa34-722c1eeecb89/>, <https://w3id.org/ontouml-models/distribution/a5c06e94-d77f-4967-8cae-a742a4c90f88/>, <https://w3id.org/ontouml-models/distribution/e99e1c86-6af5-4e56-9edb-1f6c1f1e81b5/>, <https://w3id.org/ontouml-models/distribution/6cc27304-e120-4b71-9074-b92ba55a6980>, <https://w3id.org/ontouml-models/distribution/c6543d12-20f0-4ff0-91d9-fbe9dd1f4971>, <https://w3id.org/ontouml-models/distribution/4e06461a-15d3-404f-88ce-61c0315999ed>, <https://w3id.org/ontouml-models/distribution/795afd06-0f7b-46d3-beb4-7930f3ac8c74>, <https://w3id.org/ontouml-models/distribution/2618147c-6e1b-4764-b7c0-8bee07dda1d5>, <https://w3id.org/ontouml-models/distribution/010542ad-4d36-441c-95ab-e532ed6e1b76>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/c71c375d-a9b6-4a3c-b10b-376357286b51> dcat:distribution <https://w3id.org/ontouml-models/distribution/d9996b63-d792-4fa3-aa34-722c1eeecb89/>,
+                      <https://w3id.org/ontouml-models/distribution/a5c06e94-d77f-4967-8cae-a742a4c90f88/>,
+                      <https://w3id.org/ontouml-models/distribution/e99e1c86-6af5-4e56-9edb-1f6c1f1e81b5/>,
+                      <https://w3id.org/ontouml-models/distribution/6cc27304-e120-4b71-9074-b92ba55a6980>,
+                      <https://w3id.org/ontouml-models/distribution/c6543d12-20f0-4ff0-91d9-fbe9dd1f4971>,
+                      <https://w3id.org/ontouml-models/distribution/4e06461a-15d3-404f-88ce-61c0315999ed>,
+                      <https://w3id.org/ontouml-models/distribution/795afd06-0f7b-46d3-beb4-7930f3ac8c74>,
+                      <https://w3id.org/ontouml-models/distribution/2618147c-6e1b-4764-b7c0-8bee07dda1d5>,
+                      <https://w3id.org/ontouml-models/distribution/010542ad-4d36-441c-95ab-e532ed6e1b76> .

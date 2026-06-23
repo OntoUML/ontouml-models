@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/3f07650f-fc02-409b-9101-35063fce9692/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -18,14 +17,24 @@
     dcat:theme lcc:H;
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/65/6778>, <https://dblp.org/pid/11/78>, <https://dblp.org/pid/134/4947>;
-    dcat:keyword "REA"@en, "finance"@en, "accounting"@en, "economics"@en;
+    dct:contributor <https://dblp.org/pid/65/6778>,
+                    <https://dblp.org/pid/11/78>,
+                    <https://dblp.org/pid/134/4947>;
+    dcat:keyword "REA"@en,
+                 "finance"@en,
+                 "accounting"@en,
+                 "economics"@en;
+    dct:source <https://dblp.org/rec/conf/vmbo/GuarinoGS18>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://dblp.org/rec/conf/vmbo/GuarinoGS18>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Core;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/guarino2018rea"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/guarino2018rea"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:53:29.102292Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:53:29.102292Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/3f07650f-fc02-409b-9101-35063fce9692> dcat:distribution <https://w3id.org/ontouml-models/distribution/91345ba4-e724-4593-ad3a-cc41d99b77f6/>, <https://w3id.org/ontouml-models/distribution/7ecabe5d-774e-4e36-a87b-8beee85038df/>, <https://w3id.org/ontouml-models/distribution/7dc67587-70b9-4aaf-836e-e236d0b97f46/>, <https://w3id.org/ontouml-models/distribution/d5879ad8-0e05-4490-9906-531eda15e0a1>, <https://w3id.org/ontouml-models/distribution/ee0c7212-381a-444f-8928-e00306e6dcee>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/3f07650f-fc02-409b-9101-35063fce9692> dcat:distribution <https://w3id.org/ontouml-models/distribution/91345ba4-e724-4593-ad3a-cc41d99b77f6/>,
+                      <https://w3id.org/ontouml-models/distribution/7ecabe5d-774e-4e36-a87b-8beee85038df/>,
+                      <https://w3id.org/ontouml-models/distribution/7dc67587-70b9-4aaf-836e-e236d0b97f46/>,
+                      <https://w3id.org/ontouml-models/distribution/d5879ad8-0e05-4490-9906-531eda15e0a1>,
+                      <https://w3id.org/ontouml-models/distribution/ee0c7212-381a-444f-8928-e00306e6dcee> .

@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/09d75270-acbd-4533-b7ed-6c498cf2a3c6/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -19,14 +18,22 @@
     dcat:theme lcc:T;
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/240/8231>, <https://dblp.org/pid/128/8062>, <https://dblp.org/pid/29/3283>;
+    dct:contributor <https://dblp.org/pid/240/8231>,
+                    <https://dblp.org/pid/128/8062>,
+                    <https://dblp.org/pid/29/3283>;
     dcat:keyword "safety critical systems"@en;
+    dct:source <https://doi.org/10.5220/0007932502870297>,
+               <https://doi.org/10.17706/jcp.14.4.257-267>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.5220/0007932502870297>, <https://doi.org/10.17706/jcp.14.4.257-267>;
     ocmv:representationStyle ocmv:UfoStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/debbech2019gosmo"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/debbech2019gosmo"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:44:59.909631301Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:44:59.909631301Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/09d75270-acbd-4533-b7ed-6c498cf2a3c6> dcat:distribution <https://w3id.org/ontouml-models/distribution/4c152305-3a4d-4a9f-b4f0-db4db4886192/>, <https://w3id.org/ontouml-models/distribution/84d37483-1ceb-4325-b96f-deba2aa2c652/>, <https://w3id.org/ontouml-models/distribution/8cd7341f-217c-48c7-a7c6-e7b10100ddce/>, <https://w3id.org/ontouml-models/distribution/22db1cd5-7901-4c14-bf17-415b98cf2e26>, <https://w3id.org/ontouml-models/distribution/0c323f34-bc3c-4599-b553-97f20588c632>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/09d75270-acbd-4533-b7ed-6c498cf2a3c6> dcat:distribution <https://w3id.org/ontouml-models/distribution/4c152305-3a4d-4a9f-b4f0-db4db4886192/>,
+                      <https://w3id.org/ontouml-models/distribution/84d37483-1ceb-4325-b96f-deba2aa2c652/>,
+                      <https://w3id.org/ontouml-models/distribution/8cd7341f-217c-48c7-a7c6-e7b10100ddce/>,
+                      <https://w3id.org/ontouml-models/distribution/22db1cd5-7901-4c14-bf17-415b98cf2e26>,
+                      <https://w3id.org/ontouml-models/distribution/0c323f34-bc3c-4599-b553-97f20588c632> .

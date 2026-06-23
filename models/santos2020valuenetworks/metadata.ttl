@@ -1,31 +1,36 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/87dea242-75d9-4b89-99f3-6f52c0855f3a/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Ontology for Value Networks with Corporate Responsibility";
     dct:issued "2020"^^xsd:gYear;
     dcat:theme lcc:H;
     skos:editorialNote "The author does not explicitly give a name to the ontology. In the original work, she refers to it by \"Ontologia para Modelagem de Redes de Valor com Responsabilidade Corporativa\", which I translated here to \"Ontology for Value Networks with Corporate Responsibility\". The diagram name was given by the author.";
     dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:contributor <https://dblp.org/pid/253/7660>;
-    dcat:keyword "value networks"@en, "corporate responsibility"@en;
+    dcat:keyword "value networks"@en,
+                 "corporate responsibility"@en;
+    dct:source <https://ppgcc.ufersa.edu.br/wp-content/uploads/sites/42/2021/02/DissertaçãoOt%C3%ADliaSantosUERN-UFERSAVDC.pdf>;
     mod:designedForTask ocmv:LanguageEngineering;
     ocmv:context ocmv:Research;
-    dct:source <https://ppgcc.ufersa.edu.br/wp-content/uploads/sites/42/2021/02/DissertaçãoOt%C3%ADliaSantosUERN-UFERSAVDC.pdf>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/santos2020valuenetworks"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/santos2020valuenetworks"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:14:41.999159589Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:14:41.999159589Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/87dea242-75d9-4b89-99f3-6f52c0855f3a> dcat:distribution <https://w3id.org/ontouml-models/distribution/6eb5fef7-837f-49ef-8c8f-8d7a7ccc174f/>, <https://w3id.org/ontouml-models/distribution/e76e2bc1-8044-42e9-a8c7-9734069bff0e/>, <https://w3id.org/ontouml-models/distribution/d3314b04-455e-4410-a412-4570bc6ff0e4/>, <https://w3id.org/ontouml-models/distribution/02ddc4f5-b2ce-45a0-baa1-1234aa078711>, <https://w3id.org/ontouml-models/distribution/417b647f-be23-4c7a-a8c0-25b2fd18e440>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/87dea242-75d9-4b89-99f3-6f52c0855f3a> dcat:distribution <https://w3id.org/ontouml-models/distribution/6eb5fef7-837f-49ef-8c8f-8d7a7ccc174f/>,
+                      <https://w3id.org/ontouml-models/distribution/e76e2bc1-8044-42e9-a8c7-9734069bff0e/>,
+                      <https://w3id.org/ontouml-models/distribution/d3314b04-455e-4410-a412-4570bc6ff0e4/>,
+                      <https://w3id.org/ontouml-models/distribution/02ddc4f5-b2ce-45a0-baa1-1234aa078711>,
+                      <https://w3id.org/ontouml-models/distribution/417b647f-be23-4c7a-a8c0-25b2fd18e440> .

@@ -1,38 +1,49 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/silva2023onto4elev/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Requirements Ontology for Vertical Lifting Platform";
     mod:acronym "Onto4Elev";
     dct:issued "2023"^^xsd:gYear;
     dcat:theme lcc:T;
     dct:language "en";
-    dcat:landingPage <https://github.com/timoteogomes/Nota-o-UML-da-Onto4CAAL>, <https://github.com/timoteogomes/Notacao-UML-da-Onto4Elev>;
+    dcat:landingPage <https://github.com/timoteogomes/Nota-o-UML-da-Onto4CAAL>,
+                     <https://github.com/timoteogomes/Notacao-UML-da-Onto4Elev>;
     dct:license <https://creativecommons.org/licenses/by-nc-nd/3.0/br/>;
-    dct:contributor <https://dblp.org/pid/237/7238>, <https://dblp.org/pid/31/5316>;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:DecisionSupportSystem, ocmv:Interoperability;
+    dct:contributor <https://dblp.org/pid/237/7238>,
+                    <https://dblp.org/pid/31/5316>;
+    dcat:keyword "vertical elevation platforms"@en,
+                 "ambient assisted living"@en,
+                 "assistive technology"@en,
+                 "healthcare services"@en;
+    dct:source <https://repositorio.ufpe.br/handle/123456789/50033>,
+               <https://doi.org/10.1093/comjnl/bxad053>,
+               <http://wer.inf.puc-rio.br/WERpapers/artigos/artigos_WER22/WER_2022_Camera_ready_paper_34.pdf>,
+               <http://www.inf.puc-rio.br/~wer/WERpapers/artigos/artigos_WER21/WER_2021_paper_16.pdf>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:DecisionSupportSystem,
+                        ocmv:Interoperability;
     ocmv:context ocmv:Research;
-    dct:source <https://repositorio.ufpe.br/handle/123456789/50033>, <https://doi.org/10.1093/comjnl/bxad053>, <http://wer.inf.puc-rio.br/WERpapers/artigos/artigos_WER22/WER_2022_Camera_ready_paper_34.pdf>, <http://www.inf.puc-rio.br/~wer/WERpapers/artigos/artigos_WER21/WER_2021_paper_16.pdf>.
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/> dcat:distribution <https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Requirements Ontology for Vertical Lifting Platform\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4elev/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/> dcat:distribution <https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Requirements Ontology for Vertical Lifting Platform\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4elev/ontology.json>.
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/> dcat:distribution <https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Requirements Ontology for Vertical Lifting Platform\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4elev/ontology.vpp>.
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/silva2023onto4elev"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-23T12:00:00Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/silva2023onto4elev/> dcat:distribution <https://w3id.org/ontouml-models/model/silva2023onto4elev/distribution/ttl>,
+                      <https://www.iana.org/assignments/media-types/text/turtle>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4elev/ontology.ttl>,
+                      <https://w3id.org/ontouml-models/model/silva2023onto4elev/>,
+                      <https://www.iana.org/assignments/media-types/application/json>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4elev/ontology.json>,
+                      <https://www.visual-paradigm.com/vpp>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/silva2023onto4elev/ontology.vpp> .

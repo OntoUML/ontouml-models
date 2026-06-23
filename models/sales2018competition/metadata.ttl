@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/664d2c61-a600-4730-848d-83e46f7dec6e/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -17,14 +16,24 @@
     dcat:theme lcc:H;
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/134/4947>, <https://dblp.org/pid/11/78>, <https://dblp.org/pid/65/6778>, <https://dblp.org/pid/m/JohnMylopoulos>;
-    dcat:keyword "competition"@en, "business"@en;
+    dct:contributor <https://dblp.org/pid/134/4947>,
+                    <https://dblp.org/pid/11/78>,
+                    <https://dblp.org/pid/65/6778>,
+                    <https://dblp.org/pid/m/JohnMylopoulos>;
+    dcat:keyword "competition"@en,
+                 "business"@en;
+    dct:source <https://dblp.org/rec/conf/vmbo/SalesGGM18>;
     mod:designedForTask ocmv:ConceptualClarification;
     ocmv:context ocmv:Research;
-    dct:source <https://dblp.org/rec/conf/vmbo/SalesGGM18>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/sales2018competition"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/sales2018competition"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:13:56.116457511Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:13:56.116457511Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/664d2c61-a600-4730-848d-83e46f7dec6e> dcat:distribution <https://w3id.org/ontouml-models/distribution/ce97de16-6275-4aba-9389-c7f91c830dba/>, <https://w3id.org/ontouml-models/distribution/169e7a10-45ea-4375-ac19-362e940f19bb/>, <https://w3id.org/ontouml-models/distribution/106f274f-ba03-4055-a922-e00c6173d16f/>, <https://w3id.org/ontouml-models/distribution/f20db634-0f02-4cf9-a820-57aa7d0b759c>, <https://w3id.org/ontouml-models/distribution/1e7637b7-cf81-4da3-a5ad-b1cc97f04a8f>, <https://w3id.org/ontouml-models/distribution/f21f0dc2-4fa4-4d17-9882-31b1c4a6fd00>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/664d2c61-a600-4730-848d-83e46f7dec6e> dcat:distribution <https://w3id.org/ontouml-models/distribution/ce97de16-6275-4aba-9389-c7f91c830dba/>,
+                      <https://w3id.org/ontouml-models/distribution/169e7a10-45ea-4375-ac19-362e940f19bb/>,
+                      <https://w3id.org/ontouml-models/distribution/106f274f-ba03-4055-a922-e00c6173d16f/>,
+                      <https://w3id.org/ontouml-models/distribution/f20db634-0f02-4cf9-a820-57aa7d0b759c>,
+                      <https://w3id.org/ontouml-models/distribution/1e7637b7-cf81-4da3-a5ad-b1cc97f04a8f>,
+                      <https://w3id.org/ontouml-models/distribution/f21f0dc2-4fa4-4d17-9882-31b1c4a6fd00> .

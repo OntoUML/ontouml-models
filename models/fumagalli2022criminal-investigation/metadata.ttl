@@ -1,14 +1,13 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/8353ae58-e924-4b13-8cbe-7078e59830ac/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
@@ -18,14 +17,22 @@
     skos:editorialNote "The original diagram in vpp format was sent by the author. The diagram name was changed to correspond to the paper's one.";
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/161/4517>, <https://dblp.org/pid/134/4947>, <https://dblp.org/pid/b/FAraujoBaiao>, <https://dblp.org/pid/11/78>;
-    dcat:keyword "crime"@en, "investigation"@en;
+    dct:contributor <https://dblp.org/pid/161/4517>,
+                    <https://dblp.org/pid/134/4947>,
+                    <https://dblp.org/pid/b/FAraujoBaiao>,
+                    <https://dblp.org/pid/11/78>;
+    dcat:keyword "crime"@en,
+                 "investigation"@en;
+    dct:source <https://doi.org/10.1016/j.datak.2022.102040>;
     mod:designedForTask ocmv:Example;
     ocmv:context ocmv:Research;
-    dct:source <https://doi.org/10.1016/j.datak.2022.102040>;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Domain;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/fumagalli2022criminal-investigation"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/fumagalli2022criminal-investigation"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T17:51:20.341343389Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T17:51:20.341343389Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/8353ae58-e924-4b13-8cbe-7078e59830ac> dcat:distribution <https://w3id.org/ontouml-models/distribution/74bb1cb5-3c79-4b91-8c51-2907287519fd/>, <https://w3id.org/ontouml-models/distribution/2fe28a11-d2f0-4cac-bdef-b71788369fd9/>, <https://w3id.org/ontouml-models/distribution/b8687fb1-d444-43f1-a4e8-37e894f98a5a/>, <https://w3id.org/ontouml-models/distribution/6f1246f7-6091-4130-b872-06be5a749f72>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/8353ae58-e924-4b13-8cbe-7078e59830ac> dcat:distribution <https://w3id.org/ontouml-models/distribution/74bb1cb5-3c79-4b91-8c51-2907287519fd/>,
+                      <https://w3id.org/ontouml-models/distribution/2fe28a11-d2f0-4cac-bdef-b71788369fd9/>,
+                      <https://w3id.org/ontouml-models/distribution/b8687fb1-d444-43f1-a4e8-37e894f98a5a/>,
+                      <https://w3id.org/ontouml-models/distribution/6f1246f7-6091-4130-b872-06be5a749f72> .

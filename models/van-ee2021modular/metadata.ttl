@@ -1,31 +1,59 @@
-@prefix fdpo: <https://w3id.org/fdp/fdp-o#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/ontouml-models/model/c6ec6f27-cffa-4a38-9927-8e6b921e996a/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
     dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:title "Modular Construction Ontology";
     dct:issued "2021"^^xsd:gYear;
     dct:modified "2021"^^xsd:gYear;
     dcat:theme lcc:T;
-    skos:editorialNote "From the author:\nThe ontology is designed for a Dutch company in the PDEng trajectory of Tim van Ee (t.vanee@utwente.nl). As it is (currently) developed for the specific context of the company, its generalizability for the industry might be limited.\nThe core of the ontology is based on the Building Product Ontology (BPO), the Ontology for Managing Ontologies (OMG), and several others of which the most prominent are indicated below.\nBPO - <https://w3id.org/bpo#>\nOmg - <https://w3id.org/omg#>\nFog - <https://w3id.org/fog#>\nQudt - <http://qudt.org/schema/qudt#>\nSchema - <http://schema.org#>\nSeas - <https://w3id.org/seas#>\nThe ontology is still under development, any comments, suggestions or feedback is welcome!\n---------\nFrom the reviewers:\nThe classes that had clear RDF namespaces in their names were moved into their associated packages. The same couldn't be done for associations, attributes, and instances.\nClasses whose label joined multiple RDF elements were interpreted as \"owl:sameAs\" declarations. As such, each of the classes were reproduced into their namespaces/packages and the \"owl:sameAs\" declaration was translated as generalizations of each of them into a new class. No stereotype has been given to the introduced classes to avoid too many changes on the author's original intended model.\n";
-    dct:language "en, nl";
+    skos:editorialNote """From the author:
+The ontology is designed for a Dutch company in the PDEng trajectory of Tim van Ee (t.vanee@utwente.nl). As it is (currently) developed for the specific context of the company, its generalizability for the industry might be limited.
+The core of the ontology is based on the Building Product Ontology (BPO), the Ontology for Managing Ontologies (OMG), and several others of which the most prominent are indicated below.
+BPO - <https://w3id.org/bpo#>
+Omg - <https://w3id.org/omg#>
+Fog - <https://w3id.org/fog#>
+Qudt - <http://qudt.org/schema/qudt#>
+Schema - <http://schema.org#>
+Seas - <https://w3id.org/seas#>
+The ontology is still under development, any comments, suggestions or feedback is welcome!
+---------
+From the reviewers:
+The classes that had clear RDF namespaces in their names were moved into their associated packages. The same couldn't be done for associations, attributes, and instances.
+Classes whose label joined multiple RDF elements were interpreted as "owl:sameAs" declarations. As such, each of the classes were reproduced into their namespaces/packages and the "owl:sameAs" declaration was translated as generalizations of each of them into a new class. No stereotype has been given to the introduced classes to avoid too many changes on the author's original intended model.
+""";
+    dct:language "en",
+                 "nl";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
     dct:contributor <https://www.linkedin.com/in/tim-van-ee-911887136/>;
     dcat:keyword "construction"@en;
-    mod:designedForTask ocmv:Interoperability, ocmv:SoftwareEngineering;
-    ocmv:context ocmv:Research, ocmv:Industry;
+    mod:designedForTask ocmv:Interoperability,
+                        ocmv:SoftwareEngineering;
+    ocmv:context ocmv:Research,
+                 ocmv:Industry;
     ocmv:representationStyle ocmv:OntoumlStyle;
     ocmv:ontologyType ocmv:Application;
-    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/van-ee2021modular"^^xsd:anyURI ;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/van-ee2021modular"^^xsd:anyURI;
     fdpo:metadataIssued "2023-04-14T18:18:59.076803004Z"^^xsd:dateTime;
-    fdpo:metadataModified "2023-04-14T18:18:59.076803004Z"^^xsd:dateTime .
-    <https://w3id.org/ontouml-models/model/c6ec6f27-cffa-4a38-9927-8e6b921e996a> dcat:distribution <https://w3id.org/ontouml-models/distribution/9b158615-87dd-4118-8eb0-2481a53029f7/>, <https://w3id.org/ontouml-models/distribution/15762e63-c636-4839-a60e-199fff2c104e/>, <https://w3id.org/ontouml-models/distribution/60ca44fe-4fca-41e7-8c65-a7c3cb5b2f2c/>, <https://w3id.org/ontouml-models/distribution/e5389097-f11b-4f6e-aca6-f3a5d42ea583>, <https://w3id.org/ontouml-models/distribution/5661e697-3f4f-4f1f-aa1c-52e8a66084e7>, <https://w3id.org/ontouml-models/distribution/23e8fe21-505a-440b-840d-c67cf393f579>, <https://w3id.org/ontouml-models/distribution/36f7cc11-3ae2-44fc-ac15-255263ecc171>, <https://w3id.org/ontouml-models/distribution/fb0298e8-0230-46a1-9583-8b0f11993fba>, <https://w3id.org/ontouml-models/distribution/a6d077bc-cd53-481b-98b5-565e93011ccd>, <https://w3id.org/ontouml-models/distribution/55f804f2-d0cd-46f4-9b07-8b137300161f>, <https://w3id.org/ontouml-models/distribution/879c4b80-7617-4b9f-83b5-fa565900f0aa>, <https://w3id.org/ontouml-models/distribution/5d5ed42d-0703-4892-a0fe-e7973d987eed>.
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/c6ec6f27-cffa-4a38-9927-8e6b921e996a> dcat:distribution <https://w3id.org/ontouml-models/distribution/9b158615-87dd-4118-8eb0-2481a53029f7/>,
+                      <https://w3id.org/ontouml-models/distribution/15762e63-c636-4839-a60e-199fff2c104e/>,
+                      <https://w3id.org/ontouml-models/distribution/60ca44fe-4fca-41e7-8c65-a7c3cb5b2f2c/>,
+                      <https://w3id.org/ontouml-models/distribution/e5389097-f11b-4f6e-aca6-f3a5d42ea583>,
+                      <https://w3id.org/ontouml-models/distribution/5661e697-3f4f-4f1f-aa1c-52e8a66084e7>,
+                      <https://w3id.org/ontouml-models/distribution/23e8fe21-505a-440b-840d-c67cf393f579>,
+                      <https://w3id.org/ontouml-models/distribution/36f7cc11-3ae2-44fc-ac15-255263ecc171>,
+                      <https://w3id.org/ontouml-models/distribution/fb0298e8-0230-46a1-9583-8b0f11993fba>,
+                      <https://w3id.org/ontouml-models/distribution/a6d077bc-cd53-481b-98b5-565e93011ccd>,
+                      <https://w3id.org/ontouml-models/distribution/55f804f2-d0cd-46f4-9b07-8b137300161f>,
+                      <https://w3id.org/ontouml-models/distribution/879c4b80-7617-4b9f-83b5-fa565900f0aa>,
+                      <https://w3id.org/ontouml-models/distribution/5d5ed42d-0703-4892-a0fe-e7973d987eed> .

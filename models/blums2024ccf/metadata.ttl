@@ -1,37 +1,44 @@
-@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix mod: <https://w3id.org/mod#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix dcat: <http://www.w3.org/ns/dcat#>.
-@prefix lcc: <http://id.loc.gov/authorities/classification/>.
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/blums2024ccf/> a dcat:Dataset, mod:SemanticArtefact;
+<https://w3id.org/ontouml-models/model/blums2024ccf/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
     dct:title "Ontology of Converged Conceptual Frameworks for Financial Reporting";
     mod:acronym "CCF Ontology";
     dct:issued "2024"^^xsd:gYear;
     dcat:theme lcc:H;
     dct:language "en";
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
-    dct:contributor <https://dblp.org/pid/184/4586.html>, <https://dblp.org/pid/70/260.html>;
-    mod:designedForTask ocmv:ConceptualClarification, ocmv:Interoperability, ocmv:OntologicalAnalysis;
-    ocmv:context ocmv:Research, ocmv:Industry;
-    dct:source <http://doi.org/10.13140/RG.2.2.31144.99843>.
-<https://w3id.org/ontouml-models/model/blums2024ccf/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2024ccf/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/blums2024ccf/distribution/ttl> a dcat:Distribution;
-    dct:title "Turtle distribution of \"Ontology of Converged Conceptual Frameworks for Financial Reporting\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2024ccf/ontology.ttl>.
-<https://w3id.org/ontouml-models/model/blums2024ccf/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2024ccf/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/blums2024ccf/distribution/ttl> a dcat:Distribution;
-    dct:title "JSON distribution of \"Ontology of Converged Conceptual Frameworks for Financial Reporting\""@en;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2024ccf/ontology.json>.
-<https://w3id.org/ontouml-models/model/blums2024ccf/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2024ccf/distribution/ttl>.
-<https://w3id.org/ontouml-models/model/blums2024ccf/distribution/vpp> a dcat:Distribution;
-    dct:title "Visual Paradigm distribution of \"Ontology of Converged Conceptual Frameworks for Financial Reporting\""@en;
-    dcat:mediaType <https://www.visual-paradigm.com/vpp>;
-    dcat:downloadURL <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2024ccf/ontology.vpp>.
+    dct:contributor <https://dblp.org/pid/184/4586.html>,
+                    <https://dblp.org/pid/70/260.html>;
+    dcat:keyword "accounting"@en,
+                 "financial reporting"@en;
+    dct:source <http://doi.org/10.13140/RG.2.2.31144.99843>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability,
+                        ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research,
+                 ocmv:Industry;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Core;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/blums2024ccf"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-23T12:00:00Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-23T12:00:00Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/blums2024ccf/> dcat:distribution <https://w3id.org/ontouml-models/model/blums2024ccf/distribution/ttl>,
+                      <https://www.iana.org/assignments/media-types/text/turtle>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2024ccf/ontology.ttl>,
+                      <https://w3id.org/ontouml-models/model/blums2024ccf/>,
+                      <https://www.iana.org/assignments/media-types/application/json>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2024ccf/ontology.json>,
+                      <https://w3id.org/ontouml-models/model/blums2024ccf/distribution/vpp>,
+                      <https://www.visual-paradigm.com/vpp>,
+                      <https://raw.githubusercontent.com/unibz-core/ontouml-models/master/blums2024ccf/ontology.vpp> .
