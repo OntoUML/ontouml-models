@@ -273,16 +273,13 @@ def test_json_output_contains_structured_issues(
     assert payload[0]["errors"][0]["code"] in {"invalid_theme", "missing_field"}
 
 
-def test_iri_slug_and_full_ocmv_uri_are_accepted(
+def test_full_ocmv_uri_controlled_value_is_accepted(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
-    dataset = tmp_path / "models" / "aliases"
+    dataset = tmp_path / "models" / "controlled-uri"
     write_metadata(
         dataset,
         VALID_METADATA.replace(
-            "title: Reference Ontology of Trust",
-            "iri: local-slug\ntitle: Reference Ontology of Trust",
-        ).replace(
             "  - domain", "  - https://w3id.org/ontouml-models/vocabulary#Domain"
         ),
     )
@@ -292,6 +289,27 @@ def test_iri_slug_and_full_ocmv_uri_are_accepted(
     captured = capsys.readouterr()
     assert exit_code == 0
     assert "INVALID" not in captured.out
+
+
+def test_converter_only_fields_are_unexpected(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "converter-only"
+    write_metadata(
+        dataset,
+        VALID_METADATA.replace(
+            "title: Reference Ontology of Trust",
+            "iri: local-slug\neditorial_note: Alias note\ntitle: Reference Ontology of Trust",
+        ),
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "unexpected_field" in captured.out
+    assert "iri" in captured.out
+    assert "editorial_note" in captured.out
 
 
 def test_boolean_literal_is_invalid(
@@ -629,3 +647,54 @@ def test_missing_license_remains_error_without_relaxing_argument(
     captured = capsys.readouterr()
     assert exit_code == 1
     assert "ERROR   license [missing_value]" in captured.out
+
+
+def test_contact_points_is_not_supported_metadata_yaml_field(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "contact-points"
+    write_metadata(
+        dataset,
+        VALID_METADATA
+        + "contactPoints:\n"
+        + " - name: Pedro Paulo Favato Barcelos\n"
+        + "   email: pedro@example.org\n",
+    )
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "unexpected_field" in captured.out
+    assert "contactPoints" in captured.out
+
+
+def test_rdf_predicate_and_converter_alias_fields_are_rejected(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    dataset = tmp_path / "models" / "unsupported-fields"
+    unsupported_fields = """
+    dct:title: Wrong title field
+    dcat:keyword:
+     - wrong keyword field
+    landing_page: https://example.org/alias
+    storage_url: https://example.org/storage
+    distribution: https://example.org/distribution
+    dcat:contactPoint: https://example.org/contact
+    """
+    write_metadata(dataset, VALID_METADATA + textwrap.dedent(unsupported_fields))
+
+    exit_code = validator.main([str(dataset)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    for field in (
+        "dct:title",
+        "dcat:keyword",
+        "landing_page",
+        "storage_url",
+        "distribution",
+        "dcat:contactPoint",
+    ):
+        assert field in captured.out
+    assert captured.out.count("unexpected_field") >= 6

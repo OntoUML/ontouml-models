@@ -45,7 +45,6 @@ except (
 
 Severity = Literal["error", "warning"]
 UnknownPolicy = Literal["error", "warning", "ignore"]
-OutputFormat = Literal["text", "json"]
 
 
 class MetadataYamlError(RuntimeError):
@@ -172,60 +171,26 @@ MetadataYamlLoader.add_constructor(
 )
 
 
-# The current catalog examples still use these field names. The converter also
-# accepts snake_case aliases, but this script preserves the repository-facing
-# metadata.yaml template unless the source already uses a supported alias.
+# Supported metadata.yaml fields are restricted to the repository-facing
+# model-level metadata template currently used by catalog datasets. RDF predicate
+# names, converter-only aliases, and extension fields are treated as unexpected.
 FIELD_ALIASES: dict[str, tuple[str, ...]] = {
-    "iri": ("iri", "uri", "model_iri", "modelIri", "identifier", "id"),
-    "title": ("title", "dct:title"),
-    "alternative": (
-        "alternative",
-        "alternative_title",
-        "alternativeTitle",
-        "dct:alternative",
-    ),
-    "description": ("description", "dct:description"),
-    "issued": ("issued", "dct:issued"),
-    "modified": ("modified", "dct:modified"),
-    "license": ("license", "dct:license"),
-    "access_rights": ("access_rights", "accessRights", "dct:accessRights"),
-    "editorial_note": ("editorialNote", "editorial_note", "skos:editorialNote"),
-    "creator": ("creator", "creators", "dct:creator"),
-    "contributor": ("contributor", "contributors", "dct:contributor"),
-    "publisher": ("publisher", "dct:publisher"),
-    "metadata_issued": ("metadata_issued", "metadataIssued", "fdpo:metadataIssued"),
-    "metadata_modified": (
-        "metadata_modified",
-        "metadataModified",
-        "fdpo:metadataModified",
-    ),
-    "landing_page": ("landingPage", "landing_page", "dcat:landingPage"),
-    "bibliographic_citation": (
-        "bibliographic_citation",
-        "bibliographicCitation",
-        "dct:bibliographicCitation",
-    ),
-    "storage_url": ("storage_url", "storageUrl", "ocmv:storageUrl"),
-    "contact_points": ("contact_points", "contactPoints", "dcat:contactPoint"),
-    "keyword": ("keyword", "keywords", "dcat:keyword"),
-    "acronym": ("acronym", "mod:acronym"),
-    "source": ("source", "sources", "dct:source"),
-    "language": ("language", "languages", "dct:language"),
-    "theme": ("theme", "dcat:theme"),
-    "designed_for_task": (
-        "designedForTask",
-        "designed_for_task",
-        "mod:designedForTask",
-    ),
-    "context": ("context", "ocmv:context"),
-    "representation_style": (
-        "representationStyle",
-        "representation_style",
-        "ocmv:representationStyle",
-    ),
-    "ontology_type": ("ontologyType", "ontology_type", "ocmv:ontologyType"),
-    "is_part_of": ("is_part_of", "isPartOf", "dct:isPartOf"),
-    "distribution": ("distribution", "distributions", "dcat:distribution"),
+    "title": ("title",),
+    "acronym": ("acronym",),
+    "issued": ("issued",),
+    "modified": ("modified",),
+    "contributor": ("contributor",),
+    "keyword": ("keyword",),
+    "theme": ("theme",),
+    "editorial_note": ("editorialNote",),
+    "ontology_type": ("ontologyType",),
+    "language": ("language",),
+    "designed_for_task": ("designedForTask",),
+    "context": ("context",),
+    "source": ("source",),
+    "representation_style": ("representationStyle",),
+    "landing_page": ("landingPage",),
+    "license": ("license",),
 }
 
 PREFERRED_FIELD_NAME: dict[str, str] = {
@@ -253,8 +218,7 @@ EXPECTED_TEMPLATE_FIELDS: tuple[str, ...] = (
     "license",
 )
 
-# Minimum mandatory fields aligned with scripts/metadata_yaml_to_ttl.py and the
-# metadata YAML documentation.
+# Minimum mandatory fields aligned with the repository metadata.yaml documentation.
 REQUIRED_VALUE_FIELDS: tuple[str, ...] = (
     "title",
     "issued",
@@ -265,37 +229,28 @@ REQUIRED_VALUE_FIELDS: tuple[str, ...] = (
 
 LIST_FIELDS: set[str] = {
     "contributor",
-    "creator",
     "source",
     "keyword",
     "designed_for_task",
     "context",
     "representation_style",
     "ontology_type",
-    "distribution",
 }
 
 SINGLE_URI_FIELDS: set[str] = {
-    "iri",
     "license",
-    "publisher",
-    "storage_url",
-    "is_part_of",
 }
 
 LITERAL_FIELDS: set[str] = {
     "title",
-    "alternative",
-    "description",
     "editorial_note",
-    "bibliographic_citation",
     "keyword",
     "acronym",
 }
 
-DATE_FIELDS: set[str] = {"issued", "modified", "metadata_issued", "metadata_modified"}
+DATE_FIELDS: set[str] = {"issued", "modified"}
 
-URL_LIST_FIELDS: set[str] = {"contributor", "creator", "source", "landing_page"}
+URL_LIST_FIELDS: set[str] = {"contributor", "source", "landing_page"}
 
 DESIGNED_FOR_TASKS: dict[str, str] = {
     "conceptualclarification": "conceptual clarification",
@@ -951,7 +906,7 @@ class MetadataYamlValidator:
                 result,
                 "add_missing_optional_field",
                 preferred,
-                f"Added missing expected optional field {preferred!r} with null value.",
+                f"Added missing expected optional field {preferred!r} with an empty YAML value.",
             )
 
     def validate_field(
@@ -995,16 +950,6 @@ class MetadataYamlValidator:
             self.validate_theme_field(value, result)
         if canonical == "language":
             self.validate_language_field(value, result)
-        if canonical == "contact_points":
-            self.validate_contact_points(value, result)
-        if canonical == "publisher" and isinstance(value, list) and len(value) > 1:
-            self.add_issue(
-                result,
-                "error",
-                "too_many_values",
-                preferred,
-                "Publisher must have at most one URI.",
-            )
 
     def validate_literal_field(
         self, canonical: str, value: Any, result: ValidationResult
@@ -1128,20 +1073,6 @@ class MetadataYamlValidator:
                     f"Use the license URI {alias}.",
                 )
                 return
-        if canonical == "iri":
-            text = value.strip()
-            if is_http_uri(text):
-                return
-            if ":" in text or not re.fullmatch(r"[A-Za-z0-9._/-]+", text):
-                self.add_issue(
-                    result,
-                    "error",
-                    "invalid_uri_or_slug",
-                    preferred,
-                    "Expected an absolute HTTP(S) URI or a local slug without a URI prefix.",
-                    "Use a persistent HTTP(S) model IRI when available, or a simple dataset slug.",
-                )
-            return
         if not is_http_uri(value):
             self.add_issue(
                 result,
@@ -1328,31 +1259,6 @@ class MetadataYamlValidator:
                     "invalid_language",
                     field,
                     "Expected a BCP 47/IANA-like language tag such as 'en', 'pt-BR', or 'en-GB'. Multiple languages may be written as a comma-separated scalar, e.g. 'en, pt-br', or as a YAML list; --fix normalizes comma-separated multi-language scalars to lists when all tags are valid.",
-                )
-
-    def validate_contact_points(self, value: Any, result: ValidationResult) -> None:
-        preferred = PREFERRED_FIELD_NAME["contact_points"]
-        for index, item in enumerate(as_list(value)):
-            field = f"{preferred}[{index}]"
-            if not isinstance(item, Mapping):
-                self.add_issue(
-                    result,
-                    "error",
-                    "invalid_type",
-                    field,
-                    "Each contact point must be a mapping.",
-                )
-                continue
-            email = (
-                item.get("email") or item.get("hasEmail") or item.get("vcard:hasEmail")
-            )
-            if not isinstance(email, str) or not email.strip():
-                self.add_issue(
-                    result,
-                    "error",
-                    "missing_email",
-                    field,
-                    "Contact point is missing a non-empty email value.",
                 )
 
     def safe_fix_value(self, canonical: str, value: Any) -> tuple[Any, bool, str]:
