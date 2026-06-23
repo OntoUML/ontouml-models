@@ -44,19 +44,30 @@ Some older catalog datasets have no license value. This is semantically incomple
 
 ## Supported field spelling
 
-The repository currently contains metadata files using names such as:
+The validator only accepts the repository-facing `metadata.yaml` fields currently used by catalog datasets:
 
 ```yaml
+title:
+acronym:
+issued:
+modified:
+contributor:
+keyword:
+theme:
 editorialNote:
 ontologyType:
+language:
 designedForTask:
+context:
+source:
 representationStyle:
 landingPage:
+license:
 ```
 
-The converter also accepts snake_case aliases such as `editorial_note`, `ontology_type`, `designed_for_task`, `representation_style`, and `landing_page`. The validator accepts both forms. When `--fix` is used, it rewrites recognized aliases to the repository-preferred template spelling used above.
+RDF predicate names, converter-only aliases, and extension fields are intentionally treated as unexpected fields. For example, `dct:title`, `dcat:keyword`, `editorial_note`, `ontology_type`, `iri`, `storage_url`, `distribution`, and `contactPoints` are not accepted unless the official YAML format is explicitly extended later.
 
-The optional `iri` field may be either an absolute HTTP(S) IRI or a local slug accepted by the YAML-to-Turtle converter. A local slug must not contain a URI prefix.
+Although the RDF dataset shape includes `dcat:contactPoint`, contact-point metadata is not part of the supported `metadata.yaml` field set. This validator therefore treats `contact_points`, `contactPoints`, and `dcat:contactPoint` as unexpected YAML fields.
 
 `landingPage` may be empty, a single HTTP(S) URI, or a YAML list of HTTP(S) URIs. The underlying RDF property has no maximum-count constraint in the catalog SHACL shape, so multiple landing pages are allowed. `--fix` therefore does not unwrap `landingPage` lists.
 
@@ -85,7 +96,6 @@ Safe fixes include:
 - normalizing compact `theme` values such as `H`, `lcc:H`, or an LCC URI to the full catalog label, e.g. `Class H - Social Sciences`;
 - replacing known license shorthands such as `CC-BY-4.0` with their canonical URI;
 - trimming surrounding whitespace in scalar strings;
-- rewriting recognized aliases to repository-preferred field names.
 
 The fix mode rewrites YAML with PyYAML plus catalog-specific post-processing. It preserves the repository convention of one leading space before top-level list markers (` - value`) and empty values as `field:` rather than `field: null`. Comments and some hand-formatted spacing are not preserved. Run it only when this is acceptable.
 
