@@ -82,7 +82,7 @@ Generate `metadata.ttl` for all datasets under `models/`:
 python scripts/metadata_yaml_to_ttl.py --all --models-dir models
 ```
 
-If some existing or new datasets do not have `fdpo:metadataIssued` in `metadata.ttl`, provide an explicit deterministic timestamp for the generation run:
+If some existing or new datasets do not have `fdpo:metadataIssued` in `metadata.ttl`, or if existing `metadata.ttl` files may be modified and therefore need a new `fdpo:metadataModified` value, provide an explicit deterministic timestamp for the generation run:
 
 ```bash
 python scripts/metadata_yaml_to_ttl.py --all --models-dir models --metadata-timestamp 2026-01-31T12:00:00Z
@@ -148,14 +148,17 @@ When `metadata.ttl` already exists, the converter reads it to preserve values th
 - the model IRI form used for `dcat:distribution` links;
 - the catalog IRI used in `dct:isPartOf`;
 - existing `ocmv:storageUrl`;
-- existing `fdpo:metadataIssued` and `fdpo:metadataModified` timestamps;
+- existing `fdpo:metadataIssued`;
+- existing `fdpo:metadataModified` when the regenerated file is unchanged;
 - existing `dcat:distribution` links.
 
 The converter also discovers distribution IRIs from distribution-specific metadata files already present in the dataset folder, such as `metadata-vpp.ttl`, `metadata-json.ttl`, `metadata-turtle.ttl`, and `metadata-png-*.ttl`.
 
 The remaining model-level descriptive metadata is regenerated from `metadata.yaml`.
 
-This behavior allows safe regeneration of existing datasets without replacing stable catalog identifiers or distribution links.
+When the regenerated `metadata.ttl` content differs from the current file, including formatting-only differences, the converter preserves existing `fdpo:metadataIssued` but updates `fdpo:metadataModified` to the explicit run timestamp provided through `--metadata-timestamp`. If `fdpo:metadataIssued` is missing, it is initialized with the same explicit run timestamp.
+
+This behavior allows safe regeneration of existing datasets without replacing stable catalog identifiers or distribution links, while keeping FDP modification metadata aligned with the actual regeneration outcome.
 
 ## New datasets
 
@@ -172,7 +175,7 @@ New datasets must be generated with an explicit metadata timestamp unless one is
 python scripts/metadata_yaml_to_ttl.py models/new-dataset --metadata-timestamp 2026-01-31T12:00:00Z
 ```
 
-Use `--metadata-timestamp now` only when non-deterministic current timestamps are intentionally acceptable. Existing datasets keep their current `fdpo:metadataIssued` and `fdpo:metadataModified` values by default. Existing datasets that currently lack FDP metadata timestamps require `--metadata-timestamp`; this avoids silently inventing catalog metadata timestamps.
+Use `--metadata-timestamp now` only when non-deterministic current timestamps are intentionally acceptable. Existing datasets preserve their current `fdpo:metadataIssued` value by default. Existing `fdpo:metadataModified` values are preserved only when the regenerated file is unchanged; if the file changes, `fdpo:metadataModified` is updated to the explicit run timestamp. Existing datasets that currently lack FDP metadata timestamps, or that need to be modified, require `--metadata-timestamp`; this avoids silently inventing catalog metadata timestamps.
 
 ## Exit codes
 

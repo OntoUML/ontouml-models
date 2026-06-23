@@ -370,32 +370,6 @@ def scalar_text(value: Any) -> str:
     return str(value).strip()
 
 
-def first_text(value: Any) -> Optional[str]:
-    """Extract a display text from common scalar, list, or language-map values."""
-
-    if value is None:
-        return None
-    if isinstance(value, Mapping):
-        for key in ("value", "en", "eng", "english", "label", "title", "name"):
-            nested = mapping_get_normalized(value, key)
-            text = first_text(nested)
-            if text:
-                return text
-        for nested in value.values():
-            text = first_text(nested)
-            if text:
-                return text
-        return None
-    if isinstance(value, list):
-        for item in value:
-            text = first_text(item)
-            if text:
-                return text
-        return None
-    text = scalar_text(value)
-    return text or None
-
-
 def is_http_uri(value: Any) -> bool:
     if not isinstance(value, str):
         return False
@@ -614,11 +588,6 @@ def language_values(value: Any) -> list[str]:
     return values
 
 
-def first_language(data: Mapping[str, Any]) -> Optional[str]:
-    languages = language_values(canonical_value(data, "language"))
-    return languages[0] if languages else None
-
-
 def normalize_enum(value: Any, allowed: dict[str, URIRef], field_name: str) -> URIRef:
     if not isinstance(value, str) or not value.strip():
         raise MetadataConversionError(
@@ -782,33 +751,55 @@ def read_existing_metadata(ttl_path: Path) -> ExistingMetadata:
     )
 
 
+def configured_run_timestamp_literal(config: Config, ttl_path: Path) -> Literal:
+    """Return the explicit run timestamp used for newly changed metadata records."""
+
+    if config.metadata_timestamp == "now":
+        return current_datetime_literal()
+    if config.metadata_timestamp:
+        return configured_datetime_literal(
+            config.metadata_timestamp, "--metadata-timestamp"
+        )
+    raise MetadataConversionError(
+        f"No run timestamp is available to initialize fdpo:metadataIssued or update "
+        f"fdpo:metadataModified in {ttl_path}. "
+        "Provide --metadata-timestamp, for example --metadata-timestamp 2026-01-31T12:00:00Z. "
+        "Use --metadata-timestamp now only when a non-deterministic execution timestamp is acceptable."
+    )
+
+
 def metadata_timestamp_literals(
-    existing: ExistingMetadata, config: Config, ttl_path: Path
+    existing: ExistingMetadata,
+    config: Config,
+    ttl_path: Path,
+    *,
+    update_metadata_modified: bool,
 ) -> tuple[Literal, Literal]:
+    """Return FDP metadata timestamps for the generated metadata.ttl file.
+
+    metadataIssued is preserved whenever it already exists. Missing metadataIssued
+    values are initialized with the explicit run timestamp. metadataModified is
+    preserved only when the file is not changing; when the generated file differs
+    from the current file, it is updated to the explicit run timestamp.
+    """
+
+    run_timestamp: Optional[Literal] = None
+
+    def get_run_timestamp() -> Literal:
+        nonlocal run_timestamp
+        if run_timestamp is None:
+            run_timestamp = configured_run_timestamp_literal(config, ttl_path)
+        return run_timestamp
+
     if existing.metadata_issued is not None:
         metadata_issued = existing.metadata_issued
-    elif config.metadata_timestamp == "now":
-        metadata_issued = current_datetime_literal()
-    elif config.metadata_timestamp:
-        metadata_issued = configured_datetime_literal(
-            config.metadata_timestamp, "--metadata-timestamp"
-        )
     else:
-        raise MetadataConversionError(
-            f"No fdpo:metadataIssued value is available for {ttl_path}. "
-            "Existing metadata.ttl files that lack FDP metadata timestamps and new metadata.ttl files "
-            "must be regenerated with --metadata-timestamp, for example "
-            "--metadata-timestamp 2026-01-31T12:00:00Z."
-        )
+        metadata_issued = get_run_timestamp()
 
-    if existing.metadata_modified is not None:
+    if update_metadata_modified:
+        metadata_modified = get_run_timestamp()
+    elif existing.metadata_modified is not None:
         metadata_modified = existing.metadata_modified
-    elif config.metadata_timestamp == "now":
-        metadata_modified = metadata_issued
-    elif config.metadata_timestamp:
-        metadata_modified = configured_datetime_literal(
-            config.metadata_timestamp, "--metadata-timestamp"
-        )
     else:
         metadata_modified = metadata_issued
 
@@ -1029,6 +1020,8 @@ def build_turtle(
     dataset_folder: Path,
     existing: ExistingMetadata,
     config: Config,
+    *,
+    update_metadata_modified: bool = False,
 ) -> tuple[str, int, list[str]]:
     validate_supported_yaml_fields(data)
     validate_minimum_convertible_fields(
@@ -1056,6 +1049,7 @@ def build_turtle(
         existing if config.preserve_existing else ExistingMetadata(),
         config,
         dataset_folder / OUTPUT_FILE_NAME,
+        update_metadata_modified=update_metadata_modified,
     )
     storage_url = (
         existing.storage_url
@@ -1284,6 +1278,15 @@ def convert_dataset(dataset_folder: Path, config: Config) -> ConversionResult:
 
     old_text = ttl_path.read_text(encoding="utf-8") if ttl_path.exists() else None
     changed = old_text != turtle
+    if changed:
+        turtle, triple_count, warnings = build_turtle(
+            data,
+            dataset_folder,
+            existing,
+            config,
+            update_metadata_modified=True,
+        )
+        changed = old_text != turtle
     written = False
 
     if config.dry_run:
