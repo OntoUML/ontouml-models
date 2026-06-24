@@ -62,7 +62,9 @@ The current standard repository-facing `metadata.yaml` template does not need to
 
 ### `ontology.json`
 
-By default, the script requires `ontology.json` to exist and be parseable JSON with a JSON object at the top level. This prevents creating metadata for a missing or invalid source distribution.
+By default, the script requires `ontology.json` to exist and to be a file. It does not parse `ontology.json` by default, because some legacy catalog JSON files contain non-UTF-8 bytes even though their existing distribution metadata is valid and should remain generatable.
+
+Use `--validate-ontology-json` when you explicitly want the source file to be parsed as UTF-8 JSON and checked for a JSON object at the top level. This option is useful for new submissions or stricter maintenance checks, but it may fail for legacy catalog files that require separate source-data cleanup.
 
 Use `--no-check-ontology-json` only for exceptional compatibility cases where the metadata record must be generated before the source file is available.
 
@@ -203,6 +205,20 @@ Use `--dry-run` to validate inputs and report intended outputs without writing f
 
 ```bash
 python scripts/generate_json_metadata.py --all --models-dir models --dry-run --metadata-timestamp 2026-06-23T12:00:00Z
+```
+
+### Source JSON validation
+
+By default, the generator checks that `ontology.json` exists but does not parse its contents. To additionally parse the file as UTF-8 JSON and require a top-level JSON object, use:
+
+```bash
+python scripts/generate_json_metadata.py --all --models-dir models --validate-ontology-json --metadata-timestamp 2026-06-23T12:00:00Z
+```
+
+To skip even the existence check for exceptional compatibility cases, use:
+
+```bash
+python scripts/generate_json_metadata.py models/example --no-check-ontology-json --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 ### JSON output

@@ -478,14 +478,51 @@ def test_cli_json_output(tmp_path: Path, capsys: pytest.CaptureFixture[str]):
     assert payload["results"][0]["metadata_path"].endswith("metadata-json.ttl")
 
 
-def test_invalid_ontology_json_fails_before_metadata_file_is_written(tmp_path: Path):
+def test_invalid_ontology_json_content_is_ignored_by_default(tmp_path: Path):
+    module = load_module()
+    dataset = write_dataset(tmp_path, name="invalid-source-json")
+    (dataset / "ontology.json").write_text("not valid json", encoding="utf-8")
+
+    module.process_dataset(
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+    )
+
+    assert (dataset / "metadata-json.ttl").exists()
+
+
+def test_invalid_ontology_json_fails_when_content_validation_is_enabled(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = write_dataset(tmp_path, name="invalid-source-json")
     (dataset / "ontology.json").write_text("not valid json", encoding="utf-8")
 
     with pytest.raises(module.MetadataGenerationError, match="Invalid ontology JSON"):
         module.process_dataset(
-            dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
+            dataset,
+            module.Config(
+                metadata_timestamp="2024-01-02T03:04:05Z",
+                validate_source_json=True,
+            ),
+        )
+
+    assert not (dataset / "metadata-json.ttl").exists()
+
+
+def test_non_utf8_ontology_json_fails_as_generation_error_when_validation_is_enabled(
+    tmp_path: Path,
+):
+    module = load_module()
+    dataset = write_dataset(tmp_path, name="non-utf8-source-json")
+    (dataset / "ontology.json").write_bytes(b'{"name": "caf\xed"}')
+
+    with pytest.raises(module.MetadataGenerationError, match="not valid UTF-8"):
+        module.process_dataset(
+            dataset,
+            module.Config(
+                metadata_timestamp="2024-01-02T03:04:05Z",
+                validate_source_json=True,
+            ),
         )
 
     assert not (dataset / "metadata-json.ttl").exists()
@@ -881,24 +918,28 @@ def test_invalid_existing_metadata_json_fails_before_rewriting(tmp_path: Path):
     assert (dataset / "metadata-json.ttl").read_text(encoding="utf-8") == "not turtle"
 
 
-def test_json_array_source_fails_unless_source_check_is_disabled(tmp_path: Path):
+def test_json_array_source_is_allowed_by_default_but_fails_when_validation_is_enabled(
+    tmp_path: Path,
+):
     module = load_module()
     dataset = write_dataset(tmp_path, name="array-source-json")
     write_ontology_json(dataset, content=[])
 
-    with pytest.raises(module.MetadataGenerationError, match="JSON object"):
-        module.process_dataset(
-            dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
-        )
-
     module.process_dataset(
-        dataset,
-        module.Config(
-            metadata_timestamp="2024-01-02T03:04:05Z",
-            check_source_file=False,
-        ),
+        dataset, module.Config(metadata_timestamp="2024-01-02T03:04:05Z")
     )
     assert (dataset / "metadata-json.ttl").exists()
+
+    (dataset / "metadata-json.ttl").unlink()
+    with pytest.raises(module.MetadataGenerationError, match="JSON object"):
+        module.process_dataset(
+            dataset,
+            module.Config(
+                metadata_timestamp="2024-01-02T03:04:05Z",
+                validate_source_json=True,
+            ),
+        )
+    assert not (dataset / "metadata-json.ttl").exists()
 
 
 def test_custom_existing_schema_uri_is_preserved(tmp_path: Path):
