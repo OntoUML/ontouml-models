@@ -117,6 +117,7 @@ class Config:
     dry_run: bool = False
     check: bool = False
     check_source_file: bool = True
+    validate_source_json: bool = False
     metadata_timestamp: Optional[str] = None
     allow_missing_license: bool = False
     # Deprecated compatibility shim for older callers that used Config(require_license=True).
@@ -757,8 +758,17 @@ def validate_uri(value: URIRef, *, field_name: str) -> URIRef:
     return URIRef(text)
 
 
-def validate_ontology_json(path: Path, *, check_source_file: bool) -> None:
-    """Validate that ontology.json exists and is parseable JSON when checking is enabled."""
+def validate_ontology_json(
+    path: Path, *, check_source_file: bool, validate_source_json: bool
+) -> None:
+    """Validate ontology.json presence and, when requested, parseable JSON content.
+
+    Distribution metadata generation only needs to know that the JSON distribution
+    source exists. Some legacy catalog ontology.json files contain non-UTF-8 bytes
+    even though their existing distribution metadata is valid. Therefore, content
+    parsing is opt-in via --validate-ontology-json instead of being a default
+    precondition for metadata regeneration.
+    """
 
     if not check_source_file:
         return
@@ -766,9 +776,15 @@ def validate_ontology_json(path: Path, *, check_source_file: bool) -> None:
         raise MetadataGenerationError(f"Missing required ontology JSON file: {path}")
     if not path.is_file():
         raise MetadataGenerationError(f"Ontology JSON path is not a file: {path}")
+    if not validate_source_json:
+        return
     try:
         with path.open("r", encoding="utf-8") as stream:
             data = json.load(stream)
+    except UnicodeDecodeError as exc:
+        raise MetadataGenerationError(
+            f"Ontology JSON file is not valid UTF-8 JSON text {path}: {exc}"
+        ) from exc
     except json.JSONDecodeError as exc:
         raise MetadataGenerationError(
             f"Invalid ontology JSON file {path}: {exc}"
@@ -947,7 +963,11 @@ def process_dataset(dataset_folder: Path, config: Config) -> list[GeneratedFile]
     source_path = dataset_folder / SOURCE_FILE_NAME
     output_path = dataset_folder / OUTPUT_FILE_NAME
 
-    validate_ontology_json(source_path, check_source_file=config.check_source_file)
+    validate_ontology_json(
+        source_path,
+        check_source_file=config.check_source_file,
+        validate_source_json=config.validate_source_json,
+    )
     title, issued, license_uri, yaml_uri = load_model_metadata(dataset_folder, config)
     existing = read_existing_metadata(output_path)
     model_uri = resolve_model_uri(
@@ -1139,7 +1159,15 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument(
         "--no-check-ontology-json",
         action="store_true",
-        help="Do not require ontology.json to exist and be parseable before generating metadata-json.ttl.",
+        help="Do not require ontology.json to exist before generating metadata-json.ttl.",
+    )
+    parser.add_argument(
+        "--validate-ontology-json",
+        action="store_true",
+        help=(
+            "Also parse ontology.json as UTF-8 JSON and require a top-level object. "
+            "Disabled by default because some legacy catalog JSON files contain non-UTF-8 bytes."
+        ),
     )
     parser.add_argument(
         "--metadata-timestamp",
@@ -1162,6 +1190,10 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     if args.allow_missing_license and args.require_license:
         parser.error(
             "--allow-missing-license and --require-license cannot be used together."
+        )
+    if args.no_check_ontology_json and args.validate_ontology_json:
+        parser.error(
+            "--no-check-ontology-json and --validate-ontology-json cannot be used together."
         )
     return args
 
@@ -1209,6 +1241,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         dry_run=args.dry_run,
         check=args.check,
         check_source_file=not args.no_check_ontology_json,
+        validate_source_json=args.validate_ontology_json,
         metadata_timestamp=args.metadata_timestamp,
         allow_missing_license=args.allow_missing_license,
         require_license=args.require_license or None,
