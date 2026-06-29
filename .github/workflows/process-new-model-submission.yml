@@ -1,0 +1,165 @@
+name: Process new model submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      model_path:
+        description: "Repository-relative model folder to process, for example models/example-model"
+        required: true
+        type: string
+      metadata_timestamp:
+        description: "xsd:dateTime value for FDP timestamps, or 'now'"
+        required: true
+        default: "now"
+        type: string
+      metadata_repository:
+        description: "Repository used in generated storage/download URLs"
+        required: true
+        default: "OntoUML/ontouml-models"
+        type: string
+      metadata_branch:
+        description: "Branch used in generated storage/download URLs"
+        required: true
+        default: "master"
+        type: string
+      allow_missing_license:
+        description: "Allow missing license metadata; intended only for legacy datasets"
+        required: true
+        default: false
+        type: boolean
+      dry_run:
+        description: "Validate and report without writing generated metadata"
+        required: true
+        default: false
+        type: boolean
+      commit_changes:
+        description: "Commit generated/updated files back to the same branch"
+        required: true
+        default: true
+        type: boolean
+
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - "models/**"
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: process-new-model-submission-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reject-fork-pr:
+    name: Reject fork PR
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Explain unsupported PR source
+        run: |
+          cat <<'EOF'
+          Automated metadata generation is currently supported only for pull requests
+          opened from branches inside this repository. Fork-based PR automation will
+          be considered later.
+          EOF
+          exit 1
+
+  process:
+    name: Process model submission
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install script dependencies
+        run: python -m pip install -r scripts/requirements.txt
+
+      - name: Resolve model folder
+        id: model
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_MODEL_PATH: ${{ inputs.model_path }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          set -euo pipefail
+
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            git fetch origin "$BASE_REF" --depth=1
+            model_path="$(python scripts/process_new_model_submission.py --detect-model-folder "origin/${BASE_REF}" HEAD)"
+          else
+            model_path="$INPUT_MODEL_PATH"
+          fi
+
+          echo "model_path=${model_path}" >> "$GITHUB_OUTPUT"
+          echo "Resolved model folder: ${model_path}"
+
+      - name: Process model submission
+        env:
+          MODEL_PATH: ${{ steps.model.outputs.model_path }}
+          METADATA_TIMESTAMP: ${{ github.event_name == 'workflow_dispatch' && inputs.metadata_timestamp || 'now' }}
+          METADATA_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.metadata_repository || 'OntoUML/ontouml-models' }}
+          METADATA_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.metadata_branch || github.base_ref }}
+          ALLOW_MISSING_LICENSE: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_missing_license || false }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+        run: |
+          set -euo pipefail
+
+          cmd=(
+            python
+            scripts/process_new_model_submission.py
+            "$MODEL_PATH"
+            --metadata-timestamp "$METADATA_TIMESTAMP"
+            --repository "$METADATA_REPOSITORY"
+            --branch "$METADATA_BRANCH"
+          )
+
+          if [ "$ALLOW_MISSING_LICENSE" = "true" ]; then
+            cmd+=(--allow-missing-license)
+          fi
+
+          if [ "$DRY_RUN" = "true" ]; then
+            cmd+=(--dry-run)
+          fi
+
+          "${cmd[@]}"
+
+      - name: Commit generated files
+        if: ${{ success() && ((github.event_name == 'pull_request') || (github.event_name == 'workflow_dispatch' && !inputs.dry_run && inputs.commit_changes)) }}
+        env:
+          MODEL_PATH: ${{ steps.model.outputs.model_path }}
+          EVENT_NAME: ${{ github.event_name }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- "$MODEL_PATH"
+
+          if git diff --cached --quiet -- "$MODEL_PATH"; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+
+          model_slug="$(basename "$MODEL_PATH")"
+          git commit -m "chore(metadata): process model submission ${model_slug}"
+
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            git push origin "HEAD:${HEAD_REF}"
+          else
+            git push
+          fi
