@@ -1,0 +1,41 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/ee25c85e-123a-5bf3-a97b-b0100120ecfb/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Memory Ontology";
+    mod:acronym "Mem'Onto";
+    dct:issued "2025"^^xsd:gYear;
+    dcat:theme lcc:B;
+    skos:editorialNote "Mem'Onto is grounded on UFO and is adapted from CoTOn (Cognitive Theory Ontology from Ravenschlag et al., 2023).";
+    dct:language "en";
+    dcat:landingPage <https://w3id.org/memonto>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://orcid.org/0009-0001-9829-2034>,
+                    <https://orcid.org/0009-0005-2910-1539>,
+                    <https://orcid.org/0000-0003-2840-005X>;
+    dcat:keyword "memory"@en,
+                 "psychology"@en,
+                 "neurosciences"@en;
+    dct:source <https://gitlab.com/sfsoline.felice/memonto/-/blob/main/Towards_a_Semantic_Representation_of_Memory_Entities.pdf>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/felice2025memonto"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-30T20:42:04.920539Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-30T20:42:04.920539Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/ee25c85e-123a-5bf3-a97b-b0100120ecfb> dcat:distribution <https://w3id.org/ontouml-models/distribution/e1e94f7d-21f0-551b-99be-2e1b3877e4a4/>,
+                      <https://w3id.org/ontouml-models/distribution/e5e5fa1d-f671-52f1-895f-d0cf63090afd/>,
+                      <https://w3id.org/ontouml-models/distribution/674cff96-b925-5080-aad2-2746ae862629/>,
+                      <https://w3id.org/ontouml-models/distribution/f6a75d5a-3001-5e17-b2ae-c64fa2e1cf72/> .
