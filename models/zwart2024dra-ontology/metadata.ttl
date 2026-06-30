@@ -1,0 +1,50 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/20f07c83-c13c-5d7c-b7b6-83eea3126e99/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Domain Ontology for Drug Repurposing Analysis";
+    mod:acronym "DRA-Ontology";
+    dct:issued "2024"^^xsd:gYear;
+    dcat:theme lcc:Q;
+    skos:editorialNote "Developed as part of a Master's research focused on improving the pedrictions and related explanations generated in a GNN-based machine learning pipeline (i.e. RD-explainer).";
+    dct:language "en";
+    dcat:landingPage <https://github.com/rosazwart/XAI-FO>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/304/7074>,
+                    <https://orcid.org/0000-0003-1795-5930>,
+                    <https://dblp.org/pid/157/9485>,
+                    <https://dblp.org/pid/354/5718>,
+                    <https://dblp.org/pid/134/4947>,
+                    <https://dblp.org/pid/125/5986>,
+                    <https://dblp.org/pid/49/5917>,
+                    <https://dblp.org/pid/68/84>,
+                    <https://dblp.org/pid/81/3332>,
+                    <https://dblp.org/pid/09/2013>;
+    dcat:keyword "genotype"@en,
+                 "phenotype"@en,
+                 "disease"@en,
+                 "drug"@en,
+                 "drug repurposing"@en;
+    dct:source <https://doi.org/10.21203/rs.3.rs-5622649/v1>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/zwart2024dra-ontology"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-30T21:36:36.461470Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-30T21:36:36.461470Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/20f07c83-c13c-5d7c-b7b6-83eea3126e99> dcat:distribution <https://w3id.org/ontouml-models/distribution/b731d29a-93f9-56b8-b2b6-0fbbd9bc273f/>,
+                      <https://w3id.org/ontouml-models/distribution/0179a6a6-dafe-53f3-abec-f7ec13f0e082/>,
+                      <https://w3id.org/ontouml-models/distribution/ec56ae56-c987-5d46-8f5a-3e17bac0e724/>,
+                      <https://w3id.org/ontouml-models/distribution/982af0e0-cf62-55e3-9f35-be2d29840594/> .
