@@ -1,0 +1,57 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/7006bcaa-039b-5a5f-aeed-7d589aafd852/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "TRADES Ontology";
+    mod:acronym "TRADES";
+    dct:issued "2025"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "Type-level ontology obtained by translating the TRADES executable metamodel into OntoUML, aiming to make explicit the domain knowledge and practices embedded in TRADES. Covers the ontology fragments that underpin TRADES capabilities discussed in the paper, including threat/mitigation specification, risk scoring, and vulnerability management.";
+    dct:language "en";
+    dcat:landingPage <https://github.com/UKRI-DSbD/TRADES>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/224/5770>;
+    dcat:keyword "security modelling"@en,
+                 "risk assessment"@en,
+                 "threat assessment"@en,
+                 "threat modeling"@en,
+                 "risk scoring"@en,
+                 "cybersecurity"@en,
+                 "vulnerability management"@en;
+    dct:source <https://doi.org/10.1177/15705838251394801>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:OntologicalAnalysis,
+                        ocmv:DecisionSupportSystem;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/shaked2025trades"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-30T20:21:13.710261Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-30T20:21:13.710261Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/7006bcaa-039b-5a5f-aeed-7d589aafd852> dcat:distribution <https://w3id.org/ontouml-models/distribution/8c9cca4b-ae56-58de-9dd6-4b843e785612/>,
+                      <https://w3id.org/ontouml-models/distribution/d8765db8-f593-5c30-9ea9-cbb9cf12f38e/>,
+                      <https://w3id.org/ontouml-models/distribution/fa351fa3-f0fc-54f1-b185-636e93c6e256/>,
+                      <https://w3id.org/ontouml-models/distribution/2698ffde-9fa2-5d10-bfc7-fa55cd11998a/>,
+                      <https://w3id.org/ontouml-models/distribution/3f7e138f-a117-5f65-88f4-a7a29a1bb182/>,
+                      <https://w3id.org/ontouml-models/distribution/ec2c6846-5c85-512b-a869-04e97ee89c9e/>,
+                      <https://w3id.org/ontouml-models/distribution/c2d2cf82-a989-5105-878d-3214acc1097f/>,
+                      <https://w3id.org/ontouml-models/distribution/34201192-3545-5755-85af-b651b8ce58a2/>,
+                      <https://w3id.org/ontouml-models/distribution/276c2f28-a72f-5b1e-a89f-32b85dd09c70/>,
+                      <https://w3id.org/ontouml-models/distribution/0dd57054-6808-50b6-b824-c9a8f89a2e44/>,
+                      <https://w3id.org/ontouml-models/distribution/c5af0d73-f8a6-5827-9454-f28fa1e85286/>,
+                      <https://w3id.org/ontouml-models/distribution/ee002c82-d712-5c9c-826f-f08fce074126/>,
+                      <https://w3id.org/ontouml-models/distribution/e1ee05ee-ef9c-53d4-ba02-a3626d4dd448/>,
+                      <https://w3id.org/ontouml-models/distribution/8677887c-b0ad-597a-b5b3-aa49e4a8d2b7/>,
+                      <https://w3id.org/ontouml-models/distribution/bb9934c1-4be5-5062-a48d-97ff79685769/>,
+                      <https://w3id.org/ontouml-models/distribution/95ade208-7046-5fd1-9c33-8bf443c8453c/>,
+                      <https://w3id.org/ontouml-models/distribution/fa63eb80-0426-5026-8a5a-ae6fdd82df4f/> .
