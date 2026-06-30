@@ -1,0 +1,40 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/9dcdfa5b-92da-583e-bbfe-b8796e6423c3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Rule Hierarchies Model";
+    mod:acronym "RHM";
+    dct:issued "2025"^^xsd:gYear;
+    dcat:theme lcc:K;
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/334/9031>,
+                    <https://dblp.org/pid/88/250>,
+                    <https://dblp.org/pid/374/5536>;
+    dcat:keyword "rule"@en,
+                 "regulation"@en,
+                 "legislation"@en,
+                 "standard"@en,
+                 "contract"@en;
+    dct:source <https://doi.org/10.1007/978-3-031-92474-3_11>;
+    mod:designedForTask ocmv:ConceptualClarification;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/lindeberg2025rules-hierarchies"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-06-30T21:03:48.924799Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-06-30T21:03:48.924799Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/9dcdfa5b-92da-583e-bbfe-b8796e6423c3> dcat:distribution <https://w3id.org/ontouml-models/distribution/a5e1e9a5-7558-5585-bf18-11263439c040/>,
+                      <https://w3id.org/ontouml-models/distribution/fb4e1df8-9318-5b42-98ef-41d9fe5a8b9b/>,
+                      <https://w3id.org/ontouml-models/distribution/f32607b0-4aca-5876-80ed-cc67613f3039/>,
+                      <https://w3id.org/ontouml-models/distribution/d9b576b2-f49b-5e10-9d88-ddcb41c6a1b7/> .
