@@ -98,7 +98,48 @@ jobs:
 
           if [ "$EVENT_NAME" = "pull_request" ]; then
             git fetch origin "$BASE_REF" --depth=1
-            model_path="$(python scripts/process_new_model_submission.py --detect-model-folder "origin/${BASE_REF}" HEAD)"
+            model_path="$(python - "origin/${BASE_REF}" HEAD <<'PY'
+          from __future__ import annotations
+
+          import subprocess
+          import sys
+
+          base_ref, head_ref = sys.argv[1:]
+          completed = subprocess.run(
+              ["git", "diff", "--name-only", f"{base_ref}...{head_ref}"],
+              check=True,
+              text=True,
+              stdout=subprocess.PIPE,
+          )
+          changed = [line.strip().replace("\\", "/") for line in completed.stdout.splitlines() if line.strip()]
+          unexpected = []
+          model_folders = set()
+          for path in changed:
+              if path == "catalog.ttl":
+                  continue
+              parts = path.split("/")
+              if len(parts) >= 3 and parts[0] == "models":
+                  model_folders.add("/".join(parts[:2]))
+              else:
+                  unexpected.append(path)
+
+          if unexpected:
+              print(
+                  "Model-submission PRs may change only the target model folder and generated catalog.ttl:\n"
+                  + "\n".join(f"- {path}" for path in unexpected),
+                  file=sys.stderr,
+              )
+              raise SystemExit(2)
+          if len(model_folders) != 1:
+              detected = ", ".join(sorted(model_folders)) or "none"
+              print(
+                  f"Exactly one model folder must be changed by this workflow; detected: {detected}",
+                  file=sys.stderr,
+              )
+              raise SystemExit(2)
+          print(next(iter(model_folders)))
+          PY
+          )"
           else
             model_path="$INPUT_MODEL_PATH"
           fi
@@ -136,6 +177,10 @@ jobs:
 
           "${cmd[@]}"
 
+      - name: Synchronize catalog metadata
+        if: ${{ github.event_name == 'pull_request' || !inputs.dry_run }}
+        run: python scripts/generate_catalog_file.py .
+
       - name: Commit generated files
         if: ${{ success() && ((github.event_name == 'pull_request') || (github.event_name == 'workflow_dispatch' && !inputs.dry_run && inputs.commit_changes)) }}
         env:
@@ -148,9 +193,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -- "$MODEL_PATH"
+          git add -- "$MODEL_PATH" catalog.ttl
 
-          if git diff --cached --quiet -- "$MODEL_PATH"; then
+          if git diff --cached --quiet -- "$MODEL_PATH" catalog.ttl; then
             echo "No generated changes to commit."
             exit 0
           fi
