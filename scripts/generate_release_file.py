@@ -23,6 +23,8 @@ from rdflib import Graph
 
 
 RELEASE_TAG_PATTERN = re.compile(r"^\d{8}$")
+MODEL_NAMESPACE_BASE = "https://w3id.org/ontouml-models/model/"
+VALID_GENERATED_PREFIX_PATTERN = re.compile(r"^[a-z][a-z0-9_]*$")
 
 
 class ReleaseGenerationError(RuntimeError):
@@ -123,6 +125,94 @@ def bind_release_prefixes(graph: Graph) -> None:
     graph.bind("vann", "http://purl.org/vocab/vann/")
 
 
+def model_identifier_from_namespace(namespace: str) -> Optional[str]:
+    """Return the identifier represented by a catalog model namespace.
+
+    Catalog model namespaces are recognized when they are under
+    ``MODEL_NAMESPACE_BASE`` and end in either ``#`` or ``/``. The returned
+    identifier excludes that final namespace delimiter.
+    """
+
+    if not namespace.startswith(MODEL_NAMESPACE_BASE):
+        return None
+    if not namespace.endswith(("#", "/")):
+        return None
+
+    remainder = namespace[len(MODEL_NAMESPACE_BASE) :]
+    if remainder:
+        remainder = remainder[:-1]
+    return remainder
+
+
+def sanitize_model_prefix(identifier: str) -> str:
+    """Return a deterministic ASCII Turtle prefix derived from an identifier.
+
+    Generated prefixes use lowercase ASCII letters, digits, and underscores.
+    Runs of characters outside that set are normalized to one underscore. A
+    fallback is used for empty identifiers, and ``model_`` is prepended when
+    the normalized identifier would not begin with a letter. This deliberately
+    uses a conservative subset of Turtle's legal ``PN_PREFIX`` grammar.
+    """
+
+    normalized = re.sub(r"[^a-z0-9]+", "_", identifier.casefold()).strip("_")
+    if not normalized:
+        normalized = "model"
+    elif not normalized[0].isalpha():
+        normalized = f"model_{normalized}"
+
+    if not VALID_GENERATED_PREFIX_PATTERN.fullmatch(normalized):
+        raise ReleaseGenerationError(
+            f"Could not derive a valid Turtle prefix from model identifier: {identifier!r}"
+        )
+    return normalized
+
+
+def bind_model_prefixes(graph: Graph) -> dict[str, str]:
+    """Bind deterministic, meaningful prefixes for catalog model namespaces.
+
+    Namespace IRIs are sorted lexicographically before prefixes are assigned.
+    If normalization produces a collision, or a candidate is already used by a
+    shared/non-model namespace, the first available ``_<n>`` suffix is used,
+    beginning with ``_2``. Sorting and explicit suffix allocation make the
+    result independent of file traversal, parse order, and RDFLib's generated
+    ``defaultN`` labels.
+
+    Returns a mapping from namespace IRI to the assigned prefix.
+    """
+
+    model_namespaces = sorted(
+        {
+            str(namespace)
+            for _, namespace in graph.namespaces()
+            if model_identifier_from_namespace(str(namespace)) is not None
+        }
+    )
+
+    model_namespace_set = set(model_namespaces)
+    used_prefixes = {
+        str(prefix)
+        for prefix, namespace in graph.namespaces()
+        if str(namespace) not in model_namespace_set
+    }
+    assigned: dict[str, str] = {}
+
+    for namespace in model_namespaces:
+        identifier = model_identifier_from_namespace(namespace)
+        assert identifier is not None
+        base_prefix = sanitize_model_prefix(identifier)
+        prefix = base_prefix
+        suffix = 2
+        while prefix in used_prefixes:
+            prefix = f"{base_prefix}_{suffix}"
+            suffix += 1
+
+        graph.bind(prefix, namespace, override=True, replace=True)
+        used_prefixes.add(prefix)
+        assigned[namespace] = prefix
+
+    return assigned
+
+
 def generate_release_file(config: ReleaseConfig) -> Path:
     """Generate and return the release Turtle file path."""
 
@@ -159,6 +249,7 @@ def generate_release_file(config: ReleaseConfig) -> Path:
             ) from exc
 
     bind_release_prefixes(aggregated_graph)
+    bind_model_prefixes(aggregated_graph)
 
     output_dir = config.output_dir
     if not output_dir.is_absolute():
