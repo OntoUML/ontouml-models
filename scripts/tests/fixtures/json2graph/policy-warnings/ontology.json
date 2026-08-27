@@ -1,0 +1,68 @@
+{
+  "id": "policy-project",
+  "type": "Project",
+  "name": "Policy project",
+  "model": {
+    "id": "policy-package",
+    "type": "Package",
+    "name": "Policy model",
+    "contents": [
+      {
+        "id": "policy-class",
+        "type": "Class",
+        "name": "Policy class",
+        "stereotype": "abstract individual",
+        "propertyAssignments": {
+          "documentation": null
+        },
+        "properties": [
+          {
+            "id": "policy-property",
+            "type": "Property",
+            "name": "Policy property",
+            "cardinality": "-1"
+          }
+        ]
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "id": "policy-diagram",
+      "type": "Diagram",
+      "name": "Policy diagram",
+      "owner": {
+        "id": "policy-package",
+        "type": "Package"
+      },
+      "contents": [
+        {
+          "id": "unresolved-view",
+          "type": "RelationView",
+          "modelElement": {
+            "id": "missing-relation",
+            "type": "Relation"
+          },
+          "shape": {
+            "id": "unresolved-view_path",
+            "type": "Path",
+            "points": [
+              {
+                "x": 10,
+                "y": 20
+              },
+              {
+                "x": 10,
+                "y": 40
+              },
+              {
+                "x": 30,
+                "y": 40
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -44,7 +44,7 @@ on:
       - "models/**"
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: read
 
 concurrency:
@@ -66,16 +66,167 @@ jobs:
           EOF
           exit 1
 
-  process:
-    name: Process model submission
+  classify:
+    name: Classify changed model files
     if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      mode: ${{ steps.changes.outputs.mode }}
+      model_path: ${{ steps.changes.outputs.model_path }}
+      head_sha: ${{ steps.changes.outputs.head_sha }}
+
+    steps:
+      - name: Check out repository branch without write credentials
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Classify changed files
+        id: changes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_MODEL_PATH: ${{ inputs.model_path }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          set -euo pipefail
+
+          if [ "$EVENT_NAME" != "pull_request" ]; then
+            echo "mode=normal" >> "$GITHUB_OUTPUT"
+            echo "model_path=${INPUT_MODEL_PATH}" >> "$GITHUB_OUTPUT"
+            echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            echo "Selected normal manual-processing mode for ${INPUT_MODEL_PATH}."
+            exit 0
+          fi
+
+          git fetch origin "$BASE_REF" --depth=1
+          python - "origin/${BASE_REF}" HEAD <<'PY'
+          from __future__ import annotations
+
+          import os
+          import subprocess
+          import sys
+
+          base_ref, head_ref = sys.argv[1:]
+          completed = subprocess.run(
+              ["git", "diff", "--name-only", "-z", f"{base_ref}...{head_ref}"],
+              check=True,
+              stdout=subprocess.PIPE,
+          )
+          changed = [
+              path.decode("utf-8").replace("\\", "/").strip("/")
+              for path in completed.stdout.split(b"\0")
+              if path
+          ]
+          if not changed:
+              print("No changed files were detected.", file=sys.stderr)
+              raise SystemExit(2)
+
+          allowed_root = {"catalog.ttl"}
+          generated_model_files = {
+              "ontology.ttl",
+              "metadata.ttl",
+              "metadata-turtle.ttl",
+          }
+          unexpected = []
+          invalid_model_paths = []
+          model_folders = set()
+
+          for path in changed:
+              if path in allowed_root:
+                  continue
+              parts = path.split("/")
+              if not path.startswith("models/"):
+                  unexpected.append(path)
+              elif len(parts) < 3:
+                  invalid_model_paths.append(path)
+              else:
+                  model_folders.add("/".join(parts[:2]))
+
+          if unexpected:
+              print(
+                  "Model-submission PRs may not change files outside the target "
+                  "model folder(s) and generated catalog.ttl:\n"
+                  + "\n".join(f"- {path}" for path in unexpected),
+                  file=sys.stderr,
+              )
+              raise SystemExit(2)
+          if invalid_model_paths:
+              print(
+                  "Changed model paths must be inside a direct model folder:\n"
+                  + "\n".join(f"- {path}" for path in invalid_model_paths),
+                  file=sys.stderr,
+              )
+              raise SystemExit(2)
+          if not model_folders:
+              print(
+                  "Exactly one model folder or a generated-only multi-model "
+                  "change is required; detected no model folders.",
+                  file=sys.stderr,
+              )
+              raise SystemExit(2)
+
+          ordered_folders = sorted(model_folders)
+          if len(ordered_folders) == 1:
+              mode = "normal"
+              model_path = ordered_folders[0]
+          else:
+              disallowed = []
+              for path in changed:
+                  if path in allowed_root:
+                      continue
+                  parts = path.split("/")
+                  if len(parts) != 3:
+                      disallowed.append(path)
+                      continue
+                  file_name = parts[2]
+                  if file_name not in generated_model_files:
+                      disallowed.append(path)
+              if disallowed:
+                  print(
+                      "Multiple model folders are permitted only for generated-"
+                      "artifact maintenance. Contributor-source or unrecognized "
+                      "paths were found:\n"
+                      + "\n".join(f"- {path}" for path in disallowed),
+                      file=sys.stderr,
+                  )
+                  raise SystemExit(2)
+              mode = "bulk-generated"
+              model_path = ""
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"mode={mode}\n")
+              output.write(f"model_path={model_path}\n")
+              output.write(
+                  "head_sha="
+                  + subprocess.check_output(
+                      ["git", "rev-parse", "HEAD"], text=True
+                  ).strip()
+                  + "\n"
+              )
+
+          print(f"Selected mode: {mode}")
+          print("Changed model folders: " + ", ".join(ordered_folders))
+          PY
+
+  process:
+    name: Process model submission
+    needs: classify
+    if: ${{ needs.classify.outputs.mode == 'normal' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
 
     steps:
       - name: Check out repository branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          ref: ${{ github.event_name == 'pull_request' && needs.classify.outputs.head_sha || github.ref_name }}
           fetch-depth: 0
           persist-credentials: true
 
@@ -87,69 +238,9 @@ jobs:
       - name: Install script dependencies
         run: python -m pip install -r scripts/requirements.txt
 
-      - name: Resolve model folder
-        id: model
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          INPUT_MODEL_PATH: ${{ inputs.model_path }}
-          BASE_REF: ${{ github.base_ref }}
-        run: |
-          set -euo pipefail
-
-          if [ "$EVENT_NAME" = "pull_request" ]; then
-            git fetch origin "$BASE_REF" --depth=1
-            model_path="$(python - "origin/${BASE_REF}" HEAD <<'PY'
-          from __future__ import annotations
-
-          import subprocess
-          import sys
-
-          base_ref, head_ref = sys.argv[1:]
-          completed = subprocess.run(
-              ["git", "diff", "--name-only", f"{base_ref}...{head_ref}"],
-              check=True,
-              text=True,
-              stdout=subprocess.PIPE,
-          )
-          changed = [line.strip().replace("\\", "/") for line in completed.stdout.splitlines() if line.strip()]
-          unexpected = []
-          model_folders = set()
-          for path in changed:
-              if path == "catalog.ttl":
-                  continue
-              parts = path.split("/")
-              if len(parts) >= 3 and parts[0] == "models":
-                  model_folders.add("/".join(parts[:2]))
-              else:
-                  unexpected.append(path)
-
-          if unexpected:
-              print(
-                  "Model-submission PRs may change only the target model folder and generated catalog.ttl:\n"
-                  + "\n".join(f"- {path}" for path in unexpected),
-                  file=sys.stderr,
-              )
-              raise SystemExit(2)
-          if len(model_folders) != 1:
-              detected = ", ".join(sorted(model_folders)) or "none"
-              print(
-                  f"Exactly one model folder must be changed by this workflow; detected: {detected}",
-                  file=sys.stderr,
-              )
-              raise SystemExit(2)
-          print(next(iter(model_folders)))
-          PY
-          )"
-          else
-            model_path="$INPUT_MODEL_PATH"
-          fi
-
-          echo "model_path=${model_path}" >> "$GITHUB_OUTPUT"
-          echo "Resolved model folder: ${model_path}"
-
       - name: Process model submission
         env:
-          MODEL_PATH: ${{ steps.model.outputs.model_path }}
+          MODEL_PATH: ${{ needs.classify.outputs.model_path }}
           METADATA_TIMESTAMP: ${{ github.event_name == 'workflow_dispatch' && inputs.metadata_timestamp || 'now' }}
           METADATA_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.metadata_repository || 'OntoUML/ontouml-models' }}
           METADATA_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.metadata_branch || github.base_ref }}
@@ -184,7 +275,7 @@ jobs:
       - name: Commit generated files
         if: ${{ success() && ((github.event_name == 'pull_request') || (github.event_name == 'workflow_dispatch' && !inputs.dry_run && inputs.commit_changes)) }}
         env:
-          MODEL_PATH: ${{ steps.model.outputs.model_path }}
+          MODEL_PATH: ${{ needs.classify.outputs.model_path }}
           EVENT_NAME: ${{ github.event_name }}
           HEAD_REF: ${{ github.head_ref }}
         run: |
@@ -208,3 +299,56 @@ jobs:
           else
             git push
           fi
+
+  validate-bulk-generated-maintenance:
+    name: Validate bulk generated-artifact maintenance
+    needs: classify
+    if: ${{ needs.classify.outputs.mode == 'bulk-generated' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+
+    steps:
+      - name: Check out pull request without write credentials
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.classify.outputs.head_sha }}
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install script dependencies
+        run: python -m pip install -r scripts/requirements.txt
+
+      - name: Check ontology Turtle synchronization
+        run: python scripts/generate_ontology_turtle.py --all --models-dir models --check --quiet
+
+      - name: Check dependent metadata synchronization
+        run: |
+          set -euo pipefail
+          python scripts/generate_turtle_metadata.py --all --models-dir models --allow-missing-license --check --quiet
+          python scripts/metadata_yaml_to_ttl.py --all --models-dir models --allow-missing-license --check --quiet
+          python scripts/generate_catalog_file.py . --check
+
+      - name: Parse all model Turtle files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          from rdflib import Graph
+
+          paths = sorted(Path("models").glob("*/*.ttl"))
+          if not paths:
+              raise SystemExit("No model Turtle files were found.")
+          for path in paths:
+              Graph().parse(path, format="turtle")
+          print(f"Parsed {len(paths)} model Turtle files.")
+          PY
+
+      - name: Confirm validation did not modify the checkout
+        run: git diff --exit-code -- .

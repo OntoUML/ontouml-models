@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 import pytest
+import yaml
 
 
 def load_module():
@@ -90,6 +91,16 @@ def command_by_name(steps, name: str) -> tuple[str, ...]:
         if step.name == name:
             return step.command
     raise AssertionError(f"Step not found: {name}")
+
+
+def load_submission_workflow() -> dict:
+    for parent in Path(__file__).resolve().parents:
+        workflow = parent / ".github" / "workflows" / "process-new-model-submission.yml"
+        if workflow.is_file():
+            return yaml.load(
+                workflow.read_text(encoding="utf-8"), Loader=yaml.BaseLoader
+            )
+    raise AssertionError("Could not locate process-new-model-submission.yml.")
 
 
 def test_resolve_model_folder_accepts_direct_child(tmp_path: Path):
@@ -418,7 +429,7 @@ def test_detect_model_folder_from_changed_files_rejects_multiple_model_folders()
     module = load_module()
 
     with pytest.raises(
-        module.SubmissionProcessingError, match="Exactly one model folder"
+        module.SubmissionProcessingError, match="generated-artifact maintenance"
     ):
         module.detect_model_folder_from_changed_files(
             [
@@ -433,3 +444,131 @@ def test_detect_model_folder_from_changed_files_rejects_direct_models_file():
 
     with pytest.raises(module.SubmissionProcessingError, match="direct model folder"):
         module.detect_model_folder_from_changed_files(["models/metadata.yaml"])
+
+
+def test_classify_changed_files_selects_normal_mode_for_one_model():
+    module = load_module()
+
+    result = module.classify_changed_files(
+        [
+            "models/example-model/metadata.yaml",
+            "models/example-model/ontology.json",
+            "models/example-model/metadata.ttl",
+            "catalog.ttl",
+        ]
+    )
+
+    assert result.mode == module.NORMAL_SUBMISSION_MODE
+    assert result.model_folder == "models/example-model"
+    assert result.model_folders == ("models/example-model",)
+
+
+def test_classify_changed_files_selects_bulk_mode_for_generated_artifacts():
+    module = load_module()
+
+    result = module.classify_changed_files(
+        [
+            "models/model-b/metadata-turtle.ttl",
+            "models/model-a/ontology.ttl",
+            "models/model-a/metadata.ttl",
+            "catalog.ttl",
+        ]
+    )
+
+    assert result.mode == module.BULK_GENERATED_MODE
+    assert result.model_folder is None
+    assert result.model_folders == ("models/model-a", "models/model-b")
+
+
+@pytest.mark.parametrize(
+    "source_path",
+    [
+        "models/model-b/metadata.yaml",
+        "models/model-b/ontology.json",
+        "models/model-b/ontology.vpp",
+        "models/model-b/references.bib",
+        "models/model-b/new-diagrams/diagram.png",
+    ],
+)
+def test_classify_changed_files_rejects_sources_in_multi_model_pr(source_path: str):
+    module = load_module()
+
+    with pytest.raises(
+        module.SubmissionProcessingError, match="generated-artifact maintenance"
+    ):
+        module.classify_changed_files(
+            ["models/model-a/ontology.ttl", source_path]
+        )
+
+
+@pytest.mark.parametrize(
+    "unexpected_path",
+    [
+        "models/model-b/metadata-json.ttl",
+        "models/model-b/metadata-vpp.ttl",
+        "models/model-b/metadata-png-o-diagram.ttl",
+        "models/model-b/metadata-custom.ttl",
+        "models/model-b/generated/ontology.ttl",
+    ],
+)
+def test_classify_changed_files_rejects_unrecognized_bulk_artifacts(
+    unexpected_path: str,
+):
+    module = load_module()
+
+    with pytest.raises(
+        module.SubmissionProcessingError, match="unrecognized paths"
+    ):
+        module.classify_changed_files(
+            ["models/model-a/ontology.ttl", unexpected_path]
+        )
+
+
+def test_classify_changed_files_rejects_catalog_without_model_folder():
+    module = load_module()
+
+    with pytest.raises(module.SubmissionProcessingError, match="no model folders"):
+        module.classify_changed_files(["catalog.ttl"])
+
+
+def test_bulk_workflow_mode_is_read_only_and_normal_mode_retains_write_scope():
+    workflow = load_submission_workflow()
+    jobs = workflow["jobs"]
+    classify_job = jobs["classify"]
+    normal_job = jobs["process"]
+    bulk_job = jobs["validate-bulk-generated-maintenance"]
+
+    assert workflow["permissions"]["contents"] == "read"
+    assert classify_job["permissions"]["contents"] == "read"
+    assert classify_job["steps"][0]["with"]["persist-credentials"] == "false"
+    classify_command = classify_job["steps"][1]["run"]
+    assert '"metadata-json.ttl"' not in classify_command
+    assert '"metadata-vpp.ttl"' not in classify_command
+    assert "metadata-png-" not in classify_command
+    assert normal_job["permissions"]["contents"] == "write"
+    assert "mode == 'normal'" in normal_job["if"]
+    assert bulk_job["permissions"]["contents"] == "read"
+    assert "mode == 'bulk-generated'" in bulk_job["if"]
+    assert bulk_job["steps"][0]["with"]["persist-credentials"] == "false"
+
+    bulk_commands = "\n".join(
+        step.get("run", "") for step in bulk_job["steps"]
+    )
+    assert "generate_ontology_turtle.py --all --models-dir models --check" in (
+        bulk_commands
+    )
+    assert "generate_turtle_metadata.py --all" in bulk_commands
+    assert "metadata_yaml_to_ttl.py --all" in bulk_commands
+    assert "generate_catalog_file.py . --check" in bulk_commands
+    assert "git diff --exit-code -- ." in bulk_commands
+    assert "git push" not in bulk_commands
+
+
+def test_normal_pr_checkout_is_pinned_to_classified_head_sha():
+    workflow = load_submission_workflow()
+    classify_job = workflow["jobs"]["classify"]
+    normal_job = workflow["jobs"]["process"]
+
+    assert classify_job["outputs"]["head_sha"] == "${{ steps.changes.outputs.head_sha }}"
+    checkout_ref = normal_job["steps"][0]["with"]["ref"]
+    assert "needs.classify.outputs.head_sha" in checkout_ref

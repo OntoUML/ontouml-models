@@ -7,6 +7,10 @@ on:
       - "models/**"
       - "catalog.yaml"
       - "catalog.ttl"
+      - "scripts/requirements.txt"
+      - "scripts/generate_ontology_turtle.py"
+      - "scripts/tests/test_generate_ontology_turtle.py"
+      - "scripts/tests/fixtures/json2graph/**"
       - "scripts/generate_catalog_file.py"
       - "scripts/tests/test_generate_catalog_file.py"
       - "scripts/generate_release_file.py"
@@ -68,6 +72,9 @@ jobs:
 
       - name: Install script dependencies
         run: python -m pip install -r scripts/requirements.txt
+
+      - name: Run ontology Turtle generator tests
+        run: python -m pytest -q scripts/tests/test_generate_ontology_turtle.py
 
       - name: Run catalog-generator tests
         run: python -m pytest -q scripts/tests/test_generate_catalog_file.py
