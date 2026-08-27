@@ -1,804 +1,1227 @@
-@prefix : <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling/> rdf:type ontouml:Project;
-    ontouml:name "ontology"@en;
-    ontouml:model :BBPW2f6GAqAAaABO_root;
-    ontouml:diagram <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#0p_W2f6GAqAAaAWf>.
-:BBPW2f6GAqAAaABO_root rdf:type ontouml:Package;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "ontology"@en;
-    ontouml:containsModelElement :I31HDf6AUB1CSiLR.
-:I31HDf6AUB1CSiLR rdf:type ontouml:Package;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Robotic"@en;
-    ontouml:containsModelElement :ZsI22f6GAqAAaAW0, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH>, :Ru422f6GAqAAaAXY, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXj>, :CGC22f6GAqAAaAX1, :S1i22f6GAqAAaAYA, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#55K22f6GAqAAaAYX>, :XFa22f6GAqAAaAYi, :S_n22f6GAqAAaAd2, :UjgO2f6GAqAAaAeX, :MPIO2f6GAqAAaAek, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev>, :AXKO2f6GAqAAaAgC, :MKm22f6GAqAAaAYs, :NNm22f6GAqAAaAY4, :JzW22f6GAqAAaAZG, :La222f6GAqAAaAZT, :U1O22f6GAqAAaAZd, :O2u22f6GAqAAaAZr, :LVe22f6GAqAAaAZ5, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaD>, :Ndv22f6GAqAAaAeF, :rtkO2f6GAqAAaAe4, :J3UO2f6GAqAAaAfC, :t3iO2f6GAqAAaAfw, :PkuO2f6GAqAAaAgR, :IDuO2f6GAqAAaAgb.
-:ZsI22f6GAqAAaAW0 rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Patient"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH> rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Being Supported"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Ru422f6GAqAAaAXY rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "BalanceSupport"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXj> rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Balance Supporter"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:CGC22f6GAqAAaAX1 rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Being Lifted"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:S1i22f6GAqAAaAYA rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "LiftUp"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#55K22f6GAqAAaAYX> rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Object Lifter"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:XFa22f6GAqAAaAYi rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Robot Handle"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:S_n22f6GAqAAaAd2 rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Robot"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:UjgO2f6GAqAAaAeX rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Electricity Consumer"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:MPIO2f6GAqAAaAek rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Electricity Source"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev> rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Battery"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:AXKO2f6GAqAAaAgC rdf:type ontouml:Class;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Electricity Consumption"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:MKm22f6GAqAAaAYs rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "play"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :iKm22f6GAqAAaAYu;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#6Km22f6GAqAAaAYx>;
-    ontouml:relationEnd :iKm22f6GAqAAaAYu, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#6Km22f6GAqAAaAYx>.
-:NNm22f6GAqAAaAY4 rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "play"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :NNm22f6GAqAAaAY5;
-    ontouml:targetEnd :NNm22f6GAqAAaAY7;
-    ontouml:relationEnd :NNm22f6GAqAAaAY5, :NNm22f6GAqAAaAY7.
-:JzW22f6GAqAAaAZG rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :JzW22f6GAqAAaAZH;
-    ontouml:targetEnd :JzW22f6GAqAAaAZJ;
-    ontouml:relationEnd :JzW22f6GAqAAaAZH, :JzW22f6GAqAAaAZJ.
-:La222f6GAqAAaAZT rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :La222f6GAqAAaAZU;
-    ontouml:targetEnd :La222f6GAqAAaAZW;
-    ontouml:relationEnd :La222f6GAqAAaAZU, :La222f6GAqAAaAZW.
-:U1O22f6GAqAAaAZd rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "play"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :U1O22f6GAqAAaAZe;
-    ontouml:targetEnd :U1O22f6GAqAAaAZg;
-    ontouml:relationEnd :U1O22f6GAqAAaAZe, :U1O22f6GAqAAaAZg.
-:O2u22f6GAqAAaAZr rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "play"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :O2u22f6GAqAAaAZs;
-    ontouml:targetEnd :O2u22f6GAqAAaAZu;
-    ontouml:relationEnd :O2u22f6GAqAAaAZs, :O2u22f6GAqAAaAZu.
-:LVe22f6GAqAAaAZ5 rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :LVe22f6GAqAAaAZ6;
-    ontouml:targetEnd :LVe22f6GAqAAaAZ8;
-    ontouml:relationEnd :LVe22f6GAqAAaAZ6, :LVe22f6GAqAAaAZ8.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaD> rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaE>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#t..22f6GAqAAaAaG>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaE>, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#t..22f6GAqAAaAaG>.
-:Ndv22f6GAqAAaAeF rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "ispartof"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :Ndv22f6GAqAAaAeG;
-    ontouml:targetEnd :Ndv22f6GAqAAaAeI;
-    ontouml:relationEnd :Ndv22f6GAqAAaAeG, :Ndv22f6GAqAAaAeI.
-:rtkO2f6GAqAAaAe4 rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "play"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :rtkO2f6GAqAAaAe5;
-    ontouml:targetEnd :rtkO2f6GAqAAaAe7;
-    ontouml:relationEnd :rtkO2f6GAqAAaAe5, :rtkO2f6GAqAAaAe7.
-:J3UO2f6GAqAAaAfC rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "play"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :J3UO2f6GAqAAaAfD;
-    ontouml:targetEnd :p3UO2f6GAqAAaAfF;
-    ontouml:relationEnd :J3UO2f6GAqAAaAfD, :p3UO2f6GAqAAaAfF.
-:t3iO2f6GAqAAaAfw rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "ispartof"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :t3iO2f6GAqAAaAfx;
-    ontouml:targetEnd :t3iO2f6GAqAAaAfz;
-    ontouml:relationEnd :t3iO2f6GAqAAaAfx, :t3iO2f6GAqAAaAfz.
-:PkuO2f6GAqAAaAgR rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :PkuO2f6GAqAAaAgS;
-    ontouml:targetEnd :PkuO2f6GAqAAaAgU;
-    ontouml:relationEnd :PkuO2f6GAqAAaAgS, :PkuO2f6GAqAAaAgU.
-:IDuO2f6GAqAAaAgb rdf:type ontouml:Relation;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :IDuO2f6GAqAAaAgc;
-    ontouml:targetEnd :IDuO2f6GAqAAaAge;
-    ontouml:relationEnd :IDuO2f6GAqAAaAgc, :IDuO2f6GAqAAaAge.
-:iKm22f6GAqAAaAYu rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :iKm22f6GAqAAaAYu_cardinality.
-:iKm22f6GAqAAaAYu_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:iKm22f6GAqAAaAYu ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :ZsI22f6GAqAAaAW0.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#6Km22f6GAqAAaAYx> rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#6Km22f6GAqAAaAYx_cardinality>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#6Km22f6GAqAAaAYx_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#6Km22f6GAqAAaAYx> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH>.
-:NNm22f6GAqAAaAY5 rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :NNm22f6GAqAAaAY5_cardinality.
-:NNm22f6GAqAAaAY5_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:NNm22f6GAqAAaAY5 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :ZsI22f6GAqAAaAW0.
-:NNm22f6GAqAAaAY7 rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name ""@en;
-    ontouml:cardinality :NNm22f6GAqAAaAY7_cardinality.
-:NNm22f6GAqAAaAY7_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:NNm22f6GAqAAaAY7 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :CGC22f6GAqAAaAX1.
-:JzW22f6GAqAAaAZH rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :JzW22f6GAqAAaAZH_cardinality.
-:JzW22f6GAqAAaAZH_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:JzW22f6GAqAAaAZH ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH>.
-:JzW22f6GAqAAaAZJ rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :JzW22f6GAqAAaAZJ_cardinality.
-:JzW22f6GAqAAaAZJ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:JzW22f6GAqAAaAZJ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Ru422f6GAqAAaAXY.
-:La222f6GAqAAaAZU rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :La222f6GAqAAaAZU_cardinality.
-:La222f6GAqAAaAZU_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:La222f6GAqAAaAZU ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Ru422f6GAqAAaAXY.
-:La222f6GAqAAaAZW rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :La222f6GAqAAaAZW_cardinality.
-:La222f6GAqAAaAZW_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:La222f6GAqAAaAZW ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXj>.
-:U1O22f6GAqAAaAZe rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :U1O22f6GAqAAaAZe_cardinality.
-:U1O22f6GAqAAaAZe_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:U1O22f6GAqAAaAZe ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :XFa22f6GAqAAaAYi.
-:U1O22f6GAqAAaAZg rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name ""@en;
-    ontouml:cardinality :U1O22f6GAqAAaAZg_cardinality.
-:U1O22f6GAqAAaAZg_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:U1O22f6GAqAAaAZg ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXj>.
-:O2u22f6GAqAAaAZs rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name ""@en;
-    ontouml:cardinality :O2u22f6GAqAAaAZs_cardinality.
-:O2u22f6GAqAAaAZs_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:O2u22f6GAqAAaAZs ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :XFa22f6GAqAAaAYi.
-:O2u22f6GAqAAaAZu rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name ""@en;
-    ontouml:cardinality :O2u22f6GAqAAaAZu_cardinality.
-:O2u22f6GAqAAaAZu_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:O2u22f6GAqAAaAZu ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#55K22f6GAqAAaAYX>.
-:LVe22f6GAqAAaAZ6 rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :LVe22f6GAqAAaAZ6_cardinality.
-:LVe22f6GAqAAaAZ6_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:LVe22f6GAqAAaAZ6 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :CGC22f6GAqAAaAX1.
-:LVe22f6GAqAAaAZ8 rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :LVe22f6GAqAAaAZ8_cardinality.
-:LVe22f6GAqAAaAZ8_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:LVe22f6GAqAAaAZ8 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :S1i22f6GAqAAaAYA.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaE> rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaE_cardinality>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaE_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#N..22f6GAqAAaAaE> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :S1i22f6GAqAAaAYA.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#t..22f6GAqAAaAaG> rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#t..22f6GAqAAaAaG_cardinality>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#t..22f6GAqAAaAaG_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#t..22f6GAqAAaAaG> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#55K22f6GAqAAaAYX>.
-:Ndv22f6GAqAAaAeG rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :Ndv22f6GAqAAaAeG_cardinality.
-:Ndv22f6GAqAAaAeG_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:Ndv22f6GAqAAaAeG ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :XFa22f6GAqAAaAYi.
-:Ndv22f6GAqAAaAeI rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :Ndv22f6GAqAAaAeI_cardinality.
-:Ndv22f6GAqAAaAeI_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:Ndv22f6GAqAAaAeI ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :S_n22f6GAqAAaAd2.
-:rtkO2f6GAqAAaAe5 rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :rtkO2f6GAqAAaAe5_cardinality.
-:rtkO2f6GAqAAaAe5_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:rtkO2f6GAqAAaAe5 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :S_n22f6GAqAAaAd2.
-:rtkO2f6GAqAAaAe7 rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :rtkO2f6GAqAAaAe7_cardinality.
-:rtkO2f6GAqAAaAe7_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:rtkO2f6GAqAAaAe7 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :UjgO2f6GAqAAaAeX.
-:J3UO2f6GAqAAaAfD rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :J3UO2f6GAqAAaAfD_cardinality.
-:J3UO2f6GAqAAaAfD_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:J3UO2f6GAqAAaAfD ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev>.
-:p3UO2f6GAqAAaAfF rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :p3UO2f6GAqAAaAfF_cardinality.
-:p3UO2f6GAqAAaAfF_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:p3UO2f6GAqAAaAfF ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :MPIO2f6GAqAAaAek.
-:t3iO2f6GAqAAaAfx rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :t3iO2f6GAqAAaAfx_cardinality.
-:t3iO2f6GAqAAaAfx_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:t3iO2f6GAqAAaAfx ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev>.
-:t3iO2f6GAqAAaAfz rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :t3iO2f6GAqAAaAfz_cardinality.
-:t3iO2f6GAqAAaAfz_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:t3iO2f6GAqAAaAfz ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :S_n22f6GAqAAaAd2.
-:PkuO2f6GAqAAaAgS rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :PkuO2f6GAqAAaAgS_cardinality.
-:PkuO2f6GAqAAaAgS_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:PkuO2f6GAqAAaAgS ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :AXKO2f6GAqAAaAgC.
-:PkuO2f6GAqAAaAgU rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :PkuO2f6GAqAAaAgU_cardinality.
-:PkuO2f6GAqAAaAgU_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:PkuO2f6GAqAAaAgU ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :UjgO2f6GAqAAaAeX.
-:IDuO2f6GAqAAaAgc rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :IDuO2f6GAqAAaAgc_cardinality.
-:IDuO2f6GAqAAaAgc_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:IDuO2f6GAqAAaAgc ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :AXKO2f6GAqAAaAgC.
-:IDuO2f6GAqAAaAge rdf:type ontouml:Property;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:cardinality :IDuO2f6GAqAAaAge_cardinality.
-:IDuO2f6GAqAAaAge_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:IDuO2f6GAqAAaAge ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :MPIO2f6GAqAAaAek.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#0p_W2f6GAqAAaAWf> rdf:type ontouml:Diagram;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:name "Robotic Strolling System"@en;
-    ontouml:containsView :v3iO2f6GAqAAaAf1, :UjgO2f6GAqAAaAeW, :aDuO2f6GAqAAaAgg, :Z5K22f6GAqAAaAYW, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXi>, :RsI22f6GAqAAaAWz, :Pa222f6GAqAAaAZY, :IdkO2f6GAqAAaAe9, :cUuO2f6GAqAAaAgW, :AXKO2f6GAqAAaAgB, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI>, :MPIO2f6GAqAAaAej, :ex4O2f6GAqAAaAeu, :CGC22f6GAqAAaAX0, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi>, :JKm22f6GAqAAaAYz, :Z2u22f6GAqAAaAZw, :nFa22f6GAqAAaAYh, :S1i22f6GAqAAaAX_, :eTo22f6GAqAAaAXG, :d3UO2f6GAqAAaAfH, :i_n22f6GAqAAaAd1, :bNm22f6GAqAAaAY9, :hu422f6GAqAAaAXX, :vdv22f6GAqAAaAeK, <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ.>, :DzW22f6GAqAAaAZL.
-:UjgO2f6GAqAAaAeW rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :UjgO2f6GAqAAaAeX;
-    ontouml:shape :UjgO2f6GAqAAaAeW_shape.
-:Z5K22f6GAqAAaAYW rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#55K22f6GAqAAaAYX>;
-    ontouml:shape :Z5K22f6GAqAAaAYW_shape.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXi> rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXj>;
-    ontouml:shape <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXi_shape>.
-:RsI22f6GAqAAaAWz rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :ZsI22f6GAqAAaAW0;
-    ontouml:shape :RsI22f6GAqAAaAWz_shape.
-:AXKO2f6GAqAAaAgB rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :AXKO2f6GAqAAaAgC;
-    ontouml:shape :AXKO2f6GAqAAaAgB_shape.
-:MPIO2f6GAqAAaAej rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :MPIO2f6GAqAAaAek;
-    ontouml:shape :MPIO2f6GAqAAaAej_shape.
-:ex4O2f6GAqAAaAeu rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev>;
-    ontouml:shape :ex4O2f6GAqAAaAeu_shape.
-:CGC22f6GAqAAaAX0 rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :CGC22f6GAqAAaAX1;
-    ontouml:shape :CGC22f6GAqAAaAX0_shape.
-:nFa22f6GAqAAaAYh rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :XFa22f6GAqAAaAYi;
-    ontouml:shape :nFa22f6GAqAAaAYh_shape.
-:S1i22f6GAqAAaAX_ rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :S1i22f6GAqAAaAYA;
-    ontouml:shape :S1i22f6GAqAAaAX__shape.
-:eTo22f6GAqAAaAXG rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH>;
-    ontouml:shape :eTo22f6GAqAAaAXG_shape.
-:i_n22f6GAqAAaAd1 rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :S_n22f6GAqAAaAd2;
-    ontouml:shape :i_n22f6GAqAAaAd1_shape.
-:hu422f6GAqAAaAXX rdf:type ontouml:ClassView;
-    ontouml:project :BBPW2f6GAqAAaABO;
-    ontouml:isViewOf :Ru422f6GAqAAaAXY;
-    ontouml:shape :hu422f6GAqAAaAXX_shape.
-:UjgO2f6GAqAAaAeW_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "128"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :UjgO2f6GAqAAaAeW_shape_point.
-:UjgO2f6GAqAAaAeW_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 459;
-    ontouml:yCoordinate 296.
-:Z5K22f6GAqAAaAYW_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "81"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Z5K22f6GAqAAaAYW_shape_point.
-:Z5K22f6GAqAAaAYW_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 301;
-    ontouml:yCoordinate 400.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXi_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "113"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXi_shape_point>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#Y.022f6GAqAAaAXi_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 93;
-    ontouml:yCoordinate 400.
-:RsI22f6GAqAAaAWz_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :RsI22f6GAqAAaAWz_shape_point.
-:RsI22f6GAqAAaAWz_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 107;
-    ontouml:yCoordinate 87.
-:AXKO2f6GAqAAaAgB_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "146"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :AXKO2f6GAqAAaAgB_shape_point.
-:AXKO2f6GAqAAaAgB_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 525;
-    ontouml:yCoordinate 192.
-:MPIO2f6GAqAAaAej_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "108"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :MPIO2f6GAqAAaAej_shape_point.
-:MPIO2f6GAqAAaAej_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 639;
-    ontouml:yCoordinate 296.
-:ex4O2f6GAqAAaAeu_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :ex4O2f6GAqAAaAeu_shape_point.
-:ex4O2f6GAqAAaAeu_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 650;
-    ontouml:yCoordinate 504.
-:CGC22f6GAqAAaAX0_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :CGC22f6GAqAAaAX0_shape_point.
-:CGC22f6GAqAAaAX0_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 301;
-    ontouml:yCoordinate 192.
-:nFa22f6GAqAAaAYh_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "87"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :nFa22f6GAqAAaAYh_shape_point.
-:nFa22f6GAqAAaAYh_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 201;
-    ontouml:yCoordinate 504.
-:S1i22f6GAqAAaAX__shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "81"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :S1i22f6GAqAAaAX__shape_point.
-:S1i22f6GAqAAaAX__shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 301;
-    ontouml:yCoordinate 296.
-:eTo22f6GAqAAaAXG_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "104"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :eTo22f6GAqAAaAXG_shape_point.
-:eTo22f6GAqAAaAXG_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 98;
-    ontouml:yCoordinate 192.
-:i_n22f6GAqAAaAd1_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :i_n22f6GAqAAaAd1_shape_point.
-:i_n22f6GAqAAaAd1_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 479;
-    ontouml:yCoordinate 504.
-:hu422f6GAqAAaAXX_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "98"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :hu422f6GAqAAaAXX_shape_point.
-:hu422f6GAqAAaAXX_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 102;
-    ontouml:yCoordinate 296.
-:v3iO2f6GAqAAaAf1_path rdf:type ontouml:Path;
-    ontouml:point :v3iO2f6GAqAAaAf1_path_point_0.
-:v3iO2f6GAqAAaAf1_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 649;
-    ontouml:yCoordinate 524.
-:v3iO2f6GAqAAaAf1_path ontouml:point :v3iO2f6GAqAAaAf1_path_point_1.
-:v3iO2f6GAqAAaAf1_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 560;
-    ontouml:yCoordinate 524.
-:aDuO2f6GAqAAaAgg_path rdf:type ontouml:Path;
-    ontouml:point :aDuO2f6GAqAAaAgg_path_point_0.
-:aDuO2f6GAqAAaAgg_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 649;
-    ontouml:yCoordinate 233.
-:aDuO2f6GAqAAaAgg_path ontouml:point :aDuO2f6GAqAAaAgg_path_point_1.
-:aDuO2f6GAqAAaAgg_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 649;
-    ontouml:yCoordinate 295.
-:Pa222f6GAqAAaAZY_path rdf:type ontouml:Path;
-    ontouml:point :Pa222f6GAqAAaAZY_path_point_0.
-:Pa222f6GAqAAaAZY_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 149;
-    ontouml:yCoordinate 337.
-:Pa222f6GAqAAaAZY_path ontouml:point :Pa222f6GAqAAaAZY_path_point_1.
-:Pa222f6GAqAAaAZY_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 149;
-    ontouml:yCoordinate 399.
-:IdkO2f6GAqAAaAe9_path rdf:type ontouml:Path;
-    ontouml:point :IdkO2f6GAqAAaAe9_path_point_0.
-:IdkO2f6GAqAAaAe9_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 523;
-    ontouml:yCoordinate 503.
-:IdkO2f6GAqAAaAe9_path ontouml:point :IdkO2f6GAqAAaAe9_path_point_1.
-:IdkO2f6GAqAAaAe9_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 523;
-    ontouml:yCoordinate 337.
-:cUuO2f6GAqAAaAgW_path rdf:type ontouml:Path;
-    ontouml:point :cUuO2f6GAqAAaAgW_path_point_0.
-:cUuO2f6GAqAAaAgW_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 545;
-    ontouml:yCoordinate 233.
-:cUuO2f6GAqAAaAgW_path ontouml:point :cUuO2f6GAqAAaAgW_path_point_1.
-:cUuO2f6GAqAAaAgW_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 545;
-    ontouml:yCoordinate 295.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI_path_point_0>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 340;
-    ontouml:yCoordinate 337.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI_path> ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI_path_point_1>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#7..22f6GAqAAaAaI_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 340;
-    ontouml:yCoordinate 399.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path_point_0>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 200;
-    ontouml:yCoordinate 524.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path> ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path_point_1>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 145;
-    ontouml:yCoordinate 524.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path> ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path_point_2>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#81O22f6GAqAAaAZi_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 145;
-    ontouml:yCoordinate 441.
-:JKm22f6GAqAAaAYz_path rdf:type ontouml:Path;
-    ontouml:point :JKm22f6GAqAAaAYz_path_point_0.
-:JKm22f6GAqAAaAYz_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 147;
-    ontouml:yCoordinate 128.
-:JKm22f6GAqAAaAYz_path ontouml:point :JKm22f6GAqAAaAYz_path_point_1.
-:JKm22f6GAqAAaAYz_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 147;
-    ontouml:yCoordinate 191.
-:Z2u22f6GAqAAaAZw_path rdf:type ontouml:Path;
-    ontouml:point :Z2u22f6GAqAAaAZw_path_point_0.
-:Z2u22f6GAqAAaAZw_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 289;
-    ontouml:yCoordinate 511.
-:Z2u22f6GAqAAaAZw_path ontouml:point :Z2u22f6GAqAAaAZw_path_point_1.
-:Z2u22f6GAqAAaAZw_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 343;
-    ontouml:yCoordinate 511.
-:Z2u22f6GAqAAaAZw_path ontouml:point :Z2u22f6GAqAAaAZw_path_point_2.
-:Z2u22f6GAqAAaAZw_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 343;
-    ontouml:yCoordinate 441.
-:d3UO2f6GAqAAaAfH_path rdf:type ontouml:Path;
-    ontouml:point :d3UO2f6GAqAAaAfH_path_point_0.
-:d3UO2f6GAqAAaAfH_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 695;
-    ontouml:yCoordinate 503.
-:d3UO2f6GAqAAaAfH_path ontouml:point :d3UO2f6GAqAAaAfH_path_point_1.
-:d3UO2f6GAqAAaAfH_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 695;
-    ontouml:yCoordinate 337.
-:bNm22f6GAqAAaAY9_path rdf:type ontouml:Path;
-    ontouml:point :bNm22f6GAqAAaAY9_path_point_0.
-:bNm22f6GAqAAaAY9_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 188;
-    ontouml:yCoordinate 107.
-:bNm22f6GAqAAaAY9_path ontouml:point :bNm22f6GAqAAaAY9_path_point_1.
-:bNm22f6GAqAAaAY9_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 341;
-    ontouml:yCoordinate 107.
-:bNm22f6GAqAAaAY9_path ontouml:point :bNm22f6GAqAAaAY9_path_point_2.
-:bNm22f6GAqAAaAY9_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 341;
-    ontouml:yCoordinate 191.
-:vdv22f6GAqAAaAeK_path rdf:type ontouml:Path;
-    ontouml:point :vdv22f6GAqAAaAeK_path_point_0.
-:vdv22f6GAqAAaAeK_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 289;
-    ontouml:yCoordinate 532.
-:vdv22f6GAqAAaAeK_path ontouml:point :vdv22f6GAqAAaAeK_path_point_1.
-:vdv22f6GAqAAaAeK_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 478;
-    ontouml:yCoordinate 532.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ._path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ._path_point_0>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ._path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 343;
-    ontouml:yCoordinate 233.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ._path> ontouml:point <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ._path_point_1>.
-<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ._path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 343;
-    ontouml:yCoordinate 295.
-:DzW22f6GAqAAaAZL_path rdf:type ontouml:Path;
-    ontouml:point :DzW22f6GAqAAaAZL_path_point_0.
-:DzW22f6GAqAAaAZL_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 149;
-    ontouml:yCoordinate 233.
-:DzW22f6GAqAAaAZL_path ontouml:point :DzW22f6GAqAAaAZL_path_point_1.
-:DzW22f6GAqAAaAZL_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 149;
-    ontouml:yCoordinate 295.
+:0p_W2f6GAqAAaAWf a ontouml:Diagram ;
+    ontouml:containsView :7..22f6GAqAAaAaI,
+        :81O22f6GAqAAaAZi,
+        :AXKO2f6GAqAAaAgB,
+        :CGC22f6GAqAAaAX0,
+        :DzW22f6GAqAAaAZL,
+        :IdkO2f6GAqAAaAe9,
+        :JKm22f6GAqAAaAYz,
+        :MPIO2f6GAqAAaAej,
+        :Pa222f6GAqAAaAZY,
+        :RsI22f6GAqAAaAWz,
+        :S1i22f6GAqAAaAX_,
+        :UjgO2f6GAqAAaAeW,
+        :Y.022f6GAqAAaAXi,
+        :Z2u22f6GAqAAaAZw,
+        :Z5K22f6GAqAAaAYW,
+        :aDuO2f6GAqAAaAgg,
+        :bNm22f6GAqAAaAY9,
+        :cUuO2f6GAqAAaAgW,
+        :d3UO2f6GAqAAaAfH,
+        :eTo22f6GAqAAaAXG,
+        :ex4O2f6GAqAAaAeu,
+        <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ.>,
+        :hu422f6GAqAAaAXX,
+        :i_n22f6GAqAAaAd1,
+        :nFa22f6GAqAAaAYh,
+        :v3iO2f6GAqAAaAf1,
+        :vdv22f6GAqAAaAeK ;
+    ontouml:name "Robotic Strolling System"@en ;
+    ontouml:owner :I31HDf6AUB1CSiLR ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:6Km22f6GAqAAaAYx_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:7..22f6GAqAAaAaI a ontouml:RelationView ;
+    ontouml:isViewOf :N..22f6GAqAAaAaD ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :7..22f6GAqAAaAaI_path ;
+    ontouml:sourceView :S1i22f6GAqAAaAX_ ;
+    ontouml:targetView :Z5K22f6GAqAAaAYW .
+
+:7..22f6GAqAAaAaI_path a ontouml:Path ;
+    ontouml:point :7..22f6GAqAAaAaI_path_point_0,
+        :7..22f6GAqAAaAaI_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:7..22f6GAqAAaAaI_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 340 ;
+    ontouml:yCoordinate 337 .
+
+:7..22f6GAqAAaAaI_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 340 ;
+    ontouml:yCoordinate 399 .
+
+:81O22f6GAqAAaAZi a ontouml:RelationView ;
+    ontouml:isViewOf :U1O22f6GAqAAaAZd ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :81O22f6GAqAAaAZi_path ;
+    ontouml:sourceView :nFa22f6GAqAAaAYh ;
+    ontouml:targetView :Y.022f6GAqAAaAXi .
+
+:81O22f6GAqAAaAZi_path a ontouml:Path ;
+    ontouml:point :81O22f6GAqAAaAZi_path_point_0,
+        :81O22f6GAqAAaAZi_path_point_1,
+        :81O22f6GAqAAaAZi_path_point_2 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:81O22f6GAqAAaAZi_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 200 ;
+    ontouml:yCoordinate 524 .
+
+:81O22f6GAqAAaAZi_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 145 ;
+    ontouml:yCoordinate 524 .
+
+:81O22f6GAqAAaAZi_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 145 ;
+    ontouml:yCoordinate 441 .
+
+:AXKO2f6GAqAAaAgB_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :AXKO2f6GAqAAaAgB_shape_point ;
+    ontouml:width "146"^^xsd:nonNegativeInteger .
+
+:AXKO2f6GAqAAaAgB_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 525 ;
+    ontouml:yCoordinate 192 .
+
+:BBPW2f6GAqAAaABO_root a ontouml:Package ;
+    ontouml:containsModelElement :I31HDf6AUB1CSiLR ;
+    ontouml:name "ontology"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:CGC22f6GAqAAaAX0_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :CGC22f6GAqAAaAX0_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:CGC22f6GAqAAaAX0_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 301 ;
+    ontouml:yCoordinate 192 .
+
+:DzW22f6GAqAAaAZL a ontouml:RelationView ;
+    ontouml:isViewOf :JzW22f6GAqAAaAZG ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :DzW22f6GAqAAaAZL_path ;
+    ontouml:sourceView :eTo22f6GAqAAaAXG ;
+    ontouml:targetView :hu422f6GAqAAaAXX .
+
+:DzW22f6GAqAAaAZL_path a ontouml:Path ;
+    ontouml:point :DzW22f6GAqAAaAZL_path_point_0,
+        :DzW22f6GAqAAaAZL_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:DzW22f6GAqAAaAZL_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 149 ;
+    ontouml:yCoordinate 233 .
+
+:DzW22f6GAqAAaAZL_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 149 ;
+    ontouml:yCoordinate 295 .
+
+:IDuO2f6GAqAAaAgc_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:IDuO2f6GAqAAaAge_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:IdkO2f6GAqAAaAe9 a ontouml:RelationView ;
+    ontouml:isViewOf :rtkO2f6GAqAAaAe4 ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :IdkO2f6GAqAAaAe9_path ;
+    ontouml:sourceView :i_n22f6GAqAAaAd1 ;
+    ontouml:targetView :UjgO2f6GAqAAaAeW .
+
+:IdkO2f6GAqAAaAe9_path a ontouml:Path ;
+    ontouml:point :IdkO2f6GAqAAaAe9_path_point_0,
+        :IdkO2f6GAqAAaAe9_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:IdkO2f6GAqAAaAe9_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 523 ;
+    ontouml:yCoordinate 503 .
+
+:IdkO2f6GAqAAaAe9_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 523 ;
+    ontouml:yCoordinate 337 .
+
+:J3UO2f6GAqAAaAfD_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:JKm22f6GAqAAaAYz a ontouml:RelationView ;
+    ontouml:isViewOf :MKm22f6GAqAAaAYs ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :JKm22f6GAqAAaAYz_path ;
+    ontouml:sourceView :RsI22f6GAqAAaAWz ;
+    ontouml:targetView :eTo22f6GAqAAaAXG .
+
+:JKm22f6GAqAAaAYz_path a ontouml:Path ;
+    ontouml:point :JKm22f6GAqAAaAYz_path_point_0,
+        :JKm22f6GAqAAaAYz_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:JKm22f6GAqAAaAYz_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 147 ;
+    ontouml:yCoordinate 128 .
+
+:JKm22f6GAqAAaAYz_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 147 ;
+    ontouml:yCoordinate 191 .
+
+:JzW22f6GAqAAaAZH_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:JzW22f6GAqAAaAZJ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:LVe22f6GAqAAaAZ6_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:LVe22f6GAqAAaAZ8_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:La222f6GAqAAaAZU_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:La222f6GAqAAaAZW_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:MPIO2f6GAqAAaAej_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :MPIO2f6GAqAAaAej_shape_point ;
+    ontouml:width "108"^^xsd:nonNegativeInteger .
+
+:MPIO2f6GAqAAaAej_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 639 ;
+    ontouml:yCoordinate 296 .
+
+:N..22f6GAqAAaAaE_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:NNm22f6GAqAAaAY5_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:NNm22f6GAqAAaAY7_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:Ndv22f6GAqAAaAeG_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:Ndv22f6GAqAAaAeI_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:O2u22f6GAqAAaAZs_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:O2u22f6GAqAAaAZu_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:Pa222f6GAqAAaAZY a ontouml:RelationView ;
+    ontouml:isViewOf :La222f6GAqAAaAZT ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :Pa222f6GAqAAaAZY_path ;
+    ontouml:sourceView :hu422f6GAqAAaAXX ;
+    ontouml:targetView :Y.022f6GAqAAaAXi .
+
+:Pa222f6GAqAAaAZY_path a ontouml:Path ;
+    ontouml:point :Pa222f6GAqAAaAZY_path_point_0,
+        :Pa222f6GAqAAaAZY_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:Pa222f6GAqAAaAZY_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 149 ;
+    ontouml:yCoordinate 337 .
+
+:Pa222f6GAqAAaAZY_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 149 ;
+    ontouml:yCoordinate 399 .
+
+:PkuO2f6GAqAAaAgS_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:PkuO2f6GAqAAaAgU_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:RsI22f6GAqAAaAWz_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :RsI22f6GAqAAaAWz_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:RsI22f6GAqAAaAWz_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 107 ;
+    ontouml:yCoordinate 87 .
+
+:S1i22f6GAqAAaAX__shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :S1i22f6GAqAAaAX__shape_point ;
+    ontouml:width "81"^^xsd:nonNegativeInteger .
+
+:S1i22f6GAqAAaAX__shape_point a ontouml:Point ;
+    ontouml:xCoordinate 301 ;
+    ontouml:yCoordinate 296 .
+
+:U1O22f6GAqAAaAZe_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:U1O22f6GAqAAaAZg_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:UjgO2f6GAqAAaAeW_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :UjgO2f6GAqAAaAeW_shape_point ;
+    ontouml:width "128"^^xsd:nonNegativeInteger .
+
+:UjgO2f6GAqAAaAeW_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 459 ;
+    ontouml:yCoordinate 296 .
+
+:Y.022f6GAqAAaAXi_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :Y.022f6GAqAAaAXi_shape_point ;
+    ontouml:width "113"^^xsd:nonNegativeInteger .
+
+:Y.022f6GAqAAaAXi_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 93 ;
+    ontouml:yCoordinate 400 .
+
+:Z2u22f6GAqAAaAZw a ontouml:RelationView ;
+    ontouml:isViewOf :O2u22f6GAqAAaAZr ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :Z2u22f6GAqAAaAZw_path ;
+    ontouml:sourceView :nFa22f6GAqAAaAYh ;
+    ontouml:targetView :Z5K22f6GAqAAaAYW .
+
+:Z2u22f6GAqAAaAZw_path a ontouml:Path ;
+    ontouml:point :Z2u22f6GAqAAaAZw_path_point_0,
+        :Z2u22f6GAqAAaAZw_path_point_1,
+        :Z2u22f6GAqAAaAZw_path_point_2 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:Z2u22f6GAqAAaAZw_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 289 ;
+    ontouml:yCoordinate 511 .
+
+:Z2u22f6GAqAAaAZw_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 343 ;
+    ontouml:yCoordinate 511 .
+
+:Z2u22f6GAqAAaAZw_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 343 ;
+    ontouml:yCoordinate 441 .
+
+:Z5K22f6GAqAAaAYW_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :Z5K22f6GAqAAaAYW_shape_point ;
+    ontouml:width "81"^^xsd:nonNegativeInteger .
+
+:Z5K22f6GAqAAaAYW_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 301 ;
+    ontouml:yCoordinate 400 .
+
+:aDuO2f6GAqAAaAgg a ontouml:RelationView ;
+    ontouml:isViewOf :IDuO2f6GAqAAaAgb ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :aDuO2f6GAqAAaAgg_path ;
+    ontouml:sourceView :AXKO2f6GAqAAaAgB ;
+    ontouml:targetView :MPIO2f6GAqAAaAej .
+
+:aDuO2f6GAqAAaAgg_path a ontouml:Path ;
+    ontouml:point :aDuO2f6GAqAAaAgg_path_point_0,
+        :aDuO2f6GAqAAaAgg_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:aDuO2f6GAqAAaAgg_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 649 ;
+    ontouml:yCoordinate 233 .
+
+:aDuO2f6GAqAAaAgg_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 649 ;
+    ontouml:yCoordinate 295 .
+
+:bNm22f6GAqAAaAY9 a ontouml:RelationView ;
+    ontouml:isViewOf :NNm22f6GAqAAaAY4 ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :bNm22f6GAqAAaAY9_path ;
+    ontouml:sourceView :RsI22f6GAqAAaAWz ;
+    ontouml:targetView :CGC22f6GAqAAaAX0 .
+
+:bNm22f6GAqAAaAY9_path a ontouml:Path ;
+    ontouml:point :bNm22f6GAqAAaAY9_path_point_0,
+        :bNm22f6GAqAAaAY9_path_point_1,
+        :bNm22f6GAqAAaAY9_path_point_2 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:bNm22f6GAqAAaAY9_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 188 ;
+    ontouml:yCoordinate 107 .
+
+:bNm22f6GAqAAaAY9_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 341 ;
+    ontouml:yCoordinate 107 .
+
+:bNm22f6GAqAAaAY9_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 341 ;
+    ontouml:yCoordinate 191 .
+
+:cUuO2f6GAqAAaAgW a ontouml:RelationView ;
+    ontouml:isViewOf :PkuO2f6GAqAAaAgR ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :cUuO2f6GAqAAaAgW_path ;
+    ontouml:sourceView :AXKO2f6GAqAAaAgB ;
+    ontouml:targetView :UjgO2f6GAqAAaAeW .
+
+:cUuO2f6GAqAAaAgW_path a ontouml:Path ;
+    ontouml:point :cUuO2f6GAqAAaAgW_path_point_0,
+        :cUuO2f6GAqAAaAgW_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:cUuO2f6GAqAAaAgW_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 545 ;
+    ontouml:yCoordinate 233 .
+
+:cUuO2f6GAqAAaAgW_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 545 ;
+    ontouml:yCoordinate 295 .
+
+:d3UO2f6GAqAAaAfH a ontouml:RelationView ;
+    ontouml:isViewOf :J3UO2f6GAqAAaAfC ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :d3UO2f6GAqAAaAfH_path ;
+    ontouml:sourceView :ex4O2f6GAqAAaAeu ;
+    ontouml:targetView :MPIO2f6GAqAAaAej .
+
+:d3UO2f6GAqAAaAfH_path a ontouml:Path ;
+    ontouml:point :d3UO2f6GAqAAaAfH_path_point_0,
+        :d3UO2f6GAqAAaAfH_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:d3UO2f6GAqAAaAfH_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 503 .
+
+:d3UO2f6GAqAAaAfH_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 337 .
+
+:eTo22f6GAqAAaAXG_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :eTo22f6GAqAAaAXG_shape_point ;
+    ontouml:width "104"^^xsd:nonNegativeInteger .
+
+:eTo22f6GAqAAaAXG_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 98 ;
+    ontouml:yCoordinate 192 .
+
+:ex4O2f6GAqAAaAeu_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :ex4O2f6GAqAAaAeu_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:ex4O2f6GAqAAaAeu_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 650 ;
+    ontouml:yCoordinate 504 .
+
+<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#fVe22f6GAqAAaAZ.> a ontouml:RelationView ;
+    ontouml:isViewOf :LVe22f6GAqAAaAZ5 ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :fVe22f6GAqAAaAZ._path ;
+    ontouml:sourceView :CGC22f6GAqAAaAX0 ;
+    ontouml:targetView :S1i22f6GAqAAaAX_ .
+
+:fVe22f6GAqAAaAZ._path a ontouml:Path ;
+    ontouml:point :fVe22f6GAqAAaAZ._path_point_0,
+        :fVe22f6GAqAAaAZ._path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:fVe22f6GAqAAaAZ._path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 343 ;
+    ontouml:yCoordinate 233 .
+
+:fVe22f6GAqAAaAZ._path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 343 ;
+    ontouml:yCoordinate 295 .
+
+:hu422f6GAqAAaAXX_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :hu422f6GAqAAaAXX_shape_point ;
+    ontouml:width "98"^^xsd:nonNegativeInteger .
+
+:hu422f6GAqAAaAXX_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 102 ;
+    ontouml:yCoordinate 296 .
+
+:iKm22f6GAqAAaAYu_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:i_n22f6GAqAAaAd1_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :i_n22f6GAqAAaAd1_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:i_n22f6GAqAAaAd1_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 479 ;
+    ontouml:yCoordinate 504 .
+
+:nFa22f6GAqAAaAYh_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:topLeftPosition :nFa22f6GAqAAaAYh_shape_point ;
+    ontouml:width "87"^^xsd:nonNegativeInteger .
+
+:nFa22f6GAqAAaAYh_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 201 ;
+    ontouml:yCoordinate 504 .
+
+:p3UO2f6GAqAAaAfF_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:rtkO2f6GAqAAaAe5_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:rtkO2f6GAqAAaAe7_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:t..22f6GAqAAaAaG_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:t3iO2f6GAqAAaAfx_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:t3iO2f6GAqAAaAfz_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:v3iO2f6GAqAAaAf1 a ontouml:RelationView ;
+    ontouml:isViewOf :t3iO2f6GAqAAaAfw ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :v3iO2f6GAqAAaAf1_path ;
+    ontouml:sourceView :ex4O2f6GAqAAaAeu ;
+    ontouml:targetView :i_n22f6GAqAAaAd1 .
+
+:v3iO2f6GAqAAaAf1_path a ontouml:Path ;
+    ontouml:point :v3iO2f6GAqAAaAf1_path_point_0,
+        :v3iO2f6GAqAAaAf1_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:v3iO2f6GAqAAaAf1_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 649 ;
+    ontouml:yCoordinate 524 .
+
+:v3iO2f6GAqAAaAf1_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 560 ;
+    ontouml:yCoordinate 524 .
+
+:vdv22f6GAqAAaAeK a ontouml:RelationView ;
+    ontouml:isViewOf :Ndv22f6GAqAAaAeF ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :vdv22f6GAqAAaAeK_path ;
+    ontouml:sourceView :nFa22f6GAqAAaAYh ;
+    ontouml:targetView :i_n22f6GAqAAaAd1 .
+
+:vdv22f6GAqAAaAeK_path a ontouml:Path ;
+    ontouml:point :vdv22f6GAqAAaAeK_path_point_0,
+        :vdv22f6GAqAAaAeK_path_point_1 ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:vdv22f6GAqAAaAeK_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 289 ;
+    ontouml:yCoordinate 532 .
+
+:vdv22f6GAqAAaAeK_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 478 ;
+    ontouml:yCoordinate 532 .
+
+:6Km22f6GAqAAaAYx a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :6Km22f6GAqAAaAYx_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH> .
+
+:I31HDf6AUB1CSiLR a ontouml:Package ;
+    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH>,
+        <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev>,
+        :55K22f6GAqAAaAYX,
+        :AXKO2f6GAqAAaAgC,
+        :CGC22f6GAqAAaAX1,
+        :IDuO2f6GAqAAaAgb,
+        :J3UO2f6GAqAAaAfC,
+        :JzW22f6GAqAAaAZG,
+        :LVe22f6GAqAAaAZ5,
+        :La222f6GAqAAaAZT,
+        :MKm22f6GAqAAaAYs,
+        :MPIO2f6GAqAAaAek,
+        :N..22f6GAqAAaAaD,
+        :NNm22f6GAqAAaAY4,
+        :Ndv22f6GAqAAaAeF,
+        :O2u22f6GAqAAaAZr,
+        :PkuO2f6GAqAAaAgR,
+        :Ru422f6GAqAAaAXY,
+        :S1i22f6GAqAAaAYA,
+        :S_n22f6GAqAAaAd2,
+        :U1O22f6GAqAAaAZd,
+        :UjgO2f6GAqAAaAeX,
+        :XFa22f6GAqAAaAYi,
+        :Y.022f6GAqAAaAXj,
+        :ZsI22f6GAqAAaAW0,
+        :rtkO2f6GAqAAaAe4,
+        :t3iO2f6GAqAAaAfw ;
+    ontouml:name "Robotic"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO .
+
+:IDuO2f6GAqAAaAgb a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :IDuO2f6GAqAAaAgc,
+        :IDuO2f6GAqAAaAge ;
+    ontouml:sourceEnd :IDuO2f6GAqAAaAgc ;
+    ontouml:targetEnd :IDuO2f6GAqAAaAge .
+
+:IDuO2f6GAqAAaAgc a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :IDuO2f6GAqAAaAgc_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :AXKO2f6GAqAAaAgC .
+
+:IDuO2f6GAqAAaAge a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :IDuO2f6GAqAAaAge_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :MPIO2f6GAqAAaAek .
+
+:J3UO2f6GAqAAaAfC a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "play"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :J3UO2f6GAqAAaAfD,
+        :p3UO2f6GAqAAaAfF ;
+    ontouml:sourceEnd :J3UO2f6GAqAAaAfD ;
+    ontouml:targetEnd :p3UO2f6GAqAAaAfF .
+
+:J3UO2f6GAqAAaAfD a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :J3UO2f6GAqAAaAfD_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev> .
+
+:JzW22f6GAqAAaAZG a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :JzW22f6GAqAAaAZH,
+        :JzW22f6GAqAAaAZJ ;
+    ontouml:sourceEnd :JzW22f6GAqAAaAZH ;
+    ontouml:targetEnd :JzW22f6GAqAAaAZJ .
+
+:JzW22f6GAqAAaAZH a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :JzW22f6GAqAAaAZH_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH> .
+
+:JzW22f6GAqAAaAZJ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :JzW22f6GAqAAaAZJ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :Ru422f6GAqAAaAXY .
+
+:LVe22f6GAqAAaAZ5 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :LVe22f6GAqAAaAZ6,
+        :LVe22f6GAqAAaAZ8 ;
+    ontouml:sourceEnd :LVe22f6GAqAAaAZ6 ;
+    ontouml:targetEnd :LVe22f6GAqAAaAZ8 .
+
+:LVe22f6GAqAAaAZ6 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LVe22f6GAqAAaAZ6_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :CGC22f6GAqAAaAX1 .
+
+:LVe22f6GAqAAaAZ8 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LVe22f6GAqAAaAZ8_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :S1i22f6GAqAAaAYA .
+
+:La222f6GAqAAaAZT a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :La222f6GAqAAaAZU,
+        :La222f6GAqAAaAZW ;
+    ontouml:sourceEnd :La222f6GAqAAaAZU ;
+    ontouml:targetEnd :La222f6GAqAAaAZW .
+
+:La222f6GAqAAaAZU a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :La222f6GAqAAaAZU_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :Ru422f6GAqAAaAXY .
+
+:La222f6GAqAAaAZW a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :La222f6GAqAAaAZW_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :Y.022f6GAqAAaAXj .
+
+:MKm22f6GAqAAaAYs a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "play"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :6Km22f6GAqAAaAYx,
+        :iKm22f6GAqAAaAYu ;
+    ontouml:sourceEnd :iKm22f6GAqAAaAYu ;
+    ontouml:targetEnd :6Km22f6GAqAAaAYx .
+
+:N..22f6GAqAAaAaD a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :N..22f6GAqAAaAaE,
+        :t..22f6GAqAAaAaG ;
+    ontouml:sourceEnd :N..22f6GAqAAaAaE ;
+    ontouml:targetEnd :t..22f6GAqAAaAaG .
+
+:N..22f6GAqAAaAaE a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :N..22f6GAqAAaAaE_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :S1i22f6GAqAAaAYA .
+
+:NNm22f6GAqAAaAY4 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "play"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :NNm22f6GAqAAaAY5,
+        :NNm22f6GAqAAaAY7 ;
+    ontouml:sourceEnd :NNm22f6GAqAAaAY5 ;
+    ontouml:targetEnd :NNm22f6GAqAAaAY7 .
+
+:NNm22f6GAqAAaAY5 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :NNm22f6GAqAAaAY5_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :ZsI22f6GAqAAaAW0 .
+
+:NNm22f6GAqAAaAY7 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :NNm22f6GAqAAaAY7_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :CGC22f6GAqAAaAX1 .
+
+:Ndv22f6GAqAAaAeF a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "ispartof"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :Ndv22f6GAqAAaAeG,
+        :Ndv22f6GAqAAaAeI ;
+    ontouml:sourceEnd :Ndv22f6GAqAAaAeG ;
+    ontouml:targetEnd :Ndv22f6GAqAAaAeI .
+
+:Ndv22f6GAqAAaAeG a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :Ndv22f6GAqAAaAeG_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :XFa22f6GAqAAaAYi .
+
+:Ndv22f6GAqAAaAeI a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :Ndv22f6GAqAAaAeI_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :S_n22f6GAqAAaAd2 .
+
+:O2u22f6GAqAAaAZr a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "play"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :O2u22f6GAqAAaAZs,
+        :O2u22f6GAqAAaAZu ;
+    ontouml:sourceEnd :O2u22f6GAqAAaAZs ;
+    ontouml:targetEnd :O2u22f6GAqAAaAZu .
+
+:O2u22f6GAqAAaAZs a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :O2u22f6GAqAAaAZs_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :XFa22f6GAqAAaAYi .
+
+:O2u22f6GAqAAaAZu a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :O2u22f6GAqAAaAZu_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :55K22f6GAqAAaAYX .
+
+:PkuO2f6GAqAAaAgR a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :PkuO2f6GAqAAaAgS,
+        :PkuO2f6GAqAAaAgU ;
+    ontouml:sourceEnd :PkuO2f6GAqAAaAgS ;
+    ontouml:targetEnd :PkuO2f6GAqAAaAgU .
+
+:PkuO2f6GAqAAaAgS a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :PkuO2f6GAqAAaAgS_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :AXKO2f6GAqAAaAgC .
+
+:PkuO2f6GAqAAaAgU a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :PkuO2f6GAqAAaAgU_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :UjgO2f6GAqAAaAeX .
+
+:U1O22f6GAqAAaAZd a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "play"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :U1O22f6GAqAAaAZe,
+        :U1O22f6GAqAAaAZg ;
+    ontouml:sourceEnd :U1O22f6GAqAAaAZe ;
+    ontouml:targetEnd :U1O22f6GAqAAaAZg .
+
+:U1O22f6GAqAAaAZe a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :U1O22f6GAqAAaAZe_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :XFa22f6GAqAAaAYi .
+
+:U1O22f6GAqAAaAZg a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :U1O22f6GAqAAaAZg_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :Y.022f6GAqAAaAXj .
+
+:iKm22f6GAqAAaAYu a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :iKm22f6GAqAAaAYu_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :ZsI22f6GAqAAaAW0 .
+
+:p3UO2f6GAqAAaAfF a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :p3UO2f6GAqAAaAfF_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :MPIO2f6GAqAAaAek .
+
+:rtkO2f6GAqAAaAe4 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "play"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :rtkO2f6GAqAAaAe5,
+        :rtkO2f6GAqAAaAe7 ;
+    ontouml:sourceEnd :rtkO2f6GAqAAaAe5 ;
+    ontouml:targetEnd :rtkO2f6GAqAAaAe7 .
+
+:rtkO2f6GAqAAaAe5 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :rtkO2f6GAqAAaAe5_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :S_n22f6GAqAAaAd2 .
+
+:rtkO2f6GAqAAaAe7 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :rtkO2f6GAqAAaAe7_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :UjgO2f6GAqAAaAeX .
+
+:t..22f6GAqAAaAaG a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :t..22f6GAqAAaAaG_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :55K22f6GAqAAaAYX .
+
+:t3iO2f6GAqAAaAfw a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "ispartof"@en ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:relationEnd :t3iO2f6GAqAAaAfx,
+        :t3iO2f6GAqAAaAfz ;
+    ontouml:sourceEnd :t3iO2f6GAqAAaAfx ;
+    ontouml:targetEnd :t3iO2f6GAqAAaAfz .
+
+:t3iO2f6GAqAAaAfx a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :t3iO2f6GAqAAaAfx_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev> .
+
+:t3iO2f6GAqAAaAfz a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :t3iO2f6GAqAAaAfz_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:propertyType :S_n22f6GAqAAaAd2 .
+
+:AXKO2f6GAqAAaAgB a ontouml:ClassView ;
+    ontouml:isViewOf :AXKO2f6GAqAAaAgC ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :AXKO2f6GAqAAaAgB_shape .
+
+:CGC22f6GAqAAaAX0 a ontouml:ClassView ;
+    ontouml:isViewOf :CGC22f6GAqAAaAX1 ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :CGC22f6GAqAAaAX0_shape .
+
+:MPIO2f6GAqAAaAej a ontouml:ClassView ;
+    ontouml:isViewOf :MPIO2f6GAqAAaAek ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :MPIO2f6GAqAAaAej_shape .
+
+:RsI22f6GAqAAaAWz a ontouml:ClassView ;
+    ontouml:isViewOf :ZsI22f6GAqAAaAW0 ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :RsI22f6GAqAAaAWz_shape .
+
+:S1i22f6GAqAAaAX_ a ontouml:ClassView ;
+    ontouml:isViewOf :S1i22f6GAqAAaAYA ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :S1i22f6GAqAAaAX__shape .
+
+:UjgO2f6GAqAAaAeW a ontouml:ClassView ;
+    ontouml:isViewOf :UjgO2f6GAqAAaAeX ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :UjgO2f6GAqAAaAeW_shape .
+
+:Y.022f6GAqAAaAXi a ontouml:ClassView ;
+    ontouml:isViewOf :Y.022f6GAqAAaAXj ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :Y.022f6GAqAAaAXi_shape .
+
+:Z5K22f6GAqAAaAYW a ontouml:ClassView ;
+    ontouml:isViewOf :55K22f6GAqAAaAYX ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :Z5K22f6GAqAAaAYW_shape .
+
+:eTo22f6GAqAAaAXG a ontouml:ClassView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH> ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :eTo22f6GAqAAaAXG_shape .
+
+:ex4O2f6GAqAAaAeu a ontouml:ClassView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev> ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :ex4O2f6GAqAAaAeu_shape .
+
+:hu422f6GAqAAaAXX a ontouml:ClassView ;
+    ontouml:isViewOf :Ru422f6GAqAAaAXY ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :hu422f6GAqAAaAXX_shape .
+
+<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.To22f6GAqAAaAXH> a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Being Supported"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:stereotype ontouml:role .
+
+<https://w3id.org/ontouml-models/model/zhou2017hazard-ontology-robotic-strolling#.x4O2f6GAqAAaAev> a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Battery"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:55K22f6GAqAAaAYX a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Object Lifter"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:stereotype ontouml:role .
+
+:AXKO2f6GAqAAaAgC a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Electricity Consumption"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:CGC22f6GAqAAaAX1 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Being Lifted"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:stereotype ontouml:role .
+
+:MPIO2f6GAqAAaAek a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Electricity Source"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:stereotype ontouml:role .
+
+:Ru422f6GAqAAaAXY a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "BalanceSupport"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:S1i22f6GAqAAaAYA a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "LiftUp"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:UjgO2f6GAqAAaAeX a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Electricity Consumer"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:stereotype ontouml:role .
+
+:Y.022f6GAqAAaAXj a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Balance Supporter"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:stereotype ontouml:role .
+
+:ZsI22f6GAqAAaAW0 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Patient"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:i_n22f6GAqAAaAd1 a ontouml:ClassView ;
+    ontouml:isViewOf :S_n22f6GAqAAaAd2 ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :i_n22f6GAqAAaAd1_shape .
+
+:nFa22f6GAqAAaAYh a ontouml:ClassView ;
+    ontouml:isViewOf :XFa22f6GAqAAaAYi ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:shape :nFa22f6GAqAAaAYh_shape .
+
+:S_n22f6GAqAAaAd2 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Robot"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:XFa22f6GAqAAaAYi a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Robot Handle"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :BBPW2f6GAqAAaABO ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:BBPW2f6GAqAAaABO a ontouml:Project ;
+    ontouml:diagram :0p_W2f6GAqAAaAWf ;
+    ontouml:model :BBPW2f6GAqAAaABO_root ;
+    ontouml:name "ontology"@en .
+

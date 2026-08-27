@@ -1,1066 +1,3155 @@
-@prefix : <https://w3id.org/ontouml-models/model/short-examples2013/>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/short-examples2013#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/short-examples2013/> rdf:type ontouml:Project;
-    ontouml:name "paper_example"@en;
-    ontouml:model :QC073OGFS_j2pAWd_root;
-    ontouml:diagram :sEM73OGFS_j2pAoc, <https://w3id.org/ontouml-models/model/short-examples2013/3EM73OGFS_j2pAoe>, :fEM73OGFS_j2pAog, :AkM73OGFS_j2pAoi, :QkM73OGFS_j2pAok, :IkM73OGFS_j2pAom, :YkM73OGFS_j2pAoo, <https://w3id.org/ontouml-models/model/short-examples2013/4kM73OGFS_j2pAoq>.
-:QC073OGFS_j2pAWd_root rdf:type ontouml:Package;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "paper_example"@en;
-    ontouml:containsModelElement :Vn073OGFS_j2pAl5, <https://w3id.org/ontouml-models/model/short-examples2013/4gM73OGFS_j2pAmK>.
-:Vn073OGFS_j2pAl5 rdf:type ontouml:Package;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "example"@en;
-    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>, <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>, :oAM73OGFS_j2pAl_, :MAM73OGFS_j2pAmB, :WAM73OGFS_j2pAmC, :OAM73OGFS_j2pAmD, :HAM73OGFS_j2pAmE, :nAM73OGFS_j2pAmF, <https://w3id.org/ontouml-models/model/short-examples2013/3AM73OGFS_j2pAmG>, :vAM73OGFS_j2pAmH, :ggM73OGFS_j2pAmI, :wgM73OGFS_j2pAmJ, :zwM73OGFS_j2pAmk, :wIM73OGFS_j2pAml, :IIM73OGFS_j2pAmm, :cYM73OGFS_j2pAm_, :tYM73OGFS_j2pAnQ, <https://w3id.org/ontouml-models/model/short-examples2013/9YM73OGFS_j2pAnR>, <https://w3id.org/ontouml-models/model/short-examples2013/9YM73OGFS_j2pAnS>, :DYM73OGFS_j2pAnT, <https://w3id.org/ontouml-models/model/short-examples2013/7IM73OGFS_j2pAmo>, :AYM73OGFS_j2pAmw, <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm1>, <https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm6>, <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnA>, :uYM73OGFS_j2pAnG, <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnL>, :jYM73OGFS_j2pAnU.
-<https://w3id.org/ontouml-models/model/short-examples2013/4gM73OGFS_j2pAmK> rdf:type ontouml:Package;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "antipatterns"@en;
-    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/short-examples2013/4gM73OGFS_j2pAmL>, :UgM73OGFS_j2pAmM, :MgM73OGFS_j2pAmN, :igM73OGFS_j2pAmO, <https://w3id.org/ontouml-models/model/short-examples2013/2gM73OGFS_j2pAmQ>, :egM73OGFS_j2pAmR, :xgM73OGFS_j2pAmS, :pgM73OGFS_j2pAmT, :GQM73OGFS_j2pAmU, <https://w3id.org/ontouml-models/model/short-examples2013/2QM73OGFS_j2pAmV>, :uQM73OGFS_j2pAmW, <https://w3id.org/ontouml-models/model/short-examples2013/.QM73OGFS_j2pAmX>, :xQM73OGFS_j2pAmY, :VQM73OGFS_j2pAmZ, :tQM73OGFS_j2pAma, :jQM73OGFS_j2pAmb, :bQM73OGFS_j2pAmc, :HQM73OGFS_j2pAmd, :vQM73OGFS_j2pAme, :fQM73OGFS_j2pAmf, :AwM73OGFS_j2pAmg, :QwM73OGFS_j2pAmh, :owM73OGFS_j2pAmi, <https://w3id.org/ontouml-models/model/short-examples2013/_YM73OGFS_j2pAnj>, :g4M73OGFS_j2pAnk, :g4M73OGFS_j2pAnl, <https://w3id.org/ontouml-models/model/short-examples2013/44M73OGFS_j2pAnm>, :j4M73OGFS_j2pAoC, :j4M73OGFS_j2pAoD, :T4M73OGFS_j2pAoE, :gEM73OGFS_j2pAoU, :QEM73OGFS_j2pAoV, :wEM73OGFS_j2pAoW, <https://w3id.org/ontouml-models/model/short-examples2013/3YM73OGFS_j2pAnZ>, :vYM73OGFS_j2pAne, <https://w3id.org/ontouml-models/model/short-examples2013/44M73OGFS_j2pAnn>, :k4M73OGFS_j2pAns, :O4M73OGFS_j2pAny, :x4M73OGFS_j2pAn4, :N4M73OGFS_j2pAn9, :z4M73OGFS_j2pAoF, :n4M73OGFS_j2pAoK, :v4M73OGFS_j2pAoP, :wEM73OGFS_j2pAoX.
-<https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Person"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Detective"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:oAM73OGFS_j2pAl_ rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Criminal Investigation"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:MAM73OGFS_j2pAmB rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Suspect"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:WAM73OGFS_j2pAmC rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Lead Detective"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:OAM73OGFS_j2pAmD rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Witness"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:HAM73OGFS_j2pAmE rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Interrogation"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:nAM73OGFS_j2pAmF rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Captain"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/short-examples2013/3AM73OGFS_j2pAmG> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Officer"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:vAM73OGFS_j2pAmH rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Parent"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:ggM73OGFS_j2pAmI rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Child"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:wgM73OGFS_j2pAmJ rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Interrogator"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/short-examples2013/4gM73OGFS_j2pAmL> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Kind1"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:UgM73OGFS_j2pAmM rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "ST1"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:MgM73OGFS_j2pAmN rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "ST2"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:igM73OGFS_j2pAmO rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T1"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/short-examples2013/2gM73OGFS_j2pAmQ> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T2"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:egM73OGFS_j2pAmR rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "ST"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:xgM73OGFS_j2pAmS rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T1_2"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:pgM73OGFS_j2pAmT rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T2_2"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:GQM73OGFS_j2pAmU rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/short-examples2013/2QM73OGFS_j2pAmV> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T1_3"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:uQM73OGFS_j2pAmW rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T2_3"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/short-examples2013/.QM73OGFS_j2pAmX> rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T3"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:xQM73OGFS_j2pAmY rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R1"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:VQM73OGFS_j2pAmZ rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T1_4"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:tQM73OGFS_j2pAma rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T3_2"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:jQM73OGFS_j2pAmb rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T2_4"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:bQM73OGFS_j2pAmc rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "ST_2"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:HQM73OGFS_j2pAmd rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T2_5"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:vQM73OGFS_j2pAme rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "SBT1"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:fQM73OGFS_j2pAmf rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "SBT2"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:AwM73OGFS_j2pAmg rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "SBT3"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:QwM73OGFS_j2pAmh rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "Kind2"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:owM73OGFS_j2pAmi rdf:type ontouml:Class;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "T1_5"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:zwM73OGFS_j2pAmk rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>;
-    ontouml:specific <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>.
-:wIM73OGFS_j2pAml rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>;
-    ontouml:specific :MAM73OGFS_j2pAmB.
-:IIM73OGFS_j2pAmm rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>;
-    ontouml:specific :WAM73OGFS_j2pAmC.
-:cYM73OGFS_j2pAm_ rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>;
-    ontouml:specific :OAM73OGFS_j2pAmD.
-:tYM73OGFS_j2pAnQ rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>;
-    ontouml:specific :nAM73OGFS_j2pAmF.
-<https://w3id.org/ontouml-models/model/short-examples2013/9YM73OGFS_j2pAnR> rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>;
-    ontouml:specific <https://w3id.org/ontouml-models/model/short-examples2013/3AM73OGFS_j2pAmG>.
-<https://w3id.org/ontouml-models/model/short-examples2013/9YM73OGFS_j2pAnS> rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>;
-    ontouml:specific :vAM73OGFS_j2pAmH.
-:DYM73OGFS_j2pAnT rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>;
-    ontouml:specific :ggM73OGFS_j2pAmI.
-<https://w3id.org/ontouml-models/model/short-examples2013/_YM73OGFS_j2pAnj> rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :UgM73OGFS_j2pAmM;
-    ontouml:specific :igM73OGFS_j2pAmO.
-:g4M73OGFS_j2pAnk rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :MgM73OGFS_j2pAmN;
-    ontouml:specific <https://w3id.org/ontouml-models/model/short-examples2013/2gM73OGFS_j2pAmQ>.
-:g4M73OGFS_j2pAnl rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :egM73OGFS_j2pAmR;
-    ontouml:specific :xgM73OGFS_j2pAmS.
-<https://w3id.org/ontouml-models/model/short-examples2013/44M73OGFS_j2pAnm> rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :egM73OGFS_j2pAmR;
-    ontouml:specific :pgM73OGFS_j2pAmT.
-:j4M73OGFS_j2pAoC rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :bQM73OGFS_j2pAmc;
-    ontouml:specific :VQM73OGFS_j2pAmZ.
-:j4M73OGFS_j2pAoD rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :bQM73OGFS_j2pAmc;
-    ontouml:specific :jQM73OGFS_j2pAmb.
-:T4M73OGFS_j2pAoE rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :bQM73OGFS_j2pAmc;
-    ontouml:specific :tQM73OGFS_j2pAma.
-:gEM73OGFS_j2pAoU rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :HQM73OGFS_j2pAmd;
-    ontouml:specific :vQM73OGFS_j2pAme.
-:QEM73OGFS_j2pAoV rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :HQM73OGFS_j2pAmd;
-    ontouml:specific :fQM73OGFS_j2pAmf.
-:wEM73OGFS_j2pAoW rdf:type ontouml:Generalization;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:general :HQM73OGFS_j2pAmd;
-    ontouml:specific :AwM73OGFS_j2pAmg.
-<https://w3id.org/ontouml-models/model/short-examples2013/7IM73OGFS_j2pAmo> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "participatesIn"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013/4oM73OGFS_j2pAmq>;
-    ontouml:targetEnd :MoM73OGFS_j2pAmt;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013/4oM73OGFS_j2pAmq>, :MoM73OGFS_j2pAmt.
-:AYM73OGFS_j2pAmw rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "investigates"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :AYM73OGFS_j2pAmx;
-    ontouml:targetEnd :AYM73OGFS_j2pAmz;
-    ontouml:relationEnd :AYM73OGFS_j2pAmx, :AYM73OGFS_j2pAmz.
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm1> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "responsibleFor"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm2>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm4>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm2>, <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm4>.
-<https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm6> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "relatedTo"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm7>;
-    ontouml:targetEnd :MYM73OGFS_j2pAm9;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm7>, :MYM73OGFS_j2pAm9.
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnA> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "knows"@en;
-    ontouml:stereotype ontouml:material;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnB>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnD>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnB>, <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnD>.
-:uYM73OGFS_j2pAnG rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "targetOf"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :uYM73OGFS_j2pAnH;
-    ontouml:targetEnd :uYM73OGFS_j2pAnJ;
-    ontouml:relationEnd :uYM73OGFS_j2pAnH, :uYM73OGFS_j2pAnJ.
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnL> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "conducts"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnM>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnO>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnM>, <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnO>.
-:jYM73OGFS_j2pAnU rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "parentOf"@en;
-    ontouml:stereotype ontouml:material;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :jYM73OGFS_j2pAnV;
-    ontouml:targetEnd :TYM73OGFS_j2pAnX;
-    ontouml:relationEnd :jYM73OGFS_j2pAnV, :TYM73OGFS_j2pAnX.
-<https://w3id.org/ontouml-models/model/short-examples2013/3YM73OGFS_j2pAnZ> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :PYM73OGFS_j2pAna;
-    ontouml:targetEnd :PYM73OGFS_j2pAnc;
-    ontouml:relationEnd :PYM73OGFS_j2pAna, :PYM73OGFS_j2pAnc.
-:vYM73OGFS_j2pAne rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "SR"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :vYM73OGFS_j2pAnf;
-    ontouml:targetEnd :vYM73OGFS_j2pAnh;
-    ontouml:relationEnd :vYM73OGFS_j2pAnf, :vYM73OGFS_j2pAnh.
-<https://w3id.org/ontouml-models/model/short-examples2013/44M73OGFS_j2pAnn> rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :E4M73OGFS_j2pAno;
-    ontouml:targetEnd :E4M73OGFS_j2pAnq;
-    ontouml:relationEnd :E4M73OGFS_j2pAno, :E4M73OGFS_j2pAnq.
-:k4M73OGFS_j2pAns rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R"@en;
-    ontouml:stereotype ontouml:Formal;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :k4M73OGFS_j2pAnt;
-    ontouml:targetEnd :k4M73OGFS_j2pAnv;
-    ontouml:relationEnd :k4M73OGFS_j2pAnt, :k4M73OGFS_j2pAnv.
-:O4M73OGFS_j2pAny rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R3"@en;
-    ontouml:stereotype ontouml:componentOf;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :O4M73OGFS_j2pAnz;
-    ontouml:targetEnd :O4M73OGFS_j2pAn1;
-    ontouml:relationEnd :O4M73OGFS_j2pAnz, :O4M73OGFS_j2pAn1.
-:x4M73OGFS_j2pAn4 rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R1"@en;
-    ontouml:stereotype ontouml:componentOf;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :x4M73OGFS_j2pAn5;
-    ontouml:targetEnd :x4M73OGFS_j2pAn7;
-    ontouml:relationEnd :x4M73OGFS_j2pAn5, :x4M73OGFS_j2pAn7.
-:N4M73OGFS_j2pAn9 rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R2"@en;
-    ontouml:stereotype ontouml:Formal;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013/N4M73OGFS_j2pAn.>;
-    ontouml:targetEnd :N4M73OGFS_j2pAoA;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013/N4M73OGFS_j2pAn.>, :N4M73OGFS_j2pAoA.
-:z4M73OGFS_j2pAoF rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "M2"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :z4M73OGFS_j2pAoG;
-    ontouml:targetEnd :z4M73OGFS_j2pAoI;
-    ontouml:relationEnd :z4M73OGFS_j2pAoG, :z4M73OGFS_j2pAoI.
-:n4M73OGFS_j2pAoK rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "M1"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :n4M73OGFS_j2pAoL;
-    ontouml:targetEnd :n4M73OGFS_j2pAoN;
-    ontouml:relationEnd :n4M73OGFS_j2pAoL, :n4M73OGFS_j2pAoN.
-:v4M73OGFS_j2pAoP rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "M3"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :v4M73OGFS_j2pAoQ;
-    ontouml:targetEnd :f4M73OGFS_j2pAoS;
-    ontouml:relationEnd :v4M73OGFS_j2pAoQ, :f4M73OGFS_j2pAoS.
-:wEM73OGFS_j2pAoX rdf:type ontouml:Relation;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "R"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :wEM73OGFS_j2pAoY;
-    ontouml:targetEnd :wEM73OGFS_j2pAoa;
-    ontouml:relationEnd :wEM73OGFS_j2pAoY, :wEM73OGFS_j2pAoa.
-<https://w3id.org/ontouml-models/model/short-examples2013/4oM73OGFS_j2pAmq> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "inv"@en;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/4oM73OGFS_j2pAmq_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/4oM73OGFS_j2pAmq_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/short-examples2013/4oM73OGFS_j2pAmq> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :oAM73OGFS_j2pAl_.
-:MoM73OGFS_j2pAmt rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "detective"@en;
-    ontouml:cardinality :MoM73OGFS_j2pAmt_cardinality.
-:MoM73OGFS_j2pAmt_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "2..*";
-    ontouml:lowerBound "2";
-    ontouml:upperBound "*".
-:MoM73OGFS_j2pAmt ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>.
-:AYM73OGFS_j2pAmx rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "inv"@en;
-    ontouml:cardinality :AYM73OGFS_j2pAmx_cardinality.
-:AYM73OGFS_j2pAmx_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:AYM73OGFS_j2pAmx ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :oAM73OGFS_j2pAl_.
-:AYM73OGFS_j2pAmz rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "suspect"@en;
-    ontouml:cardinality :AYM73OGFS_j2pAmz_cardinality.
-:AYM73OGFS_j2pAmz_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:AYM73OGFS_j2pAmz ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :MAM73OGFS_j2pAmB.
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm2> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "inv"@en;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm2_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm2_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm2> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :oAM73OGFS_j2pAl_.
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm4> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "leader"@en;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm4_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm4_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/short-examples2013/4YM73OGFS_j2pAm4> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :WAM73OGFS_j2pAmC.
-<https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm7> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "inv"@en;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm7_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm7_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-<https://w3id.org/ontouml-models/model/short-examples2013/0YM73OGFS_j2pAm7> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :oAM73OGFS_j2pAl_.
-:MYM73OGFS_j2pAm9 rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "witness"@en;
-    ontouml:cardinality :MYM73OGFS_j2pAm9_cardinality.
-:MYM73OGFS_j2pAm9_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:MYM73OGFS_j2pAm9 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :OAM73OGFS_j2pAmD.
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnB> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnB_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnB_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnB> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>.
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnD> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnD_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnD_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/short-examples2013/8YM73OGFS_j2pAnD> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/_X073OGFS_j2pAl7>.
-:uYM73OGFS_j2pAnH rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "interrogation"@en;
-    ontouml:cardinality :uYM73OGFS_j2pAnH_cardinality.
-:uYM73OGFS_j2pAnH_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:uYM73OGFS_j2pAnH ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :HAM73OGFS_j2pAmE.
-:uYM73OGFS_j2pAnJ rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "witness"@en;
-    ontouml:cardinality :uYM73OGFS_j2pAnJ_cardinality.
-:uYM73OGFS_j2pAnJ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:uYM73OGFS_j2pAnJ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :OAM73OGFS_j2pAmD.
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnM> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "interrogation"@en;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnM_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnM_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnM> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :HAM73OGFS_j2pAmE.
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnO> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "interrogator"@en;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnO_cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnO_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-<https://w3id.org/ontouml-models/model/short-examples2013/5YM73OGFS_j2pAnO> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/3_073OGFS_j2pAl9>.
-:jYM73OGFS_j2pAnV rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "parent"@en;
-    ontouml:cardinality :jYM73OGFS_j2pAnV_cardinality.
-:jYM73OGFS_j2pAnV_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..2";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "2".
-:jYM73OGFS_j2pAnV ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :vAM73OGFS_j2pAmH.
-:TYM73OGFS_j2pAnX rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "child"@en;
-    ontouml:cardinality :TYM73OGFS_j2pAnX_cardinality.
-:TYM73OGFS_j2pAnX_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:TYM73OGFS_j2pAnX ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :ggM73OGFS_j2pAmI.
-:PYM73OGFS_j2pAna rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :PYM73OGFS_j2pAna_cardinality.
-:PYM73OGFS_j2pAna_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:PYM73OGFS_j2pAna ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :igM73OGFS_j2pAmO.
-:PYM73OGFS_j2pAnc rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :PYM73OGFS_j2pAnc_cardinality.
-:PYM73OGFS_j2pAnc_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:PYM73OGFS_j2pAnc ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/2gM73OGFS_j2pAmQ>.
-:vYM73OGFS_j2pAnf rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :vYM73OGFS_j2pAnf_cardinality.
-:vYM73OGFS_j2pAnf_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:vYM73OGFS_j2pAnf ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :UgM73OGFS_j2pAmM.
-:vYM73OGFS_j2pAnh rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :vYM73OGFS_j2pAnh_cardinality.
-:vYM73OGFS_j2pAnh_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:vYM73OGFS_j2pAnh ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :MgM73OGFS_j2pAmN.
-:E4M73OGFS_j2pAno rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :E4M73OGFS_j2pAno_cardinality.
-:E4M73OGFS_j2pAno_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:E4M73OGFS_j2pAno ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xgM73OGFS_j2pAmS.
-:E4M73OGFS_j2pAnq rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :E4M73OGFS_j2pAnq_cardinality.
-:E4M73OGFS_j2pAnq_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:E4M73OGFS_j2pAnq ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :pgM73OGFS_j2pAmT.
-:k4M73OGFS_j2pAnt rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :k4M73OGFS_j2pAnt_cardinality.
-:k4M73OGFS_j2pAnt_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:k4M73OGFS_j2pAnt ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :GQM73OGFS_j2pAmU.
-:k4M73OGFS_j2pAnv rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :k4M73OGFS_j2pAnv_cardinality.
-:k4M73OGFS_j2pAnv_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:k4M73OGFS_j2pAnv ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :GQM73OGFS_j2pAmU.
-:O4M73OGFS_j2pAnz rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :O4M73OGFS_j2pAnz_cardinality.
-:O4M73OGFS_j2pAnz_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:O4M73OGFS_j2pAnz ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/2QM73OGFS_j2pAmV>.
-:O4M73OGFS_j2pAn1 rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :O4M73OGFS_j2pAn1_cardinality.
-:O4M73OGFS_j2pAn1_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:O4M73OGFS_j2pAn1 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/.QM73OGFS_j2pAmX>.
-:x4M73OGFS_j2pAn5 rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :x4M73OGFS_j2pAn5_cardinality.
-:x4M73OGFS_j2pAn5_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:x4M73OGFS_j2pAn5 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/2QM73OGFS_j2pAmV>.
-:x4M73OGFS_j2pAn7 rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :x4M73OGFS_j2pAn7_cardinality.
-:x4M73OGFS_j2pAn7_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:x4M73OGFS_j2pAn7 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :uQM73OGFS_j2pAmW.
-<https://w3id.org/ontouml-models/model/short-examples2013/N4M73OGFS_j2pAn.> rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/short-examples2013/N4M73OGFS_j2pAn._cardinality>.
-<https://w3id.org/ontouml-models/model/short-examples2013/N4M73OGFS_j2pAn._cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/short-examples2013/N4M73OGFS_j2pAn.> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :uQM73OGFS_j2pAmW.
-:N4M73OGFS_j2pAoA rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :N4M73OGFS_j2pAoA_cardinality.
-:N4M73OGFS_j2pAoA_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:N4M73OGFS_j2pAoA ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013/.QM73OGFS_j2pAmX>.
-:z4M73OGFS_j2pAoG rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :z4M73OGFS_j2pAoG_cardinality.
-:z4M73OGFS_j2pAoG_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:z4M73OGFS_j2pAoG ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xQM73OGFS_j2pAmY.
-:z4M73OGFS_j2pAoI rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :z4M73OGFS_j2pAoI_cardinality.
-:z4M73OGFS_j2pAoI_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:z4M73OGFS_j2pAoI ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :jQM73OGFS_j2pAmb.
-:n4M73OGFS_j2pAoL rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :n4M73OGFS_j2pAoL_cardinality.
-:n4M73OGFS_j2pAoL_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:n4M73OGFS_j2pAoL ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xQM73OGFS_j2pAmY.
-:n4M73OGFS_j2pAoN rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :n4M73OGFS_j2pAoN_cardinality.
-:n4M73OGFS_j2pAoN_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:n4M73OGFS_j2pAoN ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :VQM73OGFS_j2pAmZ.
-:v4M73OGFS_j2pAoQ rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :v4M73OGFS_j2pAoQ_cardinality.
-:v4M73OGFS_j2pAoQ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:v4M73OGFS_j2pAoQ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :xQM73OGFS_j2pAmY.
-:f4M73OGFS_j2pAoS rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :f4M73OGFS_j2pAoS_cardinality.
-:f4M73OGFS_j2pAoS_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:f4M73OGFS_j2pAoS ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :tQM73OGFS_j2pAma.
-:wEM73OGFS_j2pAoY rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :wEM73OGFS_j2pAoY_cardinality.
-:wEM73OGFS_j2pAoY_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:wEM73OGFS_j2pAoY ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :owM73OGFS_j2pAmi.
-:wEM73OGFS_j2pAoa rdf:type ontouml:Property;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:cardinality :wEM73OGFS_j2pAoa_cardinality.
-:wEM73OGFS_j2pAoa_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:wEM73OGFS_j2pAoa ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :HQM73OGFS_j2pAmd.
-:sEM73OGFS_j2pAoc rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "example"@en;
-    ontouml:containsView <https://w3id.org/ontouml-models/model/short-examples2013/N0M73OGFS_j2pAp.>, :MkM73OGFS_j2pAos, :YMM73OGFS_j2pAqI, :M0M73OGFS_j2pAp4, :gUM73OGFS_j2pApA, <https://w3id.org/ontouml-models/model/short-examples2013/60M73OGFS_j2pAp6>, :n0M73OGFS_j2pAqA, :WMM73OGFS_j2pAqW, <https://w3id.org/ontouml-models/model/short-examples2013/7kM73OGFS_j2pAo4>, :bkM73OGFS_j2pAo2, :TkM73OGFS_j2pAo0, :P0M73OGFS_j2pAqG, <https://w3id.org/ontouml-models/model/short-examples2013/4MM73OGFS_j2pAqK>, <https://w3id.org/ontouml-models/model/short-examples2013/AUM73OGFS_j2pAo.>, <https://w3id.org/ontouml-models/model/short-examples2013/9kM73OGFS_j2pAow>, <https://w3id.org/ontouml-models/model/short-examples2013/30M73OGFS_j2pAqE>, :UMM73OGFS_j2pAqM, :PkM73OGFS_j2pAo6, :mMM73OGFS_j2pAqS, <https://w3id.org/ontouml-models/model/short-examples2013/6MM73OGFS_j2pAqO>, :mMM73OGFS_j2pAqU, <https://w3id.org/ontouml-models/model/short-examples2013/_kM73OGFS_j2pAo8>, :DkM73OGFS_j2pAoy, :n0M73OGFS_j2pAqC, :dkM73OGFS_j2pAou, :W0M73OGFS_j2pAp8, :GMM73OGFS_j2pAqQ.
-<https://w3id.org/ontouml-models/model/short-examples2013/3EM73OGFS_j2pAoe> rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "relator with overlapping roles"@en;
-    ontouml:containsView :YUM73OGFS_j2pApC, :RMM73OGFS_j2pAqk, :eMM73OGFS_j2pAqa, :EUM73OGFS_j2pApE, :BMM73OGFS_j2pAqe, <https://w3id.org/ontouml-models/model/short-examples2013/0UM73OGFS_j2pApI>, :BMM73OGFS_j2pAqg, :OMM73OGFS_j2pAqY, :pMM73OGFS_j2pAqo, :kUM73OGFS_j2pApG, :yUM73OGFS_j2pApM, <https://w3id.org/ontouml-models/model/short-examples2013/8UM73OGFS_j2pApK>, :BMM73OGFS_j2pAqc, :JMM73OGFS_j2pAqm, :hMM73OGFS_j2pAqi.
-:fEM73OGFS_j2pAog rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "rs"@en;
-    ontouml:containsView :qUM73OGFS_j2pApO, :aUM73OGFS_j2pApQ, :NMM73OGFS_j2pAq4, :VMM73OGFS_j2pAq0, <https://w3id.org/ontouml-models/model/short-examples2013/1MM73OGFS_j2pAq2>, :mUM73OGFS_j2pApU, :lMM73OGFS_j2pAqy, :GUM73OGFS_j2pApS.
-:AkM73OGFS_j2pAoi rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "rbos"@en;
-    ontouml:containsView :ZMM73OGFS_j2pAqs, <https://w3id.org/ontouml-models/model/short-examples2013/2UM73OGFS_j2pApY>, :pMM73OGFS_j2pAqq, :WUM73OGFS_j2pApW, <https://w3id.org/ontouml-models/model/short-examples2013/.UM73OGFS_j2pApa>, <https://w3id.org/ontouml-models/model/short-examples2013/5MM73OGFS_j2pAqu>.
-:QkM73OGFS_j2pAok rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "str"@en;
-    ontouml:containsView <https://w3id.org/ontouml-models/model/short-examples2013/.UM73OGFS_j2pApc>, :FMM73OGFS_j2pAqw.
-:IkM73OGFS_j2pAom rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "ac"@en;
-    ontouml:containsView <https://w3id.org/ontouml-models/model/short-examples2013/5UM73OGFS_j2pApi>, :BUM73OGFS_j2pApe, :dMM73OGFS_j2pAq6, :DMM73OGFS_j2pAq8, <https://w3id.org/ontouml-models/model/short-examples2013/DMM73OGFS_j2pAq.>, :ZUM73OGFS_j2pApg.
-:YkM73OGFS_j2pAoo rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "rwor"@en;
-    ontouml:containsView :LMM73OGFS_j2pArC, :DUM73OGFS_j2pApq, :bMM73OGFS_j2pArG, :VUM73OGFS_j2pApk, <https://w3id.org/ontouml-models/model/short-examples2013/7MM73OGFS_j2pArI>, :zUM73OGFS_j2pAps, :jMM73OGFS_j2pArA, :NUM73OGFS_j2pApm, :dUM73OGFS_j2pApo, :HMM73OGFS_j2pArK, :rMM73OGFS_j2pArE.
-<https://w3id.org/ontouml-models/model/short-examples2013/4kM73OGFS_j2pAoq> rdf:type ontouml:Diagram;
-    ontouml:project :QC073OGFS_j2pAWd;
-    ontouml:name "ia"@en;
-    ontouml:containsView :EsM73OGFS_j2pArS, :wsM73OGFS_j2pArO, :nUM73OGFS_j2pApu, :YsM73OGFS_j2pArQ, :Q0M73OGFS_j2pApy, :nMM73OGFS_j2pArM, :I0M73OGFS_j2pAp0, :o0M73OGFS_j2pAp2, :vUM73OGFS_j2pApw.
+<https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa_shape> a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa_shape_point> ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa_shape_point> a ontouml:Point ;
+    ontouml:xCoordinate 394 ;
+    ontouml:yCoordinate 302 .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc_shape> a ontouml:Rectangle ;
+    ontouml:height "35"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc_shape_point> ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc_shape_point> a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 142 .
+
+:0UM73OGFS_j2pApI_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :0UM73OGFS_j2pApI_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:0UM73OGFS_j2pApI_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 381 ;
+    ontouml:yCoordinate 263 .
+
+:0YM73OGFS_j2pAm7_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:1MM73OGFS_j2pAq2 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :_YM73OGFS_j2pAnj ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :1MM73OGFS_j2pAq2_path ;
+    ontouml:sourceView :qUM73OGFS_j2pApO ;
+    ontouml:targetView :GUM73OGFS_j2pApS .
+
+:1MM73OGFS_j2pAq2_path a ontouml:Path ;
+    ontouml:point :1MM73OGFS_j2pAq2_path_point_0,
+        :1MM73OGFS_j2pAq2_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:1MM73OGFS_j2pAq2_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 370 ;
+    ontouml:yCoordinate 195 .
+
+:1MM73OGFS_j2pAq2_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 370 ;
+    ontouml:yCoordinate 227 .
+
+:2UM73OGFS_j2pApY_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :2UM73OGFS_j2pApY_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:2UM73OGFS_j2pApY_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 203 ;
+    ontouml:yCoordinate 302 .
+
+:30M73OGFS_j2pAqE a ontouml:RelationView ;
+    ontouml:isViewOf :0YM73OGFS_j2pAm6 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :30M73OGFS_j2pAqE_path ;
+    ontouml:sourceView :9kM73OGFS_j2pAow ;
+    ontouml:targetView :bkM73OGFS_j2pAo2 .
+
+:30M73OGFS_j2pAqE_path a ontouml:Path ;
+    ontouml:point :30M73OGFS_j2pAqE_path_point_0,
+        :30M73OGFS_j2pAqE_path_point_1,
+        :30M73OGFS_j2pAqE_path_point_2,
+        :30M73OGFS_j2pAqE_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:30M73OGFS_j2pAqE_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 639 ;
+    ontouml:yCoordinate 369 .
+
+:30M73OGFS_j2pAqE_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 690 ;
+    ontouml:yCoordinate 369 .
+
+:30M73OGFS_j2pAqE_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 690 ;
+    ontouml:yCoordinate 415 .
+
+:30M73OGFS_j2pAqE_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 757 ;
+    ontouml:yCoordinate 415 .
+
+:3EM73OGFS_j2pAoe a ontouml:Diagram ;
+    ontouml:containsView :0UM73OGFS_j2pApI,
+        :8UM73OGFS_j2pApK,
+        :BMM73OGFS_j2pAqc,
+        :BMM73OGFS_j2pAqe,
+        :BMM73OGFS_j2pAqg,
+        :EUM73OGFS_j2pApE,
+        :JMM73OGFS_j2pAqm,
+        :OMM73OGFS_j2pAqY,
+        :RMM73OGFS_j2pAqk,
+        :YUM73OGFS_j2pApC,
+        :eMM73OGFS_j2pAqa,
+        :hMM73OGFS_j2pAqi,
+        :kUM73OGFS_j2pApG,
+        :pMM73OGFS_j2pAqo,
+        :yUM73OGFS_j2pApM ;
+    ontouml:name "relator with overlapping roles"@en ;
+    ontouml:owner :Vn073OGFS_j2pAl5 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:4MM73OGFS_j2pAqK a ontouml:RelationView ;
+    ontouml:isViewOf :uYM73OGFS_j2pAnG ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :4MM73OGFS_j2pAqK_path ;
+    ontouml:sourceView :7kM73OGFS_j2pAo4 ;
+    ontouml:targetView :bkM73OGFS_j2pAo2 .
+
+:4MM73OGFS_j2pAqK_path a ontouml:Path ;
+    ontouml:point :4MM73OGFS_j2pAqK_path_point_0,
+        :4MM73OGFS_j2pAqK_path_point_1,
+        :4MM73OGFS_j2pAqK_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:4MM73OGFS_j2pAqK_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 701 ;
+    ontouml:yCoordinate 494 .
+
+:4MM73OGFS_j2pAqK_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 825 ;
+    ontouml:yCoordinate 494 .
+
+:4MM73OGFS_j2pAqK_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 825 ;
+    ontouml:yCoordinate 426 .
+
+:4YM73OGFS_j2pAm2_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:4YM73OGFS_j2pAm4_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:4gM73OGFS_j2pAmL a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Kind1"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:4kM73OGFS_j2pAoq a ontouml:Diagram ;
+    ontouml:containsView :EsM73OGFS_j2pArS,
+        :I0M73OGFS_j2pAp0,
+        :Q0M73OGFS_j2pApy,
+        :YsM73OGFS_j2pArQ,
+        :nMM73OGFS_j2pArM,
+        :nUM73OGFS_j2pApu,
+        :o0M73OGFS_j2pAp2,
+        :vUM73OGFS_j2pApw,
+        :wsM73OGFS_j2pArO ;
+    ontouml:name "ia"@en ;
+    ontouml:owner :4gM73OGFS_j2pAmK ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:4oM73OGFS_j2pAmq_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:5MM73OGFS_j2pAqu a ontouml:RelationView ;
+    ontouml:isViewOf :44M73OGFS_j2pAnn ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :5MM73OGFS_j2pAqu_path ;
+    ontouml:sourceView :2UM73OGFS_j2pApY ;
+    ontouml:targetView <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa> .
+
+:5MM73OGFS_j2pAqu_path a ontouml:Path ;
+    ontouml:point :5MM73OGFS_j2pAqu_path_point_0,
+        :5MM73OGFS_j2pAqu_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:5MM73OGFS_j2pAqu_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 294 ;
+    ontouml:yCoordinate 336 .
+
+:5MM73OGFS_j2pAqu_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 393 ;
+    ontouml:yCoordinate 336 .
+
+:5UM73OGFS_j2pApi_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :5UM73OGFS_j2pApi_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:5UM73OGFS_j2pApi_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 424 ;
+    ontouml:yCoordinate 291 .
+
+:5YM73OGFS_j2pAnM_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:5YM73OGFS_j2pAnO_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:60M73OGFS_j2pAp6 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :wIM73OGFS_j2pAml ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :60M73OGFS_j2pAp6_path ;
+    ontouml:sourceView :MkM73OGFS_j2pAos ;
+    ontouml:targetView :DkM73OGFS_j2pAoy .
+
+:60M73OGFS_j2pAp6_path a ontouml:Path ;
+    ontouml:point :60M73OGFS_j2pAp6_path_point_0,
+        :60M73OGFS_j2pAp6_path_point_1,
+        :60M73OGFS_j2pAp6_path_point_2,
+        :60M73OGFS_j2pAp6_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:60M73OGFS_j2pAp6_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 225 .
+
+:60M73OGFS_j2pAp6_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 274 .
+
+:60M73OGFS_j2pAp6_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 744 ;
+    ontouml:yCoordinate 274 .
+
+:60M73OGFS_j2pAp6_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 744 ;
+    ontouml:yCoordinate 301 .
+
+:6MM73OGFS_j2pAqO a ontouml:GeneralizationView ;
+    ontouml:isViewOf :tYM73OGFS_j2pAnQ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :6MM73OGFS_j2pAqO_path ;
+    ontouml:sourceView :dkM73OGFS_j2pAou ;
+    ontouml:targetView :PkM73OGFS_j2pAo6 .
+
+:6MM73OGFS_j2pAqO_path a ontouml:Path ;
+    ontouml:point :6MM73OGFS_j2pAqO_path_point_0,
+        :6MM73OGFS_j2pAqO_path_point_1,
+        :6MM73OGFS_j2pAqO_path_point_2,
+        :6MM73OGFS_j2pAqO_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:6MM73OGFS_j2pAqO_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 380 ;
+    ontouml:yCoordinate 300 .
+
+:6MM73OGFS_j2pAqO_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 380 ;
+    ontouml:yCoordinate 249 .
+
+:6MM73OGFS_j2pAqO_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 426 ;
+    ontouml:yCoordinate 249 .
+
+:6MM73OGFS_j2pAqO_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 426 ;
+    ontouml:yCoordinate 233 .
+
+:7MM73OGFS_j2pArI a ontouml:RelationView ;
+    ontouml:isViewOf :n4M73OGFS_j2pAoK ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :7MM73OGFS_j2pArI_path ;
+    ontouml:sourceView :VUM73OGFS_j2pApk ;
+    ontouml:targetView :NUM73OGFS_j2pApm .
+
+:7MM73OGFS_j2pArI_path a ontouml:Path ;
+    ontouml:point :7MM73OGFS_j2pArI_path_point_0,
+        :7MM73OGFS_j2pArI_path_point_1,
+        :7MM73OGFS_j2pArI_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:7MM73OGFS_j2pArI_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 341 ;
+    ontouml:yCoordinate 331 .
+
+:7MM73OGFS_j2pArI_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 268 ;
+    ontouml:yCoordinate 331 .
+
+:7MM73OGFS_j2pArI_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 268 ;
+    ontouml:yCoordinate 257 .
+
+:7kM73OGFS_j2pAo4_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :7kM73OGFS_j2pAo4_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:7kM73OGFS_j2pAo4_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 610 ;
+    ontouml:yCoordinate 477 .
+
+:8UM73OGFS_j2pApK_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :8UM73OGFS_j2pApK_shape_point ;
+    ontouml:width "89"^^xsd:nonNegativeInteger .
+
+:8UM73OGFS_j2pApK_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 538 ;
+    ontouml:yCoordinate 263 .
+
+:8YM73OGFS_j2pAnB_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:8YM73OGFS_j2pAnD_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:9kM73OGFS_j2pAow_shape a ontouml:Rectangle ;
+    ontouml:height "35"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :9kM73OGFS_j2pAow_shape_point ;
+    ontouml:width "111"^^xsd:nonNegativeInteger .
+
+:9kM73OGFS_j2pAow_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 527 ;
+    ontouml:yCoordinate 351 .
+
+:AUM73OGFS_j2pAo._shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :AUM73OGFS_j2pAo._shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:AUM73OGFS_j2pAo._shape_point a ontouml:Point ;
+    ontouml:xCoordinate 513 ;
+    ontouml:yCoordinate 186 .
+
+:AYM73OGFS_j2pAmx_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:AYM73OGFS_j2pAmz_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:AkM73OGFS_j2pAoi a ontouml:Diagram ;
+    ontouml:containsView <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa>,
+        :2UM73OGFS_j2pApY,
+        :5MM73OGFS_j2pAqu,
+        :WUM73OGFS_j2pApW,
+        :ZMM73OGFS_j2pAqs,
+        :pMM73OGFS_j2pAqq ;
+    ontouml:name "rbos"@en ;
+    ontouml:owner :4gM73OGFS_j2pAmK ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:BMM73OGFS_j2pAqc a ontouml:GeneralizationView ;
+    ontouml:isViewOf :zwM73OGFS_j2pAmk ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :BMM73OGFS_j2pAqc_path ;
+    ontouml:sourceView :kUM73OGFS_j2pApG ;
+    ontouml:targetView :EUM73OGFS_j2pApE .
+
+:BMM73OGFS_j2pAqc_path a ontouml:Path ;
+    ontouml:point :BMM73OGFS_j2pAqc_path_point_0,
+        :BMM73OGFS_j2pAqc_path_point_1,
+        :BMM73OGFS_j2pAqc_path_point_2,
+        :BMM73OGFS_j2pAqc_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:BMM73OGFS_j2pAqc_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 427 ;
+    ontouml:yCoordinate 197 .
+
+:BMM73OGFS_j2pAqc_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 427 ;
+    ontouml:yCoordinate 246 .
+
+:BMM73OGFS_j2pAqc_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 273 ;
+    ontouml:yCoordinate 246 .
+
+:BMM73OGFS_j2pAqc_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 273 ;
+    ontouml:yCoordinate 264 .
+
+:BMM73OGFS_j2pAqe a ontouml:RelationView ;
+    ontouml:isViewOf :AYM73OGFS_j2pAmw ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :BMM73OGFS_j2pAqe_path ;
+    ontouml:sourceView :YUM73OGFS_j2pApC ;
+    ontouml:targetView :0UM73OGFS_j2pApI .
+
+:BMM73OGFS_j2pAqe_path a ontouml:Path ;
+    ontouml:point :BMM73OGFS_j2pAqe_path_point_0,
+        :BMM73OGFS_j2pAqe_path_point_1,
+        :BMM73OGFS_j2pAqe_path_point_2,
+        :BMM73OGFS_j2pAqe_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:BMM73OGFS_j2pAqe_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 499 ;
+    ontouml:yCoordinate 383 .
+
+:BMM73OGFS_j2pAqe_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 499 ;
+    ontouml:yCoordinate 349 .
+
+:BMM73OGFS_j2pAqe_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 442 ;
+    ontouml:yCoordinate 349 .
+
+:BMM73OGFS_j2pAqe_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 442 ;
+    ontouml:yCoordinate 299 .
+
+:BMM73OGFS_j2pAqg a ontouml:GeneralizationView ;
+    ontouml:isViewOf :wIM73OGFS_j2pAml ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :BMM73OGFS_j2pAqg_path ;
+    ontouml:sourceView :kUM73OGFS_j2pApG ;
+    ontouml:targetView :0UM73OGFS_j2pApI .
+
+:BMM73OGFS_j2pAqg_path a ontouml:Path ;
+    ontouml:point :BMM73OGFS_j2pAqg_path_point_0,
+        :BMM73OGFS_j2pAqg_path_point_1,
+        :BMM73OGFS_j2pAqg_path_point_2,
+        :BMM73OGFS_j2pAqg_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:BMM73OGFS_j2pAqg_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 427 ;
+    ontouml:yCoordinate 197 .
+
+:BMM73OGFS_j2pAqg_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 427 ;
+    ontouml:yCoordinate 246 .
+
+:BMM73OGFS_j2pAqg_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 426 ;
+    ontouml:yCoordinate 246 .
+
+:BMM73OGFS_j2pAqg_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 426 ;
+    ontouml:yCoordinate 263 .
+
+:BUM73OGFS_j2pApe_shape a ontouml:Rectangle ;
+    ontouml:height "33"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :BUM73OGFS_j2pApe_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:BUM73OGFS_j2pApe_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 221 ;
+    ontouml:yCoordinate 289 .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#DMM73OGFS_j2pAq.> a ontouml:RelationView ;
+    ontouml:isViewOf :N4M73OGFS_j2pAn9 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :DMM73OGFS_j2pAq._path ;
+    ontouml:sourceView :ZUM73OGFS_j2pApg ;
+    ontouml:targetView :5UM73OGFS_j2pApi .
+
+:DMM73OGFS_j2pAq._path a ontouml:Path ;
+    ontouml:point :DMM73OGFS_j2pAq._path_point_0,
+        :DMM73OGFS_j2pAq._path_point_1,
+        :DMM73OGFS_j2pAq._path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:DMM73OGFS_j2pAq._path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 312 ;
+    ontouml:yCoordinate 424 .
+
+:DMM73OGFS_j2pAq._path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 472 ;
+    ontouml:yCoordinate 424 .
+
+:DMM73OGFS_j2pAq._path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 472 ;
+    ontouml:yCoordinate 329 .
+
+:DMM73OGFS_j2pAq8 a ontouml:RelationView ;
+    ontouml:isViewOf :x4M73OGFS_j2pAn4 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :DMM73OGFS_j2pAq8_path ;
+    ontouml:sourceView :BUM73OGFS_j2pApe ;
+    ontouml:targetView :ZUM73OGFS_j2pApg .
+
+:DMM73OGFS_j2pAq8_path a ontouml:Path ;
+    ontouml:point :DMM73OGFS_j2pAq8_path_point_0,
+        :DMM73OGFS_j2pAq8_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:DMM73OGFS_j2pAq8_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 266 ;
+    ontouml:yCoordinate 323 .
+
+:DMM73OGFS_j2pAq8_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 266 ;
+    ontouml:yCoordinate 400 .
+
+:DUM73OGFS_j2pApq_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :DUM73OGFS_j2pApq_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:DUM73OGFS_j2pApq_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 340 ;
+    ontouml:yCoordinate 211 .
+
+:DkM73OGFS_j2pAoy_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :DkM73OGFS_j2pAoy_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:DkM73OGFS_j2pAoy_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 704 ;
+    ontouml:yCoordinate 302 .
+
+:E4M73OGFS_j2pAno_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:E4M73OGFS_j2pAnq_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:EUM73OGFS_j2pApE_shape a ontouml:Rectangle ;
+    ontouml:height "32"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :EUM73OGFS_j2pApE_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:EUM73OGFS_j2pApE_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 228 ;
+    ontouml:yCoordinate 264 .
+
+:EsM73OGFS_j2pArS a ontouml:RelationView ;
+    ontouml:isViewOf :wEM73OGFS_j2pAoX ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :EsM73OGFS_j2pArS_path ;
+    ontouml:sourceView :o0M73OGFS_j2pAp2 ;
+    ontouml:targetView :nUM73OGFS_j2pApu .
+
+:EsM73OGFS_j2pArS_path a ontouml:Path ;
+    ontouml:point :EsM73OGFS_j2pArS_path_point_0,
+        :EsM73OGFS_j2pArS_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:EsM73OGFS_j2pArS_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 300 ;
+    ontouml:yCoordinate 258 .
+
+:EsM73OGFS_j2pArS_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 375 ;
+    ontouml:yCoordinate 258 .
+
+:FMM73OGFS_j2pAqw a ontouml:RelationView ;
+    ontouml:isViewOf :k4M73OGFS_j2pAns ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :FMM73OGFS_j2pAqw_path ;
+    ontouml:sourceView <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc> ;
+    ontouml:targetView <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc> .
+
+:FMM73OGFS_j2pAqw_path a ontouml:Path ;
+    ontouml:point :FMM73OGFS_j2pAqw_path_point_0,
+        :FMM73OGFS_j2pAqw_path_point_1,
+        :FMM73OGFS_j2pAqw_path_point_2,
+        :FMM73OGFS_j2pAqw_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:FMM73OGFS_j2pAqw_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 313 ;
+    ontouml:yCoordinate 142 .
+
+:FMM73OGFS_j2pAqw_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 369 ;
+    ontouml:yCoordinate 142 .
+
+:FMM73OGFS_j2pAqw_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 369 ;
+    ontouml:yCoordinate 177 .
+
+:FMM73OGFS_j2pAqw_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 313 ;
+    ontouml:yCoordinate 177 .
+
+:GMM73OGFS_j2pAqQ a ontouml:GeneralizationView ;
+    ontouml:isViewOf :9YM73OGFS_j2pAnR ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :GMM73OGFS_j2pAqQ_path ;
+    ontouml:sourceView :dkM73OGFS_j2pAou ;
+    ontouml:targetView :_kM73OGFS_j2pAo8 .
+
+:GMM73OGFS_j2pAqQ_path a ontouml:Path ;
+    ontouml:point :GMM73OGFS_j2pAqQ_path_point_0,
+        :GMM73OGFS_j2pAqQ_path_point_1,
+        :GMM73OGFS_j2pAqQ_path_point_2,
+        :GMM73OGFS_j2pAqQ_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:GMM73OGFS_j2pAqQ_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 380 ;
+    ontouml:yCoordinate 300 .
+
+:GMM73OGFS_j2pAqQ_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 380 ;
+    ontouml:yCoordinate 249 .
+
+:GMM73OGFS_j2pAqQ_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 339 ;
+    ontouml:yCoordinate 249 .
+
+:GMM73OGFS_j2pAqQ_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 339 ;
+    ontouml:yCoordinate 232 .
+
+:GUM73OGFS_j2pApS_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :GUM73OGFS_j2pApS_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:GUM73OGFS_j2pApS_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 280 ;
+    ontouml:yCoordinate 228 .
+
+:HMM73OGFS_j2pArK a ontouml:RelationView ;
+    ontouml:isViewOf :v4M73OGFS_j2pAoP ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :HMM73OGFS_j2pArK_path ;
+    ontouml:sourceView :VUM73OGFS_j2pApk ;
+    ontouml:targetView :dUM73OGFS_j2pApo .
+
+:HMM73OGFS_j2pArK_path a ontouml:Path ;
+    ontouml:point :HMM73OGFS_j2pArK_path_point_0,
+        :HMM73OGFS_j2pArK_path_point_1,
+        :HMM73OGFS_j2pArK_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:HMM73OGFS_j2pArK_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 433 ;
+    ontouml:yCoordinate 329 .
+
+:HMM73OGFS_j2pArK_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 501 ;
+    ontouml:yCoordinate 329 .
+
+:HMM73OGFS_j2pArK_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 501 ;
+    ontouml:yCoordinate 257 .
+
+:I0M73OGFS_j2pAp0_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :I0M73OGFS_j2pAp0_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:I0M73OGFS_j2pAp0_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 481 ;
+    ontouml:yCoordinate 322 .
+
+:IkM73OGFS_j2pAom a ontouml:Diagram ;
+    ontouml:containsView :5UM73OGFS_j2pApi,
+        :BUM73OGFS_j2pApe,
+        <https://w3id.org/ontouml-models/model/short-examples2013#DMM73OGFS_j2pAq.>,
+        :DMM73OGFS_j2pAq8,
+        :ZUM73OGFS_j2pApg,
+        :dMM73OGFS_j2pAq6 ;
+    ontouml:name "ac"@en ;
+    ontouml:owner :4gM73OGFS_j2pAmK ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:JMM73OGFS_j2pAqm a ontouml:RelationView ;
+    ontouml:isViewOf :4YM73OGFS_j2pAm1 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :JMM73OGFS_j2pAqm_path ;
+    ontouml:sourceView :YUM73OGFS_j2pApC ;
+    ontouml:targetView :yUM73OGFS_j2pApM .
+
+:JMM73OGFS_j2pAqm_path a ontouml:Path ;
+    ontouml:point :JMM73OGFS_j2pAqm_path_point_0,
+        :JMM73OGFS_j2pAqm_path_point_1,
+        :JMM73OGFS_j2pAqm_path_point_2,
+        :JMM73OGFS_j2pAqm_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:JMM73OGFS_j2pAqm_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 486 ;
+    ontouml:yCoordinate 433 .
+
+:JMM73OGFS_j2pAqm_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 486 ;
+    ontouml:yCoordinate 468 .
+
+:JMM73OGFS_j2pAqm_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 277 ;
+    ontouml:yCoordinate 468 .
+
+:JMM73OGFS_j2pAqm_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 277 ;
+    ontouml:yCoordinate 422 .
+
+:LMM73OGFS_j2pArC a ontouml:GeneralizationView ;
+    ontouml:isViewOf :j4M73OGFS_j2pAoD ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :LMM73OGFS_j2pArC_path ;
+    ontouml:sourceView :zUM73OGFS_j2pAps ;
+    ontouml:targetView :DUM73OGFS_j2pApq .
+
+:LMM73OGFS_j2pArC_path a ontouml:Path ;
+    ontouml:point :LMM73OGFS_j2pArC_path_point_0,
+        :LMM73OGFS_j2pArC_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:LMM73OGFS_j2pArC_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 430 ;
+    ontouml:yCoordinate 174 .
+
+:LMM73OGFS_j2pArC_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 430 ;
+    ontouml:yCoordinate 210 .
+
+:M0M73OGFS_j2pAp4 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :zwM73OGFS_j2pAmk ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :M0M73OGFS_j2pAp4_path ;
+    ontouml:sourceView :MkM73OGFS_j2pAos ;
+    ontouml:targetView :dkM73OGFS_j2pAou .
+
+:M0M73OGFS_j2pAp4_path a ontouml:Path ;
+    ontouml:point :M0M73OGFS_j2pAp4_path_point_0,
+        :M0M73OGFS_j2pAp4_path_point_1,
+        :M0M73OGFS_j2pAp4_path_point_2,
+        :M0M73OGFS_j2pAp4_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:M0M73OGFS_j2pAp4_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 225 .
+
+:M0M73OGFS_j2pAp4_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 274 .
+
+:M0M73OGFS_j2pAp4_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 410 ;
+    ontouml:yCoordinate 274 .
+
+:M0M73OGFS_j2pAp4_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 410 ;
+    ontouml:yCoordinate 300 .
+
+:MYM73OGFS_j2pAm9_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:MkM73OGFS_j2pAos_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :MkM73OGFS_j2pAos_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:MkM73OGFS_j2pAos_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 650 ;
+    ontouml:yCoordinate 187 .
+
+:MoM73OGFS_j2pAmt_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "2..*" ;
+    ontouml:lowerBound "2"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#N0M73OGFS_j2pAp.> a ontouml:RelationView ;
+    ontouml:isViewOf :7IM73OGFS_j2pAmo ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :N0M73OGFS_j2pAp._path ;
+    ontouml:sourceView :9kM73OGFS_j2pAow ;
+    ontouml:targetView :dkM73OGFS_j2pAou .
+
+:N0M73OGFS_j2pAp._path a ontouml:Path ;
+    ontouml:point :N0M73OGFS_j2pAp._path_point_0,
+        :N0M73OGFS_j2pAp._path_point_1,
+        :N0M73OGFS_j2pAp._path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:N0M73OGFS_j2pAp._path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 553 ;
+    ontouml:yCoordinate 350 .
+
+:N0M73OGFS_j2pAp._path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 553 ;
+    ontouml:yCoordinate 309 .
+
+:N0M73OGFS_j2pAp._path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 457 ;
+    ontouml:yCoordinate 309 .
+
+:N4M73OGFS_j2pAn._cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:N4M73OGFS_j2pAoA_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:NMM73OGFS_j2pAq4 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :g4M73OGFS_j2pAnk ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :NMM73OGFS_j2pAq4_path ;
+    ontouml:sourceView :aUM73OGFS_j2pApQ ;
+    ontouml:targetView :mUM73OGFS_j2pApU .
+
+:NMM73OGFS_j2pAq4_path a ontouml:Path ;
+    ontouml:point :NMM73OGFS_j2pAq4_path_point_0,
+        :NMM73OGFS_j2pAq4_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:NMM73OGFS_j2pAq4_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 541 ;
+    ontouml:yCoordinate 196 .
+
+:NMM73OGFS_j2pAq4_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 541 ;
+    ontouml:yCoordinate 228 .
+
+:NUM73OGFS_j2pApm_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :NUM73OGFS_j2pApm_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:NUM73OGFS_j2pApm_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 227 ;
+    ontouml:yCoordinate 222 .
+
+:O4M73OGFS_j2pAn1_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:O4M73OGFS_j2pAnz_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:OMM73OGFS_j2pAqY a ontouml:RelationView ;
+    ontouml:isViewOf :7IM73OGFS_j2pAmo ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :OMM73OGFS_j2pAqY_path ;
+    ontouml:sourceView :YUM73OGFS_j2pApC ;
+    ontouml:targetView :EUM73OGFS_j2pApE .
+
+:OMM73OGFS_j2pAqY_path a ontouml:Path ;
+    ontouml:point :OMM73OGFS_j2pAqY_path_point_0,
+        :OMM73OGFS_j2pAqY_path_point_1,
+        :OMM73OGFS_j2pAqY_path_point_2,
+        :OMM73OGFS_j2pAqY_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:OMM73OGFS_j2pAqY_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 438 ;
+    ontouml:yCoordinate 414 .
+
+:OMM73OGFS_j2pAqY_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 356 ;
+    ontouml:yCoordinate 414 .
+
+:OMM73OGFS_j2pAqY_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 356 ;
+    ontouml:yCoordinate 298 .
+
+:OMM73OGFS_j2pAqY_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 320 ;
+    ontouml:yCoordinate 298 .
+
+:P0M73OGFS_j2pAqG a ontouml:GeneralizationView ;
+    ontouml:isViewOf :cYM73OGFS_j2pAm_ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :P0M73OGFS_j2pAqG_path ;
+    ontouml:sourceView :MkM73OGFS_j2pAos ;
+    ontouml:targetView :bkM73OGFS_j2pAo2 .
+
+:P0M73OGFS_j2pAqG_path a ontouml:Path ;
+    ontouml:point :P0M73OGFS_j2pAqG_path_point_0,
+        :P0M73OGFS_j2pAqG_path_point_1,
+        :P0M73OGFS_j2pAqG_path_point_2,
+        :P0M73OGFS_j2pAqG_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:P0M73OGFS_j2pAqG_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 225 .
+
+:P0M73OGFS_j2pAqG_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 695 ;
+    ontouml:yCoordinate 274 .
+
+:P0M73OGFS_j2pAqG_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 802 ;
+    ontouml:yCoordinate 274 .
+
+:P0M73OGFS_j2pAqG_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 802 ;
+    ontouml:yCoordinate 388 .
+
+:PYM73OGFS_j2pAna_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:PYM73OGFS_j2pAnc_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:PkM73OGFS_j2pAo6_shape a ontouml:Rectangle ;
+    ontouml:height "35"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :PkM73OGFS_j2pAo6_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:PkM73OGFS_j2pAo6_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 408 ;
+    ontouml:yCoordinate 197 .
+
+:Q0M73OGFS_j2pApy_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :Q0M73OGFS_j2pApy_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:Q0M73OGFS_j2pApy_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 377 ;
+    ontouml:yCoordinate 322 .
+
+:QC073OGFS_j2pAWd_root a ontouml:Package ;
+    ontouml:containsModelElement :4gM73OGFS_j2pAmK,
+        :Vn073OGFS_j2pAl5 ;
+    ontouml:name "paper_example"@en ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:QkM73OGFS_j2pAok a ontouml:Diagram ;
+    ontouml:containsView <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc>,
+        :FMM73OGFS_j2pAqw ;
+    ontouml:name "str"@en ;
+    ontouml:owner :4gM73OGFS_j2pAmK ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:QwM73OGFS_j2pAmh a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Kind2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:RMM73OGFS_j2pAqk a ontouml:RelationView ;
+    ontouml:isViewOf :0YM73OGFS_j2pAm6 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :RMM73OGFS_j2pAqk_path ;
+    ontouml:sourceView :YUM73OGFS_j2pApC ;
+    ontouml:targetView :8UM73OGFS_j2pApK .
+
+:RMM73OGFS_j2pAqk_path a ontouml:Path ;
+    ontouml:point :RMM73OGFS_j2pAqk_path_point_0,
+        :RMM73OGFS_j2pAqk_path_point_1,
+        :RMM73OGFS_j2pAqk_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:RMM73OGFS_j2pAqk_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 530 ;
+    ontouml:yCoordinate 405 .
+
+:RMM73OGFS_j2pAqk_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 589 ;
+    ontouml:yCoordinate 405 .
+
+:RMM73OGFS_j2pAqk_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 589 ;
+    ontouml:yCoordinate 299 .
+
+:TYM73OGFS_j2pAnX_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:TkM73OGFS_j2pAo0_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :TkM73OGFS_j2pAo0_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:TkM73OGFS_j2pAo0_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 391 ;
+    ontouml:yCoordinate 420 .
+
+:UMM73OGFS_j2pAqM a ontouml:RelationView ;
+    ontouml:isViewOf :5YM73OGFS_j2pAnL ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :UMM73OGFS_j2pAqM_path ;
+    ontouml:sourceView :7kM73OGFS_j2pAo4 ;
+    ontouml:targetView :dkM73OGFS_j2pAou .
+
+:UMM73OGFS_j2pAqM_path a ontouml:Path ;
+    ontouml:point :UMM73OGFS_j2pAqM_path_point_0,
+        :UMM73OGFS_j2pAqM_path_point_1,
+        :UMM73OGFS_j2pAqM_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:UMM73OGFS_j2pAqM_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 609 ;
+    ontouml:yCoordinate 499 .
+
+:UMM73OGFS_j2pAqM_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 376 ;
+    ontouml:yCoordinate 499 .
+
+:UMM73OGFS_j2pAqM_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 376 ;
+    ontouml:yCoordinate 338 .
+
+:VMM73OGFS_j2pAq0 a ontouml:RelationView ;
+    ontouml:isViewOf :vYM73OGFS_j2pAne ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :VMM73OGFS_j2pAq0_path ;
+    ontouml:sourceView :qUM73OGFS_j2pApO ;
+    ontouml:targetView :aUM73OGFS_j2pApQ .
+
+:VMM73OGFS_j2pAq0_path a ontouml:Path ;
+    ontouml:point :VMM73OGFS_j2pAq0_path_point_0,
+        :VMM73OGFS_j2pAq0_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:VMM73OGFS_j2pAq0_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 372 ;
+    ontouml:yCoordinate 194 .
+
+:VMM73OGFS_j2pAq0_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 451 ;
+    ontouml:yCoordinate 194 .
+
+:VUM73OGFS_j2pApk_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :VUM73OGFS_j2pApk_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:VUM73OGFS_j2pApk_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 342 ;
+    ontouml:yCoordinate 310 .
+
+:W0M73OGFS_j2pAp8 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :IIM73OGFS_j2pAmm ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :W0M73OGFS_j2pAp8_path ;
+    ontouml:sourceView :dkM73OGFS_j2pAou ;
+    ontouml:targetView :TkM73OGFS_j2pAo0 .
+
+:W0M73OGFS_j2pAp8_path a ontouml:Path ;
+    ontouml:point :W0M73OGFS_j2pAp8_path_point_0,
+        :W0M73OGFS_j2pAp8_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:W0M73OGFS_j2pAp8_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 456 ;
+    ontouml:yCoordinate 338 .
+
+:W0M73OGFS_j2pAp8_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 456 ;
+    ontouml:yCoordinate 419 .
+
+:WMM73OGFS_j2pAqW a ontouml:RelationView ;
+    ontouml:isViewOf :jYM73OGFS_j2pAnU ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :WMM73OGFS_j2pAqW_path ;
+    ontouml:sourceView <https://w3id.org/ontouml-models/model/short-examples2013#AUM73OGFS_j2pAo.> ;
+    ontouml:targetView :gUM73OGFS_j2pApA .
+
+:WMM73OGFS_j2pAqW_path a ontouml:Path ;
+    ontouml:point :WMM73OGFS_j2pAqW_path_point_0,
+        :WMM73OGFS_j2pAqW_path_point_1,
+        :WMM73OGFS_j2pAqW_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:WMM73OGFS_j2pAqW_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 551 ;
+    ontouml:yCoordinate 185 .
+
+:WMM73OGFS_j2pAqW_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 551 ;
+    ontouml:yCoordinate 145 .
+
+:WMM73OGFS_j2pAqW_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 631 ;
+    ontouml:yCoordinate 145 .
+
+:WUM73OGFS_j2pApW_shape a ontouml:Rectangle ;
+    ontouml:height "33"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :WUM73OGFS_j2pApW_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:WUM73OGFS_j2pApW_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 292 ;
+    ontouml:yCoordinate 228 .
+
+:YMM73OGFS_j2pAqI a ontouml:RelationView ;
+    ontouml:isViewOf :8YM73OGFS_j2pAnA ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :YMM73OGFS_j2pAqI_path ;
+    ontouml:sourceView :MkM73OGFS_j2pAos ;
+    ontouml:targetView :MkM73OGFS_j2pAos .
+
+:YMM73OGFS_j2pAqI_path a ontouml:Path ;
+    ontouml:point :YMM73OGFS_j2pAqI_path_point_0,
+        :YMM73OGFS_j2pAqI_path_point_1,
+        :YMM73OGFS_j2pAqI_path_point_2,
+        :YMM73OGFS_j2pAqI_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:YMM73OGFS_j2pAqI_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 741 ;
+    ontouml:yCoordinate 205 .
+
+:YMM73OGFS_j2pAqI_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 770 ;
+    ontouml:yCoordinate 205 .
+
+:YMM73OGFS_j2pAqI_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 770 ;
+    ontouml:yCoordinate 214 .
+
+:YMM73OGFS_j2pAqI_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 741 ;
+    ontouml:yCoordinate 214 .
+
+:YUM73OGFS_j2pApC_shape a ontouml:Rectangle ;
+    ontouml:height "47"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :YUM73OGFS_j2pApC_shape_point ;
+    ontouml:width "89"^^xsd:nonNegativeInteger .
+
+:YUM73OGFS_j2pApC_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 439 ;
+    ontouml:yCoordinate 384 .
+
+:YkM73OGFS_j2pAoo a ontouml:Diagram ;
+    ontouml:containsView :7MM73OGFS_j2pArI,
+        :DUM73OGFS_j2pApq,
+        :HMM73OGFS_j2pArK,
+        :LMM73OGFS_j2pArC,
+        :NUM73OGFS_j2pApm,
+        :VUM73OGFS_j2pApk,
+        :bMM73OGFS_j2pArG,
+        :dUM73OGFS_j2pApo,
+        :jMM73OGFS_j2pArA,
+        :rMM73OGFS_j2pArE,
+        :zUM73OGFS_j2pAps ;
+    ontouml:name "rwor"@en ;
+    ontouml:owner :4gM73OGFS_j2pAmK ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:YsM73OGFS_j2pArQ a ontouml:GeneralizationView ;
+    ontouml:isViewOf :wEM73OGFS_j2pAoW ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :YsM73OGFS_j2pArQ_path ;
+    ontouml:sourceView :nUM73OGFS_j2pApu ;
+    ontouml:targetView :I0M73OGFS_j2pAp0 .
+
+:YsM73OGFS_j2pArQ_path a ontouml:Path ;
+    ontouml:point :YsM73OGFS_j2pArQ_path_point_0,
+        :YsM73OGFS_j2pArQ_path_point_1,
+        :YsM73OGFS_j2pArQ_path_point_2,
+        :YsM73OGFS_j2pArQ_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:YsM73OGFS_j2pArQ_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 421 ;
+    ontouml:yCoordinate 261 .
+
+:YsM73OGFS_j2pArQ_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 421 ;
+    ontouml:yCoordinate 310 .
+
+:YsM73OGFS_j2pArQ_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 524 ;
+    ontouml:yCoordinate 310 .
+
+:YsM73OGFS_j2pArQ_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 524 ;
+    ontouml:yCoordinate 321 .
+
+:ZMM73OGFS_j2pAqs a ontouml:GeneralizationView ;
+    ontouml:isViewOf :44M73OGFS_j2pAnm ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :ZMM73OGFS_j2pAqs_path ;
+    ontouml:sourceView :WUM73OGFS_j2pApW ;
+    ontouml:targetView <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa> .
+
+:ZMM73OGFS_j2pAqs_path a ontouml:Path ;
+    ontouml:point :ZMM73OGFS_j2pAqs_path_point_0,
+        :ZMM73OGFS_j2pAqs_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:ZMM73OGFS_j2pAqs_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 382 ;
+    ontouml:yCoordinate 262 .
+
+:ZMM73OGFS_j2pAqs_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 394 ;
+    ontouml:yCoordinate 301 .
+
+:ZUM73OGFS_j2pApg_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :ZUM73OGFS_j2pApg_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:ZUM73OGFS_j2pApg_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 221 ;
+    ontouml:yCoordinate 401 .
+
+:_kM73OGFS_j2pAo8_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :_kM73OGFS_j2pAo8_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:_kM73OGFS_j2pAo8_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 297 ;
+    ontouml:yCoordinate 197 .
+
+:aUM73OGFS_j2pApQ_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :aUM73OGFS_j2pApQ_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:aUM73OGFS_j2pApQ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 452 ;
+    ontouml:yCoordinate 158 .
+
+:bMM73OGFS_j2pArG a ontouml:RelationView ;
+    ontouml:isViewOf :z4M73OGFS_j2pAoF ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :bMM73OGFS_j2pArG_path ;
+    ontouml:sourceView :VUM73OGFS_j2pApk ;
+    ontouml:targetView :DUM73OGFS_j2pApq .
+
+:bMM73OGFS_j2pArG_path a ontouml:Path ;
+    ontouml:point :bMM73OGFS_j2pArG_path_point_0,
+        :bMM73OGFS_j2pArG_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:bMM73OGFS_j2pArG_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 430 ;
+    ontouml:yCoordinate 309 .
+
+:bMM73OGFS_j2pArG_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 430 ;
+    ontouml:yCoordinate 248 .
+
+:bkM73OGFS_j2pAo2_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :bkM73OGFS_j2pAo2_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:bkM73OGFS_j2pAo2_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 758 ;
+    ontouml:yCoordinate 389 .
+
+:dMM73OGFS_j2pAq6 a ontouml:RelationView ;
+    ontouml:isViewOf :O4M73OGFS_j2pAny ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :dMM73OGFS_j2pAq6_path ;
+    ontouml:sourceView :BUM73OGFS_j2pApe ;
+    ontouml:targetView :5UM73OGFS_j2pApi .
+
+:dMM73OGFS_j2pAq6_path a ontouml:Path ;
+    ontouml:point :dMM73OGFS_j2pAq6_path_point_0,
+        :dMM73OGFS_j2pAq6_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:dMM73OGFS_j2pAq6_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 312 ;
+    ontouml:yCoordinate 309 .
+
+:dMM73OGFS_j2pAq6_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 423 ;
+    ontouml:yCoordinate 309 .
+
+:dUM73OGFS_j2pApo_shape a ontouml:Rectangle ;
+    ontouml:height "33"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :dUM73OGFS_j2pApo_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:dUM73OGFS_j2pApo_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 454 ;
+    ontouml:yCoordinate 223 .
+
+:dkM73OGFS_j2pAou_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :dkM73OGFS_j2pAou_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:dkM73OGFS_j2pAou_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 366 ;
+    ontouml:yCoordinate 301 .
+
+:eMM73OGFS_j2pAqa a ontouml:RelationView ;
+    ontouml:isViewOf :8YM73OGFS_j2pAnA ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :eMM73OGFS_j2pAqa_path ;
+    ontouml:sourceView :kUM73OGFS_j2pApG ;
+    ontouml:targetView :kUM73OGFS_j2pApG .
+
+:eMM73OGFS_j2pAqa_path a ontouml:Path ;
+    ontouml:point :eMM73OGFS_j2pAqa_path_point_0,
+        :eMM73OGFS_j2pAqa_path_point_1,
+        :eMM73OGFS_j2pAqa_path_point_2,
+        :eMM73OGFS_j2pAqa_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:eMM73OGFS_j2pAqa_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 473 ;
+    ontouml:yCoordinate 179 .
+
+:eMM73OGFS_j2pAqa_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 502 ;
+    ontouml:yCoordinate 179 .
+
+:eMM73OGFS_j2pAqa_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 502 ;
+    ontouml:yCoordinate 187 .
+
+:eMM73OGFS_j2pAqa_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 473 ;
+    ontouml:yCoordinate 187 .
+
+:f4M73OGFS_j2pAoS_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:fEM73OGFS_j2pAog a ontouml:Diagram ;
+    ontouml:containsView :1MM73OGFS_j2pAq2,
+        :GUM73OGFS_j2pApS,
+        :NMM73OGFS_j2pAq4,
+        :VMM73OGFS_j2pAq0,
+        :aUM73OGFS_j2pApQ,
+        :lMM73OGFS_j2pAqy,
+        :mUM73OGFS_j2pApU,
+        :qUM73OGFS_j2pApO ;
+    ontouml:name "rs"@en ;
+    ontouml:owner :4gM73OGFS_j2pAmK ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:gUM73OGFS_j2pApA_shape a ontouml:Rectangle ;
+    ontouml:height "33"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :gUM73OGFS_j2pApA_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:gUM73OGFS_j2pApA_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 632 ;
+    ontouml:yCoordinate 123 .
+
+:hMM73OGFS_j2pAqi a ontouml:GeneralizationView ;
+    ontouml:isViewOf :cYM73OGFS_j2pAm_ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :hMM73OGFS_j2pAqi_path ;
+    ontouml:sourceView :kUM73OGFS_j2pApG ;
+    ontouml:targetView :8UM73OGFS_j2pApK .
+
+:hMM73OGFS_j2pAqi_path a ontouml:Path ;
+    ontouml:point :hMM73OGFS_j2pAqi_path_point_0,
+        :hMM73OGFS_j2pAqi_path_point_1,
+        :hMM73OGFS_j2pAqi_path_point_2,
+        :hMM73OGFS_j2pAqi_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:hMM73OGFS_j2pAqi_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 427 ;
+    ontouml:yCoordinate 197 .
+
+:hMM73OGFS_j2pAqi_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 427 ;
+    ontouml:yCoordinate 246 .
+
+:hMM73OGFS_j2pAqi_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 582 ;
+    ontouml:yCoordinate 246 .
+
+:hMM73OGFS_j2pAqi_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 582 ;
+    ontouml:yCoordinate 263 .
+
+:jMM73OGFS_j2pArA a ontouml:GeneralizationView ;
+    ontouml:isViewOf :j4M73OGFS_j2pAoC ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :jMM73OGFS_j2pArA_path ;
+    ontouml:sourceView :zUM73OGFS_j2pAps ;
+    ontouml:targetView :NUM73OGFS_j2pApm .
+
+:jMM73OGFS_j2pArA_path a ontouml:Path ;
+    ontouml:point :jMM73OGFS_j2pArA_path_point_0,
+        :jMM73OGFS_j2pArA_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:jMM73OGFS_j2pArA_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 340 ;
+    ontouml:yCoordinate 174 .
+
+:jMM73OGFS_j2pArA_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 317 ;
+    ontouml:yCoordinate 221 .
+
+:jYM73OGFS_j2pAnV_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..2" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "2" .
+
+:k4M73OGFS_j2pAnt_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:k4M73OGFS_j2pAnv_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:kUM73OGFS_j2pApG_shape a ontouml:Rectangle ;
+    ontouml:height "32"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :kUM73OGFS_j2pApG_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:kUM73OGFS_j2pApG_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 381 ;
+    ontouml:yCoordinate 162 .
+
+:lMM73OGFS_j2pAqy a ontouml:RelationView ;
+    ontouml:isViewOf :3YM73OGFS_j2pAnZ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :lMM73OGFS_j2pAqy_path ;
+    ontouml:sourceView :GUM73OGFS_j2pApS ;
+    ontouml:targetView :mUM73OGFS_j2pApU .
+
+:lMM73OGFS_j2pAqy_path a ontouml:Path ;
+    ontouml:point :lMM73OGFS_j2pAqy_path_point_0,
+        :lMM73OGFS_j2pAqy_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:lMM73OGFS_j2pAqy_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 371 ;
+    ontouml:yCoordinate 263 .
+
+:lMM73OGFS_j2pAqy_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 450 ;
+    ontouml:yCoordinate 263 .
+
+:mMM73OGFS_j2pAqS a ontouml:GeneralizationView ;
+    ontouml:isViewOf :9YM73OGFS_j2pAnS ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :mMM73OGFS_j2pAqS_path ;
+    ontouml:sourceView :MkM73OGFS_j2pAos ;
+    ontouml:targetView <https://w3id.org/ontouml-models/model/short-examples2013#AUM73OGFS_j2pAo.> .
+
+:mMM73OGFS_j2pAqS_path a ontouml:Path ;
+    ontouml:point :mMM73OGFS_j2pAqS_path_point_0,
+        :mMM73OGFS_j2pAqS_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:mMM73OGFS_j2pAqS_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 649 ;
+    ontouml:yCoordinate 220 .
+
+:mMM73OGFS_j2pAqS_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 604 ;
+    ontouml:yCoordinate 220 .
+
+:mMM73OGFS_j2pAqU a ontouml:GeneralizationView ;
+    ontouml:isViewOf :DYM73OGFS_j2pAnT ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :mMM73OGFS_j2pAqU_path ;
+    ontouml:sourceView :MkM73OGFS_j2pAos ;
+    ontouml:targetView :gUM73OGFS_j2pApA .
+
+:mMM73OGFS_j2pAqU_path a ontouml:Path ;
+    ontouml:point :mMM73OGFS_j2pAqU_path_point_0,
+        :mMM73OGFS_j2pAqU_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:mMM73OGFS_j2pAqU_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 722 ;
+    ontouml:yCoordinate 186 .
+
+:mMM73OGFS_j2pAqU_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 722 ;
+    ontouml:yCoordinate 157 .
+
+:mUM73OGFS_j2pApU_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :mUM73OGFS_j2pApU_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:mUM73OGFS_j2pApU_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 451 ;
+    ontouml:yCoordinate 229 .
+
+:n0M73OGFS_j2pAqA a ontouml:RelationView ;
+    ontouml:isViewOf :AYM73OGFS_j2pAmw ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :n0M73OGFS_j2pAqA_path ;
+    ontouml:sourceView :9kM73OGFS_j2pAow ;
+    ontouml:targetView :DkM73OGFS_j2pAoy .
+
+:n0M73OGFS_j2pAqA_path a ontouml:Path ;
+    ontouml:point :n0M73OGFS_j2pAqA_path_point_0,
+        :n0M73OGFS_j2pAqA_path_point_1,
+        :n0M73OGFS_j2pAqA_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:n0M73OGFS_j2pAqA_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 611 ;
+    ontouml:yCoordinate 350 .
+
+:n0M73OGFS_j2pAqA_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 611 ;
+    ontouml:yCoordinate 311 .
+
+:n0M73OGFS_j2pAqA_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 703 ;
+    ontouml:yCoordinate 311 .
+
+:n0M73OGFS_j2pAqC a ontouml:RelationView ;
+    ontouml:isViewOf :4YM73OGFS_j2pAm1 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :n0M73OGFS_j2pAqC_path ;
+    ontouml:sourceView :9kM73OGFS_j2pAow ;
+    ontouml:targetView :TkM73OGFS_j2pAo0 .
+
+:n0M73OGFS_j2pAqC_path a ontouml:Path ;
+    ontouml:point :n0M73OGFS_j2pAqC_path_point_0,
+        :n0M73OGFS_j2pAqC_path_point_1,
+        :n0M73OGFS_j2pAqC_path_point_2 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:n0M73OGFS_j2pAqC_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 584 ;
+    ontouml:yCoordinate 387 .
+
+:n0M73OGFS_j2pAqC_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 584 ;
+    ontouml:yCoordinate 446 .
+
+:n0M73OGFS_j2pAqC_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 482 ;
+    ontouml:yCoordinate 446 .
+
+:n4M73OGFS_j2pAoL_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:n4M73OGFS_j2pAoN_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:nMM73OGFS_j2pArM a ontouml:GeneralizationView ;
+    ontouml:isViewOf :gEM73OGFS_j2pAoU ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :nMM73OGFS_j2pArM_path ;
+    ontouml:sourceView :nUM73OGFS_j2pApu ;
+    ontouml:targetView :vUM73OGFS_j2pApw .
+
+:nMM73OGFS_j2pArM_path a ontouml:Path ;
+    ontouml:point :nMM73OGFS_j2pArM_path_point_0,
+        :nMM73OGFS_j2pArM_path_point_1,
+        :nMM73OGFS_j2pArM_path_point_2,
+        :nMM73OGFS_j2pArM_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:nMM73OGFS_j2pArM_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 421 ;
+    ontouml:yCoordinate 261 .
+
+:nMM73OGFS_j2pArM_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 421 ;
+    ontouml:yCoordinate 310 .
+
+:nMM73OGFS_j2pArM_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 316 ;
+    ontouml:yCoordinate 310 .
+
+:nMM73OGFS_j2pArM_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 316 ;
+    ontouml:yCoordinate 322 .
+
+:nUM73OGFS_j2pApu_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :nUM73OGFS_j2pApu_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:nUM73OGFS_j2pApu_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 376 ;
+    ontouml:yCoordinate 223 .
+
+:o0M73OGFS_j2pAp2_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :o0M73OGFS_j2pAp2_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:o0M73OGFS_j2pAp2_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 209 ;
+    ontouml:yCoordinate 224 .
+
+:pMM73OGFS_j2pAqo a ontouml:GeneralizationView ;
+    ontouml:isViewOf :IIM73OGFS_j2pAmm ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :pMM73OGFS_j2pAqo_path ;
+    ontouml:sourceView :EUM73OGFS_j2pApE ;
+    ontouml:targetView :yUM73OGFS_j2pApM .
+
+:pMM73OGFS_j2pAqo_path a ontouml:Path ;
+    ontouml:point :pMM73OGFS_j2pAqo_path_point_0,
+        :pMM73OGFS_j2pAqo_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:pMM73OGFS_j2pAqo_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 319 ;
+    ontouml:yCoordinate 299 .
+
+:pMM73OGFS_j2pAqo_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 319 ;
+    ontouml:yCoordinate 386 .
+
+:pMM73OGFS_j2pAqq a ontouml:GeneralizationView ;
+    ontouml:isViewOf :g4M73OGFS_j2pAnl ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :pMM73OGFS_j2pAqq_path ;
+    ontouml:sourceView :WUM73OGFS_j2pApW ;
+    ontouml:targetView :2UM73OGFS_j2pApY .
+
+:pMM73OGFS_j2pAqq_path a ontouml:Path ;
+    ontouml:point :pMM73OGFS_j2pAqq_path_point_0,
+        :pMM73OGFS_j2pAqq_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:pMM73OGFS_j2pAqq_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 294 ;
+    ontouml:yCoordinate 262 .
+
+:pMM73OGFS_j2pAqq_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 293 ;
+    ontouml:yCoordinate 301 .
+
+:qUM73OGFS_j2pApO_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :qUM73OGFS_j2pApO_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:qUM73OGFS_j2pApO_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 281 ;
+    ontouml:yCoordinate 158 .
+
+:rMM73OGFS_j2pArE a ontouml:GeneralizationView ;
+    ontouml:isViewOf :T4M73OGFS_j2pAoE ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :rMM73OGFS_j2pArE_path ;
+    ontouml:sourceView :zUM73OGFS_j2pAps ;
+    ontouml:targetView :dUM73OGFS_j2pApo .
+
+:rMM73OGFS_j2pArE_path a ontouml:Path ;
+    ontouml:point :rMM73OGFS_j2pArE_path_point_0,
+        :rMM73OGFS_j2pArE_path_point_1 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:rMM73OGFS_j2pArE_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 430 ;
+    ontouml:yCoordinate 174 .
+
+:rMM73OGFS_j2pArE_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 454 ;
+    ontouml:yCoordinate 222 .
+
+:sEM73OGFS_j2pAoc a ontouml:Diagram ;
+    ontouml:containsView :30M73OGFS_j2pAqE,
+        :4MM73OGFS_j2pAqK,
+        :60M73OGFS_j2pAp6,
+        :6MM73OGFS_j2pAqO,
+        :7kM73OGFS_j2pAo4,
+        :9kM73OGFS_j2pAow,
+        <https://w3id.org/ontouml-models/model/short-examples2013#AUM73OGFS_j2pAo.>,
+        :DkM73OGFS_j2pAoy,
+        :GMM73OGFS_j2pAqQ,
+        :M0M73OGFS_j2pAp4,
+        :MkM73OGFS_j2pAos,
+        <https://w3id.org/ontouml-models/model/short-examples2013#N0M73OGFS_j2pAp.>,
+        :P0M73OGFS_j2pAqG,
+        :PkM73OGFS_j2pAo6,
+        :TkM73OGFS_j2pAo0,
+        :UMM73OGFS_j2pAqM,
+        :W0M73OGFS_j2pAp8,
+        :WMM73OGFS_j2pAqW,
+        :YMM73OGFS_j2pAqI,
+        :_kM73OGFS_j2pAo8,
+        :bkM73OGFS_j2pAo2,
+        :dkM73OGFS_j2pAou,
+        :gUM73OGFS_j2pApA,
+        :mMM73OGFS_j2pAqS,
+        :mMM73OGFS_j2pAqU,
+        :n0M73OGFS_j2pAqA,
+        :n0M73OGFS_j2pAqC ;
+    ontouml:name "example"@en ;
+    ontouml:owner :Vn073OGFS_j2pAl5 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:uYM73OGFS_j2pAnH_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:uYM73OGFS_j2pAnJ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:v4M73OGFS_j2pAoQ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:vUM73OGFS_j2pApw_shape a ontouml:Rectangle ;
+    ontouml:height "35"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :vUM73OGFS_j2pApw_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:vUM73OGFS_j2pApw_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 271 ;
+    ontouml:yCoordinate 323 .
+
+:vYM73OGFS_j2pAnf_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:vYM73OGFS_j2pAnh_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:wEM73OGFS_j2pAoY_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:wEM73OGFS_j2pAoa_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:wgM73OGFS_j2pAmJ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Interrogator"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:stereotype ontouml:role .
+
+:wsM73OGFS_j2pArO a ontouml:GeneralizationView ;
+    ontouml:isViewOf :QEM73OGFS_j2pAoV ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :wsM73OGFS_j2pArO_path ;
+    ontouml:sourceView :nUM73OGFS_j2pApu ;
+    ontouml:targetView :Q0M73OGFS_j2pApy .
+
+:wsM73OGFS_j2pArO_path a ontouml:Path ;
+    ontouml:point :wsM73OGFS_j2pArO_path_point_0,
+        :wsM73OGFS_j2pArO_path_point_1,
+        :wsM73OGFS_j2pArO_path_point_2,
+        :wsM73OGFS_j2pArO_path_point_3 ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:wsM73OGFS_j2pArO_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 421 ;
+    ontouml:yCoordinate 261 .
+
+:wsM73OGFS_j2pArO_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 421 ;
+    ontouml:yCoordinate 310 .
+
+:wsM73OGFS_j2pArO_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 420 ;
+    ontouml:yCoordinate 310 .
+
+:wsM73OGFS_j2pArO_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 420 ;
+    ontouml:yCoordinate 321 .
+
+:x4M73OGFS_j2pAn5_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:x4M73OGFS_j2pAn7_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:yUM73OGFS_j2pApM_shape a ontouml:Rectangle ;
+    ontouml:height "34"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :yUM73OGFS_j2pApM_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:yUM73OGFS_j2pApM_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 228 ;
+    ontouml:yCoordinate 387 .
+
+:z4M73OGFS_j2pAoG_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:z4M73OGFS_j2pAoI_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:zUM73OGFS_j2pAps_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:topLeftPosition :zUM73OGFS_j2pAps_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:zUM73OGFS_j2pAps_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 340 ;
+    ontouml:yCoordinate 137 .
+
+:0YM73OGFS_j2pAm7 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :0YM73OGFS_j2pAm7_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "inv"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :oAM73OGFS_j2pAl_ .
+
+:3YM73OGFS_j2pAnZ a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :PYM73OGFS_j2pAna,
+        :PYM73OGFS_j2pAnc ;
+    ontouml:sourceEnd :PYM73OGFS_j2pAna ;
+    ontouml:targetEnd :PYM73OGFS_j2pAnc .
+
+:44M73OGFS_j2pAnm a ontouml:Generalization ;
+    ontouml:general :egM73OGFS_j2pAmR ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :pgM73OGFS_j2pAmT .
+
+:44M73OGFS_j2pAnn a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :E4M73OGFS_j2pAno,
+        :E4M73OGFS_j2pAnq ;
+    ontouml:sourceEnd :E4M73OGFS_j2pAno ;
+    ontouml:targetEnd :E4M73OGFS_j2pAnq .
+
+:4YM73OGFS_j2pAm2 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :4YM73OGFS_j2pAm2_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "inv"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :oAM73OGFS_j2pAl_ .
+
+:4YM73OGFS_j2pAm4 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :4YM73OGFS_j2pAm4_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "leader"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :WAM73OGFS_j2pAmC .
+
+:4oM73OGFS_j2pAmq a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :4oM73OGFS_j2pAmq_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "inv"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :oAM73OGFS_j2pAl_ .
+
+:5YM73OGFS_j2pAnL a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "conducts"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :5YM73OGFS_j2pAnM,
+        :5YM73OGFS_j2pAnO ;
+    ontouml:sourceEnd :5YM73OGFS_j2pAnM ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :5YM73OGFS_j2pAnO .
+
+:5YM73OGFS_j2pAnM a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :5YM73OGFS_j2pAnM_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "interrogation"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :HAM73OGFS_j2pAmE .
+
+:5YM73OGFS_j2pAnO a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :5YM73OGFS_j2pAnO_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "interrogator"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :3_073OGFS_j2pAl9 .
+
+:8YM73OGFS_j2pAnB a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :8YM73OGFS_j2pAnB_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :_X073OGFS_j2pAl7 .
+
+:8YM73OGFS_j2pAnD a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :8YM73OGFS_j2pAnD_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :_X073OGFS_j2pAl7 .
+
+:9YM73OGFS_j2pAnR a ontouml:Generalization ;
+    ontouml:general :3_073OGFS_j2pAl9 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :3AM73OGFS_j2pAmG .
+
+:9YM73OGFS_j2pAnS a ontouml:Generalization ;
+    ontouml:general :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :vAM73OGFS_j2pAmH .
+
+:AYM73OGFS_j2pAmx a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :AYM73OGFS_j2pAmx_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "inv"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :oAM73OGFS_j2pAl_ .
+
+:AYM73OGFS_j2pAmz a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :AYM73OGFS_j2pAmz_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "suspect"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :MAM73OGFS_j2pAmB .
+
+:DYM73OGFS_j2pAnT a ontouml:Generalization ;
+    ontouml:general :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :ggM73OGFS_j2pAmI .
+
+:E4M73OGFS_j2pAno a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :E4M73OGFS_j2pAno_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :xgM73OGFS_j2pAmS .
+
+:E4M73OGFS_j2pAnq a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :E4M73OGFS_j2pAnq_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :pgM73OGFS_j2pAmT .
+
+:I0M73OGFS_j2pAp0 a ontouml:ClassView ;
+    ontouml:isViewOf :AwM73OGFS_j2pAmg ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :I0M73OGFS_j2pAp0_shape .
+
+:MYM73OGFS_j2pAm9 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :MYM73OGFS_j2pAm9_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "witness"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :OAM73OGFS_j2pAmD .
+
+:MoM73OGFS_j2pAmt a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :MoM73OGFS_j2pAmt_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "detective"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :3_073OGFS_j2pAl9 .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#N4M73OGFS_j2pAn.> a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :N4M73OGFS_j2pAn._cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :uQM73OGFS_j2pAmW .
+
+:N4M73OGFS_j2pAn9 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R2"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd <https://w3id.org/ontouml-models/model/short-examples2013#N4M73OGFS_j2pAn.>,
+        :N4M73OGFS_j2pAoA ;
+    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/short-examples2013#N4M73OGFS_j2pAn.> ;
+    ontouml:stereotype ontouml:formal ;
+    ontouml:targetEnd :N4M73OGFS_j2pAoA .
+
+:N4M73OGFS_j2pAoA a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :N4M73OGFS_j2pAoA_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013#.QM73OGFS_j2pAmX> .
+
+:O4M73OGFS_j2pAn1 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :O4M73OGFS_j2pAn1_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/short-examples2013#.QM73OGFS_j2pAmX> .
+
+:O4M73OGFS_j2pAny a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R3"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :O4M73OGFS_j2pAn1,
+        :O4M73OGFS_j2pAnz ;
+    ontouml:sourceEnd :O4M73OGFS_j2pAnz ;
+    ontouml:stereotype ontouml:componentOf ;
+    ontouml:targetEnd :O4M73OGFS_j2pAn1 .
+
+:O4M73OGFS_j2pAnz a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :O4M73OGFS_j2pAnz_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :2QM73OGFS_j2pAmV .
+
+:PYM73OGFS_j2pAna a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :PYM73OGFS_j2pAna_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :igM73OGFS_j2pAmO .
+
+:PYM73OGFS_j2pAnc a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :PYM73OGFS_j2pAnc_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :2gM73OGFS_j2pAmQ .
+
+:PkM73OGFS_j2pAo6 a ontouml:ClassView ;
+    ontouml:isViewOf :nAM73OGFS_j2pAmF ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :PkM73OGFS_j2pAo6_shape .
+
+:Q0M73OGFS_j2pApy a ontouml:ClassView ;
+    ontouml:isViewOf :fQM73OGFS_j2pAmf ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :Q0M73OGFS_j2pApy_shape .
+
+:QEM73OGFS_j2pAoV a ontouml:Generalization ;
+    ontouml:general :HQM73OGFS_j2pAmd ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :fQM73OGFS_j2pAmf .
+
+:T4M73OGFS_j2pAoE a ontouml:Generalization ;
+    ontouml:general :bQM73OGFS_j2pAmc ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :tQM73OGFS_j2pAma .
+
+:TYM73OGFS_j2pAnX a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :TYM73OGFS_j2pAnX_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "child"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :ggM73OGFS_j2pAmI .
+
+:_YM73OGFS_j2pAnj a ontouml:Generalization ;
+    ontouml:general :UgM73OGFS_j2pAmM ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :igM73OGFS_j2pAmO .
+
+:_kM73OGFS_j2pAo8 a ontouml:ClassView ;
+    ontouml:isViewOf :3AM73OGFS_j2pAmG ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :_kM73OGFS_j2pAo8_shape .
+
+:f4M73OGFS_j2pAoS a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :f4M73OGFS_j2pAoS_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :tQM73OGFS_j2pAma .
+
+:g4M73OGFS_j2pAnk a ontouml:Generalization ;
+    ontouml:general :MgM73OGFS_j2pAmN ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :2gM73OGFS_j2pAmQ .
+
+:g4M73OGFS_j2pAnl a ontouml:Generalization ;
+    ontouml:general :egM73OGFS_j2pAmR ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :xgM73OGFS_j2pAmS .
+
+:gEM73OGFS_j2pAoU a ontouml:Generalization ;
+    ontouml:general :HQM73OGFS_j2pAmd ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :vQM73OGFS_j2pAme .
+
+:j4M73OGFS_j2pAoC a ontouml:Generalization ;
+    ontouml:general :bQM73OGFS_j2pAmc ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :VQM73OGFS_j2pAmZ .
+
+:j4M73OGFS_j2pAoD a ontouml:Generalization ;
+    ontouml:general :bQM73OGFS_j2pAmc ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :jQM73OGFS_j2pAmb .
+
+:jYM73OGFS_j2pAnU a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "parentOf"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :TYM73OGFS_j2pAnX,
+        :jYM73OGFS_j2pAnV ;
+    ontouml:sourceEnd :jYM73OGFS_j2pAnV ;
+    ontouml:stereotype ontouml:material ;
+    ontouml:targetEnd :TYM73OGFS_j2pAnX .
+
+:jYM73OGFS_j2pAnV a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :jYM73OGFS_j2pAnV_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "parent"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :vAM73OGFS_j2pAmH .
+
+:k4M73OGFS_j2pAns a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :k4M73OGFS_j2pAnt,
+        :k4M73OGFS_j2pAnv ;
+    ontouml:sourceEnd :k4M73OGFS_j2pAnt ;
+    ontouml:stereotype ontouml:formal ;
+    ontouml:targetEnd :k4M73OGFS_j2pAnv .
+
+:k4M73OGFS_j2pAnt a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :k4M73OGFS_j2pAnt_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :GQM73OGFS_j2pAmU .
+
+:k4M73OGFS_j2pAnv a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :k4M73OGFS_j2pAnv_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :GQM73OGFS_j2pAmU .
+
+:n4M73OGFS_j2pAoK a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "M1"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :n4M73OGFS_j2pAoL,
+        :n4M73OGFS_j2pAoN ;
+    ontouml:sourceEnd :n4M73OGFS_j2pAoL ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :n4M73OGFS_j2pAoN .
+
+:n4M73OGFS_j2pAoL a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :n4M73OGFS_j2pAoL_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :xQM73OGFS_j2pAmY .
+
+:n4M73OGFS_j2pAoN a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :n4M73OGFS_j2pAoN_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :VQM73OGFS_j2pAmZ .
+
+:o0M73OGFS_j2pAp2 a ontouml:ClassView ;
+    ontouml:isViewOf :owM73OGFS_j2pAmi ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :o0M73OGFS_j2pAp2_shape .
+
+:tYM73OGFS_j2pAnQ a ontouml:Generalization ;
+    ontouml:general :3_073OGFS_j2pAl9 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :nAM73OGFS_j2pAmF .
+
+:uYM73OGFS_j2pAnG a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "targetOf"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :uYM73OGFS_j2pAnH,
+        :uYM73OGFS_j2pAnJ ;
+    ontouml:sourceEnd :uYM73OGFS_j2pAnH ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :uYM73OGFS_j2pAnJ .
+
+:uYM73OGFS_j2pAnH a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :uYM73OGFS_j2pAnH_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "interrogation"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :HAM73OGFS_j2pAmE .
+
+:uYM73OGFS_j2pAnJ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :uYM73OGFS_j2pAnJ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "witness"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :OAM73OGFS_j2pAmD .
+
+:v4M73OGFS_j2pAoP a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "M3"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :f4M73OGFS_j2pAoS,
+        :v4M73OGFS_j2pAoQ ;
+    ontouml:sourceEnd :v4M73OGFS_j2pAoQ ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :f4M73OGFS_j2pAoS .
+
+:v4M73OGFS_j2pAoQ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :v4M73OGFS_j2pAoQ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :xQM73OGFS_j2pAmY .
+
+:vUM73OGFS_j2pApw a ontouml:ClassView ;
+    ontouml:isViewOf :vQM73OGFS_j2pAme ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :vUM73OGFS_j2pApw_shape .
+
+:vYM73OGFS_j2pAne a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "SR"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :vYM73OGFS_j2pAnf,
+        :vYM73OGFS_j2pAnh ;
+    ontouml:sourceEnd :vYM73OGFS_j2pAnf ;
+    ontouml:targetEnd :vYM73OGFS_j2pAnh .
+
+:vYM73OGFS_j2pAnf a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :vYM73OGFS_j2pAnf_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :UgM73OGFS_j2pAmM .
+
+:vYM73OGFS_j2pAnh a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :vYM73OGFS_j2pAnh_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :MgM73OGFS_j2pAmN .
+
+:wEM73OGFS_j2pAoW a ontouml:Generalization ;
+    ontouml:general :HQM73OGFS_j2pAmd ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :AwM73OGFS_j2pAmg .
+
+:wEM73OGFS_j2pAoX a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :wEM73OGFS_j2pAoY,
+        :wEM73OGFS_j2pAoa ;
+    ontouml:sourceEnd :wEM73OGFS_j2pAoY ;
+    ontouml:targetEnd :wEM73OGFS_j2pAoa .
+
+:wEM73OGFS_j2pAoY a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :wEM73OGFS_j2pAoY_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :owM73OGFS_j2pAmi .
+
+:wEM73OGFS_j2pAoa a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :wEM73OGFS_j2pAoa_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :HQM73OGFS_j2pAmd .
+
+:x4M73OGFS_j2pAn4 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "R1"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :x4M73OGFS_j2pAn5,
+        :x4M73OGFS_j2pAn7 ;
+    ontouml:sourceEnd :x4M73OGFS_j2pAn5 ;
+    ontouml:stereotype ontouml:componentOf ;
+    ontouml:targetEnd :x4M73OGFS_j2pAn7 .
+
+:x4M73OGFS_j2pAn5 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :x4M73OGFS_j2pAn5_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :2QM73OGFS_j2pAmV .
+
+:x4M73OGFS_j2pAn7 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :x4M73OGFS_j2pAn7_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :uQM73OGFS_j2pAmW .
+
+:z4M73OGFS_j2pAoF a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "M2"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :z4M73OGFS_j2pAoG,
+        :z4M73OGFS_j2pAoI ;
+    ontouml:sourceEnd :z4M73OGFS_j2pAoG ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :z4M73OGFS_j2pAoI .
+
+:z4M73OGFS_j2pAoG a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :z4M73OGFS_j2pAoG_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :xQM73OGFS_j2pAmY .
+
+:z4M73OGFS_j2pAoI a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :z4M73OGFS_j2pAoI_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:propertyType :jQM73OGFS_j2pAmb .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa> a ontouml:ClassView ;
+    ontouml:isViewOf :pgM73OGFS_j2pAmT ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApa_shape> .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc> a ontouml:ClassView ;
+    ontouml:isViewOf :GQM73OGFS_j2pAmU ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape <https://w3id.org/ontouml-models/model/short-examples2013#.UM73OGFS_j2pApc_shape> .
+
+:0UM73OGFS_j2pApI a ontouml:ClassView ;
+    ontouml:isViewOf :MAM73OGFS_j2pAmB ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :0UM73OGFS_j2pApI_shape .
+
+:0YM73OGFS_j2pAm6 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "relatedTo"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :0YM73OGFS_j2pAm7,
+        :MYM73OGFS_j2pAm9 ;
+    ontouml:sourceEnd :0YM73OGFS_j2pAm7 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :MYM73OGFS_j2pAm9 .
+
+:2UM73OGFS_j2pApY a ontouml:ClassView ;
+    ontouml:isViewOf :xgM73OGFS_j2pAmS ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :2UM73OGFS_j2pApY_shape .
+
+:3AM73OGFS_j2pAmG a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Officer"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:4YM73OGFS_j2pAm1 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "responsibleFor"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :4YM73OGFS_j2pAm2,
+        :4YM73OGFS_j2pAm4 ;
+    ontouml:sourceEnd :4YM73OGFS_j2pAm2 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :4YM73OGFS_j2pAm4 .
+
+:5UM73OGFS_j2pApi a ontouml:ClassView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/short-examples2013#.QM73OGFS_j2pAmX> ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :5UM73OGFS_j2pApi_shape .
+
+:7IM73OGFS_j2pAmo a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "participatesIn"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :4oM73OGFS_j2pAmq,
+        :MoM73OGFS_j2pAmt ;
+    ontouml:sourceEnd :4oM73OGFS_j2pAmq ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :MoM73OGFS_j2pAmt .
+
+:7kM73OGFS_j2pAo4 a ontouml:ClassView ;
+    ontouml:isViewOf :HAM73OGFS_j2pAmE ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :7kM73OGFS_j2pAo4_shape .
+
+:8UM73OGFS_j2pApK a ontouml:ClassView ;
+    ontouml:isViewOf :OAM73OGFS_j2pAmD ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :8UM73OGFS_j2pApK_shape .
+
+:8YM73OGFS_j2pAnA a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "knows"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :8YM73OGFS_j2pAnB,
+        :8YM73OGFS_j2pAnD ;
+    ontouml:sourceEnd :8YM73OGFS_j2pAnB ;
+    ontouml:stereotype ontouml:material ;
+    ontouml:targetEnd :8YM73OGFS_j2pAnD .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#AUM73OGFS_j2pAo.> a ontouml:ClassView ;
+    ontouml:isViewOf :vAM73OGFS_j2pAmH ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :AUM73OGFS_j2pAo._shape .
+
+:AYM73OGFS_j2pAmw a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "investigates"@en ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:relationEnd :AYM73OGFS_j2pAmx,
+        :AYM73OGFS_j2pAmz ;
+    ontouml:sourceEnd :AYM73OGFS_j2pAmx ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :AYM73OGFS_j2pAmz .
+
+:AwM73OGFS_j2pAmg a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "SBT3"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:BUM73OGFS_j2pApe a ontouml:ClassView ;
+    ontouml:isViewOf :2QM73OGFS_j2pAmV ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :BUM73OGFS_j2pApe_shape .
+
+:DUM73OGFS_j2pApq a ontouml:ClassView ;
+    ontouml:isViewOf :jQM73OGFS_j2pAmb ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :DUM73OGFS_j2pApq_shape .
+
+:DkM73OGFS_j2pAoy a ontouml:ClassView ;
+    ontouml:isViewOf :MAM73OGFS_j2pAmB ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :DkM73OGFS_j2pAoy_shape .
+
+:GUM73OGFS_j2pApS a ontouml:ClassView ;
+    ontouml:isViewOf :igM73OGFS_j2pAmO ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :GUM73OGFS_j2pApS_shape .
+
+:IIM73OGFS_j2pAmm a ontouml:Generalization ;
+    ontouml:general :3_073OGFS_j2pAl9 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :WAM73OGFS_j2pAmC .
+
+:NUM73OGFS_j2pApm a ontouml:ClassView ;
+    ontouml:isViewOf :VQM73OGFS_j2pAmZ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :NUM73OGFS_j2pApm_shape .
+
+:TkM73OGFS_j2pAo0 a ontouml:ClassView ;
+    ontouml:isViewOf :WAM73OGFS_j2pAmC ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :TkM73OGFS_j2pAo0_shape .
+
+:Vn073OGFS_j2pAl5 a ontouml:Package ;
+    ontouml:containsModelElement :0YM73OGFS_j2pAm6,
+        :3AM73OGFS_j2pAmG,
+        :3_073OGFS_j2pAl9,
+        :4YM73OGFS_j2pAm1,
+        :5YM73OGFS_j2pAnL,
+        :7IM73OGFS_j2pAmo,
+        :8YM73OGFS_j2pAnA,
+        :9YM73OGFS_j2pAnR,
+        :9YM73OGFS_j2pAnS,
+        :AYM73OGFS_j2pAmw,
+        :DYM73OGFS_j2pAnT,
+        :HAM73OGFS_j2pAmE,
+        :IIM73OGFS_j2pAmm,
+        :MAM73OGFS_j2pAmB,
+        :OAM73OGFS_j2pAmD,
+        :WAM73OGFS_j2pAmC,
+        :_X073OGFS_j2pAl7,
+        :cYM73OGFS_j2pAm_,
+        :ggM73OGFS_j2pAmI,
+        :jYM73OGFS_j2pAnU,
+        :nAM73OGFS_j2pAmF,
+        :oAM73OGFS_j2pAl_,
+        :tYM73OGFS_j2pAnQ,
+        :uYM73OGFS_j2pAnG,
+        :vAM73OGFS_j2pAmH,
+        :wIM73OGFS_j2pAml,
+        :wgM73OGFS_j2pAmJ,
+        :zwM73OGFS_j2pAmk ;
+    ontouml:name "example"@en ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:WUM73OGFS_j2pApW a ontouml:ClassView ;
+    ontouml:isViewOf :egM73OGFS_j2pAmR ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :WUM73OGFS_j2pApW_shape .
+
+:ZUM73OGFS_j2pApg a ontouml:ClassView ;
+    ontouml:isViewOf :uQM73OGFS_j2pAmW ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :ZUM73OGFS_j2pApg_shape .
+
+:aUM73OGFS_j2pApQ a ontouml:ClassView ;
+    ontouml:isViewOf :MgM73OGFS_j2pAmN ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :aUM73OGFS_j2pApQ_shape .
+
+:cYM73OGFS_j2pAm_ a ontouml:Generalization ;
+    ontouml:general :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :OAM73OGFS_j2pAmD .
+
+:dUM73OGFS_j2pApo a ontouml:ClassView ;
+    ontouml:isViewOf :tQM73OGFS_j2pAma ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :dUM73OGFS_j2pApo_shape .
+
+:fQM73OGFS_j2pAmf a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "SBT2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:gUM73OGFS_j2pApA a ontouml:ClassView ;
+    ontouml:isViewOf :ggM73OGFS_j2pAmI ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :gUM73OGFS_j2pApA_shape .
+
+:mUM73OGFS_j2pApU a ontouml:ClassView ;
+    ontouml:isViewOf :2gM73OGFS_j2pAmQ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :mUM73OGFS_j2pApU_shape .
+
+:nAM73OGFS_j2pAmF a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Captain"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:owM73OGFS_j2pAmi a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T1_5"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:qUM73OGFS_j2pApO a ontouml:ClassView ;
+    ontouml:isViewOf :UgM73OGFS_j2pAmM ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :qUM73OGFS_j2pApO_shape .
+
+:vQM73OGFS_j2pAme a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "SBT1"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:wIM73OGFS_j2pAml a ontouml:Generalization ;
+    ontouml:general :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :MAM73OGFS_j2pAmB .
+
+:yUM73OGFS_j2pApM a ontouml:ClassView ;
+    ontouml:isViewOf :WAM73OGFS_j2pAmC ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :yUM73OGFS_j2pApM_shape .
+
+:zwM73OGFS_j2pAmk a ontouml:Generalization ;
+    ontouml:general :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:specific :3_073OGFS_j2pAl9 .
+
+<https://w3id.org/ontouml-models/model/short-examples2013#.QM73OGFS_j2pAmX> a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T3"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:2QM73OGFS_j2pAmV a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T1_3"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:2gM73OGFS_j2pAmQ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:EUM73OGFS_j2pApE a ontouml:ClassView ;
+    ontouml:isViewOf :3_073OGFS_j2pAl9 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :EUM73OGFS_j2pApE_shape .
+
+:GQM73OGFS_j2pAmU a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:HAM73OGFS_j2pAmE a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Interrogation"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:MgM73OGFS_j2pAmN a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "ST2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:UgM73OGFS_j2pAmM a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "ST1"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:VQM73OGFS_j2pAmZ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T1_4"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:VUM73OGFS_j2pApk a ontouml:ClassView ;
+    ontouml:isViewOf :xQM73OGFS_j2pAmY ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :VUM73OGFS_j2pApk_shape .
+
+:bkM73OGFS_j2pAo2 a ontouml:ClassView ;
+    ontouml:isViewOf :OAM73OGFS_j2pAmD ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :bkM73OGFS_j2pAo2_shape .
+
+:egM73OGFS_j2pAmR a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "ST"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:ggM73OGFS_j2pAmI a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Child"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:igM73OGFS_j2pAmO a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T1"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:jQM73OGFS_j2pAmb a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T2_4"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:pgM73OGFS_j2pAmT a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T2_2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:tQM73OGFS_j2pAma a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T3_2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:uQM73OGFS_j2pAmW a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T2_3"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:vAM73OGFS_j2pAmH a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Parent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:xgM73OGFS_j2pAmS a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T1_2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:zUM73OGFS_j2pAps a ontouml:ClassView ;
+    ontouml:isViewOf :bQM73OGFS_j2pAmc ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :zUM73OGFS_j2pAps_shape .
+
+:9kM73OGFS_j2pAow a ontouml:ClassView ;
+    ontouml:isViewOf :oAM73OGFS_j2pAl_ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :9kM73OGFS_j2pAow_shape .
+
+:MAM73OGFS_j2pAmB a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Suspect"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:WAM73OGFS_j2pAmC a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Lead Detective"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:YUM73OGFS_j2pApC a ontouml:ClassView ;
+    ontouml:isViewOf :oAM73OGFS_j2pAl_ ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :YUM73OGFS_j2pApC_shape .
+
+:bQM73OGFS_j2pAmc a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "ST_2"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:nUM73OGFS_j2pApu a ontouml:ClassView ;
+    ontouml:isViewOf :HQM73OGFS_j2pAmd ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :nUM73OGFS_j2pApu_shape .
+
+:xQM73OGFS_j2pAmY a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "R1"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:HQM73OGFS_j2pAmd a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "T2_5"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:OAM73OGFS_j2pAmD a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Witness"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:kUM73OGFS_j2pApG a ontouml:ClassView ;
+    ontouml:isViewOf :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :kUM73OGFS_j2pApG_shape .
+
+:4gM73OGFS_j2pAmK a ontouml:Package ;
+    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/short-examples2013#.QM73OGFS_j2pAmX>,
+        :2QM73OGFS_j2pAmV,
+        :2gM73OGFS_j2pAmQ,
+        :3YM73OGFS_j2pAnZ,
+        :44M73OGFS_j2pAnm,
+        :44M73OGFS_j2pAnn,
+        :4gM73OGFS_j2pAmL,
+        :AwM73OGFS_j2pAmg,
+        :GQM73OGFS_j2pAmU,
+        :HQM73OGFS_j2pAmd,
+        :MgM73OGFS_j2pAmN,
+        :N4M73OGFS_j2pAn9,
+        :O4M73OGFS_j2pAny,
+        :QEM73OGFS_j2pAoV,
+        :QwM73OGFS_j2pAmh,
+        :T4M73OGFS_j2pAoE,
+        :UgM73OGFS_j2pAmM,
+        :VQM73OGFS_j2pAmZ,
+        :_YM73OGFS_j2pAnj,
+        :bQM73OGFS_j2pAmc,
+        :egM73OGFS_j2pAmR,
+        :fQM73OGFS_j2pAmf,
+        :g4M73OGFS_j2pAnk,
+        :g4M73OGFS_j2pAnl,
+        :gEM73OGFS_j2pAoU,
+        :igM73OGFS_j2pAmO,
+        :j4M73OGFS_j2pAoC,
+        :j4M73OGFS_j2pAoD,
+        :jQM73OGFS_j2pAmb,
+        :k4M73OGFS_j2pAns,
+        :n4M73OGFS_j2pAoK,
+        :owM73OGFS_j2pAmi,
+        :pgM73OGFS_j2pAmT,
+        :tQM73OGFS_j2pAma,
+        :uQM73OGFS_j2pAmW,
+        :v4M73OGFS_j2pAoP,
+        :vQM73OGFS_j2pAme,
+        :vYM73OGFS_j2pAne,
+        :wEM73OGFS_j2pAoW,
+        :wEM73OGFS_j2pAoX,
+        :x4M73OGFS_j2pAn4,
+        :xQM73OGFS_j2pAmY,
+        :xgM73OGFS_j2pAmS,
+        :z4M73OGFS_j2pAoF ;
+    ontouml:name "antipatterns"@en ;
+    ontouml:project :QC073OGFS_j2pAWd .
+
+:dkM73OGFS_j2pAou a ontouml:ClassView ;
+    ontouml:isViewOf :3_073OGFS_j2pAl9 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :dkM73OGFS_j2pAou_shape .
+
+:oAM73OGFS_j2pAl_ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Criminal Investigation"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:MkM73OGFS_j2pAos a ontouml:ClassView ;
+    ontouml:isViewOf :_X073OGFS_j2pAl7 ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:shape :MkM73OGFS_j2pAos_shape .
+
+:3_073OGFS_j2pAl9 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Detective"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:_X073OGFS_j2pAl7 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Person"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :QC073OGFS_j2pAWd ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:QC073OGFS_j2pAWd a ontouml:Project ;
+    ontouml:diagram :3EM73OGFS_j2pAoe,
+        :4kM73OGFS_j2pAoq,
+        :AkM73OGFS_j2pAoi,
+        :IkM73OGFS_j2pAom,
+        :QkM73OGFS_j2pAok,
+        :YkM73OGFS_j2pAoo,
+        :fEM73OGFS_j2pAog,
+        :sEM73OGFS_j2pAoc ;
+    ontouml:model :QC073OGFS_j2pAWd_root ;
+    ontouml:name "paper_example"@en .
+

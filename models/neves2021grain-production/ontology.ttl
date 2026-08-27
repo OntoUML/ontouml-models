@@ -1,1067 +1,1599 @@
-@prefix : <https://w3id.org/ontouml-models/model/neves2021grain-production#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/neves2021grain-production#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/neves2021grain-production/> rdf:type ontouml:Project;
-    ontouml:name "Grain Production Ontology"@en;
-    ontouml:model :K8mkDz6GAqACAx48_root;
-    ontouml:diagram :EcC0Dz6GAqACAyIX.
-:K8mkDz6GAqACAx48_root rdf:type ontouml:Package;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Grain Production Ontology"@en;
-    ontouml:containsModelElement :lqS0Dz6GAqACAyIe.
-:lqS0Dz6GAqACAyIe rdf:type ontouml:Package;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Grain Production Ontology"@en;
-    ontouml:containsModelElement :V5B0Dz6GAqACAyJc, <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ2>, :Wpx0Dz6GAqACAyKC, :afx0Dz6GAqACAyKO, :vNJ0Dz6GAqACAyKa, :s0p0Dz6GAqACAyKm, :Qbp0Dz6GAqACAyKy, <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>, :jPZ0Dz6GAqACAyLK, :ZN50Dz6GAqACAyLW, :ff50Dz6GAqACAyLi, :y2F0Dz6GAqACAyLu, <https://w3id.org/ontouml-models/model/neves2021grain-production#2TF0Dz6GAqACAyL6>, :Kql0Dz6GAqACAyMI, :zHV0Dz6GAqACAyMU, :aC10Dz6GAqACAyMg, :K110Dz6GAqACAyMs, <https://w3id.org/ontouml-models/model/neves2021grain-production#4ON0Dz6GAqACAyM4>, :k770Dz6GAqACAyOa, :X9X0Dz6GAqACAyOs, :p6MMDz6GAqACAyPL, :lDMMDz6GAqACAyPX, :x8sMDz6GAqACAyPh, :J9sMDz6GAqACAyPr, :jkcMDz6GAqACAyP1, :Z6XMDz6GAqACAwlS, :IP3MDz6GAqACAwlg, <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl8>, :cbfMDz6GAqACAwmG, <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmQ>, :YH_MDz6GAqACAwma, :LyAsDz6GAqACAwmk, :vaTcDz6GAqACAwl1, :K8zcDz6GAqACAwmG, :LU_cDz6GAqACAwnX, <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnh>.
-:V5B0Dz6GAqACAyJc rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Digital_Images"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ2> rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Satellite_Images"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Wpx0Dz6GAqACAyKC rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "NDVI_Index"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:afx0Dz6GAqACAyKO rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "TIFF"@en;
-    ontouml:stereotype ontouml:datatype;
-    ontouml:restrictedTo ontouml:abstract;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:vNJ0Dz6GAqACAyKa rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Oher_Variables"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:s0p0Dz6GAqACAyKm rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Production_Evolution_States"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Qbp0Dz6GAqACAyKy rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Geolocation"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Crop"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:jPZ0Dz6GAqACAyLK rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Climate_Station"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:ZN50Dz6GAqACAyLW rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Leaf_Wetting_Duration"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:ff50Dz6GAqACAyLi rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Air_Relative_Humidity"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:y2F0Dz6GAqACAyLu rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Accumulated_Precipitation"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#2TF0Dz6GAqACAyL6> rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Maximum_Temperature"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Kql0Dz6GAqACAyMI rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Minimum_Temperature"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:zHV0Dz6GAqACAyMU rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Hours/day"@en;
-    ontouml:stereotype ontouml:datatype;
-    ontouml:restrictedTo ontouml:abstract;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:aC10Dz6GAqACAyMg rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Percentage"@en;
-    ontouml:stereotype ontouml:datatype;
-    ontouml:restrictedTo ontouml:abstract;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:K110Dz6GAqACAyMs rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Milimeters"@en;
-    ontouml:stereotype ontouml:datatype;
-    ontouml:restrictedTo ontouml:abstract;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4ON0Dz6GAqACAyM4> rdf:type ontouml:Class;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Degrees_Celsius"@en;
-    ontouml:stereotype ontouml:datatype;
-    ontouml:restrictedTo ontouml:abstract;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:k770Dz6GAqACAyOa rdf:type ontouml:Generalization;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name ""@en;
-    ontouml:general :V5B0Dz6GAqACAyJc;
-    ontouml:specific <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ2>.
-:X9X0Dz6GAqACAyOs rdf:type ontouml:Generalization;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Geolocation-Crop"@en;
-    ontouml:general <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>;
-    ontouml:specific :Qbp0Dz6GAqACAyKy.
-:p6MMDz6GAqACAyPL rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :p6MMDz6GAqACAyPM;
-    ontouml:targetEnd :p6MMDz6GAqACAyPO;
-    ontouml:relationEnd :p6MMDz6GAqACAyPM, :p6MMDz6GAqACAyPO.
-:lDMMDz6GAqACAyPX rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :lDMMDz6GAqACAyPY;
-    ontouml:targetEnd :lDMMDz6GAqACAyPa;
-    ontouml:relationEnd :lDMMDz6GAqACAyPY, :lDMMDz6GAqACAyPa.
-:x8sMDz6GAqACAyPh rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :x8sMDz6GAqACAyPi;
-    ontouml:targetEnd :x8sMDz6GAqACAyPk;
-    ontouml:relationEnd :x8sMDz6GAqACAyPi, :x8sMDz6GAqACAyPk.
-:J9sMDz6GAqACAyPr rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :J9sMDz6GAqACAyPs;
-    ontouml:targetEnd :J9sMDz6GAqACAyPu;
-    ontouml:relationEnd :J9sMDz6GAqACAyPs, :J9sMDz6GAqACAyPu.
-:jkcMDz6GAqACAyP1 rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :jkcMDz6GAqACAyP2;
-    ontouml:targetEnd :jkcMDz6GAqACAyP4;
-    ontouml:relationEnd :jkcMDz6GAqACAyP2, :jkcMDz6GAqACAyP4.
-:Z6XMDz6GAqACAwlS rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name ""@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :Z6XMDz6GAqACAwlT;
-    ontouml:targetEnd :Z6XMDz6GAqACAwlV;
-    ontouml:relationEnd :Z6XMDz6GAqACAwlT, :Z6XMDz6GAqACAwlV.
-:IP3MDz6GAqACAwlg rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :IP3MDz6GAqACAwlh;
-    ontouml:targetEnd :IP3MDz6GAqACAwlj;
-    ontouml:relationEnd :IP3MDz6GAqACAwlh, :IP3MDz6GAqACAwlj.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl8> rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl9>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl_>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl9>, <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl_>.
-:cbfMDz6GAqACAwmG rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :cbfMDz6GAqACAwmH;
-    ontouml:targetEnd :cbfMDz6GAqACAwmJ;
-    ontouml:relationEnd :cbfMDz6GAqACAwmH, :cbfMDz6GAqACAwmJ.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmQ> rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmR>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmT>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmR>, <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmT>.
-:YH_MDz6GAqACAwma rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :YH_MDz6GAqACAwmb;
-    ontouml:targetEnd :YH_MDz6GAqACAwmd;
-    ontouml:relationEnd :YH_MDz6GAqACAwmb, :YH_MDz6GAqACAwmd.
-:LyAsDz6GAqACAwmk rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :LyAsDz6GAqACAwml;
-    ontouml:targetEnd :LyAsDz6GAqACAwmn;
-    ontouml:relationEnd :LyAsDz6GAqACAwml, :LyAsDz6GAqACAwmn.
-:vaTcDz6GAqACAwl1 rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Georef_Images-TIFF"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :vaTcDz6GAqACAwl2;
-    ontouml:targetEnd :vaTcDz6GAqACAwl4;
-    ontouml:relationEnd :vaTcDz6GAqACAwl2, :vaTcDz6GAqACAwl4.
-:K8zcDz6GAqACAwmG rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Crop-Digital_Images"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :K8zcDz6GAqACAwmH;
-    ontouml:targetEnd :K8zcDz6GAqACAwmJ;
-    ontouml:relationEnd :K8zcDz6GAqACAwmH, :K8zcDz6GAqACAwmJ.
-:LU_cDz6GAqACAwnX rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Crop-Other_Variables"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :LU_cDz6GAqACAwnY;
-    ontouml:targetEnd :LU_cDz6GAqACAwna;
-    ontouml:relationEnd :LU_cDz6GAqACAwnY, :LU_cDz6GAqACAwna.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnh> rdf:type ontouml:Relation;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Crop-Climate_Station"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwni>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnk>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwni>, <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnk>.
-:p6MMDz6GAqACAyPM rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :p6MMDz6GAqACAyPM_cardinality.
-:p6MMDz6GAqACAyPM_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:p6MMDz6GAqACAyPM ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :ZN50Dz6GAqACAyLW.
-:p6MMDz6GAqACAyPO rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :p6MMDz6GAqACAyPO_cardinality.
-:p6MMDz6GAqACAyPO_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:p6MMDz6GAqACAyPO ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :zHV0Dz6GAqACAyMU.
-:lDMMDz6GAqACAyPY rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :lDMMDz6GAqACAyPY_cardinality.
-:lDMMDz6GAqACAyPY_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:lDMMDz6GAqACAyPY ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :ff50Dz6GAqACAyLi.
-:lDMMDz6GAqACAyPa rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :lDMMDz6GAqACAyPa_cardinality.
-:lDMMDz6GAqACAyPa_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:lDMMDz6GAqACAyPa ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :aC10Dz6GAqACAyMg.
-:x8sMDz6GAqACAyPi rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :x8sMDz6GAqACAyPi_cardinality.
-:x8sMDz6GAqACAyPi_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:x8sMDz6GAqACAyPi ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :y2F0Dz6GAqACAyLu.
-:x8sMDz6GAqACAyPk rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :x8sMDz6GAqACAyPk_cardinality.
-:x8sMDz6GAqACAyPk_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:x8sMDz6GAqACAyPk ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :K110Dz6GAqACAyMs.
-:J9sMDz6GAqACAyPs rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :J9sMDz6GAqACAyPs_cardinality.
-:J9sMDz6GAqACAyPs_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:J9sMDz6GAqACAyPs ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#2TF0Dz6GAqACAyL6>.
-:J9sMDz6GAqACAyPu rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :J9sMDz6GAqACAyPu_cardinality.
-:J9sMDz6GAqACAyPu_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:J9sMDz6GAqACAyPu ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#4ON0Dz6GAqACAyM4>.
-:jkcMDz6GAqACAyP2 rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :jkcMDz6GAqACAyP2_cardinality.
-:jkcMDz6GAqACAyP2_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:jkcMDz6GAqACAyP2 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :Kql0Dz6GAqACAyMI.
-:jkcMDz6GAqACAyP4 rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :jkcMDz6GAqACAyP4_cardinality.
-:jkcMDz6GAqACAyP4_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:jkcMDz6GAqACAyP4 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#4ON0Dz6GAqACAyM4>.
-:Z6XMDz6GAqACAwlT rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :Z6XMDz6GAqACAwlT_cardinality.
-:Z6XMDz6GAqACAwlT_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:Z6XMDz6GAqACAwlT ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ2>.
-:Z6XMDz6GAqACAwlV rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :Z6XMDz6GAqACAwlV_cardinality.
-:Z6XMDz6GAqACAwlV_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:Z6XMDz6GAqACAwlV ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Wpx0Dz6GAqACAyKC.
-:IP3MDz6GAqACAwlh rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :IP3MDz6GAqACAwlh_cardinality.
-:IP3MDz6GAqACAwlh_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:IP3MDz6GAqACAwlh ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :vNJ0Dz6GAqACAyKa.
-:IP3MDz6GAqACAwlj rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :IP3MDz6GAqACAwlj_cardinality.
-:IP3MDz6GAqACAwlj_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:IP3MDz6GAqACAwlj ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :s0p0Dz6GAqACAyKm.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl9> rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl9_cardinality>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl9_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl9> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :jPZ0Dz6GAqACAyLK.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl_> rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl__cardinality>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl__cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/neves2021grain-production#0GfMDz6GAqACAwl_> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :ZN50Dz6GAqACAyLW.
-:cbfMDz6GAqACAwmH rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :cbfMDz6GAqACAwmH_cardinality.
-:cbfMDz6GAqACAwmH_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:cbfMDz6GAqACAwmH ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :jPZ0Dz6GAqACAyLK.
-:cbfMDz6GAqACAwmJ rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :cbfMDz6GAqACAwmJ_cardinality.
-:cbfMDz6GAqACAwmJ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:cbfMDz6GAqACAwmJ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :ff50Dz6GAqACAyLi.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmR> rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmR_cardinality>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmR_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmR> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :jPZ0Dz6GAqACAyLK.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmT> rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmT_cardinality>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmT_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/neves2021grain-production#4S_MDz6GAqACAwmT> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :y2F0Dz6GAqACAyLu.
-:YH_MDz6GAqACAwmb rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :YH_MDz6GAqACAwmb_cardinality.
-:YH_MDz6GAqACAwmb_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:YH_MDz6GAqACAwmb ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :jPZ0Dz6GAqACAyLK.
-:YH_MDz6GAqACAwmd rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :YH_MDz6GAqACAwmd_cardinality.
-:YH_MDz6GAqACAwmd_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:YH_MDz6GAqACAwmd ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#2TF0Dz6GAqACAyL6>.
-:LyAsDz6GAqACAwml rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :LyAsDz6GAqACAwml_cardinality.
-:LyAsDz6GAqACAwml_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:LyAsDz6GAqACAwml ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:shared;
-    ontouml:propertyType :jPZ0Dz6GAqACAyLK.
-:LyAsDz6GAqACAwmn rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :LyAsDz6GAqACAwmn_cardinality.
-:LyAsDz6GAqACAwmn_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:LyAsDz6GAqACAwmn ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Kql0Dz6GAqACAyMI.
-:vaTcDz6GAqACAwl2 rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :vaTcDz6GAqACAwl2_cardinality.
-:vaTcDz6GAqACAwl2_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:vaTcDz6GAqACAwl2 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ2>.
-:vaTcDz6GAqACAwl4 rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :vaTcDz6GAqACAwl4_cardinality.
-:vaTcDz6GAqACAwl4_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:vaTcDz6GAqACAwl4 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :afx0Dz6GAqACAyKO.
-:K8zcDz6GAqACAwmH rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :K8zcDz6GAqACAwmH_cardinality.
-:K8zcDz6GAqACAwmH_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:K8zcDz6GAqACAwmH ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>.
-:K8zcDz6GAqACAwmJ rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :K8zcDz6GAqACAwmJ_cardinality.
-:K8zcDz6GAqACAwmJ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:K8zcDz6GAqACAwmJ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :V5B0Dz6GAqACAyJc.
-:LU_cDz6GAqACAwnY rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality :LU_cDz6GAqACAwnY_cardinality.
-:LU_cDz6GAqACAwnY_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:LU_cDz6GAqACAwnY ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>.
-:LU_cDz6GAqACAwna rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name ""@en;
-    ontouml:cardinality :LU_cDz6GAqACAwna_cardinality.
-:LU_cDz6GAqACAwna_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:LU_cDz6GAqACAwna ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :vNJ0Dz6GAqACAyKa.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwni> rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwni_cardinality>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwni_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwni> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnk> rdf:type ontouml:Property;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnk_cardinality>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnk_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7j_cDz6GAqACAwnk> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :jPZ0Dz6GAqACAyLK.
-:EcC0Dz6GAqACAyIX rdf:type ontouml:Diagram;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:name "Grain Production Ontology"@en;
-    ontouml:containsView :bcZ0Dz6GAqACAyK9, :s0p0Dz6GAqACAyKl, :vNJ0Dz6GAqACAyKZ, :afx0Dz6GAqACAyKN, :N6MMDz6GAqACAyPQ, :wT_cDz6GAqACAwnm, :y110Dz6GAqACAyMr, :qC10Dz6GAqACAyMf, <https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6>, :YON0Dz6GAqACAyM3, <https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL>, :s770Dz6GAqACAyOb, :dDMMDz6GAqACAyPc, <https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt>, :SH_MDz6GAqACAwmf, <https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV>, :c6TcDz6GAqACAwmB, :y2F0Dz6GAqACAyLt, :l5B0Dz6GAqACAyJb, :Kql0Dz6GAqACAyMH, :l8sMDz6GAqACAyPm, :PU_cDz6GAqACAwnc, :ZN50Dz6GAqACAyLV, :IKAsDz6GAqACAwmp, :Qbp0Dz6GAqACAyKx, :vf50Dz6GAqACAyLh, :DPZ0Dz6GAqACAyLJ, :Wpx0Dz6GAqACAyKB, <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1>, :zHV0Dz6GAqACAyMT, :l9sMDz6GAqACAyPw, :j6XMDz6GAqACAwlX, :GbfMDz6GAqACAwmL, :iGfMDz6GAqACAwmB, :MP3MDz6GAqACAwll, :WTF0Dz6GAqACAyL5.
-:bcZ0Dz6GAqACAyK9 rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>;
-    ontouml:shape :bcZ0Dz6GAqACAyK9_shape.
-:s0p0Dz6GAqACAyKl rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :s0p0Dz6GAqACAyKm;
-    ontouml:shape :s0p0Dz6GAqACAyKl_shape.
-:vNJ0Dz6GAqACAyKZ rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :vNJ0Dz6GAqACAyKa;
-    ontouml:shape :vNJ0Dz6GAqACAyKZ_shape.
-:afx0Dz6GAqACAyKN rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :afx0Dz6GAqACAyKO;
-    ontouml:shape :afx0Dz6GAqACAyKN_shape.
-:y110Dz6GAqACAyMr rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :K110Dz6GAqACAyMs;
-    ontouml:shape :y110Dz6GAqACAyMr_shape.
-:qC10Dz6GAqACAyMf rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :aC10Dz6GAqACAyMg;
-    ontouml:shape :qC10Dz6GAqACAyMf_shape.
-:YON0Dz6GAqACAyM3 rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/neves2021grain-production#4ON0Dz6GAqACAyM4>;
-    ontouml:shape :YON0Dz6GAqACAyM3_shape.
-:y2F0Dz6GAqACAyLt rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :y2F0Dz6GAqACAyLu;
-    ontouml:shape :y2F0Dz6GAqACAyLt_shape.
-:l5B0Dz6GAqACAyJb rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :V5B0Dz6GAqACAyJc;
-    ontouml:shape :l5B0Dz6GAqACAyJb_shape.
-:Kql0Dz6GAqACAyMH rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :Kql0Dz6GAqACAyMI;
-    ontouml:shape :Kql0Dz6GAqACAyMH_shape.
-:ZN50Dz6GAqACAyLV rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :ZN50Dz6GAqACAyLW;
-    ontouml:shape :ZN50Dz6GAqACAyLV_shape.
-:Qbp0Dz6GAqACAyKx rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :Qbp0Dz6GAqACAyKy;
-    ontouml:shape :Qbp0Dz6GAqACAyKx_shape.
-:vf50Dz6GAqACAyLh rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :ff50Dz6GAqACAyLi;
-    ontouml:shape :vf50Dz6GAqACAyLh_shape.
-:DPZ0Dz6GAqACAyLJ rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :jPZ0Dz6GAqACAyLK;
-    ontouml:shape :DPZ0Dz6GAqACAyLJ_shape.
-:Wpx0Dz6GAqACAyKB rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :Wpx0Dz6GAqACAyKC;
-    ontouml:shape :Wpx0Dz6GAqACAyKB_shape.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1> rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ2>;
-    ontouml:shape <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1_shape>.
-:zHV0Dz6GAqACAyMT rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :zHV0Dz6GAqACAyMU;
-    ontouml:shape :zHV0Dz6GAqACAyMT_shape.
-:WTF0Dz6GAqACAyL5 rdf:type ontouml:ClassView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/neves2021grain-production#2TF0Dz6GAqACAyL6>;
-    ontouml:shape :WTF0Dz6GAqACAyL5_shape.
-:s770Dz6GAqACAyOb rdf:type ontouml:GeneralizationView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :k770Dz6GAqACAyOa;
-    ontouml:shape :s770Dz6GAqACAyOb_path;
-    ontouml:sourceView :l5B0Dz6GAqACAyJb;
-    ontouml:targetView <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt> rdf:type ontouml:GeneralizationView;
-    ontouml:project :K8mkDz6GAqACAx48;
-    ontouml:isViewOf :X9X0Dz6GAqACAyOs;
-    ontouml:shape <https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path>;
-    ontouml:sourceView :bcZ0Dz6GAqACAyK9;
-    ontouml:targetView :Qbp0Dz6GAqACAyKx.
-:bcZ0Dz6GAqACAyK9_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :bcZ0Dz6GAqACAyK9_shape_point.
-:bcZ0Dz6GAqACAyK9_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 685;
-    ontouml:yCoordinate 55.
-:s0p0Dz6GAqACAyKl_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "170"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :s0p0Dz6GAqACAyKl_shape_point.
-:s0p0Dz6GAqACAyKl_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 301;
-    ontouml:yCoordinate 248.
-:vNJ0Dz6GAqACAyKZ_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "95"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :vNJ0Dz6GAqACAyKZ_shape_point.
-:vNJ0Dz6GAqACAyKZ_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 430;
-    ontouml:yCoordinate 165.
-:afx0Dz6GAqACAyKN_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "91"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :afx0Dz6GAqACAyKN_shape_point.
-:afx0Dz6GAqACAyKN_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 178;
-    ontouml:yCoordinate 390.
-:y110Dz6GAqACAyMr_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "92"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :y110Dz6GAqACAyMr_shape_point.
-:y110Dz6GAqACAyMr_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 751;
-    ontouml:yCoordinate 414.
-:qC10Dz6GAqACAyMf_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "91"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :qC10Dz6GAqACAyMf_shape_point.
-:qC10Dz6GAqACAyMf_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 593;
-    ontouml:yCoordinate 414.
-:YON0Dz6GAqACAyM3_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "117"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :YON0Dz6GAqACAyM3_shape_point.
-:YON0Dz6GAqACAyM3_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 985;
-    ontouml:yCoordinate 414.
-:y2F0Dz6GAqACAyLt_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "161"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :y2F0Dz6GAqACAyLt_shape_point.
-:y2F0Dz6GAqACAyLt_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 716;
-    ontouml:yCoordinate 318.
-:l5B0Dz6GAqACAyJb_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "94"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :l5B0Dz6GAqACAyJb_shape_point.
-:l5B0Dz6GAqACAyJb_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 166;
-    ontouml:yCoordinate 165.
-:Kql0Dz6GAqACAyMH_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "141"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Kql0Dz6GAqACAyMH_shape_point.
-:Kql0Dz6GAqACAyMH_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 1045;
-    ontouml:yCoordinate 318.
-:ZN50Dz6GAqACAyLV_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "137"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :ZN50Dz6GAqACAyLV_shape_point.
-:ZN50Dz6GAqACAyLV_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 423;
-    ontouml:yCoordinate 318.
-:Qbp0Dz6GAqACAyKx_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "88"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Qbp0Dz6GAqACAyKx_shape_point.
-:Qbp0Dz6GAqACAyKx_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 561;
-    ontouml:yCoordinate 125.
-:vf50Dz6GAqACAyLh_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "135"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :vf50Dz6GAqACAyLh_shape_point.
-:vf50Dz6GAqACAyLh_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 571;
-    ontouml:yCoordinate 318.
-:DPZ0Dz6GAqACAyLJ_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "99"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :DPZ0Dz6GAqACAyLJ_shape_point.
-:DPZ0Dz6GAqACAyLJ_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 846;
-    ontouml:yCoordinate 165.
-:Wpx0Dz6GAqACAyKB_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "91"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Wpx0Dz6GAqACAyKB_shape_point.
-:Wpx0Dz6GAqACAyKB_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 56;
-    ontouml:yCoordinate 390.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "102"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1_shape_point>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#1Yx0Dz6GAqACAyJ1_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 166;
-    ontouml:yCoordinate 288.
-:zHV0Dz6GAqACAyMT_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "92"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :zHV0Dz6GAqACAyMT_shape_point.
-:zHV0Dz6GAqACAyMT_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 445;
-    ontouml:yCoordinate 414.
-:WTF0Dz6GAqACAyL5_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "145"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :WTF0Dz6GAqACAyL5_shape_point.
-:WTF0Dz6GAqACAyL5_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 890;
-    ontouml:yCoordinate 318.
-:N6MMDz6GAqACAyPQ_path rdf:type ontouml:Path;
-    ontouml:point :N6MMDz6GAqACAyPQ_path_point_0.
-:N6MMDz6GAqACAyPQ_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 491;
-    ontouml:yCoordinate 359.
-:N6MMDz6GAqACAyPQ_path ontouml:point :N6MMDz6GAqACAyPQ_path_point_1.
-:N6MMDz6GAqACAyPQ_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 491;
-    ontouml:yCoordinate 414.
-:wT_cDz6GAqACAwnm_path rdf:type ontouml:Path;
-    ontouml:point :wT_cDz6GAqACAwnm_path_point_0.
-:wT_cDz6GAqACAwnm_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 766;
-    ontouml:yCoordinate 75.
-:wT_cDz6GAqACAwnm_path ontouml:point :wT_cDz6GAqACAwnm_path_point_1.
-:wT_cDz6GAqACAwnm_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 886;
-    ontouml:yCoordinate 75.
-:wT_cDz6GAqACAwnm_path ontouml:point :wT_cDz6GAqACAwnm_path_point_2.
-:wT_cDz6GAqACAwnm_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 886;
-    ontouml:yCoordinate 164.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6_path_point_0>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1078;
-    ontouml:yCoordinate 359.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6_path_point_1>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#7kcMDz6GAqACAyP6_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1078;
-    ontouml:yCoordinate 414.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path_point_0>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 685;
-    ontouml:yCoordinate 65.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path_point_1>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 214;
-    ontouml:yCoordinate 65.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path_point_2>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#28zcDz6GAqACAwmL_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 214;
-    ontouml:yCoordinate 164.
-:s770Dz6GAqACAyOb_path rdf:type ontouml:Path;
-    ontouml:point :s770Dz6GAqACAyOb_path_point_0.
-:s770Dz6GAqACAyOb_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 214;
-    ontouml:yCoordinate 205.
-:s770Dz6GAqACAyOb_path ontouml:point :s770Dz6GAqACAyOb_path_point_1.
-:s770Dz6GAqACAyOb_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 214;
-    ontouml:yCoordinate 288.
-:dDMMDz6GAqACAyPc_path rdf:type ontouml:Path;
-    ontouml:point :dDMMDz6GAqACAyPc_path_point_0.
-:dDMMDz6GAqACAyPc_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 638;
-    ontouml:yCoordinate 359.
-:dDMMDz6GAqACAyPc_path ontouml:point :dDMMDz6GAqACAyPc_path_point_1.
-:dDMMDz6GAqACAyPc_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 638;
-    ontouml:yCoordinate 414.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path_point_0>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 686;
-    ontouml:yCoordinate 95.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path_point_1>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#_9X0Dz6GAqACAyOt_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 650;
-    ontouml:yCoordinate 126.
-:SH_MDz6GAqACAwmf_path rdf:type ontouml:Path;
-    ontouml:point :SH_MDz6GAqACAwmf_path_point_0.
-:SH_MDz6GAqACAwmf_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 896;
-    ontouml:yCoordinate 205.
-:SH_MDz6GAqACAwmf_path ontouml:point :SH_MDz6GAqACAwmf_path_point_1.
-:SH_MDz6GAqACAwmf_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 896;
-    ontouml:yCoordinate 261.
-:SH_MDz6GAqACAwmf_path ontouml:point :SH_MDz6GAqACAwmf_path_point_2.
-:SH_MDz6GAqACAwmf_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 961;
-    ontouml:yCoordinate 261.
-:SH_MDz6GAqACAwmf_path ontouml:point :SH_MDz6GAqACAwmf_path_point_3.
-:SH_MDz6GAqACAwmf_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 961;
-    ontouml:yCoordinate 318.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_0>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 895;
-    ontouml:yCoordinate 205.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_1>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 895;
-    ontouml:yCoordinate 261.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_2>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 797;
-    ontouml:yCoordinate 261.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path> ontouml:point <https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_3>.
-<https://w3id.org/ontouml-models/model/neves2021grain-production#8S_MDz6GAqACAwmV_path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 797;
-    ontouml:yCoordinate 318.
-:c6TcDz6GAqACAwmB_path rdf:type ontouml:Path;
-    ontouml:point :c6TcDz6GAqACAwmB_path_point_0.
-:c6TcDz6GAqACAwmB_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 216;
-    ontouml:yCoordinate 329.
-:c6TcDz6GAqACAwmB_path ontouml:point :c6TcDz6GAqACAwmB_path_point_1.
-:c6TcDz6GAqACAwmB_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 216;
-    ontouml:yCoordinate 389.
-:l8sMDz6GAqACAyPm_path rdf:type ontouml:Path;
-    ontouml:point :l8sMDz6GAqACAyPm_path_point_0.
-:l8sMDz6GAqACAyPm_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 796;
-    ontouml:yCoordinate 359.
-:l8sMDz6GAqACAyPm_path ontouml:point :l8sMDz6GAqACAyPm_path_point_1.
-:l8sMDz6GAqACAyPm_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 796;
-    ontouml:yCoordinate 414.
-:PU_cDz6GAqACAwnc_path rdf:type ontouml:Path;
-    ontouml:point :PU_cDz6GAqACAwnc_path_point_0.
-:PU_cDz6GAqACAwnc_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 684;
-    ontouml:yCoordinate 65.
-:PU_cDz6GAqACAwnc_path ontouml:point :PU_cDz6GAqACAwnc_path_point_1.
-:PU_cDz6GAqACAwnc_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 478;
-    ontouml:yCoordinate 65.
-:PU_cDz6GAqACAwnc_path ontouml:point :PU_cDz6GAqACAwnc_path_point_2.
-:PU_cDz6GAqACAwnc_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 478;
-    ontouml:yCoordinate 164.
-:IKAsDz6GAqACAwmp_path rdf:type ontouml:Path;
-    ontouml:point :IKAsDz6GAqACAwmp_path_point_0.
-:IKAsDz6GAqACAwmp_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 895;
-    ontouml:yCoordinate 205.
-:IKAsDz6GAqACAwmp_path ontouml:point :IKAsDz6GAqACAwmp_path_point_1.
-:IKAsDz6GAqACAwmp_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 895;
-    ontouml:yCoordinate 260.
-:IKAsDz6GAqACAwmp_path ontouml:point :IKAsDz6GAqACAwmp_path_point_2.
-:IKAsDz6GAqACAwmp_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1115;
-    ontouml:yCoordinate 260.
-:IKAsDz6GAqACAwmp_path ontouml:point :IKAsDz6GAqACAwmp_path_point_3.
-:IKAsDz6GAqACAwmp_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1115;
-    ontouml:yCoordinate 316.
-:l9sMDz6GAqACAyPw_path rdf:type ontouml:Path;
-    ontouml:point :l9sMDz6GAqACAyPw_path_point_0.
-:l9sMDz6GAqACAyPw_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1006;
-    ontouml:yCoordinate 359.
-:l9sMDz6GAqACAyPw_path ontouml:point :l9sMDz6GAqACAyPw_path_point_1.
-:l9sMDz6GAqACAyPw_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1006;
-    ontouml:yCoordinate 414.
-:j6XMDz6GAqACAwlX_path rdf:type ontouml:Path;
-    ontouml:point :j6XMDz6GAqACAwlX_path_point_0.
-:j6XMDz6GAqACAwlX_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 165;
-    ontouml:yCoordinate 308.
-:j6XMDz6GAqACAwlX_path ontouml:point :j6XMDz6GAqACAwlX_path_point_1.
-:j6XMDz6GAqACAwlX_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 102;
-    ontouml:yCoordinate 308.
-:j6XMDz6GAqACAwlX_path ontouml:point :j6XMDz6GAqACAwlX_path_point_2.
-:j6XMDz6GAqACAwlX_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 102;
-    ontouml:yCoordinate 389.
-:GbfMDz6GAqACAwmL_path rdf:type ontouml:Path;
-    ontouml:point :GbfMDz6GAqACAwmL_path_point_0.
-:GbfMDz6GAqACAwmL_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 896;
-    ontouml:yCoordinate 205.
-:GbfMDz6GAqACAwmL_path ontouml:point :GbfMDz6GAqACAwmL_path_point_1.
-:GbfMDz6GAqACAwmL_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 896;
-    ontouml:yCoordinate 261.
-:GbfMDz6GAqACAwmL_path ontouml:point :GbfMDz6GAqACAwmL_path_point_2.
-:GbfMDz6GAqACAwmL_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 638;
-    ontouml:yCoordinate 261.
-:GbfMDz6GAqACAwmL_path ontouml:point :GbfMDz6GAqACAwmL_path_point_3.
-:GbfMDz6GAqACAwmL_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 638;
-    ontouml:yCoordinate 318.
-:iGfMDz6GAqACAwmB_path rdf:type ontouml:Path;
-    ontouml:point :iGfMDz6GAqACAwmB_path_point_0.
-:iGfMDz6GAqACAwmB_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 895;
-    ontouml:yCoordinate 205.
-:iGfMDz6GAqACAwmB_path ontouml:point :iGfMDz6GAqACAwmB_path_point_1.
-:iGfMDz6GAqACAwmB_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 895;
-    ontouml:yCoordinate 261.
-:iGfMDz6GAqACAwmB_path ontouml:point :iGfMDz6GAqACAwmB_path_point_2.
-:iGfMDz6GAqACAwmB_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 497;
-    ontouml:yCoordinate 261.
-:iGfMDz6GAqACAwmB_path ontouml:point :iGfMDz6GAqACAwmB_path_point_3.
-:iGfMDz6GAqACAwmB_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 497;
-    ontouml:yCoordinate 318.
-:MP3MDz6GAqACAwll_path rdf:type ontouml:Path;
-    ontouml:point :MP3MDz6GAqACAwll_path_point_0.
-:MP3MDz6GAqACAwll_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 431;
-    ontouml:yCoordinate 185.
-:MP3MDz6GAqACAwll_path ontouml:point :MP3MDz6GAqACAwll_path_point_1.
-:MP3MDz6GAqACAwll_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 385;
-    ontouml:yCoordinate 185.
-:MP3MDz6GAqACAwll_path ontouml:point :MP3MDz6GAqACAwll_path_point_2.
-:MP3MDz6GAqACAwll_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 385;
-    ontouml:yCoordinate 248.
+:0GfMDz6GAqACAwl9_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:0GfMDz6GAqACAwl__cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:1Yx0Dz6GAqACAyJ1_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :1Yx0Dz6GAqACAyJ1_shape_point ;
+    ontouml:width "102"^^xsd:nonNegativeInteger .
+
+:1Yx0Dz6GAqACAyJ1_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 166 ;
+    ontouml:yCoordinate 288 .
+
+:28zcDz6GAqACAwmL a ontouml:RelationView ;
+    ontouml:isViewOf :K8zcDz6GAqACAwmG ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :28zcDz6GAqACAwmL_path ;
+    ontouml:sourceView :bcZ0Dz6GAqACAyK9 ;
+    ontouml:targetView :l5B0Dz6GAqACAyJb .
+
+:28zcDz6GAqACAwmL_path a ontouml:Path ;
+    ontouml:point :28zcDz6GAqACAwmL_path_point_0,
+        :28zcDz6GAqACAwmL_path_point_1,
+        :28zcDz6GAqACAwmL_path_point_2 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:28zcDz6GAqACAwmL_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 685 ;
+    ontouml:yCoordinate 65 .
+
+:28zcDz6GAqACAwmL_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 214 ;
+    ontouml:yCoordinate 65 .
+
+:28zcDz6GAqACAwmL_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 214 ;
+    ontouml:yCoordinate 164 .
+
+:4S_MDz6GAqACAwmR_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:4S_MDz6GAqACAwmT_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:7j_cDz6GAqACAwni_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:7j_cDz6GAqACAwnk_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:7kcMDz6GAqACAyP6 a ontouml:RelationView ;
+    ontouml:isViewOf :jkcMDz6GAqACAyP1 ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :7kcMDz6GAqACAyP6_path ;
+    ontouml:sourceView :Kql0Dz6GAqACAyMH ;
+    ontouml:targetView :YON0Dz6GAqACAyM3 .
+
+:7kcMDz6GAqACAyP6_path a ontouml:Path ;
+    ontouml:point :7kcMDz6GAqACAyP6_path_point_0,
+        :7kcMDz6GAqACAyP6_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:7kcMDz6GAqACAyP6_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 1078 ;
+    ontouml:yCoordinate 359 .
+
+:7kcMDz6GAqACAyP6_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 1078 ;
+    ontouml:yCoordinate 414 .
+
+:8S_MDz6GAqACAwmV a ontouml:RelationView ;
+    ontouml:isViewOf :4S_MDz6GAqACAwmQ ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :8S_MDz6GAqACAwmV_path ;
+    ontouml:sourceView :DPZ0Dz6GAqACAyLJ ;
+    ontouml:targetView :y2F0Dz6GAqACAyLt .
+
+:8S_MDz6GAqACAwmV_path a ontouml:Path ;
+    ontouml:point :8S_MDz6GAqACAwmV_path_point_0,
+        :8S_MDz6GAqACAwmV_path_point_1,
+        :8S_MDz6GAqACAwmV_path_point_2,
+        :8S_MDz6GAqACAwmV_path_point_3 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:8S_MDz6GAqACAwmV_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 895 ;
+    ontouml:yCoordinate 205 .
+
+:8S_MDz6GAqACAwmV_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 895 ;
+    ontouml:yCoordinate 261 .
+
+:8S_MDz6GAqACAwmV_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 797 ;
+    ontouml:yCoordinate 261 .
+
+:8S_MDz6GAqACAwmV_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 797 ;
+    ontouml:yCoordinate 318 .
+
+:DPZ0Dz6GAqACAyLJ_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :DPZ0Dz6GAqACAyLJ_shape_point ;
+    ontouml:width "99"^^xsd:nonNegativeInteger .
+
+:DPZ0Dz6GAqACAyLJ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 846 ;
+    ontouml:yCoordinate 165 .
+
+:EcC0Dz6GAqACAyIX a ontouml:Diagram ;
+    ontouml:containsView :1Yx0Dz6GAqACAyJ1,
+        :28zcDz6GAqACAwmL,
+        :7kcMDz6GAqACAyP6,
+        :8S_MDz6GAqACAwmV,
+        :DPZ0Dz6GAqACAyLJ,
+        :GbfMDz6GAqACAwmL,
+        :IKAsDz6GAqACAwmp,
+        :Kql0Dz6GAqACAyMH,
+        :MP3MDz6GAqACAwll,
+        :N6MMDz6GAqACAyPQ,
+        :PU_cDz6GAqACAwnc,
+        :Qbp0Dz6GAqACAyKx,
+        :SH_MDz6GAqACAwmf,
+        :WTF0Dz6GAqACAyL5,
+        :Wpx0Dz6GAqACAyKB,
+        :YON0Dz6GAqACAyM3,
+        :ZN50Dz6GAqACAyLV,
+        :_9X0Dz6GAqACAyOt,
+        :afx0Dz6GAqACAyKN,
+        :bcZ0Dz6GAqACAyK9,
+        :c6TcDz6GAqACAwmB,
+        :dDMMDz6GAqACAyPc,
+        :iGfMDz6GAqACAwmB,
+        :j6XMDz6GAqACAwlX,
+        :l5B0Dz6GAqACAyJb,
+        :l8sMDz6GAqACAyPm,
+        :l9sMDz6GAqACAyPw,
+        :qC10Dz6GAqACAyMf,
+        :s0p0Dz6GAqACAyKl,
+        :s770Dz6GAqACAyOb,
+        :vNJ0Dz6GAqACAyKZ,
+        :vf50Dz6GAqACAyLh,
+        :wT_cDz6GAqACAwnm,
+        :y110Dz6GAqACAyMr,
+        :y2F0Dz6GAqACAyLt,
+        :zHV0Dz6GAqACAyMT ;
+    ontouml:name "Grain Production Ontology"@en ;
+    ontouml:owner :lqS0Dz6GAqACAyIe ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:GbfMDz6GAqACAwmL a ontouml:RelationView ;
+    ontouml:isViewOf :cbfMDz6GAqACAwmG ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :GbfMDz6GAqACAwmL_path ;
+    ontouml:sourceView :DPZ0Dz6GAqACAyLJ ;
+    ontouml:targetView :vf50Dz6GAqACAyLh .
+
+:GbfMDz6GAqACAwmL_path a ontouml:Path ;
+    ontouml:point :GbfMDz6GAqACAwmL_path_point_0,
+        :GbfMDz6GAqACAwmL_path_point_1,
+        :GbfMDz6GAqACAwmL_path_point_2,
+        :GbfMDz6GAqACAwmL_path_point_3 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:GbfMDz6GAqACAwmL_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 896 ;
+    ontouml:yCoordinate 205 .
+
+:GbfMDz6GAqACAwmL_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 896 ;
+    ontouml:yCoordinate 261 .
+
+:GbfMDz6GAqACAwmL_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 638 ;
+    ontouml:yCoordinate 261 .
+
+:GbfMDz6GAqACAwmL_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 638 ;
+    ontouml:yCoordinate 318 .
+
+:IKAsDz6GAqACAwmp a ontouml:RelationView ;
+    ontouml:isViewOf :LyAsDz6GAqACAwmk ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :IKAsDz6GAqACAwmp_path ;
+    ontouml:sourceView :DPZ0Dz6GAqACAyLJ ;
+    ontouml:targetView :Kql0Dz6GAqACAyMH .
+
+:IKAsDz6GAqACAwmp_path a ontouml:Path ;
+    ontouml:point :IKAsDz6GAqACAwmp_path_point_0,
+        :IKAsDz6GAqACAwmp_path_point_1,
+        :IKAsDz6GAqACAwmp_path_point_2,
+        :IKAsDz6GAqACAwmp_path_point_3 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:IKAsDz6GAqACAwmp_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 895 ;
+    ontouml:yCoordinate 205 .
+
+:IKAsDz6GAqACAwmp_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 895 ;
+    ontouml:yCoordinate 260 .
+
+:IKAsDz6GAqACAwmp_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 1115 ;
+    ontouml:yCoordinate 260 .
+
+:IKAsDz6GAqACAwmp_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 1115 ;
+    ontouml:yCoordinate 316 .
+
+:IP3MDz6GAqACAwlh_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:IP3MDz6GAqACAwlj_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:J9sMDz6GAqACAyPs_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:J9sMDz6GAqACAyPu_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:K8mkDz6GAqACAx48_root a ontouml:Package ;
+    ontouml:containsModelElement :lqS0Dz6GAqACAyIe ;
+    ontouml:name "Grain Production Ontology"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:K8zcDz6GAqACAwmH_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:K8zcDz6GAqACAwmJ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:Kql0Dz6GAqACAyMH_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :Kql0Dz6GAqACAyMH_shape_point ;
+    ontouml:width "141"^^xsd:nonNegativeInteger .
+
+:Kql0Dz6GAqACAyMH_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 1045 ;
+    ontouml:yCoordinate 318 .
+
+:LU_cDz6GAqACAwnY_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:LU_cDz6GAqACAwna_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:LyAsDz6GAqACAwml_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:LyAsDz6GAqACAwmn_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:MP3MDz6GAqACAwll a ontouml:RelationView ;
+    ontouml:isViewOf :IP3MDz6GAqACAwlg ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :MP3MDz6GAqACAwll_path ;
+    ontouml:sourceView :vNJ0Dz6GAqACAyKZ ;
+    ontouml:targetView :s0p0Dz6GAqACAyKl .
+
+:MP3MDz6GAqACAwll_path a ontouml:Path ;
+    ontouml:point :MP3MDz6GAqACAwll_path_point_0,
+        :MP3MDz6GAqACAwll_path_point_1,
+        :MP3MDz6GAqACAwll_path_point_2 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:MP3MDz6GAqACAwll_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 431 ;
+    ontouml:yCoordinate 185 .
+
+:MP3MDz6GAqACAwll_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 385 ;
+    ontouml:yCoordinate 185 .
+
+:MP3MDz6GAqACAwll_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 385 ;
+    ontouml:yCoordinate 248 .
+
+:N6MMDz6GAqACAyPQ a ontouml:RelationView ;
+    ontouml:isViewOf :p6MMDz6GAqACAyPL ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :N6MMDz6GAqACAyPQ_path ;
+    ontouml:sourceView :ZN50Dz6GAqACAyLV ;
+    ontouml:targetView :zHV0Dz6GAqACAyMT .
+
+:N6MMDz6GAqACAyPQ_path a ontouml:Path ;
+    ontouml:point :N6MMDz6GAqACAyPQ_path_point_0,
+        :N6MMDz6GAqACAyPQ_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:N6MMDz6GAqACAyPQ_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 491 ;
+    ontouml:yCoordinate 359 .
+
+:N6MMDz6GAqACAyPQ_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 491 ;
+    ontouml:yCoordinate 414 .
+
+:PU_cDz6GAqACAwnc a ontouml:RelationView ;
+    ontouml:isViewOf :LU_cDz6GAqACAwnX ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :PU_cDz6GAqACAwnc_path ;
+    ontouml:sourceView :bcZ0Dz6GAqACAyK9 ;
+    ontouml:targetView :vNJ0Dz6GAqACAyKZ .
+
+:PU_cDz6GAqACAwnc_path a ontouml:Path ;
+    ontouml:point :PU_cDz6GAqACAwnc_path_point_0,
+        :PU_cDz6GAqACAwnc_path_point_1,
+        :PU_cDz6GAqACAwnc_path_point_2 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:PU_cDz6GAqACAwnc_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 684 ;
+    ontouml:yCoordinate 65 .
+
+:PU_cDz6GAqACAwnc_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 478 ;
+    ontouml:yCoordinate 65 .
+
+:PU_cDz6GAqACAwnc_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 478 ;
+    ontouml:yCoordinate 164 .
+
+:Qbp0Dz6GAqACAyKx_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :Qbp0Dz6GAqACAyKx_shape_point ;
+    ontouml:width "88"^^xsd:nonNegativeInteger .
+
+:Qbp0Dz6GAqACAyKx_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 561 ;
+    ontouml:yCoordinate 125 .
+
+:SH_MDz6GAqACAwmf a ontouml:RelationView ;
+    ontouml:isViewOf :YH_MDz6GAqACAwma ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :SH_MDz6GAqACAwmf_path ;
+    ontouml:sourceView :DPZ0Dz6GAqACAyLJ ;
+    ontouml:targetView :WTF0Dz6GAqACAyL5 .
+
+:SH_MDz6GAqACAwmf_path a ontouml:Path ;
+    ontouml:point :SH_MDz6GAqACAwmf_path_point_0,
+        :SH_MDz6GAqACAwmf_path_point_1,
+        :SH_MDz6GAqACAwmf_path_point_2,
+        :SH_MDz6GAqACAwmf_path_point_3 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:SH_MDz6GAqACAwmf_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 896 ;
+    ontouml:yCoordinate 205 .
+
+:SH_MDz6GAqACAwmf_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 896 ;
+    ontouml:yCoordinate 261 .
+
+:SH_MDz6GAqACAwmf_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 961 ;
+    ontouml:yCoordinate 261 .
+
+:SH_MDz6GAqACAwmf_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 961 ;
+    ontouml:yCoordinate 318 .
+
+:WTF0Dz6GAqACAyL5_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :WTF0Dz6GAqACAyL5_shape_point ;
+    ontouml:width "145"^^xsd:nonNegativeInteger .
+
+:WTF0Dz6GAqACAyL5_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 890 ;
+    ontouml:yCoordinate 318 .
+
+:Wpx0Dz6GAqACAyKB_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :Wpx0Dz6GAqACAyKB_shape_point ;
+    ontouml:width "91"^^xsd:nonNegativeInteger .
+
+:Wpx0Dz6GAqACAyKB_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 56 ;
+    ontouml:yCoordinate 390 .
+
+:YH_MDz6GAqACAwmb_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:YH_MDz6GAqACAwmd_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:YON0Dz6GAqACAyM3_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :YON0Dz6GAqACAyM3_shape_point ;
+    ontouml:width "117"^^xsd:nonNegativeInteger .
+
+:YON0Dz6GAqACAyM3_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 985 ;
+    ontouml:yCoordinate 414 .
+
+:Z6XMDz6GAqACAwlT_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:Z6XMDz6GAqACAwlV_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:ZN50Dz6GAqACAyLV_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :ZN50Dz6GAqACAyLV_shape_point ;
+    ontouml:width "137"^^xsd:nonNegativeInteger .
+
+:ZN50Dz6GAqACAyLV_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 423 ;
+    ontouml:yCoordinate 318 .
+
+:_9X0Dz6GAqACAyOt a ontouml:GeneralizationView ;
+    ontouml:isViewOf :X9X0Dz6GAqACAyOs ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :_9X0Dz6GAqACAyOt_path ;
+    ontouml:sourceView :bcZ0Dz6GAqACAyK9 ;
+    ontouml:targetView :Qbp0Dz6GAqACAyKx .
+
+:_9X0Dz6GAqACAyOt_path a ontouml:Path ;
+    ontouml:point :_9X0Dz6GAqACAyOt_path_point_0,
+        :_9X0Dz6GAqACAyOt_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:_9X0Dz6GAqACAyOt_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 686 ;
+    ontouml:yCoordinate 95 .
+
+:_9X0Dz6GAqACAyOt_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 650 ;
+    ontouml:yCoordinate 126 .
+
+:afx0Dz6GAqACAyKN_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :afx0Dz6GAqACAyKN_shape_point ;
+    ontouml:width "91"^^xsd:nonNegativeInteger .
+
+:afx0Dz6GAqACAyKN_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 178 ;
+    ontouml:yCoordinate 390 .
+
+:bcZ0Dz6GAqACAyK9_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :bcZ0Dz6GAqACAyK9_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:bcZ0Dz6GAqACAyK9_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 685 ;
+    ontouml:yCoordinate 55 .
+
+:c6TcDz6GAqACAwmB a ontouml:RelationView ;
+    ontouml:isViewOf :vaTcDz6GAqACAwl1 ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :c6TcDz6GAqACAwmB_path ;
+    ontouml:sourceView :1Yx0Dz6GAqACAyJ1 ;
+    ontouml:targetView :afx0Dz6GAqACAyKN .
+
+:c6TcDz6GAqACAwmB_path a ontouml:Path ;
+    ontouml:point :c6TcDz6GAqACAwmB_path_point_0,
+        :c6TcDz6GAqACAwmB_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:c6TcDz6GAqACAwmB_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 216 ;
+    ontouml:yCoordinate 329 .
+
+:c6TcDz6GAqACAwmB_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 216 ;
+    ontouml:yCoordinate 389 .
+
+:cbfMDz6GAqACAwmH_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:cbfMDz6GAqACAwmJ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:dDMMDz6GAqACAyPc a ontouml:RelationView ;
+    ontouml:isViewOf :lDMMDz6GAqACAyPX ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :dDMMDz6GAqACAyPc_path ;
+    ontouml:sourceView :vf50Dz6GAqACAyLh ;
+    ontouml:targetView :qC10Dz6GAqACAyMf .
+
+:dDMMDz6GAqACAyPc_path a ontouml:Path ;
+    ontouml:point :dDMMDz6GAqACAyPc_path_point_0,
+        :dDMMDz6GAqACAyPc_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:dDMMDz6GAqACAyPc_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 638 ;
+    ontouml:yCoordinate 359 .
+
+:dDMMDz6GAqACAyPc_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 638 ;
+    ontouml:yCoordinate 414 .
+
+:iGfMDz6GAqACAwmB a ontouml:RelationView ;
+    ontouml:isViewOf :0GfMDz6GAqACAwl8 ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :iGfMDz6GAqACAwmB_path ;
+    ontouml:sourceView :DPZ0Dz6GAqACAyLJ ;
+    ontouml:targetView :ZN50Dz6GAqACAyLV .
+
+:iGfMDz6GAqACAwmB_path a ontouml:Path ;
+    ontouml:point :iGfMDz6GAqACAwmB_path_point_0,
+        :iGfMDz6GAqACAwmB_path_point_1,
+        :iGfMDz6GAqACAwmB_path_point_2,
+        :iGfMDz6GAqACAwmB_path_point_3 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:iGfMDz6GAqACAwmB_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 895 ;
+    ontouml:yCoordinate 205 .
+
+:iGfMDz6GAqACAwmB_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 895 ;
+    ontouml:yCoordinate 261 .
+
+:iGfMDz6GAqACAwmB_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 497 ;
+    ontouml:yCoordinate 261 .
+
+:iGfMDz6GAqACAwmB_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 497 ;
+    ontouml:yCoordinate 318 .
+
+:j6XMDz6GAqACAwlX a ontouml:RelationView ;
+    ontouml:isViewOf :Z6XMDz6GAqACAwlS ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :j6XMDz6GAqACAwlX_path ;
+    ontouml:sourceView :1Yx0Dz6GAqACAyJ1 ;
+    ontouml:targetView :Wpx0Dz6GAqACAyKB .
+
+:j6XMDz6GAqACAwlX_path a ontouml:Path ;
+    ontouml:point :j6XMDz6GAqACAwlX_path_point_0,
+        :j6XMDz6GAqACAwlX_path_point_1,
+        :j6XMDz6GAqACAwlX_path_point_2 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:j6XMDz6GAqACAwlX_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 165 ;
+    ontouml:yCoordinate 308 .
+
+:j6XMDz6GAqACAwlX_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 102 ;
+    ontouml:yCoordinate 308 .
+
+:j6XMDz6GAqACAwlX_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 102 ;
+    ontouml:yCoordinate 389 .
+
+:jkcMDz6GAqACAyP2_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:jkcMDz6GAqACAyP4_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:l5B0Dz6GAqACAyJb_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :l5B0Dz6GAqACAyJb_shape_point ;
+    ontouml:width "94"^^xsd:nonNegativeInteger .
+
+:l5B0Dz6GAqACAyJb_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 166 ;
+    ontouml:yCoordinate 165 .
+
+:l8sMDz6GAqACAyPm a ontouml:RelationView ;
+    ontouml:isViewOf :x8sMDz6GAqACAyPh ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :l8sMDz6GAqACAyPm_path ;
+    ontouml:sourceView :y2F0Dz6GAqACAyLt ;
+    ontouml:targetView :y110Dz6GAqACAyMr .
+
+:l8sMDz6GAqACAyPm_path a ontouml:Path ;
+    ontouml:point :l8sMDz6GAqACAyPm_path_point_0,
+        :l8sMDz6GAqACAyPm_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:l8sMDz6GAqACAyPm_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 796 ;
+    ontouml:yCoordinate 359 .
+
+:l8sMDz6GAqACAyPm_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 796 ;
+    ontouml:yCoordinate 414 .
+
+:l9sMDz6GAqACAyPw a ontouml:RelationView ;
+    ontouml:isViewOf :J9sMDz6GAqACAyPr ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :l9sMDz6GAqACAyPw_path ;
+    ontouml:sourceView :WTF0Dz6GAqACAyL5 ;
+    ontouml:targetView :YON0Dz6GAqACAyM3 .
+
+:l9sMDz6GAqACAyPw_path a ontouml:Path ;
+    ontouml:point :l9sMDz6GAqACAyPw_path_point_0,
+        :l9sMDz6GAqACAyPw_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:l9sMDz6GAqACAyPw_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 1006 ;
+    ontouml:yCoordinate 359 .
+
+:l9sMDz6GAqACAyPw_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 1006 ;
+    ontouml:yCoordinate 414 .
+
+:lDMMDz6GAqACAyPY_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:lDMMDz6GAqACAyPa_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:p6MMDz6GAqACAyPM_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:p6MMDz6GAqACAyPO_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:qC10Dz6GAqACAyMf_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :qC10Dz6GAqACAyMf_shape_point ;
+    ontouml:width "91"^^xsd:nonNegativeInteger .
+
+:qC10Dz6GAqACAyMf_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 593 ;
+    ontouml:yCoordinate 414 .
+
+:s0p0Dz6GAqACAyKl_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :s0p0Dz6GAqACAyKl_shape_point ;
+    ontouml:width "170"^^xsd:nonNegativeInteger .
+
+:s0p0Dz6GAqACAyKl_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 301 ;
+    ontouml:yCoordinate 248 .
+
+:s770Dz6GAqACAyOb a ontouml:GeneralizationView ;
+    ontouml:isViewOf :k770Dz6GAqACAyOa ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :s770Dz6GAqACAyOb_path ;
+    ontouml:sourceView :l5B0Dz6GAqACAyJb ;
+    ontouml:targetView :1Yx0Dz6GAqACAyJ1 .
+
+:s770Dz6GAqACAyOb_path a ontouml:Path ;
+    ontouml:point :s770Dz6GAqACAyOb_path_point_0,
+        :s770Dz6GAqACAyOb_path_point_1 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:s770Dz6GAqACAyOb_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 214 ;
+    ontouml:yCoordinate 205 .
+
+:s770Dz6GAqACAyOb_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 214 ;
+    ontouml:yCoordinate 288 .
+
+:vNJ0Dz6GAqACAyKZ_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :vNJ0Dz6GAqACAyKZ_shape_point ;
+    ontouml:width "95"^^xsd:nonNegativeInteger .
+
+:vNJ0Dz6GAqACAyKZ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 430 ;
+    ontouml:yCoordinate 165 .
+
+:vaTcDz6GAqACAwl2_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:vaTcDz6GAqACAwl4_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:vf50Dz6GAqACAyLh_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :vf50Dz6GAqACAyLh_shape_point ;
+    ontouml:width "135"^^xsd:nonNegativeInteger .
+
+:vf50Dz6GAqACAyLh_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 571 ;
+    ontouml:yCoordinate 318 .
+
+:wT_cDz6GAqACAwnm a ontouml:RelationView ;
+    ontouml:isViewOf :7j_cDz6GAqACAwnh ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :wT_cDz6GAqACAwnm_path ;
+    ontouml:sourceView :bcZ0Dz6GAqACAyK9 ;
+    ontouml:targetView :DPZ0Dz6GAqACAyLJ .
+
+:wT_cDz6GAqACAwnm_path a ontouml:Path ;
+    ontouml:point :wT_cDz6GAqACAwnm_path_point_0,
+        :wT_cDz6GAqACAwnm_path_point_1,
+        :wT_cDz6GAqACAwnm_path_point_2 ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:wT_cDz6GAqACAwnm_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 766 ;
+    ontouml:yCoordinate 75 .
+
+:wT_cDz6GAqACAwnm_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 886 ;
+    ontouml:yCoordinate 75 .
+
+:wT_cDz6GAqACAwnm_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 886 ;
+    ontouml:yCoordinate 164 .
+
+:x8sMDz6GAqACAyPi_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:x8sMDz6GAqACAyPk_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:y110Dz6GAqACAyMr_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :y110Dz6GAqACAyMr_shape_point ;
+    ontouml:width "92"^^xsd:nonNegativeInteger .
+
+:y110Dz6GAqACAyMr_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 751 ;
+    ontouml:yCoordinate 414 .
+
+:y2F0Dz6GAqACAyLt_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :y2F0Dz6GAqACAyLt_shape_point ;
+    ontouml:width "161"^^xsd:nonNegativeInteger .
+
+:y2F0Dz6GAqACAyLt_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 716 ;
+    ontouml:yCoordinate 318 .
+
+:zHV0Dz6GAqACAyMT_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:topLeftPosition :zHV0Dz6GAqACAyMT_shape_point ;
+    ontouml:width "92"^^xsd:nonNegativeInteger .
+
+:zHV0Dz6GAqACAyMT_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 445 ;
+    ontouml:yCoordinate 414 .
+
+:0GfMDz6GAqACAwl8 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :0GfMDz6GAqACAwl9,
+        :0GfMDz6GAqACAwl_ ;
+    ontouml:sourceEnd :0GfMDz6GAqACAwl9 ;
+    ontouml:targetEnd :0GfMDz6GAqACAwl_ .
+
+:0GfMDz6GAqACAwl9 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :0GfMDz6GAqACAwl9_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :jPZ0Dz6GAqACAyLK .
+
+:0GfMDz6GAqACAwl_ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :0GfMDz6GAqACAwl__cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :ZN50Dz6GAqACAyLW .
+
+:4S_MDz6GAqACAwmQ a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :4S_MDz6GAqACAwmR,
+        :4S_MDz6GAqACAwmT ;
+    ontouml:sourceEnd :4S_MDz6GAqACAwmR ;
+    ontouml:targetEnd :4S_MDz6GAqACAwmT .
+
+:4S_MDz6GAqACAwmR a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :4S_MDz6GAqACAwmR_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :jPZ0Dz6GAqACAyLK .
+
+:4S_MDz6GAqACAwmT a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :4S_MDz6GAqACAwmT_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :y2F0Dz6GAqACAyLu .
+
+:7j_cDz6GAqACAwnh a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "Crop-Climate_Station"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :7j_cDz6GAqACAwni,
+        :7j_cDz6GAqACAwnk ;
+    ontouml:sourceEnd :7j_cDz6GAqACAwni ;
+    ontouml:targetEnd :7j_cDz6GAqACAwnk .
+
+:7j_cDz6GAqACAwni a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :7j_cDz6GAqACAwni_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> .
+
+:7j_cDz6GAqACAwnk a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :7j_cDz6GAqACAwnk_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :jPZ0Dz6GAqACAyLK .
+
+:IP3MDz6GAqACAwlg a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :IP3MDz6GAqACAwlh,
+        :IP3MDz6GAqACAwlj ;
+    ontouml:sourceEnd :IP3MDz6GAqACAwlh ;
+    ontouml:targetEnd :IP3MDz6GAqACAwlj .
+
+:IP3MDz6GAqACAwlh a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :IP3MDz6GAqACAwlh_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :vNJ0Dz6GAqACAyKa .
+
+:IP3MDz6GAqACAwlj a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :IP3MDz6GAqACAwlj_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :s0p0Dz6GAqACAyKm .
+
+:J9sMDz6GAqACAyPr a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :J9sMDz6GAqACAyPs,
+        :J9sMDz6GAqACAyPu ;
+    ontouml:sourceEnd :J9sMDz6GAqACAyPs ;
+    ontouml:targetEnd :J9sMDz6GAqACAyPu .
+
+:J9sMDz6GAqACAyPs a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :J9sMDz6GAqACAyPs_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :2TF0Dz6GAqACAyL6 .
+
+:J9sMDz6GAqACAyPu a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :J9sMDz6GAqACAyPu_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :4ON0Dz6GAqACAyM4 .
+
+:K8zcDz6GAqACAwmG a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "Crop-Digital_Images"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :K8zcDz6GAqACAwmH,
+        :K8zcDz6GAqACAwmJ ;
+    ontouml:sourceEnd :K8zcDz6GAqACAwmH ;
+    ontouml:targetEnd :K8zcDz6GAqACAwmJ .
+
+:K8zcDz6GAqACAwmH a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :K8zcDz6GAqACAwmH_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> .
+
+:K8zcDz6GAqACAwmJ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :K8zcDz6GAqACAwmJ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :V5B0Dz6GAqACAyJc .
+
+:LU_cDz6GAqACAwnX a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "Crop-Other_Variables"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :LU_cDz6GAqACAwnY,
+        :LU_cDz6GAqACAwna ;
+    ontouml:sourceEnd :LU_cDz6GAqACAwnY ;
+    ontouml:targetEnd :LU_cDz6GAqACAwna .
+
+:LU_cDz6GAqACAwnY a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LU_cDz6GAqACAwnY_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> .
+
+:LU_cDz6GAqACAwna a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LU_cDz6GAqACAwna_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :vNJ0Dz6GAqACAyKa .
+
+:LyAsDz6GAqACAwmk a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :LyAsDz6GAqACAwml,
+        :LyAsDz6GAqACAwmn ;
+    ontouml:sourceEnd :LyAsDz6GAqACAwml ;
+    ontouml:targetEnd :LyAsDz6GAqACAwmn .
+
+:LyAsDz6GAqACAwml a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :LyAsDz6GAqACAwml_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :jPZ0Dz6GAqACAyLK .
+
+:LyAsDz6GAqACAwmn a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LyAsDz6GAqACAwmn_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :Kql0Dz6GAqACAyMI .
+
+:Qbp0Dz6GAqACAyKx a ontouml:ClassView ;
+    ontouml:isViewOf :Qbp0Dz6GAqACAyKy ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :Qbp0Dz6GAqACAyKx_shape .
+
+:Wpx0Dz6GAqACAyKB a ontouml:ClassView ;
+    ontouml:isViewOf :Wpx0Dz6GAqACAyKC ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :Wpx0Dz6GAqACAyKB_shape .
+
+:X9X0Dz6GAqACAyOs a ontouml:Generalization ;
+    ontouml:general <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> ;
+    ontouml:name "Geolocation-Crop"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:specific :Qbp0Dz6GAqACAyKy .
+
+:YH_MDz6GAqACAwma a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :YH_MDz6GAqACAwmb,
+        :YH_MDz6GAqACAwmd ;
+    ontouml:sourceEnd :YH_MDz6GAqACAwmb ;
+    ontouml:targetEnd :YH_MDz6GAqACAwmd .
+
+:YH_MDz6GAqACAwmb a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :YH_MDz6GAqACAwmb_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :jPZ0Dz6GAqACAyLK .
+
+:YH_MDz6GAqACAwmd a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :YH_MDz6GAqACAwmd_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :2TF0Dz6GAqACAyL6 .
+
+:Z6XMDz6GAqACAwlS a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name ""@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :Z6XMDz6GAqACAwlT,
+        :Z6XMDz6GAqACAwlV ;
+    ontouml:sourceEnd :Z6XMDz6GAqACAwlT ;
+    ontouml:targetEnd :Z6XMDz6GAqACAwlV .
+
+:Z6XMDz6GAqACAwlT a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :Z6XMDz6GAqACAwlT_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :1Yx0Dz6GAqACAyJ2 .
+
+:Z6XMDz6GAqACAwlV a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :Z6XMDz6GAqACAwlV_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :Wpx0Dz6GAqACAyKC .
+
+:afx0Dz6GAqACAyKN a ontouml:ClassView ;
+    ontouml:isViewOf :afx0Dz6GAqACAyKO ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :afx0Dz6GAqACAyKN_shape .
+
+:cbfMDz6GAqACAwmG a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :cbfMDz6GAqACAwmH,
+        :cbfMDz6GAqACAwmJ ;
+    ontouml:sourceEnd :cbfMDz6GAqACAwmH ;
+    ontouml:targetEnd :cbfMDz6GAqACAwmJ .
+
+:cbfMDz6GAqACAwmH a ontouml:Property ;
+    ontouml:aggregationKind ontouml:shared ;
+    ontouml:cardinality :cbfMDz6GAqACAwmH_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :jPZ0Dz6GAqACAyLK .
+
+:cbfMDz6GAqACAwmJ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :cbfMDz6GAqACAwmJ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :ff50Dz6GAqACAyLi .
+
+:jkcMDz6GAqACAyP1 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :jkcMDz6GAqACAyP2,
+        :jkcMDz6GAqACAyP4 ;
+    ontouml:sourceEnd :jkcMDz6GAqACAyP2 ;
+    ontouml:targetEnd :jkcMDz6GAqACAyP4 .
+
+:jkcMDz6GAqACAyP2 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :jkcMDz6GAqACAyP2_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :Kql0Dz6GAqACAyMI .
+
+:jkcMDz6GAqACAyP4 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :jkcMDz6GAqACAyP4_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :4ON0Dz6GAqACAyM4 .
+
+:k770Dz6GAqACAyOa a ontouml:Generalization ;
+    ontouml:general :V5B0Dz6GAqACAyJc ;
+    ontouml:name ""@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:specific :1Yx0Dz6GAqACAyJ2 .
+
+:lDMMDz6GAqACAyPX a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :lDMMDz6GAqACAyPY,
+        :lDMMDz6GAqACAyPa ;
+    ontouml:sourceEnd :lDMMDz6GAqACAyPY ;
+    ontouml:targetEnd :lDMMDz6GAqACAyPa .
+
+:lDMMDz6GAqACAyPY a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :lDMMDz6GAqACAyPY_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :ff50Dz6GAqACAyLi .
+
+:lDMMDz6GAqACAyPa a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :lDMMDz6GAqACAyPa_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :aC10Dz6GAqACAyMg .
+
+:lqS0Dz6GAqACAyIe a ontouml:Package ;
+    ontouml:containsModelElement :0GfMDz6GAqACAwl8,
+        :1Yx0Dz6GAqACAyJ2,
+        :2TF0Dz6GAqACAyL6,
+        :4ON0Dz6GAqACAyM4,
+        :4S_MDz6GAqACAwmQ,
+        :7j_cDz6GAqACAwnh,
+        :IP3MDz6GAqACAwlg,
+        :J9sMDz6GAqACAyPr,
+        :K110Dz6GAqACAyMs,
+        :K8zcDz6GAqACAwmG,
+        :Kql0Dz6GAqACAyMI,
+        :LU_cDz6GAqACAwnX,
+        :LyAsDz6GAqACAwmk,
+        :Qbp0Dz6GAqACAyKy,
+        :V5B0Dz6GAqACAyJc,
+        :Wpx0Dz6GAqACAyKC,
+        :X9X0Dz6GAqACAyOs,
+        :YH_MDz6GAqACAwma,
+        :Z6XMDz6GAqACAwlS,
+        :ZN50Dz6GAqACAyLW,
+        :aC10Dz6GAqACAyMg,
+        :afx0Dz6GAqACAyKO,
+        <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.>,
+        :cbfMDz6GAqACAwmG,
+        :ff50Dz6GAqACAyLi,
+        :jPZ0Dz6GAqACAyLK,
+        :jkcMDz6GAqACAyP1,
+        :k770Dz6GAqACAyOa,
+        :lDMMDz6GAqACAyPX,
+        :p6MMDz6GAqACAyPL,
+        :s0p0Dz6GAqACAyKm,
+        :vNJ0Dz6GAqACAyKa,
+        :vaTcDz6GAqACAwl1,
+        :x8sMDz6GAqACAyPh,
+        :y2F0Dz6GAqACAyLu,
+        :zHV0Dz6GAqACAyMU ;
+    ontouml:name "Grain Production Ontology"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 .
+
+:p6MMDz6GAqACAyPL a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :p6MMDz6GAqACAyPM,
+        :p6MMDz6GAqACAyPO ;
+    ontouml:sourceEnd :p6MMDz6GAqACAyPM ;
+    ontouml:targetEnd :p6MMDz6GAqACAyPO .
+
+:p6MMDz6GAqACAyPM a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :p6MMDz6GAqACAyPM_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :ZN50Dz6GAqACAyLW .
+
+:p6MMDz6GAqACAyPO a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :p6MMDz6GAqACAyPO_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :zHV0Dz6GAqACAyMU .
+
+:qC10Dz6GAqACAyMf a ontouml:ClassView ;
+    ontouml:isViewOf :aC10Dz6GAqACAyMg ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :qC10Dz6GAqACAyMf_shape .
+
+:s0p0Dz6GAqACAyKl a ontouml:ClassView ;
+    ontouml:isViewOf :s0p0Dz6GAqACAyKm ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :s0p0Dz6GAqACAyKl_shape .
+
+:vaTcDz6GAqACAwl1 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "Georef_Images-TIFF"@en ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :vaTcDz6GAqACAwl2,
+        :vaTcDz6GAqACAwl4 ;
+    ontouml:sourceEnd :vaTcDz6GAqACAwl2 ;
+    ontouml:targetEnd :vaTcDz6GAqACAwl4 .
+
+:vaTcDz6GAqACAwl2 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :vaTcDz6GAqACAwl2_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :1Yx0Dz6GAqACAyJ2 .
+
+:vaTcDz6GAqACAwl4 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :vaTcDz6GAqACAwl4_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :afx0Dz6GAqACAyKO .
+
+:x8sMDz6GAqACAyPh a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:relationEnd :x8sMDz6GAqACAyPi,
+        :x8sMDz6GAqACAyPk ;
+    ontouml:sourceEnd :x8sMDz6GAqACAyPi ;
+    ontouml:targetEnd :x8sMDz6GAqACAyPk .
+
+:x8sMDz6GAqACAyPi a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :x8sMDz6GAqACAyPi_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :y2F0Dz6GAqACAyLu .
+
+:x8sMDz6GAqACAyPk a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :x8sMDz6GAqACAyPk_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:propertyType :K110Dz6GAqACAyMs .
+
+:y110Dz6GAqACAyMr a ontouml:ClassView ;
+    ontouml:isViewOf :K110Dz6GAqACAyMs ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :y110Dz6GAqACAyMr_shape .
+
+:zHV0Dz6GAqACAyMT a ontouml:ClassView ;
+    ontouml:isViewOf :zHV0Dz6GAqACAyMU ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :zHV0Dz6GAqACAyMT_shape .
+
+:K110Dz6GAqACAyMs a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Milimeters"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:abstractNature ;
+    ontouml:stereotype ontouml:datatype .
+
+:Kql0Dz6GAqACAyMH a ontouml:ClassView ;
+    ontouml:isViewOf :Kql0Dz6GAqACAyMI ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :Kql0Dz6GAqACAyMH_shape .
+
+:Qbp0Dz6GAqACAyKy a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Geolocation"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:WTF0Dz6GAqACAyL5 a ontouml:ClassView ;
+    ontouml:isViewOf :2TF0Dz6GAqACAyL6 ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :WTF0Dz6GAqACAyL5_shape .
+
+:Wpx0Dz6GAqACAyKC a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "NDVI_Index"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:YON0Dz6GAqACAyM3 a ontouml:ClassView ;
+    ontouml:isViewOf :4ON0Dz6GAqACAyM4 ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :YON0Dz6GAqACAyM3_shape .
+
+:ZN50Dz6GAqACAyLV a ontouml:ClassView ;
+    ontouml:isViewOf :ZN50Dz6GAqACAyLW ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :ZN50Dz6GAqACAyLV_shape .
+
+:aC10Dz6GAqACAyMg a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Percentage"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:abstractNature ;
+    ontouml:stereotype ontouml:datatype .
+
+:afx0Dz6GAqACAyKO a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "TIFF"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:abstractNature ;
+    ontouml:stereotype ontouml:datatype .
+
+:l5B0Dz6GAqACAyJb a ontouml:ClassView ;
+    ontouml:isViewOf :V5B0Dz6GAqACAyJc ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :l5B0Dz6GAqACAyJb_shape .
+
+:s0p0Dz6GAqACAyKm a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Production_Evolution_States"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:vNJ0Dz6GAqACAyKZ a ontouml:ClassView ;
+    ontouml:isViewOf :vNJ0Dz6GAqACAyKa ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :vNJ0Dz6GAqACAyKZ_shape .
+
+:vf50Dz6GAqACAyLh a ontouml:ClassView ;
+    ontouml:isViewOf :ff50Dz6GAqACAyLi ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :vf50Dz6GAqACAyLh_shape .
+
+:y2F0Dz6GAqACAyLt a ontouml:ClassView ;
+    ontouml:isViewOf :y2F0Dz6GAqACAyLu ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :y2F0Dz6GAqACAyLt_shape .
+
+:zHV0Dz6GAqACAyMU a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Hours/day"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:abstractNature ;
+    ontouml:stereotype ontouml:datatype .
+
+:1Yx0Dz6GAqACAyJ1 a ontouml:ClassView ;
+    ontouml:isViewOf :1Yx0Dz6GAqACAyJ2 ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :1Yx0Dz6GAqACAyJ1_shape .
+
+:2TF0Dz6GAqACAyL6 a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Maximum_Temperature"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:4ON0Dz6GAqACAyM4 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Degrees_Celsius"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:abstractNature ;
+    ontouml:stereotype ontouml:datatype .
+
+:Kql0Dz6GAqACAyMI a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Minimum_Temperature"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:V5B0Dz6GAqACAyJc a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Digital_Images"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:ZN50Dz6GAqACAyLW a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Leaf_Wetting_Duration"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:ff50Dz6GAqACAyLi a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Air_Relative_Humidity"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:vNJ0Dz6GAqACAyKa a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Oher_Variables"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:y2F0Dz6GAqACAyLu a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Accumulated_Precipitation"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:category .
+
+:1Yx0Dz6GAqACAyJ2 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Satellite_Images"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:bcZ0Dz6GAqACAyK9 a ontouml:ClassView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :bcZ0Dz6GAqACAyK9_shape .
+
+<https://w3id.org/ontouml-models/model/neves2021grain-production#bcZ0Dz6GAqACAyK.> a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Crop"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:DPZ0Dz6GAqACAyLJ a ontouml:ClassView ;
+    ontouml:isViewOf :jPZ0Dz6GAqACAyLK ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:shape :DPZ0Dz6GAqACAyLJ_shape .
+
+:jPZ0Dz6GAqACAyLK a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Climate_Station"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :K8mkDz6GAqACAx48 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:K8mkDz6GAqACAx48 a ontouml:Project ;
+    ontouml:diagram :EcC0Dz6GAqACAyIX ;
+    ontouml:model :K8mkDz6GAqACAx48_root ;
+    ontouml:name "Grain Production Ontology"@en .
+
