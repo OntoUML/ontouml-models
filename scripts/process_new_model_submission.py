@@ -6,7 +6,7 @@ and BibTeX/BibLaTeX semantics to those tools and only adds workflow-level
 safeguards:
 
 - source-file preflight checks for a new model submission;
-- same-repository pull request model-folder detection;
+- same-repository pull request change classification;
 - deterministic command ordering, including optional references.bib validation;
 - final Turtle/RDF parse validation;
 - narrow, model-folder-scoped processing.
@@ -50,6 +50,16 @@ OPTIONAL_SOURCE_FILES = ("references.bib",)
 ACCEPTED_IMAGE_FOLDERS = ("original-diagrams", "new-diagrams")
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 CONTROL_CHARS = re.compile(r"[\x00-\x1f\x7f]")
+NORMAL_SUBMISSION_MODE = "normal"
+BULK_GENERATED_MODE = "bulk-generated"
+ALLOWED_ROOT_GENERATED_FILES = frozenset({"catalog.ttl"})
+GENERATED_MODEL_FILES = frozenset(
+    {
+        "ontology.ttl",
+        "metadata.ttl",
+        "metadata-turtle.ttl",
+    }
+)
 
 
 class SubmissionProcessingError(RuntimeError):
@@ -66,6 +76,16 @@ class CommandStep:
 
     name: str
     command: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class ChangedFilesClassification:
+    """Safe processing mode selected from repository-relative changed paths."""
+
+    mode: str
+    model_folder: Optional[str]
+    model_folders: tuple[str, ...]
+    changed_files: tuple[str, ...]
 
 
 def repository_root(start: Optional[Path] = None) -> Path:
@@ -516,30 +536,46 @@ def normalize_changed_path(path_text: str) -> str:
     return path_text.strip().replace("\\", "/").strip("/")
 
 
-def detect_model_folder_from_changed_files(
-    changed_files: Iterable[str], *, models_dir: str = "models"
-) -> str:
-    """Return the unique model folder affected by a model-submission PR.
+def is_generated_model_artifact(path: str, *, models_dir: str = "models") -> bool:
+    """Return whether ``path`` is a migration artifact in a model folder."""
 
-    The first automatic phase intentionally supports only one model folder and no
-    files outside that folder. Generated metadata files inside the same folder are
-    allowed because the workflow may commit them back to the PR branch.
+    parts = path.split("/")
+    if len(parts) != 3 or parts[0] != models_dir.strip("/"):
+        return False
+    return parts[2] in GENERATED_MODEL_FILES
+
+
+def classify_changed_files(
+    changed_files: Iterable[str], *, models_dir: str = "models"
+) -> ChangedFilesClassification:
+    """Classify a PR as one-model normal processing or generated-only bulk work.
+
+    Normal processing retains the established one-model boundary and permits
+    generated ``catalog.ttl`` alongside that model folder. Multiple model
+    folders are accepted only when every changed model path is a generated
+    artifact directly inside its model folder and every root-level path is an
+    explicitly allowed generated artifact.
     """
 
-    normalized_files = [
-        normalize_changed_path(path)
-        for path in changed_files
-        if normalize_changed_path(path)
-    ]
+    normalized_files = tuple(
+        dict.fromkeys(
+            normalized
+            for path in changed_files
+            if (normalized := normalize_changed_path(path))
+        )
+    )
     if not normalized_files:
         raise SubmissionProcessingError("No changed files were detected.", exit_code=2)
 
-    models_prefix = models_dir.strip("/") + "/"
+    models_name = models_dir.strip("/")
+    models_prefix = models_name + "/"
     model_folders: set[str] = set()
     outside_files: list[str] = []
     invalid_model_paths: list[str] = []
 
     for path in normalized_files:
+        if path in ALLOWED_ROOT_GENERATED_FILES:
+            continue
         if not path.startswith(models_prefix):
             outside_files.append(path)
             continue
@@ -552,23 +588,76 @@ def detect_model_folder_from_changed_files(
     if outside_files:
         joined = "\n".join(f"- {path}" for path in outside_files)
         raise SubmissionProcessingError(
-            "Model-submission PRs must not change files outside the target model folder.\n"
-            + joined
+            "Model-submission PRs may not change files outside the target model "
+            "folder(s) and generated catalog.ttl.\n" + joined
         )
     if invalid_model_paths:
         joined = "\n".join(f"- {path}" for path in invalid_model_paths)
         raise SubmissionProcessingError(
-            "Changed model paths must be inside a direct model folder, such as models/example-model/.\n"
+            "Changed model paths must be inside a direct model folder, such as "
+            "models/example-model/.\n" + joined
+        )
+    if not model_folders:
+        raise SubmissionProcessingError(
+            "Exactly one model folder or a generated-only multi-model change is "
+            "required; detected no model folders.",
+            exit_code=2,
+        )
+
+    ordered_folders = tuple(sorted(model_folders))
+    if len(ordered_folders) == 1:
+        return ChangedFilesClassification(
+            mode=NORMAL_SUBMISSION_MODE,
+            model_folder=ordered_folders[0],
+            model_folders=ordered_folders,
+            changed_files=normalized_files,
+        )
+
+    disallowed_bulk_paths = [
+        path
+        for path in normalized_files
+        if path not in ALLOWED_ROOT_GENERATED_FILES
+        and not is_generated_model_artifact(path, models_dir=models_name)
+    ]
+    if disallowed_bulk_paths:
+        joined = "\n".join(f"- {path}" for path in disallowed_bulk_paths)
+        raise SubmissionProcessingError(
+            "Multiple model folders are permitted only for generated-artifact "
+            "maintenance. Contributor-source or unrecognized paths were found:\n"
             + joined
         )
-    if len(model_folders) != 1:
-        joined = ", ".join(sorted(model_folders)) or "none"
+
+    return ChangedFilesClassification(
+        mode=BULK_GENERATED_MODE,
+        model_folder=None,
+        model_folders=ordered_folders,
+        changed_files=normalized_files,
+    )
+
+
+def detect_model_folder_from_changed_files(
+    changed_files: Iterable[str], *, models_dir: str = "models"
+) -> str:
+    """Return the unique model folder affected by a model-submission PR.
+
+    The first automatic phase intentionally supports only one model folder and no
+    files outside that folder. Generated metadata files inside the same folder are
+    allowed because the workflow may commit them back to the PR branch.
+    """
+
+    classification = classify_changed_files(changed_files, models_dir=models_dir)
+    if classification.mode != NORMAL_SUBMISSION_MODE:
+        joined = ", ".join(classification.model_folders)
         raise SubmissionProcessingError(
             "Exactly one model folder must be changed by this workflow; detected: "
             + joined
         )
-
-    return next(iter(model_folders))
+    if classification.model_folder is None:  # pragma: no cover - mode invariant
+        raise SubmissionProcessingError(
+            "Internal classification error: normal mode has no model folder.",
+            exit_code=2,
+        )
+    return classification.model_folder
 
 
 def changed_files_between_refs(base_ref: str, head_ref: str, root: Path) -> list[str]:

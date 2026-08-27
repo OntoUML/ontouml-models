@@ -1,897 +1,1283 @@
-@prefix : <https://w3id.org/ontouml-models/model/guarino2018rea#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/guarino2018rea#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/guarino2018rea/> rdf:type ontouml:Project;
-    ontouml:name "guarino2018ontological"@en;
-    ontouml:model :U5etG06GAqACHRHh_root;
-    ontouml:diagram :kmudG06GAqACHRWo.
-:U5etG06GAqACHRHh_root rdf:type ontouml:Package;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "guarino2018ontological"@en;
-    ontouml:containsModelElement :yWSWQ_6AUB0C9Ddg.
-:yWSWQ_6AUB0C9Ddg rdf:type ontouml:Package;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Package"@en;
-    ontouml:containsModelElement :NEhdG06GAqACHRW2, :YGZdG06GAqACHRXG, :FhFdG06GAqACHRXS, :y5VdG06GAqACHRXi, :lT9dG06GAqACHRX4, :tVLdG06GAqACHRYE, :P1HdG06GAqACHRYQ, :T6M9G06GAqACHRZM, :YBK9G06GAqACHRZY, :g9e9G06GAqACHRZu, :IfB9G06GAqACHRZ6, :LA19G06GAqACHRal, <https://w3id.org/ontouml-models/model/guarino2018rea#7ON9G06GAqACHRaw>, :oWJjG06GAqACHRfJ, <https://w3id.org/ontouml-models/model/guarino2018rea#9E9jG06GAqACHRfk>, :v7DjG06GAqACHRfz, :QNd9G06GAqACHRa3, :Mzz9G06GAqACHRbI, :x279G06GAqACHRbb, <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc2>, :LU4jG06GAqACHRdN, :pl0jG06GAqACHRdm, :KZ8jG06GAqACHRd1, <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReM>, :lLejG06GAqACHReb, :LVhjG06GAqACHRe0, :RWZTG06GAqACHRht, :VEFTG06GAqACHRiC, <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo2>.
-:NEhdG06GAqACHRW2 rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Agent"@en;
-    ontouml:stereotype ontouml:category;
-    ontouml:restrictedTo ontouml:functionalComplex, ontouml:collective, ontouml:quantity;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:YGZdG06GAqACHRXG rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Economic Agent"@en;
-    ontouml:stereotype ontouml:roleMixin;
-    ontouml:restrictedTo ontouml:functionalComplex, ontouml:collective, ontouml:quantity;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:FhFdG06GAqACHRXS rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Provider"@en;
-    ontouml:stereotype ontouml:roleMixin;
-    ontouml:restrictedTo ontouml:functionalComplex, ontouml:collective, ontouml:quantity;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:y5VdG06GAqACHRXi rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Receiver"@en;
-    ontouml:stereotype ontouml:roleMixin;
-    ontouml:restrictedTo ontouml:functionalComplex, ontouml:collective, ontouml:quantity;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:lT9dG06GAqACHRX4 rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Bilateral Economic Contract"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:tVLdG06GAqACHRYE rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Good Transfer Conditional Commitment"@en;
-    ontouml:stereotype ontouml:mode;
-    ontouml:restrictedTo ontouml:intrinsicMode;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:P1HdG06GAqACHRYQ rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Money Transfer Conditional Commitment"@en;
-    ontouml:stereotype ontouml:mode;
-    ontouml:restrictedTo ontouml:intrinsicMode;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:T6M9G06GAqACHRZM rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Economic Exchange"@en;
-    ontouml:stereotype ontouml:event;
-    ontouml:restrictedTo ontouml:event;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:YBK9G06GAqACHRZY rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Economic Event"@en;
-    ontouml:stereotype ontouml:event;
-    ontouml:restrictedTo ontouml:event;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:g9e9G06GAqACHRZu rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Sell Event"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:IfB9G06GAqACHRZ6 rdf:type ontouml:Class;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "Cash Event"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:LA19G06GAqACHRal rdf:type ontouml:Generalization;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:general :YBK9G06GAqACHRZY;
-    ontouml:specific :IfB9G06GAqACHRZ6.
-<https://w3id.org/ontouml-models/model/guarino2018rea#7ON9G06GAqACHRaw> rdf:type ontouml:Generalization;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:general :YBK9G06GAqACHRZY;
-    ontouml:specific :g9e9G06GAqACHRZu.
-:oWJjG06GAqACHRfJ rdf:type ontouml:Generalization;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:general :NEhdG06GAqACHRW2;
-    ontouml:specific :YGZdG06GAqACHRXG.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9E9jG06GAqACHRfk> rdf:type ontouml:Generalization;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:general :YGZdG06GAqACHRXG;
-    ontouml:specific :FhFdG06GAqACHRXS.
-:v7DjG06GAqACHRfz rdf:type ontouml:Generalization;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:general :YGZdG06GAqACHRXG;
-    ontouml:specific :y5VdG06GAqACHRXi.
-:QNd9G06GAqACHRa3 rdf:type ontouml:GeneralizationSet;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name ""@en;
-    ontouml:isComplete "true"^^xsd:boolean;
-    ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization <https://w3id.org/ontouml-models/model/guarino2018rea#7ON9G06GAqACHRaw>, :LA19G06GAqACHRal.
-:Mzz9G06GAqACHRbI rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :Mzz9G06GAqACHRbJ;
-    ontouml:targetEnd :Mzz9G06GAqACHRbL;
-    ontouml:relationEnd :Mzz9G06GAqACHRbJ, :Mzz9G06GAqACHRbL.
-:x279G06GAqACHRbb rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :x279G06GAqACHRbc;
-    ontouml:targetEnd :x279G06GAqACHRbe;
-    ontouml:relationEnd :x279G06GAqACHRbc, :x279G06GAqACHRbe.
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc2> rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "reciprocity (mutual existential dependence)"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3>, <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5>.
-:LU4jG06GAqACHRdN rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "fulfills"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :LU4jG06GAqACHRdO;
-    ontouml:targetEnd :LU4jG06GAqACHRdQ;
-    ontouml:relationEnd :LU4jG06GAqACHRdO, :LU4jG06GAqACHRdQ.
-:pl0jG06GAqACHRdm rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "fulfills"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :pl0jG06GAqACHRdn;
-    ontouml:targetEnd :pl0jG06GAqACHRdp;
-    ontouml:relationEnd :pl0jG06GAqACHRdn, :pl0jG06GAqACHRdp.
-:KZ8jG06GAqACHRd1 rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "inheres in"@en;
-    ontouml:stereotype ontouml:characterization;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :KZ8jG06GAqACHRd2;
-    ontouml:targetEnd :KZ8jG06GAqACHRd4;
-    ontouml:relationEnd :KZ8jG06GAqACHRd2, :KZ8jG06GAqACHRd4.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReM> rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "inheres in"@en;
-    ontouml:stereotype ontouml:characterization;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReN>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReP>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReN>, <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReP>.
-:lLejG06GAqACHReb rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "involves"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :lLejG06GAqACHRec;
-    ontouml:targetEnd :lLejG06GAqACHRee;
-    ontouml:relationEnd :lLejG06GAqACHRec, :lLejG06GAqACHRee.
-:LVhjG06GAqACHRe0 rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "involves"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :LVhjG06GAqACHRe1;
-    ontouml:targetEnd :LVhjG06GAqACHRe3;
-    ontouml:relationEnd :LVhjG06GAqACHRe1, :LVhjG06GAqACHRe3.
-:RWZTG06GAqACHRht rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :RWZTG06GAqACHRhu;
-    ontouml:targetEnd :RWZTG06GAqACHRhw;
-    ontouml:relationEnd :RWZTG06GAqACHRhu, :RWZTG06GAqACHRhw.
-:VEFTG06GAqACHRiC rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :VEFTG06GAqACHRiD;
-    ontouml:targetEnd :VEFTG06GAqACHRiF;
-    ontouml:relationEnd :VEFTG06GAqACHRiD, :VEFTG06GAqACHRiF.
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo2> rdf:type ontouml:Relation;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "duality (derived relation)"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo3>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo5>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo3>, <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo5>.
-:Mzz9G06GAqACHRbJ rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :Mzz9G06GAqACHRbJ_cardinality.
-:Mzz9G06GAqACHRbJ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:Mzz9G06GAqACHRbJ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :T6M9G06GAqACHRZM.
-:Mzz9G06GAqACHRbL rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :Mzz9G06GAqACHRbL_cardinality.
-:Mzz9G06GAqACHRbL_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:Mzz9G06GAqACHRbL ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :g9e9G06GAqACHRZu.
-:x279G06GAqACHRbc rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :x279G06GAqACHRbc_cardinality.
-:x279G06GAqACHRbc_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:x279G06GAqACHRbc ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :T6M9G06GAqACHRZM.
-:x279G06GAqACHRbe rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :x279G06GAqACHRbe_cardinality.
-:x279G06GAqACHRbe_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:x279G06GAqACHRbe ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :IfB9G06GAqACHRZ6.
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3> rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3_cardinality>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :tVLdG06GAqACHRYE.
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5> rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5_cardinality>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :P1HdG06GAqACHRYQ.
-:LU4jG06GAqACHRdO rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :LU4jG06GAqACHRdO_cardinality.
-:LU4jG06GAqACHRdO_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "0..1";
-    ontouml:lowerBound "0";
-    ontouml:upperBound "1".
-:LU4jG06GAqACHRdO ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :g9e9G06GAqACHRZu.
-:LU4jG06GAqACHRdQ rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :LU4jG06GAqACHRdQ_cardinality.
-:LU4jG06GAqACHRdQ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:LU4jG06GAqACHRdQ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :tVLdG06GAqACHRYE.
-:pl0jG06GAqACHRdn rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :pl0jG06GAqACHRdn_cardinality.
-:pl0jG06GAqACHRdn_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "0..1";
-    ontouml:lowerBound "0";
-    ontouml:upperBound "1".
-:pl0jG06GAqACHRdn ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :IfB9G06GAqACHRZ6.
-:pl0jG06GAqACHRdp rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :pl0jG06GAqACHRdp_cardinality.
-:pl0jG06GAqACHRdp_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:pl0jG06GAqACHRdp ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :P1HdG06GAqACHRYQ.
-:KZ8jG06GAqACHRd2 rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :KZ8jG06GAqACHRd2_cardinality.
-:KZ8jG06GAqACHRd2_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:KZ8jG06GAqACHRd2 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :tVLdG06GAqACHRYE.
-:KZ8jG06GAqACHRd4 rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name ""@en;
-    ontouml:cardinality :KZ8jG06GAqACHRd4_cardinality.
-:KZ8jG06GAqACHRd4_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:KZ8jG06GAqACHRd4 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :FhFdG06GAqACHRXS.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReN> rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReN_cardinality>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReN_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReN> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :P1HdG06GAqACHRYQ.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReP> rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReP_cardinality>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReP_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/guarino2018rea#5QOjG06GAqACHReP> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :y5VdG06GAqACHRXi.
-:lLejG06GAqACHRec rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :lLejG06GAqACHRec_cardinality.
-:lLejG06GAqACHRec_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:lLejG06GAqACHRec ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :lT9dG06GAqACHRX4.
-:lLejG06GAqACHRee rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :lLejG06GAqACHRee_cardinality.
-:lLejG06GAqACHRee_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:lLejG06GAqACHRee ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :FhFdG06GAqACHRXS.
-:LVhjG06GAqACHRe1 rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :LVhjG06GAqACHRe1_cardinality.
-:LVhjG06GAqACHRe1_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:LVhjG06GAqACHRe1 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :lT9dG06GAqACHRX4.
-:LVhjG06GAqACHRe3 rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :LVhjG06GAqACHRe3_cardinality.
-:LVhjG06GAqACHRe3_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:LVhjG06GAqACHRe3 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :y5VdG06GAqACHRXi.
-:RWZTG06GAqACHRhu rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :RWZTG06GAqACHRhu_cardinality.
-:RWZTG06GAqACHRhu_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:RWZTG06GAqACHRhu ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :tVLdG06GAqACHRYE.
-:RWZTG06GAqACHRhw rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :RWZTG06GAqACHRhw_cardinality.
-:RWZTG06GAqACHRhw_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:RWZTG06GAqACHRhw ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :lT9dG06GAqACHRX4.
-:VEFTG06GAqACHRiD rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :VEFTG06GAqACHRiD_cardinality.
-:VEFTG06GAqACHRiD_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:VEFTG06GAqACHRiD ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :P1HdG06GAqACHRYQ.
-:VEFTG06GAqACHRiF rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality :VEFTG06GAqACHRiF_cardinality.
-:VEFTG06GAqACHRiF_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:VEFTG06GAqACHRiF ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:composite;
-    ontouml:propertyType :lT9dG06GAqACHRX4.
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo3> rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo3_cardinality>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo3_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo3> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :g9e9G06GAqACHRZu.
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo5> rdf:type ontouml:Property;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo5_cardinality>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo5_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/guarino2018rea#Z6UI._6AUB1CSgo5> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :IfB9G06GAqACHRZ6.
-:kmudG06GAqACHRWo rdf:type ontouml:Diagram;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:name "REA Core Ontology - Duality"@en;
-    ontouml:containsView :IfB9G06GAqACHRZ5, :NQOjG06GAqACHReR, :xw7DG06GAqACHRc7, :Szz9G06GAqACHRbN, :Fl0jG06GAqACHRdr, <https://w3id.org/ontouml-models/model/guarino2018rea#4Nd9G06GAqACHRa5>, :YGZdG06GAqACHRXF, :XON9G06GAqACHRax, :y5VdG06GAqACHRXh, :T6M9G06GAqACHRZL, <https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1>, :HVhjG06GAqACHRe5, :tLejG06GAqACHReg, <https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR>, :EWJjG06GAqACHRfK, :g9e9G06GAqACHRZt, :HA19G06GAqACHRam, :mZ8jG06GAqACHRd6, :QHDjG06GAqACHRf0, :rE9jG06GAqACHRfl, <https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7>, :tVLdG06GAqACHRYD, :ZWZTG06GAqACHRhy, :YBK9G06GAqACHRZX, :lT9dG06GAqACHRX3, :P1HdG06GAqACHRYP, :F279G06GAqACHRbg, <https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH>, :HU4jG06GAqACHRdS.
-:IfB9G06GAqACHRZ5 rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :IfB9G06GAqACHRZ6;
-    ontouml:shape :IfB9G06GAqACHRZ5_shape.
-:YGZdG06GAqACHRXF rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :YGZdG06GAqACHRXG;
-    ontouml:shape :YGZdG06GAqACHRXF_shape.
-:y5VdG06GAqACHRXh rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :y5VdG06GAqACHRXi;
-    ontouml:shape :y5VdG06GAqACHRXh_shape.
-:T6M9G06GAqACHRZL rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :T6M9G06GAqACHRZM;
-    ontouml:shape :T6M9G06GAqACHRZL_shape.
-<https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1> rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :NEhdG06GAqACHRW2;
-    ontouml:shape <https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1_shape>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR> rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :FhFdG06GAqACHRXS;
-    ontouml:shape <https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR_shape>.
-:g9e9G06GAqACHRZt rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :g9e9G06GAqACHRZu;
-    ontouml:shape :g9e9G06GAqACHRZt_shape.
-:tVLdG06GAqACHRYD rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :tVLdG06GAqACHRYE;
-    ontouml:shape :tVLdG06GAqACHRYD_shape.
-:YBK9G06GAqACHRZX rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :YBK9G06GAqACHRZY;
-    ontouml:shape :YBK9G06GAqACHRZX_shape.
-:lT9dG06GAqACHRX3 rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :lT9dG06GAqACHRX4;
-    ontouml:shape :lT9dG06GAqACHRX3_shape.
-:P1HdG06GAqACHRYP rdf:type ontouml:ClassView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :P1HdG06GAqACHRYQ;
-    ontouml:shape :P1HdG06GAqACHRYP_shape.
-:XON9G06GAqACHRax rdf:type ontouml:GeneralizationView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/guarino2018rea#7ON9G06GAqACHRaw>;
-    ontouml:shape :XON9G06GAqACHRax_path;
-    ontouml:sourceView :YBK9G06GAqACHRZX;
-    ontouml:targetView :g9e9G06GAqACHRZt.
-:EWJjG06GAqACHRfK rdf:type ontouml:GeneralizationView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :oWJjG06GAqACHRfJ;
-    ontouml:shape :EWJjG06GAqACHRfK_path;
-    ontouml:sourceView <https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1>;
-    ontouml:targetView :YGZdG06GAqACHRXF.
-:HA19G06GAqACHRam rdf:type ontouml:GeneralizationView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :LA19G06GAqACHRal;
-    ontouml:shape :HA19G06GAqACHRam_path;
-    ontouml:sourceView :YBK9G06GAqACHRZX;
-    ontouml:targetView :IfB9G06GAqACHRZ5.
-:QHDjG06GAqACHRf0 rdf:type ontouml:GeneralizationView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf :v7DjG06GAqACHRfz;
-    ontouml:shape :QHDjG06GAqACHRf0_path;
-    ontouml:sourceView :YGZdG06GAqACHRXF;
-    ontouml:targetView :y5VdG06GAqACHRXh.
-:rE9jG06GAqACHRfl rdf:type ontouml:GeneralizationView;
-    ontouml:project :U5etG06GAqACHRHh;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/guarino2018rea#9E9jG06GAqACHRfk>;
-    ontouml:shape :rE9jG06GAqACHRfl_path;
-    ontouml:sourceView :YGZdG06GAqACHRXF;
-    ontouml:targetView <https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR>.
-:IfB9G06GAqACHRZ5_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "88"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :IfB9G06GAqACHRZ5_shape_point.
-:IfB9G06GAqACHRZ5_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 615;
-    ontouml:yCoordinate 532.
-:YGZdG06GAqACHRXF_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "101"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :YGZdG06GAqACHRXF_shape_point.
-:YGZdG06GAqACHRXF_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 368;
-    ontouml:yCoordinate 167.
-:y5VdG06GAqACHRXh_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "95"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :y5VdG06GAqACHRXh_shape_point.
-:y5VdG06GAqACHRXh_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 608;
-    ontouml:yCoordinate 237.
-:T6M9G06GAqACHRZL_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "122"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :T6M9G06GAqACHRZL_shape_point.
-:T6M9G06GAqACHRZL_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 432.
-<https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "91"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1_shape_point>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#1EhdG06GAqACHRW1_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 373;
-    ontouml:yCoordinate 103.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "95"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR_shape_point>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#5hFdG06GAqACHRXR_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 133;
-    ontouml:yCoordinate 237.
-:g9e9G06GAqACHRZt_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "88"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :g9e9G06GAqACHRZt_shape_point.
-:g9e9G06GAqACHRZt_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 133;
-    ontouml:yCoordinate 532.
-:tVLdG06GAqACHRYD_shape rdf:type ontouml:Rectangle;
-    ontouml:height "54"^^xsd:positiveInteger;
-    ontouml:width "162"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :tVLdG06GAqACHRYD_shape_point.
-:tVLdG06GAqACHRYD_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 133;
-    ontouml:yCoordinate 359.
-:YBK9G06GAqACHRZX_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "99"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :YBK9G06GAqACHRZX_shape_point.
-:YBK9G06GAqACHRZX_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 370;
-    ontouml:yCoordinate 648.
-:lT9dG06GAqACHRX3_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "166"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :lT9dG06GAqACHRX3_shape_point.
-:lT9dG06GAqACHRX3_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 335;
-    ontouml:yCoordinate 237.
-:P1HdG06GAqACHRYP_shape rdf:type ontouml:Rectangle;
-    ontouml:height "54"^^xsd:positiveInteger;
-    ontouml:width "155"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :P1HdG06GAqACHRYP_shape_point.
-:P1HdG06GAqACHRYP_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 548;
-    ontouml:yCoordinate 359.
-<https://w3id.org/ontouml-models/model/guarino2018rea#4Nd9G06GAqACHRa5_shape> rdf:type ontouml:Text;
-    ontouml:height "28"^^xsd:positiveInteger;
-    ontouml:width "83"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/guarino2018rea#4Nd9G06GAqACHRa5_shape_point>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#4Nd9G06GAqACHRa5_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 415;
-    ontouml:yCoordinate 608.
-:NQOjG06GAqACHReR_path rdf:type ontouml:Path;
-    ontouml:point :NQOjG06GAqACHReR_path_point_0.
-:NQOjG06GAqACHReR_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 680;
-    ontouml:yCoordinate 358.
-:NQOjG06GAqACHReR_path ontouml:point :NQOjG06GAqACHReR_path_point_1.
-:NQOjG06GAqACHReR_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 680;
-    ontouml:yCoordinate 278.
-:xw7DG06GAqACHRc7_path rdf:type ontouml:Path;
-    ontouml:point :xw7DG06GAqACHRc7_path_point_0.
-:xw7DG06GAqACHRc7_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 296;
-    ontouml:yCoordinate 386.
-:xw7DG06GAqACHRc7_path ontouml:point :xw7DG06GAqACHRc7_path_point_1.
-:xw7DG06GAqACHRc7_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 547;
-    ontouml:yCoordinate 386.
-:Szz9G06GAqACHRbN_path rdf:type ontouml:Path;
-    ontouml:point :Szz9G06GAqACHRbN_path_point_0.
-:Szz9G06GAqACHRbN_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 473.
-:Szz9G06GAqACHRbN_path ontouml:point :Szz9G06GAqACHRbN_path_point_1.
-:Szz9G06GAqACHRbN_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 512.
-:Szz9G06GAqACHRbN_path ontouml:point :Szz9G06GAqACHRbN_path_point_2.
-:Szz9G06GAqACHRbN_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 205;
-    ontouml:yCoordinate 512.
-:Szz9G06GAqACHRbN_path ontouml:point :Szz9G06GAqACHRbN_path_point_3.
-:Szz9G06GAqACHRbN_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 205;
-    ontouml:yCoordinate 531.
-:Fl0jG06GAqACHRdr_path rdf:type ontouml:Path;
-    ontouml:point :Fl0jG06GAqACHRdr_path_point_0.
-:Fl0jG06GAqACHRdr_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 680;
-    ontouml:yCoordinate 531.
-:Fl0jG06GAqACHRdr_path ontouml:point :Fl0jG06GAqACHRdr_path_point_1.
-:Fl0jG06GAqACHRdr_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 680;
-    ontouml:yCoordinate 414.
-:XON9G06GAqACHRax_path rdf:type ontouml:Path;
-    ontouml:point :XON9G06GAqACHRax_path_point_0.
-:XON9G06GAqACHRax_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 419;
-    ontouml:yCoordinate 647.
-:XON9G06GAqACHRax_path ontouml:point :XON9G06GAqACHRax_path_point_1.
-:XON9G06GAqACHRax_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 419;
-    ontouml:yCoordinate 599.
-:XON9G06GAqACHRax_path ontouml:point :XON9G06GAqACHRax_path_point_2.
-:XON9G06GAqACHRax_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 177;
-    ontouml:yCoordinate 599.
-:XON9G06GAqACHRax_path ontouml:point :XON9G06GAqACHRax_path_point_3.
-:XON9G06GAqACHRax_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 177;
-    ontouml:yCoordinate 573.
-:HVhjG06GAqACHRe5_path rdf:type ontouml:Path;
-    ontouml:point :HVhjG06GAqACHRe5_path_point_0.
-:HVhjG06GAqACHRe5_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 502;
-    ontouml:yCoordinate 257.
-:HVhjG06GAqACHRe5_path ontouml:point :HVhjG06GAqACHRe5_path_point_1.
-:HVhjG06GAqACHRe5_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 607;
-    ontouml:yCoordinate 257.
-:tLejG06GAqACHReg_path rdf:type ontouml:Path;
-    ontouml:point :tLejG06GAqACHReg_path_point_0.
-:tLejG06GAqACHReg_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 334;
-    ontouml:yCoordinate 257.
-:tLejG06GAqACHReg_path ontouml:point :tLejG06GAqACHReg_path_point_1.
-:tLejG06GAqACHReg_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 229;
-    ontouml:yCoordinate 257.
-:EWJjG06GAqACHRfK_path rdf:type ontouml:Path;
-    ontouml:point :EWJjG06GAqACHRfK_path_point_0.
-:EWJjG06GAqACHRfK_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 144.
-:EWJjG06GAqACHRfK_path ontouml:point :EWJjG06GAqACHRfK_path_point_1.
-:EWJjG06GAqACHRfK_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 166.
-:HA19G06GAqACHRam_path rdf:type ontouml:Path;
-    ontouml:point :HA19G06GAqACHRam_path_point_0.
-:HA19G06GAqACHRam_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 419;
-    ontouml:yCoordinate 647.
-:HA19G06GAqACHRam_path ontouml:point :HA19G06GAqACHRam_path_point_1.
-:HA19G06GAqACHRam_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 419;
-    ontouml:yCoordinate 599.
-:HA19G06GAqACHRam_path ontouml:point :HA19G06GAqACHRam_path_point_2.
-:HA19G06GAqACHRam_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 659;
-    ontouml:yCoordinate 599.
-:HA19G06GAqACHRam_path ontouml:point :HA19G06GAqACHRam_path_point_3.
-:HA19G06GAqACHRam_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 659;
-    ontouml:yCoordinate 573.
-:mZ8jG06GAqACHRd6_path rdf:type ontouml:Path;
-    ontouml:point :mZ8jG06GAqACHRd6_path_point_0.
-:mZ8jG06GAqACHRd6_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 154;
-    ontouml:yCoordinate 358.
-:mZ8jG06GAqACHRd6_path ontouml:point :mZ8jG06GAqACHRd6_path_point_1.
-:mZ8jG06GAqACHRd6_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 154;
-    ontouml:yCoordinate 278.
-:QHDjG06GAqACHRf0_path rdf:type ontouml:Path;
-    ontouml:point :QHDjG06GAqACHRf0_path_point_0.
-:QHDjG06GAqACHRf0_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 470;
-    ontouml:yCoordinate 187.
-:QHDjG06GAqACHRf0_path ontouml:point :QHDjG06GAqACHRf0_path_point_1.
-:QHDjG06GAqACHRf0_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 655;
-    ontouml:yCoordinate 187.
-:QHDjG06GAqACHRf0_path ontouml:point :QHDjG06GAqACHRf0_path_point_2.
-:QHDjG06GAqACHRf0_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 655;
-    ontouml:yCoordinate 236.
-:rE9jG06GAqACHRfl_path rdf:type ontouml:Path;
-    ontouml:point :rE9jG06GAqACHRfl_path_point_0.
-:rE9jG06GAqACHRfl_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 367;
-    ontouml:yCoordinate 187.
-:rE9jG06GAqACHRfl_path ontouml:point :rE9jG06GAqACHRfl_path_point_1.
-:rE9jG06GAqACHRfl_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 180;
-    ontouml:yCoordinate 187.
-:rE9jG06GAqACHRfl_path ontouml:point :rE9jG06GAqACHRfl_path_point_2.
-:rE9jG06GAqACHRfl_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 180;
-    ontouml:yCoordinate 236.
-<https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7_path_point_0>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 553.
-<https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7_path> ontouml:point <https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7_path_point_1>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#N6UI._6AUB1CSgo7_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 614;
-    ontouml:yCoordinate 553.
-:ZWZTG06GAqACHRhy_path rdf:type ontouml:Path;
-    ontouml:point :ZWZTG06GAqACHRhy_path_point_0.
-:ZWZTG06GAqACHRhy_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 261;
-    ontouml:yCoordinate 358.
-:ZWZTG06GAqACHRhy_path ontouml:point :ZWZTG06GAqACHRhy_path_point_1.
-:ZWZTG06GAqACHRhy_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 261;
-    ontouml:yCoordinate 328.
-:ZWZTG06GAqACHRhy_path ontouml:point :ZWZTG06GAqACHRhy_path_point_2.
-:ZWZTG06GAqACHRhy_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 328.
-:ZWZTG06GAqACHRhy_path ontouml:point :ZWZTG06GAqACHRhy_path_point_3.
-:ZWZTG06GAqACHRhy_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 278.
-:F279G06GAqACHRbg_path rdf:type ontouml:Path;
-    ontouml:point :F279G06GAqACHRbg_path_point_0.
-:F279G06GAqACHRbg_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 473.
-:F279G06GAqACHRbg_path ontouml:point :F279G06GAqACHRbg_path_point_1.
-:F279G06GAqACHRbg_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 512.
-:F279G06GAqACHRbg_path ontouml:point :F279G06GAqACHRbg_path_point_2.
-:F279G06GAqACHRbg_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 631;
-    ontouml:yCoordinate 512.
-:F279G06GAqACHRbg_path ontouml:point :F279G06GAqACHRbg_path_point_3.
-:F279G06GAqACHRbg_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 631;
-    ontouml:yCoordinate 531.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_0>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 589;
-    ontouml:yCoordinate 358.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path> ontouml:point <https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_1>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 589;
-    ontouml:yCoordinate 328.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path> ontouml:point <https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_2>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 328.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path> ontouml:point <https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_3>.
-<https://w3id.org/ontouml-models/model/guarino2018rea#9EFTG06GAqACHRiH_path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 418;
-    ontouml:yCoordinate 278.
-:HU4jG06GAqACHRdS_path rdf:type ontouml:Path;
-    ontouml:point :HU4jG06GAqACHRdS_path_point_0.
-:HU4jG06GAqACHRdS_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 153;
-    ontouml:yCoordinate 531.
-:HU4jG06GAqACHRdS_path ontouml:point :HU4jG06GAqACHRdS_path_point_1.
-:HU4jG06GAqACHRdS_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 153;
-    ontouml:yCoordinate 414.
+<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3_cardinality> a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5_cardinality> a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:1EhdG06GAqACHRW1_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :1EhdG06GAqACHRW1_shape_point ;
+    ontouml:width "91"^^xsd:nonNegativeInteger .
+
+:1EhdG06GAqACHRW1_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 373 ;
+    ontouml:yCoordinate 103 .
+
+:4Nd9G06GAqACHRa5 a ontouml:GeneralizationSetView ;
+    ontouml:isViewOf :QNd9G06GAqACHRa3 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :4Nd9G06GAqACHRa5_shape .
+
+:4Nd9G06GAqACHRa5_shape a ontouml:Text ;
+    ontouml:height "28"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :4Nd9G06GAqACHRa5_shape_point ;
+    ontouml:width "83"^^xsd:nonNegativeInteger .
+
+:4Nd9G06GAqACHRa5_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 415 ;
+    ontouml:yCoordinate 608 .
+
+:5QOjG06GAqACHReN_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:5QOjG06GAqACHReP_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:5hFdG06GAqACHRXR_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :5hFdG06GAqACHRXR_shape_point ;
+    ontouml:width "95"^^xsd:nonNegativeInteger .
+
+:5hFdG06GAqACHRXR_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 133 ;
+    ontouml:yCoordinate 237 .
+
+:9EFTG06GAqACHRiH a ontouml:RelationView ;
+    ontouml:isViewOf :VEFTG06GAqACHRiC ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :9EFTG06GAqACHRiH_path ;
+    ontouml:sourceView :P1HdG06GAqACHRYP ;
+    ontouml:targetView :lT9dG06GAqACHRX3 .
+
+:9EFTG06GAqACHRiH_path a ontouml:Path ;
+    ontouml:point :9EFTG06GAqACHRiH_path_point_0,
+        :9EFTG06GAqACHRiH_path_point_1,
+        :9EFTG06GAqACHRiH_path_point_2,
+        :9EFTG06GAqACHRiH_path_point_3 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:9EFTG06GAqACHRiH_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 589 ;
+    ontouml:yCoordinate 358 .
+
+:9EFTG06GAqACHRiH_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 589 ;
+    ontouml:yCoordinate 328 .
+
+:9EFTG06GAqACHRiH_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 328 .
+
+:9EFTG06GAqACHRiH_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 278 .
+
+:EWJjG06GAqACHRfK a ontouml:GeneralizationView ;
+    ontouml:isViewOf :oWJjG06GAqACHRfJ ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :EWJjG06GAqACHRfK_path ;
+    ontouml:sourceView :1EhdG06GAqACHRW1 ;
+    ontouml:targetView :YGZdG06GAqACHRXF .
+
+:EWJjG06GAqACHRfK_path a ontouml:Path ;
+    ontouml:point :EWJjG06GAqACHRfK_path_point_0,
+        :EWJjG06GAqACHRfK_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:EWJjG06GAqACHRfK_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 144 .
+
+:EWJjG06GAqACHRfK_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 166 .
+
+:F279G06GAqACHRbg a ontouml:RelationView ;
+    ontouml:isViewOf :x279G06GAqACHRbb ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :F279G06GAqACHRbg_path ;
+    ontouml:sourceView :T6M9G06GAqACHRZL ;
+    ontouml:targetView :IfB9G06GAqACHRZ5 .
+
+:F279G06GAqACHRbg_path a ontouml:Path ;
+    ontouml:point :F279G06GAqACHRbg_path_point_0,
+        :F279G06GAqACHRbg_path_point_1,
+        :F279G06GAqACHRbg_path_point_2,
+        :F279G06GAqACHRbg_path_point_3 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:F279G06GAqACHRbg_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 473 .
+
+:F279G06GAqACHRbg_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 512 .
+
+:F279G06GAqACHRbg_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 631 ;
+    ontouml:yCoordinate 512 .
+
+:F279G06GAqACHRbg_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 631 ;
+    ontouml:yCoordinate 531 .
+
+:Fl0jG06GAqACHRdr a ontouml:RelationView ;
+    ontouml:isViewOf :pl0jG06GAqACHRdm ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :Fl0jG06GAqACHRdr_path ;
+    ontouml:sourceView :IfB9G06GAqACHRZ5 ;
+    ontouml:targetView :P1HdG06GAqACHRYP .
+
+:Fl0jG06GAqACHRdr_path a ontouml:Path ;
+    ontouml:point :Fl0jG06GAqACHRdr_path_point_0,
+        :Fl0jG06GAqACHRdr_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:Fl0jG06GAqACHRdr_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 680 ;
+    ontouml:yCoordinate 531 .
+
+:Fl0jG06GAqACHRdr_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 680 ;
+    ontouml:yCoordinate 414 .
+
+:HA19G06GAqACHRam a ontouml:GeneralizationView ;
+    ontouml:isViewOf :LA19G06GAqACHRal ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :HA19G06GAqACHRam_path ;
+    ontouml:sourceView :YBK9G06GAqACHRZX ;
+    ontouml:targetView :IfB9G06GAqACHRZ5 .
+
+:HA19G06GAqACHRam_path a ontouml:Path ;
+    ontouml:point :HA19G06GAqACHRam_path_point_0,
+        :HA19G06GAqACHRam_path_point_1,
+        :HA19G06GAqACHRam_path_point_2,
+        :HA19G06GAqACHRam_path_point_3 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:HA19G06GAqACHRam_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 419 ;
+    ontouml:yCoordinate 647 .
+
+:HA19G06GAqACHRam_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 419 ;
+    ontouml:yCoordinate 599 .
+
+:HA19G06GAqACHRam_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 659 ;
+    ontouml:yCoordinate 599 .
+
+:HA19G06GAqACHRam_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 659 ;
+    ontouml:yCoordinate 573 .
+
+:HU4jG06GAqACHRdS a ontouml:RelationView ;
+    ontouml:isViewOf :LU4jG06GAqACHRdN ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :HU4jG06GAqACHRdS_path ;
+    ontouml:sourceView :g9e9G06GAqACHRZt ;
+    ontouml:targetView :tVLdG06GAqACHRYD .
+
+:HU4jG06GAqACHRdS_path a ontouml:Path ;
+    ontouml:point :HU4jG06GAqACHRdS_path_point_0,
+        :HU4jG06GAqACHRdS_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:HU4jG06GAqACHRdS_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 153 ;
+    ontouml:yCoordinate 531 .
+
+:HU4jG06GAqACHRdS_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 153 ;
+    ontouml:yCoordinate 414 .
+
+:HVhjG06GAqACHRe5 a ontouml:RelationView ;
+    ontouml:isViewOf :LVhjG06GAqACHRe0 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :HVhjG06GAqACHRe5_path ;
+    ontouml:sourceView :lT9dG06GAqACHRX3 ;
+    ontouml:targetView :y5VdG06GAqACHRXh .
+
+:HVhjG06GAqACHRe5_path a ontouml:Path ;
+    ontouml:point :HVhjG06GAqACHRe5_path_point_0,
+        :HVhjG06GAqACHRe5_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:HVhjG06GAqACHRe5_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 502 ;
+    ontouml:yCoordinate 257 .
+
+:HVhjG06GAqACHRe5_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 607 ;
+    ontouml:yCoordinate 257 .
+
+:IfB9G06GAqACHRZ5_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :IfB9G06GAqACHRZ5_shape_point ;
+    ontouml:width "88"^^xsd:nonNegativeInteger .
+
+:IfB9G06GAqACHRZ5_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 615 ;
+    ontouml:yCoordinate 532 .
+
+:KZ8jG06GAqACHRd2_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:KZ8jG06GAqACHRd4_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:LU4jG06GAqACHRdO_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..1" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:LU4jG06GAqACHRdQ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:LVhjG06GAqACHRe1_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:LVhjG06GAqACHRe3_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:Mzz9G06GAqACHRbJ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:Mzz9G06GAqACHRbL_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:N6UI._6AUB1CSgo7 a ontouml:RelationView ;
+    ontouml:isViewOf :Z6UI._6AUB1CSgo2 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :N6UI._6AUB1CSgo7_path ;
+    ontouml:sourceView :g9e9G06GAqACHRZt ;
+    ontouml:targetView :IfB9G06GAqACHRZ5 .
+
+:N6UI._6AUB1CSgo7_path a ontouml:Path ;
+    ontouml:point :N6UI._6AUB1CSgo7_path_point_0,
+        :N6UI._6AUB1CSgo7_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:N6UI._6AUB1CSgo7_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 553 .
+
+:N6UI._6AUB1CSgo7_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 614 ;
+    ontouml:yCoordinate 553 .
+
+:NQOjG06GAqACHReR a ontouml:RelationView ;
+    ontouml:isViewOf :5QOjG06GAqACHReM ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :NQOjG06GAqACHReR_path ;
+    ontouml:sourceView :P1HdG06GAqACHRYP ;
+    ontouml:targetView :y5VdG06GAqACHRXh .
+
+:NQOjG06GAqACHReR_path a ontouml:Path ;
+    ontouml:point :NQOjG06GAqACHReR_path_point_0,
+        :NQOjG06GAqACHReR_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:NQOjG06GAqACHReR_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 680 ;
+    ontouml:yCoordinate 358 .
+
+:NQOjG06GAqACHReR_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 680 ;
+    ontouml:yCoordinate 278 .
+
+:P1HdG06GAqACHRYP_shape a ontouml:Rectangle ;
+    ontouml:height "54"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :P1HdG06GAqACHRYP_shape_point ;
+    ontouml:width "155"^^xsd:nonNegativeInteger .
+
+:P1HdG06GAqACHRYP_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 548 ;
+    ontouml:yCoordinate 359 .
+
+:QHDjG06GAqACHRf0 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :v7DjG06GAqACHRfz ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :QHDjG06GAqACHRf0_path ;
+    ontouml:sourceView :YGZdG06GAqACHRXF ;
+    ontouml:targetView :y5VdG06GAqACHRXh .
+
+:QHDjG06GAqACHRf0_path a ontouml:Path ;
+    ontouml:point :QHDjG06GAqACHRf0_path_point_0,
+        :QHDjG06GAqACHRf0_path_point_1,
+        :QHDjG06GAqACHRf0_path_point_2 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:QHDjG06GAqACHRf0_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 470 ;
+    ontouml:yCoordinate 187 .
+
+:QHDjG06GAqACHRf0_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 655 ;
+    ontouml:yCoordinate 187 .
+
+:QHDjG06GAqACHRf0_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 655 ;
+    ontouml:yCoordinate 236 .
+
+:RWZTG06GAqACHRhu_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:RWZTG06GAqACHRhw_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:Szz9G06GAqACHRbN a ontouml:RelationView ;
+    ontouml:isViewOf :Mzz9G06GAqACHRbI ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :Szz9G06GAqACHRbN_path ;
+    ontouml:sourceView :T6M9G06GAqACHRZL ;
+    ontouml:targetView :g9e9G06GAqACHRZt .
+
+:Szz9G06GAqACHRbN_path a ontouml:Path ;
+    ontouml:point :Szz9G06GAqACHRbN_path_point_0,
+        :Szz9G06GAqACHRbN_path_point_1,
+        :Szz9G06GAqACHRbN_path_point_2,
+        :Szz9G06GAqACHRbN_path_point_3 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:Szz9G06GAqACHRbN_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 473 .
+
+:Szz9G06GAqACHRbN_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 512 .
+
+:Szz9G06GAqACHRbN_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 205 ;
+    ontouml:yCoordinate 512 .
+
+:Szz9G06GAqACHRbN_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 205 ;
+    ontouml:yCoordinate 531 .
+
+:T6M9G06GAqACHRZL_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :T6M9G06GAqACHRZL_shape_point ;
+    ontouml:width "122"^^xsd:nonNegativeInteger .
+
+:T6M9G06GAqACHRZL_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 432 .
+
+:U5etG06GAqACHRHh_root a ontouml:Package ;
+    ontouml:containsModelElement :yWSWQ_6AUB0C9Ddg ;
+    ontouml:name "guarino2018ontological"@en ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:VEFTG06GAqACHRiD_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:VEFTG06GAqACHRiF_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:XON9G06GAqACHRax a ontouml:GeneralizationView ;
+    ontouml:isViewOf :7ON9G06GAqACHRaw ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :XON9G06GAqACHRax_path ;
+    ontouml:sourceView :YBK9G06GAqACHRZX ;
+    ontouml:targetView :g9e9G06GAqACHRZt .
+
+:XON9G06GAqACHRax_path a ontouml:Path ;
+    ontouml:point :XON9G06GAqACHRax_path_point_0,
+        :XON9G06GAqACHRax_path_point_1,
+        :XON9G06GAqACHRax_path_point_2,
+        :XON9G06GAqACHRax_path_point_3 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:XON9G06GAqACHRax_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 419 ;
+    ontouml:yCoordinate 647 .
+
+:XON9G06GAqACHRax_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 419 ;
+    ontouml:yCoordinate 599 .
+
+:XON9G06GAqACHRax_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 177 ;
+    ontouml:yCoordinate 599 .
+
+:XON9G06GAqACHRax_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 177 ;
+    ontouml:yCoordinate 573 .
+
+:YBK9G06GAqACHRZX_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :YBK9G06GAqACHRZX_shape_point ;
+    ontouml:width "99"^^xsd:nonNegativeInteger .
+
+:YBK9G06GAqACHRZX_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 370 ;
+    ontouml:yCoordinate 648 .
+
+:YGZdG06GAqACHRXF_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :YGZdG06GAqACHRXF_shape_point ;
+    ontouml:width "101"^^xsd:nonNegativeInteger .
+
+:YGZdG06GAqACHRXF_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 368 ;
+    ontouml:yCoordinate 167 .
+
+:Z6UI._6AUB1CSgo3_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:Z6UI._6AUB1CSgo5_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:ZWZTG06GAqACHRhy a ontouml:RelationView ;
+    ontouml:isViewOf :RWZTG06GAqACHRht ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :ZWZTG06GAqACHRhy_path ;
+    ontouml:sourceView :tVLdG06GAqACHRYD ;
+    ontouml:targetView :lT9dG06GAqACHRX3 .
+
+:ZWZTG06GAqACHRhy_path a ontouml:Path ;
+    ontouml:point :ZWZTG06GAqACHRhy_path_point_0,
+        :ZWZTG06GAqACHRhy_path_point_1,
+        :ZWZTG06GAqACHRhy_path_point_2,
+        :ZWZTG06GAqACHRhy_path_point_3 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:ZWZTG06GAqACHRhy_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 261 ;
+    ontouml:yCoordinate 358 .
+
+:ZWZTG06GAqACHRhy_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 261 ;
+    ontouml:yCoordinate 328 .
+
+:ZWZTG06GAqACHRhy_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 328 .
+
+:ZWZTG06GAqACHRhy_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 418 ;
+    ontouml:yCoordinate 278 .
+
+:g9e9G06GAqACHRZt_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :g9e9G06GAqACHRZt_shape_point ;
+    ontouml:width "88"^^xsd:nonNegativeInteger .
+
+:g9e9G06GAqACHRZt_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 133 ;
+    ontouml:yCoordinate 532 .
+
+:kmudG06GAqACHRWo a ontouml:Diagram ;
+    ontouml:containsView :1EhdG06GAqACHRW1,
+        :4Nd9G06GAqACHRa5,
+        :5hFdG06GAqACHRXR,
+        :9EFTG06GAqACHRiH,
+        :EWJjG06GAqACHRfK,
+        :F279G06GAqACHRbg,
+        :Fl0jG06GAqACHRdr,
+        :HA19G06GAqACHRam,
+        :HU4jG06GAqACHRdS,
+        :HVhjG06GAqACHRe5,
+        :IfB9G06GAqACHRZ5,
+        :N6UI._6AUB1CSgo7,
+        :NQOjG06GAqACHReR,
+        :P1HdG06GAqACHRYP,
+        :QHDjG06GAqACHRf0,
+        :Szz9G06GAqACHRbN,
+        :T6M9G06GAqACHRZL,
+        :XON9G06GAqACHRax,
+        :YBK9G06GAqACHRZX,
+        :YGZdG06GAqACHRXF,
+        :ZWZTG06GAqACHRhy,
+        :g9e9G06GAqACHRZt,
+        :lT9dG06GAqACHRX3,
+        :mZ8jG06GAqACHRd6,
+        :rE9jG06GAqACHRfl,
+        :tLejG06GAqACHReg,
+        :tVLdG06GAqACHRYD,
+        :xw7DG06GAqACHRc7,
+        :y5VdG06GAqACHRXh ;
+    ontouml:name "REA Core Ontology - Duality"@en ;
+    ontouml:owner :yWSWQ_6AUB0C9Ddg ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:lLejG06GAqACHRec_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:lLejG06GAqACHRee_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:lT9dG06GAqACHRX3_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :lT9dG06GAqACHRX3_shape_point ;
+    ontouml:width "166"^^xsd:nonNegativeInteger .
+
+:lT9dG06GAqACHRX3_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 335 ;
+    ontouml:yCoordinate 237 .
+
+:mZ8jG06GAqACHRd6 a ontouml:RelationView ;
+    ontouml:isViewOf :KZ8jG06GAqACHRd1 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :mZ8jG06GAqACHRd6_path ;
+    ontouml:sourceView :tVLdG06GAqACHRYD ;
+    ontouml:targetView :5hFdG06GAqACHRXR .
+
+:mZ8jG06GAqACHRd6_path a ontouml:Path ;
+    ontouml:point :mZ8jG06GAqACHRd6_path_point_0,
+        :mZ8jG06GAqACHRd6_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:mZ8jG06GAqACHRd6_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 154 ;
+    ontouml:yCoordinate 358 .
+
+:mZ8jG06GAqACHRd6_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 154 ;
+    ontouml:yCoordinate 278 .
+
+:pl0jG06GAqACHRdn_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..1" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:pl0jG06GAqACHRdp_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:rE9jG06GAqACHRfl a ontouml:GeneralizationView ;
+    ontouml:isViewOf :9E9jG06GAqACHRfk ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :rE9jG06GAqACHRfl_path ;
+    ontouml:sourceView :YGZdG06GAqACHRXF ;
+    ontouml:targetView :5hFdG06GAqACHRXR .
+
+:rE9jG06GAqACHRfl_path a ontouml:Path ;
+    ontouml:point :rE9jG06GAqACHRfl_path_point_0,
+        :rE9jG06GAqACHRfl_path_point_1,
+        :rE9jG06GAqACHRfl_path_point_2 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:rE9jG06GAqACHRfl_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 367 ;
+    ontouml:yCoordinate 187 .
+
+:rE9jG06GAqACHRfl_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 180 ;
+    ontouml:yCoordinate 187 .
+
+:rE9jG06GAqACHRfl_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 180 ;
+    ontouml:yCoordinate 236 .
+
+:tLejG06GAqACHReg a ontouml:RelationView ;
+    ontouml:isViewOf :lLejG06GAqACHReb ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :tLejG06GAqACHReg_path ;
+    ontouml:sourceView :lT9dG06GAqACHRX3 ;
+    ontouml:targetView :5hFdG06GAqACHRXR .
+
+:tLejG06GAqACHReg_path a ontouml:Path ;
+    ontouml:point :tLejG06GAqACHReg_path_point_0,
+        :tLejG06GAqACHReg_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:tLejG06GAqACHReg_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 334 ;
+    ontouml:yCoordinate 257 .
+
+:tLejG06GAqACHReg_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 229 ;
+    ontouml:yCoordinate 257 .
+
+:tVLdG06GAqACHRYD_shape a ontouml:Rectangle ;
+    ontouml:height "54"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :tVLdG06GAqACHRYD_shape_point ;
+    ontouml:width "162"^^xsd:nonNegativeInteger .
+
+:tVLdG06GAqACHRYD_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 133 ;
+    ontouml:yCoordinate 359 .
+
+:x279G06GAqACHRbc_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:x279G06GAqACHRbe_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:xw7DG06GAqACHRc7 a ontouml:RelationView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc2> ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :xw7DG06GAqACHRc7_path ;
+    ontouml:sourceView :tVLdG06GAqACHRYD ;
+    ontouml:targetView :P1HdG06GAqACHRYP .
+
+:xw7DG06GAqACHRc7_path a ontouml:Path ;
+    ontouml:point :xw7DG06GAqACHRc7_path_point_0,
+        :xw7DG06GAqACHRc7_path_point_1 ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:xw7DG06GAqACHRc7_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 296 ;
+    ontouml:yCoordinate 386 .
+
+:xw7DG06GAqACHRc7_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 547 ;
+    ontouml:yCoordinate 386 .
+
+:y5VdG06GAqACHRXh_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:topLeftPosition :y5VdG06GAqACHRXh_shape_point ;
+    ontouml:width "95"^^xsd:nonNegativeInteger .
+
+:y5VdG06GAqACHRXh_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 608 ;
+    ontouml:yCoordinate 237 .
+
+<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc2> a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "reciprocity (mutual existential dependence)"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3>,
+        <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5> ;
+    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3> ;
+    ontouml:targetEnd <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5> .
+
+<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3> a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc3_cardinality> ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :tVLdG06GAqACHRYE .
+
+<https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5> a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc5_cardinality> ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :P1HdG06GAqACHRYQ .
+
+:1EhdG06GAqACHRW1 a ontouml:ClassView ;
+    ontouml:isViewOf :NEhdG06GAqACHRW2 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :1EhdG06GAqACHRW1_shape .
+
+:5QOjG06GAqACHReM a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "inheres in"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :5QOjG06GAqACHReN,
+        :5QOjG06GAqACHReP ;
+    ontouml:sourceEnd :5QOjG06GAqACHReN ;
+    ontouml:stereotype ontouml:characterization ;
+    ontouml:targetEnd :5QOjG06GAqACHReP .
+
+:5QOjG06GAqACHReN a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :5QOjG06GAqACHReN_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :P1HdG06GAqACHRYQ .
+
+:5QOjG06GAqACHReP a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :5QOjG06GAqACHReP_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :y5VdG06GAqACHRXi .
+
+:9E9jG06GAqACHRfk a ontouml:Generalization ;
+    ontouml:general :YGZdG06GAqACHRXG ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:specific :FhFdG06GAqACHRXS .
+
+:KZ8jG06GAqACHRd1 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "inheres in"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :KZ8jG06GAqACHRd2,
+        :KZ8jG06GAqACHRd4 ;
+    ontouml:sourceEnd :KZ8jG06GAqACHRd2 ;
+    ontouml:stereotype ontouml:characterization ;
+    ontouml:targetEnd :KZ8jG06GAqACHRd4 .
+
+:KZ8jG06GAqACHRd2 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :KZ8jG06GAqACHRd2_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :tVLdG06GAqACHRYE .
+
+:KZ8jG06GAqACHRd4 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :KZ8jG06GAqACHRd4_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name ""@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :FhFdG06GAqACHRXS .
+
+:LU4jG06GAqACHRdN a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "fulfills"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :LU4jG06GAqACHRdO,
+        :LU4jG06GAqACHRdQ ;
+    ontouml:sourceEnd :LU4jG06GAqACHRdO ;
+    ontouml:targetEnd :LU4jG06GAqACHRdQ .
+
+:LU4jG06GAqACHRdO a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LU4jG06GAqACHRdO_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :g9e9G06GAqACHRZu .
+
+:LU4jG06GAqACHRdQ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LU4jG06GAqACHRdQ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :tVLdG06GAqACHRYE .
+
+:LVhjG06GAqACHRe0 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "involves"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :LVhjG06GAqACHRe1,
+        :LVhjG06GAqACHRe3 ;
+    ontouml:sourceEnd :LVhjG06GAqACHRe1 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :LVhjG06GAqACHRe3 .
+
+:LVhjG06GAqACHRe1 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LVhjG06GAqACHRe1_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :lT9dG06GAqACHRX4 .
+
+:LVhjG06GAqACHRe3 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :LVhjG06GAqACHRe3_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :y5VdG06GAqACHRXi .
+
+:Mzz9G06GAqACHRbI a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :Mzz9G06GAqACHRbJ,
+        :Mzz9G06GAqACHRbL ;
+    ontouml:sourceEnd :Mzz9G06GAqACHRbJ ;
+    ontouml:targetEnd :Mzz9G06GAqACHRbL .
+
+:Mzz9G06GAqACHRbJ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :Mzz9G06GAqACHRbJ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :T6M9G06GAqACHRZM .
+
+:Mzz9G06GAqACHRbL a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :Mzz9G06GAqACHRbL_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :g9e9G06GAqACHRZu .
+
+:QNd9G06GAqACHRa3 a ontouml:GeneralizationSet ;
+    ontouml:generalization :7ON9G06GAqACHRaw,
+        :LA19G06GAqACHRal ;
+    ontouml:isComplete true ;
+    ontouml:isDisjoint true ;
+    ontouml:name ""@en ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:RWZTG06GAqACHRht a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :RWZTG06GAqACHRhu,
+        :RWZTG06GAqACHRhw ;
+    ontouml:sourceEnd :RWZTG06GAqACHRhu ;
+    ontouml:targetEnd :RWZTG06GAqACHRhw .
+
+:RWZTG06GAqACHRhu a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :RWZTG06GAqACHRhu_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :tVLdG06GAqACHRYE .
+
+:RWZTG06GAqACHRhw a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :RWZTG06GAqACHRhw_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :lT9dG06GAqACHRX4 .
+
+:VEFTG06GAqACHRiC a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :VEFTG06GAqACHRiD,
+        :VEFTG06GAqACHRiF ;
+    ontouml:sourceEnd :VEFTG06GAqACHRiD ;
+    ontouml:targetEnd :VEFTG06GAqACHRiF .
+
+:VEFTG06GAqACHRiD a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :VEFTG06GAqACHRiD_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :P1HdG06GAqACHRYQ .
+
+:VEFTG06GAqACHRiF a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :VEFTG06GAqACHRiF_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :lT9dG06GAqACHRX4 .
+
+:Z6UI._6AUB1CSgo2 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "duality (derived relation)"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :Z6UI._6AUB1CSgo3,
+        :Z6UI._6AUB1CSgo5 ;
+    ontouml:sourceEnd :Z6UI._6AUB1CSgo3 ;
+    ontouml:targetEnd :Z6UI._6AUB1CSgo5 .
+
+:Z6UI._6AUB1CSgo3 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :Z6UI._6AUB1CSgo3_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :g9e9G06GAqACHRZu .
+
+:Z6UI._6AUB1CSgo5 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :Z6UI._6AUB1CSgo5_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :IfB9G06GAqACHRZ6 .
+
+:lLejG06GAqACHReb a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "involves"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :lLejG06GAqACHRec,
+        :lLejG06GAqACHRee ;
+    ontouml:sourceEnd :lLejG06GAqACHRec ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :lLejG06GAqACHRee .
+
+:lLejG06GAqACHRec a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :lLejG06GAqACHRec_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :lT9dG06GAqACHRX4 .
+
+:lLejG06GAqACHRee a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :lLejG06GAqACHRee_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :FhFdG06GAqACHRXS .
+
+:oWJjG06GAqACHRfJ a ontouml:Generalization ;
+    ontouml:general :NEhdG06GAqACHRW2 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:specific :YGZdG06GAqACHRXG .
+
+:pl0jG06GAqACHRdm a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "fulfills"@en ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :pl0jG06GAqACHRdn,
+        :pl0jG06GAqACHRdp ;
+    ontouml:sourceEnd :pl0jG06GAqACHRdn ;
+    ontouml:targetEnd :pl0jG06GAqACHRdp .
+
+:pl0jG06GAqACHRdn a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :pl0jG06GAqACHRdn_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :IfB9G06GAqACHRZ6 .
+
+:pl0jG06GAqACHRdp a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :pl0jG06GAqACHRdp_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :P1HdG06GAqACHRYQ .
+
+:v7DjG06GAqACHRfz a ontouml:Generalization ;
+    ontouml:general :YGZdG06GAqACHRXG ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:specific :y5VdG06GAqACHRXi .
+
+:x279G06GAqACHRbb a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:relationEnd :x279G06GAqACHRbc,
+        :x279G06GAqACHRbe ;
+    ontouml:sourceEnd :x279G06GAqACHRbc ;
+    ontouml:targetEnd :x279G06GAqACHRbe .
+
+:x279G06GAqACHRbc a ontouml:Property ;
+    ontouml:aggregationKind ontouml:composite ;
+    ontouml:cardinality :x279G06GAqACHRbc_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :T6M9G06GAqACHRZM .
+
+:x279G06GAqACHRbe a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :x279G06GAqACHRbe_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:propertyType :IfB9G06GAqACHRZ6 .
+
+:yWSWQ_6AUB0C9Ddg a ontouml:Package ;
+    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/guarino2018rea#.w7DG06GAqACHRc2>,
+        :5QOjG06GAqACHReM,
+        :7ON9G06GAqACHRaw,
+        :9E9jG06GAqACHRfk,
+        :FhFdG06GAqACHRXS,
+        :IfB9G06GAqACHRZ6,
+        :KZ8jG06GAqACHRd1,
+        :LA19G06GAqACHRal,
+        :LU4jG06GAqACHRdN,
+        :LVhjG06GAqACHRe0,
+        :Mzz9G06GAqACHRbI,
+        :NEhdG06GAqACHRW2,
+        :P1HdG06GAqACHRYQ,
+        :QNd9G06GAqACHRa3,
+        :RWZTG06GAqACHRht,
+        :T6M9G06GAqACHRZM,
+        :VEFTG06GAqACHRiC,
+        :YBK9G06GAqACHRZY,
+        :YGZdG06GAqACHRXG,
+        :Z6UI._6AUB1CSgo2,
+        :g9e9G06GAqACHRZu,
+        :lLejG06GAqACHReb,
+        :lT9dG06GAqACHRX4,
+        :oWJjG06GAqACHRfJ,
+        :pl0jG06GAqACHRdm,
+        :tVLdG06GAqACHRYE,
+        :v7DjG06GAqACHRfz,
+        :x279G06GAqACHRbb,
+        :y5VdG06GAqACHRXi ;
+    ontouml:name "Package"@en ;
+    ontouml:project :U5etG06GAqACHRHh .
+
+:7ON9G06GAqACHRaw a ontouml:Generalization ;
+    ontouml:general :YBK9G06GAqACHRZY ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:specific :g9e9G06GAqACHRZu .
+
+:LA19G06GAqACHRal a ontouml:Generalization ;
+    ontouml:general :YBK9G06GAqACHRZY ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:specific :IfB9G06GAqACHRZ6 .
+
+:NEhdG06GAqACHRW2 a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Agent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:collectiveNature,
+        ontouml:functionalComplexNature,
+        ontouml:quantityNature ;
+    ontouml:stereotype ontouml:category .
+
+:T6M9G06GAqACHRZL a ontouml:ClassView ;
+    ontouml:isViewOf :T6M9G06GAqACHRZM ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :T6M9G06GAqACHRZL_shape .
+
+:YBK9G06GAqACHRZX a ontouml:ClassView ;
+    ontouml:isViewOf :YBK9G06GAqACHRZY ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :YBK9G06GAqACHRZX_shape .
+
+:5hFdG06GAqACHRXR a ontouml:ClassView ;
+    ontouml:isViewOf :FhFdG06GAqACHRXS ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :5hFdG06GAqACHRXR_shape .
+
+:T6M9G06GAqACHRZM a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Economic Exchange"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:eventNature ;
+    ontouml:stereotype ontouml:event .
+
+:YBK9G06GAqACHRZY a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Economic Event"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:eventNature ;
+    ontouml:stereotype ontouml:event .
+
+:YGZdG06GAqACHRXF a ontouml:ClassView ;
+    ontouml:isViewOf :YGZdG06GAqACHRXG ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :YGZdG06GAqACHRXF_shape .
+
+:y5VdG06GAqACHRXh a ontouml:ClassView ;
+    ontouml:isViewOf :y5VdG06GAqACHRXi ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :y5VdG06GAqACHRXh_shape .
+
+:FhFdG06GAqACHRXS a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Provider"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:collectiveNature,
+        ontouml:functionalComplexNature,
+        ontouml:quantityNature ;
+    ontouml:stereotype ontouml:roleMixin .
+
+:IfB9G06GAqACHRZ5 a ontouml:ClassView ;
+    ontouml:isViewOf :IfB9G06GAqACHRZ6 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :IfB9G06GAqACHRZ5_shape .
+
+:P1HdG06GAqACHRYP a ontouml:ClassView ;
+    ontouml:isViewOf :P1HdG06GAqACHRYQ ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :P1HdG06GAqACHRYP_shape .
+
+:YGZdG06GAqACHRXG a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Economic Agent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:collectiveNature,
+        ontouml:functionalComplexNature,
+        ontouml:quantityNature ;
+    ontouml:stereotype ontouml:roleMixin .
+
+:g9e9G06GAqACHRZt a ontouml:ClassView ;
+    ontouml:isViewOf :g9e9G06GAqACHRZu ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :g9e9G06GAqACHRZt_shape .
+
+:lT9dG06GAqACHRX3 a ontouml:ClassView ;
+    ontouml:isViewOf :lT9dG06GAqACHRX4 ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :lT9dG06GAqACHRX3_shape .
+
+:tVLdG06GAqACHRYD a ontouml:ClassView ;
+    ontouml:isViewOf :tVLdG06GAqACHRYE ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:shape :tVLdG06GAqACHRYD_shape .
+
+:y5VdG06GAqACHRXi a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Receiver"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:collectiveNature,
+        ontouml:functionalComplexNature,
+        ontouml:quantityNature ;
+    ontouml:stereotype ontouml:roleMixin .
+
+:IfB9G06GAqACHRZ6 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Cash Event"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:stereotype ontouml:subkind .
+
+:P1HdG06GAqACHRYQ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Money Transfer Conditional Commitment"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:intrinsicModeNature ;
+    ontouml:stereotype ontouml:mode .
+
+:g9e9G06GAqACHRZu a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Sell Event"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:stereotype ontouml:subkind .
+
+:lT9dG06GAqACHRX4 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Bilateral Economic Contract"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:tVLdG06GAqACHRYE a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Good Transfer Conditional Commitment"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :U5etG06GAqACHRHh ;
+    ontouml:restrictedTo ontouml:intrinsicModeNature ;
+    ontouml:stereotype ontouml:mode .
+
+:U5etG06GAqACHRHh a ontouml:Project ;
+    ontouml:diagram :kmudG06GAqACHRWo ;
+    ontouml:model :U5etG06GAqACHRHh_root ;
+    ontouml:name "guarino2018ontological"@en .
+

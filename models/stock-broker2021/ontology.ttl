@@ -1,889 +1,1249 @@
-@prefix : <https://w3id.org/ontouml-models/model/stock-broker2021#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/stock-broker2021#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/stock-broker2021/> rdf:type ontouml:Project;
-    ontouml:name "stockBrokerModel"@en;
-    ontouml:model :wJIFsf6GAqAAbwWg_root;
-    ontouml:diagram :cr4Fsf6GAqAAbwl7.
-:wJIFsf6GAqAAbwWg_root rdf:type ontouml:Package;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "stockBrokerModel"@en;
-    ontouml:containsModelElement :BUystf6GAqACCxTW.
-:BUystf6GAqACCxTW rdf:type ontouml:Package;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Model"@en;
-    ontouml:containsModelElement :Ws0Fsf6GAqAAbwmN, :eYMFsf6GAqAAbwmY, :h7sFsf6GAqAAbwmj, :hsCFsf6GAqAAbwmu, :rgSFsf6GAqAAbwm5, :jnSFsf6GAqAAbwnE, :GmKFsf6GAqAAbwnP, :OfpFsf6GAqAAbwnc, :bu5Fsf6GAqAAbwnn, :iyVFsf6GAqAAbwn0, :to1Fsf6GAqAAbwn_, :bb1Fsf6GAqAAbwoK, <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoV>, :G99Fsf6GAqAAbwog, :w1olsf6GAqAAbwqZ, :lcYlsf6GAqAAbwqf, :cjYlsf6GAqAAbwql, :V44lsf6GAqAAbwqr, <https://w3id.org/ontouml-models/model/stock-broker2021#5l4lsf6GAqAAbwqx>, :mgElsf6GAqAAbwq3, :saElsf6GAqAAbwq9, <https://w3id.org/ontouml-models/model/stock-broker2021#04klsf6GAqAAbwrD>, <https://w3id.org/ontouml-models/model/stock-broker2021#_uklsf6GAqAAbwrJ>, :wkUlsf6GAqAAbwrP, <https://w3id.org/ontouml-models/model/stock-broker2021#5r0lsf6GAqAAbwrV>, :tJClsf6GAqAAbwrg, <https://w3id.org/ontouml-models/model/stock-broker2021#2TGlsf6GAqAAbwsS>, :trBlsf6GAqAAbws6, <https://w3id.org/ontouml-models/model/stock-broker2021#67dlsf6GAqAAbwuQ>, :l59lsf6GAqAAbwuc, <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvp>, <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwvz>, :hvPlsf6GAqAAbwv9, :OKvlsf6GAqAAbwwH.
-:Ws0Fsf6GAqAAbwmN rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Person"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:eYMFsf6GAqAAbwmY rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Stockholder Person"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:h7sFsf6GAqAAbwmj rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "StockholderOrganization"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:hsCFsf6GAqAAbwmu rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "StockHolder"@en;
-    ontouml:stereotype ontouml:roleMixin;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "true"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:rgSFsf6GAqAAbwm5 rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Contract"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:jnSFsf6GAqAAbwnE rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Hired Brokerage"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:GmKFsf6GAqAAbwnP rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Organization"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:OfpFsf6GAqAAbwnc rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Brokerage"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:bu5Fsf6GAqAAbwnn rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Stock Exchange"@en;
-    ontouml:stereotype ontouml:subkind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:iyVFsf6GAqAAbwn0 rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Buyer"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:to1Fsf6GAqAAbwn_ rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Seller"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:bb1Fsf6GAqAAbwoK rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Stock"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoV> rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Public Traded Company"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:G99Fsf6GAqAAbwog rdf:type ontouml:Class;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Stock Keeper"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:w1olsf6GAqAAbwqZ rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :GmKFsf6GAqAAbwnP;
-    ontouml:specific :h7sFsf6GAqAAbwmj.
-:lcYlsf6GAqAAbwqf rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :Ws0Fsf6GAqAAbwmN;
-    ontouml:specific :eYMFsf6GAqAAbwmY.
-:cjYlsf6GAqAAbwql rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :hsCFsf6GAqAAbwmu;
-    ontouml:specific :eYMFsf6GAqAAbwmY.
-:V44lsf6GAqAAbwqr rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :hsCFsf6GAqAAbwmu;
-    ontouml:specific :h7sFsf6GAqAAbwmj.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5l4lsf6GAqAAbwqx> rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :GmKFsf6GAqAAbwnP;
-    ontouml:specific :OfpFsf6GAqAAbwnc.
-:mgElsf6GAqAAbwq3 rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :GmKFsf6GAqAAbwnP;
-    ontouml:specific <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoV>.
-:saElsf6GAqAAbwq9 rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :GmKFsf6GAqAAbwnP;
-    ontouml:specific :bu5Fsf6GAqAAbwnn.
-<https://w3id.org/ontouml-models/model/stock-broker2021#04klsf6GAqAAbwrD> rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :OfpFsf6GAqAAbwnc;
-    ontouml:specific :iyVFsf6GAqAAbwn0.
-<https://w3id.org/ontouml-models/model/stock-broker2021#_uklsf6GAqAAbwrJ> rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :OfpFsf6GAqAAbwnc;
-    ontouml:specific :to1Fsf6GAqAAbwn_.
-:wkUlsf6GAqAAbwrP rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :bu5Fsf6GAqAAbwnn;
-    ontouml:specific :G99Fsf6GAqAAbwog.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5r0lsf6GAqAAbwrV> rdf:type ontouml:Generalization;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:general :OfpFsf6GAqAAbwnc;
-    ontouml:specific :jnSFsf6GAqAAbwnE.
-:tJClsf6GAqAAbwrg rdf:type ontouml:GeneralizationSet;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name ""@en;
-    ontouml:isComplete "false"^^xsd:boolean;
-    ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization <https://w3id.org/ontouml-models/model/stock-broker2021#_uklsf6GAqAAbwrJ>, <https://w3id.org/ontouml-models/model/stock-broker2021#04klsf6GAqAAbwrD>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#2TGlsf6GAqAAbwsS> rdf:type ontouml:GeneralizationSet;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name ""@en;
-    ontouml:isComplete "false"^^xsd:boolean;
-    ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization :mgElsf6GAqAAbwq3, <https://w3id.org/ontouml-models/model/stock-broker2021#5l4lsf6GAqAAbwqx>, :saElsf6GAqAAbwq9.
-:trBlsf6GAqAAbws6 rdf:type ontouml:GeneralizationSet;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name ""@en;
-    ontouml:isComplete "false"^^xsd:boolean;
-    ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization :V44lsf6GAqAAbwqr, :cjYlsf6GAqAAbwql.
-<https://w3id.org/ontouml-models/model/stock-broker2021#67dlsf6GAqAAbwuQ> rdf:type ontouml:Relation;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :m7dlsf6GAqAAbwuS;
-    ontouml:targetEnd :W7dlsf6GAqAAbwuV;
-    ontouml:relationEnd :m7dlsf6GAqAAbwuS, :W7dlsf6GAqAAbwuV.
-:l59lsf6GAqAAbwuc rdf:type ontouml:Relation;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :l59lsf6GAqAAbwud;
-    ontouml:targetEnd :l59lsf6GAqAAbwuf;
-    ontouml:relationEnd :l59lsf6GAqAAbwud, :l59lsf6GAqAAbwuf.
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvp> rdf:type ontouml:Relation;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvq>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvs>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvq>, <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvs>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwvz> rdf:type ontouml:Relation;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv0>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv2>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv0>, <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv2>.
-:hvPlsf6GAqAAbwv9 rdf:type ontouml:Relation;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.>;
-    ontouml:targetEnd :hvPlsf6GAqAAbwwA;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.>, :hvPlsf6GAqAAbwwA.
-:OKvlsf6GAqAAbwwH rdf:type ontouml:Relation;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :OKvlsf6GAqAAbwwI;
-    ontouml:targetEnd :OKvlsf6GAqAAbwwK;
-    ontouml:relationEnd :OKvlsf6GAqAAbwwI, :OKvlsf6GAqAAbwwK.
-:m7dlsf6GAqAAbwuS rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :m7dlsf6GAqAAbwuS_cardinality.
-:m7dlsf6GAqAAbwuS_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:m7dlsf6GAqAAbwuS ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :rgSFsf6GAqAAbwm5.
-:W7dlsf6GAqAAbwuV rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :W7dlsf6GAqAAbwuV_cardinality.
-:W7dlsf6GAqAAbwuV_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:W7dlsf6GAqAAbwuV ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :hsCFsf6GAqAAbwmu.
-:l59lsf6GAqAAbwud rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :l59lsf6GAqAAbwud_cardinality.
-:l59lsf6GAqAAbwud_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:l59lsf6GAqAAbwud ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :rgSFsf6GAqAAbwm5.
-:l59lsf6GAqAAbwuf rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :l59lsf6GAqAAbwuf_cardinality.
-:l59lsf6GAqAAbwuf_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:l59lsf6GAqAAbwuf ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :jnSFsf6GAqAAbwnE.
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvq> rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvq_cardinality>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvq_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvq> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :bb1Fsf6GAqAAbwoK.
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvs> rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvs_cardinality>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvs_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/stock-broker2021#083lsf6GAqAAbwvs> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :iyVFsf6GAqAAbwn0.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv0> rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv0_cardinality>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv0_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv0> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :bb1Fsf6GAqAAbwoK.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv2> rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv2_cardinality>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv2_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/stock-broker2021#6RPlsf6GAqAAbwv2> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :to1Fsf6GAqAAbwn_.
-<https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.> rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv._cardinality>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv._cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :bb1Fsf6GAqAAbwoK.
-:hvPlsf6GAqAAbwwA rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :hvPlsf6GAqAAbwwA_cardinality.
-:hvPlsf6GAqAAbwwA_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:hvPlsf6GAqAAbwwA ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoV>.
-:OKvlsf6GAqAAbwwI rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :OKvlsf6GAqAAbwwI_cardinality.
-:OKvlsf6GAqAAbwwI_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:OKvlsf6GAqAAbwwI ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :bb1Fsf6GAqAAbwoK.
-:OKvlsf6GAqAAbwwK rdf:type ontouml:Property;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:cardinality :OKvlsf6GAqAAbwwK_cardinality.
-:OKvlsf6GAqAAbwwK_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:OKvlsf6GAqAAbwwK ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :G99Fsf6GAqAAbwog.
-:cr4Fsf6GAqAAbwl7 rdf:type ontouml:Diagram;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:name "Brokerage"@en;
-    ontouml:containsView :rgSFsf6GAqAAbwm4, :uYMFsf6GAqAAbwmX, :bb1Fsf6GAqAAbwoJ, :h7sFsf6GAqAAbwmi, <https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa>, :G99Fsf6GAqAAbwof, :bu5Fsf6GAqAAbwnm, :EkUlsf6GAqAAbwrQ, :nrBlsf6GAqAAbws8, :ZTGlsf6GAqAAbwsU, :ORPlsf6GAqAAbwv4, :hsCFsf6GAqAAbwmt, :HJClsf6GAqAAbwri, <https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM>, :Nr0lsf6GAqAAbwrW, <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.>, :GmKFsf6GAqAAbwnO, <https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC>, <https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs>, :iyVFsf6GAqAAbwnz, :xKvlsf6GAqAAbwwM, <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU>, <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq.>, <https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw>, :OfpFsf6GAqAAbwnb, :jnSFsf6GAqAAbwnD, :NcYlsf6GAqAAbwqg, :CjYlsf6GAqAAbwqm, :OgElsf6GAqAAbwq4, :Ieklsf6GAqAAbwrK, :C83lsf6GAqAAbwvu, :C4klsf6GAqAAbwrE, :KLDlsf6GAqAAbwuq, :Fl4lsf6GAqAAbwqy.
-:rgSFsf6GAqAAbwm4 rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :rgSFsf6GAqAAbwm5;
-    ontouml:shape :rgSFsf6GAqAAbwm4_shape.
-:uYMFsf6GAqAAbwmX rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :eYMFsf6GAqAAbwmY;
-    ontouml:shape :uYMFsf6GAqAAbwmX_shape.
-:bb1Fsf6GAqAAbwoJ rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :bb1Fsf6GAqAAbwoK;
-    ontouml:shape :bb1Fsf6GAqAAbwoJ_shape.
-:h7sFsf6GAqAAbwmi rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :h7sFsf6GAqAAbwmj;
-    ontouml:shape :h7sFsf6GAqAAbwmi_shape.
-:G99Fsf6GAqAAbwof rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :G99Fsf6GAqAAbwog;
-    ontouml:shape :G99Fsf6GAqAAbwof_shape.
-:bu5Fsf6GAqAAbwnm rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :bu5Fsf6GAqAAbwnn;
-    ontouml:shape :bu5Fsf6GAqAAbwnm_shape.
-:hsCFsf6GAqAAbwmt rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :hsCFsf6GAqAAbwmu;
-    ontouml:shape :hsCFsf6GAqAAbwmt_shape.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM> rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :Ws0Fsf6GAqAAbwmN;
-    ontouml:shape <https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM_shape>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.> rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :to1Fsf6GAqAAbwn_;
-    ontouml:shape <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn._shape>.
-:GmKFsf6GAqAAbwnO rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :GmKFsf6GAqAAbwnP;
-    ontouml:shape :GmKFsf6GAqAAbwnO_shape.
-:iyVFsf6GAqAAbwnz rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :iyVFsf6GAqAAbwn0;
-    ontouml:shape :iyVFsf6GAqAAbwnz_shape.
-<https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU> rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoV>;
-    ontouml:shape <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU_shape>.
-:OfpFsf6GAqAAbwnb rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :OfpFsf6GAqAAbwnc;
-    ontouml:shape :OfpFsf6GAqAAbwnb_shape.
-:jnSFsf6GAqAAbwnD rdf:type ontouml:ClassView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :jnSFsf6GAqAAbwnE;
-    ontouml:shape :jnSFsf6GAqAAbwnD_shape.
-<https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa> rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :w1olsf6GAqAAbwqZ;
-    ontouml:shape <https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path>;
-    ontouml:sourceView :GmKFsf6GAqAAbwnO;
-    ontouml:targetView :h7sFsf6GAqAAbwmi.
-:EkUlsf6GAqAAbwrQ rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :wkUlsf6GAqAAbwrP;
-    ontouml:shape :EkUlsf6GAqAAbwrQ_path;
-    ontouml:sourceView :bu5Fsf6GAqAAbwnm;
-    ontouml:targetView :G99Fsf6GAqAAbwof.
-:Nr0lsf6GAqAAbwrW rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/stock-broker2021#5r0lsf6GAqAAbwrV>;
-    ontouml:shape :Nr0lsf6GAqAAbwrW_path;
-    ontouml:sourceView :OfpFsf6GAqAAbwnb;
-    ontouml:targetView :jnSFsf6GAqAAbwnD.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs> rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :V44lsf6GAqAAbwqr;
-    ontouml:shape <https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path>;
-    ontouml:sourceView :hsCFsf6GAqAAbwmt;
-    ontouml:targetView :h7sFsf6GAqAAbwmi.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq.> rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :saElsf6GAqAAbwq9;
-    ontouml:shape <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path>;
-    ontouml:sourceView :GmKFsf6GAqAAbwnO;
-    ontouml:targetView :bu5Fsf6GAqAAbwnm.
-:NcYlsf6GAqAAbwqg rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :lcYlsf6GAqAAbwqf;
-    ontouml:shape :NcYlsf6GAqAAbwqg_path;
-    ontouml:sourceView <https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM>;
-    ontouml:targetView :uYMFsf6GAqAAbwmX.
-:CjYlsf6GAqAAbwqm rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :cjYlsf6GAqAAbwql;
-    ontouml:shape :CjYlsf6GAqAAbwqm_path;
-    ontouml:sourceView :hsCFsf6GAqAAbwmt;
-    ontouml:targetView :uYMFsf6GAqAAbwmX.
-:OgElsf6GAqAAbwq4 rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf :mgElsf6GAqAAbwq3;
-    ontouml:shape :OgElsf6GAqAAbwq4_path;
-    ontouml:sourceView :GmKFsf6GAqAAbwnO;
-    ontouml:targetView <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU>.
-:Ieklsf6GAqAAbwrK rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/stock-broker2021#_uklsf6GAqAAbwrJ>;
-    ontouml:shape :Ieklsf6GAqAAbwrK_path;
-    ontouml:sourceView :OfpFsf6GAqAAbwnb;
-    ontouml:targetView <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.>.
-:C4klsf6GAqAAbwrE rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/stock-broker2021#04klsf6GAqAAbwrD>;
-    ontouml:shape :C4klsf6GAqAAbwrE_path;
-    ontouml:sourceView :OfpFsf6GAqAAbwnb;
-    ontouml:targetView :iyVFsf6GAqAAbwnz.
-:Fl4lsf6GAqAAbwqy rdf:type ontouml:GeneralizationView;
-    ontouml:project :wJIFsf6GAqAAbwWg;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/stock-broker2021#5l4lsf6GAqAAbwqx>;
-    ontouml:shape :Fl4lsf6GAqAAbwqy_path;
-    ontouml:sourceView :GmKFsf6GAqAAbwnO;
-    ontouml:targetView :OfpFsf6GAqAAbwnb.
-:rgSFsf6GAqAAbwm4_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "81"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :rgSFsf6GAqAAbwm4_shape_point.
-:rgSFsf6GAqAAbwm4_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 379;
-    ontouml:yCoordinate 443.
-:uYMFsf6GAqAAbwmX_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "120"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :uYMFsf6GAqAAbwmX_shape_point.
-:uYMFsf6GAqAAbwmX_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 150;
-    ontouml:yCoordinate 139.
-:bb1Fsf6GAqAAbwoJ_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "81"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :bb1Fsf6GAqAAbwoJ_shape_point.
-:bb1Fsf6GAqAAbwoJ_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 960;
-    ontouml:yCoordinate 631.
-:h7sFsf6GAqAAbwmi_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "151"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :h7sFsf6GAqAAbwmi_shape_point.
-:h7sFsf6GAqAAbwmi_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 331;
-    ontouml:yCoordinate 139.
-:G99Fsf6GAqAAbwof_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "84"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :G99Fsf6GAqAAbwof_shape_point.
-:G99Fsf6GAqAAbwof_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 1197;
-    ontouml:yCoordinate 473.
-:bu5Fsf6GAqAAbwnm_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "98"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :bu5Fsf6GAqAAbwnm_shape_point.
-:bu5Fsf6GAqAAbwnm_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 1183;
-    ontouml:yCoordinate 335.
-:hsCFsf6GAqAAbwmt_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "95"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :hsCFsf6GAqAAbwmt_shape_point.
-:hsCFsf6GAqAAbwmt_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 236;
-    ontouml:yCoordinate 333.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM_shape_point>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#6s0Fsf6GAqAAbwmM_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 170;
-    ontouml:yCoordinate 63.
-<https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn._shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn._shape_point>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn._shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 852;
-    ontouml:yCoordinate 473.
-:GmKFsf6GAqAAbwnO_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "84"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :GmKFsf6GAqAAbwnO_shape_point.
-:GmKFsf6GAqAAbwnO_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 905;
-    ontouml:yCoordinate 139.
-:iyVFsf6GAqAAbwnz_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :iyVFsf6GAqAAbwnz_shape_point.
-:iyVFsf6GAqAAbwnz_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 688;
-    ontouml:yCoordinate 470.
-<https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "145"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU_shape_point>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#Z.tFsf6GAqAAbwoU_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1008;
-    ontouml:yCoordinate 473.
-:OfpFsf6GAqAAbwnb_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "88"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :OfpFsf6GAqAAbwnb_shape_point.
-:OfpFsf6GAqAAbwnb_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 754;
-    ontouml:yCoordinate 335.
-:jnSFsf6GAqAAbwnD_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "103"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :jnSFsf6GAqAAbwnD_shape_point.
-:jnSFsf6GAqAAbwnD_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 541;
-    ontouml:yCoordinate 333.
-:nrBlsf6GAqAAbws8_shape rdf:type ontouml:Text;
-    ontouml:height "28"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :nrBlsf6GAqAAbws8_shape_point.
-:nrBlsf6GAqAAbws8_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 284;
-    ontouml:yCoordinate 267.
-:ZTGlsf6GAqAAbwsU_shape rdf:type ontouml:Text;
-    ontouml:height "42"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :ZTGlsf6GAqAAbwsU_shape_point.
-:ZTGlsf6GAqAAbwsU_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 958;
-    ontouml:yCoordinate 187.
-:HJClsf6GAqAAbwri_shape rdf:type ontouml:Text;
-    ontouml:height "42"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :HJClsf6GAqAAbwri_shape_point.
-:HJClsf6GAqAAbwri_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 822;
-    ontouml:yCoordinate 375.
-<https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path_point_0>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 904;
-    ontouml:yCoordinate 160.
-<https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path_point_1>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#41olsf6GAqAAbwqa_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 483;
-    ontouml:yCoordinate 160.
-:EkUlsf6GAqAAbwrQ_path rdf:type ontouml:Path;
-    ontouml:point :EkUlsf6GAqAAbwrQ_path_point_0.
-:EkUlsf6GAqAAbwrQ_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1232;
-    ontouml:yCoordinate 376.
-:EkUlsf6GAqAAbwrQ_path ontouml:point :EkUlsf6GAqAAbwrQ_path_point_1.
-:EkUlsf6GAqAAbwrQ_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1232;
-    ontouml:yCoordinate 472.
-:ORPlsf6GAqAAbwv4_path rdf:type ontouml:Path;
-    ontouml:point :ORPlsf6GAqAAbwv4_path_point_0.
-:ORPlsf6GAqAAbwv4_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 959;
-    ontouml:yCoordinate 638.
-:ORPlsf6GAqAAbwv4_path ontouml:point :ORPlsf6GAqAAbwv4_path_point_1.
-:ORPlsf6GAqAAbwv4_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 892;
-    ontouml:yCoordinate 638.
-:ORPlsf6GAqAAbwv4_path ontouml:point :ORPlsf6GAqAAbwv4_path_point_2.
-:ORPlsf6GAqAAbwv4_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 892;
-    ontouml:yCoordinate 514.
-:Nr0lsf6GAqAAbwrW_path rdf:type ontouml:Path;
-    ontouml:point :Nr0lsf6GAqAAbwrW_path_point_0.
-:Nr0lsf6GAqAAbwrW_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 753;
-    ontouml:yCoordinate 351.
-:Nr0lsf6GAqAAbwrW_path ontouml:point :Nr0lsf6GAqAAbwrW_path_point_1.
-:Nr0lsf6GAqAAbwrW_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 645;
-    ontouml:yCoordinate 351.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path_point_0>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1042;
-    ontouml:yCoordinate 638.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path_point_1>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1080;
-    ontouml:yCoordinate 638.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path_point_2>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5vPlsf6GAqAAbwwC_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1080;
-    ontouml:yCoordinate 514.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_0>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 271;
-    ontouml:yCoordinate 332.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_1>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 271;
-    ontouml:yCoordinate 247.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_2>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 398;
-    ontouml:yCoordinate 247.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_3>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#944lsf6GAqAAbwqs_path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 398;
-    ontouml:yCoordinate 180.
-:xKvlsf6GAqAAbwwM_path rdf:type ontouml:Path;
-    ontouml:point :xKvlsf6GAqAAbwwM_path_point_0.
-:xKvlsf6GAqAAbwwM_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1042;
-    ontouml:yCoordinate 663.
-:xKvlsf6GAqAAbwwM_path ontouml:point :xKvlsf6GAqAAbwwM_path_point_1.
-:xKvlsf6GAqAAbwwM_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1239;
-    ontouml:yCoordinate 663.
-:xKvlsf6GAqAAbwwM_path ontouml:point :xKvlsf6GAqAAbwwM_path_point_2.
-:xKvlsf6GAqAAbwwM_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1239;
-    ontouml:yCoordinate 514.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_0>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 945;
-    ontouml:yCoordinate 180.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_1>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 945;
-    ontouml:yCoordinate 225.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_2>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1232;
-    ontouml:yCoordinate 225.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_3>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq._path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 1232;
-    ontouml:yCoordinate 334.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path_point_0>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 461;
-    ontouml:yCoordinate 463.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path_point_1>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 595;
-    ontouml:yCoordinate 463.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path> ontouml:point <https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path_point_2>.
-<https://w3id.org/ontouml-models/model/stock-broker2021#5LDlsf6GAqAAbwuw_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 595;
-    ontouml:yCoordinate 374.
-:NcYlsf6GAqAAbwqg_path rdf:type ontouml:Path;
-    ontouml:point :NcYlsf6GAqAAbwqg_path_point_0.
-:NcYlsf6GAqAAbwqg_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 210;
-    ontouml:yCoordinate 104.
-:NcYlsf6GAqAAbwqg_path ontouml:point :NcYlsf6GAqAAbwqg_path_point_1.
-:NcYlsf6GAqAAbwqg_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 210;
-    ontouml:yCoordinate 138.
-:CjYlsf6GAqAAbwqm_path rdf:type ontouml:Path;
-    ontouml:point :CjYlsf6GAqAAbwqm_path_point_0.
-:CjYlsf6GAqAAbwqm_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 271;
-    ontouml:yCoordinate 332.
-:CjYlsf6GAqAAbwqm_path ontouml:point :CjYlsf6GAqAAbwqm_path_point_1.
-:CjYlsf6GAqAAbwqm_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 271;
-    ontouml:yCoordinate 247.
-:CjYlsf6GAqAAbwqm_path ontouml:point :CjYlsf6GAqAAbwqm_path_point_2.
-:CjYlsf6GAqAAbwqm_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 210;
-    ontouml:yCoordinate 247.
-:CjYlsf6GAqAAbwqm_path ontouml:point :CjYlsf6GAqAAbwqm_path_point_3.
-:CjYlsf6GAqAAbwqm_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 210;
-    ontouml:yCoordinate 180.
-:OgElsf6GAqAAbwq4_path rdf:type ontouml:Path;
-    ontouml:point :OgElsf6GAqAAbwq4_path_point_0.
-:OgElsf6GAqAAbwq4_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 945;
-    ontouml:yCoordinate 180.
-:OgElsf6GAqAAbwq4_path ontouml:point :OgElsf6GAqAAbwq4_path_point_1.
-:OgElsf6GAqAAbwq4_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 945;
-    ontouml:yCoordinate 225.
-:OgElsf6GAqAAbwq4_path ontouml:point :OgElsf6GAqAAbwq4_path_point_2.
-:OgElsf6GAqAAbwq4_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1120;
-    ontouml:yCoordinate 225.
-:OgElsf6GAqAAbwq4_path ontouml:point :OgElsf6GAqAAbwq4_path_point_3.
-:OgElsf6GAqAAbwq4_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 1120;
-    ontouml:yCoordinate 472.
-:Ieklsf6GAqAAbwrK_path rdf:type ontouml:Path;
-    ontouml:point :Ieklsf6GAqAAbwrK_path_point_0.
-:Ieklsf6GAqAAbwrK_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 794;
-    ontouml:yCoordinate 376.
-:Ieklsf6GAqAAbwrK_path ontouml:point :Ieklsf6GAqAAbwrK_path_point_1.
-:Ieklsf6GAqAAbwrK_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 794;
-    ontouml:yCoordinate 424.
-:Ieklsf6GAqAAbwrK_path ontouml:point :Ieklsf6GAqAAbwrK_path_point_2.
-:Ieklsf6GAqAAbwrK_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 892;
-    ontouml:yCoordinate 424.
-:Ieklsf6GAqAAbwrK_path ontouml:point :Ieklsf6GAqAAbwrK_path_point_3.
-:Ieklsf6GAqAAbwrK_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 892;
-    ontouml:yCoordinate 472.
-:C83lsf6GAqAAbwvu_path rdf:type ontouml:Path;
-    ontouml:point :C83lsf6GAqAAbwvu_path_point_0.
-:C83lsf6GAqAAbwvu_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 959;
-    ontouml:yCoordinate 657.
-:C83lsf6GAqAAbwvu_path ontouml:point :C83lsf6GAqAAbwvu_path_point_1.
-:C83lsf6GAqAAbwvu_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 728;
-    ontouml:yCoordinate 657.
-:C83lsf6GAqAAbwvu_path ontouml:point :C83lsf6GAqAAbwvu_path_point_2.
-:C83lsf6GAqAAbwvu_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 728;
-    ontouml:yCoordinate 511.
-:C4klsf6GAqAAbwrE_path rdf:type ontouml:Path;
-    ontouml:point :C4klsf6GAqAAbwrE_path_point_0.
-:C4klsf6GAqAAbwrE_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 794;
-    ontouml:yCoordinate 376.
-:C4klsf6GAqAAbwrE_path ontouml:point :C4klsf6GAqAAbwrE_path_point_1.
-:C4klsf6GAqAAbwrE_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 794;
-    ontouml:yCoordinate 424.
-:C4klsf6GAqAAbwrE_path ontouml:point :C4klsf6GAqAAbwrE_path_point_2.
-:C4klsf6GAqAAbwrE_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 728;
-    ontouml:yCoordinate 424.
-:C4klsf6GAqAAbwrE_path ontouml:point :C4klsf6GAqAAbwrE_path_point_3.
-:C4klsf6GAqAAbwrE_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 728;
-    ontouml:yCoordinate 469.
-:KLDlsf6GAqAAbwuq_path rdf:type ontouml:Path;
-    ontouml:point :KLDlsf6GAqAAbwuq_path_point_0.
-:KLDlsf6GAqAAbwuq_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 378;
-    ontouml:yCoordinate 463.
-:KLDlsf6GAqAAbwuq_path ontouml:point :KLDlsf6GAqAAbwuq_path_point_1.
-:KLDlsf6GAqAAbwuq_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 276;
-    ontouml:yCoordinate 463.
-:KLDlsf6GAqAAbwuq_path ontouml:point :KLDlsf6GAqAAbwuq_path_point_2.
-:KLDlsf6GAqAAbwuq_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 276;
-    ontouml:yCoordinate 374.
-:Fl4lsf6GAqAAbwqy_path rdf:type ontouml:Path;
-    ontouml:point :Fl4lsf6GAqAAbwqy_path_point_0.
-:Fl4lsf6GAqAAbwqy_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 945;
-    ontouml:yCoordinate 180.
-:Fl4lsf6GAqAAbwqy_path ontouml:point :Fl4lsf6GAqAAbwqy_path_point_1.
-:Fl4lsf6GAqAAbwqy_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 945;
-    ontouml:yCoordinate 225.
-:Fl4lsf6GAqAAbwqy_path ontouml:point :Fl4lsf6GAqAAbwqy_path_point_2.
-:Fl4lsf6GAqAAbwqy_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 794;
-    ontouml:yCoordinate 225.
-:Fl4lsf6GAqAAbwqy_path ontouml:point :Fl4lsf6GAqAAbwqy_path_point_3.
-:Fl4lsf6GAqAAbwqy_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 793;
-    ontouml:yCoordinate 283.
-:Fl4lsf6GAqAAbwqy_path ontouml:point :Fl4lsf6GAqAAbwqy_path_point_4.
-:Fl4lsf6GAqAAbwqy_path_point_4 rdf:type ontouml:Point;
-    ontouml:xCoordinate 793;
-    ontouml:yCoordinate 334.
+:083lsf6GAqAAbwvq_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:083lsf6GAqAAbwvs_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:41olsf6GAqAAbwqa a ontouml:GeneralizationView ;
+    ontouml:isViewOf :w1olsf6GAqAAbwqZ ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :41olsf6GAqAAbwqa_path ;
+    ontouml:sourceView :GmKFsf6GAqAAbwnO ;
+    ontouml:targetView :h7sFsf6GAqAAbwmi .
+
+:41olsf6GAqAAbwqa_path a ontouml:Path ;
+    ontouml:point :41olsf6GAqAAbwqa_path_point_0,
+        :41olsf6GAqAAbwqa_path_point_1 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:41olsf6GAqAAbwqa_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 904 ;
+    ontouml:yCoordinate 160 .
+
+:41olsf6GAqAAbwqa_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 483 ;
+    ontouml:yCoordinate 160 .
+
+:5LDlsf6GAqAAbwuw a ontouml:RelationView ;
+    ontouml:isViewOf :l59lsf6GAqAAbwuc ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :5LDlsf6GAqAAbwuw_path ;
+    ontouml:sourceView :rgSFsf6GAqAAbwm4 ;
+    ontouml:targetView :jnSFsf6GAqAAbwnD .
+
+:5LDlsf6GAqAAbwuw_path a ontouml:Path ;
+    ontouml:point :5LDlsf6GAqAAbwuw_path_point_0,
+        :5LDlsf6GAqAAbwuw_path_point_1,
+        :5LDlsf6GAqAAbwuw_path_point_2 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:5LDlsf6GAqAAbwuw_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 461 ;
+    ontouml:yCoordinate 463 .
+
+:5LDlsf6GAqAAbwuw_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 595 ;
+    ontouml:yCoordinate 463 .
+
+:5LDlsf6GAqAAbwuw_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 595 ;
+    ontouml:yCoordinate 374 .
+
+:5vPlsf6GAqAAbwwC a ontouml:RelationView ;
+    ontouml:isViewOf :hvPlsf6GAqAAbwv9 ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :5vPlsf6GAqAAbwwC_path ;
+    ontouml:sourceView :bb1Fsf6GAqAAbwoJ ;
+    ontouml:targetView :Z.tFsf6GAqAAbwoU .
+
+:5vPlsf6GAqAAbwwC_path a ontouml:Path ;
+    ontouml:point :5vPlsf6GAqAAbwwC_path_point_0,
+        :5vPlsf6GAqAAbwwC_path_point_1,
+        :5vPlsf6GAqAAbwwC_path_point_2 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:5vPlsf6GAqAAbwwC_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 1042 ;
+    ontouml:yCoordinate 638 .
+
+:5vPlsf6GAqAAbwwC_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 1080 ;
+    ontouml:yCoordinate 638 .
+
+:5vPlsf6GAqAAbwwC_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 1080 ;
+    ontouml:yCoordinate 514 .
+
+:6RPlsf6GAqAAbwv0_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:6RPlsf6GAqAAbwv2_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:6s0Fsf6GAqAAbwmM_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :6s0Fsf6GAqAAbwmM_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:6s0Fsf6GAqAAbwmM_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 170 ;
+    ontouml:yCoordinate 63 .
+
+:944lsf6GAqAAbwqs a ontouml:GeneralizationView ;
+    ontouml:isViewOf :V44lsf6GAqAAbwqr ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :944lsf6GAqAAbwqs_path ;
+    ontouml:sourceView :hsCFsf6GAqAAbwmt ;
+    ontouml:targetView :h7sFsf6GAqAAbwmi .
+
+:944lsf6GAqAAbwqs_path a ontouml:Path ;
+    ontouml:point :944lsf6GAqAAbwqs_path_point_0,
+        :944lsf6GAqAAbwqs_path_point_1,
+        :944lsf6GAqAAbwqs_path_point_2,
+        :944lsf6GAqAAbwqs_path_point_3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:944lsf6GAqAAbwqs_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 271 ;
+    ontouml:yCoordinate 332 .
+
+:944lsf6GAqAAbwqs_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 271 ;
+    ontouml:yCoordinate 247 .
+
+:944lsf6GAqAAbwqs_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 398 ;
+    ontouml:yCoordinate 247 .
+
+:944lsf6GAqAAbwqs_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 398 ;
+    ontouml:yCoordinate 180 .
+
+:C4klsf6GAqAAbwrE a ontouml:GeneralizationView ;
+    ontouml:isViewOf :04klsf6GAqAAbwrD ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :C4klsf6GAqAAbwrE_path ;
+    ontouml:sourceView :OfpFsf6GAqAAbwnb ;
+    ontouml:targetView :iyVFsf6GAqAAbwnz .
+
+:C4klsf6GAqAAbwrE_path a ontouml:Path ;
+    ontouml:point :C4klsf6GAqAAbwrE_path_point_0,
+        :C4klsf6GAqAAbwrE_path_point_1,
+        :C4klsf6GAqAAbwrE_path_point_2,
+        :C4klsf6GAqAAbwrE_path_point_3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:C4klsf6GAqAAbwrE_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 794 ;
+    ontouml:yCoordinate 376 .
+
+:C4klsf6GAqAAbwrE_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 794 ;
+    ontouml:yCoordinate 424 .
+
+:C4klsf6GAqAAbwrE_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 728 ;
+    ontouml:yCoordinate 424 .
+
+:C4klsf6GAqAAbwrE_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 728 ;
+    ontouml:yCoordinate 469 .
+
+:C83lsf6GAqAAbwvu a ontouml:RelationView ;
+    ontouml:isViewOf :083lsf6GAqAAbwvp ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :C83lsf6GAqAAbwvu_path ;
+    ontouml:sourceView :bb1Fsf6GAqAAbwoJ ;
+    ontouml:targetView :iyVFsf6GAqAAbwnz .
+
+:C83lsf6GAqAAbwvu_path a ontouml:Path ;
+    ontouml:point :C83lsf6GAqAAbwvu_path_point_0,
+        :C83lsf6GAqAAbwvu_path_point_1,
+        :C83lsf6GAqAAbwvu_path_point_2 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:C83lsf6GAqAAbwvu_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 959 ;
+    ontouml:yCoordinate 657 .
+
+:C83lsf6GAqAAbwvu_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 728 ;
+    ontouml:yCoordinate 657 .
+
+:C83lsf6GAqAAbwvu_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 728 ;
+    ontouml:yCoordinate 511 .
+
+:CjYlsf6GAqAAbwqm a ontouml:GeneralizationView ;
+    ontouml:isViewOf :cjYlsf6GAqAAbwql ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :CjYlsf6GAqAAbwqm_path ;
+    ontouml:sourceView :hsCFsf6GAqAAbwmt ;
+    ontouml:targetView :uYMFsf6GAqAAbwmX .
+
+:CjYlsf6GAqAAbwqm_path a ontouml:Path ;
+    ontouml:point :CjYlsf6GAqAAbwqm_path_point_0,
+        :CjYlsf6GAqAAbwqm_path_point_1,
+        :CjYlsf6GAqAAbwqm_path_point_2,
+        :CjYlsf6GAqAAbwqm_path_point_3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:CjYlsf6GAqAAbwqm_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 271 ;
+    ontouml:yCoordinate 332 .
+
+:CjYlsf6GAqAAbwqm_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 271 ;
+    ontouml:yCoordinate 247 .
+
+:CjYlsf6GAqAAbwqm_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 210 ;
+    ontouml:yCoordinate 247 .
+
+:CjYlsf6GAqAAbwqm_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 210 ;
+    ontouml:yCoordinate 180 .
+
+:EkUlsf6GAqAAbwrQ a ontouml:GeneralizationView ;
+    ontouml:isViewOf :wkUlsf6GAqAAbwrP ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :EkUlsf6GAqAAbwrQ_path ;
+    ontouml:sourceView :bu5Fsf6GAqAAbwnm ;
+    ontouml:targetView :G99Fsf6GAqAAbwof .
+
+:EkUlsf6GAqAAbwrQ_path a ontouml:Path ;
+    ontouml:point :EkUlsf6GAqAAbwrQ_path_point_0,
+        :EkUlsf6GAqAAbwrQ_path_point_1 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:EkUlsf6GAqAAbwrQ_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 1232 ;
+    ontouml:yCoordinate 376 .
+
+:EkUlsf6GAqAAbwrQ_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 1232 ;
+    ontouml:yCoordinate 472 .
+
+:Fl4lsf6GAqAAbwqy a ontouml:GeneralizationView ;
+    ontouml:isViewOf :5l4lsf6GAqAAbwqx ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :Fl4lsf6GAqAAbwqy_path ;
+    ontouml:sourceView :GmKFsf6GAqAAbwnO ;
+    ontouml:targetView :OfpFsf6GAqAAbwnb .
+
+:Fl4lsf6GAqAAbwqy_path a ontouml:Path ;
+    ontouml:point :Fl4lsf6GAqAAbwqy_path_point_0,
+        :Fl4lsf6GAqAAbwqy_path_point_1,
+        :Fl4lsf6GAqAAbwqy_path_point_2,
+        :Fl4lsf6GAqAAbwqy_path_point_3,
+        :Fl4lsf6GAqAAbwqy_path_point_4 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:Fl4lsf6GAqAAbwqy_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 945 ;
+    ontouml:yCoordinate 180 .
+
+:Fl4lsf6GAqAAbwqy_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 945 ;
+    ontouml:yCoordinate 225 .
+
+:Fl4lsf6GAqAAbwqy_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 794 ;
+    ontouml:yCoordinate 225 .
+
+:Fl4lsf6GAqAAbwqy_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 793 ;
+    ontouml:yCoordinate 283 .
+
+:Fl4lsf6GAqAAbwqy_path_point_4 a ontouml:Point ;
+    ontouml:xCoordinate 793 ;
+    ontouml:yCoordinate 334 .
+
+:G99Fsf6GAqAAbwof_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :G99Fsf6GAqAAbwof_shape_point ;
+    ontouml:width "84"^^xsd:nonNegativeInteger .
+
+:G99Fsf6GAqAAbwof_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 1197 ;
+    ontouml:yCoordinate 473 .
+
+:GmKFsf6GAqAAbwnO_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :GmKFsf6GAqAAbwnO_shape_point ;
+    ontouml:width "84"^^xsd:nonNegativeInteger .
+
+:GmKFsf6GAqAAbwnO_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 905 ;
+    ontouml:yCoordinate 139 .
+
+:HJClsf6GAqAAbwri a ontouml:GeneralizationSetView ;
+    ontouml:isViewOf :tJClsf6GAqAAbwrg ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :HJClsf6GAqAAbwri_shape .
+
+:HJClsf6GAqAAbwri_shape a ontouml:Text ;
+    ontouml:height "42"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :HJClsf6GAqAAbwri_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:HJClsf6GAqAAbwri_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 822 ;
+    ontouml:yCoordinate 375 .
+
+:Ieklsf6GAqAAbwrK a ontouml:GeneralizationView ;
+    ontouml:isViewOf :_uklsf6GAqAAbwrJ ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :Ieklsf6GAqAAbwrK_path ;
+    ontouml:sourceView :OfpFsf6GAqAAbwnb ;
+    ontouml:targetView <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.> .
+
+:Ieklsf6GAqAAbwrK_path a ontouml:Path ;
+    ontouml:point :Ieklsf6GAqAAbwrK_path_point_0,
+        :Ieklsf6GAqAAbwrK_path_point_1,
+        :Ieklsf6GAqAAbwrK_path_point_2,
+        :Ieklsf6GAqAAbwrK_path_point_3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:Ieklsf6GAqAAbwrK_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 794 ;
+    ontouml:yCoordinate 376 .
+
+:Ieklsf6GAqAAbwrK_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 794 ;
+    ontouml:yCoordinate 424 .
+
+:Ieklsf6GAqAAbwrK_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 892 ;
+    ontouml:yCoordinate 424 .
+
+:Ieklsf6GAqAAbwrK_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 892 ;
+    ontouml:yCoordinate 472 .
+
+:KLDlsf6GAqAAbwuq a ontouml:RelationView ;
+    ontouml:isViewOf :67dlsf6GAqAAbwuQ ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :KLDlsf6GAqAAbwuq_path ;
+    ontouml:sourceView :rgSFsf6GAqAAbwm4 ;
+    ontouml:targetView :hsCFsf6GAqAAbwmt .
+
+:KLDlsf6GAqAAbwuq_path a ontouml:Path ;
+    ontouml:point :KLDlsf6GAqAAbwuq_path_point_0,
+        :KLDlsf6GAqAAbwuq_path_point_1,
+        :KLDlsf6GAqAAbwuq_path_point_2 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:KLDlsf6GAqAAbwuq_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 378 ;
+    ontouml:yCoordinate 463 .
+
+:KLDlsf6GAqAAbwuq_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 276 ;
+    ontouml:yCoordinate 463 .
+
+:KLDlsf6GAqAAbwuq_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 276 ;
+    ontouml:yCoordinate 374 .
+
+:NcYlsf6GAqAAbwqg a ontouml:GeneralizationView ;
+    ontouml:isViewOf :lcYlsf6GAqAAbwqf ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :NcYlsf6GAqAAbwqg_path ;
+    ontouml:sourceView :6s0Fsf6GAqAAbwmM ;
+    ontouml:targetView :uYMFsf6GAqAAbwmX .
+
+:NcYlsf6GAqAAbwqg_path a ontouml:Path ;
+    ontouml:point :NcYlsf6GAqAAbwqg_path_point_0,
+        :NcYlsf6GAqAAbwqg_path_point_1 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:NcYlsf6GAqAAbwqg_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 210 ;
+    ontouml:yCoordinate 104 .
+
+:NcYlsf6GAqAAbwqg_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 210 ;
+    ontouml:yCoordinate 138 .
+
+:Nr0lsf6GAqAAbwrW a ontouml:GeneralizationView ;
+    ontouml:isViewOf :5r0lsf6GAqAAbwrV ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :Nr0lsf6GAqAAbwrW_path ;
+    ontouml:sourceView :OfpFsf6GAqAAbwnb ;
+    ontouml:targetView :jnSFsf6GAqAAbwnD .
+
+:Nr0lsf6GAqAAbwrW_path a ontouml:Path ;
+    ontouml:point :Nr0lsf6GAqAAbwrW_path_point_0,
+        :Nr0lsf6GAqAAbwrW_path_point_1 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:Nr0lsf6GAqAAbwrW_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 753 ;
+    ontouml:yCoordinate 351 .
+
+:Nr0lsf6GAqAAbwrW_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 645 ;
+    ontouml:yCoordinate 351 .
+
+:OKvlsf6GAqAAbwwI_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:OKvlsf6GAqAAbwwK_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:ORPlsf6GAqAAbwv4 a ontouml:RelationView ;
+    ontouml:isViewOf :6RPlsf6GAqAAbwvz ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :ORPlsf6GAqAAbwv4_path ;
+    ontouml:sourceView :bb1Fsf6GAqAAbwoJ ;
+    ontouml:targetView <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.> .
+
+:ORPlsf6GAqAAbwv4_path a ontouml:Path ;
+    ontouml:point :ORPlsf6GAqAAbwv4_path_point_0,
+        :ORPlsf6GAqAAbwv4_path_point_1,
+        :ORPlsf6GAqAAbwv4_path_point_2 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:ORPlsf6GAqAAbwv4_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 959 ;
+    ontouml:yCoordinate 638 .
+
+:ORPlsf6GAqAAbwv4_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 892 ;
+    ontouml:yCoordinate 638 .
+
+:ORPlsf6GAqAAbwv4_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 892 ;
+    ontouml:yCoordinate 514 .
+
+:OfpFsf6GAqAAbwnb_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :OfpFsf6GAqAAbwnb_shape_point ;
+    ontouml:width "88"^^xsd:nonNegativeInteger .
+
+:OfpFsf6GAqAAbwnb_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 754 ;
+    ontouml:yCoordinate 335 .
+
+:OgElsf6GAqAAbwq4 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :mgElsf6GAqAAbwq3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :OgElsf6GAqAAbwq4_path ;
+    ontouml:sourceView :GmKFsf6GAqAAbwnO ;
+    ontouml:targetView :Z.tFsf6GAqAAbwoU .
+
+:OgElsf6GAqAAbwq4_path a ontouml:Path ;
+    ontouml:point :OgElsf6GAqAAbwq4_path_point_0,
+        :OgElsf6GAqAAbwq4_path_point_1,
+        :OgElsf6GAqAAbwq4_path_point_2,
+        :OgElsf6GAqAAbwq4_path_point_3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:OgElsf6GAqAAbwq4_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 945 ;
+    ontouml:yCoordinate 180 .
+
+:OgElsf6GAqAAbwq4_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 945 ;
+    ontouml:yCoordinate 225 .
+
+:OgElsf6GAqAAbwq4_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 1120 ;
+    ontouml:yCoordinate 225 .
+
+:OgElsf6GAqAAbwq4_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 1120 ;
+    ontouml:yCoordinate 472 .
+
+<https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq.> a ontouml:GeneralizationView ;
+    ontouml:isViewOf :saElsf6GAqAAbwq9 ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :SaElsf6GAqAAbwq._path ;
+    ontouml:sourceView :GmKFsf6GAqAAbwnO ;
+    ontouml:targetView :bu5Fsf6GAqAAbwnm .
+
+:SaElsf6GAqAAbwq._path a ontouml:Path ;
+    ontouml:point :SaElsf6GAqAAbwq._path_point_0,
+        :SaElsf6GAqAAbwq._path_point_1,
+        :SaElsf6GAqAAbwq._path_point_2,
+        :SaElsf6GAqAAbwq._path_point_3 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:SaElsf6GAqAAbwq._path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 945 ;
+    ontouml:yCoordinate 180 .
+
+:SaElsf6GAqAAbwq._path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 945 ;
+    ontouml:yCoordinate 225 .
+
+:SaElsf6GAqAAbwq._path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 1232 ;
+    ontouml:yCoordinate 225 .
+
+:SaElsf6GAqAAbwq._path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 1232 ;
+    ontouml:yCoordinate 334 .
+
+:W7dlsf6GAqAAbwuV_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:Z.tFsf6GAqAAbwoU_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :Z.tFsf6GAqAAbwoU_shape_point ;
+    ontouml:width "145"^^xsd:nonNegativeInteger .
+
+:Z.tFsf6GAqAAbwoU_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 1008 ;
+    ontouml:yCoordinate 473 .
+
+:ZTGlsf6GAqAAbwsU a ontouml:GeneralizationSetView ;
+    ontouml:isViewOf :2TGlsf6GAqAAbwsS ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :ZTGlsf6GAqAAbwsU_shape .
+
+:ZTGlsf6GAqAAbwsU_shape a ontouml:Text ;
+    ontouml:height "42"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :ZTGlsf6GAqAAbwsU_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:ZTGlsf6GAqAAbwsU_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 958 ;
+    ontouml:yCoordinate 187 .
+
+:bb1Fsf6GAqAAbwoJ_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :bb1Fsf6GAqAAbwoJ_shape_point ;
+    ontouml:width "81"^^xsd:nonNegativeInteger .
+
+:bb1Fsf6GAqAAbwoJ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 960 ;
+    ontouml:yCoordinate 631 .
+
+:bu5Fsf6GAqAAbwnm_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :bu5Fsf6GAqAAbwnm_shape_point ;
+    ontouml:width "98"^^xsd:nonNegativeInteger .
+
+:bu5Fsf6GAqAAbwnm_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 1183 ;
+    ontouml:yCoordinate 335 .
+
+:cr4Fsf6GAqAAbwl7 a ontouml:Diagram ;
+    ontouml:containsView :41olsf6GAqAAbwqa,
+        :5LDlsf6GAqAAbwuw,
+        :5vPlsf6GAqAAbwwC,
+        :6s0Fsf6GAqAAbwmM,
+        :944lsf6GAqAAbwqs,
+        :C4klsf6GAqAAbwrE,
+        :C83lsf6GAqAAbwvu,
+        :CjYlsf6GAqAAbwqm,
+        :EkUlsf6GAqAAbwrQ,
+        :Fl4lsf6GAqAAbwqy,
+        :G99Fsf6GAqAAbwof,
+        :GmKFsf6GAqAAbwnO,
+        :HJClsf6GAqAAbwri,
+        :Ieklsf6GAqAAbwrK,
+        :KLDlsf6GAqAAbwuq,
+        :NcYlsf6GAqAAbwqg,
+        :Nr0lsf6GAqAAbwrW,
+        :ORPlsf6GAqAAbwv4,
+        :OfpFsf6GAqAAbwnb,
+        :OgElsf6GAqAAbwq4,
+        <https://w3id.org/ontouml-models/model/stock-broker2021#SaElsf6GAqAAbwq.>,
+        :Z.tFsf6GAqAAbwoU,
+        :ZTGlsf6GAqAAbwsU,
+        :bb1Fsf6GAqAAbwoJ,
+        :bu5Fsf6GAqAAbwnm,
+        :h7sFsf6GAqAAbwmi,
+        :hsCFsf6GAqAAbwmt,
+        :iyVFsf6GAqAAbwnz,
+        :jnSFsf6GAqAAbwnD,
+        :nrBlsf6GAqAAbws8,
+        :rgSFsf6GAqAAbwm4,
+        <https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.>,
+        :uYMFsf6GAqAAbwmX,
+        :xKvlsf6GAqAAbwwM ;
+    ontouml:name "Brokerage"@en ;
+    ontouml:owner :BUystf6GAqACCxTW ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:h7sFsf6GAqAAbwmi_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :h7sFsf6GAqAAbwmi_shape_point ;
+    ontouml:width "151"^^xsd:nonNegativeInteger .
+
+:h7sFsf6GAqAAbwmi_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 331 ;
+    ontouml:yCoordinate 139 .
+
+:hsCFsf6GAqAAbwmt_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :hsCFsf6GAqAAbwmt_shape_point ;
+    ontouml:width "95"^^xsd:nonNegativeInteger .
+
+:hsCFsf6GAqAAbwmt_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 236 ;
+    ontouml:yCoordinate 333 .
+
+:hvPlsf6GAqAAbwv._cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:hvPlsf6GAqAAbwwA_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:iyVFsf6GAqAAbwnz_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :iyVFsf6GAqAAbwnz_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:iyVFsf6GAqAAbwnz_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 688 ;
+    ontouml:yCoordinate 470 .
+
+:jnSFsf6GAqAAbwnD_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :jnSFsf6GAqAAbwnD_shape_point ;
+    ontouml:width "103"^^xsd:nonNegativeInteger .
+
+:jnSFsf6GAqAAbwnD_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 541 ;
+    ontouml:yCoordinate 333 .
+
+:l59lsf6GAqAAbwud_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:l59lsf6GAqAAbwuf_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:m7dlsf6GAqAAbwuS_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:nrBlsf6GAqAAbws8 a ontouml:GeneralizationSetView ;
+    ontouml:isViewOf :trBlsf6GAqAAbws6 ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :nrBlsf6GAqAAbws8_shape .
+
+:nrBlsf6GAqAAbws8_shape a ontouml:Text ;
+    ontouml:height "28"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :nrBlsf6GAqAAbws8_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:nrBlsf6GAqAAbws8_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 284 ;
+    ontouml:yCoordinate 267 .
+
+:rgSFsf6GAqAAbwm4_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :rgSFsf6GAqAAbwm4_shape_point ;
+    ontouml:width "81"^^xsd:nonNegativeInteger .
+
+:rgSFsf6GAqAAbwm4_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 379 ;
+    ontouml:yCoordinate 443 .
+
+:to1Fsf6GAqAAbwn._shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :to1Fsf6GAqAAbwn._shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:to1Fsf6GAqAAbwn._shape_point a ontouml:Point ;
+    ontouml:xCoordinate 852 ;
+    ontouml:yCoordinate 473 .
+
+:uYMFsf6GAqAAbwmX_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:topLeftPosition :uYMFsf6GAqAAbwmX_shape_point ;
+    ontouml:width "120"^^xsd:nonNegativeInteger .
+
+:uYMFsf6GAqAAbwmX_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 150 ;
+    ontouml:yCoordinate 139 .
+
+:wJIFsf6GAqAAbwWg_root a ontouml:Package ;
+    ontouml:containsModelElement :BUystf6GAqACCxTW ;
+    ontouml:name "stockBrokerModel"@en ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:xKvlsf6GAqAAbwwM a ontouml:RelationView ;
+    ontouml:isViewOf :OKvlsf6GAqAAbwwH ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :xKvlsf6GAqAAbwwM_path ;
+    ontouml:sourceView :bb1Fsf6GAqAAbwoJ ;
+    ontouml:targetView :G99Fsf6GAqAAbwof .
+
+:xKvlsf6GAqAAbwwM_path a ontouml:Path ;
+    ontouml:point :xKvlsf6GAqAAbwwM_path_point_0,
+        :xKvlsf6GAqAAbwwM_path_point_1,
+        :xKvlsf6GAqAAbwwM_path_point_2 ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:xKvlsf6GAqAAbwwM_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 1042 ;
+    ontouml:yCoordinate 663 .
+
+:xKvlsf6GAqAAbwwM_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 1239 ;
+    ontouml:yCoordinate 663 .
+
+:xKvlsf6GAqAAbwwM_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 1239 ;
+    ontouml:yCoordinate 514 .
+
+:083lsf6GAqAAbwvp a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:relationEnd :083lsf6GAqAAbwvq,
+        :083lsf6GAqAAbwvs ;
+    ontouml:sourceEnd :083lsf6GAqAAbwvq ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :083lsf6GAqAAbwvs .
+
+:083lsf6GAqAAbwvq a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :083lsf6GAqAAbwvq_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :bb1Fsf6GAqAAbwoK .
+
+:083lsf6GAqAAbwvs a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :083lsf6GAqAAbwvs_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :iyVFsf6GAqAAbwn0 .
+
+:2TGlsf6GAqAAbwsS a ontouml:GeneralizationSet ;
+    ontouml:generalization :5l4lsf6GAqAAbwqx,
+        :mgElsf6GAqAAbwq3,
+        :saElsf6GAqAAbwq9 ;
+    ontouml:isComplete false ;
+    ontouml:isDisjoint true ;
+    ontouml:name ""@en ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:5r0lsf6GAqAAbwrV a ontouml:Generalization ;
+    ontouml:general :OfpFsf6GAqAAbwnc ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :jnSFsf6GAqAAbwnE .
+
+:67dlsf6GAqAAbwuQ a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:relationEnd :W7dlsf6GAqAAbwuV,
+        :m7dlsf6GAqAAbwuS ;
+    ontouml:sourceEnd :m7dlsf6GAqAAbwuS ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :W7dlsf6GAqAAbwuV .
+
+:6RPlsf6GAqAAbwv0 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :6RPlsf6GAqAAbwv0_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :bb1Fsf6GAqAAbwoK .
+
+:6RPlsf6GAqAAbwv2 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :6RPlsf6GAqAAbwv2_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :to1Fsf6GAqAAbwn_ .
+
+:6RPlsf6GAqAAbwvz a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:relationEnd :6RPlsf6GAqAAbwv0,
+        :6RPlsf6GAqAAbwv2 ;
+    ontouml:sourceEnd :6RPlsf6GAqAAbwv0 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :6RPlsf6GAqAAbwv2 .
+
+:6s0Fsf6GAqAAbwmM a ontouml:ClassView ;
+    ontouml:isViewOf :Ws0Fsf6GAqAAbwmN ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :6s0Fsf6GAqAAbwmM_shape .
+
+:BUystf6GAqACCxTW a ontouml:Package ;
+    ontouml:containsModelElement :04klsf6GAqAAbwrD,
+        :083lsf6GAqAAbwvp,
+        :2TGlsf6GAqAAbwsS,
+        :5l4lsf6GAqAAbwqx,
+        :5r0lsf6GAqAAbwrV,
+        :67dlsf6GAqAAbwuQ,
+        :6RPlsf6GAqAAbwvz,
+        :G99Fsf6GAqAAbwog,
+        :GmKFsf6GAqAAbwnP,
+        :OKvlsf6GAqAAbwwH,
+        :OfpFsf6GAqAAbwnc,
+        :V44lsf6GAqAAbwqr,
+        :Ws0Fsf6GAqAAbwmN,
+        :Z.tFsf6GAqAAbwoV,
+        :_uklsf6GAqAAbwrJ,
+        :bb1Fsf6GAqAAbwoK,
+        :bu5Fsf6GAqAAbwnn,
+        :cjYlsf6GAqAAbwql,
+        :eYMFsf6GAqAAbwmY,
+        :h7sFsf6GAqAAbwmj,
+        :hsCFsf6GAqAAbwmu,
+        :hvPlsf6GAqAAbwv9,
+        :iyVFsf6GAqAAbwn0,
+        :jnSFsf6GAqAAbwnE,
+        :l59lsf6GAqAAbwuc,
+        :lcYlsf6GAqAAbwqf,
+        :mgElsf6GAqAAbwq3,
+        :rgSFsf6GAqAAbwm5,
+        :saElsf6GAqAAbwq9,
+        :tJClsf6GAqAAbwrg,
+        :to1Fsf6GAqAAbwn_,
+        :trBlsf6GAqAAbws6,
+        :w1olsf6GAqAAbwqZ,
+        :wkUlsf6GAqAAbwrP ;
+    ontouml:name "Model"@en ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:OKvlsf6GAqAAbwwH a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:relationEnd :OKvlsf6GAqAAbwwI,
+        :OKvlsf6GAqAAbwwK ;
+    ontouml:sourceEnd :OKvlsf6GAqAAbwwI ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :OKvlsf6GAqAAbwwK .
+
+:OKvlsf6GAqAAbwwI a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :OKvlsf6GAqAAbwwI_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :bb1Fsf6GAqAAbwoK .
+
+:OKvlsf6GAqAAbwwK a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :OKvlsf6GAqAAbwwK_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :G99Fsf6GAqAAbwog .
+
+:W7dlsf6GAqAAbwuV a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :W7dlsf6GAqAAbwuV_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :hsCFsf6GAqAAbwmu .
+
+<https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.> a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :hvPlsf6GAqAAbwv._cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :bb1Fsf6GAqAAbwoK .
+
+:hvPlsf6GAqAAbwv9 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:relationEnd <https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.>,
+        :hvPlsf6GAqAAbwwA ;
+    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/stock-broker2021#hvPlsf6GAqAAbwv.> ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :hvPlsf6GAqAAbwwA .
+
+:hvPlsf6GAqAAbwwA a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :hvPlsf6GAqAAbwwA_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :Z.tFsf6GAqAAbwoV .
+
+:l59lsf6GAqAAbwuc a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:relationEnd :l59lsf6GAqAAbwud,
+        :l59lsf6GAqAAbwuf ;
+    ontouml:sourceEnd :l59lsf6GAqAAbwud ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :l59lsf6GAqAAbwuf .
+
+:l59lsf6GAqAAbwud a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :l59lsf6GAqAAbwud_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :rgSFsf6GAqAAbwm5 .
+
+:l59lsf6GAqAAbwuf a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :l59lsf6GAqAAbwuf_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :jnSFsf6GAqAAbwnE .
+
+:lcYlsf6GAqAAbwqf a ontouml:Generalization ;
+    ontouml:general :Ws0Fsf6GAqAAbwmN ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :eYMFsf6GAqAAbwmY .
+
+:m7dlsf6GAqAAbwuS a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :m7dlsf6GAqAAbwuS_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:propertyType :rgSFsf6GAqAAbwm5 .
+
+:tJClsf6GAqAAbwrg a ontouml:GeneralizationSet ;
+    ontouml:generalization :04klsf6GAqAAbwrD,
+        :_uklsf6GAqAAbwrJ ;
+    ontouml:isComplete false ;
+    ontouml:isDisjoint true ;
+    ontouml:name ""@en ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:trBlsf6GAqAAbws6 a ontouml:GeneralizationSet ;
+    ontouml:generalization :V44lsf6GAqAAbwqr,
+        :cjYlsf6GAqAAbwql ;
+    ontouml:isComplete false ;
+    ontouml:isDisjoint true ;
+    ontouml:name ""@en ;
+    ontouml:project :wJIFsf6GAqAAbwWg .
+
+:w1olsf6GAqAAbwqZ a ontouml:Generalization ;
+    ontouml:general :GmKFsf6GAqAAbwnP ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :h7sFsf6GAqAAbwmj .
+
+:wkUlsf6GAqAAbwrP a ontouml:Generalization ;
+    ontouml:general :bu5Fsf6GAqAAbwnn ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :G99Fsf6GAqAAbwog .
+
+:04klsf6GAqAAbwrD a ontouml:Generalization ;
+    ontouml:general :OfpFsf6GAqAAbwnc ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :iyVFsf6GAqAAbwn0 .
+
+:5l4lsf6GAqAAbwqx a ontouml:Generalization ;
+    ontouml:general :GmKFsf6GAqAAbwnP ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :OfpFsf6GAqAAbwnc .
+
+:G99Fsf6GAqAAbwof a ontouml:ClassView ;
+    ontouml:isViewOf :G99Fsf6GAqAAbwog ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :G99Fsf6GAqAAbwof_shape .
+
+:V44lsf6GAqAAbwqr a ontouml:Generalization ;
+    ontouml:general :hsCFsf6GAqAAbwmu ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :h7sFsf6GAqAAbwmj .
+
+:Ws0Fsf6GAqAAbwmN a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Person"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:Z.tFsf6GAqAAbwoU a ontouml:ClassView ;
+    ontouml:isViewOf :Z.tFsf6GAqAAbwoV ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :Z.tFsf6GAqAAbwoU_shape .
+
+:_uklsf6GAqAAbwrJ a ontouml:Generalization ;
+    ontouml:general :OfpFsf6GAqAAbwnc ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :to1Fsf6GAqAAbwn_ .
+
+:bu5Fsf6GAqAAbwnm a ontouml:ClassView ;
+    ontouml:isViewOf :bu5Fsf6GAqAAbwnn ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :bu5Fsf6GAqAAbwnm_shape .
+
+:cjYlsf6GAqAAbwql a ontouml:Generalization ;
+    ontouml:general :hsCFsf6GAqAAbwmu ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :eYMFsf6GAqAAbwmY .
+
+:h7sFsf6GAqAAbwmi a ontouml:ClassView ;
+    ontouml:isViewOf :h7sFsf6GAqAAbwmj ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :h7sFsf6GAqAAbwmi_shape .
+
+:iyVFsf6GAqAAbwnz a ontouml:ClassView ;
+    ontouml:isViewOf :iyVFsf6GAqAAbwn0 ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :iyVFsf6GAqAAbwnz_shape .
+
+:jnSFsf6GAqAAbwnD a ontouml:ClassView ;
+    ontouml:isViewOf :jnSFsf6GAqAAbwnE ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :jnSFsf6GAqAAbwnD_shape .
+
+:mgElsf6GAqAAbwq3 a ontouml:Generalization ;
+    ontouml:general :GmKFsf6GAqAAbwnP ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :Z.tFsf6GAqAAbwoV .
+
+:rgSFsf6GAqAAbwm4 a ontouml:ClassView ;
+    ontouml:isViewOf :rgSFsf6GAqAAbwm5 ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :rgSFsf6GAqAAbwm4_shape .
+
+:saElsf6GAqAAbwq9 a ontouml:Generalization ;
+    ontouml:general :GmKFsf6GAqAAbwnP ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:specific :bu5Fsf6GAqAAbwnn .
+
+<https://w3id.org/ontouml-models/model/stock-broker2021#to1Fsf6GAqAAbwn.> a ontouml:ClassView ;
+    ontouml:isViewOf :to1Fsf6GAqAAbwn_ ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :to1Fsf6GAqAAbwn._shape .
+
+:uYMFsf6GAqAAbwmX a ontouml:ClassView ;
+    ontouml:isViewOf :eYMFsf6GAqAAbwmY ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :uYMFsf6GAqAAbwmX_shape .
+
+:G99Fsf6GAqAAbwog a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Stock Keeper"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:Z.tFsf6GAqAAbwoV a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Public Traded Company"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:bu5Fsf6GAqAAbwnn a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Stock Exchange"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:eYMFsf6GAqAAbwmY a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Stockholder Person"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:h7sFsf6GAqAAbwmj a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "StockholderOrganization"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:hsCFsf6GAqAAbwmt a ontouml:ClassView ;
+    ontouml:isViewOf :hsCFsf6GAqAAbwmu ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :hsCFsf6GAqAAbwmt_shape .
+
+:iyVFsf6GAqAAbwn0 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Buyer"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:jnSFsf6GAqAAbwnE a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Hired Brokerage"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:rgSFsf6GAqAAbwm5 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Contract"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:to1Fsf6GAqAAbwn_ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Seller"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:GmKFsf6GAqAAbwnO a ontouml:ClassView ;
+    ontouml:isViewOf :GmKFsf6GAqAAbwnP ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :GmKFsf6GAqAAbwnO_shape .
+
+:OfpFsf6GAqAAbwnb a ontouml:ClassView ;
+    ontouml:isViewOf :OfpFsf6GAqAAbwnc ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :OfpFsf6GAqAAbwnb_shape .
+
+:bb1Fsf6GAqAAbwoJ a ontouml:ClassView ;
+    ontouml:isViewOf :bb1Fsf6GAqAAbwoK ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:shape :bb1Fsf6GAqAAbwoJ_shape .
+
+:hsCFsf6GAqAAbwmu a ontouml:Class ;
+    ontouml:isAbstract true ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "StockHolder"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:roleMixin .
+
+:GmKFsf6GAqAAbwnP a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Organization"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:OfpFsf6GAqAAbwnc a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Brokerage"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:subkind .
+
+:bb1Fsf6GAqAAbwoK a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Stock"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :wJIFsf6GAqAAbwWg ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:wJIFsf6GAqAAbwWg a ontouml:Project ;
+    ontouml:diagram :cr4Fsf6GAqAAbwl7 ;
+    ontouml:model :wJIFsf6GAqAAbwWg_root ;
+    ontouml:name "stockBrokerModel"@en .
+

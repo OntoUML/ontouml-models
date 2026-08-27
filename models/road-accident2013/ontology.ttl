@@ -1,487 +1,1284 @@
-@prefix : <https://w3id.org/ontouml-models/model/road-accident2013/>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/road-accident2013#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/road-accident2013/> rdf:type ontouml:Project;
-    ontouml:name "RoadTrafficAccident"@en;
-    ontouml:model :E6Jb3OGFS_j2pA2N_root;
-    ontouml:diagram :f3Jb3OGFS_j2pBGx.
-:E6Jb3OGFS_j2pA2N_root rdf:type ontouml:Package;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "RoadTrafficAccident"@en;
-    ontouml:containsModelElement :m7Jb3OGFS_j2pBFo, :wvJb3OGFS_j2pBH7.
-:m7Jb3OGFS_j2pBFo rdf:type ontouml:Package;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "RoadTrafficAccident"@en;
-    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr>, <https://w3id.org/ontouml-models/model/road-accident2013/9nJb3OGFS_j2pBFv>, <https://w3id.org/ontouml-models/model/road-accident2013/7nJb3OGFS_j2pBFx>, :PnJb3OGFS_j2pBFz, :fnJb3OGFS_j2pBF0, <https://w3id.org/ontouml-models/model/road-accident2013/_nJb3OGFS_j2pBF1>, :AXJb3OGFS_j2pBF2, :gXJb3OGFS_j2pBF3, :IXJb3OGFS_j2pBF4, :YXJb3OGFS_j2pBF5, :A3Jb3OGFS_j2pBF8, :g3Jb3OGFS_j2pBF9, :U3Jb3OGFS_j2pBF_, :M3Jb3OGFS_j2pBGA, :c3Jb3OGFS_j2pBGB, <https://w3id.org/ontouml-models/model/road-accident2013/83Jb3OGFS_j2pBGC>, :l3Jb3OGFS_j2pBGJ, :d3Jb3OGFS_j2pBGU, :b3Jb3OGFS_j2pBGg, <https://w3id.org/ontouml-models/model/road-accident2013/73Jb3OGFS_j2pBGh>, :H3Jb3OGFS_j2pBGi, :n3Jb3OGFS_j2pBGj, :n3Jb3OGFS_j2pBGk, <https://w3id.org/ontouml-models/model/road-accident2013/33Jb3OGFS_j2pBGq>, :P3Jb3OGFS_j2pBGr, :y3Jb3OGFS_j2pBGD, :V3Jb3OGFS_j2pBGK, :N3Jb3OGFS_j2pBGP, :d3Jb3OGFS_j2pBGV, :D3Jb3OGFS_j2pBGa, :X3Jb3OGFS_j2pBGl, :P3Jb3OGFS_j2pBGs.
-<https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr> rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "RoadTrafficAccident"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger;
-    ontouml:attribute :VnJb3OGFS_j2pBFu.
-<https://w3id.org/ontouml-models/model/road-accident2013/9nJb3OGFS_j2pBFv> rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "TravelingVehicle"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/road-accident2013/7nJb3OGFS_j2pBFx> rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Vehicle"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:PnJb3OGFS_j2pBFz rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Travel"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:fnJb3OGFS_j2pBF0 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "CrashedVehicle"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/road-accident2013/_nJb3OGFS_j2pBF1> rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "RearEndCollision"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:AXJb3OGFS_j2pBF2 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Traveler"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:gXJb3OGFS_j2pBF3 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Roadway"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:IXJb3OGFS_j2pBF4 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Victim"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:YXJb3OGFS_j2pBF5 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "RoadwayWithAccident"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:A3Jb3OGFS_j2pBF8 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Person"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:g3Jb3OGFS_j2pBF9 rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "LivingPerson"@en;
-    ontouml:stereotype ontouml:phase;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:U3Jb3OGFS_j2pBF_ rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "DeceasedPerson"@en;
-    ontouml:stereotype ontouml:phase;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:M3Jb3OGFS_j2pBGA rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Passenger"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:c3Jb3OGFS_j2pBGB rdf:type ontouml:Class;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "Driver"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/road-accident2013/83Jb3OGFS_j2pBGC> rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general <https://w3id.org/ontouml-models/model/road-accident2013/9nJb3OGFS_j2pBFv>;
-    ontouml:specific :fnJb3OGFS_j2pBF0.
-:l3Jb3OGFS_j2pBGJ rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general <https://w3id.org/ontouml-models/model/road-accident2013/7nJb3OGFS_j2pBFx>;
-    ontouml:specific <https://w3id.org/ontouml-models/model/road-accident2013/9nJb3OGFS_j2pBFv>.
-:d3Jb3OGFS_j2pBGU rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general :gXJb3OGFS_j2pBF3;
-    ontouml:specific :YXJb3OGFS_j2pBF5.
-:b3Jb3OGFS_j2pBGg rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general <https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr>;
-    ontouml:specific <https://w3id.org/ontouml-models/model/road-accident2013/_nJb3OGFS_j2pBF1>.
-<https://w3id.org/ontouml-models/model/road-accident2013/73Jb3OGFS_j2pBGh> rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "{disjoint,complete}"@en;
-    ontouml:general :A3Jb3OGFS_j2pBF8;
-    ontouml:specific :g3Jb3OGFS_j2pBF9.
-:H3Jb3OGFS_j2pBGi rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general :A3Jb3OGFS_j2pBF8;
-    ontouml:specific :AXJb3OGFS_j2pBF2.
-:n3Jb3OGFS_j2pBGj rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general :A3Jb3OGFS_j2pBF8;
-    ontouml:specific :U3Jb3OGFS_j2pBF_.
-:n3Jb3OGFS_j2pBGk rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:general :AXJb3OGFS_j2pBF2;
-    ontouml:specific :IXJb3OGFS_j2pBF4.
-<https://w3id.org/ontouml-models/model/road-accident2013/33Jb3OGFS_j2pBGq> rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "{disjoint,complete}"@en;
-    ontouml:general :AXJb3OGFS_j2pBF2;
-    ontouml:specific :M3Jb3OGFS_j2pBGA.
-:P3Jb3OGFS_j2pBGr rdf:type ontouml:Generalization;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "{disjoint,complete}"@en;
-    ontouml:general :AXJb3OGFS_j2pBF2;
-    ontouml:specific :c3Jb3OGFS_j2pBGB.
-:wvJb3OGFS_j2pBH7 rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "AssociationClass1"@en;
-    ontouml:stereotype ontouml:derivation;
-    ontouml:isDerived "true"^^xsd:boolean;
-    ontouml:sourceEnd :be252e28-475d-479b-bbef-15c311a129fb;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/road-accident2013/17284f24-e67d-4e03-b03c-6ae8d2f1e685>;
-    ontouml:relationEnd :be252e28-475d-479b-bbef-15c311a129fb, <https://w3id.org/ontouml-models/model/road-accident2013/17284f24-e67d-4e03-b03c-6ae8d2f1e685>.
-:y3Jb3OGFS_j2pBGD rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "occurs on"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :y3Jb3OGFS_j2pBGE;
-    ontouml:targetEnd :y3Jb3OGFS_j2pBGG;
-    ontouml:relationEnd :y3Jb3OGFS_j2pBGE, :y3Jb3OGFS_j2pBGG.
-:V3Jb3OGFS_j2pBGK rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "made by"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :V3Jb3OGFS_j2pBGL;
-    ontouml:targetEnd :V3Jb3OGFS_j2pBGN;
-    ontouml:relationEnd :V3Jb3OGFS_j2pBGL, :V3Jb3OGFS_j2pBGN.
-:N3Jb3OGFS_j2pBGP rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "has"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :N3Jb3OGFS_j2pBGQ;
-    ontouml:targetEnd :N3Jb3OGFS_j2pBGS;
-    ontouml:relationEnd :N3Jb3OGFS_j2pBGQ, :N3Jb3OGFS_j2pBGS.
-:d3Jb3OGFS_j2pBGV rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "has"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :d3Jb3OGFS_j2pBGW;
-    ontouml:targetEnd :d3Jb3OGFS_j2pBGY;
-    ontouml:relationEnd :d3Jb3OGFS_j2pBGW, :d3Jb3OGFS_j2pBGY.
-:D3Jb3OGFS_j2pBGa rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "crashes on"@en;
-    ontouml:stereotype ontouml:material;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :D3Jb3OGFS_j2pBGb;
-    ontouml:targetEnd :D3Jb3OGFS_j2pBGd;
-    ontouml:relationEnd :D3Jb3OGFS_j2pBGb, :D3Jb3OGFS_j2pBGd.
-:X3Jb3OGFS_j2pBGl rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "has"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :X3Jb3OGFS_j2pBGm;
-    ontouml:targetEnd :X3Jb3OGFS_j2pBGo;
-    ontouml:relationEnd :X3Jb3OGFS_j2pBGm, :X3Jb3OGFS_j2pBGo.
-:P3Jb3OGFS_j2pBGs rdf:type ontouml:Relation;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "involves"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :P3Jb3OGFS_j2pBGt;
-    ontouml:targetEnd :P3Jb3OGFS_j2pBGv;
-    ontouml:relationEnd :P3Jb3OGFS_j2pBGt, :P3Jb3OGFS_j2pBGv.
-:VnJb3OGFS_j2pBFu rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "fatalvictims"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none.
-:y3Jb3OGFS_j2pBGE rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :y3Jb3OGFS_j2pBGE_cardinality.
-:y3Jb3OGFS_j2pBGE_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:y3Jb3OGFS_j2pBGE ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr>.
-:y3Jb3OGFS_j2pBGG rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :y3Jb3OGFS_j2pBGG_cardinality.
-:y3Jb3OGFS_j2pBGG_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:y3Jb3OGFS_j2pBGG ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :YXJb3OGFS_j2pBF5.
-:V3Jb3OGFS_j2pBGL rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :V3Jb3OGFS_j2pBGL_cardinality.
-:V3Jb3OGFS_j2pBGL_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:V3Jb3OGFS_j2pBGL ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :PnJb3OGFS_j2pBFz.
-:V3Jb3OGFS_j2pBGN rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "vehicle"@en;
-    ontouml:cardinality :V3Jb3OGFS_j2pBGN_cardinality.
-:V3Jb3OGFS_j2pBGN_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:V3Jb3OGFS_j2pBGN ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/road-accident2013/9nJb3OGFS_j2pBFv>.
-:N3Jb3OGFS_j2pBGQ rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :N3Jb3OGFS_j2pBGQ_cardinality.
-:N3Jb3OGFS_j2pBGQ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:N3Jb3OGFS_j2pBGQ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :PnJb3OGFS_j2pBFz.
-:N3Jb3OGFS_j2pBGS rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "passengers"@en;
-    ontouml:cardinality :N3Jb3OGFS_j2pBGS_cardinality.
-:N3Jb3OGFS_j2pBGS_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "0..*";
-    ontouml:lowerBound "0";
-    ontouml:upperBound "*".
-:N3Jb3OGFS_j2pBGS ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :M3Jb3OGFS_j2pBGA.
-:d3Jb3OGFS_j2pBGW rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :d3Jb3OGFS_j2pBGW_cardinality.
-:d3Jb3OGFS_j2pBGW_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:d3Jb3OGFS_j2pBGW ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :PnJb3OGFS_j2pBFz.
-:d3Jb3OGFS_j2pBGY rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "drivers"@en;
-    ontouml:cardinality :d3Jb3OGFS_j2pBGY_cardinality.
-:d3Jb3OGFS_j2pBGY_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:d3Jb3OGFS_j2pBGY ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :c3Jb3OGFS_j2pBGB.
-:D3Jb3OGFS_j2pBGb rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :D3Jb3OGFS_j2pBGb_cardinality.
-:D3Jb3OGFS_j2pBGb_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:D3Jb3OGFS_j2pBGb ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :fnJb3OGFS_j2pBF0.
-:D3Jb3OGFS_j2pBGd rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :D3Jb3OGFS_j2pBGd_cardinality.
-:D3Jb3OGFS_j2pBGd_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:D3Jb3OGFS_j2pBGd ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :YXJb3OGFS_j2pBF5.
-:X3Jb3OGFS_j2pBGm rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "accident"@en;
-    ontouml:cardinality :X3Jb3OGFS_j2pBGm_cardinality.
-:X3Jb3OGFS_j2pBGm_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:X3Jb3OGFS_j2pBGm ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr>.
-:X3Jb3OGFS_j2pBGo rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "victims"@en;
-    ontouml:cardinality :X3Jb3OGFS_j2pBGo_cardinality.
-:X3Jb3OGFS_j2pBGo_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:X3Jb3OGFS_j2pBGo ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :IXJb3OGFS_j2pBF4.
-:P3Jb3OGFS_j2pBGt rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "accident"@en;
-    ontouml:cardinality :P3Jb3OGFS_j2pBGt_cardinality.
-:P3Jb3OGFS_j2pBGt_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:P3Jb3OGFS_j2pBGt ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr>.
-:P3Jb3OGFS_j2pBGv rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "vehicles"@en;
-    ontouml:cardinality :P3Jb3OGFS_j2pBGv_cardinality.
-:P3Jb3OGFS_j2pBGv_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:P3Jb3OGFS_j2pBGv ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :fnJb3OGFS_j2pBF0.
-:be252e28-475d-479b-bbef-15c311a129fb rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality :be252e28-475d-479b-bbef-15c311a129fb_cardinality.
-:be252e28-475d-479b-bbef-15c311a129fb_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:be252e28-475d-479b-bbef-15c311a129fb ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :D3Jb3OGFS_j2pBGa.
-<https://w3id.org/ontouml-models/model/road-accident2013/17284f24-e67d-4e03-b03c-6ae8d2f1e685> rdf:type ontouml:Property;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/road-accident2013/17284f24-e67d-4e03-b03c-6ae8d2f1e685_cardinality>.
-<https://w3id.org/ontouml-models/model/road-accident2013/17284f24-e67d-4e03-b03c-6ae8d2f1e685_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/road-accident2013/17284f24-e67d-4e03-b03c-6ae8d2f1e685> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/road-accident2013/5HJb3OGFS_j2pBFr>.
-:f3Jb3OGFS_j2pBGx rdf:type ontouml:Diagram;
-    ontouml:project :E6Jb3OGFS_j2pA2N;
-    ontouml:name "RoadTrafficAccident"@en;
-    ontouml:containsView :xPJb3OGFS_j2pBHj, :uPJb3OGFS_j2pBHZ, <https://w3id.org/ontouml-models/model/road-accident2013/4PJb3OGFS_j2pBG1>, :RPJb3OGFS_j2pBHh, <https://w3id.org/ontouml-models/model/road-accident2013/6PJb3OGFS_j2pBHT>, :kPJb3OGFS_j2pBG3, <https://w3id.org/ontouml-models/model/road-accident2013/0PJb3OGFS_j2pBG7>, :yPJb3OGFS_j2pBHJ, :iPJb3OGFS_j2pBHF, :aPJb3OGFS_j2pBHP, :MPJb3OGFS_j2pBG9, :pPJb3OGFS_j2pBHr, :BPJb3OGFS_j2pBHb, :pPJb3OGFS_j2pBHp, :FPJb3OGFS_j2pBH5, :SvJb3OGFS_j2pBH8, :JPJb3OGFS_j2pBHn, :FPJb3OGFS_j2pBH3, :RPJb3OGFS_j2pBHf, :ZPJb3OGFS_j2pBHv, :FPJb3OGFS_j2pBH1, :hPJb3OGFS_j2pBHd, :yPJb3OGFS_j2pBHH, :xPJb3OGFS_j2pBHl, <https://w3id.org/ontouml-models/model/road-accident2013/6PJb3OGFS_j2pBHR>, :KPJb3OGFS_j2pBHL, :ZPJb3OGFS_j2pBHt, <https://w3id.org/ontouml-models/model/road-accident2013/0PJb3OGFS_j2pBG5>, <https://w3id.org/ontouml-models/model/road-accident2013/5PJb3OGFS_j2pBHx>, :FPJb3OGFS_j2pBHz, :WPJb3OGFS_j2pBHV, :qPJb3OGFS_j2pBHN, <https://w3id.org/ontouml-models/model/road-accident2013/8PJb3OGFS_j2pBHB>.
+:0PJb3OGFS_j2pBG5_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :0PJb3OGFS_j2pBG5_shape_point ;
+    ontouml:width "86"^^xsd:nonNegativeInteger .
+
+:0PJb3OGFS_j2pBG5_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 442 ;
+    ontouml:yCoordinate 207 .
+
+:0PJb3OGFS_j2pBG7_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :0PJb3OGFS_j2pBG7_shape_point ;
+    ontouml:width "85"^^xsd:nonNegativeInteger .
+
+:0PJb3OGFS_j2pBG7_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 558 ;
+    ontouml:yCoordinate 205 .
+
+:17284f24-e67d-4e03-b03c-6ae8d2f1e685_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:4PJb3OGFS_j2pBG1_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :4PJb3OGFS_j2pBG1_shape_point ;
+    ontouml:width "95"^^xsd:nonNegativeInteger .
+
+:4PJb3OGFS_j2pBG1_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 721 ;
+    ontouml:yCoordinate 381 .
+
+:5PJb3OGFS_j2pBHx a ontouml:GeneralizationView ;
+    ontouml:isViewOf :l3Jb3OGFS_j2pBGJ ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :5PJb3OGFS_j2pBHx_path ;
+    ontouml:sourceView :iPJb3OGFS_j2pBHF ;
+    ontouml:targetView :yPJb3OGFS_j2pBHH .
+
+:5PJb3OGFS_j2pBHx_path a ontouml:Path ;
+    ontouml:point :5PJb3OGFS_j2pBHx_path_point_0,
+        :5PJb3OGFS_j2pBHx_path_point_1,
+        :5PJb3OGFS_j2pBHx_path_point_2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:5PJb3OGFS_j2pBHx_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 336 ;
+    ontouml:yCoordinate 164 .
+
+:5PJb3OGFS_j2pBHx_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 297 ;
+    ontouml:yCoordinate 164 .
+
+:5PJb3OGFS_j2pBHx_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 297 ;
+    ontouml:yCoordinate 140 .
+
+:6PJb3OGFS_j2pBHR_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :6PJb3OGFS_j2pBHR_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:6PJb3OGFS_j2pBHR_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 501 ;
+    ontouml:yCoordinate 300 .
+
+:6PJb3OGFS_j2pBHT_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :6PJb3OGFS_j2pBHT_shape_point ;
+    ontouml:width "122"^^xsd:nonNegativeInteger .
+
+:6PJb3OGFS_j2pBHT_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 166 ;
+    ontouml:yCoordinate 357 .
+
+:8PJb3OGFS_j2pBHB_shape a ontouml:Rectangle ;
+    ontouml:height "59"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :8PJb3OGFS_j2pBHB_shape_point ;
+    ontouml:width "118"^^xsd:nonNegativeInteger .
+
+:8PJb3OGFS_j2pBHB_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 269 ;
+    ontouml:yCoordinate 252 .
+
+:BPJb3OGFS_j2pBHb a ontouml:GeneralizationView ;
+    ontouml:isViewOf :d3Jb3OGFS_j2pBGU ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :BPJb3OGFS_j2pBHb_path ;
+    ontouml:sourceView :qPJb3OGFS_j2pBHN ;
+    ontouml:targetView :6PJb3OGFS_j2pBHT .
+
+:BPJb3OGFS_j2pBHb_path a ontouml:Path ;
+    ontouml:point :BPJb3OGFS_j2pBHb_path_point_0,
+        :BPJb3OGFS_j2pBHb_path_point_1,
+        :BPJb3OGFS_j2pBHb_path_point_2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:BPJb3OGFS_j2pBHb_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 249 ;
+    ontouml:yCoordinate 427 .
+
+:BPJb3OGFS_j2pBHb_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 210 ;
+    ontouml:yCoordinate 427 .
+
+:BPJb3OGFS_j2pBHb_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 211 ;
+    ontouml:yCoordinate 396 .
+
+:D3Jb3OGFS_j2pBGb_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:D3Jb3OGFS_j2pBGd_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:E6Jb3OGFS_j2pA2N_root a ontouml:Package ;
+    ontouml:containsModelElement :m7Jb3OGFS_j2pBFo,
+        :wvJb3OGFS_j2pBH7 ;
+    ontouml:name "RoadTrafficAccident"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:FPJb3OGFS_j2pBH1 a ontouml:RelationView ;
+    ontouml:isViewOf :N3Jb3OGFS_j2pBGP ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :FPJb3OGFS_j2pBH1_path ;
+    ontouml:sourceView :KPJb3OGFS_j2pBHL ;
+    ontouml:targetView :0PJb3OGFS_j2pBG5 .
+
+:FPJb3OGFS_j2pBH1_path a ontouml:Path ;
+    ontouml:point :FPJb3OGFS_j2pBH1_path_point_0,
+        :FPJb3OGFS_j2pBH1_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:FPJb3OGFS_j2pBH1_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 529 ;
+    ontouml:yCoordinate 141 .
+
+:FPJb3OGFS_j2pBH1_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 529 ;
+    ontouml:yCoordinate 206 .
+
+:FPJb3OGFS_j2pBH3 a ontouml:RelationView ;
+    ontouml:isViewOf :y3Jb3OGFS_j2pBGD ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :FPJb3OGFS_j2pBH3_path ;
+    ontouml:sourceView :8PJb3OGFS_j2pBHB ;
+    ontouml:targetView :6PJb3OGFS_j2pBHT .
+
+:FPJb3OGFS_j2pBH3_path a ontouml:Path ;
+    ontouml:point :FPJb3OGFS_j2pBH3_path_point_0,
+        :FPJb3OGFS_j2pBH3_path_point_1,
+        :FPJb3OGFS_j2pBH3_path_point_2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:FPJb3OGFS_j2pBH3_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 327 ;
+    ontouml:yCoordinate 312 .
+
+:FPJb3OGFS_j2pBH3_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 327 ;
+    ontouml:yCoordinate 373 .
+
+:FPJb3OGFS_j2pBH3_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 290 ;
+    ontouml:yCoordinate 373 .
+
+:FPJb3OGFS_j2pBH5 a ontouml:RelationView ;
+    ontouml:isViewOf :d3Jb3OGFS_j2pBGV ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :FPJb3OGFS_j2pBH5_path ;
+    ontouml:sourceView :KPJb3OGFS_j2pBHL ;
+    ontouml:targetView :0PJb3OGFS_j2pBG7 .
+
+:FPJb3OGFS_j2pBH5_path a ontouml:Path ;
+    ontouml:point :FPJb3OGFS_j2pBH5_path_point_0,
+        :FPJb3OGFS_j2pBH5_path_point_1,
+        :FPJb3OGFS_j2pBH5_path_point_2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:FPJb3OGFS_j2pBH5_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 534 ;
+    ontouml:yCoordinate 123 .
+
+:FPJb3OGFS_j2pBH5_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 602 ;
+    ontouml:yCoordinate 123 .
+
+:FPJb3OGFS_j2pBH5_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 603 ;
+    ontouml:yCoordinate 204 .
+
+:FPJb3OGFS_j2pBHz a ontouml:RelationView ;
+    ontouml:isViewOf :V3Jb3OGFS_j2pBGK ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :FPJb3OGFS_j2pBHz_path ;
+    ontouml:sourceView :KPJb3OGFS_j2pBHL ;
+    ontouml:targetView :yPJb3OGFS_j2pBHH .
+
+:FPJb3OGFS_j2pBHz_path a ontouml:Path ;
+    ontouml:point :FPJb3OGFS_j2pBHz_path_point_0,
+        :FPJb3OGFS_j2pBHz_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:FPJb3OGFS_j2pBHz_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 445 ;
+    ontouml:yCoordinate 139 .
+
+:FPJb3OGFS_j2pBHz_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 328 ;
+    ontouml:yCoordinate 139 .
+
+:JPJb3OGFS_j2pBHn a ontouml:GeneralizationView ;
+    ontouml:isViewOf :n3Jb3OGFS_j2pBGj ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :JPJb3OGFS_j2pBHn_path ;
+    ontouml:sourceView :MPJb3OGFS_j2pBG9 ;
+    ontouml:targetView :kPJb3OGFS_j2pBG3 .
+
+:JPJb3OGFS_j2pBHn_path a ontouml:Path ;
+    ontouml:point :JPJb3OGFS_j2pBHn_path_point_0,
+        :JPJb3OGFS_j2pBHn_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:JPJb3OGFS_j2pBHn_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 708 ;
+    ontouml:yCoordinate 339 .
+
+:JPJb3OGFS_j2pBHn_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 709 ;
+    ontouml:yCoordinate 381 .
+
+:KPJb3OGFS_j2pBHL_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :KPJb3OGFS_j2pBHL_shape_point ;
+    ontouml:width "86"^^xsd:nonNegativeInteger .
+
+:KPJb3OGFS_j2pBHL_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 446 ;
+    ontouml:yCoordinate 103 .
+
+:MPJb3OGFS_j2pBG9_shape a ontouml:Rectangle ;
+    ontouml:height "35"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :MPJb3OGFS_j2pBG9_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:MPJb3OGFS_j2pBG9_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 637 ;
+    ontouml:yCoordinate 303 .
+
+:N3Jb3OGFS_j2pBGQ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:N3Jb3OGFS_j2pBGS_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:P3Jb3OGFS_j2pBGt_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:P3Jb3OGFS_j2pBGv_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:RPJb3OGFS_j2pBHf a ontouml:GeneralizationView ;
+    ontouml:isViewOf :H3Jb3OGFS_j2pBGi ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :RPJb3OGFS_j2pBHf_path ;
+    ontouml:sourceView :MPJb3OGFS_j2pBG9 ;
+    ontouml:targetView :6PJb3OGFS_j2pBHR .
+
+:RPJb3OGFS_j2pBHf_path a ontouml:Path ;
+    ontouml:point :RPJb3OGFS_j2pBHf_path_point_0,
+        :RPJb3OGFS_j2pBHf_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:RPJb3OGFS_j2pBHf_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 636 ;
+    ontouml:yCoordinate 338 .
+
+:RPJb3OGFS_j2pBHf_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 592 ;
+    ontouml:yCoordinate 338 .
+
+:RPJb3OGFS_j2pBHh a ontouml:GeneralizationView ;
+    ontouml:isViewOf :n3Jb3OGFS_j2pBGk ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :RPJb3OGFS_j2pBHh_path ;
+    ontouml:sourceView :6PJb3OGFS_j2pBHR ;
+    ontouml:targetView :WPJb3OGFS_j2pBHV .
+
+:RPJb3OGFS_j2pBHh_path a ontouml:Path ;
+    ontouml:point :RPJb3OGFS_j2pBHh_path_point_0,
+        :RPJb3OGFS_j2pBHh_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:RPJb3OGFS_j2pBHh_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 591 ;
+    ontouml:yCoordinate 339 .
+
+:RPJb3OGFS_j2pBHh_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 592 ;
+    ontouml:yCoordinate 381 .
+
+:SvJb3OGFS_j2pBH8 a ontouml:RelationView ;
+    ontouml:isViewOf :wvJb3OGFS_j2pBH7 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :SvJb3OGFS_j2pBH8_path ;
+    ontouml:sourceView :uPJb3OGFS_j2pBHZ ;
+    ontouml:targetView :8PJb3OGFS_j2pBHB .
+
+:SvJb3OGFS_j2pBH8_path a ontouml:Path ;
+    ontouml:point :SvJb3OGFS_j2pBH8_path_point_0,
+        :SvJb3OGFS_j2pBH8_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:SvJb3OGFS_j2pBH8_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 254 ;
+    ontouml:yCoordinate 282 .
+
+:SvJb3OGFS_j2pBH8_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 268 ;
+    ontouml:yCoordinate 282 .
+
+:V3Jb3OGFS_j2pBGL_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:V3Jb3OGFS_j2pBGN_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:VnJb3OGFS_j2pBFu a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "fatalvictims"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:WPJb3OGFS_j2pBHV_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :WPJb3OGFS_j2pBHV_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:WPJb3OGFS_j2pBHV_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 504 ;
+    ontouml:yCoordinate 382 .
+
+:X3Jb3OGFS_j2pBGm_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:X3Jb3OGFS_j2pBGo_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:ZPJb3OGFS_j2pBHt a ontouml:RelationView ;
+    ontouml:isViewOf :P3Jb3OGFS_j2pBGs ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :ZPJb3OGFS_j2pBHt_path ;
+    ontouml:sourceView :8PJb3OGFS_j2pBHB ;
+    ontouml:targetView :yPJb3OGFS_j2pBHJ .
+
+:ZPJb3OGFS_j2pBHt_path a ontouml:Path ;
+    ontouml:point :ZPJb3OGFS_j2pBHt_path_point_0,
+        :ZPJb3OGFS_j2pBHt_path_point_1,
+        :ZPJb3OGFS_j2pBHt_path_point_2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:ZPJb3OGFS_j2pBHt_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 326 ;
+    ontouml:yCoordinate 251 .
+
+:ZPJb3OGFS_j2pBHt_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 326 ;
+    ontouml:yCoordinate 188 .
+
+:ZPJb3OGFS_j2pBHt_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 254 ;
+    ontouml:yCoordinate 188 .
+
+:ZPJb3OGFS_j2pBHv a ontouml:GeneralizationView ;
+    ontouml:isViewOf :83Jb3OGFS_j2pBGC ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :ZPJb3OGFS_j2pBHv_path ;
+    ontouml:sourceView :yPJb3OGFS_j2pBHH ;
+    ontouml:targetView :yPJb3OGFS_j2pBHJ .
+
+:ZPJb3OGFS_j2pBHv_path a ontouml:Path ;
+    ontouml:point :ZPJb3OGFS_j2pBHv_path_point_0,
+        :ZPJb3OGFS_j2pBHv_path_point_1,
+        :ZPJb3OGFS_j2pBHv_path_point_2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:ZPJb3OGFS_j2pBHv_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 236 ;
+    ontouml:yCoordinate 119 .
+
+:ZPJb3OGFS_j2pBHv_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 209 ;
+    ontouml:yCoordinate 119 .
+
+:ZPJb3OGFS_j2pBHv_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 209 ;
+    ontouml:yCoordinate 170 .
+
+:aPJb3OGFS_j2pBHP_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :aPJb3OGFS_j2pBHP_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:aPJb3OGFS_j2pBHP_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 351 ;
+    ontouml:yCoordinate 408 .
+
+:be252e28-475d-479b-bbef-15c311a129fb_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:d3Jb3OGFS_j2pBGW_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:d3Jb3OGFS_j2pBGY_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:f3Jb3OGFS_j2pBGx a ontouml:Diagram ;
+    ontouml:containsView :0PJb3OGFS_j2pBG5,
+        :0PJb3OGFS_j2pBG7,
+        :4PJb3OGFS_j2pBG1,
+        :5PJb3OGFS_j2pBHx,
+        :6PJb3OGFS_j2pBHR,
+        :6PJb3OGFS_j2pBHT,
+        :8PJb3OGFS_j2pBHB,
+        :BPJb3OGFS_j2pBHb,
+        :FPJb3OGFS_j2pBH1,
+        :FPJb3OGFS_j2pBH3,
+        :FPJb3OGFS_j2pBH5,
+        :FPJb3OGFS_j2pBHz,
+        :JPJb3OGFS_j2pBHn,
+        :KPJb3OGFS_j2pBHL,
+        :MPJb3OGFS_j2pBG9,
+        :RPJb3OGFS_j2pBHf,
+        :RPJb3OGFS_j2pBHh,
+        :SvJb3OGFS_j2pBH8,
+        :WPJb3OGFS_j2pBHV,
+        :ZPJb3OGFS_j2pBHt,
+        :ZPJb3OGFS_j2pBHv,
+        :aPJb3OGFS_j2pBHP,
+        :hPJb3OGFS_j2pBHd,
+        :iPJb3OGFS_j2pBHF,
+        :kPJb3OGFS_j2pBG3,
+        :pPJb3OGFS_j2pBHp,
+        :pPJb3OGFS_j2pBHr,
+        :qPJb3OGFS_j2pBHN,
+        :uPJb3OGFS_j2pBHZ,
+        :xPJb3OGFS_j2pBHj,
+        :xPJb3OGFS_j2pBHl,
+        :yPJb3OGFS_j2pBHH,
+        :yPJb3OGFS_j2pBHJ ;
+    ontouml:name "RoadTrafficAccident"@en ;
+    ontouml:owner :m7Jb3OGFS_j2pBFo ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:hPJb3OGFS_j2pBHd a ontouml:GeneralizationView ;
+    ontouml:isViewOf :b3Jb3OGFS_j2pBGg ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :hPJb3OGFS_j2pBHd_path ;
+    ontouml:sourceView :8PJb3OGFS_j2pBHB ;
+    ontouml:targetView :aPJb3OGFS_j2pBHP .
+
+:hPJb3OGFS_j2pBHd_path a ontouml:Path ;
+    ontouml:point :hPJb3OGFS_j2pBHd_path_point_0,
+        :hPJb3OGFS_j2pBHd_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:hPJb3OGFS_j2pBHd_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 388 ;
+    ontouml:yCoordinate 312 .
+
+:hPJb3OGFS_j2pBHd_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 388 ;
+    ontouml:yCoordinate 407 .
+
+:iPJb3OGFS_j2pBHF_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :iPJb3OGFS_j2pBHF_shape_point ;
+    ontouml:width "86"^^xsd:nonNegativeInteger .
+
+:iPJb3OGFS_j2pBHF_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 337 ;
+    ontouml:yCoordinate 153 .
+
+:kPJb3OGFS_j2pBG3_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :kPJb3OGFS_j2pBG3_shape_point ;
+    ontouml:width "91"^^xsd:nonNegativeInteger .
+
+:kPJb3OGFS_j2pBG3_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 617 ;
+    ontouml:yCoordinate 382 .
+
+:pPJb3OGFS_j2pBHp a ontouml:GeneralizationView ;
+    ontouml:isViewOf :33Jb3OGFS_j2pBGq ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :pPJb3OGFS_j2pBHp_path ;
+    ontouml:sourceView :6PJb3OGFS_j2pBHR ;
+    ontouml:targetView :0PJb3OGFS_j2pBG5 .
+
+:pPJb3OGFS_j2pBHp_path a ontouml:Path ;
+    ontouml:point :pPJb3OGFS_j2pBHp_path_point_0,
+        :pPJb3OGFS_j2pBHp_path_point_1,
+        :pPJb3OGFS_j2pBHp_path_point_2,
+        :pPJb3OGFS_j2pBHp_path_point_3 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:pPJb3OGFS_j2pBHp_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 549 ;
+    ontouml:yCoordinate 299 .
+
+:pPJb3OGFS_j2pBHp_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 549 ;
+    ontouml:yCoordinate 260 .
+
+:pPJb3OGFS_j2pBHp_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 492 ;
+    ontouml:yCoordinate 260 .
+
+:pPJb3OGFS_j2pBHp_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 492 ;
+    ontouml:yCoordinate 246 .
+
+:pPJb3OGFS_j2pBHr a ontouml:GeneralizationView ;
+    ontouml:isViewOf :P3Jb3OGFS_j2pBGr ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :pPJb3OGFS_j2pBHr_path ;
+    ontouml:sourceView :6PJb3OGFS_j2pBHR ;
+    ontouml:targetView :0PJb3OGFS_j2pBG7 .
+
+:pPJb3OGFS_j2pBHr_path a ontouml:Path ;
+    ontouml:point :pPJb3OGFS_j2pBHr_path_point_0,
+        :pPJb3OGFS_j2pBHr_path_point_1,
+        :pPJb3OGFS_j2pBHr_path_point_2,
+        :pPJb3OGFS_j2pBHr_path_point_3 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:pPJb3OGFS_j2pBHr_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 549 ;
+    ontouml:yCoordinate 299 .
+
+:pPJb3OGFS_j2pBHr_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 549 ;
+    ontouml:yCoordinate 260 .
+
+:pPJb3OGFS_j2pBHr_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 602 ;
+    ontouml:yCoordinate 260 .
+
+:pPJb3OGFS_j2pBHr_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 603 ;
+    ontouml:yCoordinate 244 .
+
+:qPJb3OGFS_j2pBHN_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :qPJb3OGFS_j2pBHN_shape_point ;
+    ontouml:width "86"^^xsd:nonNegativeInteger .
+
+:qPJb3OGFS_j2pBHN_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 250 ;
+    ontouml:yCoordinate 407 .
+
+:uPJb3OGFS_j2pBHZ_path a ontouml:Path ;
+    ontouml:point :uPJb3OGFS_j2pBHZ_path_point_0,
+        :uPJb3OGFS_j2pBHZ_path_point_1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:uPJb3OGFS_j2pBHZ_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 253 ;
+    ontouml:yCoordinate 208 .
+
+:uPJb3OGFS_j2pBHZ_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 254 ;
+    ontouml:yCoordinate 356 .
+
+:xPJb3OGFS_j2pBHj a ontouml:RelationView ;
+    ontouml:isViewOf :X3Jb3OGFS_j2pBGl ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :xPJb3OGFS_j2pBHj_path ;
+    ontouml:sourceView :8PJb3OGFS_j2pBHB ;
+    ontouml:targetView :WPJb3OGFS_j2pBHV .
+
+:xPJb3OGFS_j2pBHj_path a ontouml:Path ;
+    ontouml:point :xPJb3OGFS_j2pBHj_path_point_0,
+        :xPJb3OGFS_j2pBHj_path_point_1,
+        :xPJb3OGFS_j2pBHj_path_point_2,
+        :xPJb3OGFS_j2pBHj_path_point_3 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:xPJb3OGFS_j2pBHj_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 389 ;
+    ontouml:yCoordinate 285 .
+
+:xPJb3OGFS_j2pBHj_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 455 ;
+    ontouml:yCoordinate 285 .
+
+:xPJb3OGFS_j2pBHj_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 455 ;
+    ontouml:yCoordinate 397 .
+
+:xPJb3OGFS_j2pBHj_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 503 ;
+    ontouml:yCoordinate 397 .
+
+:xPJb3OGFS_j2pBHl a ontouml:GeneralizationView ;
+    ontouml:isViewOf :73Jb3OGFS_j2pBGh ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :xPJb3OGFS_j2pBHl_path ;
+    ontouml:sourceView :MPJb3OGFS_j2pBG9 ;
+    ontouml:targetView :4PJb3OGFS_j2pBG1 .
+
+:xPJb3OGFS_j2pBHl_path a ontouml:Path ;
+    ontouml:point :xPJb3OGFS_j2pBHl_path_point_0,
+        :xPJb3OGFS_j2pBHl_path_point_1,
+        :xPJb3OGFS_j2pBHl_path_point_2,
+        :xPJb3OGFS_j2pBHl_path_point_3 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:xPJb3OGFS_j2pBHl_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 671 ;
+    ontouml:yCoordinate 339 .
+
+:xPJb3OGFS_j2pBHl_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 671 ;
+    ontouml:yCoordinate 366 .
+
+:xPJb3OGFS_j2pBHl_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 762 ;
+    ontouml:yCoordinate 366 .
+
+:xPJb3OGFS_j2pBHl_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 763 ;
+    ontouml:yCoordinate 380 .
+
+:y3Jb3OGFS_j2pBGE_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:y3Jb3OGFS_j2pBGG_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:yPJb3OGFS_j2pBHH_shape a ontouml:Rectangle ;
+    ontouml:height "37"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :yPJb3OGFS_j2pBHH_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:yPJb3OGFS_j2pBHH_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 237 ;
+    ontouml:yCoordinate 101 .
+
+:yPJb3OGFS_j2pBHJ_shape a ontouml:Rectangle ;
+    ontouml:height "36"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:topLeftPosition :yPJb3OGFS_j2pBHJ_shape_point ;
+    ontouml:width "90"^^xsd:nonNegativeInteger .
+
+:yPJb3OGFS_j2pBHJ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 163 ;
+    ontouml:yCoordinate 171 .
+
+:17284f24-e67d-4e03-b03c-6ae8d2f1e685 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :17284f24-e67d-4e03-b03c-6ae8d2f1e685_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :5HJb3OGFS_j2pBFr .
+
+:33Jb3OGFS_j2pBGq a ontouml:Generalization ;
+    ontouml:general :AXJb3OGFS_j2pBF2 ;
+    ontouml:name "{disjoint,complete}"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :M3Jb3OGFS_j2pBGA .
+
+:4PJb3OGFS_j2pBG1 a ontouml:ClassView ;
+    ontouml:isViewOf :g3Jb3OGFS_j2pBF9 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :4PJb3OGFS_j2pBG1_shape .
+
+:73Jb3OGFS_j2pBGh a ontouml:Generalization ;
+    ontouml:general :A3Jb3OGFS_j2pBF8 ;
+    ontouml:name "{disjoint,complete}"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :g3Jb3OGFS_j2pBF9 .
+
+:83Jb3OGFS_j2pBGC a ontouml:Generalization ;
+    ontouml:general :9nJb3OGFS_j2pBFv ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :fnJb3OGFS_j2pBF0 .
+
+:D3Jb3OGFS_j2pBGb a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :D3Jb3OGFS_j2pBGb_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :fnJb3OGFS_j2pBF0 .
+
+:D3Jb3OGFS_j2pBGd a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :D3Jb3OGFS_j2pBGd_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :YXJb3OGFS_j2pBF5 .
+
+:H3Jb3OGFS_j2pBGi a ontouml:Generalization ;
+    ontouml:general :A3Jb3OGFS_j2pBF8 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :AXJb3OGFS_j2pBF2 .
+
+:N3Jb3OGFS_j2pBGP a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "has"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :N3Jb3OGFS_j2pBGQ,
+        :N3Jb3OGFS_j2pBGS ;
+    ontouml:sourceEnd :N3Jb3OGFS_j2pBGQ ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :N3Jb3OGFS_j2pBGS .
+
+:N3Jb3OGFS_j2pBGQ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :N3Jb3OGFS_j2pBGQ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :PnJb3OGFS_j2pBFz .
+
+:N3Jb3OGFS_j2pBGS a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :N3Jb3OGFS_j2pBGS_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "passengers"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :M3Jb3OGFS_j2pBGA .
+
+:P3Jb3OGFS_j2pBGr a ontouml:Generalization ;
+    ontouml:general :AXJb3OGFS_j2pBF2 ;
+    ontouml:name "{disjoint,complete}"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :c3Jb3OGFS_j2pBGB .
+
+:P3Jb3OGFS_j2pBGs a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "involves"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :P3Jb3OGFS_j2pBGt,
+        :P3Jb3OGFS_j2pBGv ;
+    ontouml:sourceEnd :P3Jb3OGFS_j2pBGt ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :P3Jb3OGFS_j2pBGv .
+
+:P3Jb3OGFS_j2pBGt a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :P3Jb3OGFS_j2pBGt_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "accident"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :5HJb3OGFS_j2pBFr .
+
+:P3Jb3OGFS_j2pBGv a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :P3Jb3OGFS_j2pBGv_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "vehicles"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :fnJb3OGFS_j2pBF0 .
+
+:V3Jb3OGFS_j2pBGK a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "made by"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :V3Jb3OGFS_j2pBGL,
+        :V3Jb3OGFS_j2pBGN ;
+    ontouml:sourceEnd :V3Jb3OGFS_j2pBGL ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :V3Jb3OGFS_j2pBGN .
+
+:V3Jb3OGFS_j2pBGL a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :V3Jb3OGFS_j2pBGL_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :PnJb3OGFS_j2pBFz .
+
+:V3Jb3OGFS_j2pBGN a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :V3Jb3OGFS_j2pBGN_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "vehicle"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :9nJb3OGFS_j2pBFv .
+
+:X3Jb3OGFS_j2pBGl a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "has"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :X3Jb3OGFS_j2pBGm,
+        :X3Jb3OGFS_j2pBGo ;
+    ontouml:sourceEnd :X3Jb3OGFS_j2pBGm ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :X3Jb3OGFS_j2pBGo .
+
+:X3Jb3OGFS_j2pBGm a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :X3Jb3OGFS_j2pBGm_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name "accident"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :5HJb3OGFS_j2pBFr .
+
+:X3Jb3OGFS_j2pBGo a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :X3Jb3OGFS_j2pBGo_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "victims"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :IXJb3OGFS_j2pBF4 .
+
+:aPJb3OGFS_j2pBHP a ontouml:ClassView ;
+    ontouml:isViewOf :_nJb3OGFS_j2pBF1 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :aPJb3OGFS_j2pBHP_shape .
+
+:b3Jb3OGFS_j2pBGg a ontouml:Generalization ;
+    ontouml:general :5HJb3OGFS_j2pBFr ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :_nJb3OGFS_j2pBF1 .
+
+:be252e28-475d-479b-bbef-15c311a129fb a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :be252e28-475d-479b-bbef-15c311a129fb_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :D3Jb3OGFS_j2pBGa .
+
+:d3Jb3OGFS_j2pBGU a ontouml:Generalization ;
+    ontouml:general :gXJb3OGFS_j2pBF3 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :YXJb3OGFS_j2pBF5 .
+
+:d3Jb3OGFS_j2pBGV a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "has"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :d3Jb3OGFS_j2pBGW,
+        :d3Jb3OGFS_j2pBGY ;
+    ontouml:sourceEnd :d3Jb3OGFS_j2pBGW ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :d3Jb3OGFS_j2pBGY .
+
+:d3Jb3OGFS_j2pBGW a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :d3Jb3OGFS_j2pBGW_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :PnJb3OGFS_j2pBFz .
+
+:d3Jb3OGFS_j2pBGY a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :d3Jb3OGFS_j2pBGY_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:name "drivers"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :c3Jb3OGFS_j2pBGB .
+
+:iPJb3OGFS_j2pBHF a ontouml:ClassView ;
+    ontouml:isViewOf :7nJb3OGFS_j2pBFx ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :iPJb3OGFS_j2pBHF_shape .
+
+:kPJb3OGFS_j2pBG3 a ontouml:ClassView ;
+    ontouml:isViewOf :U3Jb3OGFS_j2pBF_ ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :kPJb3OGFS_j2pBG3_shape .
+
+:l3Jb3OGFS_j2pBGJ a ontouml:Generalization ;
+    ontouml:general :7nJb3OGFS_j2pBFx ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :9nJb3OGFS_j2pBFv .
+
+:m7Jb3OGFS_j2pBFo a ontouml:Package ;
+    ontouml:containsModelElement :33Jb3OGFS_j2pBGq,
+        :5HJb3OGFS_j2pBFr,
+        :73Jb3OGFS_j2pBGh,
+        :7nJb3OGFS_j2pBFx,
+        :83Jb3OGFS_j2pBGC,
+        :9nJb3OGFS_j2pBFv,
+        :A3Jb3OGFS_j2pBF8,
+        :AXJb3OGFS_j2pBF2,
+        :D3Jb3OGFS_j2pBGa,
+        :H3Jb3OGFS_j2pBGi,
+        :IXJb3OGFS_j2pBF4,
+        :M3Jb3OGFS_j2pBGA,
+        :N3Jb3OGFS_j2pBGP,
+        :P3Jb3OGFS_j2pBGr,
+        :P3Jb3OGFS_j2pBGs,
+        :PnJb3OGFS_j2pBFz,
+        :U3Jb3OGFS_j2pBF_,
+        :V3Jb3OGFS_j2pBGK,
+        :X3Jb3OGFS_j2pBGl,
+        :YXJb3OGFS_j2pBF5,
+        :_nJb3OGFS_j2pBF1,
+        :b3Jb3OGFS_j2pBGg,
+        :c3Jb3OGFS_j2pBGB,
+        :d3Jb3OGFS_j2pBGU,
+        :d3Jb3OGFS_j2pBGV,
+        :fnJb3OGFS_j2pBF0,
+        :g3Jb3OGFS_j2pBF9,
+        :gXJb3OGFS_j2pBF3,
+        :l3Jb3OGFS_j2pBGJ,
+        :n3Jb3OGFS_j2pBGj,
+        :n3Jb3OGFS_j2pBGk,
+        :y3Jb3OGFS_j2pBGD ;
+    ontouml:name "RoadTrafficAccident"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N .
+
+:n3Jb3OGFS_j2pBGj a ontouml:Generalization ;
+    ontouml:general :A3Jb3OGFS_j2pBF8 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :U3Jb3OGFS_j2pBF_ .
+
+:n3Jb3OGFS_j2pBGk a ontouml:Generalization ;
+    ontouml:general :AXJb3OGFS_j2pBF2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:specific :IXJb3OGFS_j2pBF4 .
+
+:qPJb3OGFS_j2pBHN a ontouml:ClassView ;
+    ontouml:isViewOf :gXJb3OGFS_j2pBF3 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :qPJb3OGFS_j2pBHN_shape .
+
+:uPJb3OGFS_j2pBHZ a ontouml:RelationView ;
+    ontouml:isViewOf :D3Jb3OGFS_j2pBGa ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :uPJb3OGFS_j2pBHZ_path ;
+    ontouml:sourceView :yPJb3OGFS_j2pBHJ ;
+    ontouml:targetView :6PJb3OGFS_j2pBHT .
+
+:wvJb3OGFS_j2pBH7 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived true ;
+    ontouml:name "AssociationClass1"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :17284f24-e67d-4e03-b03c-6ae8d2f1e685,
+        :be252e28-475d-479b-bbef-15c311a129fb ;
+    ontouml:sourceEnd :be252e28-475d-479b-bbef-15c311a129fb ;
+    ontouml:stereotype ontouml:derivation ;
+    ontouml:targetEnd :17284f24-e67d-4e03-b03c-6ae8d2f1e685 .
+
+:y3Jb3OGFS_j2pBGD a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "occurs on"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :y3Jb3OGFS_j2pBGE,
+        :y3Jb3OGFS_j2pBGG ;
+    ontouml:sourceEnd :y3Jb3OGFS_j2pBGE ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :y3Jb3OGFS_j2pBGG .
+
+:y3Jb3OGFS_j2pBGE a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :y3Jb3OGFS_j2pBGE_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :5HJb3OGFS_j2pBFr .
+
+:y3Jb3OGFS_j2pBGG a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :y3Jb3OGFS_j2pBGG_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:propertyType :YXJb3OGFS_j2pBF5 .
+
+:0PJb3OGFS_j2pBG5 a ontouml:ClassView ;
+    ontouml:isViewOf :M3Jb3OGFS_j2pBGA ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :0PJb3OGFS_j2pBG5_shape .
+
+:0PJb3OGFS_j2pBG7 a ontouml:ClassView ;
+    ontouml:isViewOf :c3Jb3OGFS_j2pBGB ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :0PJb3OGFS_j2pBG7_shape .
+
+:7nJb3OGFS_j2pBFx a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Vehicle"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:D3Jb3OGFS_j2pBGa a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "crashes on"@en ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:relationEnd :D3Jb3OGFS_j2pBGb,
+        :D3Jb3OGFS_j2pBGd ;
+    ontouml:sourceEnd :D3Jb3OGFS_j2pBGb ;
+    ontouml:stereotype ontouml:material ;
+    ontouml:targetEnd :D3Jb3OGFS_j2pBGd .
+
+:U3Jb3OGFS_j2pBF_ a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "DeceasedPerson"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:phase .
+
+:WPJb3OGFS_j2pBHV a ontouml:ClassView ;
+    ontouml:isViewOf :IXJb3OGFS_j2pBF4 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :WPJb3OGFS_j2pBHV_shape .
+
+:_nJb3OGFS_j2pBF1 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "RearEndCollision"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:g3Jb3OGFS_j2pBF9 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "LivingPerson"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:phase .
+
+:gXJb3OGFS_j2pBF3 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Roadway"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:6PJb3OGFS_j2pBHT a ontouml:ClassView ;
+    ontouml:isViewOf :YXJb3OGFS_j2pBF5 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :6PJb3OGFS_j2pBHT_shape .
+
+:IXJb3OGFS_j2pBF4 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Victim"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:KPJb3OGFS_j2pBHL a ontouml:ClassView ;
+    ontouml:isViewOf :PnJb3OGFS_j2pBFz ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :KPJb3OGFS_j2pBHL_shape .
+
+:M3Jb3OGFS_j2pBGA a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Passenger"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:MPJb3OGFS_j2pBG9 a ontouml:ClassView ;
+    ontouml:isViewOf :A3Jb3OGFS_j2pBF8 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :MPJb3OGFS_j2pBG9_shape .
+
+:c3Jb3OGFS_j2pBGB a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Driver"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:yPJb3OGFS_j2pBHH a ontouml:ClassView ;
+    ontouml:isViewOf :9nJb3OGFS_j2pBFv ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :yPJb3OGFS_j2pBHH_shape .
+
+:yPJb3OGFS_j2pBHJ a ontouml:ClassView ;
+    ontouml:isViewOf :fnJb3OGFS_j2pBF0 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :yPJb3OGFS_j2pBHJ_shape .
+
+:6PJb3OGFS_j2pBHR a ontouml:ClassView ;
+    ontouml:isViewOf :AXJb3OGFS_j2pBF2 ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :6PJb3OGFS_j2pBHR_shape .
+
+:9nJb3OGFS_j2pBFv a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "TravelingVehicle"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:A3Jb3OGFS_j2pBF8 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Person"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:PnJb3OGFS_j2pBFz a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Travel"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:YXJb3OGFS_j2pBF5 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "RoadwayWithAccident"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:fnJb3OGFS_j2pBF0 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "CrashedVehicle"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:8PJb3OGFS_j2pBHB a ontouml:ClassView ;
+    ontouml:isViewOf :5HJb3OGFS_j2pBFr ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:shape :8PJb3OGFS_j2pBHB_shape .
+
+:AXJb3OGFS_j2pBF2 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Traveler"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:5HJb3OGFS_j2pBFr a ontouml:Class ;
+    ontouml:attribute :VnJb3OGFS_j2pBFu ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "RoadTrafficAccident"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :E6Jb3OGFS_j2pA2N ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:E6Jb3OGFS_j2pA2N a ontouml:Project ;
+    ontouml:diagram :f3Jb3OGFS_j2pBGx ;
+    ontouml:model :E6Jb3OGFS_j2pA2N_root ;
+    ontouml:name "RoadTrafficAccident"@en .
+

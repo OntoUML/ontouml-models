@@ -1,642 +1,882 @@
-@prefix : <https://w3id.org/ontouml-models/model/grueau2013towards#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/grueau2013towards#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/grueau2013towards/> rdf:type ontouml:Project;
-    ontouml:name "grueau2013towards"@en;
-    ontouml:model :h8ujh76AUB0E2QWf_root;
-    ontouml:diagram :ZORjh76AUB0E2QqJ.
-:h8ujh76AUB0E2QWf_root rdf:type ontouml:Package;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "grueau2013towards"@en;
-    ontouml:containsModelElement :dszjh76AUB0E2Qqa, :GSGTh76AUB0E2Qqz, :clhTh76AUB0E2QrC, :aEuzh76AUB0E2QyV, :OYNzh76AUB0E2Qys, <https://w3id.org/ontouml-models/model/grueau2013towards#0LeER76AUB0E2Q0T>, :UEVER76AUB0E2Q00, :wgDER76AUB0E2Q1K, :yKTER76AUB0E2Q1Z, :QWrER76AUB0E2Q1k, :zPHER76AUB0E2Q15, :Ve3ER76AUB0E2Q2I, :QCfER76AUB0E2Q2R, :SMbzh76AUB0E2Qy9, :E47zh76AUB0E2QzB, <https://w3id.org/ontouml-models/model/grueau2013towards#.MFER76AUB0E2Q0k>, <https://w3id.org/ontouml-models/model/grueau2013towards#7oOkR76AUB0E2Q3r>, :GrOkR76AUB0E2Q3v, <https://w3id.org/ontouml-models/model/grueau2013towards#7OukR76AUB0E2Q3z>, <https://w3id.org/ontouml-models/model/grueau2013towards#5wekR76AUB0E2Q33>, <https://w3id.org/ontouml-models/model/grueau2013towards#7xekR76AUB0E2Q37>, <https://w3id.org/ontouml-models/model/grueau2013towards#HY.kR76AUB0E2Q3_>, <https://w3id.org/ontouml-models/model/grueau2013towards#ur.kR76AUB0E2Q4D>, :C26zh76AUB0E2Qxs, :WYGzh76AUB0E2Qx2, :S1wLh76AUB0E2QzX.
-:dszjh76AUB0E2Qqa rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "Intention"@en;
-    ontouml:stereotype ontouml:MentalMode;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:GSGTh76AUB0E2Qqz rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "Activity"@en;
-    ontouml:stereotype ontouml:Activity;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:clhTh76AUB0E2QrC rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "Agent"@en;
-    ontouml:stereotype ontouml:agent;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:aEuzh76AUB0E2QyV rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "social agent"@en;
-    ontouml:stereotype ontouml:InstitutionalAgent;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:OYNzh76AUB0E2Qys rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "PhysicalAgent"@en;
-    ontouml:stereotype ontouml:HumanAgent;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/grueau2013towards#0LeER76AUB0E2Q0T> rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "Organization"@en;
-    ontouml:stereotype ontouml:Organization;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:UEVER76AUB0E2Q00 rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "HouseHold"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:wgDER76AUB0E2Q1K rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "Resident"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:yKTER76AUB0E2Q1Z rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "EstateOwner"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:QWrER76AUB0E2Q1k rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "LandManager"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:zPHER76AUB0E2Q15 rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "Landlord"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Ve3ER76AUB0E2Q2I rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "ServiceCenter Agent"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:QCfER76AUB0E2Q2R rdf:type ontouml:Class;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "LandOwner"@en;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:SMbzh76AUB0E2Qy9 rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :clhTh76AUB0E2QrC;
-    ontouml:specific :aEuzh76AUB0E2QyV.
-:E47zh76AUB0E2QzB rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :clhTh76AUB0E2QrC;
-    ontouml:specific :OYNzh76AUB0E2Qys.
-<https://w3id.org/ontouml-models/model/grueau2013towards#.MFER76AUB0E2Q0k> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :aEuzh76AUB0E2QyV;
-    ontouml:specific <https://w3id.org/ontouml-models/model/grueau2013towards#0LeER76AUB0E2Q0T>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#7oOkR76AUB0E2Q3r> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :UEVER76AUB0E2Q00.
-:GrOkR76AUB0E2Q3v rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :wgDER76AUB0E2Q1K.
-<https://w3id.org/ontouml-models/model/grueau2013towards#7OukR76AUB0E2Q3z> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :yKTER76AUB0E2Q1Z.
-<https://w3id.org/ontouml-models/model/grueau2013towards#5wekR76AUB0E2Q33> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :QWrER76AUB0E2Q1k.
-<https://w3id.org/ontouml-models/model/grueau2013towards#7xekR76AUB0E2Q37> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :zPHER76AUB0E2Q15.
-<https://w3id.org/ontouml-models/model/grueau2013towards#HY.kR76AUB0E2Q3_> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :Ve3ER76AUB0E2Q2I.
-<https://w3id.org/ontouml-models/model/grueau2013towards#ur.kR76AUB0E2Q4D> rdf:type ontouml:Generalization;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:general :OYNzh76AUB0E2Qys;
-    ontouml:specific :QCfER76AUB0E2Q2R.
-:C26zh76AUB0E2Qxs rdf:type ontouml:Relation;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :a26zh76AUB0E2Qxu;
-    ontouml:targetEnd :G26zh76AUB0E2Qxx;
-    ontouml:relationEnd :a26zh76AUB0E2Qxu, :G26zh76AUB0E2Qxx.
-:WYGzh76AUB0E2Qx2 rdf:type ontouml:Relation;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :WYGzh76AUB0E2Qx3;
-    ontouml:targetEnd :WYGzh76AUB0E2Qx5;
-    ontouml:relationEnd :WYGzh76AUB0E2Qx3, :WYGzh76AUB0E2Qx5.
-:S1wLh76AUB0E2QzX rdf:type ontouml:Relation;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "subagents"@en;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :S1wLh76AUB0E2QzY;
-    ontouml:targetEnd :S1wLh76AUB0E2Qza;
-    ontouml:relationEnd :S1wLh76AUB0E2QzY, :S1wLh76AUB0E2Qza.
-:a26zh76AUB0E2Qxu rdf:type ontouml:Property;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:cardinality :a26zh76AUB0E2Qxu_cardinality.
-:a26zh76AUB0E2Qxu_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:a26zh76AUB0E2Qxu ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :dszjh76AUB0E2Qqa.
-:G26zh76AUB0E2Qxx rdf:type ontouml:Property;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:cardinality :G26zh76AUB0E2Qxx_cardinality.
-:G26zh76AUB0E2Qxx_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:G26zh76AUB0E2Qxx ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :clhTh76AUB0E2QrC.
-:WYGzh76AUB0E2Qx3 rdf:type ontouml:Property;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:cardinality :WYGzh76AUB0E2Qx3_cardinality.
-:WYGzh76AUB0E2Qx3_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:WYGzh76AUB0E2Qx3 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :GSGTh76AUB0E2Qqz.
-:WYGzh76AUB0E2Qx5 rdf:type ontouml:Property;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:cardinality :WYGzh76AUB0E2Qx5_cardinality.
-:WYGzh76AUB0E2Qx5_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:WYGzh76AUB0E2Qx5 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :clhTh76AUB0E2QrC.
-:S1wLh76AUB0E2QzY rdf:type ontouml:Property;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:cardinality :S1wLh76AUB0E2QzY_cardinality.
-:S1wLh76AUB0E2QzY_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:S1wLh76AUB0E2QzY ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :clhTh76AUB0E2QrC.
-:S1wLh76AUB0E2Qza rdf:type ontouml:Property;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name ""@en;
-    ontouml:cardinality :S1wLh76AUB0E2Qza_cardinality.
-:S1wLh76AUB0E2Qza_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:S1wLh76AUB0E2Qza ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :aEuzh76AUB0E2QyV.
-:ZORjh76AUB0E2QqJ rdf:type ontouml:Diagram;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:name "diagram1"@en;
-    ontouml:description ""@en;
-    ontouml:containsView :QCfER76AUB0E2Q2Q, :p26zh76AUB0E2Qxz, :rwekR76AUB0E2Q34, <https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A>, :lszjh76AUB0E2QqZ, :prOkR76AUB0E2Q3w, :y47zh76AUB0E2QzC, :ULeER76AUB0E2Q0S, :QgDER76AUB0E2Q1J, :x1wLh76AUB0E2Qzc, :QWrER76AUB0E2Q1j, <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy.>, <https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E>, :tMFER76AUB0E2Q0l, :OYNzh76AUB0E2Qyr, :SKTER76AUB0E2Q1Y, :XxekR76AUB0E2Q38, :Ve3ER76AUB0E2Q2H, :TPHER76AUB0E2Q14, :UEVER76AUB0E2Q0z, :XoOkR76AUB0E2Q3s, <https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7>, :YuukR76AUB0E2Q30, :GSGTh76AUB0E2Qqy, :aEuzh76AUB0E2QyU, :clhTh76AUB0E2QrB.
-:QCfER76AUB0E2Q2Q rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :QCfER76AUB0E2Q2R;
-    ontouml:shape :QCfER76AUB0E2Q2Q_shape.
-:lszjh76AUB0E2QqZ rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :dszjh76AUB0E2Qqa;
-    ontouml:shape :lszjh76AUB0E2QqZ_shape.
-:ULeER76AUB0E2Q0S rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#0LeER76AUB0E2Q0T>;
-    ontouml:shape :ULeER76AUB0E2Q0S_shape.
-:QgDER76AUB0E2Q1J rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :wgDER76AUB0E2Q1K;
-    ontouml:shape :QgDER76AUB0E2Q1J_shape.
-:QWrER76AUB0E2Q1j rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :QWrER76AUB0E2Q1k;
-    ontouml:shape :QWrER76AUB0E2Q1j_shape.
-:OYNzh76AUB0E2Qyr rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :OYNzh76AUB0E2Qys;
-    ontouml:shape :OYNzh76AUB0E2Qyr_shape.
-:SKTER76AUB0E2Q1Y rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :yKTER76AUB0E2Q1Z;
-    ontouml:shape :SKTER76AUB0E2Q1Y_shape.
-:Ve3ER76AUB0E2Q2H rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :Ve3ER76AUB0E2Q2I;
-    ontouml:shape :Ve3ER76AUB0E2Q2H_shape.
-:TPHER76AUB0E2Q14 rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :zPHER76AUB0E2Q15;
-    ontouml:shape :TPHER76AUB0E2Q14_shape.
-:UEVER76AUB0E2Q0z rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :UEVER76AUB0E2Q00;
-    ontouml:shape :UEVER76AUB0E2Q0z_shape.
-:GSGTh76AUB0E2Qqy rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :GSGTh76AUB0E2Qqz;
-    ontouml:shape :GSGTh76AUB0E2Qqy_shape.
-:aEuzh76AUB0E2QyU rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :aEuzh76AUB0E2QyV;
-    ontouml:shape :aEuzh76AUB0E2QyU_shape.
-:clhTh76AUB0E2QrB rdf:type ontouml:ClassView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :clhTh76AUB0E2QrC;
-    ontouml:shape :clhTh76AUB0E2QrB_shape.
-:rwekR76AUB0E2Q34 rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#5wekR76AUB0E2Q33>;
-    ontouml:shape :rwekR76AUB0E2Q34_path;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :QWrER76AUB0E2Q1j.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A> rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#HY.kR76AUB0E2Q3_>;
-    ontouml:shape <https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path>;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :Ve3ER76AUB0E2Q2H.
-:prOkR76AUB0E2Q3w rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :GrOkR76AUB0E2Q3v;
-    ontouml:shape :prOkR76AUB0E2Q3w_path;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :QgDER76AUB0E2Q1J.
-:y47zh76AUB0E2QzC rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :E47zh76AUB0E2QzB;
-    ontouml:shape :y47zh76AUB0E2QzC_path;
-    ontouml:sourceView :clhTh76AUB0E2QrB;
-    ontouml:targetView :OYNzh76AUB0E2Qyr.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy.> rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf :SMbzh76AUB0E2Qy9;
-    ontouml:shape <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path>;
-    ontouml:sourceView :clhTh76AUB0E2QrB;
-    ontouml:targetView :aEuzh76AUB0E2QyU.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E> rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#ur.kR76AUB0E2Q4D>;
-    ontouml:shape <https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path>;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :QCfER76AUB0E2Q2Q.
-:tMFER76AUB0E2Q0l rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#.MFER76AUB0E2Q0k>;
-    ontouml:shape :tMFER76AUB0E2Q0l_path;
-    ontouml:sourceView :aEuzh76AUB0E2QyU;
-    ontouml:targetView :ULeER76AUB0E2Q0S.
-:XxekR76AUB0E2Q38 rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#7xekR76AUB0E2Q37>;
-    ontouml:shape :XxekR76AUB0E2Q38_path;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :TPHER76AUB0E2Q14.
-:XoOkR76AUB0E2Q3s rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#7oOkR76AUB0E2Q3r>;
-    ontouml:shape :XoOkR76AUB0E2Q3s_path;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :UEVER76AUB0E2Q0z.
-:YuukR76AUB0E2Q30 rdf:type ontouml:GeneralizationView;
-    ontouml:project :h8ujh76AUB0E2QWf;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#7OukR76AUB0E2Q3z>;
-    ontouml:shape :YuukR76AUB0E2Q30_path;
-    ontouml:sourceView :OYNzh76AUB0E2Qyr;
-    ontouml:targetView :SKTER76AUB0E2Q1Y.
-:QCfER76AUB0E2Q2Q_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :QCfER76AUB0E2Q2Q_shape_point.
-:QCfER76AUB0E2Q2Q_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 880;
-    ontouml:yCoordinate 389.
-:lszjh76AUB0E2QqZ_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "110"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :lszjh76AUB0E2QqZ_shape_point.
-:lszjh76AUB0E2QqZ_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 175;
-    ontouml:yCoordinate 50.
-:ULeER76AUB0E2Q0S_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "114"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :ULeER76AUB0E2Q0S_shape_point.
-:ULeER76AUB0E2Q0S_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 146;
-    ontouml:yCoordinate 389.
-:QgDER76AUB0E2Q1J_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :QgDER76AUB0E2Q1J_shape_point.
-:QgDER76AUB0E2Q1J_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 385;
-    ontouml:yCoordinate 389.
-:QWrER76AUB0E2Q1j_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "86"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :QWrER76AUB0E2Q1j_shape_point.
-:QWrER76AUB0E2Q1j_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 567;
-    ontouml:yCoordinate 389.
-:OYNzh76AUB0E2Qyr_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "115"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :OYNzh76AUB0E2Qyr_shape_point.
-:OYNzh76AUB0E2Qyr_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 610;
-    ontouml:yCoordinate 302.
-:SKTER76AUB0E2Q1Y_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "81"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :SKTER76AUB0E2Q1Y_shape_point.
-:SKTER76AUB0E2Q1Y_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 476;
-    ontouml:yCoordinate 389.
-:Ve3ER76AUB0E2Q2H_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "125"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Ve3ER76AUB0E2Q2H_shape_point.
-:Ve3ER76AUB0E2Q2H_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 750;
-    ontouml:yCoordinate 389.
-:TPHER76AUB0E2Q14_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :TPHER76AUB0E2Q14_shape_point.
-:TPHER76AUB0E2Q14_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 389.
-:UEVER76AUB0E2Q0z_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :UEVER76AUB0E2Q0z_shape_point.
-:UEVER76AUB0E2Q0z_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 293;
-    ontouml:yCoordinate 389.
-:GSGTh76AUB0E2Qqy_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "85"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :GSGTh76AUB0E2Qqy_shape_point.
-:GSGTh76AUB0E2Qqy_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 580;
-    ontouml:yCoordinate 46.
-:aEuzh76AUB0E2QyU_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "140"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :aEuzh76AUB0E2QyU_shape_point.
-:aEuzh76AUB0E2QyU_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 135;
-    ontouml:yCoordinate 302.
-:clhTh76AUB0E2QrB_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "516"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :clhTh76AUB0E2QrB_shape_point.
-:clhTh76AUB0E2QrB_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 155;
-    ontouml:yCoordinate 177.
-:p26zh76AUB0E2Qxz_path rdf:type ontouml:Path;
-    ontouml:point :p26zh76AUB0E2Qxz_path_point_0.
-:p26zh76AUB0E2Qxz_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 91.
-:p26zh76AUB0E2Qxz_path ontouml:point :p26zh76AUB0E2Qxz_path_point_1.
-:p26zh76AUB0E2Qxz_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 177.
-:rwekR76AUB0E2Q34_path rdf:type ontouml:Path;
-    ontouml:point :rwekR76AUB0E2Q34_path_point_0.
-:rwekR76AUB0E2Q34_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 343.
-:rwekR76AUB0E2Q34_path ontouml:point :rwekR76AUB0E2Q34_path_point_1.
-:rwekR76AUB0E2Q34_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 366.
-:rwekR76AUB0E2Q34_path ontouml:point :rwekR76AUB0E2Q34_path_point_2.
-:rwekR76AUB0E2Q34_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 607;
-    ontouml:yCoordinate 366.
-:rwekR76AUB0E2Q34_path ontouml:point :rwekR76AUB0E2Q34_path_point_3.
-:rwekR76AUB0E2Q34_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 607;
-    ontouml:yCoordinate 388.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_0>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 343.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_1>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 366.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_2>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 810;
-    ontouml:yCoordinate 366.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_3>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#44.kR76AUB0E2Q4A_path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 810;
-    ontouml:yCoordinate 388.
-:prOkR76AUB0E2Q3w_path rdf:type ontouml:Path;
-    ontouml:point :prOkR76AUB0E2Q3w_path_point_0.
-:prOkR76AUB0E2Q3w_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 662;
-    ontouml:yCoordinate 343.
-:prOkR76AUB0E2Q3w_path ontouml:point :prOkR76AUB0E2Q3w_path_point_1.
-:prOkR76AUB0E2Q3w_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 662;
-    ontouml:yCoordinate 366.
-:prOkR76AUB0E2Q3w_path ontouml:point :prOkR76AUB0E2Q3w_path_point_2.
-:prOkR76AUB0E2Q3w_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 425;
-    ontouml:yCoordinate 366.
-:prOkR76AUB0E2Q3w_path ontouml:point :prOkR76AUB0E2Q3w_path_point_3.
-:prOkR76AUB0E2Q3w_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 425;
-    ontouml:yCoordinate 388.
-:y47zh76AUB0E2QzC_path rdf:type ontouml:Path;
-    ontouml:point :y47zh76AUB0E2QzC_path_point_0.
-:y47zh76AUB0E2QzC_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 416;
-    ontouml:yCoordinate 218.
-:y47zh76AUB0E2QzC_path ontouml:point :y47zh76AUB0E2QzC_path_point_1.
-:y47zh76AUB0E2QzC_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 416;
-    ontouml:yCoordinate 267.
-:y47zh76AUB0E2QzC_path ontouml:point :y47zh76AUB0E2QzC_path_point_2.
-:y47zh76AUB0E2QzC_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 661;
-    ontouml:yCoordinate 267.
-:y47zh76AUB0E2QzC_path ontouml:point :y47zh76AUB0E2QzC_path_point_3.
-:y47zh76AUB0E2QzC_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 661;
-    ontouml:yCoordinate 301.
-:x1wLh76AUB0E2Qzc_path rdf:type ontouml:Path;
-    ontouml:point :x1wLh76AUB0E2Qzc_path_point_0.
-:x1wLh76AUB0E2Qzc_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 195;
-    ontouml:yCoordinate 218.
-:x1wLh76AUB0E2Qzc_path ontouml:point :x1wLh76AUB0E2Qzc_path_point_1.
-:x1wLh76AUB0E2Qzc_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 195;
-    ontouml:yCoordinate 301.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_0>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 415;
-    ontouml:yCoordinate 218.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_1>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 415;
-    ontouml:yCoordinate 267.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_2>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 267.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_3>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy._path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 301.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_0>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 343.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_1>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 366.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_2>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 913;
-    ontouml:yCoordinate 366.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_3>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1r.kR76AUB0E2Q4E_path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 913;
-    ontouml:yCoordinate 388.
-:tMFER76AUB0E2Q0l_path rdf:type ontouml:Path;
-    ontouml:point :tMFER76AUB0E2Q0l_path_point_0.
-:tMFER76AUB0E2Q0l_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 195;
-    ontouml:yCoordinate 343.
-:tMFER76AUB0E2Q0l_path ontouml:point :tMFER76AUB0E2Q0l_path_point_1.
-:tMFER76AUB0E2Q0l_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 195;
-    ontouml:yCoordinate 388.
-:XxekR76AUB0E2Q38_path rdf:type ontouml:Path;
-    ontouml:point :XxekR76AUB0E2Q38_path_point_0.
-:XxekR76AUB0E2Q38_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 343.
-:XxekR76AUB0E2Q38_path ontouml:point :XxekR76AUB0E2Q38_path_point_1.
-:XxekR76AUB0E2Q38_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 660;
-    ontouml:yCoordinate 366.
-:XxekR76AUB0E2Q38_path ontouml:point :XxekR76AUB0E2Q38_path_point_2.
-:XxekR76AUB0E2Q38_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 700;
-    ontouml:yCoordinate 366.
-:XxekR76AUB0E2Q38_path ontouml:point :XxekR76AUB0E2Q38_path_point_3.
-:XxekR76AUB0E2Q38_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 700;
-    ontouml:yCoordinate 388.
-:XoOkR76AUB0E2Q3s_path rdf:type ontouml:Path;
-    ontouml:point :XoOkR76AUB0E2Q3s_path_point_0.
-:XoOkR76AUB0E2Q3s_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 661;
-    ontouml:yCoordinate 343.
-:XoOkR76AUB0E2Q3s_path ontouml:point :XoOkR76AUB0E2Q3s_path_point_1.
-:XoOkR76AUB0E2Q3s_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 661;
-    ontouml:yCoordinate 366.
-:XoOkR76AUB0E2Q3s_path ontouml:point :XoOkR76AUB0E2Q3s_path_point_2.
-:XoOkR76AUB0E2Q3s_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 325;
-    ontouml:yCoordinate 366.
-:XoOkR76AUB0E2Q3s_path ontouml:point :XoOkR76AUB0E2Q3s_path_point_3.
-:XoOkR76AUB0E2Q3s_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 325;
-    ontouml:yCoordinate 388.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7_path_point_0>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 628;
-    ontouml:yCoordinate 87.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7_path> ontouml:point <https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7_path_point_1>.
-<https://w3id.org/ontouml-models/model/grueau2013towards#1YGzh76AUB0E2Qx7_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 628;
-    ontouml:yCoordinate 177.
-:YuukR76AUB0E2Q30_path rdf:type ontouml:Path;
-    ontouml:point :YuukR76AUB0E2Q30_path_point_0.
-:YuukR76AUB0E2Q30_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 661;
-    ontouml:yCoordinate 343.
-:YuukR76AUB0E2Q30_path ontouml:point :YuukR76AUB0E2Q30_path_point_1.
-:YuukR76AUB0E2Q30_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 661;
-    ontouml:yCoordinate 366.
-:YuukR76AUB0E2Q30_path ontouml:point :YuukR76AUB0E2Q30_path_point_2.
-:YuukR76AUB0E2Q30_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 515;
-    ontouml:yCoordinate 366.
-:YuukR76AUB0E2Q30_path ontouml:point :YuukR76AUB0E2Q30_path_point_3.
-:YuukR76AUB0E2Q30_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 515;
-    ontouml:yCoordinate 388.
+:1YGzh76AUB0E2Qx7 a ontouml:RelationView ;
+    ontouml:isViewOf :WYGzh76AUB0E2Qx2 ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :1YGzh76AUB0E2Qx7_path ;
+    ontouml:sourceView :GSGTh76AUB0E2Qqy ;
+    ontouml:targetView :clhTh76AUB0E2QrB .
+
+:1YGzh76AUB0E2Qx7_path a ontouml:Path ;
+    ontouml:point :1YGzh76AUB0E2Qx7_path_point_0,
+        :1YGzh76AUB0E2Qx7_path_point_1 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:1YGzh76AUB0E2Qx7_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 628 ;
+    ontouml:yCoordinate 87 .
+
+:1YGzh76AUB0E2Qx7_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 628 ;
+    ontouml:yCoordinate 177 .
+
+:1r.kR76AUB0E2Q4E a ontouml:GeneralizationView ;
+    ontouml:isViewOf :ur.kR76AUB0E2Q4D ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :1r.kR76AUB0E2Q4E_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :QCfER76AUB0E2Q2Q .
+
+:1r.kR76AUB0E2Q4E_path a ontouml:Path ;
+    ontouml:point :1r.kR76AUB0E2Q4E_path_point_0,
+        :1r.kR76AUB0E2Q4E_path_point_1,
+        :1r.kR76AUB0E2Q4E_path_point_2,
+        :1r.kR76AUB0E2Q4E_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:1r.kR76AUB0E2Q4E_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 343 .
+
+:1r.kR76AUB0E2Q4E_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 366 .
+
+:1r.kR76AUB0E2Q4E_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 913 ;
+    ontouml:yCoordinate 366 .
+
+:1r.kR76AUB0E2Q4E_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 913 ;
+    ontouml:yCoordinate 388 .
+
+:44.kR76AUB0E2Q4A a ontouml:GeneralizationView ;
+    ontouml:isViewOf :HY.kR76AUB0E2Q3_ ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :44.kR76AUB0E2Q4A_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :Ve3ER76AUB0E2Q2H .
+
+:44.kR76AUB0E2Q4A_path a ontouml:Path ;
+    ontouml:point :44.kR76AUB0E2Q4A_path_point_0,
+        :44.kR76AUB0E2Q4A_path_point_1,
+        :44.kR76AUB0E2Q4A_path_point_2,
+        :44.kR76AUB0E2Q4A_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:44.kR76AUB0E2Q4A_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 343 .
+
+:44.kR76AUB0E2Q4A_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 366 .
+
+:44.kR76AUB0E2Q4A_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 810 ;
+    ontouml:yCoordinate 366 .
+
+:44.kR76AUB0E2Q4A_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 810 ;
+    ontouml:yCoordinate 388 .
+
+<https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy.> a ontouml:GeneralizationView ;
+    ontouml:isViewOf :SMbzh76AUB0E2Qy9 ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :6Mbzh76AUB0E2Qy._path ;
+    ontouml:sourceView :clhTh76AUB0E2QrB ;
+    ontouml:targetView :aEuzh76AUB0E2QyU .
+
+:6Mbzh76AUB0E2Qy._path a ontouml:Path ;
+    ontouml:point :6Mbzh76AUB0E2Qy._path_point_0,
+        :6Mbzh76AUB0E2Qy._path_point_1,
+        :6Mbzh76AUB0E2Qy._path_point_2,
+        :6Mbzh76AUB0E2Qy._path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:6Mbzh76AUB0E2Qy._path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 415 ;
+    ontouml:yCoordinate 218 .
+
+:6Mbzh76AUB0E2Qy._path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 415 ;
+    ontouml:yCoordinate 267 .
+
+:6Mbzh76AUB0E2Qy._path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 267 .
+
+:6Mbzh76AUB0E2Qy._path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 301 .
+
+:G26zh76AUB0E2Qxx_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:GSGTh76AUB0E2Qqy_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :GSGTh76AUB0E2Qqy_shape_point ;
+    ontouml:width "85"^^xsd:nonNegativeInteger .
+
+:GSGTh76AUB0E2Qqy_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 580 ;
+    ontouml:yCoordinate 46 .
+
+:OYNzh76AUB0E2Qyr_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :OYNzh76AUB0E2Qyr_shape_point ;
+    ontouml:width "115"^^xsd:nonNegativeInteger .
+
+:OYNzh76AUB0E2Qyr_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 610 ;
+    ontouml:yCoordinate 302 .
+
+:QCfER76AUB0E2Q2Q_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :QCfER76AUB0E2Q2Q_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:QCfER76AUB0E2Q2Q_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 880 ;
+    ontouml:yCoordinate 389 .
+
+:QWrER76AUB0E2Q1j_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :QWrER76AUB0E2Q1j_shape_point ;
+    ontouml:width "86"^^xsd:nonNegativeInteger .
+
+:QWrER76AUB0E2Q1j_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 567 ;
+    ontouml:yCoordinate 389 .
+
+:QgDER76AUB0E2Q1J_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :QgDER76AUB0E2Q1J_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:QgDER76AUB0E2Q1J_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 385 ;
+    ontouml:yCoordinate 389 .
+
+:S1wLh76AUB0E2QzY_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:S1wLh76AUB0E2Qza_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:SKTER76AUB0E2Q1Y_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :SKTER76AUB0E2Q1Y_shape_point ;
+    ontouml:width "81"^^xsd:nonNegativeInteger .
+
+:SKTER76AUB0E2Q1Y_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 476 ;
+    ontouml:yCoordinate 389 .
+
+:TPHER76AUB0E2Q14_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :TPHER76AUB0E2Q14_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:TPHER76AUB0E2Q14_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 389 .
+
+:UEVER76AUB0E2Q0z_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :UEVER76AUB0E2Q0z_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:UEVER76AUB0E2Q0z_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 293 ;
+    ontouml:yCoordinate 389 .
+
+:ULeER76AUB0E2Q0S_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :ULeER76AUB0E2Q0S_shape_point ;
+    ontouml:width "114"^^xsd:nonNegativeInteger .
+
+:ULeER76AUB0E2Q0S_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 146 ;
+    ontouml:yCoordinate 389 .
+
+:Ve3ER76AUB0E2Q2H_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :Ve3ER76AUB0E2Q2H_shape_point ;
+    ontouml:width "125"^^xsd:nonNegativeInteger .
+
+:Ve3ER76AUB0E2Q2H_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 750 ;
+    ontouml:yCoordinate 389 .
+
+:WYGzh76AUB0E2Qx3_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:WYGzh76AUB0E2Qx5_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:XoOkR76AUB0E2Q3s a ontouml:GeneralizationView ;
+    ontouml:isViewOf :7oOkR76AUB0E2Q3r ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :XoOkR76AUB0E2Q3s_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :UEVER76AUB0E2Q0z .
+
+:XoOkR76AUB0E2Q3s_path a ontouml:Path ;
+    ontouml:point :XoOkR76AUB0E2Q3s_path_point_0,
+        :XoOkR76AUB0E2Q3s_path_point_1,
+        :XoOkR76AUB0E2Q3s_path_point_2,
+        :XoOkR76AUB0E2Q3s_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:XoOkR76AUB0E2Q3s_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 661 ;
+    ontouml:yCoordinate 343 .
+
+:XoOkR76AUB0E2Q3s_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 661 ;
+    ontouml:yCoordinate 366 .
+
+:XoOkR76AUB0E2Q3s_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 325 ;
+    ontouml:yCoordinate 366 .
+
+:XoOkR76AUB0E2Q3s_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 325 ;
+    ontouml:yCoordinate 388 .
+
+:XxekR76AUB0E2Q38 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :7xekR76AUB0E2Q37 ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :XxekR76AUB0E2Q38_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :TPHER76AUB0E2Q14 .
+
+:XxekR76AUB0E2Q38_path a ontouml:Path ;
+    ontouml:point :XxekR76AUB0E2Q38_path_point_0,
+        :XxekR76AUB0E2Q38_path_point_1,
+        :XxekR76AUB0E2Q38_path_point_2,
+        :XxekR76AUB0E2Q38_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:XxekR76AUB0E2Q38_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 343 .
+
+:XxekR76AUB0E2Q38_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 366 .
+
+:XxekR76AUB0E2Q38_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 700 ;
+    ontouml:yCoordinate 366 .
+
+:XxekR76AUB0E2Q38_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 700 ;
+    ontouml:yCoordinate 388 .
+
+:YuukR76AUB0E2Q30 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :7OukR76AUB0E2Q3z ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :YuukR76AUB0E2Q30_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :SKTER76AUB0E2Q1Y .
+
+:YuukR76AUB0E2Q30_path a ontouml:Path ;
+    ontouml:point :YuukR76AUB0E2Q30_path_point_0,
+        :YuukR76AUB0E2Q30_path_point_1,
+        :YuukR76AUB0E2Q30_path_point_2,
+        :YuukR76AUB0E2Q30_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:YuukR76AUB0E2Q30_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 661 ;
+    ontouml:yCoordinate 343 .
+
+:YuukR76AUB0E2Q30_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 661 ;
+    ontouml:yCoordinate 366 .
+
+:YuukR76AUB0E2Q30_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 515 ;
+    ontouml:yCoordinate 366 .
+
+:YuukR76AUB0E2Q30_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 515 ;
+    ontouml:yCoordinate 388 .
+
+:ZORjh76AUB0E2QqJ a ontouml:Diagram ;
+    ontouml:containsView :1YGzh76AUB0E2Qx7,
+        :1r.kR76AUB0E2Q4E,
+        :44.kR76AUB0E2Q4A,
+        <https://w3id.org/ontouml-models/model/grueau2013towards#6Mbzh76AUB0E2Qy.>,
+        :GSGTh76AUB0E2Qqy,
+        :OYNzh76AUB0E2Qyr,
+        :QCfER76AUB0E2Q2Q,
+        :QWrER76AUB0E2Q1j,
+        :QgDER76AUB0E2Q1J,
+        :SKTER76AUB0E2Q1Y,
+        :TPHER76AUB0E2Q14,
+        :UEVER76AUB0E2Q0z,
+        :ULeER76AUB0E2Q0S,
+        :Ve3ER76AUB0E2Q2H,
+        :XoOkR76AUB0E2Q3s,
+        :XxekR76AUB0E2Q38,
+        :YuukR76AUB0E2Q30,
+        :aEuzh76AUB0E2QyU,
+        :clhTh76AUB0E2QrB,
+        :lszjh76AUB0E2QqZ,
+        :p26zh76AUB0E2Qxz,
+        :prOkR76AUB0E2Q3w,
+        :rwekR76AUB0E2Q34,
+        :tMFER76AUB0E2Q0l,
+        :x1wLh76AUB0E2Qzc,
+        :y47zh76AUB0E2QzC ;
+    ontouml:description "" ;
+    ontouml:name "diagram1"@en ;
+    ontouml:owner :h8ujh76AUB0E2QWf_root ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:a26zh76AUB0E2Qxu_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:aEuzh76AUB0E2QyU_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :aEuzh76AUB0E2QyU_shape_point ;
+    ontouml:width "140"^^xsd:nonNegativeInteger .
+
+:aEuzh76AUB0E2QyU_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 135 ;
+    ontouml:yCoordinate 302 .
+
+:clhTh76AUB0E2QrB_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :clhTh76AUB0E2QrB_shape_point ;
+    ontouml:width "516"^^xsd:nonNegativeInteger .
+
+:clhTh76AUB0E2QrB_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 155 ;
+    ontouml:yCoordinate 177 .
+
+:lszjh76AUB0E2QqZ_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:topLeftPosition :lszjh76AUB0E2QqZ_shape_point ;
+    ontouml:width "110"^^xsd:nonNegativeInteger .
+
+:lszjh76AUB0E2QqZ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 175 ;
+    ontouml:yCoordinate 50 .
+
+:p26zh76AUB0E2Qxz a ontouml:RelationView ;
+    ontouml:isViewOf :C26zh76AUB0E2Qxs ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :p26zh76AUB0E2Qxz_path ;
+    ontouml:sourceView :lszjh76AUB0E2QqZ ;
+    ontouml:targetView :clhTh76AUB0E2QrB .
+
+:p26zh76AUB0E2Qxz_path a ontouml:Path ;
+    ontouml:point :p26zh76AUB0E2Qxz_path_point_0,
+        :p26zh76AUB0E2Qxz_path_point_1 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:p26zh76AUB0E2Qxz_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 91 .
+
+:p26zh76AUB0E2Qxz_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 177 .
+
+:prOkR76AUB0E2Q3w a ontouml:GeneralizationView ;
+    ontouml:isViewOf :GrOkR76AUB0E2Q3v ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :prOkR76AUB0E2Q3w_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :QgDER76AUB0E2Q1J .
+
+:prOkR76AUB0E2Q3w_path a ontouml:Path ;
+    ontouml:point :prOkR76AUB0E2Q3w_path_point_0,
+        :prOkR76AUB0E2Q3w_path_point_1,
+        :prOkR76AUB0E2Q3w_path_point_2,
+        :prOkR76AUB0E2Q3w_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:prOkR76AUB0E2Q3w_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 662 ;
+    ontouml:yCoordinate 343 .
+
+:prOkR76AUB0E2Q3w_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 662 ;
+    ontouml:yCoordinate 366 .
+
+:prOkR76AUB0E2Q3w_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 425 ;
+    ontouml:yCoordinate 366 .
+
+:prOkR76AUB0E2Q3w_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 425 ;
+    ontouml:yCoordinate 388 .
+
+:rwekR76AUB0E2Q34 a ontouml:GeneralizationView ;
+    ontouml:isViewOf :5wekR76AUB0E2Q33 ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :rwekR76AUB0E2Q34_path ;
+    ontouml:sourceView :OYNzh76AUB0E2Qyr ;
+    ontouml:targetView :QWrER76AUB0E2Q1j .
+
+:rwekR76AUB0E2Q34_path a ontouml:Path ;
+    ontouml:point :rwekR76AUB0E2Q34_path_point_0,
+        :rwekR76AUB0E2Q34_path_point_1,
+        :rwekR76AUB0E2Q34_path_point_2,
+        :rwekR76AUB0E2Q34_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:rwekR76AUB0E2Q34_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 343 .
+
+:rwekR76AUB0E2Q34_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 660 ;
+    ontouml:yCoordinate 366 .
+
+:rwekR76AUB0E2Q34_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 607 ;
+    ontouml:yCoordinate 366 .
+
+:rwekR76AUB0E2Q34_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 607 ;
+    ontouml:yCoordinate 388 .
+
+:tMFER76AUB0E2Q0l a ontouml:GeneralizationView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/grueau2013towards#.MFER76AUB0E2Q0k> ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :tMFER76AUB0E2Q0l_path ;
+    ontouml:sourceView :aEuzh76AUB0E2QyU ;
+    ontouml:targetView :ULeER76AUB0E2Q0S .
+
+:tMFER76AUB0E2Q0l_path a ontouml:Path ;
+    ontouml:point :tMFER76AUB0E2Q0l_path_point_0,
+        :tMFER76AUB0E2Q0l_path_point_1 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:tMFER76AUB0E2Q0l_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 195 ;
+    ontouml:yCoordinate 343 .
+
+:tMFER76AUB0E2Q0l_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 195 ;
+    ontouml:yCoordinate 388 .
+
+:x1wLh76AUB0E2Qzc a ontouml:RelationView ;
+    ontouml:isViewOf :S1wLh76AUB0E2QzX ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :x1wLh76AUB0E2Qzc_path ;
+    ontouml:sourceView :clhTh76AUB0E2QrB ;
+    ontouml:targetView :aEuzh76AUB0E2QyU .
+
+:x1wLh76AUB0E2Qzc_path a ontouml:Path ;
+    ontouml:point :x1wLh76AUB0E2Qzc_path_point_0,
+        :x1wLh76AUB0E2Qzc_path_point_1 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:x1wLh76AUB0E2Qzc_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 195 ;
+    ontouml:yCoordinate 218 .
+
+:x1wLh76AUB0E2Qzc_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 195 ;
+    ontouml:yCoordinate 301 .
+
+:y47zh76AUB0E2QzC a ontouml:GeneralizationView ;
+    ontouml:isViewOf :E47zh76AUB0E2QzB ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :y47zh76AUB0E2QzC_path ;
+    ontouml:sourceView :clhTh76AUB0E2QrB ;
+    ontouml:targetView :OYNzh76AUB0E2Qyr .
+
+:y47zh76AUB0E2QzC_path a ontouml:Path ;
+    ontouml:point :y47zh76AUB0E2QzC_path_point_0,
+        :y47zh76AUB0E2QzC_path_point_1,
+        :y47zh76AUB0E2QzC_path_point_2,
+        :y47zh76AUB0E2QzC_path_point_3 ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:y47zh76AUB0E2QzC_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 416 ;
+    ontouml:yCoordinate 218 .
+
+:y47zh76AUB0E2QzC_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 416 ;
+    ontouml:yCoordinate 267 .
+
+:y47zh76AUB0E2QzC_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 661 ;
+    ontouml:yCoordinate 267 .
+
+:y47zh76AUB0E2QzC_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 661 ;
+    ontouml:yCoordinate 301 .
+
+<https://w3id.org/ontouml-models/model/grueau2013towards#.MFER76AUB0E2Q0k> a ontouml:Generalization ;
+    ontouml:general :aEuzh76AUB0E2QyV ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :0LeER76AUB0E2Q0T .
+
+:5wekR76AUB0E2Q33 a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :QWrER76AUB0E2Q1k .
+
+:7OukR76AUB0E2Q3z a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :yKTER76AUB0E2Q1Z .
+
+:7oOkR76AUB0E2Q3r a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :UEVER76AUB0E2Q00 .
+
+:7xekR76AUB0E2Q37 a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :zPHER76AUB0E2Q15 .
+
+:C26zh76AUB0E2Qxs a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:relationEnd :G26zh76AUB0E2Qxx,
+        :a26zh76AUB0E2Qxu ;
+    ontouml:sourceEnd :a26zh76AUB0E2Qxu ;
+    ontouml:targetEnd :G26zh76AUB0E2Qxx .
+
+:E47zh76AUB0E2QzB a ontouml:Generalization ;
+    ontouml:general :clhTh76AUB0E2QrC ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :OYNzh76AUB0E2Qys .
+
+:G26zh76AUB0E2Qxx a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :G26zh76AUB0E2Qxx_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:propertyType :clhTh76AUB0E2QrC .
+
+:GSGTh76AUB0E2Qqy a ontouml:ClassView ;
+    ontouml:isViewOf :GSGTh76AUB0E2Qqz ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :GSGTh76AUB0E2Qqy_shape .
+
+:GrOkR76AUB0E2Q3v a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :wgDER76AUB0E2Q1K .
+
+:HY.kR76AUB0E2Q3_ a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :Ve3ER76AUB0E2Q2I .
+
+:QCfER76AUB0E2Q2Q a ontouml:ClassView ;
+    ontouml:isViewOf :QCfER76AUB0E2Q2R ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :QCfER76AUB0E2Q2Q_shape .
+
+:QWrER76AUB0E2Q1j a ontouml:ClassView ;
+    ontouml:isViewOf :QWrER76AUB0E2Q1k ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :QWrER76AUB0E2Q1j_shape .
+
+:QgDER76AUB0E2Q1J a ontouml:ClassView ;
+    ontouml:isViewOf :wgDER76AUB0E2Q1K ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :QgDER76AUB0E2Q1J_shape .
+
+:S1wLh76AUB0E2QzX a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "subagents"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:relationEnd :S1wLh76AUB0E2QzY,
+        :S1wLh76AUB0E2Qza ;
+    ontouml:sourceEnd :S1wLh76AUB0E2QzY ;
+    ontouml:targetEnd :S1wLh76AUB0E2Qza .
+
+:S1wLh76AUB0E2QzY a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :S1wLh76AUB0E2QzY_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:propertyType :clhTh76AUB0E2QrC .
+
+:S1wLh76AUB0E2Qza a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :S1wLh76AUB0E2Qza_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:propertyType :aEuzh76AUB0E2QyV .
+
+:SKTER76AUB0E2Q1Y a ontouml:ClassView ;
+    ontouml:isViewOf :yKTER76AUB0E2Q1Z ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :SKTER76AUB0E2Q1Y_shape .
+
+:SMbzh76AUB0E2Qy9 a ontouml:Generalization ;
+    ontouml:general :clhTh76AUB0E2QrC ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :aEuzh76AUB0E2QyV .
+
+:TPHER76AUB0E2Q14 a ontouml:ClassView ;
+    ontouml:isViewOf :zPHER76AUB0E2Q15 ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :TPHER76AUB0E2Q14_shape .
+
+:UEVER76AUB0E2Q0z a ontouml:ClassView ;
+    ontouml:isViewOf :UEVER76AUB0E2Q00 ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :UEVER76AUB0E2Q0z_shape .
+
+:ULeER76AUB0E2Q0S a ontouml:ClassView ;
+    ontouml:isViewOf :0LeER76AUB0E2Q0T ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :ULeER76AUB0E2Q0S_shape .
+
+:Ve3ER76AUB0E2Q2H a ontouml:ClassView ;
+    ontouml:isViewOf :Ve3ER76AUB0E2Q2I ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :Ve3ER76AUB0E2Q2H_shape .
+
+:WYGzh76AUB0E2Qx2 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:relationEnd :WYGzh76AUB0E2Qx3,
+        :WYGzh76AUB0E2Qx5 ;
+    ontouml:sourceEnd :WYGzh76AUB0E2Qx3 ;
+    ontouml:targetEnd :WYGzh76AUB0E2Qx5 .
+
+:WYGzh76AUB0E2Qx3 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :WYGzh76AUB0E2Qx3_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:propertyType :GSGTh76AUB0E2Qqz .
+
+:WYGzh76AUB0E2Qx5 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :WYGzh76AUB0E2Qx5_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:propertyType :clhTh76AUB0E2QrC .
+
+:a26zh76AUB0E2Qxu a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :a26zh76AUB0E2Qxu_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:propertyType :dszjh76AUB0E2Qqa .
+
+:h8ujh76AUB0E2QWf_root a ontouml:Package ;
+    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/grueau2013towards#.MFER76AUB0E2Q0k>,
+        :0LeER76AUB0E2Q0T,
+        :5wekR76AUB0E2Q33,
+        :7OukR76AUB0E2Q3z,
+        :7oOkR76AUB0E2Q3r,
+        :7xekR76AUB0E2Q37,
+        :C26zh76AUB0E2Qxs,
+        :E47zh76AUB0E2QzB,
+        :GSGTh76AUB0E2Qqz,
+        :GrOkR76AUB0E2Q3v,
+        :HY.kR76AUB0E2Q3_,
+        :OYNzh76AUB0E2Qys,
+        :QCfER76AUB0E2Q2R,
+        :QWrER76AUB0E2Q1k,
+        :S1wLh76AUB0E2QzX,
+        :SMbzh76AUB0E2Qy9,
+        :UEVER76AUB0E2Q00,
+        :Ve3ER76AUB0E2Q2I,
+        :WYGzh76AUB0E2Qx2,
+        :aEuzh76AUB0E2QyV,
+        :clhTh76AUB0E2QrC,
+        :dszjh76AUB0E2Qqa,
+        :ur.kR76AUB0E2Q4D,
+        :wgDER76AUB0E2Q1K,
+        :yKTER76AUB0E2Q1Z,
+        :zPHER76AUB0E2Q15 ;
+    ontouml:name "grueau2013towards"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:lszjh76AUB0E2QqZ a ontouml:ClassView ;
+    ontouml:isViewOf :dszjh76AUB0E2Qqa ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :lszjh76AUB0E2QqZ_shape .
+
+:ur.kR76AUB0E2Q4D a ontouml:Generalization ;
+    ontouml:general :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:specific :QCfER76AUB0E2Q2R .
+
+:0LeER76AUB0E2Q0T a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Organization"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:stereotype ontouml:organization .
+
+:GSGTh76AUB0E2Qqz a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Activity"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:stereotype ontouml:activity .
+
+:QCfER76AUB0E2Q2R a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "LandOwner"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:QWrER76AUB0E2Q1k a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "LandManager"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:UEVER76AUB0E2Q00 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "HouseHold"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:Ve3ER76AUB0E2Q2I a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "ServiceCenter Agent"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:dszjh76AUB0E2Qqa a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Intention"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:stereotype ontouml:mentalMode .
+
+:wgDER76AUB0E2Q1K a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Resident"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:yKTER76AUB0E2Q1Z a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "EstateOwner"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:zPHER76AUB0E2Q15 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Landlord"@en ;
+    ontouml:project :h8ujh76AUB0E2QWf .
+
+:aEuzh76AUB0E2QyU a ontouml:ClassView ;
+    ontouml:isViewOf :aEuzh76AUB0E2QyV ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :aEuzh76AUB0E2QyU_shape .
+
+:aEuzh76AUB0E2QyV a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "social agent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:stereotype ontouml:institutionalAgent .
+
+:clhTh76AUB0E2QrB a ontouml:ClassView ;
+    ontouml:isViewOf :clhTh76AUB0E2QrC ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :clhTh76AUB0E2QrB_shape .
+
+:clhTh76AUB0E2QrC a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Agent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:stereotype ontouml:agent .
+
+:OYNzh76AUB0E2Qyr a ontouml:ClassView ;
+    ontouml:isViewOf :OYNzh76AUB0E2Qys ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:shape :OYNzh76AUB0E2Qyr_shape .
+
+:OYNzh76AUB0E2Qys a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "PhysicalAgent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :h8ujh76AUB0E2QWf ;
+    ontouml:stereotype ontouml:humanAgent .
+
+:h8ujh76AUB0E2QWf a ontouml:Project ;
+    ontouml:diagram :ZORjh76AUB0E2QqJ ;
+    ontouml:model :h8ujh76AUB0E2QWf_root ;
+    ontouml:name "grueau2013towards"@en .
+

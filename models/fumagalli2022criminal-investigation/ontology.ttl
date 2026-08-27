@@ -1,826 +1,1180 @@
-@prefix : <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#>.
-@prefix ontouml: <https://w3id.org/ontouml#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#> .
+@prefix ontouml: <https://w3id.org/ontouml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation/> rdf:type ontouml:Project;
-    ontouml:name "DKE Example"@en;
-    ontouml:model :XIF35i6GAqACCw15_root;
-    ontouml:diagram :GTT35i6GAqACCxD3.
-:XIF35i6GAqACCw15_root rdf:type ontouml:Package;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "DKE Example"@en;
-    ontouml:containsModelElement :hGz35i6GAqACCxEC, :sSL35i6GAqACCxEO, :Ctr35i6GAqACCxEa, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEs>, :kAP35i6GAqACCxFA, :Fwf35i6GAqACCxFY, :LX_35i6GAqACCxFk, :brgP5i6GAqACCxFw, :JnQP5i6GAqACCxF8, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_cNyUx6GAqACAwii>, :nO9P5i6GAqACCxHK, :g39P5i6GAqACCxHb, :GRDP5i6GAqACCxHs, :VIjP5i6GAqACCxH9, :TtjP5i6GAqACCxIQ, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4gzP5i6GAqACCxIs>, :ZZHyUx6GAqACAwjR, :jHnyUx6GAqACAwjV, :br5v5i6GAqACCxNa, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#nhdHvh6D.AAAARUX>, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJf>, :lQkv5i6GAqACCxKT, :V0Cv5i6GAqACCxLN, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMy>, :hIgf5i6GAqACCxP0, :DYJf5i6GAqACCxR1, :mGrf5i6GAqACCxT6, :gvUOUx6GAqACAwl0, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#krcOUx6GAqACAwl.>.
-:hGz35i6GAqACCxEC rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Person"@en;
-    ontouml:stereotype ontouml:kind;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:sSL35i6GAqACCxEO rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Detective"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Ctr35i6GAqACCxEa rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Interrogation"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEs> rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Witness"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:kAP35i6GAqACCxFA rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Suspect"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:Fwf35i6GAqACCxFY rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Criminal Investigation"@en;
-    ontouml:stereotype ontouml:relator;
-    ontouml:restrictedTo ontouml:relator;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:LX_35i6GAqACCxFk rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Lead Detective"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:brgP5i6GAqACCxFw rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Senior Detective"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:JnQP5i6GAqACCxF8 rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Junior Detective"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_cNyUx6GAqACAwii> rdf:type ontouml:Class;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Superintendent"@en;
-    ontouml:stereotype ontouml:role;
-    ontouml:restrictedTo ontouml:functionalComplex;
-    ontouml:isAbstract "false"^^xsd:boolean;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isExtensional "false"^^xsd:boolean;
-    ontouml:isPowertype "false"^^xsd:boolean;
-    ontouml:order "1"^^xsd:positiveInteger.
-:nO9P5i6GAqACCxHK rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :sSL35i6GAqACCxEO;
-    ontouml:specific :brgP5i6GAqACCxFw.
-:g39P5i6GAqACCxHb rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :sSL35i6GAqACCxEO;
-    ontouml:specific :JnQP5i6GAqACCxF8.
-:GRDP5i6GAqACCxHs rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :hGz35i6GAqACCxEC;
-    ontouml:specific :sSL35i6GAqACCxEO.
-:VIjP5i6GAqACCxH9 rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :hGz35i6GAqACCxEC;
-    ontouml:specific <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEs>.
-:TtjP5i6GAqACCxIQ rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :hGz35i6GAqACCxEC;
-    ontouml:specific :kAP35i6GAqACCxFA.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4gzP5i6GAqACCxIs> rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :sSL35i6GAqACCxEO;
-    ontouml:specific :LX_35i6GAqACCxFk.
-:ZZHyUx6GAqACAwjR rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :brgP5i6GAqACCxFw;
-    ontouml:specific <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_cNyUx6GAqACAwii>.
-:jHnyUx6GAqACAwjV rdf:type ontouml:Generalization;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:general :LX_35i6GAqACCxFk;
-    ontouml:specific <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_cNyUx6GAqACAwii>.
-:br5v5i6GAqACCxNa rdf:type ontouml:GeneralizationSet;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "Seniority"@en;
-    ontouml:isComplete "true"^^xsd:boolean;
-    ontouml:isDisjoint "true"^^xsd:boolean;
-    ontouml:generalization :g39P5i6GAqACCxHb, :nO9P5i6GAqACCxHK.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#nhdHvh6D.AAAARUX> rdf:type ontouml:GeneralizationSet;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "PersonRole"@en;
-    ontouml:isComplete "false"^^xsd:boolean;
-    ontouml:isDisjoint "false"^^xsd:boolean;
-    ontouml:generalization :VIjP5i6GAqACCxH9, :GRDP5i6GAqACCxHs, :TtjP5i6GAqACCxIQ.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJf> rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "contributes to"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJg>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJi>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJg>, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJi>.
-:lQkv5i6GAqACCxKT rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "involves suspect"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :lQkv5i6GAqACCxKU;
-    ontouml:targetEnd :VQkv5i6GAqACCxKW;
-    ontouml:relationEnd :lQkv5i6GAqACCxKU, :VQkv5i6GAqACCxKW.
-:V0Cv5i6GAqACCxLN rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "is led by"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :V0Cv5i6GAqACCxLO;
-    ontouml:targetEnd :V0Cv5i6GAqACCxLQ;
-    ontouml:relationEnd :V0Cv5i6GAqACCxLO, :V0Cv5i6GAqACCxLQ.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMy> rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "involves detective"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz>;
-    ontouml:targetEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1>;
-    ontouml:relationEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz>, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1>.
-:hIgf5i6GAqACCxP0 rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "conducted by"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :hIgf5i6GAqACCxP1;
-    ontouml:targetEnd :hIgf5i6GAqACCxP3;
-    ontouml:relationEnd :hIgf5i6GAqACCxP1, :hIgf5i6GAqACCxP3.
-:DYJf5i6GAqACCxR1 rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "questions"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :DYJf5i6GAqACCxR2;
-    ontouml:targetEnd :jYJf5i6GAqACCxR4;
-    ontouml:relationEnd :DYJf5i6GAqACCxR2, :jYJf5i6GAqACCxR4.
-:mGrf5i6GAqACCxT6 rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "involves witness"@en;
-    ontouml:stereotype ontouml:mediation;
-    ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:sourceEnd :mGrf5i6GAqACCxT7;
-    ontouml:targetEnd :mGrf5i6GAqACCxT9;
-    ontouml:relationEnd :mGrf5i6GAqACCxT7, :mGrf5i6GAqACCxT9.
-:gvUOUx6GAqACAwl0 rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "manages"@en;
-    ontouml:stereotype ontouml:material;
-    ontouml:isDerived "true"^^xsd:boolean;
-    ontouml:sourceEnd :gvUOUx6GAqACAwl1;
-    ontouml:targetEnd :gvUOUx6GAqACAwl3;
-    ontouml:relationEnd :gvUOUx6GAqACAwl1, :gvUOUx6GAqACAwl3.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#krcOUx6GAqACAwl.> rdf:type ontouml:Relation;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "teams up"@en;
-    ontouml:stereotype ontouml:material;
-    ontouml:isDerived "true"^^xsd:boolean;
-    ontouml:sourceEnd :krcOUx6GAqACAwl_;
-    ontouml:targetEnd :krcOUx6GAqACAwmB;
-    ontouml:relationEnd :krcOUx6GAqACAwl_, :krcOUx6GAqACAwmB.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJg> rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJg_cardinality>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJg_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJg> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Ctr35i6GAqACCxEa.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJi> rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJi_cardinality>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJi_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_Vwv5i6GAqACCxJi> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Fwf35i6GAqACCxFY.
-:lQkv5i6GAqACCxKU rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :lQkv5i6GAqACCxKU_cardinality.
-:lQkv5i6GAqACCxKU_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:lQkv5i6GAqACCxKU ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Fwf35i6GAqACCxFY.
-:VQkv5i6GAqACCxKW rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :VQkv5i6GAqACCxKW_cardinality.
-:VQkv5i6GAqACCxKW_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:VQkv5i6GAqACCxKW ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :kAP35i6GAqACCxFA.
-:V0Cv5i6GAqACCxLO rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :V0Cv5i6GAqACCxLO_cardinality.
-:V0Cv5i6GAqACCxLO_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:V0Cv5i6GAqACCxLO ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Fwf35i6GAqACCxFY.
-:V0Cv5i6GAqACCxLQ rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :V0Cv5i6GAqACCxLQ_cardinality.
-:V0Cv5i6GAqACCxLQ_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:V0Cv5i6GAqACCxLQ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :LX_35i6GAqACCxFk.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz> rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz_cardinality>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Fwf35i6GAqACCxFY.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1> rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1_cardinality>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1_cardinality> rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1> ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :sSL35i6GAqACCxEO.
-:hIgf5i6GAqACCxP1 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :hIgf5i6GAqACCxP1_cardinality.
-:hIgf5i6GAqACCxP1_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:hIgf5i6GAqACCxP1 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Ctr35i6GAqACCxEa.
-:hIgf5i6GAqACCxP3 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :hIgf5i6GAqACCxP3_cardinality.
-:hIgf5i6GAqACCxP3_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:hIgf5i6GAqACCxP3 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :sSL35i6GAqACCxEO.
-:DYJf5i6GAqACCxR2 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :DYJf5i6GAqACCxR2_cardinality.
-:DYJf5i6GAqACCxR2_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:DYJf5i6GAqACCxR2 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Ctr35i6GAqACCxEa.
-:jYJf5i6GAqACCxR4 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :jYJf5i6GAqACCxR4_cardinality.
-:jYJf5i6GAqACCxR4_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "1".
-:jYJf5i6GAqACCxR4 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEs>.
-:mGrf5i6GAqACCxT7 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :mGrf5i6GAqACCxT7_cardinality.
-:mGrf5i6GAqACCxT7_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:mGrf5i6GAqACCxT7 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :Fwf35i6GAqACCxFY.
-:mGrf5i6GAqACCxT9 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:cardinality :mGrf5i6GAqACCxT9_cardinality.
-:mGrf5i6GAqACCxT9_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "*".
-:mGrf5i6GAqACCxT9 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "true"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEs>.
-:gvUOUx6GAqACAwl1 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name ""@en;
-    ontouml:cardinality :gvUOUx6GAqACAwl1_cardinality.
-:gvUOUx6GAqACAwl1_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:gvUOUx6GAqACAwl1 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :brgP5i6GAqACCxFw.
-:gvUOUx6GAqACAwl3 rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name ""@en;
-    ontouml:cardinality :gvUOUx6GAqACAwl3_cardinality.
-:gvUOUx6GAqACAwl3_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "2..*";
-    ontouml:lowerBound "2";
-    ontouml:upperBound "*".
-:gvUOUx6GAqACAwl3 ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :JnQP5i6GAqACCxF8.
-:krcOUx6GAqACAwl_ rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name ""@en;
-    ontouml:cardinality :krcOUx6GAqACAwl__cardinality.
-:krcOUx6GAqACAwl__cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:krcOUx6GAqACAwl_ ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :JnQP5i6GAqACCxF8.
-:krcOUx6GAqACAwmB rdf:type ontouml:Property;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name ""@en;
-    ontouml:cardinality :krcOUx6GAqACAwmB_cardinality.
-:krcOUx6GAqACAwmB_cardinality rdf:type ontouml:Cardinality;
-    ontouml:cardinalityValue "1..*";
-    ontouml:lowerBound "1";
-    ontouml:upperBound "*".
-:krcOUx6GAqACAwmB ontouml:isDerived "false"^^xsd:boolean;
-    ontouml:isReadOnly "false"^^xsd:boolean;
-    ontouml:isOrdered "false"^^xsd:boolean;
-    ontouml:aggregationKind ontouml:none;
-    ontouml:propertyType :JnQP5i6GAqACCxF8.
-:GTT35i6GAqACCxD3 rdf:type ontouml:Diagram;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:name "criminal investigation"@en;
-    ontouml:containsView <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT_>, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH.>, :EAP35i6GAqACCxE_, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5>, :MgzP5i6GAqACCxIt, :DQkv5i6GAqACCxKY, :Fwf35i6GAqACCxFX, :Y39P5i6GAqACCxHc, :btjP5i6GAqACCxIR, :sSL35i6GAqACCxEN, :fO9P5i6GAqACCxHL, :D0Cv5i6GAqACCxLS, :ircOUx6GAqACAwmD, :ORDP5i6GAqACCxHt, :HHnyUx6GAqACAwjW, :BGz35i6GAqACCxEB, :Ctr35i6GAqACCxEZ, :brgP5i6GAqACCxFv, :xnQP5i6GAqACCxF7, :lIgf5i6GAqACCxP5, :LX_35i6GAqACCxFj, :fcNyUx6GAqACAwih, :Ib5v5i6GAqACCxNc, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr>, :JFOv5i6GAqACCxM3, :G1wv5i6GAqACCxJk, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS>, <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#aRdHvh6D.AAAARUg>, :nYJf5i6GAqACCxR6.
-:EAP35i6GAqACCxE_ rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :kAP35i6GAqACCxFA;
-    ontouml:shape :EAP35i6GAqACCxE__shape.
-:Fwf35i6GAqACCxFX rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :Fwf35i6GAqACCxFY;
-    ontouml:shape :Fwf35i6GAqACCxFX_shape.
-:sSL35i6GAqACCxEN rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :sSL35i6GAqACCxEO;
-    ontouml:shape :sSL35i6GAqACCxEN_shape.
-:BGz35i6GAqACCxEB rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :hGz35i6GAqACCxEC;
-    ontouml:shape :BGz35i6GAqACCxEB_shape.
-:Ctr35i6GAqACCxEZ rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :Ctr35i6GAqACCxEa;
-    ontouml:shape :Ctr35i6GAqACCxEZ_shape.
-:brgP5i6GAqACCxFv rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :brgP5i6GAqACCxFw;
-    ontouml:shape :brgP5i6GAqACCxFv_shape.
-:xnQP5i6GAqACCxF7 rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :JnQP5i6GAqACCxF8;
-    ontouml:shape :xnQP5i6GAqACCxF7_shape.
-:LX_35i6GAqACCxFj rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :LX_35i6GAqACCxFk;
-    ontouml:shape :LX_35i6GAqACCxFj_shape.
-:fcNyUx6GAqACAwih rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#_cNyUx6GAqACAwii>;
-    ontouml:shape :fcNyUx6GAqACAwih_shape.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr> rdf:type ontouml:ClassView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEs>;
-    ontouml:shape <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr_shape>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH.> rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :VIjP5i6GAqACCxH9;
-    ontouml:shape <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path>;
-    ontouml:sourceView :BGz35i6GAqACCxEB;
-    ontouml:targetView <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr>.
-:MgzP5i6GAqACCxIt rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4gzP5i6GAqACCxIs>;
-    ontouml:shape :MgzP5i6GAqACCxIt_path;
-    ontouml:sourceView :sSL35i6GAqACCxEN;
-    ontouml:targetView :LX_35i6GAqACCxFj.
-:Y39P5i6GAqACCxHc rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :g39P5i6GAqACCxHb;
-    ontouml:shape :Y39P5i6GAqACCxHc_path;
-    ontouml:sourceView :sSL35i6GAqACCxEN;
-    ontouml:targetView :xnQP5i6GAqACCxF7.
-:btjP5i6GAqACCxIR rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :TtjP5i6GAqACCxIQ;
-    ontouml:shape :btjP5i6GAqACCxIR_path;
-    ontouml:sourceView :BGz35i6GAqACCxEB;
-    ontouml:targetView :EAP35i6GAqACCxE_.
-:fO9P5i6GAqACCxHL rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :nO9P5i6GAqACCxHK;
-    ontouml:shape :fO9P5i6GAqACCxHL_path;
-    ontouml:sourceView :sSL35i6GAqACCxEN;
-    ontouml:targetView :brgP5i6GAqACCxFv.
-:ORDP5i6GAqACCxHt rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :GRDP5i6GAqACCxHs;
-    ontouml:shape :ORDP5i6GAqACCxHt_path;
-    ontouml:sourceView :BGz35i6GAqACCxEB;
-    ontouml:targetView :sSL35i6GAqACCxEN.
-:HHnyUx6GAqACAwjW rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :jHnyUx6GAqACAwjV;
-    ontouml:shape :HHnyUx6GAqACAwjW_path;
-    ontouml:sourceView :LX_35i6GAqACCxFj;
-    ontouml:targetView :fcNyUx6GAqACAwih.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS> rdf:type ontouml:GeneralizationView;
-    ontouml:project :XIF35i6GAqACCw15;
-    ontouml:isViewOf :ZZHyUx6GAqACAwjR;
-    ontouml:shape <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path>;
-    ontouml:sourceView :brgP5i6GAqACCxFv;
-    ontouml:targetView :fcNyUx6GAqACAwih.
-:EAP35i6GAqACCxE__shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :EAP35i6GAqACCxE__shape_point.
-:EAP35i6GAqACCxE__shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 725;
-    ontouml:yCoordinate 369.
-:Fwf35i6GAqACCxFX_shape rdf:type ontouml:Rectangle;
-    ontouml:height "120"^^xsd:positiveInteger;
-    ontouml:width "102"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Fwf35i6GAqACCxFX_shape_point.
-:Fwf35i6GAqACCxFX_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 460;
-    ontouml:yCoordinate 289.
-:sSL35i6GAqACCxEN_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "102"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :sSL35i6GAqACCxEN_shape_point.
-:sSL35i6GAqACCxEN_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 164.
-:BGz35i6GAqACCxEB_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :BGz35i6GAqACCxEB_shape_point.
-:BGz35i6GAqACCxEB_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 317;
-    ontouml:yCoordinate 50.
-:Ctr35i6GAqACCxEZ_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "102"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Ctr35i6GAqACCxEZ_shape_point.
-:Ctr35i6GAqACCxEZ_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 460;
-    ontouml:yCoordinate 164.
-:brgP5i6GAqACCxFv_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "103"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :brgP5i6GAqACCxFv_shape_point.
-:brgP5i6GAqACCxFv_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 70;
-    ontouml:yCoordinate 303.
-:xnQP5i6GAqACCxF7_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "102"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :xnQP5i6GAqACCxF7_shape_point.
-:xnQP5i6GAqACCxF7_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 70;
-    ontouml:yCoordinate 204.
-:LX_35i6GAqACCxFj_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "102"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :LX_35i6GAqACCxFj_shape_point.
-:LX_35i6GAqACCxFj_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 222;
-    ontouml:yCoordinate 369.
-:fcNyUx6GAqACAwih_shape rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "97"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :fcNyUx6GAqACAwih_shape_point.
-:fcNyUx6GAqACAwih_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 70;
-    ontouml:yCoordinate 369.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr_shape> rdf:type ontouml:Rectangle;
-    ontouml:height "40"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr_shape_point>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4c735i6GAqACCxEr_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 671;
-    ontouml:yCoordinate 164.
-:Ib5v5i6GAqACCxNc_shape rdf:type ontouml:Text;
-    ontouml:height "20"^^xsd:positiveInteger;
-    ontouml:width "20"^^xsd:positiveInteger;
-    ontouml:topLeftPosition :Ib5v5i6GAqACCxNc_shape_point.
-:Ib5v5i6GAqACCxNc_shape_point rdf:type ontouml:Point;
-    ontouml:xCoordinate 214;
-    ontouml:yCoordinate 264.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#aRdHvh6D.AAAARUg_shape> rdf:type ontouml:Text;
-    ontouml:height "46"^^xsd:positiveInteger;
-    ontouml:width "80"^^xsd:positiveInteger;
-    ontouml:topLeftPosition <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#aRdHvh6D.AAAARUg_shape_point>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#aRdHvh6D.AAAARUg_shape_point> rdf:type ontouml:Point;
-    ontouml:xCoordinate 401;
-    ontouml:yCoordinate 63.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_0>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 563;
-    ontouml:yCoordinate 307.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_1>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 722;
-    ontouml:yCoordinate 307.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_2>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 722;
-    ontouml:yCoordinate 205.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_0>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 91.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_1>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 119.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_2>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_2> rdf:type ontouml:Point;
-    ontouml:xCoordinate 711;
-    ontouml:yCoordinate 119.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_3>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH._path_point_3> rdf:type ontouml:Point;
-    ontouml:xCoordinate 711;
-    ontouml:yCoordinate 163.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5_path_point_0>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 117;
-    ontouml:yCoordinate 302.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5_path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5_path_point_1>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#4vUOUx6GAqACAwl5_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 117;
-    ontouml:yCoordinate 245.
-:MgzP5i6GAqACCxIt_path rdf:type ontouml:Path;
-    ontouml:point :MgzP5i6GAqACCxIt_path_point_0.
-:MgzP5i6GAqACCxIt_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 273;
-    ontouml:yCoordinate 205.
-:MgzP5i6GAqACCxIt_path ontouml:point :MgzP5i6GAqACCxIt_path_point_1.
-:MgzP5i6GAqACCxIt_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 273;
-    ontouml:yCoordinate 368.
-:DQkv5i6GAqACCxKY_path rdf:type ontouml:Path;
-    ontouml:point :DQkv5i6GAqACCxKY_path_point_0.
-:DQkv5i6GAqACCxKY_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 563;
-    ontouml:yCoordinate 389.
-:DQkv5i6GAqACCxKY_path ontouml:point :DQkv5i6GAqACCxKY_path_point_1.
-:DQkv5i6GAqACCxKY_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 724;
-    ontouml:yCoordinate 389.
-:Y39P5i6GAqACCxHc_path rdf:type ontouml:Path;
-    ontouml:point :Y39P5i6GAqACCxHc_path_point_0.
-:Y39P5i6GAqACCxHc_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 234;
-    ontouml:yCoordinate 205.
-:Y39P5i6GAqACCxHc_path ontouml:point :Y39P5i6GAqACCxHc_path_point_1.
-:Y39P5i6GAqACCxHc_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 234;
-    ontouml:yCoordinate 224.
-:Y39P5i6GAqACCxHc_path ontouml:point :Y39P5i6GAqACCxHc_path_point_2.
-:Y39P5i6GAqACCxHc_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 173;
-    ontouml:yCoordinate 224.
-:btjP5i6GAqACCxIR_path rdf:type ontouml:Path;
-    ontouml:point :btjP5i6GAqACCxIR_path_point_0.
-:btjP5i6GAqACCxIR_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 91.
-:btjP5i6GAqACCxIR_path ontouml:point :btjP5i6GAqACCxIR_path_point_1.
-:btjP5i6GAqACCxIR_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 119.
-:btjP5i6GAqACCxIR_path ontouml:point :btjP5i6GAqACCxIR_path_point_2.
-:btjP5i6GAqACCxIR_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 765;
-    ontouml:yCoordinate 119.
-:btjP5i6GAqACCxIR_path ontouml:point :btjP5i6GAqACCxIR_path_point_3.
-:btjP5i6GAqACCxIR_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 765;
-    ontouml:yCoordinate 368.
-:fO9P5i6GAqACCxHL_path rdf:type ontouml:Path;
-    ontouml:point :fO9P5i6GAqACCxHL_path_point_0.
-:fO9P5i6GAqACCxHL_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 234;
-    ontouml:yCoordinate 205.
-:fO9P5i6GAqACCxHL_path ontouml:point :fO9P5i6GAqACCxHL_path_point_1.
-:fO9P5i6GAqACCxHL_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 234;
-    ontouml:yCoordinate 323.
-:fO9P5i6GAqACCxHL_path ontouml:point :fO9P5i6GAqACCxHL_path_point_2.
-:fO9P5i6GAqACCxHL_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 174;
-    ontouml:yCoordinate 323.
-:D0Cv5i6GAqACCxLS_path rdf:type ontouml:Path;
-    ontouml:point :D0Cv5i6GAqACCxLS_path_point_0.
-:D0Cv5i6GAqACCxLS_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 459;
-    ontouml:yCoordinate 389.
-:D0Cv5i6GAqACCxLS_path ontouml:point :D0Cv5i6GAqACCxLS_path_point_1.
-:D0Cv5i6GAqACCxLS_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 325;
-    ontouml:yCoordinate 389.
-:ircOUx6GAqACAwmD_path rdf:type ontouml:Path;
-    ontouml:point :ircOUx6GAqACAwmD_path_point_0.
-:ircOUx6GAqACAwmD_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 121;
-    ontouml:yCoordinate 203.
-:ircOUx6GAqACAwmD_path ontouml:point :ircOUx6GAqACAwmD_path_point_1.
-:ircOUx6GAqACAwmD_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 121;
-    ontouml:yCoordinate 163.
-:ircOUx6GAqACAwmD_path ontouml:point :ircOUx6GAqACAwmD_path_point_2.
-:ircOUx6GAqACAwmD_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 189;
-    ontouml:yCoordinate 163.
-:ircOUx6GAqACAwmD_path ontouml:point :ircOUx6GAqACAwmD_path_point_3.
-:ircOUx6GAqACAwmD_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 189;
-    ontouml:yCoordinate 215.
-:ircOUx6GAqACAwmD_path ontouml:point :ircOUx6GAqACAwmD_path_point_4.
-:ircOUx6GAqACAwmD_path_point_4 rdf:type ontouml:Point;
-    ontouml:xCoordinate 173;
-    ontouml:yCoordinate 215.
-:ORDP5i6GAqACCxHt_path rdf:type ontouml:Path;
-    ontouml:point :ORDP5i6GAqACCxHt_path_point_0.
-:ORDP5i6GAqACCxHt_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 91.
-:ORDP5i6GAqACCxHt_path ontouml:point :ORDP5i6GAqACCxHt_path_point_1.
-:ORDP5i6GAqACCxHt_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 357;
-    ontouml:yCoordinate 119.
-:ORDP5i6GAqACCxHt_path ontouml:point :ORDP5i6GAqACCxHt_path_point_2.
-:ORDP5i6GAqACCxHt_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 273;
-    ontouml:yCoordinate 119.
-:ORDP5i6GAqACCxHt_path ontouml:point :ORDP5i6GAqACCxHt_path_point_3.
-:ORDP5i6GAqACCxHt_path_point_3 rdf:type ontouml:Point;
-    ontouml:xCoordinate 273;
-    ontouml:yCoordinate 163.
-:HHnyUx6GAqACAwjW_path rdf:type ontouml:Path;
-    ontouml:point :HHnyUx6GAqACAwjW_path_point_0.
-:HHnyUx6GAqACAwjW_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 221;
-    ontouml:yCoordinate 393.
-:HHnyUx6GAqACAwjW_path ontouml:point :HHnyUx6GAqACAwjW_path_point_1.
-:HHnyUx6GAqACAwjW_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 168;
-    ontouml:yCoordinate 393.
-:lIgf5i6GAqACCxP5_path rdf:type ontouml:Path;
-    ontouml:point :lIgf5i6GAqACCxP5_path_point_0.
-:lIgf5i6GAqACCxP5_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 459;
-    ontouml:yCoordinate 184.
-:lIgf5i6GAqACCxP5_path ontouml:point :lIgf5i6GAqACCxP5_path_point_1.
-:lIgf5i6GAqACCxP5_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 325;
-    ontouml:yCoordinate 184.
-:JFOv5i6GAqACCxM3_path rdf:type ontouml:Path;
-    ontouml:point :JFOv5i6GAqACCxM3_path_point_0.
-:JFOv5i6GAqACCxM3_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 459;
-    ontouml:yCoordinate 307.
-:JFOv5i6GAqACCxM3_path ontouml:point :JFOv5i6GAqACCxM3_path_point_1.
-:JFOv5i6GAqACCxM3_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 308;
-    ontouml:yCoordinate 307.
-:JFOv5i6GAqACCxM3_path ontouml:point :JFOv5i6GAqACCxM3_path_point_2.
-:JFOv5i6GAqACCxM3_path_point_2 rdf:type ontouml:Point;
-    ontouml:xCoordinate 308;
-    ontouml:yCoordinate 205.
-:G1wv5i6GAqACCxJk_path rdf:type ontouml:Path;
-    ontouml:point :G1wv5i6GAqACCxJk_path_point_0.
-:G1wv5i6GAqACCxJk_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 511;
-    ontouml:yCoordinate 205.
-:G1wv5i6GAqACCxJk_path ontouml:point :G1wv5i6GAqACCxJk_path_point_1.
-:G1wv5i6GAqACCxJk_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 511;
-    ontouml:yCoordinate 288.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path> rdf:type ontouml:Path;
-    ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path_point_0>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path_point_0> rdf:type ontouml:Point;
-    ontouml:xCoordinate 117;
-    ontouml:yCoordinate 344.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path> ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path_point_1>.
-<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#1ZHyUx6GAqACAwjS_path_point_1> rdf:type ontouml:Point;
-    ontouml:xCoordinate 117;
-    ontouml:yCoordinate 368.
-:nYJf5i6GAqACCxR6_path rdf:type ontouml:Path;
-    ontouml:point :nYJf5i6GAqACCxR6_path_point_0.
-:nYJf5i6GAqACCxR6_path_point_0 rdf:type ontouml:Point;
-    ontouml:xCoordinate 563;
-    ontouml:yCoordinate 184.
-:nYJf5i6GAqACCxR6_path ontouml:point :nYJf5i6GAqACCxR6_path_point_1.
-:nYJf5i6GAqACCxR6_path_point_1 rdf:type ontouml:Point;
-    ontouml:xCoordinate 670;
-    ontouml:yCoordinate 184.
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1_cardinality> a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz_cardinality> a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT_> a ontouml:RelationView ;
+    ontouml:isViewOf :mGrf5i6GAqACCxT6 ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path> ;
+    ontouml:sourceView :Fwf35i6GAqACCxFX ;
+    ontouml:targetView :4c735i6GAqACCxEr .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path> a ontouml:Path ;
+    ontouml:point <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_0>,
+        <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_1>,
+        <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_2> ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_0> a ontouml:Point ;
+    ontouml:xCoordinate 563 ;
+    ontouml:yCoordinate 307 .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_1> a ontouml:Point ;
+    ontouml:xCoordinate 722 ;
+    ontouml:yCoordinate 307 .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT__path_point_2> a ontouml:Point ;
+    ontouml:xCoordinate 722 ;
+    ontouml:yCoordinate 205 .
+
+:1ZHyUx6GAqACAwjS a ontouml:GeneralizationView ;
+    ontouml:isViewOf :ZZHyUx6GAqACAwjR ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :1ZHyUx6GAqACAwjS_path ;
+    ontouml:sourceView :brgP5i6GAqACCxFv ;
+    ontouml:targetView :fcNyUx6GAqACAwih .
+
+:1ZHyUx6GAqACAwjS_path a ontouml:Path ;
+    ontouml:point :1ZHyUx6GAqACAwjS_path_point_0,
+        :1ZHyUx6GAqACAwjS_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:1ZHyUx6GAqACAwjS_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 117 ;
+    ontouml:yCoordinate 344 .
+
+:1ZHyUx6GAqACAwjS_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 117 ;
+    ontouml:yCoordinate 368 .
+
+:4c735i6GAqACCxEr_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :4c735i6GAqACCxEr_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:4c735i6GAqACCxEr_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 671 ;
+    ontouml:yCoordinate 164 .
+
+:4vUOUx6GAqACAwl5 a ontouml:RelationView ;
+    ontouml:isViewOf :gvUOUx6GAqACAwl0 ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :4vUOUx6GAqACAwl5_path ;
+    ontouml:sourceView :brgP5i6GAqACCxFv ;
+    ontouml:targetView :xnQP5i6GAqACCxF7 .
+
+:4vUOUx6GAqACAwl5_path a ontouml:Path ;
+    ontouml:point :4vUOUx6GAqACAwl5_path_point_0,
+        :4vUOUx6GAqACAwl5_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:4vUOUx6GAqACAwl5_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 117 ;
+    ontouml:yCoordinate 302 .
+
+:4vUOUx6GAqACAwl5_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 117 ;
+    ontouml:yCoordinate 245 .
+
+:BGz35i6GAqACCxEB_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :BGz35i6GAqACCxEB_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:BGz35i6GAqACCxEB_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 317 ;
+    ontouml:yCoordinate 50 .
+
+:Ctr35i6GAqACCxEZ_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :Ctr35i6GAqACCxEZ_shape_point ;
+    ontouml:width "102"^^xsd:nonNegativeInteger .
+
+:Ctr35i6GAqACCxEZ_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 460 ;
+    ontouml:yCoordinate 164 .
+
+:D0Cv5i6GAqACCxLS a ontouml:RelationView ;
+    ontouml:isViewOf :V0Cv5i6GAqACCxLN ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :D0Cv5i6GAqACCxLS_path ;
+    ontouml:sourceView :Fwf35i6GAqACCxFX ;
+    ontouml:targetView :LX_35i6GAqACCxFj .
+
+:D0Cv5i6GAqACCxLS_path a ontouml:Path ;
+    ontouml:point :D0Cv5i6GAqACCxLS_path_point_0,
+        :D0Cv5i6GAqACCxLS_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:D0Cv5i6GAqACCxLS_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 459 ;
+    ontouml:yCoordinate 389 .
+
+:D0Cv5i6GAqACCxLS_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 325 ;
+    ontouml:yCoordinate 389 .
+
+:DQkv5i6GAqACCxKY a ontouml:RelationView ;
+    ontouml:isViewOf :lQkv5i6GAqACCxKT ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :DQkv5i6GAqACCxKY_path ;
+    ontouml:sourceView :Fwf35i6GAqACCxFX ;
+    ontouml:targetView :EAP35i6GAqACCxE_ .
+
+:DQkv5i6GAqACCxKY_path a ontouml:Path ;
+    ontouml:point :DQkv5i6GAqACCxKY_path_point_0,
+        :DQkv5i6GAqACCxKY_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:DQkv5i6GAqACCxKY_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 563 ;
+    ontouml:yCoordinate 389 .
+
+:DQkv5i6GAqACCxKY_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 724 ;
+    ontouml:yCoordinate 389 .
+
+:DYJf5i6GAqACCxR2_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:EAP35i6GAqACCxE__shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :EAP35i6GAqACCxE__shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:EAP35i6GAqACCxE__shape_point a ontouml:Point ;
+    ontouml:xCoordinate 725 ;
+    ontouml:yCoordinate 369 .
+
+:Fwf35i6GAqACCxFX_shape a ontouml:Rectangle ;
+    ontouml:height "120"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :Fwf35i6GAqACCxFX_shape_point ;
+    ontouml:width "102"^^xsd:nonNegativeInteger .
+
+:Fwf35i6GAqACCxFX_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 460 ;
+    ontouml:yCoordinate 289 .
+
+:G1wv5i6GAqACCxJk a ontouml:RelationView ;
+    ontouml:isViewOf :_Vwv5i6GAqACCxJf ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :G1wv5i6GAqACCxJk_path ;
+    ontouml:sourceView :Ctr35i6GAqACCxEZ ;
+    ontouml:targetView :Fwf35i6GAqACCxFX .
+
+:G1wv5i6GAqACCxJk_path a ontouml:Path ;
+    ontouml:point :G1wv5i6GAqACCxJk_path_point_0,
+        :G1wv5i6GAqACCxJk_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:G1wv5i6GAqACCxJk_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 511 ;
+    ontouml:yCoordinate 205 .
+
+:G1wv5i6GAqACCxJk_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 511 ;
+    ontouml:yCoordinate 288 .
+
+:GTT35i6GAqACCxD3 a ontouml:Diagram ;
+    ontouml:containsView <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.Grf5i6GAqACCxT_>,
+        :1ZHyUx6GAqACAwjS,
+        :4c735i6GAqACCxEr,
+        :4vUOUx6GAqACAwl5,
+        :BGz35i6GAqACCxEB,
+        :Ctr35i6GAqACCxEZ,
+        :D0Cv5i6GAqACCxLS,
+        :DQkv5i6GAqACCxKY,
+        :EAP35i6GAqACCxE_,
+        :Fwf35i6GAqACCxFX,
+        :G1wv5i6GAqACCxJk,
+        :HHnyUx6GAqACAwjW,
+        :Ib5v5i6GAqACCxNc,
+        :JFOv5i6GAqACCxM3,
+        :LX_35i6GAqACCxFj,
+        :MgzP5i6GAqACCxIt,
+        :ORDP5i6GAqACCxHt,
+        :Y39P5i6GAqACCxHc,
+        :aRdHvh6D.AAAARUg,
+        :brgP5i6GAqACCxFv,
+        :btjP5i6GAqACCxIR,
+        <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH.>,
+        :fO9P5i6GAqACCxHL,
+        :fcNyUx6GAqACAwih,
+        :ircOUx6GAqACAwmD,
+        :lIgf5i6GAqACCxP5,
+        :nYJf5i6GAqACCxR6,
+        :sSL35i6GAqACCxEN,
+        :xnQP5i6GAqACCxF7 ;
+    ontouml:name "criminal investigation"@en ;
+    ontouml:owner :XIF35i6GAqACCw15_root ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:HHnyUx6GAqACAwjW a ontouml:GeneralizationView ;
+    ontouml:isViewOf :jHnyUx6GAqACAwjV ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :HHnyUx6GAqACAwjW_path ;
+    ontouml:sourceView :LX_35i6GAqACCxFj ;
+    ontouml:targetView :fcNyUx6GAqACAwih .
+
+:HHnyUx6GAqACAwjW_path a ontouml:Path ;
+    ontouml:point :HHnyUx6GAqACAwjW_path_point_0,
+        :HHnyUx6GAqACAwjW_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:HHnyUx6GAqACAwjW_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 221 ;
+    ontouml:yCoordinate 393 .
+
+:HHnyUx6GAqACAwjW_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 168 ;
+    ontouml:yCoordinate 393 .
+
+:Ib5v5i6GAqACCxNc a ontouml:GeneralizationSetView ;
+    ontouml:isViewOf :br5v5i6GAqACCxNa ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :Ib5v5i6GAqACCxNc_shape .
+
+:Ib5v5i6GAqACCxNc_shape a ontouml:Text ;
+    ontouml:height "20"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :Ib5v5i6GAqACCxNc_shape_point ;
+    ontouml:width "20"^^xsd:nonNegativeInteger .
+
+:Ib5v5i6GAqACCxNc_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 214 ;
+    ontouml:yCoordinate 264 .
+
+:JFOv5i6GAqACCxM3 a ontouml:RelationView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMy> ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :JFOv5i6GAqACCxM3_path ;
+    ontouml:sourceView :Fwf35i6GAqACCxFX ;
+    ontouml:targetView :sSL35i6GAqACCxEN .
+
+:JFOv5i6GAqACCxM3_path a ontouml:Path ;
+    ontouml:point :JFOv5i6GAqACCxM3_path_point_0,
+        :JFOv5i6GAqACCxM3_path_point_1,
+        :JFOv5i6GAqACCxM3_path_point_2 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:JFOv5i6GAqACCxM3_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 459 ;
+    ontouml:yCoordinate 307 .
+
+:JFOv5i6GAqACCxM3_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 308 ;
+    ontouml:yCoordinate 307 .
+
+:JFOv5i6GAqACCxM3_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 308 ;
+    ontouml:yCoordinate 205 .
+
+:LX_35i6GAqACCxFj_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :LX_35i6GAqACCxFj_shape_point ;
+    ontouml:width "102"^^xsd:nonNegativeInteger .
+
+:LX_35i6GAqACCxFj_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 369 .
+
+:MgzP5i6GAqACCxIt a ontouml:GeneralizationView ;
+    ontouml:isViewOf :4gzP5i6GAqACCxIs ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :MgzP5i6GAqACCxIt_path ;
+    ontouml:sourceView :sSL35i6GAqACCxEN ;
+    ontouml:targetView :LX_35i6GAqACCxFj .
+
+:MgzP5i6GAqACCxIt_path a ontouml:Path ;
+    ontouml:point :MgzP5i6GAqACCxIt_path_point_0,
+        :MgzP5i6GAqACCxIt_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:MgzP5i6GAqACCxIt_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 273 ;
+    ontouml:yCoordinate 205 .
+
+:MgzP5i6GAqACCxIt_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 273 ;
+    ontouml:yCoordinate 368 .
+
+:ORDP5i6GAqACCxHt a ontouml:GeneralizationView ;
+    ontouml:isViewOf :GRDP5i6GAqACCxHs ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :ORDP5i6GAqACCxHt_path ;
+    ontouml:sourceView :BGz35i6GAqACCxEB ;
+    ontouml:targetView :sSL35i6GAqACCxEN .
+
+:ORDP5i6GAqACCxHt_path a ontouml:Path ;
+    ontouml:point :ORDP5i6GAqACCxHt_path_point_0,
+        :ORDP5i6GAqACCxHt_path_point_1,
+        :ORDP5i6GAqACCxHt_path_point_2,
+        :ORDP5i6GAqACCxHt_path_point_3 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:ORDP5i6GAqACCxHt_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 91 .
+
+:ORDP5i6GAqACCxHt_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 119 .
+
+:ORDP5i6GAqACCxHt_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 273 ;
+    ontouml:yCoordinate 119 .
+
+:ORDP5i6GAqACCxHt_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 273 ;
+    ontouml:yCoordinate 163 .
+
+:V0Cv5i6GAqACCxLO_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:V0Cv5i6GAqACCxLQ_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:VQkv5i6GAqACCxKW_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:Y39P5i6GAqACCxHc a ontouml:GeneralizationView ;
+    ontouml:isViewOf :g39P5i6GAqACCxHb ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :Y39P5i6GAqACCxHc_path ;
+    ontouml:sourceView :sSL35i6GAqACCxEN ;
+    ontouml:targetView :xnQP5i6GAqACCxF7 .
+
+:Y39P5i6GAqACCxHc_path a ontouml:Path ;
+    ontouml:point :Y39P5i6GAqACCxHc_path_point_0,
+        :Y39P5i6GAqACCxHc_path_point_1,
+        :Y39P5i6GAqACCxHc_path_point_2 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:Y39P5i6GAqACCxHc_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 234 ;
+    ontouml:yCoordinate 205 .
+
+:Y39P5i6GAqACCxHc_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 234 ;
+    ontouml:yCoordinate 224 .
+
+:Y39P5i6GAqACCxHc_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 173 ;
+    ontouml:yCoordinate 224 .
+
+:_Vwv5i6GAqACCxJg_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:_Vwv5i6GAqACCxJi_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:aRdHvh6D.AAAARUg a ontouml:GeneralizationSetView ;
+    ontouml:isViewOf :nhdHvh6D.AAAARUX ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :aRdHvh6D.AAAARUg_shape .
+
+:aRdHvh6D.AAAARUg_shape a ontouml:Text ;
+    ontouml:height "46"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :aRdHvh6D.AAAARUg_shape_point ;
+    ontouml:width "80"^^xsd:nonNegativeInteger .
+
+:aRdHvh6D.AAAARUg_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 401 ;
+    ontouml:yCoordinate 63 .
+
+:brgP5i6GAqACCxFv_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :brgP5i6GAqACCxFv_shape_point ;
+    ontouml:width "103"^^xsd:nonNegativeInteger .
+
+:brgP5i6GAqACCxFv_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 70 ;
+    ontouml:yCoordinate 303 .
+
+:btjP5i6GAqACCxIR a ontouml:GeneralizationView ;
+    ontouml:isViewOf :TtjP5i6GAqACCxIQ ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :btjP5i6GAqACCxIR_path ;
+    ontouml:sourceView :BGz35i6GAqACCxEB ;
+    ontouml:targetView :EAP35i6GAqACCxE_ .
+
+:btjP5i6GAqACCxIR_path a ontouml:Path ;
+    ontouml:point :btjP5i6GAqACCxIR_path_point_0,
+        :btjP5i6GAqACCxIR_path_point_1,
+        :btjP5i6GAqACCxIR_path_point_2,
+        :btjP5i6GAqACCxIR_path_point_3 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:btjP5i6GAqACCxIR_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 91 .
+
+:btjP5i6GAqACCxIR_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 119 .
+
+:btjP5i6GAqACCxIR_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 765 ;
+    ontouml:yCoordinate 119 .
+
+:btjP5i6GAqACCxIR_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 765 ;
+    ontouml:yCoordinate 368 .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#dIjP5i6GAqACCxH.> a ontouml:GeneralizationView ;
+    ontouml:isViewOf :VIjP5i6GAqACCxH9 ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :dIjP5i6GAqACCxH._path ;
+    ontouml:sourceView :BGz35i6GAqACCxEB ;
+    ontouml:targetView :4c735i6GAqACCxEr .
+
+:dIjP5i6GAqACCxH._path a ontouml:Path ;
+    ontouml:point :dIjP5i6GAqACCxH._path_point_0,
+        :dIjP5i6GAqACCxH._path_point_1,
+        :dIjP5i6GAqACCxH._path_point_2,
+        :dIjP5i6GAqACCxH._path_point_3 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:dIjP5i6GAqACCxH._path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 91 .
+
+:dIjP5i6GAqACCxH._path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 357 ;
+    ontouml:yCoordinate 119 .
+
+:dIjP5i6GAqACCxH._path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 711 ;
+    ontouml:yCoordinate 119 .
+
+:dIjP5i6GAqACCxH._path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 711 ;
+    ontouml:yCoordinate 163 .
+
+:fO9P5i6GAqACCxHL a ontouml:GeneralizationView ;
+    ontouml:isViewOf :nO9P5i6GAqACCxHK ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :fO9P5i6GAqACCxHL_path ;
+    ontouml:sourceView :sSL35i6GAqACCxEN ;
+    ontouml:targetView :brgP5i6GAqACCxFv .
+
+:fO9P5i6GAqACCxHL_path a ontouml:Path ;
+    ontouml:point :fO9P5i6GAqACCxHL_path_point_0,
+        :fO9P5i6GAqACCxHL_path_point_1,
+        :fO9P5i6GAqACCxHL_path_point_2 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:fO9P5i6GAqACCxHL_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 234 ;
+    ontouml:yCoordinate 205 .
+
+:fO9P5i6GAqACCxHL_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 234 ;
+    ontouml:yCoordinate 323 .
+
+:fO9P5i6GAqACCxHL_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 174 ;
+    ontouml:yCoordinate 323 .
+
+:fcNyUx6GAqACAwih_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :fcNyUx6GAqACAwih_shape_point ;
+    ontouml:width "97"^^xsd:nonNegativeInteger .
+
+:fcNyUx6GAqACAwih_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 70 ;
+    ontouml:yCoordinate 369 .
+
+:gvUOUx6GAqACAwl1_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:gvUOUx6GAqACAwl3_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "2..*" ;
+    ontouml:lowerBound "2"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:hIgf5i6GAqACCxP1_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:hIgf5i6GAqACCxP3_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:ircOUx6GAqACAwmD a ontouml:RelationView ;
+    ontouml:isViewOf <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#krcOUx6GAqACAwl.> ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :ircOUx6GAqACAwmD_path ;
+    ontouml:sourceView :xnQP5i6GAqACCxF7 ;
+    ontouml:targetView :xnQP5i6GAqACCxF7 .
+
+:ircOUx6GAqACAwmD_path a ontouml:Path ;
+    ontouml:point :ircOUx6GAqACAwmD_path_point_0,
+        :ircOUx6GAqACAwmD_path_point_1,
+        :ircOUx6GAqACAwmD_path_point_2,
+        :ircOUx6GAqACAwmD_path_point_3,
+        :ircOUx6GAqACAwmD_path_point_4 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:ircOUx6GAqACAwmD_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 121 ;
+    ontouml:yCoordinate 203 .
+
+:ircOUx6GAqACAwmD_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 121 ;
+    ontouml:yCoordinate 163 .
+
+:ircOUx6GAqACAwmD_path_point_2 a ontouml:Point ;
+    ontouml:xCoordinate 189 ;
+    ontouml:yCoordinate 163 .
+
+:ircOUx6GAqACAwmD_path_point_3 a ontouml:Point ;
+    ontouml:xCoordinate 189 ;
+    ontouml:yCoordinate 215 .
+
+:ircOUx6GAqACAwmD_path_point_4 a ontouml:Point ;
+    ontouml:xCoordinate 173 ;
+    ontouml:yCoordinate 215 .
+
+:jYJf5i6GAqACCxR4_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..1" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "1" .
+
+:krcOUx6GAqACAwl__cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:krcOUx6GAqACAwmB_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:lIgf5i6GAqACCxP5 a ontouml:RelationView ;
+    ontouml:isViewOf :hIgf5i6GAqACCxP0 ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :lIgf5i6GAqACCxP5_path ;
+    ontouml:sourceView :Ctr35i6GAqACCxEZ ;
+    ontouml:targetView :sSL35i6GAqACCxEN .
+
+:lIgf5i6GAqACCxP5_path a ontouml:Path ;
+    ontouml:point :lIgf5i6GAqACCxP5_path_point_0,
+        :lIgf5i6GAqACCxP5_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:lIgf5i6GAqACCxP5_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 459 ;
+    ontouml:yCoordinate 184 .
+
+:lIgf5i6GAqACCxP5_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 325 ;
+    ontouml:yCoordinate 184 .
+
+:lQkv5i6GAqACCxKU_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:mGrf5i6GAqACCxT7_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "1..*" ;
+    ontouml:lowerBound "1"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:mGrf5i6GAqACCxT9_cardinality a ontouml:Cardinality ;
+    ontouml:cardinalityValue "0..*" ;
+    ontouml:lowerBound "0"^^xsd:nonNegativeInteger ;
+    ontouml:upperBound "*" .
+
+:nYJf5i6GAqACCxR6 a ontouml:RelationView ;
+    ontouml:isViewOf :DYJf5i6GAqACCxR1 ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :nYJf5i6GAqACCxR6_path ;
+    ontouml:sourceView :Ctr35i6GAqACCxEZ ;
+    ontouml:targetView :4c735i6GAqACCxEr .
+
+:nYJf5i6GAqACCxR6_path a ontouml:Path ;
+    ontouml:point :nYJf5i6GAqACCxR6_path_point_0,
+        :nYJf5i6GAqACCxR6_path_point_1 ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:nYJf5i6GAqACCxR6_path_point_0 a ontouml:Point ;
+    ontouml:xCoordinate 563 ;
+    ontouml:yCoordinate 184 .
+
+:nYJf5i6GAqACCxR6_path_point_1 a ontouml:Point ;
+    ontouml:xCoordinate 670 ;
+    ontouml:yCoordinate 184 .
+
+:sSL35i6GAqACCxEN_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :sSL35i6GAqACCxEN_shape_point ;
+    ontouml:width "102"^^xsd:nonNegativeInteger .
+
+:sSL35i6GAqACCxEN_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 222 ;
+    ontouml:yCoordinate 164 .
+
+:xnQP5i6GAqACCxF7_shape a ontouml:Rectangle ;
+    ontouml:height "40"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:topLeftPosition :xnQP5i6GAqACCxF7_shape_point ;
+    ontouml:width "102"^^xsd:nonNegativeInteger .
+
+:xnQP5i6GAqACCxF7_shape_point a ontouml:Point ;
+    ontouml:xCoordinate 70 ;
+    ontouml:yCoordinate 204 .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1> a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1_cardinality> ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :sSL35i6GAqACCxEO .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMy> a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "involves detective"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1>,
+        <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz> ;
+    ontouml:sourceEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz> ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxM1> .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz> a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMz_cardinality> ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Fwf35i6GAqACCxFY .
+
+:4gzP5i6GAqACCxIs a ontouml:Generalization ;
+    ontouml:general :sSL35i6GAqACCxEO ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :LX_35i6GAqACCxFk .
+
+:DYJf5i6GAqACCxR1 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "questions"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :DYJf5i6GAqACCxR2,
+        :jYJf5i6GAqACCxR4 ;
+    ontouml:sourceEnd :DYJf5i6GAqACCxR2 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :jYJf5i6GAqACCxR4 .
+
+:DYJf5i6GAqACCxR2 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :DYJf5i6GAqACCxR2_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Ctr35i6GAqACCxEa .
+
+:V0Cv5i6GAqACCxLN a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "is led by"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :V0Cv5i6GAqACCxLO,
+        :V0Cv5i6GAqACCxLQ ;
+    ontouml:sourceEnd :V0Cv5i6GAqACCxLO ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :V0Cv5i6GAqACCxLQ .
+
+:V0Cv5i6GAqACCxLO a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :V0Cv5i6GAqACCxLO_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Fwf35i6GAqACCxFY .
+
+:V0Cv5i6GAqACCxLQ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :V0Cv5i6GAqACCxLQ_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :LX_35i6GAqACCxFk .
+
+:VQkv5i6GAqACCxKW a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :VQkv5i6GAqACCxKW_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :kAP35i6GAqACCxFA .
+
+:XIF35i6GAqACCw15_root a ontouml:Package ;
+    ontouml:containsModelElement <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#.FOv5i6GAqACCxMy>,
+        :4c735i6GAqACCxEs,
+        :4gzP5i6GAqACCxIs,
+        :Ctr35i6GAqACCxEa,
+        :DYJf5i6GAqACCxR1,
+        :Fwf35i6GAqACCxFY,
+        :GRDP5i6GAqACCxHs,
+        :JnQP5i6GAqACCxF8,
+        :LX_35i6GAqACCxFk,
+        :TtjP5i6GAqACCxIQ,
+        :V0Cv5i6GAqACCxLN,
+        :VIjP5i6GAqACCxH9,
+        :ZZHyUx6GAqACAwjR,
+        :_Vwv5i6GAqACCxJf,
+        :_cNyUx6GAqACAwii,
+        :br5v5i6GAqACCxNa,
+        :brgP5i6GAqACCxFw,
+        :g39P5i6GAqACCxHb,
+        :gvUOUx6GAqACAwl0,
+        :hGz35i6GAqACCxEC,
+        :hIgf5i6GAqACCxP0,
+        :jHnyUx6GAqACAwjV,
+        :kAP35i6GAqACCxFA,
+        <https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#krcOUx6GAqACAwl.>,
+        :lQkv5i6GAqACCxKT,
+        :mGrf5i6GAqACCxT6,
+        :nO9P5i6GAqACCxHK,
+        :nhdHvh6D.AAAARUX,
+        :sSL35i6GAqACCxEO ;
+    ontouml:name "DKE Example"@en ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:ZZHyUx6GAqACAwjR a ontouml:Generalization ;
+    ontouml:general :brgP5i6GAqACCxFw ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :_cNyUx6GAqACAwii .
+
+:_Vwv5i6GAqACCxJf a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "contributes to"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :_Vwv5i6GAqACCxJg,
+        :_Vwv5i6GAqACCxJi ;
+    ontouml:sourceEnd :_Vwv5i6GAqACCxJg ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :_Vwv5i6GAqACCxJi .
+
+:_Vwv5i6GAqACCxJg a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :_Vwv5i6GAqACCxJg_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Ctr35i6GAqACCxEa .
+
+:_Vwv5i6GAqACCxJi a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :_Vwv5i6GAqACCxJi_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Fwf35i6GAqACCxFY .
+
+:br5v5i6GAqACCxNa a ontouml:GeneralizationSet ;
+    ontouml:generalization :g39P5i6GAqACCxHb,
+        :nO9P5i6GAqACCxHK ;
+    ontouml:isComplete true ;
+    ontouml:isDisjoint true ;
+    ontouml:name "Seniority"@en ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:gvUOUx6GAqACAwl0 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived true ;
+    ontouml:name "manages"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :gvUOUx6GAqACAwl1,
+        :gvUOUx6GAqACAwl3 ;
+    ontouml:sourceEnd :gvUOUx6GAqACAwl1 ;
+    ontouml:stereotype ontouml:material ;
+    ontouml:targetEnd :gvUOUx6GAqACAwl3 .
+
+:gvUOUx6GAqACAwl1 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :gvUOUx6GAqACAwl1_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :brgP5i6GAqACCxFw .
+
+:gvUOUx6GAqACAwl3 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :gvUOUx6GAqACAwl3_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :JnQP5i6GAqACCxF8 .
+
+:hIgf5i6GAqACCxP0 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "conducted by"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :hIgf5i6GAqACCxP1,
+        :hIgf5i6GAqACCxP3 ;
+    ontouml:sourceEnd :hIgf5i6GAqACCxP1 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :hIgf5i6GAqACCxP3 .
+
+:hIgf5i6GAqACCxP1 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :hIgf5i6GAqACCxP1_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Ctr35i6GAqACCxEa .
+
+:hIgf5i6GAqACCxP3 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :hIgf5i6GAqACCxP3_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :sSL35i6GAqACCxEO .
+
+:jHnyUx6GAqACAwjV a ontouml:Generalization ;
+    ontouml:general :LX_35i6GAqACCxFk ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :_cNyUx6GAqACAwii .
+
+:jYJf5i6GAqACCxR4 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :jYJf5i6GAqACCxR4_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :4c735i6GAqACCxEs .
+
+<https://w3id.org/ontouml-models/model/fumagalli2022criminal-investigation#krcOUx6GAqACAwl.> a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived true ;
+    ontouml:name "teams up"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :krcOUx6GAqACAwl_,
+        :krcOUx6GAqACAwmB ;
+    ontouml:sourceEnd :krcOUx6GAqACAwl_ ;
+    ontouml:stereotype ontouml:material ;
+    ontouml:targetEnd :krcOUx6GAqACAwmB .
+
+:krcOUx6GAqACAwl_ a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :krcOUx6GAqACAwl__cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :JnQP5i6GAqACCxF8 .
+
+:krcOUx6GAqACAwmB a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :krcOUx6GAqACAwmB_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:name ""@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :JnQP5i6GAqACCxF8 .
+
+:lQkv5i6GAqACCxKT a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "involves suspect"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :VQkv5i6GAqACCxKW,
+        :lQkv5i6GAqACCxKU ;
+    ontouml:sourceEnd :lQkv5i6GAqACCxKU ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :VQkv5i6GAqACCxKW .
+
+:lQkv5i6GAqACCxKU a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :lQkv5i6GAqACCxKU_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Fwf35i6GAqACCxFY .
+
+:mGrf5i6GAqACCxT6 a ontouml:Relation ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:name "involves witness"@en ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:relationEnd :mGrf5i6GAqACCxT7,
+        :mGrf5i6GAqACCxT9 ;
+    ontouml:sourceEnd :mGrf5i6GAqACCxT7 ;
+    ontouml:stereotype ontouml:mediation ;
+    ontouml:targetEnd :mGrf5i6GAqACCxT9 .
+
+:mGrf5i6GAqACCxT7 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :mGrf5i6GAqACCxT7_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly false ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :Fwf35i6GAqACCxFY .
+
+:mGrf5i6GAqACCxT9 a ontouml:Property ;
+    ontouml:aggregationKind ontouml:none ;
+    ontouml:cardinality :mGrf5i6GAqACCxT9_cardinality ;
+    ontouml:isDerived false ;
+    ontouml:isOrdered false ;
+    ontouml:isReadOnly true ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:propertyType :4c735i6GAqACCxEs .
+
+:nhdHvh6D.AAAARUX a ontouml:GeneralizationSet ;
+    ontouml:generalization :GRDP5i6GAqACCxHs,
+        :TtjP5i6GAqACCxIQ,
+        :VIjP5i6GAqACCxH9 ;
+    ontouml:isComplete false ;
+    ontouml:isDisjoint false ;
+    ontouml:name "PersonRole"@en ;
+    ontouml:project :XIF35i6GAqACCw15 .
+
+:EAP35i6GAqACCxE_ a ontouml:ClassView ;
+    ontouml:isViewOf :kAP35i6GAqACCxFA ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :EAP35i6GAqACCxE__shape .
+
+:GRDP5i6GAqACCxHs a ontouml:Generalization ;
+    ontouml:general :hGz35i6GAqACCxEC ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :sSL35i6GAqACCxEO .
+
+:TtjP5i6GAqACCxIQ a ontouml:Generalization ;
+    ontouml:general :hGz35i6GAqACCxEC ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :kAP35i6GAqACCxFA .
+
+:VIjP5i6GAqACCxH9 a ontouml:Generalization ;
+    ontouml:general :hGz35i6GAqACCxEC ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :4c735i6GAqACCxEs .
+
+:fcNyUx6GAqACAwih a ontouml:ClassView ;
+    ontouml:isViewOf :_cNyUx6GAqACAwii ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :fcNyUx6GAqACAwih_shape .
+
+:g39P5i6GAqACCxHb a ontouml:Generalization ;
+    ontouml:general :sSL35i6GAqACCxEO ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :JnQP5i6GAqACCxF8 .
+
+:nO9P5i6GAqACCxHK a ontouml:Generalization ;
+    ontouml:general :sSL35i6GAqACCxEO ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:specific :brgP5i6GAqACCxFw .
+
+:4c735i6GAqACCxEr a ontouml:ClassView ;
+    ontouml:isViewOf :4c735i6GAqACCxEs ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :4c735i6GAqACCxEr_shape .
+
+:BGz35i6GAqACCxEB a ontouml:ClassView ;
+    ontouml:isViewOf :hGz35i6GAqACCxEC ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :BGz35i6GAqACCxEB_shape .
+
+:Ctr35i6GAqACCxEZ a ontouml:ClassView ;
+    ontouml:isViewOf :Ctr35i6GAqACCxEa ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :Ctr35i6GAqACCxEZ_shape .
+
+:LX_35i6GAqACCxFj a ontouml:ClassView ;
+    ontouml:isViewOf :LX_35i6GAqACCxFk ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :LX_35i6GAqACCxFj_shape .
+
+:_cNyUx6GAqACAwii a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Superintendent"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:brgP5i6GAqACCxFv a ontouml:ClassView ;
+    ontouml:isViewOf :brgP5i6GAqACCxFw ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :brgP5i6GAqACCxFv_shape .
+
+:kAP35i6GAqACCxFA a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Suspect"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:4c735i6GAqACCxEs a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Witness"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:Ctr35i6GAqACCxEa a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Interrogation"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:LX_35i6GAqACCxFk a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Lead Detective"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:brgP5i6GAqACCxFw a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Senior Detective"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:hGz35i6GAqACCxEC a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Person"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:kind .
+
+:xnQP5i6GAqACCxF7 a ontouml:ClassView ;
+    ontouml:isViewOf :JnQP5i6GAqACCxF8 ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :xnQP5i6GAqACCxF7_shape .
+
+:Fwf35i6GAqACCxFX a ontouml:ClassView ;
+    ontouml:isViewOf :Fwf35i6GAqACCxFY ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :Fwf35i6GAqACCxFX_shape .
+
+:JnQP5i6GAqACCxF8 a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Junior Detective"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:Fwf35i6GAqACCxFY a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Criminal Investigation"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:relatorNature ;
+    ontouml:stereotype ontouml:relator .
+
+:sSL35i6GAqACCxEN a ontouml:ClassView ;
+    ontouml:isViewOf :sSL35i6GAqACCxEO ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:shape :sSL35i6GAqACCxEN_shape .
+
+:sSL35i6GAqACCxEO a ontouml:Class ;
+    ontouml:isAbstract false ;
+    ontouml:isDerived false ;
+    ontouml:isExtensional false ;
+    ontouml:isPowertype false ;
+    ontouml:name "Detective"@en ;
+    ontouml:order "1"^^xsd:nonNegativeInteger ;
+    ontouml:project :XIF35i6GAqACCw15 ;
+    ontouml:restrictedTo ontouml:functionalComplexNature ;
+    ontouml:stereotype ontouml:role .
+
+:XIF35i6GAqACCw15 a ontouml:Project ;
+    ontouml:diagram :GTT35i6GAqACCxD3 ;
+    ontouml:model :XIF35i6GAqACCw15_root ;
+    ontouml:name "DKE Example"@en .
+
