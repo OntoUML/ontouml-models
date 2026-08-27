@@ -37,6 +37,10 @@ def load_module():
 PNG_1X1 = base64.b64decode(
     "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII="
 )
+VALID_TURTLE = (
+    "@prefix ex: <https://example.org/> .\n"
+    "ex:model ex:predicate ex:object .\n"
+)
 
 
 def make_repo(tmp_path: Path) -> Path:
@@ -46,7 +50,12 @@ def make_repo(tmp_path: Path) -> Path:
     return root
 
 
-def make_model(root: Path, name: str = "example-model") -> Path:
+def make_model(
+    root: Path,
+    name: str = "example-model",
+    *,
+    include_ontology_turtle: bool = True,
+) -> Path:
     model = root / "models" / name
     model.mkdir()
     (model / "metadata.yaml").write_text(
@@ -64,14 +73,20 @@ def make_model(root: Path, name: str = "example-model") -> Path:
         json.dumps({"id": "project_1", "type": "Project"}),
         encoding="utf-8",
     )
-    (model / "ontology.ttl").write_text(
-        "@prefix ex: <https://example.org/> .\nex:model ex:predicate ex:object .\n",
-        encoding="utf-8",
-    )
+    if include_ontology_turtle:
+        (model / "ontology.ttl").write_text(VALID_TURTLE, encoding="utf-8")
     (model / "ontology.vpp").write_bytes(b"vpp-placeholder")
     (model / "new-diagrams").mkdir()
     (model / "new-diagrams" / "main.png").write_bytes(PNG_1X1)
     return model
+
+
+def write_expected_metadata_outputs(module, model: Path) -> None:
+    diagrams = module.discover_png_diagrams(model)
+    for path in module.expected_generated_metadata_paths(model, diagrams):
+        if path.name == "ontology.ttl":
+            continue
+        path.write_text(VALID_TURTLE, encoding="utf-8")
 
 
 def parsed_args(module, *extra: str):
@@ -133,16 +148,17 @@ def test_resolve_model_folder_rejects_path_outside_models(tmp_path: Path):
         module.resolve_model_folder("example-model", root)
 
 
-def test_validate_required_sources_accepts_complete_submission_without_references(
+def test_validate_required_sources_accepts_submission_without_turtle_or_references(
     tmp_path: Path,
 ):
     module = load_module()
     root = make_repo(tmp_path)
-    model = make_model(root)
+    model = make_model(root, include_ontology_turtle=False)
 
     diagrams = module.validate_required_sources(model, root)
 
     assert [path.name for path in diagrams] == ["main.png"]
+    assert not (model / "ontology.ttl").exists()
 
 
 def test_validate_required_sources_rejects_missing_required_file(tmp_path: Path):
@@ -182,16 +198,6 @@ def test_validate_required_sources_rejects_non_object_ontology_json(tmp_path: Pa
     (model / "ontology.json").write_text("[]", encoding="utf-8")
 
     with pytest.raises(module.SubmissionProcessingError, match="top level"):
-        module.validate_required_sources(model, root)
-
-
-def test_validate_required_sources_rejects_invalid_ontology_ttl(tmp_path: Path):
-    module = load_module()
-    root = make_repo(tmp_path)
-    model = make_model(root)
-    (model / "ontology.ttl").write_text("this is not turtle", encoding="utf-8")
-
-    with pytest.raises(module.SubmissionProcessingError, match="ontology.ttl"):
         module.validate_required_sources(model, root)
 
 
@@ -249,6 +255,7 @@ def test_expected_generated_metadata_paths_include_png_metadata(tmp_path: Path):
     }
 
     assert {
+        "ontology.ttl",
         "metadata-json.ttl",
         "metadata-turtle.ttl",
         "metadata-vpp.ttl",
@@ -285,6 +292,7 @@ def test_build_steps_uses_existing_repository_scripts(tmp_path: Path):
     commands = [" ".join(step.command) for step in steps]
 
     assert any("scripts/validate_metadata_yaml.py" in command for command in commands)
+    assert any("scripts/generate_ontology_turtle.py" in command for command in commands)
     assert any("scripts/validate_references_bib.py" in command for command in commands)
     assert any("scripts/generate_png_metadata.py" in command for command in commands)
     assert any("scripts/generate_json_metadata.py" in command for command in commands)
@@ -307,6 +315,40 @@ def test_build_steps_validates_references_before_metadata_generation(tmp_path: P
     assert step_names.index("Validate optional references.bib") < step_names.index(
         "Generate PNG distribution metadata"
     )
+
+
+def test_build_steps_generates_ontology_before_turtle_metadata(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    args = parsed_args(module)
+
+    steps = module.build_steps(args, root, model)
+    step_names = [step.name for step in steps]
+    command = command_by_name(steps, "Generate ontology.ttl")
+
+    assert step_names[1] == "Generate ontology.ttl"
+    assert step_names.index("Generate ontology.ttl") < step_names.index(
+        "Generate Turtle distribution metadata"
+    )
+    assert command == (
+        sys.executable,
+        "scripts/generate_ontology_turtle.py",
+        "models/example-model",
+    )
+
+
+def test_dry_run_passes_dry_run_to_ontology_generator(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    args = parsed_args(module, "--dry-run")
+
+    command = command_by_name(
+        module.build_steps(args, root, model), "Generate ontology.ttl"
+    )
+
+    assert command[-1] == "--dry-run"
 
 
 def test_references_validator_runs_without_require_strict_or_dry_run_flags(
@@ -400,6 +442,211 @@ def test_validate_all_turtle_files_rejects_invalid_generated_turtle(tmp_path: Pa
 
     with pytest.raises(module.SubmissionProcessingError, match="metadata-json.ttl"):
         module.validate_all_turtle_files(model, root)
+
+
+def test_process_submission_without_turtle_generates_and_validates_it(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    executed = []
+
+    def fake_run_step(step, command_root):
+        assert command_root == root
+        executed.append(step)
+        if step.name == "Generate ontology.ttl":
+            assert "--dry-run" not in step.command
+            (model / "ontology.ttl").write_text(VALID_TURTLE, encoding="utf-8")
+        elif step.name == "Generate Turtle distribution metadata":
+            assert (model / "ontology.ttl").is_file()
+        elif step.name == "Generate model-level metadata.ttl":
+            write_expected_metadata_outputs(module, model)
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(module, "run_step", fake_run_step)
+
+    result = module.process_submission(parsed_args(module))
+    names = [step.name for step in executed]
+
+    assert result == 0
+    assert (model / "ontology.ttl").read_text(encoding="utf-8") == VALID_TURTLE
+    assert names.index("Generate ontology.ttl") < names.index(
+        "Generate Turtle distribution metadata"
+    )
+    module.validate_all_turtle_files(model, root)
+
+
+def test_malformed_json_prevents_ontology_and_metadata_generation(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    (model / "ontology.json").write_text("not-json", encoding="utf-8")
+    executed = []
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(
+        module, "run_step", lambda step, unused_root: executed.append(step)
+    )
+
+    with pytest.raises(module.SubmissionProcessingError, match="not valid JSON"):
+        module.process_submission(parsed_args(module))
+
+    assert [step.name for step in executed] == ["Validate/fix metadata.yaml"]
+    assert not (model / "ontology.ttl").exists()
+
+
+def test_ontology_generator_failure_prevents_downstream_generation(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    executed = []
+
+    def fake_run_step(step, unused_root):
+        executed.append(step)
+        if step.name == "Generate ontology.ttl":
+            raise module.SubmissionProcessingError("JSON2Graph failed")
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(module, "run_step", fake_run_step)
+
+    with pytest.raises(module.SubmissionProcessingError, match="JSON2Graph failed"):
+        module.process_submission(parsed_args(module))
+
+    assert [step.name for step in executed] == [
+        "Validate/fix metadata.yaml",
+        "Generate ontology.ttl",
+    ]
+    assert not (model / "ontology.ttl").exists()
+
+
+def test_missing_turtle_dry_run_materializes_then_removes_temporary_output(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    executed = []
+
+    def fake_run_step(step, unused_root):
+        executed.append(step)
+        if step.name == "Generate ontology.ttl":
+            assert "--dry-run" not in step.command
+            (model / "ontology.ttl").write_text(VALID_TURTLE, encoding="utf-8")
+        elif step.name == "Generate Turtle distribution metadata":
+            assert "--dry-run" in step.command
+            assert (model / "ontology.ttl").is_file()
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(module, "run_step", fake_run_step)
+
+    result = module.process_submission(parsed_args(module, "--dry-run"))
+
+    assert result == 0
+    assert not (model / "ontology.ttl").exists()
+    assert any(
+        step.name == "Generate Turtle distribution metadata" for step in executed
+    )
+
+
+def test_missing_turtle_dry_run_cleans_up_after_downstream_failure(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+
+    def fake_run_step(step, unused_root):
+        if step.name == "Generate ontology.ttl":
+            (model / "ontology.ttl").write_text(VALID_TURTLE, encoding="utf-8")
+        elif step.name == "Validate optional references.bib":
+            raise module.SubmissionProcessingError("references validation failed")
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(module, "run_step", fake_run_step)
+
+    with pytest.raises(
+        module.SubmissionProcessingError, match="references validation failed"
+    ):
+        module.process_submission(parsed_args(module, "--dry-run"))
+
+    assert not (model / "ontology.ttl").exists()
+
+
+def test_process_submission_rerun_preserves_generated_turtle(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root, include_ontology_turtle=False)
+    ontology_calls = 0
+    ontology_writes = 0
+
+    def fake_run_step(step, unused_root):
+        nonlocal ontology_calls, ontology_writes
+        if step.name == "Generate ontology.ttl":
+            ontology_calls += 1
+            if not (model / "ontology.ttl").exists():
+                (model / "ontology.ttl").write_text(
+                    VALID_TURTLE, encoding="utf-8"
+                )
+                ontology_writes += 1
+        elif step.name == "Generate model-level metadata.ttl":
+            write_expected_metadata_outputs(module, model)
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(module, "run_step", fake_run_step)
+
+    assert module.process_submission(parsed_args(module)) == 0
+    first_bytes = (model / "ontology.ttl").read_bytes()
+    assert module.process_submission(parsed_args(module)) == 0
+
+    assert ontology_calls == 2
+    assert ontology_writes == 1
+    assert (model / "ontology.ttl").read_bytes() == first_bytes
+
+
+def test_process_submission_replaces_drifted_turtle_before_final_validation(
+    tmp_path: Path, monkeypatch
+):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root)
+    (model / "ontology.ttl").write_text("not turtle", encoding="utf-8")
+
+    def fake_run_step(step, unused_root):
+        if step.name == "Generate ontology.ttl":
+            (model / "ontology.ttl").write_text(VALID_TURTLE, encoding="utf-8")
+        elif step.name == "Generate model-level metadata.ttl":
+            write_expected_metadata_outputs(module, model)
+
+    monkeypatch.setattr(module, "repository_root", lambda: root)
+    monkeypatch.setattr(module, "run_step", fake_run_step)
+
+    assert module.process_submission(parsed_args(module)) == 0
+    assert (model / "ontology.ttl").read_text(encoding="utf-8") == VALID_TURTLE
+
+
+def test_run_step_preserves_converter_warnings_in_job_output(tmp_path: Path, capfd):
+    module = load_module()
+    root = make_repo(tmp_path)
+    step = module.CommandStep(
+        "Generate ontology.ttl",
+        (
+            sys.executable,
+            "-c",
+            "import sys; print('JSON2Graph warning: reviewed', file=sys.stderr)",
+        ),
+    )
+
+    module.run_step(step, root)
+
+    captured = capfd.readouterr()
+    assert "JSON2Graph warning: reviewed" in captured.err
 
 
 def test_detect_model_folder_from_changed_files_accepts_single_model_folder():
@@ -572,3 +819,42 @@ def test_normal_pr_checkout_is_pinned_to_classified_head_sha():
     assert classify_job["outputs"]["head_sha"] == "${{ steps.changes.outputs.head_sha }}"
     checkout_ref = normal_job["steps"][0]["with"]["ref"]
     assert "needs.classify.outputs.head_sha" in checkout_ref
+
+
+def test_normal_workflow_generates_then_stages_turtle_with_noop_guard():
+    workflow = load_submission_workflow()
+    normal_job = workflow["jobs"]["process"]
+    steps = normal_job["steps"]
+    step_names = [step["name"] for step in steps]
+
+    process_step = next(
+        step for step in steps if step["name"] == "Process model submission"
+    )
+    commit_step = next(
+        step for step in steps if step["name"] == "Commit generated files"
+    )
+
+    assert step_names.index("Process model submission") < step_names.index(
+        "Synchronize catalog metadata"
+    )
+    assert step_names.index("Synchronize catalog metadata") < step_names.index(
+        "Commit generated files"
+    )
+    assert "scripts/process_new_model_submission.py" in process_step["run"]
+    assert "ontology.ttl" not in process_step["run"]
+    assert "success()" in commit_step["if"]
+    assert 'git add -- "$MODEL_PATH" catalog.ttl' in commit_step["run"]
+    assert "git diff --cached --quiet" in commit_step["run"]
+    assert "No generated changes to commit." in commit_step["run"]
+    assert "git push" in commit_step["run"]
+
+
+def test_fork_rejection_never_receives_write_permissions():
+    workflow = load_submission_workflow()
+    reject_job = workflow["jobs"]["reject-fork-pr"]
+    classify_job = workflow["jobs"]["classify"]
+
+    assert workflow["permissions"]["contents"] == "read"
+    assert reject_job.get("permissions", {}).get("contents", "read") != "write"
+    assert "head.repo.full_name != github.repository" in reject_job["if"]
+    assert "head.repo.full_name == github.repository" in classify_job["if"]
