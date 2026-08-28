@@ -1,43 +1,38 @@
 # New model submission workflow
 
-This document describes the automation for processing a single OntoUML/UFO Catalog model folder from its basic source files into the catalog-ready metadata structure.
+This document describes the automation for processing a single OntoUML/UFO Catalog model folder from contributor source files into its generated Turtle distribution and catalog-ready metadata.
 
 The workflow is implemented by:
 
 - `.github/workflows/process-new-model-submission.yml`
 - `scripts/process_new_model_submission.py`
 
-It also expects the repository's metadata-related validation/generation scripts to be available, including:
+It also expects the repository's validation/generation scripts to be available, including:
 
 - `scripts/validate_metadata_yaml.py`
+- `scripts/generate_ontology_turtle.py`
 - `scripts/validate_references_bib.py`
 - `scripts/generate_png_metadata.py`
 - `scripts/generate_json_metadata.py`
 - `scripts/generate_turtle_metadata.py`
 - `scripts/generate_vpp_metadata.py`
 - `scripts/metadata_yaml_to_ttl.py`
+- `scripts/generate_catalog_file.py` (called by the workflow after the helper)
 
-The helper script is intentionally an orchestrator. It does not duplicate metadata-generation or BibTeX-validation logic. It validates/fixes `metadata.yaml`, validates the submission envelope, detects the target model folder for same-repository pull requests, runs the existing metadata scripts in the intended order, and performs final Turtle/RDF checks.
+The helper script is intentionally an orchestrator. It does not duplicate conversion, metadata-generation, or BibTeX-validation logic. It validates/fixes `metadata.yaml`, validates the submission envelope, classifies changed model paths, runs the ontology and metadata generators in the intended order, and performs final Turtle/RDF checks.
 
 ## Supported submission mode
 
-The first automatic implementation supports **pull requests opened from branches inside the catalog repository**.
+Automatic model-submission processing supports **pull requests opened from branches inside the catalog repository**.
 
 The intended flow is:
 
-```text
-Trusted contributor creates a branch in OntoUML/ontouml-models
-        ↓
-Contributor adds the basic source files for one model folder
-        ↓
-Contributor opens a PR to master
-        ↓
-The workflow detects the model folder, validates/fixes inputs, generates metadata, and commits generated files back to the PR branch
-        ↓
-A curator reviews the complete PR and merges it manually
-```
+1. A trusted contributor creates a branch in `OntoUML/ontouml-models` and adds the source files for one model folder, without `ontology.ttl`.
+2. The contributor opens a PR to `master`.
+3. The workflow validates the sources, generates `ontology.ttl`, synchronizes distribution/model metadata and `catalog.ttl`, and commits changed files back to the PR branch.
+4. The generated files and release validation results are reviewed before a curator merges the complete PR manually.
 
-Fork-based PR write-back is intentionally not supported in this first phase. If a PR is opened from a fork, the workflow fails with an explicit message explaining that automatic metadata generation currently requires a same-repository PR branch.
+**Fork-based PR writeback is not supported.** If a PR is opened from a fork, the submission workflow fails with an explicit message explaining the same-repository restriction. Contributors without branch access should use the contribution form linked in the [README](../README.md#contribute-by-submitting-an-ontology) or contact a catalog administrator.
 
 ## Triggers
 
@@ -53,13 +48,25 @@ on:
       - "models/**"
 ```
 
-For PRs, the workflow:
+For normal one-model PRs, the workflow:
 
 1. rejects fork-based PRs;
 2. detects the unique changed model folder under `models/`;
-3. rejects PRs that modify files outside the target model folder;
+3. rejects PRs that modify files outside the target model folder, except generated root `catalog.ttl`;
 4. processes that model folder;
 5. commits generated files back to the PR branch when changes exist.
+
+### Generated-artifact-only bulk maintenance
+
+A same-repository PR touching more than one model folder is accepted only when every changed model file is directly inside `models/<slug>/` and is one of:
+
+- `ontology.ttl`;
+- `metadata.ttl`;
+- `metadata-turtle.ttl`.
+
+Generated root `catalog.ttl` may also change. This selects `bulk-generated` mode: a read-only job checks full-catalog ontology and dependent metadata synchronization, parses model Turtle files, and verifies that validation did not modify the checkout. It does not generate a bot commit.
+
+This narrowly scoped migration/maintenance mode does not allow multi-model contributor-source submissions or unrelated code/workflow changes. A PR touching only one model folder still uses normal processing, even if its changes are generated files only.
 
 ### Manual trigger
 
@@ -88,7 +95,6 @@ The folder must contain:
 ```text
 metadata.yaml
 ontology.json
-ontology.ttl
 ontology.vpp
 ```
 
@@ -105,18 +111,21 @@ The optional file is:
 references.bib
 ```
 
+`ontology.json` is the canonical source for the RDF graph. `ontology.ttl` is a generated, committed distribution, not a required contributor input. Manual Turtle edits are unsupported: change the JSON source and let the generator synchronize the Turtle. Contributors remain responsible for keeping `ontology.vpp` and its JSON export consistent; the workflow does not export JSON from VPP.
+
 ## What the helper checks before generation
 
-After validating/fixing `metadata.yaml` and before running the metadata generators, `scripts/process_new_model_submission.py` checks that:
+After validating/fixing `metadata.yaml` and before running the ontology generator, `scripts/process_new_model_submission.py` checks that:
 
 - the target folder is a direct child of `models/`;
-- `metadata.yaml`, `ontology.json`, `ontology.ttl`, and `ontology.vpp` exist as files;
+- `metadata.yaml`, `ontology.json`, and `ontology.vpp` exist as files;
 - `ontology.json` is UTF-8 JSON with a top-level object;
-- `ontology.ttl` parses as Turtle/RDF with RDFLib;
 - `ontology.vpp` exists, is non-empty, and has a valid filename shape;
 - at least one `.png` diagram exists in `original-diagrams/` or `new-diagrams/`;
 - each `.png` diagram has a PNG signature and IHDR header;
 - `references.bib`, when present, is a file rather than a directory.
+
+The ontology generator then validates the dataset slug, the metadata language declaration, the JSON project ID, and the generated graph's namespace, project identity, and name-language policy. If an `ontology.ttl` already exists, it must be readable, valid Turtle; a missing file is generated normally.
 
 Full basic BibTeX/BibLaTeX validation is delegated to `scripts/validate_references_bib.py`. The workflow calls this validator without `--require`, because `references.bib` is optional for catalog datasets. The workflow fails when `references.bib` exists and the validator reports errors, but it does not fail when the file is absent.
 
@@ -126,27 +135,39 @@ The existing PNG generator still performs its own PNG validation during generati
 
 ## Processing order
 
-The helper runs the existing repository scripts in this order:
+In a normal non-dry-run execution, the helper runs the repository scripts in this order (shared metadata options are omitted below for readability):
 
 ```text
 1. python scripts/validate_metadata_yaml.py [MODEL_FOLDER] --fix
-2. Helper-level source preflight checks for ontology.json, ontology.ttl, ontology.vpp, PNG diagrams, and optional references.bib path shape
-3. python scripts/validate_references_bib.py [MODEL_FOLDER]
-4. python scripts/generate_png_metadata.py [MODEL_FOLDER]
-5. python scripts/generate_json_metadata.py [MODEL_FOLDER] --validate-ontology-json
-6. python scripts/generate_turtle_metadata.py [MODEL_FOLDER]
-7. python scripts/generate_vpp_metadata.py [MODEL_FOLDER]
-8. python scripts/metadata_yaml_to_ttl.py [MODEL_FOLDER]
-9. Final RDFLib parse validation over all .ttl files in the model folder
+2. Helper-level source preflight checks for ontology.json, ontology.vpp, PNG diagrams, and optional references.bib path shape
+3. python scripts/generate_ontology_turtle.py [MODEL_FOLDER]
+4. python scripts/validate_references_bib.py [MODEL_FOLDER]
+5. python scripts/generate_png_metadata.py [MODEL_FOLDER]
+6. python scripts/generate_json_metadata.py [MODEL_FOLDER] --validate-ontology-json
+7. python scripts/generate_turtle_metadata.py [MODEL_FOLDER]
+8. python scripts/generate_vpp_metadata.py [MODEL_FOLDER]
+9. python scripts/metadata_yaml_to_ttl.py [MODEL_FOLDER]
+10. Verify expected generated outputs exist and parse all .ttl files directly in the model folder with RDFLib
 ```
 
-The distribution-specific metadata files are generated before `metadata.ttl` so that the model-level metadata can aggregate the distribution IRIs discovered from `metadata-*.ttl`.
+Ontology generation precedes Turtle distribution metadata generation. The distribution-specific metadata files are generated before `metadata.ttl` so that the model-level metadata can aggregate the distribution IRIs discovered from all `metadata-*.ttl` sidecars.
+
+After the helper succeeds, the workflow runs `python scripts/generate_catalog_file.py .`, then stages and commits changes. The local helper does not synchronize root `catalog.ttl` itself.
+
+## Ontology generation and warnings
+
+The catalog wrapper uses the exact `ontouml-json2graph==2.0.1` dependency and the namespace `https://w3id.org/ontouml-models/model/<slug>#`. Project identity uses the JSON project ID under that namespace. If `metadata.yaml` declares one distinct language, generated names use that language tag; with multiple declared languages, names are untagged.
+
+The selected policies preserve invalid cardinalities and invalid stereotypes with warnings, omit unresolved diagram target links with warnings, and warn about unrepresented path-point order and property assignments. These warnings are nonfatal and remain visible in the workflow logs. Generation does not enable automatic source correction or transformation-provenance sidecars. See the [ontology generator guide](generate-ontology-turtle.md) for the exact policy effects and validation contract.
+
+The wrapper generates and validates a candidate in temporary storage. It creates a missing `ontology.ttl`, atomically replaces an existing valid graph when it differs semantically, and preserves an isomorphic file byte-for-byte. Normal submissions do not use migration-only `--force-materialization`.
 
 ## Generated files
 
 For a valid complete submission, the generated or updated files are expected to include:
 
 ```text
+ontology.ttl
 metadata-json.ttl
 metadata-turtle.ttl
 metadata-vpp.ttl
@@ -161,6 +182,8 @@ The exact PNG metadata filenames depend on the diagram folder and the PNG filena
 original-diagrams/example.png -> metadata-png-o-example.ttl
 new-diagrams/example.png      -> metadata-png-n-example.ttl
 ```
+
+The workflow also synchronizes root `catalog.ttl`. Existing generated metadata is updated only when its metadata graph changes; regenerating `ontology.ttl` alone does not require a new `fdpo:metadataModified` value in `metadata-turtle.ttl`.
 
 ## Local usage
 
@@ -184,7 +207,7 @@ python scripts/process_new_model_submission.py models/example-model \
   --metadata-timestamp now
 ```
 
-Run a dry run without writing generated files:
+Run a dry run without retaining generated files:
 
 ```bash
 python scripts/process_new_model_submission.py models/example-model \
@@ -192,7 +215,21 @@ python scripts/process_new_model_submission.py models/example-model \
   --dry-run
 ```
 
-Detect the changed model folder between two refs, as the PR workflow does:
+If `ontology.ttl` is missing, the helper temporarily creates it so downstream metadata dry runs can inspect the distribution, then removes it on completion or failure. An existing `ontology.ttl` is left unchanged. The final non-dry-run output inventory and all-Turtle parse are not performed in this mode; the ontology candidate is still validated by the wrapper.
+
+After a successful non-dry-run local run, synchronize the catalog separately if preparing the complete generated change set:
+
+```bash
+python scripts/generate_catalog_file.py .
+```
+
+Check an existing dataset's JSON/Turtle synchronization without writing:
+
+```bash
+python scripts/generate_ontology_turtle.py models/example-model --check
+```
+
+Detect the changed model folder between two refs for a normal one-model PR:
 
 ```bash
 python scripts/process_new_model_submission.py --detect-model-folder origin/master HEAD
@@ -216,19 +253,20 @@ For PR-ready metadata intended for the main repository, keep the default:
 
 ## Testing in GitHub Actions in the fork
 
-1. Extract the patch into the root of `pedropaulofb/ontouml-models-dev`.
-2. Commit and push the workflow/helper-script changes.
-3. Create a branch inside the fork repository.
-4. Add or update one model folder under `models/` with the required source files.
-5. Open a PR from that branch to the fork repository’s `master` branch.
-6. Confirm that the workflow detects the changed model folder and commits generated metadata back to the PR branch.
-7. Inspect the workflow logs and the generated commit.
+1. Ensure the workflow, helper, and pinned dependencies are committed and pushed to the branch being tested in `pedropaulofb/ontouml-models-dev`.
+2. Create a separate temporary test branch from that branch inside the fork repository.
+3. Add one model folder with the required source files and no `ontology.ttl` or generated metadata.
+4. Open a test PR back to the implementation branch in the same fork repository, not to the upstream catalog. Keep workflow/helper changes out of the test PR's diff.
+5. Confirm that the workflow creates and commits `ontology.ttl`, distribution/model metadata, and the catalog update.
+6. Inspect the generated commit and release validation. If GitHub requests approval for a follow-up run, a maintainer must approve it before its results can be assessed.
+7. Confirm that processing the bot-updated head reports `No generated changes to commit.` and creates no further commit.
+8. Close the temporary test PR without merging it; keep smoke-test data out of the implementation branch.
 
 To test the same workflow manually, use **Actions** → **Process new model submission** → **Run workflow**.
 
 ## Automatic commits
 
-For same-repository PRs, the workflow automatically commits generated metadata back to the PR branch after all validation and generation steps succeed.
+For normal same-repository PRs, the workflow automatically commits `ontology.ttl` and generated metadata back to the PR branch after validation, generation, and catalog synchronization succeed. The read-only bulk-maintenance job never writes back.
 
 For manual runs, commits occur only when `commit_changes` is `true` and `dry_run` is `false`.
 
@@ -236,14 +274,16 @@ The workflow:
 
 1. runs all validation and generation steps;
 2. stops immediately if any step fails;
-3. stages only the requested model folder with:
+3. stages only the requested model folder and generated root catalog with:
 
-```bash
-git add -- "$MODEL_PATH"
-```
+   ```bash
+   git add -- "$MODEL_PATH" catalog.ttl
+   ```
 
 4. commits only when staged changes exist;
 5. pushes the commit to the PR branch or, for manual runs, to the checked-out branch.
+
+A synchronized rerun leaves the generated files unchanged and logs `No generated changes to commit.`. Converter warnings alone do not cause a commit. Workflow results must be checked on the bot-updated PR head; pending approval is not a successful validation.
 
 The commit message has this form:
 
@@ -251,7 +291,7 @@ The commit message has this form:
 chore(metadata): process model submission example-model
 ```
 
-The workflow requires:
+The normal processing job requires:
 
 ```yaml
 permissions:
@@ -268,18 +308,23 @@ If validation or generation fails:
 - the commit step is skipped;
 - partial generated changes are not committed by the workflow.
 
+Malformed JSON, a fatal converter error, or an invalid generated graph stops processing before the dependent metadata generators run. Converter failure does not replace an existing `ontology.ttl`. A later failure does not roll back earlier successful local writes, so inspect the local diff before committing after a failed local run.
+
+Diagnostics are reported in GitHub check results and grouped workflow logs, not posted as PR comments. Review warnings separately from fatal errors; warnings do not by themselves make generation fail.
+
 For pull requests, the workflow also fails when:
 
 - the PR comes from a fork;
-- files outside `models/<model-folder>/` are changed;
-- more than one model folder is changed;
+- files outside the permitted model folder(s) and generated root `catalog.ttl` are changed;
+- multiple model folders are changed without satisfying the generated-artifact-only bulk-maintenance rules;
 - changed paths under `models/` are not inside a direct model folder.
 
 ## Current limitations
 
 - Automatic write-back is limited to same-repository PR branches.
 - Fork-based PR automation is intentionally deferred.
-- One model folder is processed per PR/run.
+- Normal submission processing and manual runs handle one model folder; multi-model generated-only maintenance is read-only.
 - `references.bib` is optional and is validated only when present; the workflow does not pass `--require` to `scripts/validate_references_bib.py`.
 - `references.bib` receives structural BibTeX/BibLaTeX validation only, not semantic validation of mandatory fields per entry type.
 - `ontology.vpp` is checked at file level only; no Visual Paradigm parser is introduced.
+- VPP-to-JSON export and synchronization are the contributor's responsibility.
