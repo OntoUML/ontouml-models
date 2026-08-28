@@ -7,7 +7,8 @@ safeguards:
 
 - source-file preflight checks for a new model submission;
 - same-repository pull request change classification;
-- deterministic command ordering, including optional references.bib validation;
+- deterministic command ordering, including ontology.ttl generation and optional
+  references.bib validation;
 - final Turtle/RDF parse validation;
 - narrow, model-folder-scoped processing.
 
@@ -43,7 +44,6 @@ except ImportError as exc:  # pragma: no cover - dependency failure only
 REQUIRED_SOURCE_FILES = (
     "metadata.yaml",
     "ontology.json",
-    "ontology.ttl",
     "ontology.vpp",
 )
 OPTIONAL_SOURCE_FILES = ("references.bib",)
@@ -286,7 +286,6 @@ def validate_required_sources(model_folder: Path, root: Path) -> list[Path]:
         require_regular_file(model_folder / file_name, file_name, root)
 
     validate_ontology_json(model_folder / "ontology.json", root)
-    validate_turtle_file(model_folder / "ontology.ttl", root, "ontology.ttl")
     validate_vpp_source(model_folder / "ontology.vpp", root)
 
     diagrams = discover_png_diagrams(model_folder)
@@ -323,9 +322,10 @@ def expected_png_metadata_paths(
 def expected_generated_metadata_paths(
     model_folder: Path, diagrams: Iterable[Path]
 ) -> list[Path]:
-    """Return metadata files expected after a successful non-dry-run execution."""
+    """Return generated files expected after a successful non-dry-run execution."""
 
     paths = [
+        model_folder / "ontology.ttl",
         model_folder / "metadata-json.ttl",
         model_folder / "metadata-turtle.ttl",
         model_folder / "metadata-vpp.ttl",
@@ -336,13 +336,13 @@ def expected_generated_metadata_paths(
 
 
 def ensure_expected_outputs_exist(paths: Iterable[Path], root: Path) -> None:
-    """Fail when an expected generated metadata file is absent."""
+    """Fail when an expected generated file is absent."""
 
     missing = [path for path in paths if not path.exists()]
     if missing:
         joined = "\n".join(f"- {path_for_display(path, root)}" for path in missing)
         raise SubmissionProcessingError(
-            "Expected generated metadata file(s) were not created:\n" + joined
+            "Expected generated file(s) were not created:\n" + joined
         )
 
 
@@ -412,6 +412,15 @@ def build_steps(
     if args.allow_missing_license:
         validate_command.append("--allow-missing-license")
     steps.append(CommandStep("Validate/fix metadata.yaml", tuple(validate_command)))
+
+    ontology_command = [
+        python,
+        "scripts/generate_ontology_turtle.py",
+        model_arg,
+    ]
+    if args.dry_run:
+        ontology_command.append("--dry-run")
+    steps.append(CommandStep("Generate ontology.ttl", tuple(ontology_command)))
 
     steps.append(
         CommandStep(
@@ -713,12 +722,30 @@ def process_submission(args: argparse.Namespace) -> int:
     diagrams = validate_required_sources(model_folder, root)
     print(f"Found {len(diagrams)} PNG diagram(s).")
 
-    for step in steps[1:]:
-        run_step(step, root)
+    ontology_turtle = model_folder / "ontology.ttl"
+    remove_dry_run_ontology = args.dry_run and not ontology_turtle.exists()
+    try:
+        for step in steps[1:]:
+            step_to_run = step
+            if remove_dry_run_ontology and step.name == "Generate ontology.ttl":
+                step_to_run = CommandStep(
+                    step.name,
+                    tuple(argument for argument in step.command if argument != "--dry-run"),
+                )
+            run_step(step_to_run, root)
 
-    if args.dry_run:
-        print("\nDry run completed. Generated metadata files were not written.")
-        return 0
+        if args.dry_run:
+            print("\nDry run completed. Generated files were not retained.")
+            return 0
+    finally:
+        if remove_dry_run_ontology and ontology_turtle.exists():
+            try:
+                ontology_turtle.unlink()
+            except OSError as exc:
+                raise SubmissionProcessingError(
+                    "Could not remove the temporary dry-run ontology.ttl: "
+                    f"{path_for_display(ontology_turtle, root)}: {exc}"
+                ) from exc
 
     print("\n==> Validate generated output files")
     expected_outputs = expected_generated_metadata_paths(model_folder, diagrams)
@@ -726,7 +753,7 @@ def process_submission(args: argparse.Namespace) -> int:
     validate_all_turtle_files(model_folder, root)
 
     print("\nSubmission processing completed successfully.")
-    print("Generated/validated metadata files:")
+    print("Generated/validated files:")
     for path in expected_outputs:
         print(f"- {path_for_display(path, root)}")
     return 0
