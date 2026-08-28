@@ -1,5 +1,7 @@
 # Generate PNG distribution metadata
 
+[Script index and local setup](README.md)
+
 This repository contains one RDF/Turtle metadata file for each PNG diagram distribution of a model.
 
 The generator implemented in `scripts/generate_png_metadata.py` scans one or more model dataset folders and creates these files:
@@ -24,7 +26,7 @@ The model-level source of truth is `metadata.yaml`. The PNG generator does **not
 
 For existing catalog datasets, the script preserves the already published model W3ID used in `dct:isPartOf`. When an existing model-level `metadata.ttl` is present, its model subject is treated as the canonical model URI. If `metadata.ttl` is absent, the script falls back to existing `metadata-png-*.ttl` files. This is not a generation-order dependency: when `metadata.ttl` is absent, the script still runs and uses the same deterministic UUIDv5 model URI strategy as `scripts/metadata_yaml_to_ttl.py`.
 
-Recommended future generation order:
+The [current submission helper](process-new-model-submission.md#processing-order) runs PNG metadata generation after ontology generation and optional bibliography validation, before the other distribution metadata generators and model-level aggregation. The relevant part of the dependency relationship is:
 
 ```text
 metadata.yaml + PNG files
@@ -84,9 +86,8 @@ By default, model-level `metadata.yaml` must contain a usable `license` value. T
 
 Use `--allow-missing-license` only for legacy datasets that intentionally lack license metadata:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> --allow-missing-license \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --allow-missing-license --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 When `--allow-missing-license` is used and no model-level license is present:
@@ -193,7 +194,7 @@ PNG validation always checks the PNG signature, IHDR chunk, chunk boundaries, CR
 
 Install the script dependencies:
 
-```bash
+```bat
 python -m pip install -r scripts/requirements.txt
 ```
 
@@ -207,91 +208,76 @@ Commands that create new PNG metadata files, initialize missing `fdpo:metadataIs
 
 Generate metadata for one dataset folder:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate metadata for multiple dataset folders:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-1> models/<model-2> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-a models/example-b --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate metadata for all dataset folders under `models/`:
 
-```bash
-python scripts/generate_png_metadata.py --all --models-dir models \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py --all --models-dir models --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate all PNG metadata while allowing legacy datasets without license metadata:
 
-```bash
-python scripts/generate_png_metadata.py --all --models-dir models --allow-missing-license \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Preview generation without writing files:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> --dry-run \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --dry-run --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Check whether files are up to date without writing them. The command exits with code `1` if any PNG metadata file would change:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> --check \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --check --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Fail when a generated file already exists. This check is atomic at dataset level: no metadata files are written if any target already exists:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> --no-overwrite \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --no-overwrite --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a different repository or branch in generated `dcat:downloadURL` values:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> \
-  --repository pedropaulofb/ontouml-models-dev \
-  --branch master \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --repository pedropaulofb/ontouml-models-dev --branch master --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a different repository-relative models path in generated `dcat:downloadURL` values:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> \
-  --models-dir-name models \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --models-dir-name models --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a fixed timestamp for new metadata files, for existing metadata files that do not already contain `fdpo:metadataIssued`, or for existing metadata files that will change and therefore need an updated `fdpo:metadataModified`. The value must use an `xsd:dateTime` lexical form such as `2024-01-02T03:04:05Z`:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use `--metadata-timestamp now` only when a non-deterministic current execution timestamp is intentionally desired.
 
 Add optional file-derived metadata:
 
-```bash
-python scripts/generate_png_metadata.py models/<model-directory> --include-file-metadata \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_png_metadata.py models/example-model --include-file-metadata --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Run from inside a dataset folder that contains `metadata.yaml`:
 
-```bash
-python ../../scripts/generate_png_metadata.py \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python ../../scripts/generate_png_metadata.py --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 ## Command-line arguments
@@ -400,12 +386,12 @@ Use `--format json` for machine-readable output.
 
 Run the PNG metadata generator tests:
 
-```bash
+```bat
 python -m pytest -q scripts/tests/test_generate_png_metadata.py
 ```
 
 Optional syntax check:
 
-```bash
+```bat
 python -m py_compile scripts/generate_png_metadata.py scripts/tests/test_generate_png_metadata.py
 ```

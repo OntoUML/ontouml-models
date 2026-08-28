@@ -1,5 +1,7 @@
 # `metadata_yaml_to_ttl.py`
 
+[Script index and local setup](README.md)
+
 `metadata_yaml_to_ttl.py` generates model-level `metadata.ttl` files for the OntoUML/UFO Catalog from the canonical `metadata.yaml` files stored in each dataset folder.
 
 This script generates `metadata.ttl`. It does **not** generate `metadata-turtle.ttl`, which is the distribution metadata file for `ontology.ttl`.
@@ -8,7 +10,7 @@ This script generates `metadata.ttl`. It does **not** generate `metadata-turtle.
 
 The catalog keeps manually maintained model metadata in `metadata.yaml`. This converter materializes that metadata as RDF/Turtle in `metadata.ttl`, preserving catalog-managed identifiers and links already present in existing `metadata.ttl` files.
 
-The converter is designed for repository maintenance and later CI/workflow integration:
+The converter is used by the [current submission workflow](process-new-model-submission.md#processing-order) and supports standalone repository maintenance:
 
 - non-interactive execution;
 - clear CLI arguments;
@@ -66,43 +68,43 @@ Run from the repository root.
 
 Generate `metadata.ttl` for one dataset:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py models/amaral2019rot
 ```
 
 Generate `metadata.ttl` for multiple selected datasets:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py models/dataset-a models/dataset-b
 ```
 
 Generate `metadata.ttl` for all datasets under `models/`:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --models-dir models
 ```
 
 If some existing or new datasets do not have `fdpo:metadataIssued` in `metadata.ttl`, or if existing `metadata.ttl` files may be modified and therefore need a new `fdpo:metadataModified` value, provide an explicit deterministic timestamp for the generation run:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --models-dir models --metadata-timestamp 2026-01-31T12:00:00Z
 ```
 
 Allow legacy datasets without license metadata:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --allow-missing-license
 ```
 
 Check whether generated files are up to date without writing files:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --check
 ```
 
 Print machine-readable summary output:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --format json
 ```
 
@@ -110,7 +112,7 @@ When `--format json` is used together with `--check`, diff output is suppressed 
 
 In text mode, the script prints one progress line after each processed dataset and a final summary. To suppress non-error progress output, use:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --quiet
 ```
 
@@ -118,19 +120,19 @@ python scripts/metadata_yaml_to_ttl.py --all --quiet
 
 Print generated Turtle without writing it:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py models/amaral2019rot --dry-run
 ```
 
 ## License handling
 
-By default, `license` is required. This is intended for new datasets and future automated submission workflows.
+By default, `license` is required, including in normal automated model submissions.
 
 The license value must be a single scalar value: either an absolute HTTP(S) URI or a supported compact identifier such as `CC-BY-4.0`, `CC-BY-SA-4.0`, `CC-BY-SA-3.0`, `CC0-1.0`, or `MIT`. Mapping forms such as `license: {id: CC-BY-4.0}` are intentionally not supported because they are not accepted by the metadata.yaml validator/fixer.
 
 Some older catalog datasets do not currently have license information. For those legacy cases, use:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py models/legacy-dataset --allow-missing-license
 ```
 
@@ -171,7 +173,7 @@ For new datasets that do not yet have `metadata.ttl`, the converter uses:
 
 New datasets must be generated with an explicit metadata timestamp unless one is preserved from an existing `metadata.ttl`:
 
-```bash
+```bat
 python scripts/metadata_yaml_to_ttl.py models/new-dataset --metadata-timestamp 2026-01-31T12:00:00Z
 ```
 
@@ -187,19 +189,19 @@ Use `--metadata-timestamp now` only when non-deterministic current timestamps ar
 
 ## CI pattern
 
-A typical CI sequence for future dataset submissions is:
+The [submission helper](process-new-model-submission.md#processing-order) validates/fixes source YAML, validates the source files, generates ontology Turtle, validates optional references, and generates distribution metadata before calling this converter. The workflow then synchronizes the root catalog. Use that guide for a complete submission sequence.
 
-```bash
-python scripts/validate_metadata_yaml.py --all --fix --allow-missing-license
-# Run distribution-specific metadata generators here, e.g. JSON/Turtle/VPP/PNG metadata.
+The following is a standalone legacy model-metadata synchronization check. It assumes the ontology and distribution metadata already exist and are synchronized; it is not a full submission pipeline:
+
+```bat
 python scripts/metadata_yaml_to_ttl.py --all --check --allow-missing-license --metadata-timestamp 2026-01-31T12:00:00Z
 ```
 
-For stricter future-only validation where license must be present, omit `--allow-missing-license`.
+Normal new submissions do not use `--allow-missing-license`.
 
 ## Notes
 
 - `metadata.yaml` is the only editable input source for regenerated model-level metadata.
-- The converter does not read `metadata-turtle.ttl`.
+- The converter reads `metadata-turtle.ttl` to discover its distribution IRI; it does not generate or modify that file.
 - The converter writes only `metadata.ttl`.
 - Existing distribution-specific metadata files, such as `metadata-json.ttl`, `metadata-turtle.ttl`, and `metadata-png-*.ttl`, are read to discover `dcat:Distribution` IRIs but are not modified.

@@ -1,5 +1,7 @@
 # references.bib validation
 
+[Script index and local setup](README.md)
+
 This document describes `scripts/validate_references_bib.py`, a lightweight validator for optional `references.bib` files in OntoUML/UFO Catalog model folders.
 
 The validator is intended for repository maintenance and CI/workflow preflight checks before metadata generation. It provides a basic BibTeX/BibLaTeX syntax check without introducing a new dependency.
@@ -19,49 +21,49 @@ The validator is deliberately conservative in scope:
 
 Validate one dataset folder:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model
 ```
 
 Validate several dataset folders:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-a models/example-b
 ```
 
 Validate a `references.bib` file directly:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model/references.bib
 ```
 
 Validate all direct dataset folders under `models/`:
 
-```bash
+```bat
 python scripts/validate_references_bib.py --all --models-dir models
 ```
 
 Return machine-readable JSON:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model --format json
 ```
 
 Require `references.bib` to exist:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model --require
 ```
 
 Promote warnings to errors:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model --strict
 ```
 
 Fail on warnings without changing their displayed severity:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model --fail-on-warning
 ```
 
@@ -171,18 +173,20 @@ Invalid: missing field assignment:
 }
 ```
 
-## Suggested use in future automation
+<a id="suggested-use-in-future-automation"></a>
 
-Before running metadata generation for a new model folder, call:
+## Use in submission automation
 
-```bash
+The [current submission helper](process-new-model-submission.md#processing-order) runs this validator after ontology generation and before distribution metadata generation, without `--require`. The equivalent standalone check is:
+
+```bat
 python scripts/validate_references_bib.py models/example-model
 ```
 
 This treats `references.bib` as optional but validates it when present.
 
-For a stricter future mode in which new submissions must always include references:
+For a separate local check that requires a bibliography, use `--require`. This does not change the submission workflow's optional-bibliography policy:
 
-```bash
+```bat
 python scripts/validate_references_bib.py models/example-model --require
 ```

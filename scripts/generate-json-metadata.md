@@ -1,5 +1,7 @@
 # JSON distribution metadata generator
 
+[Script index and local setup](README.md)
+
 `scripts/generate_json_metadata.py` generates RDF/Turtle metadata for the OntoUML JSON distribution of a model dataset.
 
 For each processed dataset folder, it reads:
@@ -12,7 +14,7 @@ It writes:
 
 - `metadata-json.ttl`
 
-The script is intended for repository maintenance and for a future metadata-generation workflow. It does **not** create or modify a GitHub Actions workflow.
+The script is used by the [current submission workflow](process-new-model-submission.md#processing-order) and can also run independently for repository maintenance. It does **not** create or modify a GitHub Actions workflow.
 
 ## Purpose
 
@@ -34,18 +36,7 @@ The generated metadata follows the repository’s established JSON distribution 
 
 This generator does not read `metadata.ttl` and does not require it to exist. It generates distribution-level metadata first. Later, `scripts/metadata_yaml_to_ttl.py` can aggregate `metadata-json.ttl` and the other generated distribution metadata files into model-level `metadata.ttl`.
 
-A future generation order may therefore be:
-
-```text
-python scripts/validate_metadata_yaml.py --all --models-dir models --fix --allow-missing-license
-python scripts/generate_png_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/generate_json_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/generate_turtle_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/generate_vpp_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/metadata_yaml_to_ttl.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-```
-
-This document describes the JSON generator only; no workflow is created by this task.
+The current helper runs ontology generation and optional bibliography validation before the distribution metadata generators. It calls the JSON metadata generator after the PNG metadata generator and before Turtle/VPP metadata and model-level aggregation. See the [complete processing order](process-new-model-submission.md#processing-order) instead of treating an individual metadata command as a full submission pipeline.
 
 ## Inputs
 
@@ -62,9 +53,9 @@ The current standard repository-facing `metadata.yaml` template does not need to
 
 ### `ontology.json`
 
-By default, the script requires `ontology.json` to exist and to be a file. It does not parse `ontology.json` by default, because some legacy catalog JSON files contain non-UTF-8 bytes even though their existing distribution metadata is valid and should remain generatable.
+By default, the standalone script requires `ontology.json` to exist and to be a file, but does not parse its contents. This compatibility choice originally allowed metadata generation for legacy JSON files containing non-UTF-8 bytes. The catalog's CP1252-to-UTF-8 migration is recorded in [release `20260731`](https://github.com/OntoUML/ontouml-models/releases/tag/20260731); that rationale is historical, not a claim that the current collection still needs the same encoding cleanup.
 
-Use `--validate-ontology-json` when you explicitly want the source file to be parsed as UTF-8 JSON and checked for a JSON object at the top level. This option is useful for new submissions or stricter maintenance checks, but it may fail for legacy catalog files that require separate source-data cleanup.
+Use `--validate-ontology-json` to parse the source as UTF-8 JSON and require a top-level object. The current submission helper passes this flag, in addition to its source preflight and ontology-generation checks. The flag does not perform JSON Schema validation. The standalone default remains unchanged.
 
 Use `--no-check-ontology-json` only for exceptional compatibility cases where the metadata record must be generated before the source file is available.
 
@@ -129,13 +120,13 @@ When `metadata.yaml` provides a license, that license is emitted regardless of `
 
 Use a fixed value for deterministic runs:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py models/amaral2019rot --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 Use `now` only for intentionally non-deterministic maintenance runs:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py models/amaral2019rot --metadata-timestamp now
 ```
 
@@ -156,7 +147,7 @@ By default, missing license metadata is an error.
 
 Use `--allow-missing-license` only for legacy datasets that intentionally lack license metadata:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py models/legacy-model --allow-missing-license --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
@@ -173,19 +164,19 @@ Do not use `--allow-missing-license` for new submissions.
 
 ### One dataset
 
-```bash
+```bat
 python scripts/generate_json_metadata.py models/amaral2019rot --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 ### Multiple datasets
 
-```bash
+```bat
 python scripts/generate_json_metadata.py models/amaral2019rot models/albuquerque2011ontobio --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 ### All datasets
 
-```bash
+```bat
 python scripts/generate_json_metadata.py --all --models-dir models --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
@@ -193,7 +184,7 @@ python scripts/generate_json_metadata.py --all --models-dir models --metadata-ti
 
 Use `--check` to verify whether files are up to date without writing changes:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py --all --models-dir models --check --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
@@ -203,7 +194,7 @@ Exit code `1` means at least one file would change or at least one dataset faile
 
 Use `--dry-run` to validate inputs and report intended outputs without writing files:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py --all --models-dir models --dry-run --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
@@ -211,25 +202,25 @@ python scripts/generate_json_metadata.py --all --models-dir models --dry-run --m
 
 By default, the generator checks that `ontology.json` exists but does not parse its contents. To additionally parse the file as UTF-8 JSON and require a top-level JSON object, use:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py --all --models-dir models --validate-ontology-json --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 To skip even the existence check for exceptional compatibility cases, use:
 
-```bash
+```bat
 python scripts/generate_json_metadata.py models/example --no-check-ontology-json --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 ### JSON output
 
-```bash
+```bat
 python scripts/generate_json_metadata.py --all --models-dir models --format json --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 ### Quiet mode
 
-```bash
+```bat
 python scripts/generate_json_metadata.py --all --models-dir models --quiet --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
@@ -247,12 +238,8 @@ models path: models
 
 Override them when testing a branch or fork:
 
-```bash
-python scripts/generate_json_metadata.py models/example \
-  --repository pedropaulofb/ontouml-models-dev \
-  --branch regenerate-json-metadata \
-  --models-dir-name models \
-  --metadata-timestamp 2026-06-23T12:00:00Z
+```bat
+python scripts/generate_json_metadata.py models/example --repository pedropaulofb/ontouml-models-dev --branch regenerate-json-metadata --models-dir-name models --metadata-timestamp 2026-06-23T12:00:00Z
 ```
 
 ## Exit codes

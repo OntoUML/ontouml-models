@@ -1,6 +1,6 @@
 """Validate, lint, and safely fix OntoUML/UFO Catalog metadata.yaml files.
 
-The validator is intended for repository maintenance and later CI/workflow use. It
+The validator supports repository maintenance and the current submission workflow. It
 checks one or more dataset folders, or all direct dataset folders below models/,
 without requiring network access.
 

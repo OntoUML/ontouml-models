@@ -1,5 +1,7 @@
 # Generate `catalog.ttl`
 
+[Script index and local setup](README.md)
+
 `catalog.ttl` is a generated repository artifact. Do not edit it directly.
 
 The generator combines three inputs:
@@ -38,13 +40,13 @@ Semantic comparison is RDF-based rather than text-based. Triple order, indentati
 
 Install the existing script dependencies:
 
-```bash
+```bat
 python -m pip install -r scripts/requirements.txt
 ```
 
 Synchronize the generated file:
 
-```bash
+```bat
 python scripts/generate_catalog_file.py .
 ```
 
@@ -52,14 +54,13 @@ The current UTC time is consulted only when an actual semantic change requires a
 
 For deterministic tests or controlled regeneration, provide an explicit timestamp:
 
-```bash
-python scripts/generate_catalog_file.py . \
-  --generation-timestamp 2026-07-13T19:42:31Z
+```bat
+python scripts/generate_catalog_file.py . --generation-timestamp 2026-07-13T19:42:31Z
 ```
 
 Check synchronization without writing:
 
-```bash
+```bat
 python scripts/generate_catalog_file.py . --check
 ```
 
@@ -99,11 +100,13 @@ The release workflow:
 
 1. checks catalog synchronization during pull-request validation;
 2. synchronizes the catalog before evaluating release-relevant changes on scheduled or manual runs;
-3. commits and pushes a necessary synchronization only for an actual release publication;
+3. commits and pushes a necessary synchronization on scheduled runs or on manual runs with `dry_run=false` and `publish_release=true`, before the later release settings and existing-tag checks;
 4. generates the release artifact after synchronization; and
 5. creates the release against the final synchronized commit.
 
 This ordering ensures that a model addition and its catalog membership update are included in one release. The release workflow has no `push` trigger, and synchronization commits use the workflow's `GITHUB_TOKEN`, avoiding recursive release runs. If branch rules or a concurrent update prevent the synchronization push, the workflow fails before publishing rather than releasing an unsynchronized catalog.
+
+A catalog synchronization commit can therefore already exist even if a later condition skips generation or a later step fails. Publication intent is not proof that a release was published. See the [release operator guide](generate-release-file.md#failure-handling-and-reruns) before rerunning a failed or skipped release.
 
 ## Source format
 

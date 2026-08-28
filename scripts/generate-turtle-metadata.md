@@ -1,5 +1,7 @@
 # Generate Turtle distribution metadata
 
+[Script index and local setup](README.md)
+
 This repository contains one RDF/Turtle metadata file for the Turtle linked-data distribution of each model.
 
 The generator implemented in `scripts/generate_turtle_metadata.py` scans one or more model dataset folders and creates this file:
@@ -23,7 +25,7 @@ The model-level source of truth is `metadata.yaml`. The Turtle generator does **
 
 `metadata.ttl` is the final model-level aggregation product of the metadata workflow. The later `scripts/metadata_yaml_to_ttl.py` step should aggregate `metadata-turtle.ttl` and the other distribution metadata files into model-level `metadata.ttl`.
 
-Recommended future generation order:
+The [current submission helper](process-new-model-submission.md#processing-order) generates `ontology.ttl` before this metadata step. The relevant part of the dependency relationship is:
 
 ```text
 metadata.yaml + ontology.ttl
@@ -48,7 +50,7 @@ The generated distribution includes:
 - `dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle>`
 - `dct:title`
 - `dcat:downloadURL`, pointing to the raw GitHub URL of `ontology.ttl`
-- `ocmv:isComplete true`, because `ontology.ttl` is the complete linked-data materialization of the model
+- `ocmv:isComplete true`, following the catalog's existing Turtle-distribution metadata pattern; this marker is not proof of lossless conversion
 - `fdpo:metadataIssued`
 - `fdpo:metadataModified`
 
@@ -84,9 +86,8 @@ By default, model-level `metadata.yaml` must contain a usable `license` value. T
 
 Use `--allow-missing-license` only for legacy datasets that intentionally lack license metadata:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> --allow-missing-license \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --allow-missing-license --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 When `--allow-missing-license` is used and no model-level license is present:
@@ -119,7 +120,7 @@ The generated completeness value is:
 ocmv:isComplete true
 ```
 
-This differs from PNG distribution metadata. PNG diagrams are incomplete diagrammatic views, whereas `ontology.ttl` is a complete machine-readable linked-data serialization of the model.
+PNG distribution metadata instead uses `ocmv:isComplete false` for a diagrammatic view. The Turtle marker does not establish that every JSON feature is represented or that conversion can be reversed without loss. The pinned converter can omit property assignments and unresolved diagram links, and does not represent path-point order under the selected policies. See the [ontology generator's explicit warning policies](generate-ontology-turtle.md#explicit-warning-policies). This metadata generator does not change those policies or validate round-trip equivalence.
 
 ## Distribution identifiers
 
@@ -194,7 +195,7 @@ The script builds the complete output content before writing the file, preventin
 
 Install the script dependencies:
 
-```bash
+```bat
 python -m pip install -r scripts/requirements.txt
 ```
 
@@ -208,84 +209,70 @@ Commands that create new Turtle metadata files, initialize missing `fdpo:metadat
 
 Generate metadata for one dataset folder:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate metadata for multiple dataset folders:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-1> models/<model-2> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-a models/example-b --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate metadata for all dataset folders under `models/`:
 
-```bash
-python scripts/generate_turtle_metadata.py --all --models-dir models \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py --all --models-dir models --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate all Turtle metadata while allowing legacy datasets without license metadata:
 
-```bash
-python scripts/generate_turtle_metadata.py --all --models-dir models --allow-missing-license \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Preview generation without writing files:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> --dry-run \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --dry-run --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Check whether files are up to date without writing them. The command exits with code `1` if `metadata-turtle.ttl` would change:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> --check \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --check --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Fail when the generated file already exists. This check is atomic at dataset level: no metadata file is written if the target already exists:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> --no-overwrite \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --no-overwrite --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a different repository or branch in generated `dcat:downloadURL` values:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> \
-  --repository pedropaulofb/ontouml-models-dev \
-  --branch master \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --repository pedropaulofb/ontouml-models-dev --branch master --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a different repository-relative models path in generated `dcat:downloadURL` values:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> \
-  --models-dir-name models \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --models-dir-name models --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a fixed timestamp for new metadata files, for existing metadata files that do not already contain `fdpo:metadataIssued`, or for existing metadata files that will change and therefore need an updated `fdpo:metadataModified`. The value must use an `xsd:dateTime` lexical form such as `2024-01-02T03:04:05Z`:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use `--metadata-timestamp now` only when a non-deterministic current execution timestamp is intentionally desired.
 
 Run from inside a dataset folder that contains `metadata.yaml`:
 
-```bash
-python ../../scripts/generate_turtle_metadata.py \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python ../../scripts/generate_turtle_metadata.py --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 ## Command-line arguments
@@ -336,32 +323,22 @@ The model URI is normally preserved from existing distribution metadata. For a g
 
 Use JSON output for automation-friendly reporting:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> \
-  --format json \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --format json --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use quiet mode to suppress normal text progress and summary output:
 
-```bash
-python scripts/generate_turtle_metadata.py models/<model-directory> --quiet \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_turtle_metadata.py models/example-model --quiet --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Errors are still printed to `stderr`.
 
-## Future workflow context
+<a id="future-workflow-context"></a>
 
-A future maintenance workflow may eventually run the distribution metadata generators before the final model-level converter, for example:
+## Workflow context
 
-```text
-python scripts/validate_metadata_yaml.py --all --models-dir models --fix --allow-missing-license
-python scripts/generate_png_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/generate_json_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/generate_turtle_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/generate_vpp_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-python scripts/metadata_yaml_to_ttl.py --all --models-dir models --allow-missing-license --metadata-timestamp now
-```
+The [submission workflow guide](process-new-model-submission.md#processing-order) is the source for the full sequence, including source validation, ontology generation, optional bibliography checks, distribution metadata, model metadata, and the separate root-catalog update. The standalone examples above operate only on Turtle distribution metadata and assume the source `ontology.ttl` is available.
 
-This workflow is only context. This script does not create or modify any workflow configuration.
+This script participates in that workflow but does not create or modify its configuration.
