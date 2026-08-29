@@ -1,16 +1,22 @@
 # OntoUML/UFO Catalog
 
-<p align="center"><img src="https://user-images.githubusercontent.com/8641647/223740939-1abcd2af-e954-4d19-b087-56f1be4417c3.png" width="500">
+<p align="center"><img src="https://user-images.githubusercontent.com/8641647/223740939-1abcd2af-e954-4d19-b087-56f1be4417c3.png" width="500" alt="OntoUML/UFO Catalog logo"></p>
 
-The FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research, commonly referred to as **OntoUML/UFO Catalog**, is a structured and open-source catalog that contains OntoUML and UFO ontology models. It was conceived to allow collaborative work and to be easily accessible to all its users.
+The **OntoUML/UFO Catalog** is a curated collection of conceptual models for research and reuse. These models describe concepts and relationships in domains such as trust, services, or software; they are not collections of observations about individual objects. [OntoUML](https://ontouml.org/ontouml/) is a conceptual modeling language based on the **Unified Foundational Ontology (UFO)**, a foundation for describing categories and relationships in models.
 
-The goal of the OntoUML/UFO Catalog is to support empirical research in OntoUML and UFO, as well as for the general conceptual modeling area, by providing high-quality curated, structured, and machine-processable data on *why*, *where*, and *how* different modeling approaches are used.
+Also known as the FAIR Model Catalog for Ontology-Driven Conceptual Modeling Research, the catalog supports empirical research into *why*, *where*, and *how* modeling approaches are used. It brings together models from different domains, purposes, and levels of modeling experience as structured, machine-processable material. Curation and automated checks do not guarantee every model's semantic quality or suitability for a particular use.
 
-The catalog offers a diverse collection of models, created by modelers with varying modeling skills, for a range of domains and different purposes. The models are available in machine-readable formats (JSON and Turtle) and are accessible via permanent identifiers.
+| I want to… | Start here |
+| --- | --- |
+| View or download a model | [Using models](documentation/using-models.md) — choose PNG, VPP, JSON, Turtle, or a complete source snapshot |
+| Reuse or cite the collection | [Citation guidance](documentation/using-models.md#cite-the-catalog-and-the-models-you-use) and [existing license statements](#license-disclaimer) |
+| Submit a model or report a problem | [Contribution and support guide](documentation/contributing.md) |
+| Understand the formats and validation limits | [Technical overview](documentation/technical-overview.md) |
+| Run repository maintenance tools | [Script index and setup](scripts/README.md) |
 
-The catalog has two data services through which we store and publish its content: this Git repository for data storage, and a FAIR Data Point (FDP) for data discovery. While we outline the FDP in this document, the focus of this documentation is on the catalog’s repository.
+This GitHub repository is the **storage, distribution, and contribution layer**. The [FAIR Data Point (FDP)](https://w3id.org/ontouml-models) is a separately operated **discovery layer**. This documentation covers the repository, not FDP operations. See the [documentation index](documentation/README.md) for the full reader paths.
 
-An overview of the catalog is provided by a dashboard at the persistent URL [http://w3id.org/ontouml-models/dashboard](http://w3id.org/ontouml-models/dashboard).
+The existing [catalog dashboard](http://w3id.org/ontouml-models/dashboard) is another overview entry point; its operational behavior is outside this repository documentation's inspected scope.
 
 ## Table of Contents
 
@@ -39,104 +45,48 @@ An overview of the catalog is provided by a dashboard at the persistent URL [htt
 
 ### Data Organization
 
-This repository contains OntoUML and UFO models and all their distributions, serving as our *de facto* data storage service. We describe below the catalog's repository structure and the files it contains:
+Each direct folder under [models/](models/) contains a model and its available representations. Folder names commonly combine an author, year, or model name; read `metadata.yaml` for the actual description and sources.
 
-```txt
-/ontouml-models
-|--- catalog.ttl
-+--- /models
-|     +--- /"model-directory-1"
-|          |--- ontology.vpp
-|          |--- ontology.json
-|          |--- ontology.ttl (generated from ontology.json)
-|          |--- metadata.yaml
-|          +--- /original-diagrams
-|          |    |--- "diagram-1".png
-|          +--- /new-diagrams
-|          |    |--- "diagram-1".png
-|          |--- metadata.ttl
-|          |--- metadata-vpp.ttl
-|          |--- metadata-json.ttl
-|          |--- metadata-turtle.ttl
-|          |--- metadata-png-o-"diagram-1".ttl
-|          |--- metadata-png-n-"diagram-1".ttl
-+--- /shapes
-     |--- Resource-shape.ttl
-     |--- Dataset-shape.ttl
-     |--- Catalog-shape.ttl
-     |--- SemanticArtefact-shape.ttl
-     |--- Distribution-shape.ttl
-```
+| Author-maintained inputs | Generated and committed outputs |
+| --- | --- |
+| `ontology.vpp` and its `ontology.json` export | `ontology.ttl`, generated from JSON using the pinned converter and metadata language |
+| `metadata.yaml` | Model-level `metadata.ttl`, retaining existing catalog-managed identifiers/values and aggregating distribution links |
+| `original-diagrams/*.png` and/or `new-diagrams/*.png` | Per-image `metadata-png-o-*.ttl` / `metadata-png-n-*.ttl` sidecars |
+| Model source files and metadata | `metadata-vpp.ttl`, `metadata-json.ttl`, and `metadata-turtle.ttl`, describing the corresponding file distributions |
+| Optional `references.bib` | No generated bibliography; validated when supplied |
+| Root `catalog.yaml`, together with generated model metadata | Root `catalog.ttl`, containing catalog metadata, membership, and derived contributors |
 
-- `catalog.ttl`: the Turtle file that contains all metadata about the catalog in linked data format.
+The native project is created or reconstructed in [Visual Paradigm](https://www.visual-paradigm.com/download/community.jsp). The [OntoUML Plugin for Visual Paradigm](https://purl.org/ontouml-vp) provides a JSON export route; repository automation does not perform VPP-to-JSON export. Contributors keep these representations consistent. Original diagrams retain the authors' representations, including images from publications; `new-diagrams/` contains Visual Paradigm recreations.
 
-- `/models`: the directory containing all cataloged models.
+Generated metadata can preserve existing RDF identities, curated fields, and dates; regenerating it is not simply converting YAML from scratch. The [technical input/output map](documentation/technical-overview.md#inputs-and-generated-outputs) explains dependencies and the difference between a model, a distribution, and its metadata.
 
-- `/"model-directory-1"`: a directory containing a single model and distributions that materialize it. Most model directories' names are composed of information about the model itself, such as the name of the first author, the year of publication, or the name of the model.
-
-- `ontology.vpp`: the native model project created or reproduced with [Visual Paradigm UML CASE](https://www.visual-paradigm.com/download/community.jsp). Use the [OntoUML Plugin for Visual Paradigm](https://purl.org/ontouml-vp) to export the model in JSON format in conformance with the [Ontouml Schema](https://w3id.org/ontouml/schema).
-
-- `ontology.json`: the JSON serialization of the model in conformance with the [Ontouml Schema](https://w3id.org/ontouml/schema), and the canonical source for the RDF graph in `ontology.ttl`.
-
-- `ontology.ttl`: the generated, committed Turtle distribution of the model, described with the [OntoUML Vocabulary](https://w3id.org/ontouml/vocabulary). The submission automation generates it from `ontology.json` using the catalog's pinned JSON2Graph converter. Contributors do not prepare or edit this file manually.
-
-- `/original-diagrams`: the directory containing all diagrams of the model in PNG format. These diagrams are either (i) created from the original file generated by the modeling used, or (ii) extracted from the source where the model was published (e.g., screenshots from the original publication).
-
-- `/new-diagrams`: the directory containing all diagrams of the model in PNG format.
-
-- `metadata.yaml`: the canonical, manually maintained source for the model's descriptive metadata.
-
-- `metadata.ttl`: the Turtle file that contains all metadata about the model in linked data format. This file is automatically generated from `metadata.yaml`.
-
-- `metadata-vpp.ttl`: the Turtle file that contains all metadata about the model file, the `ontology.vpp` distribution, in linked data format. This file is automatically generated.
-
-- `metadata-json.ttl`: the Turtle file that contains all metadata about the model's JSON serialization file, the `ontology.json` distribution, in linked data format. This file is automatically generated.
-
-- `metadata-turtle.ttl`: the Turtle file that contains all metadata about the model's Turtle serialization file, the `ontology.ttl` distribution, in linked data format. This file is automatically generated.
-
-- `metadata-png-o-"diagram-1".ttl`: a Turtle file that contains all metadata about one of the model's original diagrams, a `/original-diagrams/"diagram-1".png` distribution, in linked data format. A file is automatically generated for each original diagram.
-
-- `metadata-png-n-"diagram-1".ttl`: a Turtle file that contains all metadata about one of the model's new diagrams, a `/new-diagrams/"diagram-1".png` distribution, in linked data format. A file is automatically generated for each new diagram.
-
-- `/shapes`: the directory containing the SHACL shapes used in the validation of metadata schemas.
-
-- `Resource-shape.ttl`: the Turtle file that contains the SHACL shape used to validate metadata about resources of type `dcat:Resource`.
-
-- `Dataset-shape.ttl`: the Turtle file that contains the SHACL shape used to validate metadata about resources of type `dcat:Dataset`.
-
-- `Catalog-shape.ttl`: the Turtle file that contains the SHACL shape used to validate metadata about resources of type `dcat:Catalog`.
-
-- `SemanticArtefact-shape.ttl`: the Turtle file that contains the SHACL shape used to validate metadata about resources of type `mod:SemanticArtefact`.
-
-- `Distribution-shape.ttl`: the Turtle file that contains the SHACL shape used to validate metadata about resources of type `dcat:Distribution`.
+The [shapes/](shapes/) directory stores SHACL constraints for resource, dataset, catalog, semantic-artefact, and distribution metadata. Current repository workflows do **not** run a SHACL validation engine; see [what validation establishes](documentation/technical-overview.md#what-validation-establishes).
 
 ### Catalog Releases
 
-The catalog also offers releases comprising all its data and metadata compiled into a single Turtle file. Releases are tagged after the following nomenclature `<YYYY><MM><DD>` and can be accessed via the permanent identifier https://w3id.org/ontouml-models/release/_<release_tag>_.
+Repository releases use date tags in `YYYYMMDD` form. Each attached `ontouml-models-YYYYMMDD.ttl` asset aggregates eligible model and metadata RDF; it is **not an archive of native projects, JSON, images, or bibliographies**. Use the release's **Source code (zip)** or **Source code (tar.gz)** for the complete tracked snapshot. See [download instructions and a pinned example](documentation/using-models.md#download-a-file-or-a-snapshot), [GitHub Releases](https://github.com/OntoUML/ontouml-models/releases), and the [release operator guide](scripts/generate-release-file.md).
 
 ### Data Schemas
 
-The cataloged OntoUML and UFO models are documented in two different formats, referred to as data schemas: the [OntoUML Schema](https://w3id.org/ontouml/schema) and the [OntoUML Vocabulary](https://w3id.org/ontouml/vocabulary). Both formats are build upon an implementation-independent metamodel, the [OntoUML Metamodel](https://w3id.org/ontouml/metamodel), and are equivalent in terms of the content being represented and are automatically generated by software, but tailored for their individual use cases.
+The [OntoUML Schema](https://w3id.org/ontouml/schema) specifies a JSON representation; the [OntoUML Vocabulary](https://w3id.org/ontouml/vocabulary) supplies RDF terms. Both relate to the implementation-independent [OntoUML Metamodel](https://w3id.org/ontouml/metamodel), but this repository's JSON-to-RDF conversion is not guaranteed lossless. Read the [conversion limits and independent version information](documentation/technical-overview.md#conversion-and-independent-versions) before choosing a representation.
 
 #### OntoUML Metamodel
 
-The [OntoUML Metamodel](https://w3id.org/ontouml/metamodel) allows its specialization on implementation-specific metamodels to be used as manipulation and exchange of OntoUML models by software agents focused on the UML features relevant to OntoUML. It covers several features of the UML metamodel related to its class diagram language, however, simplified to meet the needs of OntoUML.
+The [OntoUML Metamodel](https://w3id.org/ontouml/metamodel) describes model elements independently of a particular serialization. It focuses on UML class-diagram features relevant to OntoUML, simplifying their representation for software manipulation and exchange.
 
 #### OntoUML Schema
 
-Designed to support the development of model intelligence services in OntoUML, the [Ontouml Schema](https://w3id.org/ontouml/schema) specializes the [OntoUML Metamodel](https://w3id.org/ontouml/metamodel) to specify how to serialize OntoUML models in JSON. In this format, OntoUML can be easily exchanged between clients and servers communicating over HTTP, with extensive support from all major tech stacks, including easy processing within browser applications.
-
-The JSON is a format better suited for manipulation within software code than linked data formats. It supports the exchange of models between modeling tools and the OntoUML server, providing model intelligent services (e.g., model verification and transformation).
+The [OntoUML Schema](https://w3id.org/ontouml/schema) specifies the JSON representation used for model exchange and programmatic processing. Repository automation parses JSON and checks selected conversion rules; it does not run a full JSON Schema validation engine or demonstrate every external modeling service's behavior.
 
 #### Models in Linked Data
 
-While JSON offers a suitable solution for exchanging and manipulating models with software, the ability to query models is extremely useful for analyzing them. This is even more pronounced in the context of a catalog of models, where the significant size of the catalog enables, for example, the generation of statistical reports and the detection of recurrent patterns. The serialization of OntoUML models in a linked data format allows us to feed them to a knowledge graph and perform complex analysis using the SPARQL querying language, all with no need for additional software.
+RDF represents model content as a graph; Turtle is the text syntax used for the stored RDF files. Loading a model or release into an RDF library or graph store enables analyses such as pattern detection and statistical queries. SPARQL is a query language for RDF and requires a query-capable tool; downloading Turtle alone does not provide a query interface. See the [format chooser](documentation/using-models.md#choose-a-format).
 
 ### Metadata
 
-![metadata-schema](documentation/metadata-schema.png)
+![Metadata overview showing a catalog, model datasets, their file distributions, and descriptive links. The technical overview explains the relationships and known constraint differences.](documentation/metadata-schema.png)
 
-The catalog’s schema, depicted in the image above, reuses classes and properties from the following RDF/OWL vocabularies:
+This image is a conceptual overview, not the current normative validation specification. A [text explanation and constraint comparison](documentation/technical-overview.md#reading-the-metadata-overview-figure) documents differences from the stored shapes and the separate YAML authoring rules. Catalog metadata reuses classes and properties from the following RDF/OWL vocabularies:
 
 - [Data Catalog Vocabulary (DCAT)](http://www.w3.org/ns/dcat): The central vocabulary in our metadata schema, DCAT was “*designed to facilitate interoperability between data catalogs published on the Web*”.
 
@@ -152,7 +102,7 @@ The catalog’s schema, depicted in the image above, reuses classes and properti
 
 As we could not satisfy the metadata needs of our stakeholders using the existing vocabularies alone, we complemented them with one of our own authorship, the [OntoUML/UFO Catalog Metadata Vocabulary](https://w3id.org/ontouml-models/vocabulary).
 
-The OntoUML/UFO Catalog Metadata Vocabulary was created to satisfy the metadata needs of the [OntoUML/UFO Catalog](https://w3id.org/ontouml-models/git), complementing the catalog's schema with properties to improve the findability and reusability of the catalog and its models. The vocabulary's content can be accessed thgrough the following links:
+The OntoUML/UFO Catalog Metadata Vocabulary was created to satisfy the metadata needs of the [OntoUML/UFO Catalog](https://w3id.org/ontouml-models/git), complementing the catalog's schema with properties to improve the findability and reusability of the catalog and its models. The vocabulary's content can be accessed through the following links:
 
 - [Vocabulary's complete textual specification](https://w3id.org/ontouml-models/vocabulary/docs)
 - [Vocabulary's GitHub repository](https://w3id.org/ontouml-models/vocabulary/git)
@@ -162,32 +112,29 @@ The OntoUML/UFO Catalog Metadata Vocabulary's elements are identified below by t
 
 ### FAIR Data Point: The Data Discovery Service
 
-The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models) is a deployment of [the FAIR Data Point (FDP) reference implementation](https://doi.org/10.1162/dint_a_00160), which is a FAIR-compliant platform designed to expose semantically rich metadata of FAIR digital objects. Deployed as a web server, the FDP provides important features to the catalog, including the generation of global unique IDs, the generation of webpages for each resource in the catalog based on their semantic annotations, and the search of resources based on textual information or user-defined SPARQL queries. The FDP is automatically synchronized with the data storage, service serving as the *data discovery service* for the catalog.
+The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata. GitHub remains the storage, distribution, and contribution layer described here. Repository-side catalog synchronization does not establish that the live FDP is synchronized. Its endpoints, search features, and operational behavior are outside this documentation's inspected scope; see the [responsibility boundary](documentation/technical-overview.md#github-storage-and-fdp-discovery).
 
 ## Catalog's Persistent URLs
 
-We created persistent URLs for the following resources:
+Persistent entry points are listed below. A stable URL is not necessarily an immutable snapshot; record a release tag and commit for reproducible use.
 
-- FDP Catalog page: https://w3id.org/ontouml-models
-- GitHub repository: https://w3id.org/ontouml-models/git
-- OntoUML vocabulary: https://w3id.org/ontouml
-- Catalog's releases:
-  - Latest release: https://w3id.org/ontouml-models/release
-  - Specific release: https://w3id.org/ontouml-models/release/_<release_tag>_
-    - *\<release_tag\>* must be substituted by a release tag string (e.g., '20230602')
-- Catalog Vocabulary TTL file: https://w3id.org/ontouml-models/vocabulary
-- Shape TTL files:
-  - https://w3id.org/ontouml-models/shape/Catalog
-  - https://w3id.org/ontouml-models/shape/Dataset
-  - https://w3id.org/ontouml-models/shape/Distribution
-  - https://w3id.org/ontouml-models/shape/Resource
-  - https://w3id.org/ontouml-models/shape/SemanticArtefact
+| Resource | Persistent entry point |
+| --- | --- |
+| FDP catalog page | [Catalog discovery](https://w3id.org/ontouml-models) |
+| GitHub repository | [Repository](https://w3id.org/ontouml-models/git) |
+| OntoUML vocabulary | [OntoUML](https://w3id.org/ontouml) |
+| Latest catalog release | [Latest release](https://w3id.org/ontouml-models/release) |
+| Specific catalog release | `https://w3id.org/ontouml-models/release/<release_tag>` — substitute a date tag; for example, [20230602](https://w3id.org/ontouml-models/release/20230602) |
+| Catalog Vocabulary Turtle | [Catalog metadata vocabulary](https://w3id.org/ontouml-models/vocabulary) |
+| Metadata shapes | [Catalog](https://w3id.org/ontouml-models/shape/Catalog), [Dataset](https://w3id.org/ontouml-models/shape/Dataset), [Distribution](https://w3id.org/ontouml-models/shape/Distribution), [Resource](https://w3id.org/ontouml-models/shape/Resource), [SemanticArtefact](https://w3id.org/ontouml-models/shape/SemanticArtefact) |
 
 ## How to Contribute
 
 Your contribution is fundamental to the catalog's success. We highly encourage authors to submit their models and tools to this catalog. With that, you will be supporting research in (ontology-driven) conceptual modeling, ontology engineering, software design, and several others.
 
 ***We greatly appreciate your contribution to this project!***
+
+Start with the [contribution and support guide](documentation/contributing.md) for routes, required inputs, metadata guidance, and the review checklist.
 
 ### Contribute by Submitting an Ontology
 
@@ -201,7 +148,7 @@ If you wish to contribute to this initiative by submitting your ontology, use th
 
 Note that **anonymous ontologies are allowed in the catalog**. So, if you do not want your name to be displayed in your ontology’s metadata, you just have to inform us and we will keep the model’s authorship anonymous. It is important that, in such case, you must be the owner of the ontology’s legal rights.
 
-If you wish to contribute by submitting someone else's ontology, please chose one entry from the "*Not Started*" or "*Started*" sheets from the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing). Ontologies in the *Started* sheet already have files available in a branch (informed in the spreadsheet), simplifying the collaboration process.
+If you wish to contribute by submitting someone else's ontology, consult the "*Not Started*" or "*Started*" sheets in the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing). The *Started* sheet may identify an existing working branch; confirm the current entry and branch with an administrator before duplicating work.
 
 For providing high-quality data, submissions are required to comply with the defined rules to be accepted as part of the catalog. If you have any questions about submitting new models or reusing those available in this catalog, please [create an issue](https://github.com/OntoUML/ontouml-models/issues).
 
@@ -217,7 +164,7 @@ Keep the JSON export consistent with the native project; VPP-to-JSON export is n
 
 **Automatic submission processing requires a branch in the same repository as the PR's target. Fork-based PR writeback is not supported.** Contributors without branch access can use the contribution form above or contact a catalog administrator.
 
-For a normal same-repository PR, automation validates the sources, generates `ontology.ttl`, synchronizes distribution and model metadata, updates root `catalog.ttl`, and commits changed generated files back to the PR branch. A synchronized rerun creates no additional commit. A curator reviews the resulting PR before merging it. See the [submission workflow guide](scripts/process-new-model-submission.md) for the exact processing order, warnings, failure behavior, and local validation commands.
+For a normal same-repository PR, automation validates the sources, generates `ontology.ttl`, synchronizes distribution and model metadata, updates root `catalog.ttl`, and commits changes back to the PR branch. This can include **normalized `metadata.yaml`**, with comments or formatting changed, as well as generated files. A synchronized rerun creates no additional commit. A curator reviews the resulting PR before merging it; automated checks do not establish semantic quality or rights clearance. See the [submission workflow guide](scripts/process-new-model-submission.md) for the exact processing order, warnings, failure behavior, and local validation commands.
 
 ### Other Ways to Contribute
 
@@ -227,7 +174,7 @@ If you find any problems in the repository or have ideas for its improvement, pl
 
 ## Relevant Associated Works
 
-The list of works that use the data provided by the OntoUML/UFO Catalog to test algorithms and perform other tasks grows over time. Instead of keeping a manual list in this document, we recommend you access its [Google Scholar](https://scholar.google.com/scholar?cites=3857815022699931555&as_sdt=2005&sciodt=0,5&hl=en) and [ResearchGate](https://www.researchgate.net/publication/364289037_A_FAIR_Model_Catalog_for_Ontology-Driven_Conceptual_Modeling_Research/citations) citation lists to access an updated information.
+The list of works that use the data provided by the OntoUML/UFO Catalog to test algorithms and perform other tasks grows over time. Instead of keeping a manual list in this document, we recommend you access its [Google Scholar](https://scholar.google.com/scholar?cites=3857815022699931555&as_sdt=2005&sciodt=0,5&hl=en) and [ResearchGate](https://www.researchgate.net/publication/364289037_A_FAIR_Model_Catalog_for_Ontology-Driven_Conceptual_Modeling_Research/citations) citation lists for updated information.
 
 ## Catalog administration
 
@@ -252,11 +199,15 @@ For obtaining the paper's complete BibTeX record, use the citation export option
 
 This paper reflects the state of the catalog as of June 2022.
 
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff). Also [record the snapshot and cite individual model sources](documentation/using-models.md#cite-the-catalog-and-the-models-you-use) when reporting your research.
+
 ## Acknowledgements
 
 We would like to thank all the [contributors](https://github.com/OntoUML/ontouml-models/graphs/contributors) to the OntoUML/UFO Catalog, as well as all the modelers who shared their work and allowed us to include it here.
 
 ## License disclaimer
+
+> **Caution:** Existing rights statements may have incomplete or inconsistent coverage, including differences between model YAML and retained RDF metadata. Consult the statements below, [LICENSE](LICENSE), and the relevant model metadata and original sources; seek clarification from the [catalog administrators](#catalog-administration) where necessary. This caution does not resolve those differences or determine which statement controls.
 
 The OntoUML/UFO Catalog is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License.](https://creativecommons.org/licenses/by-sa/4.0/)
 

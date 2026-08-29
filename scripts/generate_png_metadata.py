@@ -13,11 +13,11 @@ Run from the repository root, for example:
     python scripts/generate_png_metadata.py --all --models-dir models --allow-missing-license
 
 The model-level source of truth is metadata.yaml. Existing metadata-png-*.ttl
-files are read only to preserve stable distribution identifiers, existing model
-W3IDs used by dct:isPartOf, and curated PNG-level values during regeneration.
-The script does not update metadata.ttl; it only reads an existing metadata.ttl
-as a compatibility fallback when no existing PNG metadata file exposes the
-model W3ID.
+files are read only to preserve stable distribution identifiers and curated
+PNG-level values during regeneration. For the model W3ID used by dct:isPartOf,
+an existing model-level metadata.ttl takes precedence; existing PNG metadata
+provides the fallback when model-level metadata is absent. The script reads
+but does not update metadata.ttl.
 """
 
 from __future__ import annotations

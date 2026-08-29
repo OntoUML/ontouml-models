@@ -1,5 +1,7 @@
 # New model submission workflow
 
+[Script index and local setup](README.md)
+
 This document describes the automation for processing a single OntoUML/UFO Catalog model folder from contributor source files into its generated Turtle distribution and catalog-ready metadata.
 
 The workflow is implemented by:
@@ -133,6 +135,8 @@ The BibTeX/BibLaTeX validator checks structural compliance, including UTF-8 enco
 
 The existing PNG generator still performs its own PNG validation during generation.
 
+These checks do not run a JSON Schema or SHACL validation engine, parse the Visual Paradigm project, or prove that the native project and JSON have the same semantics. Converter warnings can describe omitted information even when processing succeeds. Curator review remains necessary; successful parsing and synchronization are not a semantic-quality guarantee.
+
 ## Processing order
 
 In a normal non-dry-run execution, the helper runs the repository scripts in this order (shared metadata options are omitted below for readability):
@@ -153,6 +157,8 @@ In a normal non-dry-run execution, the helper runs the repository scripts in thi
 Ontology generation precedes Turtle distribution metadata generation. The distribution-specific metadata files are generated before `metadata.ttl` so that the model-level metadata can aggregate the distribution IRIs discovered from all `metadata-*.ttl` sidecars.
 
 After the helper succeeds, the workflow runs `python scripts/generate_catalog_file.py .`, then stages and commits changes. The local helper does not synchronize root `catalog.ttl` itself.
+
+The initial `--fix` step can rewrite `metadata.yaml`, removing comments and changing hand-formatted spacing. Its normalized source is inside the model folder staged by the workflow and can therefore appear in the bot commit alongside generated files. Review that source diff as well as the generated artifacts. The standalone helper's `--no-fix-metadata-yaml` option disables automatic YAML fixing; the workflow does not expose that option.
 
 ## Ontology generation and warnings
 
@@ -183,65 +189,64 @@ original-diagrams/example.png -> metadata-png-o-example.ttl
 new-diagrams/example.png      -> metadata-png-n-example.ttl
 ```
 
-The workflow also synchronizes root `catalog.ttl`. Existing generated metadata is updated only when its metadata graph changes; regenerating `ontology.ttl` alone does not require a new `fdpo:metadataModified` value in `metadata-turtle.ttl`.
+The workflow also synchronizes root `catalog.ttl`. Change detection differs by layer:
+
+- `ontology.ttl` uses RDF graph isomorphism and preserves an equivalent existing file byte-for-byte in normal mode.
+- Model and distribution metadata compare serialized content. Formatting-only differences can require a rewrite and an updated `fdpo:metadataModified`; existing `fdpo:metadataIssued` is preserved. See the [model metadata timestamp rules](metadata_yaml_to_ttl.md#existing-metadatattl-preservation) and each distribution guide.
+- The catalog compares RDF semantics, with separate membership and metadata timestamp rules. A serialization-only catalog rewrite does not advance those dates; see the [catalog generator guide](generate-catalog-file.md#modification-timestamps).
+
+Regenerating `ontology.ttl` alone does not require a new `fdpo:metadataModified` in `metadata-turtle.ttl` when that distribution metadata remains unchanged.
 
 ## Local usage
 
 Install dependencies first:
 
-```bash
+```bat
 python -m pip install -r scripts/requirements.txt
 ```
 
 Run the full processing pipeline with a deterministic timestamp:
 
-```bash
-python scripts/process_new_model_submission.py models/example-model \
-  --metadata-timestamp 2026-06-24T12:00:00Z
+```bat
+python scripts/process_new_model_submission.py models/example-model --metadata-timestamp 2026-06-24T12:00:00Z
 ```
 
 Run the same command using the current timestamp:
 
-```bash
-python scripts/process_new_model_submission.py models/example-model \
-  --metadata-timestamp now
+```bat
+python scripts/process_new_model_submission.py models/example-model --metadata-timestamp now
 ```
 
 Run a dry run without retaining generated files:
 
-```bash
-python scripts/process_new_model_submission.py models/example-model \
-  --metadata-timestamp 2026-06-24T12:00:00Z \
-  --dry-run
+```bat
+python scripts/process_new_model_submission.py models/example-model --metadata-timestamp 2026-06-24T12:00:00Z --dry-run
 ```
 
 If `ontology.ttl` is missing, the helper temporarily creates it so downstream metadata dry runs can inspect the distribution, then removes it on completion or failure. An existing `ontology.ttl` is left unchanged. The final non-dry-run output inventory and all-Turtle parse are not performed in this mode; the ontology candidate is still validated by the wrapper.
 
 After a successful non-dry-run local run, synchronize the catalog separately if preparing the complete generated change set:
 
-```bash
+```bat
 python scripts/generate_catalog_file.py .
 ```
 
 Check an existing dataset's JSON/Turtle synchronization without writing:
 
-```bash
+```bat
 python scripts/generate_ontology_turtle.py models/example-model --check
 ```
 
 Detect the changed model folder between two refs for a normal one-model PR:
 
-```bash
+```bat
 python scripts/process_new_model_submission.py --detect-model-folder origin/master HEAD
 ```
 
 For fork-only URL testing, override the repository used in generated storage/download URLs:
 
-```bash
-python scripts/process_new_model_submission.py models/example-model \
-  --metadata-timestamp 2026-06-24T12:00:00Z \
-  --repository pedropaulofb/ontouml-models-dev \
-  --branch master
+```bat
+python scripts/process_new_model_submission.py models/example-model --metadata-timestamp 2026-06-24T12:00:00Z --repository pedropaulofb/ontouml-models-dev --branch master
 ```
 
 For PR-ready metadata intended for the main repository, keep the default:
@@ -266,7 +271,7 @@ To test the same workflow manually, use **Actions** → **Process new model subm
 
 ## Automatic commits
 
-For normal same-repository PRs, the workflow automatically commits `ontology.ttl` and generated metadata back to the PR branch after validation, generation, and catalog synchronization succeed. The read-only bulk-maintenance job never writes back.
+For normal same-repository PRs, the workflow automatically commits `ontology.ttl`, generated metadata, and any normalized source YAML back to the PR branch after validation, generation, and catalog synchronization succeed. The read-only bulk-maintenance job never writes back.
 
 For manual runs, commits occur only when `commit_changes` is `true` and `dry_run` is `false`.
 
@@ -274,7 +279,7 @@ The workflow:
 
 1. runs all validation and generation steps;
 2. stops immediately if any step fails;
-3. stages only the requested model folder and generated root catalog with:
+3. stages only the requested model folder (including normalized `metadata.yaml`) and generated root catalog with this GitHub Actions Bash excerpt, not a local Cmder command:
 
    ```bash
    git add -- "$MODEL_PATH" catalog.ttl

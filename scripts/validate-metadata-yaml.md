@@ -1,6 +1,8 @@
 # Validate metadata.yaml files
 
-`metadata.yaml` is the authoring source for model-level catalog metadata. The validator implemented in `scripts/validate_metadata_yaml.py` checks that dataset folders contain a usable `metadata.yaml` file before metadata generation, SHACL validation, or future CI/workflow steps.
+[Script index and local setup](README.md)
+
+`metadata.yaml` is the authoring source for model-level catalog metadata. The validator implemented in `scripts/validate_metadata_yaml.py` checks it as the first stage of the [current submission helper](process-new-model-submission.md#processing-order), before ontology and metadata generation. It also supports standalone validation and fixing.
 
 ## What the validator checks
 
@@ -23,11 +25,11 @@ For each selected dataset folder, the script checks:
 - language-tag format for `language`;
 - common repository quality rules, such as preferring DBLP/ORCID contributor identifiers and DOI/DBLP source identifiers.
 
-The validator is intentionally YAML-level tooling. RDF/SHACL validation should still be applied to generated Turtle files as a separate stage.
+The validator is intentionally YAML-level tooling. Neither it nor the current submission workflow runs a SHACL or JSON Schema validation engine. The workflow parses generated Turtle and checks particular generation/synchronization rules; that does not establish SHACL conformance or model semantics. See the [submission validation boundary](process-new-model-submission.md#what-the-helper-checks-before-generation).
 
 ## Mandatory fields
 
-The minimum mandatory fields are aligned with the catalog metadata schema and the existing repository metadata.yaml files:
+The following shows the **YAML validator's minimum mandatory fields**, not a complete submission:
 
 ```yaml
 title: Reference Ontology of Trust
@@ -39,6 +41,8 @@ keyword:
 ```
 
 The script also checks expected catalog-template fields, including `acronym`, `modified`, `contributor`, `editorialNote`, `ontologyType`, `language`, `designedForTask`, `context`, `source`, `representationStyle`, and `landingPage`. Missing expected but non-mandatory fields are warnings by default. Use `--missing-expected-fields error` or `--strict` to make them fatal.
+
+The next ontology-generation stage additionally requires a non-empty, usable `language`, for example `language: en`; an empty field inserted by `--fix` is not sufficient. See the [language requirements](generate-ontology-turtle.md#requirements), the full field list below, and this [existing model metadata example](https://github.com/OntoUML/ontouml-models/blob/617dc16ee30a94d8c0587463f1b9ba3b3aef07d7/models/amaral2019rot/metadata.yaml). Use the example's structure, but supply your own model's values. A complete submission also needs the [required source files](process-new-model-submission.md#required-source-files).
 
 Some older catalog datasets have no license value. This is semantically incomplete, but the validator must not invent license metadata. Use `--allow-missing-license` to report a missing or empty `license` as a warning instead of an error when validating legacy datasets.
 
@@ -101,14 +105,14 @@ The fix mode rewrites YAML with PyYAML plus catalog-specific post-processing. It
 
 Preview fixes without writing files:
 
-```bash
-python scripts/validate_metadata_yaml.py models/<model-directory> --fix --dry-run
+```bat
+python scripts/validate_metadata_yaml.py models/example-model --fix --dry-run
 ```
 
 Apply fixes:
 
-```bash
-python scripts/validate_metadata_yaml.py models/<model-directory> --fix
+```bat
+python scripts/validate_metadata_yaml.py models/example-model --fix
 ```
 
 ## YAML formatting produced by `--fix`
@@ -158,50 +162,50 @@ Run from the repository root.
 
 Validate one dataset folder:
 
-```bash
-python scripts/validate_metadata_yaml.py models/<model-directory>
+```bat
+python scripts/validate_metadata_yaml.py models/example-model
 ```
 
 Validate multiple dataset folders:
 
-```bash
-python scripts/validate_metadata_yaml.py models/<model-1> models/<model-2>
+```bat
+python scripts/validate_metadata_yaml.py models/example-a models/example-b
 ```
 
 Validate all direct dataset folders under `models/`:
 
-```bash
+```bat
 python scripts/validate_metadata_yaml.py --all --models-dir models
 ```
 
 Run from inside a dataset folder that contains `metadata.yaml`:
 
-```bash
+```bat
 python ../../scripts/validate_metadata_yaml.py
 ```
 
-Emit JSON output for logs or later workflow integration:
+Emit JSON output for logs or automation:
 
-```bash
+```bat
 python scripts/validate_metadata_yaml.py --all --format json
 ```
 
 Fail on warnings as well as errors:
 
-```bash
+```bat
 python scripts/validate_metadata_yaml.py --all --fail-on-warning
 ```
 
 Promote policy warnings to errors during validation:
 
-```bash
+```bat
 python scripts/validate_metadata_yaml.py --all --strict
 ```
 
 Relax missing license values for legacy datasets where the license cannot be safely inferred:
 
-```bash
-python scripts/validate_metadata_yaml.py models/<model-directory> --allow-missing-license
+```bat
+python scripts/validate_metadata_yaml.py models/example-model --allow-missing-license
 ```
 
 ## Command-line arguments
@@ -230,22 +234,24 @@ python scripts/validate_metadata_yaml.py models/<model-directory> --allow-missin
 
 ## CI/workflow use
 
-For a future workflow that validates new catalog submissions, use non-interactive validation first:
+The current submission helper runs this validator with `--fix` for the selected model folder. The workflow can commit the normalized YAML, so review comment/formatting changes as well as metadata values. Its normal mode does not enable `--strict`.
 
-```bash
+For standalone validation of the existing collection without writes:
+
+```bat
 python scripts/validate_metadata_yaml.py --all --models-dir models --format text
 ```
 
-After existing metadata files have been normalized, a stricter workflow can use:
+For an explicitly stricter standalone check, which may reject otherwise warning-only metadata:
 
-```bash
+```bat
 python scripts/validate_metadata_yaml.py --all --models-dir models --strict
 ```
 
 For legacy-wide checks before license metadata has been curated, use:
 
-```bash
+```bat
 python scripts/validate_metadata_yaml.py --all --models-dir models --allow-missing-license
 ```
 
-Do not use `--fix` in CI unless the workflow is explicitly designed to commit generated changes.
+Use `--fix` in CI only when the workflow is designed to review or commit normalized source changes, as the current submission workflow is. A successful YAML check alone does not establish that every later submission stage will pass.

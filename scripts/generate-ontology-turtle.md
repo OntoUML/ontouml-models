@@ -1,5 +1,7 @@
 # Generate OntoUML Turtle distributions
 
+[Script index and local setup](README.md)
+
 This repository uses `scripts/generate_ontology_turtle.py` to generate each
 catalog model's `ontology.ttl` from its canonical `ontology.json` source.
 
@@ -11,7 +13,7 @@ committed graph when it differs semantically from the JSON2Graph result.
 
 Install the repository's script dependencies from the repository root:
 
-```text
+```bat
 python -m pip install -r scripts/requirements.txt
 ```
 
@@ -60,8 +62,10 @@ For a dataset with an existing `ontology.ttl`:
   byte-different validated JSON2Graph candidate, including a candidate whose
   graph is isomorphic to the historical file.
 
-Force materialization is reserved for the approved catalog-wide migration. It
-is not the normal maintenance mode.
+The catalog-wide migration was completed in [PR #354](https://github.com/OntoUML/ontouml-models/pull/354)
+and included in [release `20260827`](https://github.com/OntoUML/ontouml-models/releases/tag/20260827).
+Force materialization remains available for separately approved rematerialization;
+it is not an outstanding migration task or the normal maintenance mode.
 
 The safe replacement applies per dataset. When several datasets are processed,
 an error in a later dataset does not roll back successful writes already made
@@ -135,28 +139,28 @@ Run commands from the repository root unless stated otherwise.
 
 Generate or synchronize one dataset:
 
-```text
-python scripts/generate_ontology_turtle.py models/<slug>
+```bat
+python scripts/generate_ontology_turtle.py models/example-model
 ```
 
 Process several explicit datasets. Duplicate paths are removed and targets are
 processed in deterministic sorted order:
 
-```text
-python scripts/generate_ontology_turtle.py models/<slug-1> models/<slug-2>
+```bat
+python scripts/generate_ontology_turtle.py models/example-a models/example-b
 ```
 
 Process every direct dataset folder below `models/` that contains
 `metadata.yaml`:
 
-```text
+```bat
 python scripts/generate_ontology_turtle.py --all --models-dir models
 ```
 
 When the current directory is itself a dataset folder containing
 `metadata.yaml`, the dataset argument may be omitted:
 
-```text
+```bat
 python ../../scripts/generate_ontology_turtle.py
 ```
 
@@ -164,20 +168,20 @@ python ../../scripts/generate_ontology_turtle.py
 
 Validate and report what normal generation would change without writing:
 
-```text
-python scripts/generate_ontology_turtle.py models/<slug> --dry-run
+```bat
+python scripts/generate_ontology_turtle.py models/example-model --dry-run
 ```
 
 Check synchronization without writing and return a failing exit code when the
 committed graph needs an update:
 
-```text
-python scripts/generate_ontology_turtle.py models/<slug> --check
+```bat
+python scripts/generate_ontology_turtle.py models/example-model --check
 ```
 
 Check the complete catalog:
 
-```text
+```bat
 python scripts/generate_ontology_turtle.py --all --models-dir models --check
 ```
 
@@ -186,15 +190,19 @@ perform all candidate validations.
 
 ### Migration-only force materialization
 
-Preview the catalog-wide migration without writing:
+The initial migration is complete. The following commands are retained as an
+exceptional maintenance reference, not instructions to repeat it.
 
-```text
+Preview a separately proposed rematerialization without retaining output changes:
+
+```bat
 python scripts/generate_ontology_turtle.py --all --models-dir models --force-materialization --dry-run
 ```
 
-After the audit is accepted, install every byte-different validated candidate:
+Only after that rematerialization has been separately reviewed and authorized,
+install every byte-different validated candidate:
 
-```text
+```bat
 python scripts/generate_ontology_turtle.py --all --models-dir models --force-materialization
 ```
 
@@ -208,8 +216,8 @@ language mode, comparison mode, and action, followed by a summary.
 
 Use JSON for a machine-readable standard-output report:
 
-```text
-python scripts/generate_ontology_turtle.py models/<slug> --dry-run --format json
+```bat
+python scripts/generate_ontology_turtle.py models/example-model --dry-run --format json
 ```
 
 The JSON document contains:
@@ -228,8 +236,8 @@ standard output stays parseable.
 Use `--quiet` (also accepted as `-q` or `--silent`) to suppress progress and the
 final text summary while retaining warnings and errors:
 
-```text
-python scripts/generate_ontology_turtle.py models/<slug> --check --quiet
+```bat
+python scripts/generate_ontology_turtle.py models/example-model --check --quiet
 ```
 
 JSON reporting is still emitted when `--quiet` and `--format json` are used

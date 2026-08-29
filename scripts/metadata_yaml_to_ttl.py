@@ -5,7 +5,7 @@ metadata and writes metadata.ttl next to it. It intentionally generates
 metadata.ttl, not metadata-turtle.ttl, which is the distribution metadata file for
 ontology.ttl.
 
-The tool is intended for repository maintenance and later CI/workflow use. It can
+The tool supports repository maintenance and the current submission workflow. It can
 process one or more selected dataset folders or every dataset folder under
 models/. Existing metadata.ttl files are read only to preserve stable catalog
 identifiers and catalog-managed values that are not present in metadata.yaml.

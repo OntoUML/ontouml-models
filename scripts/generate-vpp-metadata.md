@@ -1,5 +1,7 @@
 # Generate VPP distribution metadata
 
+[Script index and local setup](README.md)
+
 This repository contains one RDF/Turtle metadata file for each Visual Paradigm project distribution of a model.
 
 The generator implemented in `scripts/generate_vpp_metadata.py` scans one or more model dataset folders and creates this file:
@@ -14,9 +16,9 @@ The script generates distribution-level metadata for Visual Paradigm project fil
 
 The model-level source of truth is `metadata.yaml`. The VPP generator does **not** update `metadata.ttl`, and it does **not** add model-level `dcat:distribution` triples. Instead, the generated `metadata-vpp.ttl` file points back to the model with `dct:isPartOf`.
 
-For existing catalog datasets, the script preserves the already published model W3ID used in `dct:isPartOf` from existing distribution metadata. It does not use model-level `metadata.ttl` as an input dependency. This supports a future workflow in which distribution metadata files are generated first, and `scripts/metadata_yaml_to_ttl.py` later aggregates them into model-level `metadata.ttl`.
+For existing catalog datasets, the script preserves the already published model W3ID used in `dct:isPartOf` from existing distribution metadata. It does not use model-level `metadata.ttl` as an input dependency. The [current submission helper](process-new-model-submission.md#processing-order) generates distribution metadata first and then calls `scripts/metadata_yaml_to_ttl.py` to aggregate it into model-level `metadata.ttl`.
 
-Recommended future generation order:
+The relevant part of the dependency relationship is:
 
 ```text
 metadata.yaml + ontology.vpp
@@ -78,9 +80,8 @@ By default, model-level `metadata.yaml` must contain a usable `license` value. T
 
 Use `--allow-missing-license` only for legacy datasets that intentionally lack license metadata:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> --allow-missing-license \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --allow-missing-license --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 When `--allow-missing-license` is used and no model-level license is present:
@@ -164,7 +165,7 @@ When generating new URLs, path segments are URL-quoted where needed, but commas 
 
 Install the script dependencies:
 
-```bash
+```bat
 python -m pip install -r scripts/requirements.txt
 ```
 
@@ -178,89 +179,74 @@ Commands that create new VPP metadata files, initialize missing `fdpo:metadataIs
 
 Generate metadata for one dataset folder:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate metadata for multiple dataset folders:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-1> models/<model-2> \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-a models/example-b --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate metadata for all dataset folders under `models/`:
 
-```bash
-python scripts/generate_vpp_metadata.py --all --models-dir models \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py --all --models-dir models --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Generate all VPP metadata while allowing legacy datasets without license metadata:
 
-```bash
-python scripts/generate_vpp_metadata.py --all --models-dir models --allow-missing-license \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py --all --models-dir models --allow-missing-license --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Preview generation without writing files:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> --dry-run \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --dry-run --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Check whether files are up to date without writing them. The command exits with code `1` if any VPP metadata file would change:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> --check \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --check --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Fail when the generated file already exists:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> --no-overwrite \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --no-overwrite --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a different repository or branch in generated `dcat:downloadURL` values:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> \
-  --repository pedropaulofb/ontouml-models-dev \
-  --branch master \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --repository pedropaulofb/ontouml-models-dev --branch master --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use a different repository-relative models path in generated `dcat:downloadURL` values:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> \
-  --models-dir-name models \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --models-dir-name models --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Use JSON output:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> --format json \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --format json --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Suppress normal text output:
 
-```bash
-python scripts/generate_vpp_metadata.py models/<model-directory> --quiet \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python scripts/generate_vpp_metadata.py models/example-model --quiet --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 Run from inside a dataset folder that contains `metadata.yaml`:
 
-```bash
-python ../../scripts/generate_vpp_metadata.py \
-  --metadata-timestamp 2024-01-02T03:04:05Z
+```bat
+python ../../scripts/generate_vpp_metadata.py --metadata-timestamp 2024-01-02T03:04:05Z
 ```
 
 ## Command-line arguments
@@ -292,8 +278,12 @@ python ../../scripts/generate_vpp_metadata.py \
 | `1` | Dataset processing failed, or `--check` detected required updates. |
 | `2` | Command-line, discovery, or setup error prevented normal execution. |
 
-## Notes for future automation
+<a id="notes-for-future-automation"></a>
 
-The script is workflow-ready but does not create a workflow. A future pipeline can run it before `scripts/metadata_yaml_to_ttl.py`, after validating or fixing `metadata.yaml`.
+## Notes for automation
+
+The script participates in the existing submission workflow but does not create one. The helper runs it after the other distribution metadata generators and immediately before `scripts/metadata_yaml_to_ttl.py`; see the [full processing order](process-new-model-submission.md#processing-order).
+
+The standalone generator checks that the VPP source exists, is a regular file, and has an acceptable filename. The submission helper additionally rejects an empty VPP file during source preflight. Neither opens the project in Visual Paradigm or establishes semantic equivalence with the JSON export.
 
 Use a fixed `--metadata-timestamp` value in CI-like maintenance runs to keep results deterministic. Use `--metadata-timestamp now` only for intentionally non-deterministic manual regeneration.
