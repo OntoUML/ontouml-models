@@ -18,6 +18,8 @@ GitHub is the file storage, distribution, and contribution layer. The [FAIR Data
 - [Metadata overview figure](metadata-schema.png): retained conceptual overview, with a [text explanation and known constraint differences](technical-overview.md#reading-the-metadata-overview-figure). It is not an executable validation specification.
 - [Full Goal Diagram](Full%20Goal%20Diagram.png): a design-goal artifact, not a statement that every depicted goal is implemented or an architecture diagram of current automation.
 - [Logo assets](logo/): existing images and branding archives. No asset replacement or rights determination is implied by this index.
-- [Repository Wiki](https://github.com/OntoUML/ontouml-models/wiki): older reconstruction/import guidance and deprecated operational instructions. Consult current tracked guidance first; historical rules await curator confirmation.
+- [Historical model-reconstruction guidance](historical/model-reconstruction.md): preserved reconstruction rules from a dated Wiki snapshot, pending curator confirmation.
+- [Historical Visual Paradigm import guide](historical/importing-models-to-visual-paradigm.md): preserved, version-specific editor instructions from the same snapshot; it does not assert current product behavior.
+- [Repository Wiki](https://github.com/OntoUML/ontouml-models/wiki): source history and deprecated operational instructions. Consult current tracked guidance first.
 
 No editable source for the two raster diagrams was identified in the inspected repository. Their existing files are retained; this index does not assign new authorship, dates, or licensing terms.

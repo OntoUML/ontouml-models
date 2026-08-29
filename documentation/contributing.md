@@ -66,4 +66,4 @@ Diagnostics are in check results and workflow logs, not automatically posted as 
 
 ## Historical modeling and import advice
 
-The [Wiki](https://github.com/OntoUML/ontouml-models/wiki) contains older reconstruction and editor-import guidance, including version-specific instructions. Treat it as historical material pending curator confirmation, not as the current automated conversion contract or an endorsement of present editor/edition support. Ask a curator when applying those modeling rules requires interpretation. Current submission mechanics are the tracked guidance linked above.
+The tracked [historical model-reconstruction guidance](historical/model-reconstruction.md) and [historical Visual Paradigm import guide](historical/importing-models-to-visual-paradigm.md) preserve older Wiki material, including version-specific instructions. Treat them as historical references pending curator confirmation, not as the current automated conversion contract or an endorsement of present editor/edition support. Ask a curator when applying those modeling rules requires interpretation. Current submission mechanics are the tracked guidance linked above.
