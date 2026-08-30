@@ -14,9 +14,11 @@ Also known as the FAIR Model Catalog for Ontology-Driven Conceptual Modeling Res
 | Understand the formats and validation limits | [Technical overview](documentation/technical-overview.md) |
 | Run repository maintenance tools | [Script index and setup](scripts/README.md) |
 
-This GitHub repository is the **storage, distribution, and contribution layer**. The [FAIR Data Point (FDP)](https://w3id.org/ontouml-models) is a separately operated **discovery layer**. This documentation covers the repository, not FDP operations. See the [documentation index](documentation/README.md) for the full reader paths.
+> [!IMPORTANT]
+> **Current source of catalog data:** This GitHub repository is the catalog's actively maintained and regularly updated **storage, distribution, and contribution layer**. The separately operated [FAIR Data Point (FDP)](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Use this repository and its releases for current catalog content. See the [documentation index](documentation/README.md) for the full reader paths.
 
-The existing [catalog dashboard](http://w3id.org/ontouml-models/dashboard) is another overview entry point; its operational behavior is outside this repository documentation's inspected scope.
+> [!NOTE]
+> **Community dashboard:** The existing [catalog dashboard](http://w3id.org/ontouml-models/dashboard) is a community-contributed companion project that provides another view of the catalog. It is independently operated, is not an official component of the OntoUML/UFO Catalog, and may lag behind the maintained GitHub repository. It remains linked here in recognition of that contribution.
 
 ## Table of Contents
 
@@ -86,7 +88,10 @@ RDF represents model content as a graph; Turtle is the text syntax used for the 
 
 ![Metadata overview showing a catalog, model datasets, their file distributions, and descriptive links. The technical overview explains the relationships and known constraint differences.](documentation/metadata-schema.png)
 
-This image is a conceptual overview, not the current normative validation specification. A [text explanation and constraint comparison](documentation/technical-overview.md#reading-the-metadata-overview-figure) documents differences from the stored shapes and the separate YAML authoring rules. Catalog metadata reuses classes and properties from the following RDF/OWL vocabularies:
+> [!NOTE]
+> This image is a conceptual overview, not the current normative validation specification. A [text explanation and constraint comparison](documentation/technical-overview.md#reading-the-metadata-overview-figure) documents differences from the stored shapes and the separate YAML authoring rules.
+
+Catalog metadata reuses classes and properties from the following RDF/OWL vocabularies:
 
 - [Data Catalog Vocabulary (DCAT)](http://www.w3.org/ns/dcat): The central vocabulary in our metadata schema, DCAT was “*designed to facilitate interoperability between data catalogs published on the Web*”.
 
@@ -112,7 +117,10 @@ The OntoUML/UFO Catalog Metadata Vocabulary's elements are identified below by t
 
 ### FAIR Data Point: The Data Discovery Service
 
-The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata. GitHub remains the storage, distribution, and contribution layer described here. Repository-side catalog synchronization does not establish that the live FDP is synchronized. Its endpoints, search features, and operational behavior are outside this documentation's inspected scope; see the [responsibility boundary](documentation/technical-overview.md#github-storage-and-fdp-discovery).
+The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata.
+
+> [!IMPORTANT]
+> The FDP has not been updated since its initial release and does not represent the current catalog state. No FDP update or synchronization work is currently planned. The GitHub repository remains actively maintained and is the authoritative source for current files, metadata, history, contributions, and releases. See the [responsibility boundary](documentation/technical-overview.md#github-storage-and-fdp-discovery).
 
 ## Catalog's Persistent URLs
 
@@ -120,7 +128,7 @@ Persistent entry points are listed below. A stable URL is not necessarily an imm
 
 | Resource | Persistent entry point |
 | --- | --- |
-| FDP catalog page | [Catalog discovery](https://w3id.org/ontouml-models) |
+| FDP catalog page (currently outdated) | [Catalog discovery](https://w3id.org/ontouml-models) |
 | GitHub repository | [Repository](https://w3id.org/ontouml-models/git) |
 | OntoUML vocabulary | [OntoUML](https://w3id.org/ontouml) |
 | Latest catalog release | [Latest release](https://w3id.org/ontouml-models/release) |
@@ -146,7 +154,8 @@ The easiest way to contribute to this catalog is to simply send us the following
 
 If you wish to contribute to this initiative by submitting your ontology, use the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
 
-Note that **anonymous ontologies are allowed in the catalog**. So, if you do not want your name to be displayed in your ontology’s metadata, you just have to inform us and we will keep the model’s authorship anonymous. It is important that, in such case, you must be the owner of the ontology’s legal rights.
+> [!NOTE]
+> **Anonymous ontologies are allowed in the catalog.** If you do not want your name to be displayed in your ontology's metadata, inform us and we will keep the model's authorship anonymous. In that case, you must be the owner of the ontology's legal rights.
 
 If you wish to contribute by submitting someone else's ontology, consult the "*Not Started*" or "*Started*" sheets in the [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing). The *Started* sheet may identify an existing working branch; confirm the current entry and branch with an administrator before duplicating work.
 
@@ -162,7 +171,8 @@ For a repository submission, prepare one model folder directly under `models/` c
 
 Keep the JSON export consistent with the native project; VPP-to-JSON export is not automated by the catalog. Do not add a manually generated `ontology.ttl` or edit generated Turtle to change the model: update `ontology.json` instead.
 
-**Automatic submission processing requires a branch in the same repository as the PR's target. Fork-based PR writeback is not supported.** Contributors without branch access can use the contribution form above or contact a catalog administrator.
+> [!IMPORTANT]
+> **Automatic submission processing requires a branch in the same repository as the PR's target. Fork-based PR writeback is not supported.** Contributors without branch access can use the contribution form above or contact a catalog administrator.
 
 For a normal same-repository PR, automation validates the sources, generates `ontology.ttl`, synchronizes distribution and model metadata, updates root `catalog.ttl`, and commits changes back to the PR branch. This can include **normalized `metadata.yaml`**, with comments or formatting changed, as well as generated files. A synchronized rerun creates no additional commit. A curator reviews the resulting PR before merging it; automated checks do not establish semantic quality or rights clearance. See the [submission workflow guide](scripts/process-new-model-submission.md) for the exact processing order, warnings, failure behavior, and local validation commands.
 
@@ -207,7 +217,8 @@ We would like to thank all the [contributors](https://github.com/OntoUML/ontouml
 
 ## License disclaimer
 
-> **Caution:** Existing rights statements may have incomplete or inconsistent coverage, including differences between model YAML and retained RDF metadata. Consult the statements below, [LICENSE](LICENSE), and the relevant model metadata and original sources; seek clarification from the [catalog administrators](#catalog-administration) where necessary. This caution does not resolve those differences or determine which statement controls.
+> [!CAUTION]
+> Existing rights statements may have incomplete or inconsistent coverage, including differences between model YAML and retained RDF metadata. Consult the statements below, [LICENSE](LICENSE), and the relevant model metadata and original sources; seek clarification from the [catalog administrators](#catalog-administration) where necessary. This caution does not resolve those differences or determine which statement controls.
 
 The OntoUML/UFO Catalog is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International Public License.](https://creativecommons.org/licenses/by-sa/4.0/)
 

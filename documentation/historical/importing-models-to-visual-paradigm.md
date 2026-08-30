@@ -1,5 +1,6 @@
 # Historical guide to importing models into Visual Paradigm
 
+> [!WARNING]
 > **Historical status:** This version-specific procedure was copied from a repository Wiki snapshot dated 8 November 2023. It describes Visual Paradigm 16.3 and editor behavior asserted by that snapshot; it has not been verified against current products, editions, licenses, or interfaces. It is not the current automated conversion contract. For current repository submissions, follow [Contributing and reporting problems](../contributing.md).
 
 **Provenance:** [Original Wiki page](https://github.com/OntoUML/ontouml-models/wiki/Importing-Models-from-Other-Editors-and-Formats-to-Visual-Paradigm) · [immutable page revision `72e6ca6db619a3e9aa3f4c982ff81dd5b4cfe85e`](https://github.com/OntoUML/ontouml-models/wiki/Importing-Models-from-Other-Editors-and-Formats-to-Visual-Paradigm/72e6ca6db619a3e9aa3f4c982ff81dd5b4cfe85e) · inspected in Wiki repository snapshot `8d172200661ba9abee6ca058ae26e558e0efa8a1` (8 November 2023)

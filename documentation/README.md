@@ -11,9 +11,13 @@ The [OntoUML/UFO Catalog](../README.md) stores conceptual models and their repre
 | Check existing rights statements | [License disclaimer and caution](../README.md#license-disclaimer), [LICENSE](../LICENSE), and the selected model's metadata/sources |
 | Find the preferred catalog citation | [How to Cite this Catalog](../README.md#how-to-cite-this-catalog) and [CITATION.cff](../CITATION.cff) |
 
-GitHub is the file storage, distribution, and contribution layer. The [FAIR Data Point](https://w3id.org/ontouml-models) is a separate discovery layer; its operation is outside the repository guidance. See the [responsibility boundary](technical-overview.md#github-storage-and-fdp-discovery).
+> [!IMPORTANT]
+> **Use GitHub for current catalog content.** This repository is actively maintained and updated. The separate [FAIR Data Point](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. See the [responsibility boundary](technical-overview.md#github-storage-and-fdp-discovery).
 
 ## Supporting assets and historical material
+
+> [!WARNING]
+> The historical guides and Wiki pages listed below are preserved for provenance and context. They are not current contribution, automation, or product-support instructions. Follow the tracked repository guidance first.
 
 - [Metadata overview figure](metadata-schema.png): retained conceptual overview, with a [text explanation and known constraint differences](technical-overview.md#reading-the-metadata-overview-figure). It is not an executable validation specification.
 - [Full Goal Diagram](Full%20Goal%20Diagram.png): a design-goal artifact, not a statement that every depicted goal is implemented or an architecture diagram of current automation.

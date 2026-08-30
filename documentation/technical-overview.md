@@ -94,7 +94,10 @@ Changing ontology content alone need not change the Turtle distribution's metada
 
 ![Metadata overview: a catalog groups model datasets, each with file distributions; resources connect to contributors, contact information, themes, and descriptive metadata. Constraint differences are explained below.](metadata-schema.png)
 
-This existing image is a conceptual overview, **not the current normative validation specification**. In text: a catalog links to model datasets; a model links to its distributions; a distribution records its format and download location. Shared resource metadata supplies descriptions, dates, licenses, and people/organizations. Model metadata also records language, theme, purpose, context, representation style, and sources.
+> [!NOTE]
+> This existing image is a conceptual overview, **not the current normative validation specification**.
+
+In text: a catalog links to model datasets; a model links to its distributions; a distribution records its format and download location. Shared resource metadata supplies descriptions, dates, licenses, and people/organizations. Model metadata also records language, theme, purpose, context, representation style, and sources.
 
 Known differences between the image and the stored shapes are:
 
@@ -110,4 +113,7 @@ No editable source for this raster figure was identified in the inspected reposi
 
 ## GitHub storage and FDP discovery
 
-GitHub stores and distributes the files, records their history, accepts contributions, and runs the documented repository automation. The [FAIR Data Point](https://w3id.org/ontouml-models) is a separately operated discovery layer for catalog metadata. Repository-side `catalog.ttl` synchronization is not evidence that a live FDP has indexed or synchronized that content. FDP endpoints, search, deployment, and operational behavior are outside this guide's inspected scope; useful [FDP references](../README.md#fair-data-point-the-data-discovery-service) remain available.
+GitHub stores and distributes the files, records their history, accepts contributions, and runs the documented repository automation.
+
+> [!IMPORTANT]
+> GitHub is the actively maintained and regularly updated source for the current catalog. The separately operated [FAIR Data Point](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Repository-side `catalog.ttl` synchronization does not update the FDP. Its endpoints, search, deployment, and operational behavior remain outside this guide; useful [FDP references](../README.md#fair-data-point-the-data-discovery-service) are retained for context.
