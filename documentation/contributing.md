@@ -13,7 +13,8 @@ Contributions help researchers study and reuse OntoUML and UFO models. Current r
 | Report a model, script, or documentation problem, or suggest an application | [Open an issue](https://github.com/OntoUML/ontouml-models/issues), or use the existing form/administrator route. Include the information relevant to your report below. |
 | Ask about rights or removal | Use the routes in the [license disclaimer](../README.md#license-disclaimer) or contact an administrator. Do not post sensitive evidence publicly. |
 
-**Automatic submission writeback requires a PR branch inside the same repository as its target. Fork-based PR writeback is not supported.** This restriction belongs to the model-submission workflow; the separate [release validation workflow](../scripts/generate-release-file.md#pull-request-validation) does not require a same-repository PR.
+> [!IMPORTANT]
+> **Automatic submission writeback requires a PR branch inside the same repository as its target. Fork-based PR writeback is not supported.** This restriction belongs to the model-submission workflow; the separate [release validation workflow](../scripts/generate-release-file.md#pull-request-validation) does not require a same-repository PR.
 
 The README also documents [anonymous model contributions](../README.md#contribute-by-submitting-an-ontology). If helping catalog someone else's model, consult the existing [List of UFO and OntoUML Ontology Models](https://docs.google.com/spreadsheets/d/1JXEA3k58yAkV_jbmEc7HP9QK7RgZC5Jk1y8MR7ylFyQ/edit?usp=sharing) and confirm the entry's current status and any working branch with an administrator before duplicating work. A spreadsheet entry does not establish permission to redistribute a model.
 
@@ -66,4 +67,5 @@ Diagnostics are in check results and workflow logs, not automatically posted as 
 
 ## Historical modeling and import advice
 
-The tracked [historical model-reconstruction guidance](historical/model-reconstruction.md) and [historical Visual Paradigm import guide](historical/importing-models-to-visual-paradigm.md) preserve older Wiki material, including version-specific instructions. Treat them as historical references pending curator confirmation, not as the current automated conversion contract or an endorsement of present editor/edition support. Ask a curator when applying those modeling rules requires interpretation. Current submission mechanics are the tracked guidance linked above.
+> [!WARNING]
+> The tracked [historical model-reconstruction guidance](historical/model-reconstruction.md) and [historical Visual Paradigm import guide](historical/importing-models-to-visual-paradigm.md) preserve older Wiki material, including version-specific instructions. Treat them as historical references pending curator confirmation, not as the current automated conversion contract or an endorsement of present editor/edition support. Ask a curator when applying those modeling rules requires interpretation. Current submission mechanics are the tracked guidance linked above.

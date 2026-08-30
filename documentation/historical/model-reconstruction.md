@@ -1,5 +1,6 @@
 # Historical model-reconstruction guidance
 
+> [!WARNING]
 > **Historical status:** This material was copied from a repository Wiki snapshot dated 8 November 2023. It preserves earlier guidance for manually reconstructing models and awaits curator confirmation. It is not the current automated conversion contract. For current repository submissions, follow [Contributing and reporting problems](../contributing.md); ask a curator before relying on these modeling rules where interpretation is required.
 
 **Provenance:** [Original Wiki page](https://github.com/OntoUML/ontouml-models/wiki/Frequently-Asked-Questions) · [immutable page revision `5d838b8dafb9ec4e48fd830460c79296b5ec4a96`](https://github.com/OntoUML/ontouml-models/wiki/Frequently-Asked-Questions/5d838b8dafb9ec4e48fd830460c79296b5ec4a96) · inspected in Wiki repository snapshot `8d172200661ba9abee6ca058ae26e558e0efa8a1` (8 November 2023)

@@ -30,7 +30,8 @@ The default branch and [latest-release entry point](https://w3id.org/ontouml-mod
 
 ## Walkthrough: the Reference Ontology of Trust
 
-This is a fixed historical example from [release `20260827`](https://github.com/OntoUML/ontouml-models/releases/tag/20260827), at commit `617dc16ee30a94d8c0587463f1b9ba3b3aef07d7`. It is not a claim that this remains the latest release or that later versions contain identical files.
+> [!NOTE]
+> This is a fixed historical example from [release `20260827`](https://github.com/OntoUML/ontouml-models/releases/tag/20260827), at commit `617dc16ee30a94d8c0587463f1b9ba3b3aef07d7`. It is not a claim that this remains the latest release or that later versions contain identical files.
 
 | Open this pinned file | What to learn |
 | --- | --- |

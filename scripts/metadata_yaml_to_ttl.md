@@ -160,7 +160,7 @@ The remaining model-level descriptive metadata is regenerated from `metadata.yam
 
 When the regenerated `metadata.ttl` content differs from the current file, including formatting-only differences, the converter preserves existing `fdpo:metadataIssued` but updates `fdpo:metadataModified` to the explicit run timestamp provided through `--metadata-timestamp`. If `fdpo:metadataIssued` is missing, it is initialized with the same explicit run timestamp.
 
-This behavior allows safe regeneration of existing datasets without replacing stable catalog identifiers or distribution links, while keeping FDP modification metadata aligned with the actual regeneration outcome.
+This behavior allows safe regeneration of existing datasets without replacing stable catalog identifiers or distribution links, while keeping the stored FDP-vocabulary modification metadata aligned with the actual regeneration outcome. It does not synchronize or update the live FDP service.
 
 ## New datasets
 
@@ -177,7 +177,7 @@ New datasets must be generated with an explicit metadata timestamp unless one is
 python scripts/metadata_yaml_to_ttl.py models/new-dataset --metadata-timestamp 2026-01-31T12:00:00Z
 ```
 
-Use `--metadata-timestamp now` only when non-deterministic current timestamps are intentionally acceptable. Existing datasets preserve their current `fdpo:metadataIssued` value by default. Existing `fdpo:metadataModified` values are preserved only when the regenerated file is unchanged; if the file changes, `fdpo:metadataModified` is updated to the explicit run timestamp. Existing datasets that currently lack FDP metadata timestamps, or that need to be modified, require `--metadata-timestamp`; this avoids silently inventing catalog metadata timestamps.
+Use `--metadata-timestamp now` only when non-deterministic current timestamps are intentionally acceptable. Existing datasets preserve their current `fdpo:metadataIssued` value by default. Existing `fdpo:metadataModified` values are preserved only when the regenerated file is unchanged; if the file changes, `fdpo:metadataModified` is updated to the explicit run timestamp. Existing datasets that currently lack stored `fdpo:` metadata timestamps, or that need to be modified, require `--metadata-timestamp`; this avoids silently inventing catalog metadata timestamps.
 
 ## Exit codes
 

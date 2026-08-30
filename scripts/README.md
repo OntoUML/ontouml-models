@@ -2,7 +2,10 @@
 
 [Repository overview](../README.md)
 
-These Python tools validate contributor files, generate committed model/catalog metadata, and assemble RDF releases. They operate on the GitHub repository's storage layer. They do not deploy, index, or verify the separately operated FAIR Data Point (FDP).
+These Python tools validate contributor files, generate committed model/catalog metadata, and assemble RDF releases.
+
+> [!NOTE]
+> These tools operate only on the GitHub repository's storage layer. They do not deploy, index, synchronize, or verify the separately operated FAIR Data Point (FDP).
 
 For a complete model submission, start with the [submission workflow guide](process-new-model-submission.md). For release artifacts and publication behavior, use the [release operator guide](generate-release-file.md). Running an individual generator does not run the whole pipeline or publish anything to GitHub.
 
