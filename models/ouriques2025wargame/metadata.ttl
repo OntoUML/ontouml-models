@@ -1,0 +1,49 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/b60d005c-b9a6-52b4-888d-db304a117625/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Wargame Ontology";
+    dct:issued "2025"^^xsd:gYear;
+    dct:modified "2025"^^xsd:gYear;
+    dcat:theme lcc:U;
+    skos:editorialNote "The submitted model comprises ontologies for wargame design characteristics, wargame elements, and the specification and design phases of the wargame design process. The models are intended as a reference for wargame design and development and as a foundation for interoperability between wargames; planning, execution, and analysis phases remain outside the current scope.";
+    dct:language "en";
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://orcid.org/0000-0002-0043-3098>,
+                    <https://orcid.org/0000-0001-8067-7123>,
+                    <https://orcid.org/0000-0002-6661-6292>,
+                    <https://orcid.org/0000-0003-3975-9076>;
+    dcat:keyword "wargame"@en,
+                 "wargame design"@en,
+                 "wargaming"@en;
+    dct:source <https://doi.org/10.1109/ACCESS.2025.3566249>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability,
+                        ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/ouriques2025wargame"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-08-31T08:40:55.961482Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-08-31T08:40:55.961482Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/b60d005c-b9a6-52b4-888d-db304a117625> dcat:distribution <https://w3id.org/ontouml-models/distribution/97e9d21b-be7b-5442-8e54-183ec21051fa/>,
+                      <https://w3id.org/ontouml-models/distribution/2b3a8439-80c5-51d4-a583-37f97b5f9872/>,
+                      <https://w3id.org/ontouml-models/distribution/b5f7408e-f83f-50ad-8e9f-9aa27d1fa23b/>,
+                      <https://w3id.org/ontouml-models/distribution/f9dc5752-b40b-5f1e-88ec-2922e0df6a83/>,
+                      <https://w3id.org/ontouml-models/distribution/dddd9e16-3176-5ffb-93ee-97bdf7196ed9/>,
+                      <https://w3id.org/ontouml-models/distribution/c201e5bf-b1c4-512f-a65a-84d6f522fe85/>,
+                      <https://w3id.org/ontouml-models/distribution/b3f72409-2acc-5109-b2bc-738d39054943/>,
+                      <https://w3id.org/ontouml-models/distribution/c94400c1-ceda-5c9c-80ee-04a1c0e307cc/>,
+                      <https://w3id.org/ontouml-models/distribution/17396462-4ef5-5311-acb7-d74c01351c49/>,
+                      <https://w3id.org/ontouml-models/distribution/87fbdd0b-9634-57ee-8d30-7d56fc20859f/>,
+                      <https://w3id.org/ontouml-models/distribution/00730025-55b3-5df3-afbf-e51e38452792/> .
