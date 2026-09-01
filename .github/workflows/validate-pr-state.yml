@@ -1,0 +1,57 @@
+name: Validate final PR state
+run-name: PR ${{ inputs.pr_number }} head ${{ inputs.head_sha }} base ${{ inputs.base_sha }} check ${{ inputs.check_id }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "PR number supplied by the trusted controller"
+        required: true
+        type: string
+      head_sha:
+        description: "Exact final PR head"
+        required: true
+        type: string
+      base_sha:
+        description: "Exact trusted master commit"
+        required: true
+        type: string
+      check_id:
+        description: "Dedicated App check run ID"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate:
+    # This job is unconditional. The trusted harness implements applicability;
+    # the reporter never treats a skipped/neutral job as successful validation.
+    name: Validate applicable final state
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out trusted harness
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          path: trusted
+          persist-credentials: false
+      - name: Check out the exact final head without credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.head_sha }}
+          path: candidate
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify immutable head, base ancestry and complete applicability
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+          HEAD_SHA: ${{ inputs.head_sha }}
+          BASE_SHA: ${{ inputs.base_sha }}
+        run: python trusted/scripts/validate_pr_state.py prepare
+      - name: Validate final data, proposed code and workflows in isolated containers
+        run: python trusted/scripts/validate_pr_state.py containers

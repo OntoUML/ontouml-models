@@ -1,22 +1,6 @@
 name: Publish models release
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "models/**"
-      - "catalog.yaml"
-      - "catalog.ttl"
-      - "scripts/requirements.txt"
-      - "scripts/generate_ontology_turtle.py"
-      - "scripts/tests/test_generate_ontology_turtle.py"
-      - "scripts/tests/fixtures/json2graph/**"
-      - "scripts/generate_catalog_file.py"
-      - "scripts/tests/test_generate_catalog_file.py"
-      - "scripts/generate_release_file.py"
-      - "scripts/tests/test_generate_release_file.py"
-      - ".github/workflows/publish-models-release.yml"
-
   schedule:
     # Daily at 03:00 UTC. Scheduled workflows run from the default branch.
     - cron: "0 3 * * *"
@@ -47,76 +31,10 @@ permissions:
   contents: read
 
 concurrency:
-  group: publish-models-release-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
+  group: publish-models-release-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  validate-release-generation:
-    name: Validate release generation
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
-    steps:
-      - name: Check out pull request
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-          persist-credentials: false
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install script dependencies
-        run: python -m pip install -r scripts/requirements.txt
-
-      - name: Run ontology Turtle generator tests
-        run: python -m pytest -q scripts/tests/test_generate_ontology_turtle.py
-
-      - name: Run catalog-generator tests
-        run: python -m pytest -q scripts/tests/test_generate_catalog_file.py
-
-      - name: Check catalog synchronization
-        run: python scripts/generate_catalog_file.py . --check
-
-      - name: Run release-generator tests
-        run: python -m pytest -q scripts/tests/test_generate_release_file.py
-
-      - name: Generate release file for validation
-        run: |
-          set -euo pipefail
-          python scripts/generate_release_file.py . \
-            --release-tag 19700101 \
-            --output-dir results \
-            --list-files
-
-      - name: Validate generated release Turtle
-        run: |
-          set -euo pipefail
-          test -s results/ontouml-models-19700101.ttl
-          python - <<'PY'
-          from pathlib import Path
-
-          from rdflib import Graph
-
-          path = Path("results/ontouml-models-19700101.ttl")
-
-          graph = Graph()
-          graph.parse(path, format="turtle")
-          print(f"Parsed release graph with {len(graph)} triples.")
-          PY
-
-      - name: Upload validation artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ontouml-models-release-pr-${{ github.event.pull_request.number }}
-          path: results/ontouml-models-19700101.ttl
-          if-no-files-found: error
-          retention-days: 30
-
   generate-and-publish-release:
     name: Generate and publish release
     if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
@@ -145,58 +63,15 @@ jobs:
       - name: Run release-generator tests
         run: python -m pytest -q scripts/tests/test_generate_release_file.py
 
-      - name: Synchronize catalog metadata
+      - name: Check catalog synchronization
         id: catalog
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          INPUT_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
-          INPUT_PUBLISH_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_release || 'false' }}
         run: |
           set -euo pipefail
-
-          python scripts/generate_catalog_file.py .
-
-          catalog_changed="false"
-          if ! git diff --quiet -- catalog.ttl; then
-            catalog_changed="true"
-          fi
-
-          should_commit="false"
-          if [ "$EVENT_NAME" = "schedule" ]; then
-            should_commit="true"
-          elif [ "$EVENT_NAME" = "workflow_dispatch" ] &&
-               [ "$INPUT_DRY_RUN" != "true" ] &&
-               [ "$INPUT_PUBLISH_RELEASE" = "true" ]; then
-            should_commit="true"
-          fi
-
-          if [ "$catalog_changed" = "true" ] && [ "$should_commit" = "true" ]; then
-            if [ "$GITHUB_REF" != "refs/heads/master" ]; then
-              echo "Publishing releases and committing catalog synchronization are only allowed from refs/heads/master; current ref is $GITHUB_REF." >&2
-              exit 1
-            fi
-
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -- catalog.ttl
-            git commit -m "chore(catalog): synchronize catalog metadata"
-
-            if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
-              echo "Could not push the synchronized catalog.ttl to ${GITHUB_REF_NAME}." >&2
-              echo "No release was published. Check branch rules or concurrent updates, then rerun the workflow." >&2
-              exit 1
-            fi
-          fi
-
-          final_release_sha="$(git rev-parse HEAD)"
-          {
-            echo "catalog_changed=$catalog_changed"
-            echo "final_release_sha=$final_release_sha"
-          } >> "$GITHUB_OUTPUT"
-
-          echo "Catalog changed: $catalog_changed"
-          echo "Catalog synchronization committed: $([ "$catalog_changed" = "true" ] && [ "$should_commit" = "true" ] && echo true || echo false)"
-          echo "Final release commit: $final_release_sha"
+          # PR validation establishes the complete catalog before merge.
+          # Publishing must not bypass the required check by pushing to master.
+          python scripts/generate_catalog_file.py . --check
+          echo "catalog_changed=false" >> "$GITHUB_OUTPUT"
+          echo "final_release_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Resolve release settings
         id: settings
