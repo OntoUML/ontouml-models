@@ -1,0 +1,227 @@
+name: Orchestrate PR validation
+
+on:
+  pull_request_target:
+    branches: [master]
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Open PR number to process or recover"
+        required: true
+        type: string
+  workflow_run:
+    workflows: [Validate final PR state]
+    types: [completed]
+
+permissions: {}
+
+# Serialize writeback per PR. Reporters have separate groups and verify both
+# the current head and the newest App check before publishing a result.
+concurrency:
+  group: pr-automation-${{ github.event.pull_request.number || inputs.pr_number || format('report-{0}', github.event.workflow_run.id) }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Classify PR and block merge
+    if: ${{ github.event_name != 'workflow_run' && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    environment: pr-automation
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      plan: ${{ steps.prepare.outputs.plan }}
+      head: ${{ steps.prepare.outputs.head }}
+      base: ${{ steps.prepare.outputs.base }}
+      check_id: ${{ steps.prepare.outputs.check_id }}
+      generate: ${{ steps.prepare.outputs.generate }}
+      fork: ${{ steps.prepare.outputs.fork }}
+      owner: ${{ steps.prepare.outputs.owner }}
+      repository: ${{ steps.prepare.outputs.repository }}
+      skip: ${{ steps.prepare.outputs.skip }}
+    steps:
+      - name: Check out trusted base only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/heads/master
+          persist-credentials: false
+      - name: Mint scoped check token
+        id: app
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PR_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PR_AUTOMATION_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-checks: write
+      - name: Classify complete PR diff and create pending gate
+        id: prepare
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_TOKEN: ${{ steps.app.outputs.token }}
+          APP_ID: ${{ vars.PR_AUTOMATION_APP_ID }}
+          APP_SLUG: ${{ steps.app.outputs.app-slug }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+        run: python scripts/pr_automation.py prepare
+
+  generate:
+    name: Process applicable model or catalog changes
+    needs: prepare
+    if: ${{ needs.prepare.outputs.skip != 'true' && needs.prepare.outputs.generate == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    outputs:
+      changed: ${{ steps.generate.outputs.changed }}
+    steps:
+      - name: Check out trusted generators
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.prepare.outputs.base }}
+          path: trusted
+          persist-credentials: false
+      - name: Check out contributor data without credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.prepare.outputs.head }}
+          path: candidate
+          persist-credentials: false
+          # Only regular models/catalog DATA is exported. No PR code executes.
+          allow-unsafe-pr-checkout: true
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.11"
+      - name: Install trusted generator dependencies
+        run: python -m pip install -r trusted/scripts/requirements.txt
+      - name: Generate using trusted scripts and emit an allowlisted bundle
+        id: generate
+        env:
+          PLAN: ${{ needs.prepare.outputs.plan }}
+        run: python trusted/scripts/pr_automation.py generate
+      - name: Retain this run's generated bundle
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: generated-${{ github.run_id }}-${{ github.run_attempt }}
+          path: generated.json
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    name: Commit generated state and dispatch final validation
+    needs: [prepare, generate]
+    if: >-
+      ${{ always() && needs.prepare.result == 'success' && needs.prepare.outputs.skip != 'true' &&
+          (needs.generate.result == 'success' ||
+           (needs.prepare.outputs.generate != 'true' && needs.generate.result == 'skipped')) }}
+    runs-on: ubuntu-latest
+    environment: pr-automation
+    permissions:
+      contents: write
+      pull-requests: read
+      actions: write
+    steps:
+      - name: Check out trusted controller only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.prepare.outputs.base }}
+          persist-credentials: false
+      - name: Download only this run and attempt's bundle
+        if: ${{ needs.prepare.outputs.generate == 'true' }}
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: generated-${{ github.run_id }}-${{ github.run_attempt }}
+          path: bundle
+      - name: Mint scoped check token
+        id: app
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PR_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PR_AUTOMATION_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-checks: write
+      - name: Mint fork write token only for actual generated changes
+        if: ${{ needs.prepare.outputs.fork == 'true' && needs.generate.outputs.changed == 'true' }}
+        id: fork
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PR_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PR_AUTOMATION_APP_PRIVATE_KEY }}
+          owner: ${{ needs.prepare.outputs.owner }}
+          repositories: ${{ needs.prepare.outputs.repository }}
+          permission-contents: write
+      - name: Atomically write back and dispatch exact final head
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_TOKEN: ${{ steps.app.outputs.token }}
+          WRITE_TOKEN: ${{ steps.fork.outputs.token }}
+          PLAN: ${{ needs.prepare.outputs.plan }}
+          CHECK_ID: ${{ needs.prepare.outputs.check_id }}
+        run: python scripts/pr_automation.py publish
+
+  failure:
+    name: Block merge when required processing fails
+    needs: [prepare, generate, publish]
+    if: >-
+      ${{ always() && needs.prepare.result == 'success' && needs.prepare.outputs.check_id != '' &&
+          needs.prepare.outputs.skip != 'true' && needs.publish.result != 'success' }}
+    runs-on: ubuntu-latest
+    environment: pr-automation
+    permissions:
+      contents: read
+    steps:
+      - name: Check out trusted controller only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/heads/master
+          persist-credentials: false
+      - name: Mint scoped check token
+        id: app
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PR_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PR_AUTOMATION_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-checks: write
+      - name: Fail the processing gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_TOKEN: ${{ steps.app.outputs.token }}
+          CHECK_ID: ${{ needs.prepare.outputs.check_id }}
+        run: python scripts/pr_automation.py fail
+
+  report:
+    name: Report current final-head validation
+    if: ${{ github.event_name == 'workflow_run' && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    environment: pr-automation
+    permissions:
+      contents: read
+      pull-requests: read
+      actions: read
+    steps:
+      - name: Check out trusted reporter only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: refs/heads/master
+          persist-credentials: false
+      - name: Mint scoped check token
+        id: app
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PR_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PR_AUTOMATION_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-checks: write
+      - name: Verify run identity, attempt, job result and live PR head
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_TOKEN: ${{ steps.app.outputs.token }}
+          APP_ID: ${{ vars.PR_AUTOMATION_APP_ID }}
+        run: python scripts/pr_automation.py report

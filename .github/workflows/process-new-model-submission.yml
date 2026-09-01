@@ -38,10 +38,8 @@ on:
         default: true
         type: boolean
 
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "models/**"
+  # Automatic PR processing is owned by pr-validation.yml.
+  # This workflow retains its existing manual maintenance interface.
 
 permissions:
   contents: read

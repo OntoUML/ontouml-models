@@ -6,7 +6,9 @@ This document describes the automation for processing a single OntoUML/UFO Catal
 
 The workflow is implemented by:
 
-- `.github/workflows/process-new-model-submission.yml`
+- `.github/workflows/pr-validation.yml` (automatic PR controller)
+- `.github/workflows/validate-pr-state.yml` (final-head validation)
+- `.github/workflows/process-new-model-submission.yml` (manual maintenance only)
 - `scripts/process_new_model_submission.py`
 
 It also expects the repository's validation/generation scripts to be available, including:
@@ -23,66 +25,23 @@ It also expects the repository's validation/generation scripts to be available, 
 
 The helper script is intentionally an orchestrator. It does not duplicate conversion, metadata-generation, or BibTeX-validation logic. It validates/fixes `metadata.yaml`, validates the submission envelope, classifies changed model paths, runs the ontology and metadata generators in the intended order, and performs final Turtle/RDF checks.
 
-## Supported submission mode
+## Automatic processing and merge eligibility
 
-Automatic model-submission processing supports **pull requests opened from branches inside the catalog repository**.
+All PRs to `master` enter the [PR validation controller](pr-validation.md). It classifies the complete changed-file list and runs only applicable processing and validation. Documentation and script-only PRs do not invoke model-submission generation. Mixed changes receive the union of applicable checks.
 
-The intended flow is:
+For a one-model submission, automation validates the source files, generates `ontology.ttl`, synchronizes distribution/model metadata and `catalog.ttl`, and commits changed generated files to the PR branch. It then explicitly dispatches validation of that exact final head. The App-owned `PR validation` check succeeds only after final-state validation succeeds. The required repository ruleset, not a maintainer's memory of workflow progress, blocks an incomplete submission.
 
-1. A trusted contributor creates a branch in `OntoUML/ontouml-models` and adds the source files for one model folder, without `ontology.ttl`.
-2. The contributor opens a PR to `master`.
-3. The workflow validates the sources, generates `ontology.ttl`, synchronizes distribution/model metadata and `catalog.ttl`, and commits changed files back to the PR branch.
-4. The generated files and release validation results are reviewed before a curator merges the complete PR manually.
-
-**Fork-based PR writeback is not supported.** If a PR is opened from a fork, the submission workflow fails with an explicit message explaining the same-repository restriction. Contributors without branch access should use the contribution form linked in the [README](../README.md#contribute-by-submitting-an-ontology) or contact a catalog administrator.
-
-## Triggers
-
-The workflow supports two triggers.
-
-### Automatic same-repository pull request trigger
-
-```yaml
-on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "models/**"
-```
-
-For normal one-model PRs, the workflow:
-
-1. rejects fork-based PRs;
-2. detects the unique changed model folder under `models/`;
-3. rejects PRs that modify files outside the target model folder, except generated root `catalog.ttl`;
-4. processes that model folder;
-5. commits generated files back to the PR branch when changes exist.
+Same-repository writeback uses `GITHUB_TOKEN`. Fork writeback uses a narrowly scoped GitHub App installation token, which requires the fork owner to install the catalog automation App on that fork. A fork PR without applicable generation needs no fork write permission. Missing write authorization blocks generation explicitly; it does not silently accept missing outputs or require contributors to generate them manually. See the [setup and trust boundary](pr-validation.md#external-repository-configuration).
 
 ### Generated-artifact-only bulk maintenance
 
-A same-repository PR touching more than one model folder is accepted only when every changed model file is directly inside `models/<slug>/` and is one of:
+The existing bulk mode remains: more than one model folder is supported only when every changed model file is a direct automation-generated output: `ontology.ttl`, `metadata.ttl`, `metadata-json.ttl`, `metadata-turtle.ttl`, `metadata-vpp.ttl`, or `metadata-png-(n|o)-*.ttl`. Deletions are not bulk maintenance. This mode checks all six generator families and final RDF/catalog/release consistency without writeback. Multiple model source submissions must be split into separate PRs. A one-model generated-file change still invokes normal processing.
 
-- `ontology.ttl`;
-- `metadata.ttl`;
-- `metadata-turtle.ttl`.
+### Manual maintenance
 
-Generated root `catalog.ttl` may also change. This selects `bulk-generated` mode: a read-only job checks full-catalog ontology and dependent metadata synchronization, parses model Turtle files, and verifies that validation did not modify the checkout. It does not generate a bot commit.
+`Process new model submission` retains its `workflow_dispatch` interface and inputs: `model_path`, `metadata_timestamp`, `metadata_repository`, `metadata_branch`, `allow_missing_license`, `dry_run`, and `commit_changes`. It no longer has an automatic PR trigger. Use it only on a branch whose workflow, scripts and dependencies a maintainer already trusts. Do not dispatch it on unreviewed PR code: its existing commit mode has write credentials.
 
-This narrowly scoped migration/maintenance mode does not allow multi-model contributor-source submissions or unrelated code/workflow changes. A PR touching only one model folder still uses normal processing, even if its changes are generated files only.
-
-### Manual trigger
-
-The manual `workflow_dispatch` trigger remains available for controlled testing, recovery, and fork-side experimentation.
-
-Manual inputs include:
-
-- `model_path`
-- `metadata_timestamp`
-- `metadata_repository`
-- `metadata_branch`
-- `allow_missing_license`
-- `dry_run`
-- `commit_changes`
+For automatic PR recovery, dispatch `Orchestrate PR validation` on `master` with the PR number, as documented in the [recovery instructions](pr-validation.md#recovery). Manual maintenance is not a substitute for the required final-head check and cannot bypass the protected `master` ruleset.
 
 ## Required source files
 
@@ -256,53 +215,15 @@ For PR-ready metadata intended for the main repository, keep the default:
 --branch master
 ```
 
-## Testing in GitHub Actions in the fork
+## Testing in GitHub Actions
 
-1. Ensure the workflow, helper, and pinned dependencies are committed and pushed to the branch being tested in `pedropaulofb/ontouml-models-dev`.
-2. Create a separate temporary test branch from that branch inside the fork repository.
-3. Add one model folder with the required source files and no `ontology.ttl` or generated metadata.
-4. Open a test PR back to the implementation branch in the same fork repository, not to the upstream catalog. Keep workflow/helper changes out of the test PR's diff.
-5. Confirm that the workflow creates and commits `ontology.ttl`, distribution/model metadata, and the catalog update.
-6. Inspect the generated commit and release validation. If GitHub requests approval for a follow-up run, a maintainer must approve it before its results can be assessed.
-7. Confirm that processing the bot-updated head reports `No generated changes to commit.` and creates no further commit.
-8. Close the temporary test PR without merging it; keep smoke-test data out of the implementation branch.
-
-To test the same workflow manually, use **Actions** → **Process new model submission** → **Run workflow**.
+Use the [eight-scenario integration matrix](pr-validation.md#live-github-regression-matrix) in an isolated test repository whose default branch contains the complete implementation. Test source-only submissions, failed generation, failed final validation, documentation, script changes, new heads, bot updates, and bulk distribution-metadata maintenance. Confirm merge denial while the required check is pending or failing, not just the workflow conclusion.
 
 ## Automatic commits
 
-For normal same-repository PRs, the workflow automatically commits `ontology.ttl`, generated metadata, and any normalized source YAML back to the PR branch after validation, generation, and catalog synchronization succeed. The read-only bulk-maintenance job never writes back.
+The controller writes only allowlisted generated files, permitted `metadata.yaml` normalization, and `catalog.ttl`. An atomic commit operation requires the PR branch still to have the expected source SHA; concurrent contributor updates are never overwritten. A no-op generation creates no commit. The final validation dispatch uses the resulting SHA whether or not a commit was necessary.
 
-For manual runs, commits occur only when `commit_changes` is `true` and `dry_run` is `false`.
-
-The workflow:
-
-1. runs all validation and generation steps;
-2. stops immediately if any step fails;
-3. stages only the requested model folder (including normalized `metadata.yaml`) and generated root catalog with this GitHub Actions Bash excerpt, not a local Cmder command:
-
-   ```bash
-   git add -- "$MODEL_PATH" catalog.ttl
-   ```
-
-4. commits only when staged changes exist;
-5. pushes the commit to the PR branch or, for manual runs, to the checked-out branch.
-
-A synchronized rerun leaves the generated files unchanged and logs `No generated changes to commit.`. Converter warnings alone do not cause a commit. Workflow results must be checked on the bot-updated PR head; pending approval is not a successful validation.
-
-The commit message has this form:
-
-```text
-chore(metadata): process model submission example-model
-```
-
-The normal processing job requires:
-
-```yaml
-permissions:
-  contents: write
-  pull-requests: read
-```
+For legacy manual runs, commits still occur only when `commit_changes` is `true` and `dry_run` is `false`. Review the local/manual diff before committing after any failure. Required PR validation must still pass on the resulting head before merge.
 
 ## Failure behavior
 
@@ -317,19 +238,12 @@ Malformed JSON, a fatal converter error, or an invalid generated graph stops pro
 
 Diagnostics are reported in GitHub check results and grouped workflow logs, not posted as PR comments. Review warnings separately from fatal errors; warnings do not by themselves make generation fail.
 
-For pull requests, the workflow also fails when:
-
-- the PR comes from a fork;
-- files outside the permitted model folder(s) and generated root `catalog.ttl` are changed;
-- multiple model folders are changed without satisfying the generated-artifact-only bulk-maintenance rules;
-- changed paths under `models/` are not inside a direct model folder.
+For pull requests, the required check also blocks when generation/writeback is unauthorized, the complete changed-file list cannot be obtained, multi-model source changes violate the existing boundary, final artifacts are absent or stale, or the head/base changes during processing or validation. It never treats an irrelevant workflow's absence as failure. See [PR validation](pr-validation.md) for the exact state transitions and recovery procedure.
 
 ## Current limitations
 
-- Automatic write-back is limited to same-repository PR branches.
-- Fork-based PR automation is intentionally deferred.
 - Normal submission processing and manual runs handle one model folder; multi-model generated-only maintenance is read-only.
-- `references.bib` is optional and is validated only when present; the workflow does not pass `--require` to `scripts/validate_references_bib.py`.
-- `references.bib` receives structural BibTeX/BibLaTeX validation only, not semantic validation of mandatory fields per entry type.
-- `ontology.vpp` is checked at file level only; no Visual Paradigm parser is introduced.
-- VPP-to-JSON export and synchronization are the contributor's responsibility.
+- Fork writeback requires an explicitly authorized App installation on the fork; no write-capable credential is exposed to contributor code.
+- Generation uses trusted base-branch tools. Land generator changes first if a new submission requires behavior unavailable on `master`.
+- `references.bib` is optional and receives structural BibTeX/BibLaTeX validation, not semantic validation of mandatory fields per entry type.
+- The existing submission envelope requires `ontology.vpp`; it is checked at file level only. VPP-to-JSON export and synchronization remain the contributor's responsibility.
