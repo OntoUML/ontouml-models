@@ -43,7 +43,7 @@ class FakeAPI:
         self.events, self.check_store = [], {}
         self.check_counter, self.run_data = 1000, {}
         self.job = {"name": automation.VALIDATION_JOB, "status": "completed", "conclusion": "success"}
-        self.reject_commit = False
+        self.reject_commit = self.reject_dispatch = False
 
     def pr(self, number):
         return automation.GitHub.pr(self, number)
@@ -83,6 +83,8 @@ class FakeAPI:
         if path.startswith("actions/runs/"):
             return copy.deepcopy(self.run_data)
         if method == "POST" and path.endswith("/dispatches"):
+            if self.reject_dispatch:
+                raise automation.AutomationError("Dispatch rejected")
             return None
         raise AssertionError((method, path, body))
 
@@ -245,7 +247,7 @@ def test_invalid_bundles_fail_closed(change):
 def test_new_model_writeback_precedes_dispatch_of_bot_head():
     api, plan = FakeAPI(), plan_for("models/new/ontology.json")
     first = start(api, plan)
-    assert automation.publish(api, api, api, plan, first, bundle_for(plan)) == FINAL
+    assert automation.publish(api, api, api, api, plan, first, bundle_for(plan)) == FINAL
     commit = next(i for i, event in enumerate(api.events) if event[1] == "/graphql")
     dispatch = next(i for i, event in enumerate(api.events) if event[1].endswith("/dispatches"))
     assert commit < dispatch
@@ -259,16 +261,34 @@ def test_new_model_writeback_precedes_dispatch_of_bot_head():
 
 def test_documentation_dispatches_validation_without_generation_or_writeback():
     api, plan = FakeAPI(), plan_for("README.md")
-    automation.publish(api, api, api, plan, start(api, plan))
+    automation.publish(api, api, api, api, plan, start(api, plan))
     assert not any(event[1] == "/graphql" for event in api.events)
     assert any(event[1].endswith("/dispatches") for event in api.events)
     assert len(api.check_store) == 1
     assert list(api.check_store.values())[0]["status"] == "in_progress"
 
 
+def test_validation_dispatch_uses_dedicated_app_client():
+    api, dispatcher, plan = FakeAPI(), FakeAPI(), plan_for("README.md")
+    automation.publish(api, api, api, dispatcher, plan, start(api, plan))
+    assert not any(event[1].endswith("/dispatches") for event in api.events)
+    dispatches = [event for event in dispatcher.events if event[1].endswith("/dispatches")]
+    assert len(dispatches) == 1
+    assert dispatches[0][2]["ref"] == automation.BASE_BRANCH
+
+
+def test_validation_dispatch_failure_closes_gate():
+    api, dispatcher, plan = FakeAPI(), FakeAPI(), plan_for("README.md")
+    dispatcher.reject_dispatch = True
+    check_id = start(api, plan)
+    with pytest.raises(automation.AutomationError, match="Dispatch rejected"):
+        automation.publish(api, api, api, dispatcher, plan, check_id)
+    assert api.check_store[check_id]["conclusion"] == "failure"
+
+
 def test_noop_generation_does_not_create_recursive_commits():
     api, plan = FakeAPI(), plan_for("models/new/ontology.json")
-    automation.publish(api, api, api, plan, start(api, plan), dict(bundle_for(plan), additions=[]))
+    automation.publish(api, api, api, api, plan, start(api, plan), dict(bundle_for(plan), additions=[]))
     assert not any(event[1] == "/graphql" for event in api.events)
 
 
@@ -277,7 +297,7 @@ def test_atomic_writeback_rejects_concurrent_human_commit():
     api.reject_commit = True
     check_id = start(api, plan)
     with pytest.raises(automation.AutomationError, match="Atomic"):
-        automation.publish(api, api, api, plan, check_id, bundle_for(plan))
+        automation.publish(api, api, api, api, plan, check_id, bundle_for(plan))
     assert api.check_store[check_id]["conclusion"] == "failure"
     assert not any(event[1].endswith("/dispatches") for event in api.events)
 
@@ -291,7 +311,7 @@ def test_stale_or_closed_pr_cannot_publish(mutation):
     else:
         api.pr_data[mutation]["sha"] = FINAL
     with pytest.raises(automation.AutomationError):
-        automation.publish(api, api, api, plan, check_id)
+        automation.publish(api, api, api, api, plan, check_id)
     assert api.check_store[check_id]["conclusion"] == "failure"
 
 
@@ -526,6 +546,15 @@ def test_workflow_dependencies_and_trust_boundaries():
     assert "always()" in jobs["publish"]["if"] and "needs.generate.result == 'success'" in jobs["publish"]["if"]
     assert jobs["generate"]["permissions"] == {"contents": "read"}
     assert "environment" not in jobs["generate"]
+    assert jobs["publish"]["permissions"] == {"contents": "write", "pull-requests": "read"}
+    publish_steps = {step.get("id"): step for step in jobs["publish"]["steps"] if step.get("id")}
+    assert publish_steps["app"]["with"]["permission-checks"] == "write"
+    assert "permission-actions" not in publish_steps["app"]["with"]
+    assert publish_steps["dispatch"]["with"]["permission-actions"] == "write"
+    assert "permission-checks" not in publish_steps["dispatch"]["with"]
+    publish_command = next(step for step in jobs["publish"]["steps"]
+                           if step.get("run") == "python scripts/pr_automation.py publish")
+    assert publish_command["env"]["DISPATCH_TOKEN"] == "${{ steps.dispatch.outputs.token }}"
     for name in ("prepare", "publish", "failure", "report"):
         assert jobs[name]["environment"] == "pr-automation"
         for step in jobs[name]["steps"]:

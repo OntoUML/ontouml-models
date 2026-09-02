@@ -122,7 +122,6 @@ jobs:
     permissions:
       contents: write
       pull-requests: read
-      actions: write
     steps:
       - name: Check out trusted controller only
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -144,6 +143,15 @@ jobs:
           owner: ${{ github.repository_owner }}
           repositories: ${{ github.event.repository.name }}
           permission-checks: write
+      - name: Mint scoped validation-dispatch token
+        id: dispatch
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.PR_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.PR_AUTOMATION_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-actions: write
       - name: Mint fork write token only for actual generated changes
         if: ${{ needs.prepare.outputs.fork == 'true' && needs.generate.outputs.changed == 'true' }}
         id: fork
@@ -158,6 +166,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           CHECK_TOKEN: ${{ steps.app.outputs.token }}
+          DISPATCH_TOKEN: ${{ steps.dispatch.outputs.token }}
           WRITE_TOKEN: ${{ steps.fork.outputs.token }}
           PLAN: ${{ needs.prepare.outputs.plan }}
           CHECK_ID: ${{ needs.prepare.outputs.check_id }}
