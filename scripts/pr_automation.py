@@ -360,7 +360,7 @@ def create_commit(write_api, plan, additions):
     return head
 
 
-def publish(read_api, checks_api, write_api, plan, check_id, bundle=None):
+def publish(read_api, checks_api, write_api, dispatch_api, plan, check_id, bundle=None):
     active_check = check_id
     try:
         same_state(read_api.pr(plan["pr"]), plan)
@@ -374,7 +374,7 @@ def publish(read_api, checks_api, write_api, plan, check_id, bundle=None):
         else:
             active_check = checks_api.start_check(final, "validation")
             checks_api.finish_check(check_id, False, f"Processing complete; superseded by final-head check #{active_check} on `{final['head']}`.")
-        read_api.api("POST", f"actions/workflows/{VALIDATION_WORKFLOW}/dispatches", {
+        dispatch_api.api("POST", f"actions/workflows/{VALIDATION_WORKFLOW}/dispatches", {
             "ref": BASE_BRANCH, "inputs": {"pr_number": str(plan["pr"]), "head_sha": final["head"],
                                            "base_sha": final["base"], "check_id": str(active_check)}})
         print(f"Final validation dispatched for PR #{plan['pr']} at {final['head']}; check {active_check}")
@@ -450,7 +450,8 @@ def main():
         plan = json.loads(os.environ["PLAN"])
         bundle = json.loads(Path("bundle/generated.json").read_text()) if plan["generate"] else None
         write_api = GitHub(plan["head_repo"], os.environ.get("WRITE_TOKEN") or os.environ["GH_TOKEN"])
-        publish(read_api, checks_api, write_api, plan, int(os.environ["CHECK_ID"]), bundle)
+        dispatch_api = GitHub(read_api.repo, os.environ["DISPATCH_TOKEN"])
+        publish(read_api, checks_api, write_api, dispatch_api, plan, int(os.environ["CHECK_ID"]), bundle)
     elif args.operation == "fail":
         checks_api.finish_check(int(os.environ["CHECK_ID"]), False, "Required processing failed or was cancelled; inspect the controller run.")
     else:
