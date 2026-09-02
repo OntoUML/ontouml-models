@@ -19,10 +19,11 @@ classification. Missing, inconsistent or over-3,000-file API results fail closed
    Commit only if changes exist, using GraphQL `createCommitOnBranch` with
    `expectedHeadOid`. A concurrent contributor update rejects the commit.
 4. Advance the pending check to final validation (or create one on the new SHA
-   after writeback) and explicitly dispatch
-   `validate-pr-state.yml` from `master`, with the PR number, head, base and check
-   ID. When the head changes, mark the old-head processing check as superseded,
-   never successful. An unchanged head keeps its single pending check.
+   after writeback) and explicitly dispatch, using a dedicated App token scoped
+   only to **Actions: write**, `validate-pr-state.yml` from `master`, with the PR
+   number, head, base and check ID. When the head changes, mark the old-head
+   processing check as superseded, never successful. An unchanged head keeps its
+   single pending check.
 5. Validate the immutable final checkout. Check that its head/base still match
    the PR and that the current base is an ancestor. The trusted harness runs
    applicable data checks, candidate tests and workflow lint in isolated
@@ -79,10 +80,12 @@ remain unchanged.
   normalization and root catalog output. It cannot write PR workflow files,
   scripts, JSON/VPP sources or unrelated model folders.
 - Final validation is explicitly dispatched from the default branch with a
-  read-only token and no environment/App secret. Candidate code and dependency
-  installation run in a separate disposable Docker container from trusted data
-  validation. Containers have read-only source mounts, a non-root user, dropped
-  capabilities, no added privileges, and temporary writable storage. They do
+  dedicated App token scoped only to **Actions: write**. The dispatched workflow
+  itself has a read-only `GITHUB_TOKEN` and no environment/App secret. Candidate
+  code and dependency installation run in a separate disposable Docker container
+  from trusted data validation. Containers have read-only source mounts, a
+  non-root user, dropped capabilities, no added privileges, and temporary
+  writable storage. They do
   not receive host environment variables, tokens, credentials, caches, runtime
   artifact credentials, host `.git`, or the Docker socket. Public dependency
   downloads require network access; workflow lint has no network access.
@@ -122,8 +125,10 @@ Same-repository generated commits use `GITHUB_TOKEN`. Current GitHub behavior
 creates approval-required `pull_request` runs for token-generated
 opened/synchronize/reopened events; ordinary token-generated `push` events do
 not recursively start workflows. This implementation removes the old automatic
-PR consumers and uses the documented `workflow_dispatch` exception explicitly.
-It never depends on a token-generated event starting follow-up validation.
+PR consumers. It uses a dedicated App token for the explicit `workflow_dispatch`
+so the validator's completion can emit the `workflow_run` that starts the
+reporter. It never depends on a `GITHUB_TOKEN`-generated event starting follow-up
+validation.
 
 Fork App writeback can emit a new PR event. Per-PR controller concurrency
 serializes it after writeback; an authenticated matching App actor with a
@@ -153,13 +158,17 @@ activate an incomplete setup on a busy repository. No setting is changed by
 these files or by local tests.
 
 1. Create a dedicated GitHub App (for example `ontouml-pr-validation`) with
-   repository **Checks: read and write**, **Commit statuses: read and write**,
-   **Contents: read and write**, and implicit **Metadata: read**. No webhook
-   subscriptions or organization/user permissions are needed. Permit
-   installation by other accounts if fork
-   writeback is offered. Install it on the selected catalog repository. Fork
+   repository **Actions: read and write**, **Checks: read and write**,
+   **Commit statuses: read and write**, **Contents: read and write**, and implicit
+   **Metadata: read**. The controller mints separate tokens for check updates,
+   validation dispatch and writeback, each restricted to its one required
+   permission. No webhook subscriptions or organization/user permissions are
+   needed. Permit installation by other accounts if fork writeback is offered.
+   Install it on the selected catalog repository. Fork
    owners separately authorize installation on their selected fork; enabling
    Actions write tokens/secrets for fork PRs is neither needed nor permitted.
+   When adding **Actions** to an existing App, approve the updated installation
+   permission before running the smoke test.
 2. Create environment **`pr-automation`** in repository Settings → Environments.
    Select **Selected branches and tags** and add exactly one **Branch** rule:
    **`master`**. Add no tag rule, wildcard or PR merge-ref rule. Do not use
@@ -243,11 +252,27 @@ source submissions. The classifier accepts exactly those generated families
 without invoking model generation; final validation checks the corresponding
 six generators. Deletions and unrecognized metadata names still fail closed.
 
+## Regression evidence: PR #364
+
+The documentation-only [smoke PR](https://github.com/OntoUML/ontouml-models/pull/364)
+confirmed classification, skipped model generation and successful final-state
+validation on head `765d3eec2a397a9bd9f5f857b0319e2fd500a5db`. Controller run
+[`33564600951`](https://github.com/OntoUML/ontouml-models/actions/runs/33564600951)
+dispatched successful validator run
+[`33564741071`](https://github.com/OntoUML/ontouml-models/actions/runs/33564741071)
+with `GITHUB_TOKEN`, but no `workflow_run` reporter started and App check
+`100044997788` remained pending. This is consistent with GitHub's recursion rule:
+apart from `workflow_dispatch` and `repository_dispatch`, events caused by
+`GITHUB_TOKEN` do not create workflow runs. The controller now dispatches with
+the dedicated App's Actions-only token so validator completion can start the
+independent reporter. A new live smoke run must confirm hosted event delivery
+before the App check is made required.
+
 ## Local validation and limits
 
 `scripts/tests/test_pr_automation.py` covers classification, renames/pagination,
 unsafe paths, PR #360 bulk metadata, missing outputs, generation failure,
-atomic writeback ordering,
+atomic writeback ordering, dedicated App dispatch,
 no-op generation, stale head/base/attempts/checks, result/source spoofing,
 documentation/script cases, and workflow/container boundaries. Existing
 generator tests continue to cover source conversion and metadata behavior.
