@@ -94,7 +94,7 @@ The BibTeX/BibLaTeX validator checks structural compliance, including UTF-8 enco
 
 The existing PNG generator still performs its own PNG validation during generation.
 
-These checks do not run a JSON Schema or SHACL validation engine, parse the Visual Paradigm project, or prove that the native project and JSON have the same semantics. Converter warnings can describe omitted information even when processing succeeds. Curator review remains necessary; successful parsing and synchronization are not a semantic-quality guarantee.
+These checks do not run a JSON Schema validator or the [archived SHACL shapes](../shapes/), parse the Visual Paradigm project, or prove that the native project and JSON have the same semantics. Converter warnings can describe omitted information even when processing succeeds. Curator review remains necessary; successful parsing and synchronization are not a semantic-quality guarantee.
 
 ## Processing order
 
