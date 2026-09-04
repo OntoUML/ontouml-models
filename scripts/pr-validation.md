@@ -52,7 +52,7 @@ No generator semantics, model metadata or dependencies were changed.
 | Multi-model generated-only maintenance | None | All six ontology/distribution/model-metadata generator checks, RDF and catalog/release validation |
 | `catalog.yaml` | Catalog synchronization | No-drift catalog generation, catalog/release checks |
 | `catalog.ttl` only | None | Catalog/release checks |
-| `shapes/**` | None | Parse changed Turtle shapes |
+| Archived SHACL files under `shapes/**` | None | Parse changed Turtle shape files |
 | Mixed changes | Union of applicable processing | Union of applicable validations |
 
 The existing bulk boundary permits only direct automation-generated output

@@ -62,8 +62,6 @@ The native project is created or reconstructed in [Visual Paradigm](https://www.
 
 Generated metadata can preserve existing RDF identities, curated fields, and dates; regenerating it is not simply converting YAML from scratch. The [technical input/output map](documentation/technical-overview.md#inputs-and-generated-outputs) explains dependencies and the difference between a model, a distribution, and its metadata.
 
-The [shapes/](shapes/) directory stores SHACL constraints for resource, dataset, catalog, semantic-artefact, and distribution metadata. Current repository workflows do **not** run a SHACL validation engine; see [what validation establishes](documentation/technical-overview.md#what-validation-establishes).
-
 ### Catalog Releases
 
 Repository releases use date tags in `YYYYMMDD` form. Each attached `ontouml-models-YYYYMMDD.ttl` asset aggregates eligible model and metadata RDF; it is **not an archive of native projects, JSON, images, or bibliographies**. Use the release's **Source code (zip)** or **Source code (tar.gz)** for the complete tracked snapshot. See [download instructions and a pinned example](documentation/using-models.md#download-a-file-or-a-snapshot), [GitHub Releases](https://github.com/OntoUML/ontouml-models/releases), and the [release operator guide](scripts/generate-release-file.md).
@@ -86,10 +84,13 @@ RDF represents model content as a graph; Turtle is the text syntax used for the 
 
 ### Metadata
 
-![Metadata overview showing a catalog, model datasets, their file distributions, and descriptive links. The technical overview explains the relationships and known constraint differences.](documentation/metadata-schema.png)
+![Metadata overview showing the catalog, semantic artefacts, their file distributions, and the intended metadata relationships.](documentation/metadata-schema.png)
 
-> [!NOTE]
-> This image is a conceptual overview, not the current normative validation specification. A [text explanation and constraint comparison](documentation/technical-overview.md#reading-the-metadata-overview-figure) documents differences from the stored shapes and the separate YAML authoring rules.
+> [!IMPORTANT]
+> The diagram and its [editable Visual Paradigm source](documentation/metadata-schema.vpp) describe the intended metadata structure. The repository's Python validators and generators are authoritative for currently implemented behavior.
+
+> [!WARNING]
+> The diagram requires `ocmv:ontologyType` on a semantic artefact with cardinality `1..3`, but the current Python validator does not yet enforce the minimum of one value. This known misalignment is tracked in [issue #362](https://github.com/OntoUML/ontouml-models/issues/362).
 
 Catalog metadata reuses classes and properties from the following RDF/OWL vocabularies:
 
@@ -134,7 +135,6 @@ Persistent entry points are listed below. A stable URL is not necessarily an imm
 | Latest catalog release | [Latest release](https://w3id.org/ontouml-models/release) |
 | Specific catalog release | `https://w3id.org/ontouml-models/release/<release_tag>` — substitute a date tag; for example, [20230602](https://w3id.org/ontouml-models/release/20230602) |
 | Catalog Vocabulary Turtle | [Catalog metadata vocabulary](https://w3id.org/ontouml-models/vocabulary) |
-| Metadata shapes | [Catalog](https://w3id.org/ontouml-models/shape/Catalog), [Dataset](https://w3id.org/ontouml-models/shape/Dataset), [Distribution](https://w3id.org/ontouml-models/shape/Distribution), [Resource](https://w3id.org/ontouml-models/shape/Resource), [SemanticArtefact](https://w3id.org/ontouml-models/shape/SemanticArtefact) |
 
 ## How to Contribute
 

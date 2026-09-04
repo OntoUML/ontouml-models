@@ -14,16 +14,20 @@ The [OntoUML/UFO Catalog](../README.md) stores conceptual models and their repre
 > [!IMPORTANT]
 > **Use GitHub for current catalog content.** This repository is actively maintained and updated. The separate [FAIR Data Point](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. See the [responsibility boundary](technical-overview.md#github-storage-and-fdp-discovery).
 
-## Supporting assets and historical material
+## Supporting assets
 
-> [!WARNING]
-> The historical guides and Wiki pages listed below are preserved for provenance and context. They are not current contribution, automation, or product-support instructions. Follow the tracked repository guidance first.
-
-- [Metadata overview figure](metadata-schema.png): retained conceptual overview, with a [text explanation and known constraint differences](technical-overview.md#reading-the-metadata-overview-figure). It is not an executable validation specification.
+- [Metadata overview figure](metadata-schema.png) and [editable Visual Paradigm source](metadata-schema.vpp): the intended metadata structure, with its scope and the known `ontologyType` implementation misalignment explained in the [technical overview](technical-overview.md#reading-the-metadata-overview-figure).
 - [Full Goal Diagram](Full%20Goal%20Diagram.png): a design-goal artifact, not a statement that every depicted goal is implemented or an architecture diagram of current automation.
 - [Logo assets](logo/): existing images and branding archives. No asset replacement or rights determination is implied by this index.
+
+No editable source for the Full Goal Diagram was identified in the inspected repository. Its existing file is retained; this index does not assign new authorship, dates, or licensing terms.
+
+## Historical material
+
+> [!WARNING]
+> The material listed below is preserved for provenance and context. It is not current contribution, automation, validation, or product-support guidance. Follow the tracked repository guidance and current Python implementation first.
+
+- [Archived SHACL metadata shapes](../shapes/): outdated constraints retained at their existing paths for provenance and persistent-link compatibility. They are not authoritative for current metadata and are not executed by repository workflows.
 - [Historical model-reconstruction guidance](historical/model-reconstruction.md): preserved reconstruction rules from a dated Wiki snapshot, pending curator confirmation.
 - [Historical Visual Paradigm import guide](historical/importing-models-to-visual-paradigm.md): preserved, version-specific editor instructions from the same snapshot; it does not assert current product behavior.
 - [Repository Wiki](https://github.com/OntoUML/ontouml-models/wiki): source history and deprecated operational instructions. Consult current tracked guidance first.
-
-No editable source for the two raster diagrams was identified in the inspected repository. Their existing files are retained; this index does not assign new authorship, dates, or licensing terms.

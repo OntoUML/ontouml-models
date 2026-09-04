@@ -48,7 +48,7 @@ Conversion can succeed with warnings: invalid cardinalities and stereotypes are 
 | [OntoUML Schema](https://w3id.org/ontouml/schema) | JSON representation specification, maintained separately from this catalog. |
 | [OntoUML Vocabulary](https://w3id.org/ontouml/vocabulary) | RDF terms for model content, distinct from catalog metadata terms. |
 | [Catalog Metadata Vocabulary](https://w3id.org/ontouml-models/vocabulary) and reused metadata vocabularies | Terms for describing the catalog, models, and distributions. Their versions do not follow repository date tags. |
-| Stored [SHACL shapes](../shapes/) | RDF metadata constraints versioned with this repository; their presence does not mean CI executes them. |
+| [Archived SHACL metadata shapes](../shapes/) | Outdated RDF metadata constraints retained at their existing paths for provenance and persistent-link compatibility. They are not authoritative and are not executed by repository workflows. |
 
 Do not infer a shared version from these links or the repository release name. For reproducible processing, retain the repository commit and converter version; record the schema/vocabulary versions actually used by your own tools. Local environment and platform guidance is maintained in the [script index](../scripts/README.md#local-setup).
 
@@ -63,7 +63,7 @@ An RDF **IRI** identifies a resource. A file download URL or repository folder U
 | `https://w3id.org/ontouml-models/model/<slug>#<element-id>` | A model-content resource in generated `ontology.ttl`. The project IRI ends with the exact top-level JSON project ID. These are not the metadata's UUID-based dataset/distribution IRIs. |
 | `dcat:downloadURL` | A file download location, normally a raw GitHub URL; a branch-based URL can change over time. |
 | `ocmv:storageUrl` | The repository storage location for a dataset or catalog. |
-| [Persistent catalog URLs](../README.md#catalogs-persistent-urls) | Stable entry points intended to redirect to repository, release, vocabulary, shape, or discovery resources. A persistent entry point is not automatically a fixed content snapshot. |
+| [Persistent catalog URLs](../README.md#catalogs-persistent-urls) | Stable entry points intended to redirect to repository, release, vocabulary, or discovery resources. A persistent entry point is not automatically a fixed content snapshot. |
 
 Preserve exact RDF identifiers. For example, the [ROT metadata at the inspected commit](https://github.com/OntoUML/ontouml-models/blob/324d71e82d4430fff5e2b84e38ca9620a94c5987/models/amaral2019rot/metadata.ttl) types the dataset IRI ending in `d88fe48c-d574-43b4-85d6-a6e1aeaa6726/`, but places distribution links on an IRI without that final slash. These are distinct RDF IRIs, not interchangeable spellings. Successful synchronization can preserve such legacy inconsistencies; it does not repair or certify every relationship. Do not normalize slash/hash forms when reproducing an analysis.
 
@@ -71,14 +71,14 @@ Preserve exact RDF identifiers. For example, the [ROT metadata at the inspected 
 
 | Check | What it establishes | What it does not establish |
 | --- | --- | --- |
-| YAML validator | Supported fields, syntax, types, required values, controlled values, and configured warnings | Complete submission readiness, legal rights, or SHACL conformance |
+| YAML validator | Supported fields, syntax, types, required values, controlled values, and configured warnings | Complete submission readiness, legal rights, or conformance with the archived SHACL shapes |
 | JSON preflight and ontology wrapper | UTF-8 JSON object, project ID, usable language, successful conversion, generated namespace/project/name-language rules | Full JSON Schema conformance, native VPP equivalence, or model semantic quality |
 | VPP and PNG checks | VPP file presence/non-emptiness and filename shape; PNG signature/IHDR structure | Native project validity, correct diagram content, or full image decoding |
 | Bibliography validator | Basic BibTeX/BibLaTeX structure when `references.bib` is present | Required bibliographic fields for every entry type or factual correctness of citations |
-| Turtle parsing | Syntactically parseable RDF for the files checked | SHACL conformance or correct domain modeling |
+| Turtle parsing | Syntactically parseable RDF for the files checked | Conformance with the archived SHACL shapes or correct domain modeling |
 | Generation/synchronization checks | Agreement with the selected generators and their comparison rules | Exhaustive semantic review, rights confirmation, or live discovery-service synchronization |
 
-The current submission workflow does not run JSON Schema or SHACL validation engines. Warnings can be nonfatal. Read the [submission validation boundary](../scripts/process-new-model-submission.md#what-the-helper-checks-before-generation), inspect warnings, and review the actual final PR head. A green unrelated check, or no check triggered by a documentation-only change, is not evidence that all these checks ran.
+The current submission workflow does not run a JSON Schema validator or execute the archived SHACL shapes. Warnings can be nonfatal. Read the [submission validation boundary](../scripts/process-new-model-submission.md#what-the-helper-checks-before-generation), inspect warnings, and review the actual final PR head. A green unrelated check, or no check triggered by a documentation-only change, is not evidence that all these checks ran.
 
 ### Change detection and timestamps
 
@@ -92,24 +92,17 @@ Changing ontology content alone need not change the Turtle distribution's metada
 
 ## Reading the metadata overview figure
 
-![Metadata overview: a catalog groups model datasets, each with file distributions; resources connect to contributors, contact information, themes, and descriptive metadata. Constraint differences are explained below.](metadata-schema.png)
+![Metadata overview: the catalog groups semantic artefacts; each semantic artefact can have file distributions and descriptive metadata for people, themes, purposes, contexts, representation styles, and sources.](metadata-schema.png)
 
-> [!NOTE]
-> This existing image is a conceptual overview, **not the current normative validation specification**.
+The [editable Visual Paradigm source](metadata-schema.vpp) is stored next to the exported PNG.
 
-In text: a catalog links to model datasets; a model links to its distributions; a distribution records its format and download location. Shared resource metadata supplies descriptions, dates, licenses, and people/organizations. Model metadata also records language, theme, purpose, context, representation style, and sources.
+> [!IMPORTANT]
+> The figure describes the intended metadata structure for catalog, semantic-artefact, and distribution resources. The repository's Python validators and generators are authoritative for implemented behavior. The [SHACL shapes archived in place](../shapes/) are outdated and retained only for provenance and persistent-link compatibility; do not use them as the current validation contract.
 
-Known differences between the image and the stored shapes are:
+In text: a catalog links to semantic artefacts; a semantic artefact links to its file distributions; and a distribution records its media type, format, completeness, download location, and optional schema reference. Shared resource metadata supplies titles, dates, licenses, editorial notes, and contributors. Catalog-only metadata includes its alternative title, description, access rights, bibliographic citation, creators, publisher, contact point, and theme taxonomy. Semantic-artefact metadata also records keywords, acronyms, sources, languages, landing pages, themes, purposes, development contexts, representation styles, and ontology types.
 
-| Property | Image | Stored shape |
-| --- | --- | --- |
-| `dcat:keyword` | `*` (no minimum shown) | At least one, in [SemanticArtefact-shape.ttl](../shapes/SemanticArtefact-shape.ttl) |
-| `ocmv:ontologyType` | At most one (`0..1`) | At most three, in [SemanticArtefact-shape.ttl](../shapes/SemanticArtefact-shape.ttl) |
-| `ocmv:storageUrl` | At least one (`1..*`) | No minimum-count constraint, in [Dataset-shape.ttl](../shapes/Dataset-shape.ttl) |
-
-The image also omits FDP metadata issuance/modification properties present in [Resource-shape.ttl](../shapes/Resource-shape.ttl). Additional constraints are stored in [Catalog-shape.ttl](../shapes/Catalog-shape.ttl) and [Distribution-shape.ttl](../shapes/Distribution-shape.ttl). The [YAML authoring rules](../scripts/validate-metadata-yaml.md#supported-field-spelling) are a separate, deliberately restricted interface; copying every RDF property into YAML is not supported. Stored shapes are not currently executed by the submission workflow.
-
-No editable source for this raster figure was identified in the inspected repository. The image is retained without inventing provenance or changing the shapes to match it.
+> [!WARNING]
+> The figure requires `ocmv:ontologyType` on a semantic artefact with cardinality `1..3`. The current Python validator still permits this field to be missing, null, or empty, so successful validation does not yet establish that minimum cardinality. Aligning the validator with the diagram is deferred and tracked in [issue #362](https://github.com/OntoUML/ontouml-models/issues/362).
 
 ## GitHub storage and FDP discovery
 
