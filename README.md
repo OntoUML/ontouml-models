@@ -64,7 +64,7 @@ Generated metadata can preserve existing RDF identities, curated fields, and dat
 
 ### Catalog Releases
 
-Repository releases use date tags in `YYYYMMDD` form. Each attached `ontouml-models-YYYYMMDD.ttl` asset aggregates eligible model and metadata RDF; it is **not an archive of native projects, JSON, images, or bibliographies**. Use the release's **Source code (zip)** or **Source code (tar.gz)** for the complete tracked snapshot. See [download instructions and a pinned example](documentation/using-models.md#download-a-file-or-a-snapshot), [GitHub Releases](https://github.com/OntoUML/ontouml-models/releases), and the [release operator guide](scripts/generate-release-file.md).
+Repository releases use date tags in `YYYYMMDD` form. Each release publishes two byte-identical Turtle assets: `ontouml-models-YYYYMMDD.ttl` for version-specific access and `ontouml-models-latest.ttl` as a moving convenience alias for the most recent release. These assets aggregate eligible model and metadata RDF; they are **not archives of native projects, JSON, images, or bibliographies**. Use the release's **Source code (zip)** or **Source code (tar.gz)** for the complete tracked snapshot. See [download instructions and a pinned example](documentation/using-models.md#download-a-file-or-a-snapshot), [GitHub Releases](https://github.com/OntoUML/ontouml-models/releases), and the [release operator guide](scripts/generate-release-file.md).
 
 ### Data Schemas
 
@@ -132,8 +132,10 @@ Persistent entry points are listed below. A stable URL is not necessarily an imm
 | FDP catalog page (currently outdated) | [Catalog discovery](https://w3id.org/ontouml-models) |
 | GitHub repository | [Repository](https://w3id.org/ontouml-models/git) |
 | OntoUML vocabulary | [OntoUML](https://w3id.org/ontouml) |
-| Latest catalog release | [Latest release](https://w3id.org/ontouml-models/release) |
-| Specific catalog release | `https://w3id.org/ontouml-models/release/<release_tag>` — substitute a date tag; for example, [20230602](https://w3id.org/ontouml-models/release/20230602) |
+| Latest catalog release page | [Latest release](https://w3id.org/ontouml-models/release) |
+| Latest catalog release Turtle | [Latest release Turtle](https://w3id.org/ontouml-models/release/latest.ttl) — moving alias for the latest published release asset |
+| Specific catalog release page | `https://w3id.org/ontouml-models/release/<release_tag>` — substitute a date tag; for example, [20230602](https://w3id.org/ontouml-models/release/20230602) |
+| Specific catalog release Turtle | `https://w3id.org/ontouml-models/release/<release_tag>.ttl` — direct Turtle asset for the selected date-tagged release |
 | Catalog Vocabulary Turtle | [Catalog metadata vocabulary](https://w3id.org/ontouml-models/vocabulary) |
 
 ## How to Contribute
@@ -234,3 +236,4 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 - Whoever uses the OntoUML/UFO Catalog expressly understands and agrees with its licensing information.
 
 Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please [create an issue](https://github.com/OntoUML/ontouml-models/issues) or report it through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
+
