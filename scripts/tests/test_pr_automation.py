@@ -44,6 +44,7 @@ class FakeAPI:
         self.check_counter, self.run_data = 1000, {}
         self.job = {"name": automation.VALIDATION_JOB, "status": "completed", "conclusion": "success"}
         self.reject_commit = self.reject_dispatch = False
+        self.stale_pr_reads_after_commit = 0
 
     def pr(self, number):
         return automation.GitHub.pr(self, number)
@@ -66,7 +67,11 @@ class FakeAPI:
     def api(self, method, path, body=None):
         self.events.append((method, path, copy.deepcopy(body)))
         if path == "pulls/357":
-            return copy.deepcopy(self.pr_data)
+            result = copy.deepcopy(self.pr_data)
+            if self.stale_pr_reads_after_commit and result["head"]["sha"] == FINAL:
+                result["head"]["sha"] = HEAD
+                self.stale_pr_reads_after_commit -= 1
+            return result
         if path.startswith("pulls/357/files?"):
             page = int(path.split("page=")[-1])
             return self.files_data[(page - 1) * 100:page * 100]
@@ -244,8 +249,9 @@ def test_invalid_bundles_fail_closed(change):
         automation.validate_bundle(bundle, plan)
 
 
-def test_new_model_writeback_precedes_dispatch_of_bot_head():
+def test_new_model_writeback_precedes_dispatch_despite_stale_pr_metadata():
     api, plan = FakeAPI(), plan_for("models/new/ontology.json")
+    api.stale_pr_reads_after_commit = 1
     first = start(api, plan)
     assert automation.publish(api, api, api, api, plan, first, bundle_for(plan)) == FINAL
     commit = next(i for i, event in enumerate(api.events) if event[1] == "/graphql")
