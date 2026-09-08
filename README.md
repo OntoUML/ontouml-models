@@ -15,7 +15,7 @@ Also known as the FAIR Model Catalog for Ontology-Driven Conceptual Modeling Res
 | Run repository maintenance tools | [Script index and setup](scripts/README.md) |
 
 > [!IMPORTANT]
-> **Current source of catalog data:** This GitHub repository is the catalog's actively maintained and regularly updated **storage, distribution, and contribution layer**. The separately operated [FAIR Data Point (FDP)](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Use this repository and its releases for current catalog content. See the [documentation index](documentation/README.md) for the full reader paths.
+> **Current source of catalog data:** This GitHub repository is the catalog's actively maintained and regularly updated **storage, distribution, and contribution layer**. The separately operated [FAIR Data Point (FDP)](https://w3id.org/ontouml-models/fdp/) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Use this repository and its releases for current catalog content. See the [documentation index](documentation/README.md) for the full reader paths.
 
 > [!NOTE]
 > **Community dashboard:** The existing [catalog dashboard](http://w3id.org/ontouml-models/dashboard) is a community-contributed companion project that provides another view of the catalog. It is independently operated, is not an official component of the OntoUML/UFO Catalog, and may lag behind the maintained GitHub repository. It remains linked here in recognition of that contribution.
@@ -118,7 +118,7 @@ The OntoUML/UFO Catalog Metadata Vocabulary's elements are identified below by t
 
 ### FAIR Data Point: The Data Discovery Service
 
-The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata.
+The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models/fdp/) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata.
 
 > [!IMPORTANT]
 > The FDP has not been updated since its initial release and does not represent the current catalog state. No FDP update or synchronization work is currently planned. The GitHub repository remains actively maintained and is the authoritative source for current files, metadata, history, contributions, and releases. See the [responsibility boundary](documentation/technical-overview.md#github-storage-and-fdp-discovery).
@@ -129,8 +129,11 @@ Persistent entry points are listed below. A stable URL is not necessarily an imm
 
 | Resource | Persistent entry point |
 | --- | --- |
-| FDP catalog page (currently outdated) | [Catalog discovery](https://w3id.org/ontouml-models) |
+| Catalog landing page | [Catalog repository](https://w3id.org/ontouml-models) — redirects to the current GitHub repository |
+| FDP catalog page (currently outdated) | [Catalog discovery](https://w3id.org/ontouml-models/fdp/) |
 | GitHub repository | [Repository](https://w3id.org/ontouml-models/git) |
+| Canonical model page | `https://w3id.org/ontouml-models/models/<slug>` — GitHub page for `models/<slug>/` |
+| File within a model | `https://w3id.org/ontouml-models/models/<slug>/<path>` — raw GitHub file below `models/<slug>/` |
 | OntoUML vocabulary | [OntoUML](https://w3id.org/ontouml) |
 | Latest catalog release page | [Latest release](https://w3id.org/ontouml-models/release) |
 | Latest catalog release Turtle | [Latest release Turtle](https://w3id.org/ontouml-models/release/latest.ttl) — moving alias for the latest published release asset |
