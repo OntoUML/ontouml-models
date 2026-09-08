@@ -465,6 +465,41 @@ def test_bulk_validation_covers_every_generated_metadata_family(tmp_path, monkey
         check[0] for check in validation.BULK_GENERATOR_CHECKS]
 
 
+def test_diff_whitespace_allows_generated_eof_blank_line_but_rejects_trailing_space(tmp_path):
+    repo = tmp_path / "repo"
+    repo.mkdir()
+
+    def git(*args):
+        return subprocess.run(
+            ["git", "-C", str(repo), *args],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+
+    git("init")
+    git("config", "user.name", "Test")
+    git("config", "user.email", "test@example.invalid")
+    (repo / "base.txt").write_text("base\n", encoding="utf-8")
+    git("add", "base.txt")
+    git("commit", "-m", "base")
+    base = git("rev-parse", "HEAD").stdout.strip()
+
+    (repo / "generated.ttl").write_bytes(b"generated .\n\n")
+    git("add", "generated.ttl")
+    git("commit", "-m", "generated")
+    generated_head = git("rev-parse", "HEAD").stdout.strip()
+    validation.check_diff_whitespace(repo, base, generated_head)
+
+    (repo / "invalid.txt").write_bytes(b"trailing space \n")
+    git("add", "invalid.txt")
+    git("commit", "-m", "invalid")
+    invalid_head = git("rev-parse", "HEAD").stdout.strip()
+    with pytest.raises(subprocess.CalledProcessError):
+        validation.check_diff_whitespace(repo, base, invalid_head)
+
+
 def test_source_only_model_real_generation_and_final_state_validation(tmp_path):
     from test_generate_png_metadata import minimal_png
     from test_process_new_model_submission import make_model, make_repo

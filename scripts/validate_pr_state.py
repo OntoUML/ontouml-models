@@ -35,6 +35,19 @@ BULK_GENERATOR_CHECKS = (
      "--allow-missing-license", "--check", "--quiet"),
 )
 
+# Generated Turtle files in this repository intentionally end with a second
+# newline. Keep the checks for trailing spaces and space-before-tab, but do
+# not reject that generated-file formatting.
+DIFF_CHECK_WHITESPACE = "blank-at-eol,space-before-tab,-blank-at-eof"
+
+
+def check_diff_whitespace(source, base, head):
+    subprocess.run([
+        "git", "-C", str(source), "-c",
+        f"core.whitespace={DIFF_CHECK_WHITESPACE}",
+        "diff", "--check", f"{base}...{head}",
+    ], check=True)
+
 
 def validate_docs(root, plan):
     for name in plan["docs"]:
@@ -159,7 +172,7 @@ def prepare_snapshot(source, trusted, number, head, base, plan_file):
     require(git(source, "rev-parse", "HEAD").decode().strip() == head, "Checkout is not the dispatched final head")
     require(git(trusted, "rev-parse", "HEAD").decode().strip() == base, "Trusted checkout is not the dispatched base")
     subprocess.run(["git", "-C", str(source), "merge-base", "--is-ancestor", base, head], check=True)
-    subprocess.run(["git", "-C", str(source), "diff", "--check", f"{base}...{head}"], check=True)
+    check_diff_whitespace(source, base, head)
     plan = classify(api.files(pr))
     plan.update(identity)
     same_state(api.pr(number), plan)
