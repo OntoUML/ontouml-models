@@ -22,26 +22,22 @@ Also known as the FAIR Model Catalog for Ontology-Driven Conceptual Modeling Res
 
 ## Table of Contents
 
-- [OntoUML/UFO Catalog](#ontoumlufo-catalog)
-  - [Table of Contents](#table-of-contents)
-  - [Catalog’s Content](#catalogs-content)
-    - [Data Organization](#data-organization)
-    - [Catalog Releases](#catalog-releases)
-    - [Data Schemas](#data-schemas)
-      - [OntoUML Metamodel](#ontouml-metamodel)
-      - [OntoUML Schema](#ontouml-schema)
-      - [Models in Linked Data](#models-in-linked-data)
-    - [Metadata](#metadata)
-    - [FAIR Data Point: The Data Discovery Service](#fair-data-point-the-data-discovery-service)
-  - [Catalog's Persistent URLs](#catalogs-persistent-urls)
-  - [How to Contribute](#how-to-contribute)
-    - [Contribute by Submitting an Ontology](#contribute-by-submitting-an-ontology)
-    - [Other Ways to Contribute](#other-ways-to-contribute)
-  - [Relevant Associated Works](#relevant-associated-works)
-  - [Catalog administration](#catalog-administration)
-  - [How to Cite this Catalog](#how-to-cite-this-catalog)
-  - [Acknowledgements](#acknowledgements)
-  - [License disclaimer](#license-disclaimer)
+- [Table of Contents](#table-of-contents)
+- [Catalog’s Content](#catalogs-content)
+  - [Data Organization](#data-organization)
+  - [Catalog Releases](#catalog-releases)
+  - [Data Schemas](#data-schemas)
+  - [Metadata](#metadata)
+  - [FAIR Data Point: The Data Discovery Service](#fair-data-point-the-data-discovery-service)
+- [Catalog's Persistent URLs](#catalogs-persistent-urls)
+- [How to Contribute](#how-to-contribute)
+  - [Contribute by Submitting an Ontology](#contribute-by-submitting-an-ontology)
+  - [Other Ways to Contribute](#other-ways-to-contribute)
+- [Relevant Associated Works](#relevant-associated-works)
+- [Catalog administration](#catalog-administration)
+- [How to Cite this Catalog](#how-to-cite-this-catalog)
+- [Acknowledgements](#acknowledgements)
+- [License disclaimer](#license-disclaimer)
 
 ## Catalog’s Content
 
@@ -239,4 +235,3 @@ Although the OntoUML/UFO Catalog is an open project with a permissive license, s
 - Whoever uses the OntoUML/UFO Catalog expressly understands and agrees with its licensing information.
 
 Ontologies are going to be immediately removed from the catalog in case of a request by the original license holders. For content removal, please [create an issue](https://github.com/OntoUML/ontouml-models/issues) or report it through the [catalog's contribution form](https://forms.gle/wNSMfaJfkS3hi69o7).
-
