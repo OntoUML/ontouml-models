@@ -128,6 +128,28 @@ def container_command(source, trusted, plan_file, phase, *, dependencies=True):
             "python:3.11", "sh", "-c", bootstrap]
 
 
+def actionlint_command(snapshot):
+    workflow_root = snapshot / ".github" / "workflows"
+    workflow_files = sorted(
+        path.relative_to(snapshot).as_posix()
+        for suffix in (".yml", ".yaml")
+        for path in workflow_root.glob(f"*{suffix}")
+        if path.is_file()
+    )
+    require(
+        workflow_files,
+        "Workflow changes detected but no workflow files were found",
+    )
+    return [
+        "docker", "run", "--rm", "--network=none", "--read-only",
+        "--cap-drop=ALL", "--security-opt=no-new-privileges",
+        "--user", "65534:65534", "--workdir", "/repo",
+        "--mount", f"type=bind,src={snapshot},dst=/repo,readonly",
+        "rhysd/actionlint:1.7.12", "-shellcheck=",
+        *workflow_files,
+    ]
+
+
 def prepare_snapshot(source, trusted, number, head, base, plan_file):
     require(SHA.fullmatch(head) and SHA.fullmatch(base), "Invalid dispatch SHA")
     api = GitHub(os.environ["GITHUB_REPOSITORY"], os.environ["GH_TOKEN"])
@@ -161,10 +183,7 @@ def run_containers(source, trusted, plan_file):
         if plan["code"]:
             subprocess.run(container_command(snapshot, harness, plan_file, "code"), check=True)
         if plan["workflows"]:
-            subprocess.run(["docker", "run", "--rm", "--network=none", "--read-only", "--cap-drop=ALL",
-                            "--security-opt=no-new-privileges", "--user", "65534:65534",
-                            "--workdir", "/repo", "--mount", f"type=bind,src={snapshot},dst=/repo,readonly",
-                            "rhysd/actionlint:1.7.12", "-shellcheck="], check=True)
+            subprocess.run(actionlint_command(snapshot), check=True)
 
 
 def main():
