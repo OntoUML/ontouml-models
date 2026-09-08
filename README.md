@@ -15,33 +15,29 @@ Also known as the FAIR Model Catalog for Ontology-Driven Conceptual Modeling Res
 | Run repository maintenance tools | [Script index and setup](scripts/README.md) |
 
 > [!IMPORTANT]
-> **Current source of catalog data:** This GitHub repository is the catalog's actively maintained and regularly updated **storage, distribution, and contribution layer**. The separately operated [FAIR Data Point (FDP)](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Use this repository and its releases for current catalog content. See the [documentation index](documentation/README.md) for the full reader paths.
+> **Current source of catalog data:** This GitHub repository is the catalog's actively maintained and regularly updated **storage, distribution, and contribution layer**. The separately operated [FAIR Data Point (FDP)](https://w3id.org/ontouml-models/fdp/) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Use this repository and its releases for current catalog content. See the [documentation index](documentation/README.md) for the full reader paths.
 
 > [!NOTE]
 > **Community dashboard:** The existing [catalog dashboard](http://w3id.org/ontouml-models/dashboard) is a community-contributed companion project that provides another view of the catalog. It is independently operated, is not an official component of the OntoUML/UFO Catalog, and may lag behind the maintained GitHub repository. It remains linked here in recognition of that contribution.
 
 ## Table of Contents
 
-- [OntoUML/UFO Catalog](#ontoumlufo-catalog)
-  - [Table of Contents](#table-of-contents)
-  - [Catalog’s Content](#catalogs-content)
-    - [Data Organization](#data-organization)
-    - [Catalog Releases](#catalog-releases)
-    - [Data Schemas](#data-schemas)
-      - [OntoUML Metamodel](#ontouml-metamodel)
-      - [OntoUML Schema](#ontouml-schema)
-      - [Models in Linked Data](#models-in-linked-data)
-    - [Metadata](#metadata)
-    - [FAIR Data Point: The Data Discovery Service](#fair-data-point-the-data-discovery-service)
-  - [Catalog's Persistent URLs](#catalogs-persistent-urls)
-  - [How to Contribute](#how-to-contribute)
-    - [Contribute by Submitting an Ontology](#contribute-by-submitting-an-ontology)
-    - [Other Ways to Contribute](#other-ways-to-contribute)
-  - [Relevant Associated Works](#relevant-associated-works)
-  - [Catalog administration](#catalog-administration)
-  - [How to Cite this Catalog](#how-to-cite-this-catalog)
-  - [Acknowledgements](#acknowledgements)
-  - [License disclaimer](#license-disclaimer)
+- [Table of Contents](#table-of-contents)
+- [Catalog’s Content](#catalogs-content)
+  - [Data Organization](#data-organization)
+  - [Catalog Releases](#catalog-releases)
+  - [Data Schemas](#data-schemas)
+  - [Metadata](#metadata)
+  - [FAIR Data Point: The Data Discovery Service](#fair-data-point-the-data-discovery-service)
+- [Catalog's Persistent URLs](#catalogs-persistent-urls)
+- [How to Contribute](#how-to-contribute)
+  - [Contribute by Submitting an Ontology](#contribute-by-submitting-an-ontology)
+  - [Other Ways to Contribute](#other-ways-to-contribute)
+- [Relevant Associated Works](#relevant-associated-works)
+- [Catalog administration](#catalog-administration)
+- [How to Cite this Catalog](#how-to-cite-this-catalog)
+- [Acknowledgements](#acknowledgements)
+- [License disclaimer](#license-disclaimer)
 
 ## Catalog’s Content
 
@@ -64,7 +60,7 @@ Generated metadata can preserve existing RDF identities, curated fields, and dat
 
 ### Catalog Releases
 
-Repository releases use date tags in `YYYYMMDD` form. Each attached `ontouml-models-YYYYMMDD.ttl` asset aggregates eligible model and metadata RDF; it is **not an archive of native projects, JSON, images, or bibliographies**. Use the release's **Source code (zip)** or **Source code (tar.gz)** for the complete tracked snapshot. See [download instructions and a pinned example](documentation/using-models.md#download-a-file-or-a-snapshot), [GitHub Releases](https://github.com/OntoUML/ontouml-models/releases), and the [release operator guide](scripts/generate-release-file.md).
+Repository releases use date tags in `YYYYMMDD` form. Each release publishes two byte-identical Turtle assets: `ontouml-models-YYYYMMDD.ttl` for version-specific access and `ontouml-models-latest.ttl` as a moving convenience alias for the most recent release. These assets aggregate eligible model and metadata RDF; they are **not archives of native projects, JSON, images, or bibliographies**. Use the release's **Source code (zip)** or **Source code (tar.gz)** for the complete tracked snapshot. See [download instructions and a pinned example](documentation/using-models.md#download-a-file-or-a-snapshot), [GitHub Releases](https://github.com/OntoUML/ontouml-models/releases), and the [release operator guide](scripts/generate-release-file.md).
 
 ### Data Schemas
 
@@ -118,7 +114,7 @@ The OntoUML/UFO Catalog Metadata Vocabulary's elements are identified below by t
 
 ### FAIR Data Point: The Data Discovery Service
 
-The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata.
+The [OntoUML FAIR Data Point](https://w3id.org/ontouml-models/fdp/) is the catalog's separately operated discovery service, based on the [FAIR Data Point approach](https://doi.org/10.1162/dint_a_00160) to exposing rich metadata.
 
 > [!IMPORTANT]
 > The FDP has not been updated since its initial release and does not represent the current catalog state. No FDP update or synchronization work is currently planned. The GitHub repository remains actively maintained and is the authoritative source for current files, metadata, history, contributions, and releases. See the [responsibility boundary](documentation/technical-overview.md#github-storage-and-fdp-discovery).
@@ -129,11 +125,16 @@ Persistent entry points are listed below. A stable URL is not necessarily an imm
 
 | Resource | Persistent entry point |
 | --- | --- |
-| FDP catalog page (currently outdated) | [Catalog discovery](https://w3id.org/ontouml-models) |
+| Catalog landing page | [Catalog repository](https://w3id.org/ontouml-models) — redirects to the current GitHub repository |
+| FDP catalog page (currently outdated) | [Catalog discovery](https://w3id.org/ontouml-models/fdp/) |
 | GitHub repository | [Repository](https://w3id.org/ontouml-models/git) |
+| Canonical model page | `https://w3id.org/ontouml-models/models/<slug>` — GitHub page for `models/<slug>/` |
+| File within a model | `https://w3id.org/ontouml-models/models/<slug>/<path>` — raw GitHub file below `models/<slug>/` |
 | OntoUML vocabulary | [OntoUML](https://w3id.org/ontouml) |
-| Latest catalog release | [Latest release](https://w3id.org/ontouml-models/release) |
-| Specific catalog release | `https://w3id.org/ontouml-models/release/<release_tag>` — substitute a date tag; for example, [20230602](https://w3id.org/ontouml-models/release/20230602) |
+| Latest catalog release page | [Latest release](https://w3id.org/ontouml-models/release) |
+| Latest catalog release Turtle | [Latest release Turtle](https://w3id.org/ontouml-models/release/latest.ttl) — moving alias for the latest published release asset |
+| Specific catalog release page | `https://w3id.org/ontouml-models/release/<release_tag>` — substitute a date tag; for example, [20230602](https://w3id.org/ontouml-models/release/20230602) |
+| Specific catalog release Turtle | `https://w3id.org/ontouml-models/release/<release_tag>.ttl` — direct Turtle asset for the selected date-tagged release |
 | Catalog Vocabulary Turtle | [Catalog metadata vocabulary](https://w3id.org/ontouml-models/vocabulary) |
 
 ## How to Contribute

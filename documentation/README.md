@@ -12,7 +12,7 @@ The [OntoUML/UFO Catalog](../README.md) stores conceptual models and their repre
 | Find the preferred catalog citation | [How to Cite this Catalog](../README.md#how-to-cite-this-catalog) and [CITATION.cff](../CITATION.cff) |
 
 > [!IMPORTANT]
-> **Use GitHub for current catalog content.** This repository is actively maintained and updated. The separate [FAIR Data Point](https://w3id.org/ontouml-models) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. See the [responsibility boundary](technical-overview.md#github-storage-and-fdp-discovery).
+> **Use GitHub for current catalog content.** This repository is actively maintained and updated. The separate [FAIR Data Point](https://w3id.org/ontouml-models/fdp/) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. See the [responsibility boundary](technical-overview.md#github-storage-and-fdp-discovery).
 
 ## Supporting assets
 

@@ -172,10 +172,12 @@ jobs:
           fi
 
           release_file="results/ontouml-models-${release_tag}.ttl"
+          latest_release_file="results/ontouml-models-latest.ttl"
 
           {
             echo "release_tag=$release_tag"
             echo "release_file=$release_file"
+            echo "latest_release_file=$latest_release_file"
             echo "dry_run=$dry_run"
             echo "publish_release=$publish_release"
             echo "force_release=$force_release"
@@ -188,6 +190,7 @@ jobs:
 
           echo "Release tag: $release_tag"
           echo "Release file: $release_file"
+          echo "Latest release file: $latest_release_file"
           echo "Dry run: $dry_run"
           echo "Publish release: $publish_release"
           echo "Force release: $force_release"
@@ -257,30 +260,40 @@ jobs:
 
           echo "release_already_published=$release_already_published" >> "$GITHUB_OUTPUT"
 
-      - name: Generate release file
+      - name: Generate release files
         if: ${{ steps.settings.outputs.should_generate == 'true' }}
         run: |
           set -euo pipefail
+          release_file="${{ steps.settings.outputs.release_file }}"
+          latest_release_file="${{ steps.settings.outputs.latest_release_file }}"
+
           python scripts/generate_release_file.py . \
             --release-tag "${{ steps.settings.outputs.release_tag }}" \
             --output-dir results \
             --list-files
+          cp -- "$release_file" "$latest_release_file"
 
-      - name: Validate generated release Turtle
+      - name: Validate generated release Turtle files
         if: ${{ steps.settings.outputs.should_generate == 'true' }}
         run: |
           set -euo pipefail
-          test -s "${{ steps.settings.outputs.release_file }}"
-          python - <<'PY'
+          release_file="${{ steps.settings.outputs.release_file }}"
+          latest_release_file="${{ steps.settings.outputs.latest_release_file }}"
+
+          test -s "$release_file"
+          test -s "$latest_release_file"
+          cmp -- "$release_file" "$latest_release_file"
+          python - "$release_file" "$latest_release_file" <<'PY'
           from pathlib import Path
+          import sys
 
           from rdflib import Graph
 
-          path = Path("${{ steps.settings.outputs.release_file }}")
-
-          graph = Graph()
-          graph.parse(path, format="turtle")
-          print(f"Parsed release graph with {len(graph)} triples.")
+          paths = [Path(value) for value in sys.argv[1:]]
+          for path in paths:
+              graph = Graph()
+              graph.parse(path, format="turtle")
+              print(f"Parsed {path} with {len(graph)} triples.")
           PY
 
       - name: Upload release artifact
@@ -288,7 +301,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ontouml-models-release-${{ steps.settings.outputs.release_tag }}
-          path: ${{ steps.settings.outputs.release_file }}
+          path: |
+            ${{ steps.settings.outputs.release_file }}
+            ${{ steps.settings.outputs.latest_release_file }}
           if-no-files-found: error
           retention-days: 30
 
@@ -298,11 +313,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ steps.settings.outputs.release_tag }}
           RELEASE_FILE: ${{ steps.settings.outputs.release_file }}
+          LATEST_RELEASE_FILE: ${{ steps.settings.outputs.latest_release_file }}
           FINAL_RELEASE_SHA: ${{ steps.catalog.outputs.final_release_sha }}
         run: |
           set -euo pipefail
 
-          gh release create "$RELEASE_TAG" "$RELEASE_FILE" \
+          gh release create "$RELEASE_TAG" "$RELEASE_FILE" "$LATEST_RELEASE_FILE" \
             --target "$FINAL_RELEASE_SHA" \
             --title "$RELEASE_TAG" \
             --generate-notes
