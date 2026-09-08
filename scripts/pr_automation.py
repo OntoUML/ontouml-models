@@ -368,7 +368,13 @@ def publish(read_api, checks_api, write_api, dispatch_api, plan, check_id, bundl
         final = dict(plan)
         if additions:
             final["head"] = create_commit(write_api, plan, additions)
-        same_state(read_api.pr(plan["pr"]), final)
+        # createCommitOnBranch is conditional on plan["head"] and returns the
+        # exact commit written to the PR branch.  Do not immediately re-read
+        # the PR here: GitHub can briefly expose the old PR head through its
+        # REST metadata after the branch mutation has succeeded.  The final
+        # validator and reporter independently re-check the live PR head and
+        # base before accepting any result, so a later concurrent change still
+        # cannot authorize a merge.
         if final["head"] == plan["head"]:
             active_check = checks_api.start_check(final, "validation", check_id)
         else:
