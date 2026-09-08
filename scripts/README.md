@@ -89,7 +89,7 @@ With the environment activated, run the existing suite:
 python -m pytest -q scripts/tests
 ```
 
-Tests use temporary fixtures. A passing suite does not prove that every stored model has correct semantics, native/JSON equivalence, JSON Schema or SHACL conformance, or confirmed reuse rights.
+Tests use temporary fixtures. A passing suite does not prove that every stored model has correct semantics, native/JSON equivalence, JSON Schema conformance, conformance with the [archived SHACL shapes](../shapes/), or confirmed reuse rights.
 
 For script-documentation changes:
 

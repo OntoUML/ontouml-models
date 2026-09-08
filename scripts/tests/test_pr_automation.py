@@ -528,6 +528,27 @@ def test_container_does_not_mount_host_credentials_or_docker_socket(tmp_path):
     assert "-r /repo/scripts/requirements.txt" in command[-1]
 
 
+def test_actionlint_uses_explicit_workflow_paths_without_git_mount(tmp_path):
+    snapshot = tmp_path / "source"
+    workflow_root = snapshot / ".github" / "workflows"
+    workflow_root.mkdir(parents=True)
+    (workflow_root / "publish.yml").write_text("name: publish\n", encoding="utf-8")
+    (workflow_root / "validate.yaml").write_text("name: validate\n", encoding="utf-8")
+    (workflow_root / "README.md").write_text("ignored\n", encoding="utf-8")
+
+    command = validation.actionlint_command(snapshot)
+
+    assert command[-3] == "-shellcheck="
+    assert command[-2:] == [
+        ".github/workflows/publish.yml",
+        ".github/workflows/validate.yaml",
+    ]
+    assert not any(
+        argument.startswith("--mount") and ".git" in argument
+        for argument in command
+    )
+
+
 def test_docs_only_container_does_not_install_model_dependencies(tmp_path):
     command = validation.container_command(tmp_path / "source", tmp_path / "trusted", tmp_path / "plan.json", "data", dependencies=False)
     assert "pip install" not in command[-1]

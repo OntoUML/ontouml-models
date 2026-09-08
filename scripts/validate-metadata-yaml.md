@@ -25,7 +25,7 @@ For each selected dataset folder, the script checks:
 - language-tag format for `language`;
 - common repository quality rules, such as preferring DBLP/ORCID contributor identifiers and DOI/DBLP source identifiers.
 
-The validator is intentionally YAML-level tooling. Neither it nor the current submission workflow runs a SHACL or JSON Schema validation engine. The workflow parses generated Turtle and checks particular generation/synchronization rules; that does not establish SHACL conformance or model semantics. See the [submission validation boundary](process-new-model-submission.md#what-the-helper-checks-before-generation).
+The validator is intentionally YAML-level tooling. Neither it nor the current submission workflow runs a JSON Schema validator or the [archived SHACL shapes](../shapes/). Those shapes are outdated and non-authoritative. The workflow parses generated Turtle and checks particular generation/synchronization rules; that does not establish conformance with the archived shapes or model semantics. See the [submission validation boundary](process-new-model-submission.md#what-the-helper-checks-before-generation).
 
 ## Mandatory fields
 
@@ -71,9 +71,9 @@ license:
 
 RDF predicate names, converter-only aliases, and extension fields are intentionally treated as unexpected fields. For example, `dct:title`, `dcat:keyword`, `editorial_note`, `ontology_type`, `iri`, `storage_url`, `distribution`, and `contactPoints` are not accepted unless the official YAML format is explicitly extended later.
 
-Although the RDF dataset shape includes `dcat:contactPoint`, contact-point metadata is not part of the supported `metadata.yaml` field set. This validator therefore treats `contact_points`, `contactPoints`, and `dcat:contactPoint` as unexpected YAML fields.
+Contact-point metadata is not part of the supported `metadata.yaml` field set. This validator therefore treats `contact_points`, `contactPoints`, and `dcat:contactPoint` as unexpected YAML fields.
 
-`landingPage` may be empty, a single HTTP(S) URI, or a YAML list of HTTP(S) URIs. The underlying RDF property has no maximum-count constraint in the catalog SHACL shape, so multiple landing pages are allowed. `--fix` therefore does not unwrap `landingPage` lists.
+`landingPage` may be empty, a single HTTP(S) URI, or a YAML list of HTTP(S) URIs. The validator and metadata converter accept multiple landing pages, so `--fix` does not unwrap `landingPage` lists.
 
 `language` may be a single language tag, a comma-separated scalar used by existing catalog files, or a YAML list of language tags. For example, `language: en, pt-br` is accepted. When `--fix` is used, comma-separated multi-language scalars are normalized to YAML lists, but only when every language tag is valid:
 
