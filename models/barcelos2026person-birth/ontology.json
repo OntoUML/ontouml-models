@@ -1,0 +1,2877 @@
+{
+  "id" : "qmUW4emAUygeIwWe",
+  "name" : "Health-RI Ontology",
+  "description" : null,
+  "type" : "Project",
+  "model" : {
+    "id" : "qmUW4emAUygeIwWe_root",
+    "name" : "Health-RI Ontology",
+    "description" : null,
+    "type" : "Package",
+    "propertyAssignments" : null,
+    "contents" : [ {
+      "id" : "LGnpMemAUygeIxUZ",
+      "name" : "Biology",
+      "description" : null,
+      "type" : "Package",
+      "propertyAssignments" : {
+        "stage" : "int"
+      },
+      "contents" : [ {
+        "id" : "tH1usemAUygeIx7d",
+        "name" : "Karyotypic Male-sex Person",
+        "description" : "A person whose karyotypical sex is male, determined by the sex chromosome complement. This class classifies persons by karyotype only and does not depend on phenotypic traits or on any sex assigned or assessed at birth or later.\n\nKaryotypic Male-sex Person subsumes both Regular Karyotypical Male Person and Variant Karyotypical Male Person, which are categorized as male in the model. It is exclusive with Karyotypic Female-sex Person within the karyotypical-sex classification of persons.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "subkind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "KIdusemAUygeIx74",
+        "name" : "Karyotypic Female-sex Person",
+        "description" : "A person whose karyotypical sex is female, determined by the sex chromosome complement. This class classifies persons by karyotype only and does not depend on phenotypic traits or on any sex assigned or assessed at birth or later.\n\nKaryotypic Female-sex Person subsumes both Regular Karyotypical Female Person and Variant Karyotypical Female Person, which are categorized as female in the model. It is exclusive with Karyotypic Male-sex Person within the karyotypical-sex classification of persons.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "subkind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "ywV5HJmAUygeKyDD",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "KIdusemAUygeIx74",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "UlmxHJmAUygeKxvI",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "6OV5HJmAUygeKyDN",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "tH1usemAUygeIx7d",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "sbGxHJmAUygeKxu9",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "PMPtmTmAUygefhRm",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "KIdusemAUygeIx74",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "tVntmTmAUygefhRS",
+          "type" : "Class"
+        }
+      } ]
+    }, {
+      "id" : "czC2RemGAqAEHA48",
+      "name" : "General",
+      "description" : null,
+      "type" : "Package",
+      "propertyAssignments" : {
+        "stage" : "int"
+      },
+      "contents" : [ {
+        "id" : "F8JTHJmAUygeKycT",
+        "name" : "OffsetDateTime",
+        "description" : "A civil date-time with explicit UTC offset and nanosecond precision. It consists of a Date plus hour, minute, second, optional nanosecond, and utcOffsetMinutes. Hour is 0..23. Minute is 0..59. Second is 0..59; leap seconds (value 60) are out of scope and inputs with second equal to 60 must be rejected. Nanosecond, when present, is an integer in 0..999999999. The value 24:00:00 is not permitted.\n\nThe UTC offset is expressed as an integer number of minutes east of UTC in the closed range -840..+840. Any whole-minute offset is allowed, including zones that use 30 or 45 minute increments. The offset qualifies the local date-time but does not imply time-zone rules such as daylight-saving transitions.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Offset Date-time, Date-time with Offset, DateTime with UTC Offset"
+        },
+        "stereotype" : "datatype",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "wl4EZFmGAqAEHA.K",
+          "name" : "date",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "sujbHJmAUygeKynN",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "JHVTHJmAUygeKyci",
+          "name" : "hour",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "BNDTHJmAUygeKyc0",
+          "name" : "minute",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "DsjTHJmAUygeKyc3",
+          "name" : "second",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "I73THJmAUygeKydC",
+          "name" : "nanosecond",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "awvTHJmAUygeKydF",
+          "name" : "utcOffsetMinutes",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "abstract" ]
+      }, {
+        "id" : "sujbHJmAUygeKynN",
+        "name" : "Date",
+        "description" : "A calendar date composed of year, month, and day in the proleptic Gregorian calendar. The year is an integer that may be negative or positive. The month is a Month value. The day is an integer constrained by the month and the leap-year rule. No time-of-day or time-zone semantics are included.\n\nDay ranges follow the usual calendar limits: April, June, September, and November have 30 days; February has 28 days, or 29 only in a leap year; the other months have 31 days. A year is a leap year iff either year mod 400 equals 0, or year mod 4 equals 0 and year mod 100 does not equal 0.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "datatype",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "hvrbHJmAUygeKyna",
+          "name" : "year",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "y87bHJmAUygeKynl",
+          "name" : "month",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "X4jkZFmGAqAEHA_Z",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "BwHbHJmAUygeKyno",
+          "name" : "day",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "abstract" ]
+      }, {
+        "id" : "X4jkZFmGAqAEHA_Z",
+        "name" : "Month",
+        "description" : "An enumeration with exactly twelve values: January, February, March, April, May, June, July, August, September, October, November, and December. These values are used to designate the month component of a calendar date.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "enumeration",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : [ {
+          "id" : "0XzkZFmGAqAEHA_s",
+          "name" : "January",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "AmfkZFmGAqAEHBAK",
+          "name" : "February",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "6rAUZFmGAqAEHBAM",
+          "name" : "March",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "4MQUZFmGAqAEHBAO",
+          "name" : "April",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "RBwUZFmGAqAEHBAQ",
+          "name" : "May",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "UjIUZFmGAqAEHBAS",
+          "name" : "June",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "oToUZFmGAqAEHBAU",
+          "name" : "July",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "aoEUZFmGAqAEHBAY",
+          "name" : "August",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "PikUZFmGAqAEHBAa",
+          "name" : "September",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "knUUZFmGAqAEHBAc",
+          "name" : "October",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "cv0UZFmGAqAEHBAe",
+          "name" : "November",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        }, {
+          "id" : "sssUZFmGAqAEHBAg",
+          "name" : "December",
+          "description" : null,
+          "type" : "Literal",
+          "propertyAssignments" : null
+        } ],
+        "restrictedTo" : [ "abstract" ]
+      }, {
+        "id" : "Zw9yWTmAUygefikD",
+        "name" : "Addressable Place",
+        "description" : "Addressable Place is a place considered specifically under the aspect of being addressable, that is, being the target of an Address used to refer to it in a stable and communicable way.\n\nEach Addressable Place is characterized by one or more Addresses, and an Address may characterize one or more Addressable Places, reflecting that the same address information can be applied to multiple places when they are treated as addressable within the same addressing context.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Addressable Location, Place With Address"
+        },
+        "stereotype" : "mixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "PloKWTmAUygefikm",
+        "name" : "Address",
+        "description" : "Address is the quality that specifies a conventional locator for an Addressable Place. It captures the information used to refer to a place for identification and locating purposes in human and system communication.\n\nEach Address is associated with one or more Addressable Places, and each Addressable Place is associated with one or more Addresses, supporting both shared and multiple address assignments where this is required for unambiguous reference.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "quality",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "DnWaWTmAUygefind",
+          "name" : "street name",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "nF2aWTmAUygefinh",
+          "name" : "house number",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "BGOaWTmAUygefinl",
+          "name" : "house number extension",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : ".KuaWTmAUygefinp",
+          "name" : "building name",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "lmeaWTmAUygefint",
+          "name" : "unit designator",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "nARaWTmAUygefinx",
+          "name" : "floor",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "nHpaWTmAUygefioB",
+          "name" : "care of",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "x.ZaWTmAUygefioF",
+          "name" : "post office box",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : ".W5aWTmAUygefioJ",
+          "name" : "postal code",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "FoFaWTmAUygefioN",
+          "name" : "city or location",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "pQNaWTmAUygefiob",
+          "name" : "district or neighborhood",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "nG9aWTmAUygefiof",
+          "name" : "region or state",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "9JDaWTmAUygefioj",
+          "name" : "country",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "yGJ6WTmAUygefirw",
+          "name" : "country code",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "0..1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "quality" ]
+      }, {
+        "id" : "OvOGWTmAUygefiuY",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Zw9yWTmAUygefikD",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "AsiCWTmAUygefiio",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "48EaWTmAUygefimR",
+        "name" : "is address of",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : {
+          "inverse" : "has address"
+        },
+        "stereotype" : "characterization",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "48EaWTmAUygefimS",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "PloKWTmAUygefikm",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "48EaWTmAUygefimU",
+          "name" : "addressable Place",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "Zw9yWTmAUygefikD",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      } ]
+    }, {
+      "id" : ".nq.HJmAUygeKxgs",
+      "name" : "Person",
+      "description" : null,
+      "type" : "Package",
+      "propertyAssignments" : {
+        "stage" : "int"
+      },
+      "contents" : [ {
+        "id" : "G9JsEemAUygeIxAG",
+        "name" : "Person",
+        "description" : "Person is a kind that denotes a single human individual as an agentive biological individual. Within the Agent hierarchy it is treated as an Individual Agent and a biological animal. The class provides the enduring identity of the human across time and contexts and abstracts from specific classifications or statuses.\n\nA Person may bear intrinsic modes such as Sex and Gender, which can be assessed, assigned, or institutionally recognized and give rise to roles including Phenotypic-sex-assessed Person, Sex-at-birth-assigned Person, Legally Recognized Gender Person, and Administratively Recognized Gender Person. A Person may also instantiate phases such as Living Person and Dead Person, and may play social or professional roles such as Offspring, Diagnosing Person, or Healthcare Professional.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Human, Human Being"
+        },
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "GyDpKTmGAqAEHBv.",
+          "name" : "birth date-time",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "F8JTHJmAUygeKycT",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "8KBbHJmAUygeKymZ",
+          "name" : "birth date",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "sujbHJmAUygeKynN",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "E9X5KTmGAqAEHCNE",
+          "name" : "birth year",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "JDcnKTmGAqAEHCRe",
+          "name" : "current age",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "NOglWTmAUygefi9q",
+          "name" : "birth place address",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "PloKWTmAUygefikm",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "7HylWTmAUygefi.B",
+          "name" : "birth country",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "FtGlWTmAUygefi.G",
+          "name" : "birth city or location",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "OmUW4emAUygeIwWo",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "npU9HJmAUygeKyVj",
+        "name" : "is born in",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "creation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "npU9HJmAUygeKyVk",
+          "name" : "offspring",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "G9JsEemAUygeIxAG",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "npU9HJmAUygeKyVm",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "4j7RWTmAUygefix_",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "C4E2eTmGAqAEHBp3",
+        "name" : "is born in",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "creation",
+        "isAbstract" : false,
+        "isDerived" : true,
+        "properties" : [ {
+          "id" : "C4E2eTmGAqAEHBp4",
+          "name" : "offspring",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "6RcBHJmAUygeKxim",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "C4E2eTmGAqAEHBp6",
+          "name" : "birth",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "G9JsEemAUygeIxAG",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      } ]
+    }, {
+      "id" : "4vPWKTmGAqAEHBQi",
+      "name" : "Person Birth",
+      "description" : "This package provides the concepts needed to represent a person's birth as an event that can be linked to a place and categorized by multiplicity. It connects a Person to a Birth event that happened in a Birth Place, where Birth Place is treated as a specialization of Addressable Place. Birth is partitioned into Single Birth and Multiple Birth, and Single Birth is further partitioned into Singleton Birth and Multiple Birth Component, supporting explicit representation of multiple-birth components without mixing categories. Scope is limited to persons after birth and treats prenatal stages as out of scope.\n\nThe package also supports birth provenance at an abstract level through Birth Biological Provenance, which links the person to their Genetic Mother, Genetic Father, and a Gestational Carrier, while leaving detailed conception-to-birth processes outside scope. It assumes nuclear-DNA parentage with one oocyte provider and one sperm provider, and treats additional genetic contributors as out of scope. A constraint prohibits a person from being their own Genetic Mother, Genetic Father, or Gestational Carrier. Derived person attributes are specified from the recorded birth event: birth date-time from Birth.end preserving date, time, and UTC offset, birth date and birth year from Birth.start, and current age as full years computed by comparing the birth date to the current calendar date of use.",
+      "type" : "Package",
+      "propertyAssignments" : {
+        "stage" : "irv"
+      },
+      "contents" : [ {
+        "id" : "6RcBHJmAUygeKxim",
+        "name" : "Birth",
+        "description" : "Birth is an event in which one or more Persons come into existence (i.e., are created by the birth occurrence). It is specialized into Single Birth and Multiple Birth while preserving the same modeling patterns for participants and location. Each Birth occurs at exactly one Birth Place and involves exactly one Gestational Carrier, while a Birth Place or Gestational Carrier may be related to one or more Births.\n\nA Multiple Birth aggregates at least two Multiple Birth Components. Each Multiple Birth Component belongs to exactly one Multiple Birth and is modeled as a kind of Single Birth, recording a required birth position and supporting start/end timestamps for the component occurrence.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Birth Event, Birth Occurrence, Human Birth, Birth of a Human, Birth of a Person"
+        },
+        "stereotype" : "event",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "event" ]
+      }, {
+        "id" : "V8iRHJmAUygeKxqh",
+        "name" : "Birth Biological Provenance",
+        "description" : "Birth Biological Provenance is a relator that reifies a Person’s biological origin by mediating the Person to the biological and gestational participants relevant to that origin. In this model, it links the Person to exactly one Genetic Mother, exactly one Genetic Father, and exactly one Gestational Carrier, and it is in 1–1 correspondence with the Person it describes.\n\nThe same Genetic Mother, Genetic Father, or Gestational Carrier may be related to multiple Persons via distinct Birth Biological Provenance instances. This construct concerns biological/gestational provenance and is distinct from legal or social parentage.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Biological Parentage and Gestation Provenance, Birth Biological Parentage Provenance"
+        },
+        "stereotype" : "relator",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "relator" ]
+      }, {
+        "id" : "sbGxHJmAUygeKxu9",
+        "name" : "Genetic Father",
+        "description" : "Genetic Father is a role played by a Person who is the genetic (paternal) parent of another Person (the offspring). In this model, each Person is related to exactly one Genetic Father, while the same Genetic Father may be related to one or more Persons, typically via Birth Biological Provenance.\n\nGenetic Fatherhood captures biological/genetic parentage (not legal or social parentage). Modeling constraint: Genetic Father is specialized from Karyotypic Male-sex Person, reflecting an explicit restriction adopted in this model.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Genetic Paternal Parent, Paternal Genetic Parent"
+        },
+        "stereotype" : "role",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "UlmxHJmAUygeKxvI",
+        "name" : "Genetic Mother",
+        "description" : "Genetic Mother is a role played by a Person who is the genetic (maternal) parent of another Person (the offspring). In this model, each Person is related to exactly one Genetic Mother, while the same Genetic Mother may be related to one or more Persons, typically via Birth Biological Provenance.\n\nGenetic Motherhood captures biological/genetic parentage (not legal or social parentage) and is distinct from the Gestational Carrier role, which concerns gestation. Modeling constraint: Genetic Mother is specialized from Karyotypic Female-sex Person, reflecting an explicit restriction adopted in this model.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Genetic Maternal Parent, Maternal Genetic Parent"
+        },
+        "stereotype" : "role",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "tVntmTmAUygefhRS",
+        "name" : "Gestational Carrier",
+        "description" : "Gestational Carrier (historical role) is the role played by a Person who carried the pregnancy/gestation that culminated in a Birth.\n\nIn this model, each Birth is associated with exactly one Gestational Carrier, and each Gestational Carrier is associated with one or more Births. Gestational Carrier is linked to Birth Biological Provenance via participation in that relator (each provenance is associated with exactly one Gestational Carrier, and each Gestational Carrier is linked to one or more provenances).\n\nModel assumption: only karyotypic female-sex persons can instantiate Gestational Carrier.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Gestational Mother, Pregnancy Carrier, Gestation Carrier"
+        },
+        "stereotype" : "historicalRole",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "AsiCWTmAUygefiio",
+        "name" : "Birth Place",
+        "description" : "Birth Place is a historical role played by an Addressable Place when it is the location of a Birth event. It classifies a place according to its participation as the site where a Birth occurs.\n\nIn this model, each Birth is characterized by exactly one Birth Place, while an Addressable Place may play the Birth Place role for one or more Births (potentially across different times).",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Place of Birth, Birth Location, Birthplace"
+        },
+        "stereotype" : "historicalRoleMixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "4j7RWTmAUygefix_",
+        "name" : "Single Birth",
+        "description" : "Scope: definition of Single Birth, temporal attributes, and offspring linkage.\n\nSingle Birth is a Birth event that results in the delivery of exactly one offspring (Person). It has start and end attributes typed as OffsetDateTime (multiplicity 1 each).\n\nA Single Birth is associated with exactly one Person via offspring (1), and each Person is linked to exactly one Single Birth (1). Single Birth is partitioned into:\n- Singleton Birth (standalone single birth), and\n- Multiple Birth Component (single birth occurring as part of a Multiple Birth).",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Birth Event of One Infant, Single-outcome Birth, Per-infant Birth Event"
+        },
+        "stereotype" : "event",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "_SvxWTmAUygefi04",
+          "name" : "start",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "F8JTHJmAUygeKycT",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "W3fxWTmAUygefi09",
+          "name" : "end",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "F8JTHJmAUygeKycT",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "event" ]
+      }, {
+        "id" : "rWXRWTmAUygefiyK",
+        "name" : "Multiple Birth",
+        "description" : "Scope: definition of Multiple Birth, its component structure, and temporal bounds.\n\nMultiple Birth is a Birth event that comprises two or more Single Birth component events (Multiple Birth Components), each corresponding to the delivery of one offspring within the overall multiple-birth event. Each Multiple Birth has two or more components (2..*), and each Multiple Birth Component belongs to exactly one Multiple Birth (1).\n\nMultiple Birth.start and Multiple Birth.end are derived temporal bounds (e.g., start = earliest component start; end = latest component end).",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Multiple-infant Birth, Multiple-Infant Birth Event"
+        },
+        "stereotype" : "event",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "AAsJWTmAUygefi1o",
+          "name" : "start",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "F8JTHJmAUygeKycT",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "LniJWTmAUygefi1s",
+          "name" : "end",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "F8JTHJmAUygeKycT",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "event" ]
+      }, {
+        "id" : "EiY5WTmAUygefi52",
+        "name" : "Singleton Birth",
+        "description" : "Scope: definition of Singleton Birth and its distinction from Multiple Birth Component.\n\nSingleton Birth is a Single Birth that is not a component of any Multiple Birth (i.e., a standalone delivery of exactly one offspring). Singleton Birth and Multiple Birth Component form a Disjoint and Covering partition of Single Birth (“single birth type”), so every Single Birth is exactly one of these two specializations.",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Non-component Single Birth, Non-multiple Single Birth"
+        },
+        "stereotype" : "event",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "event" ]
+      }, {
+        "id" : "c9k5WTmAUygefi6B",
+        "name" : "Multiple Birth Component",
+        "description" : "Scope: definition of Multiple Birth Component, its relation to Multiple Birth, and ordering.\n\nMultiple Birth Component is a Single Birth event that represents the delivery of one offspring as part of a Multiple Birth. Each Multiple Birth has two or more components (2..*), and each component belongs to exactly one Multiple Birth (1).\n\nbirth position (int, derived, multiplicity 1) records the ordinal delivery position of the component within its Multiple Birth (e.g., 1 = first delivered, 2 = second, ...), derived from the ordering of components (or from recorded clinical sequence).",
+        "type" : "Class",
+        "propertyAssignments" : {
+          "synonyms" : "Individual Birth in a Multiple Birth"
+        },
+        "stereotype" : "event",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "BAR5WTmAUygefi66",
+          "name" : "birth position",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : true,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "WmUW4emAUygeIwWk",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "event" ]
+      }, {
+        "id" : "TfexWTmAUygefizZ",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "6RcBHJmAUygeKxim",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "4j7RWTmAUygefix_",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "rZ.xWTmAUygefizj",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "6RcBHJmAUygeKxim",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "rWXRWTmAUygefiyK",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "vcD5WTmAUygefi7a",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "4j7RWTmAUygefix_",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "EiY5WTmAUygefi52",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "OUj5WTmAUygefi7k",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "4j7RWTmAUygefix_",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "c9k5WTmAUygefi6B",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "O_EpWTmAUygefi3X",
+        "name" : "birth multiplicity",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : true,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "rZ.xWTmAUygefizj",
+          "type" : "Generalization"
+        }, {
+          "id" : "TfexWTmAUygefizZ",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "H8UFWTmAUygefi8I",
+        "name" : "single birth type",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : true,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "OUj5WTmAUygefi7k",
+          "type" : "Generalization"
+        }, {
+          "id" : "vcD5WTmAUygefi7a",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "rO1FeTmGAqAEHBVa",
+        "name" : "offspring",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : false,
+        "isComplete" : true,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "Xxy2eTmGAqAEHBrK",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "Dsk5HJmAUygeKx9H",
+        "name" : "has genetic mother",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "mediation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "Dsk5HJmAUygeKx9I",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "UlmxHJmAUygeKxvI",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "Dsk5HJmAUygeKx9K",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "V8iRHJmAUygeKxqh",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "aZk5HJmAUygeKx9R",
+        "name" : "has genetic father",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "mediation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "aZk5HJmAUygeKx9S",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "sbGxHJmAUygeKxu9",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "aZk5HJmAUygeKx9U",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "V8iRHJmAUygeKxqh",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "__sFHJmAUygeKyGI",
+        "name" : "is genetic mother of",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "material",
+        "isAbstract" : false,
+        "isDerived" : true,
+        "properties" : [ {
+          "id" : "__sFHJmAUygeKyGJ",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "UlmxHJmAUygeKxvI",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "__sFHJmAUygeKyGL",
+          "name" : "",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "G9JsEemAUygeIxAG",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "iqGFHJmAUygeKyGo",
+        "name" : "is genetic father of",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "material",
+        "isAbstract" : false,
+        "isDerived" : true,
+        "properties" : [ {
+          "id" : "iqGFHJmAUygeKyGp",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "sbGxHJmAUygeKxu9",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "iqGFHJmAUygeKyGr",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "G9JsEemAUygeIxAG",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "byi9mTmAUygefhUo",
+        "name" : "has gestational carrier",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "mediation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "byi9mTmAUygefhUp",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "tVntmTmAUygefhRS",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "byi9mTmAUygefhUr",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "V8iRHJmAUygeKxqh",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "lY3jmTmAUygefh8W",
+        "name" : "participates in",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "participation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "lY3jmTmAUygefh8X",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "tVntmTmAUygefhRS",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "lY3jmTmAUygefh8Z",
+          "name" : "births",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "6RcBHJmAUygeKxim",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "pMiTmTmAUygefh.E",
+        "name" : "has subject person",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "mediation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "pMiTmTmAUygefh.F",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "V8iRHJmAUygeKxqh",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "pMiTmTmAUygefh.H",
+          "name" : "person",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "G9JsEemAUygeIxAG",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "XrBGWTmAUygefiu1",
+        "name" : "happened in",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "characterization",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "XrBGWTmAUygefiu2",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "6RcBHJmAUygeKxim",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "XrBGWTmAUygefiu4",
+          "name" : "birth Place",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "AsiCWTmAUygefiio",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "3gxxWTmAUygefizt",
+        "name" : "is component of",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "participational",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "3gxxWTmAUygefizu",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "2..*",
+          "propertyType" : {
+            "id" : "c9k5WTmAUygefi6B",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "vgxxWTmAUygefizw",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "4j7RWTmAUygefix_",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "COMPOSITE"
+        } ]
+      } ]
+    }, {
+      "id" : "Xxy2eTmGAqAEHBrK",
+      "name" : null,
+      "description" : null,
+      "type" : "Generalization",
+      "propertyAssignments" : null,
+      "general" : {
+        "id" : "C4E2eTmGAqAEHBp3",
+        "type" : "Relation"
+      },
+      "specific" : {
+        "id" : "npU9HJmAUygeKyVj",
+        "type" : "Relation"
+      }
+    }, {
+      "id" : "WmUW4emAUygeIwWk",
+      "name" : "int",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "datatype",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : null,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "abstract" ]
+    }, {
+      "id" : "OmUW4emAUygeIwWo",
+      "name" : "string",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "datatype",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : null,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "abstract" ]
+    } ]
+  },
+  "diagrams" : [ {
+    "id" : "HkDxHJmAUygeKxxB",
+    "name" : "Birth Participants and Place",
+    "description" : "Birth is linked to the persons that originate from it and to the gestational carrier associated with it. Each Person is linked to exactly one Birth, while a Birth may be linked to one or more persons, supporting cases where a single birth is associated with multiple persons. Each Birth is linked to exactly one Gestational Carrier, and each Gestational Carrier may be linked to one or more births across time.\n\nBirth is linked to exactly one Birth Place, and a Birth Place may be linked to one or more births. Birth Place specializes Addressable Place, enabling birth locations to be treated as addressable places. Person is intended to denote an individual after birth; prenatal stages are outside scope here.",
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "4vPWKTmGAqAEHBQi",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "6bBGWTmAUygefiu6",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "XrBGWTmAUygefiu1",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "6bBGWTmAUygefiu6_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 660,
+          "y" : 370
+        }, {
+          "x" : 660,
+          "y" : 266
+        } ]
+      },
+      "source" : {
+        "id" : "HRcxKTmGAqAEHBco",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "AsiCWTmAUygefiin",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "HRcxKTmGAqAEHBco",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "6RcBHJmAUygeKxim",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "HRcxKTmGAqAEHBco_shape",
+        "type" : "Rectangle",
+        "x" : 550,
+        "y" : 370,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "I43jmTmAUygefh8b",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "lY3jmTmAUygefh8W",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "I43jmTmAUygefh8b_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 1005,
+          "y" : 400
+        }, {
+          "x" : 770,
+          "y" : 400
+        } ]
+      },
+      "source" : {
+        "id" : "NVntmTmAUygefhRR",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "HRcxKTmGAqAEHBco",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : ".RGGWTmAUygefit1",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Zw9yWTmAUygefikD",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : ".RGGWTmAUygefit1_shape",
+        "type" : "Rectangle",
+        "x" : 550,
+        "y" : 96,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "f1H2eTmGAqAEHBuP",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "C4E2eTmGAqAEHBp3",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "f1H2eTmGAqAEHBuP_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 314,
+          "y" : 398
+        }, {
+          "x" : 550,
+          "y" : 400
+        } ]
+      },
+      "source" : {
+        "id" : "wbY3_pmAUygeKxVG",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "HRcxKTmGAqAEHBco",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "dvOGWTmAUygefiuZ",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "OvOGWTmAUygefiuY",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "dvOGWTmAUygefiuZ_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 661,
+          "y" : 156
+        }, {
+          "x" : 661,
+          "y" : 205
+        } ]
+      },
+      "source" : {
+        "id" : ".RGGWTmAUygefit1",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "AsiCWTmAUygefiin",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "wbY3_pmAUygeKxVG",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "G9JsEemAUygeIxAG",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "wbY3_pmAUygeKxVG_shape",
+        "type" : "Rectangle",
+        "x" : 94,
+        "y" : 266,
+        "width" : 220,
+        "height" : 161
+      }
+    }, {
+      "id" : "AsiCWTmAUygefiin",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "AsiCWTmAUygefiio",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "AsiCWTmAUygefiin_shape",
+        "type" : "Rectangle",
+        "x" : 550,
+        "y" : 206,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "NVntmTmAUygefhRR",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "tVntmTmAUygefhRS",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "NVntmTmAUygefhRR_shape",
+        "type" : "Rectangle",
+        "x" : 1005,
+        "y" : 370,
+        "width" : 220,
+        "height" : 60
+      }
+    } ]
+  }, {
+    "id" : "MxDbHJmAUygeKym5",
+    "name" : "Datatypes",
+    "description" : "A coherent set of datatypes for calendar and civil time. It includes an enumeration Month with twelve named values, a Date datatype that combines year, month, and day in the proleptic Gregorian calendar, and an OffsetDateTime that reuses Date and adds hour, minute, second, optional nanosecond, and a UTC offset in whole minutes. The separation between Date and OffsetDateTime supports reuse of calendar dates where no time-of-day or offset is needed and enables precise timestamping where an explicit offset is required.",
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "czC2RemGAqAEHA48",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "X4jkZFmGAqAEHA_Y",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "X4jkZFmGAqAEHA_Z",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "X4jkZFmGAqAEHA_Y_shape",
+        "type" : "Rectangle",
+        "x" : 330,
+        "y" : 70,
+        "width" : 140,
+        "height" : 220
+      }
+    }, {
+      "id" : "sujbHJmAUygeKynM",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "sujbHJmAUygeKynN",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "sujbHJmAUygeKynM_shape",
+        "type" : "Rectangle",
+        "x" : 160,
+        "y" : 70,
+        "width" : 140,
+        "height" : 80
+      }
+    }, {
+      "id" : "K5y7HJmAUygeKyp8",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "F8JTHJmAUygeKycT",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "K5y7HJmAUygeKyp8_shape",
+        "type" : "Rectangle",
+        "x" : 690,
+        "y" : 90,
+        "width" : 140,
+        "height" : 150
+      }
+    } ]
+  }, {
+    "id" : "2thsqTmGAqAEHDey",
+    "name" : "Birth Attribute Derivation",
+    "description" : "Person includes birth-derived attributes computed from the Single Birth that creates the Person. Temporal values use the date component of Single Birth.start and the full timestamp of Single Birth.end as recorded.\n\nCurrent age is derived as full years by comparing Single Birth.start.date to today’s calendar date (subtracting one year if the birthday has not occurred yet this year). Birth year is Single Birth.start.date.year; birth date is the date part of Single Birth.start (ignoring time and UTC offset); and birth date-time is taken from Single Birth.end preserving date, clock time, and UTC offset (treat nanosecond as 0 if missing). Place-of-birth attributes (birth place address/country/city-or-location) are derived from the Birth Place used in the Single Birth and the Address applicable at the time of the Birth.",
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "4vPWKTmGAqAEHBQi",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "RAJsqTmGAqAEHDfs",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "G9JsEemAUygeIxAG",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "RAJsqTmGAqAEHDfs_shape",
+        "type" : "Rectangle",
+        "x" : 80,
+        "y" : 80,
+        "width" : 220,
+        "height" : 480
+      }
+    } ]
+  }, {
+    "id" : "ChibmTmAUygefiJX",
+    "name" : "Birth Provenance",
+    "description" : "This diagram models biological birth provenance for a Person via a Birth Biological Provenance relator. Each Person is linked to exactly one provenance, which links the Person to exactly one Genetic Mother, one Genetic Father, and one Gestational Carrier; each contributor may participate in one or more provenances over time. Genetic Mother and Genetic Father are also connected directly to Person via the named material relations “is genetic mother of” and “is genetic father of”.\n\nScope is restricted to nuclear-DNA parentage with exactly one oocyte provider and one sperm provider per person (excluding additional contributors such as mitochondrial donation). Genetic Mother and Gestational Carrier specialize Karyotypic Female-sex Person; Genetic Father specializes Karyotypic Male-sex Person. A Person cannot be their own genetic mother, genetic father, or gestational carrier; prenatal stages are out of scope.",
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "4vPWKTmGAqAEHBQi",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "EF17mTmAUygefiNk",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "byi9mTmAUygefhUo",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "EF17mTmAUygefiNk_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 621,
+          "y" : 360
+        }, {
+          "x" : 819,
+          "y" : 360
+        } ]
+      },
+      "source" : {
+        "id" : "TR17mTmAUygefiMI",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "np17mTmAUygefiMs",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "CZ17mTmAUygefiM1",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "aZk5HJmAUygeKx9R",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "CZ17mTmAUygefiM1_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 520,
+          "y" : 391
+        }, {
+          "x" : 520,
+          "y" : 509
+        } ]
+      },
+      "source" : {
+        "id" : "TR17mTmAUygefiMI",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "0x17mTmAUygefiML",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "0x17mTmAUygefiML",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "sbGxHJmAUygeKxu9",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "0x17mTmAUygefiML_shape",
+        "type" : "Rectangle",
+        "x" : 430,
+        "y" : 510,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "gF17mTmAUygefiNh",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "PMPtmTmAUygefhRm",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "gF17mTmAUygefiNh_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 915,
+          "y" : 221
+        }, {
+          "x" : 915,
+          "y" : 339
+        } ]
+      },
+      "source" : {
+        "id" : "6J17mTmAUygefiMa",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "np17mTmAUygefiMs",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "YZ17mTmAUygefiMv",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "ywV5HJmAUygeKyDD",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "YZ17mTmAUygefiMv_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 819,
+          "y" : 195
+        }, {
+          "x" : 621,
+          "y" : 195
+        } ]
+      },
+      "source" : {
+        "id" : "6J17mTmAUygefiMa",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Jx17mTmAUygefiMO",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "4517mTmAUygefiNE",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "iqGFHJmAUygeKyGo",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "4517mTmAUygefiNE_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 429,
+          "y" : 535
+        }, {
+          "x" : 130,
+          "y" : 535
+        }, {
+          "x" : 130,
+          "y" : 391
+        } ]
+      },
+      "source" : {
+        "id" : "0x17mTmAUygefiML",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "jx17mTmAUygefiMR",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "hJ17mTmAUygefiMd",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "tH1usemAUygeIx7d",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "hJ17mTmAUygefiMd_shape",
+        "type" : "Rectangle",
+        "x" : 820,
+        "y" : 510,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "0Z17mTmAUygefiMy",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "6OV5HJmAUygeKyDN",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "0Z17mTmAUygefiMy_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 819,
+          "y" : 535
+        }, {
+          "x" : 621,
+          "y" : 535
+        } ]
+      },
+      "source" : {
+        "id" : "hJ17mTmAUygefiMd",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "0x17mTmAUygefiML",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "jx17mTmAUygefiMR",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "G9JsEemAUygeIxAG",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "jx17mTmAUygefiMR_shape",
+        "type" : "Rectangle",
+        "x" : 40,
+        "y" : 340,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "np17mTmAUygefiMs",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "tVntmTmAUygefhRS",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "np17mTmAUygefiMs_shape",
+        "type" : "Rectangle",
+        "x" : 820,
+        "y" : 340,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "6J17mTmAUygefiMa",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "KIdusemAUygeIx74",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "6J17mTmAUygefiMa_shape",
+        "type" : "Rectangle",
+        "x" : 820,
+        "y" : 170,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "tF17mTmAUygefiNu",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "pMiTmTmAUygefh.E",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "tF17mTmAUygefiNu_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 429,
+          "y" : 360
+        }, {
+          "x" : 231,
+          "y" : 360
+        } ]
+      },
+      "source" : {
+        "id" : "TR17mTmAUygefiMI",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "jx17mTmAUygefiMR",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "1Z17mTmAUygefiM6",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "Dsk5HJmAUygeKx9H",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "1Z17mTmAUygefiM6_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 520,
+          "y" : 339
+        }, {
+          "x" : 520,
+          "y" : 221
+        } ]
+      },
+      "source" : {
+        "id" : "TR17mTmAUygefiMI",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Jx17mTmAUygefiMO",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "HZ17mTmAUygefiM_",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "__sFHJmAUygeKyGI",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "HZ17mTmAUygefiM__path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 429,
+          "y" : 195
+        }, {
+          "x" : 130,
+          "y" : 195
+        }, {
+          "x" : 130,
+          "y" : 339
+        } ]
+      },
+      "source" : {
+        "id" : "Jx17mTmAUygefiMO",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "jx17mTmAUygefiMR",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "Jx17mTmAUygefiMO",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "UlmxHJmAUygeKxvI",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Jx17mTmAUygefiMO_shape",
+        "type" : "Rectangle",
+        "x" : 430,
+        "y" : 170,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "TR17mTmAUygefiMI",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "V8iRHJmAUygeKxqh",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "TR17mTmAUygefiMI_shape",
+        "type" : "Rectangle",
+        "x" : 430,
+        "y" : 340,
+        "width" : 190,
+        "height" : 50
+      }
+    } ]
+  }, {
+    "id" : "2xdyWTmAUygefijv",
+    "name" : "Addressable Place",
+    "description" : "Address characterizes Addressable Place via “is address of”. Multiplicity 1..* on both ends supports multiple addresses per place and (when needed) reuse of the same address across multiple addressable places.",
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "czC2RemGAqAEHA48",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "28EaWTmAUygefimW",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "48EaWTmAUygefimR",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "28EaWTmAUygefimW_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 579,
+          "y" : 140
+        }, {
+          "x" : 330,
+          "y" : 140
+        } ]
+      },
+      "source" : {
+        "id" : "PloKWTmAUygefikl",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Zw9yWTmAUygefikC",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "PloKWTmAUygefikl",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "PloKWTmAUygefikm",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "PloKWTmAUygefikl_shape",
+        "type" : "Rectangle",
+        "x" : 580,
+        "y" : 120,
+        "width" : 220,
+        "height" : 247
+      }
+    }, {
+      "id" : "Zw9yWTmAUygefikC",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Zw9yWTmAUygefikD",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Zw9yWTmAUygefikC_shape",
+        "type" : "Rectangle",
+        "x" : 160,
+        "y" : 120,
+        "width" : 170,
+        "height" : 60
+      }
+    } ]
+  }, {
+    "id" : "Rkg2eTmGAqAEHBZy",
+    "name" : "Birth Types",
+    "description" : "Birth is specialized into Single Birth and Multiple Birth, distinguishing births by whether they correspond to one person or to a grouped multiple birth. Single Birth is specialized into Singleton Birth and Multiple Birth Component, supporting a representation where each component birth in a multiple birth is itself treated as a single birth instance. Multiple Birth is linked to Multiple Birth Components in a whole-part relation where each Multiple Birth is linked to two or more components and each component is linked to exactly one Multiple Birth.\n\nThe Person to Birth link is specialized for Single Birth, using an offspring relation between Person and Single Birth with multiplicity 1 at both ends. Birth position for Multiple Birth Component is derived by ranking the components of the same Multiple Birth by start time (earliest to latest), using end time only to break ties when start times match; the rank is the birth position. Multiple Birth start matches the earliest component start, and Multiple Birth end matches the latest component end.",
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "4vPWKTmGAqAEHBQi",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "lKw2eTmGAqAEHBoP",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "6RcBHJmAUygeKxim",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "lKw2eTmGAqAEHBoP_shape",
+        "type" : "Rectangle",
+        "x" : 750,
+        "y" : 60,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "o6w2eTmGAqAEHBoq",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "rZ.xWTmAUygefizj",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "o6w2eTmGAqAEHBoq_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 860,
+          "y" : 120
+        }, {
+          "x" : 860,
+          "y" : 210
+        }, {
+          "x" : 1040,
+          "y" : 210
+        }, {
+          "x" : 1040,
+          "y" : 258
+        } ]
+      },
+      "source" : {
+        "id" : "lKw2eTmGAqAEHBoP",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Eaw2eTmGAqAEHBok",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "hu1FeTmGAqAEHBVc",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "rO1FeTmGAqAEHBVa",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "hu1FeTmGAqAEHBVc_shape",
+        "type" : "Text",
+        "x" : 400,
+        "y" : 160,
+        "width" : 80,
+        "height" : 50,
+        "value" : ""
+      }
+    }, {
+      "id" : "_Ww2eTmGAqAEHBpV",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "3gxxWTmAUygefizt",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "_Ww2eTmGAqAEHBpV_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 920,
+          "y" : 490
+        }, {
+          "x" : 1044,
+          "y" : 490
+        }, {
+          "x" : 1044,
+          "y" : 340
+        } ]
+      },
+      "source" : {
+        "id" : "J6w2eTmGAqAEHBow",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Eaw2eTmGAqAEHBok",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "82w2eTmGAqAEHBpa",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "vcD5WTmAUygefi7a",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "82w2eTmGAqAEHBpa_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 683,
+          "y" : 340
+        }, {
+          "x" : 683,
+          "y" : 450
+        }, {
+          "x" : 590,
+          "y" : 450
+        }, {
+          "x" : 590,
+          "y" : 480
+        } ]
+      },
+      "source" : {
+        "id" : "7qw2eTmGAqAEHBoh",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "u6w2eTmGAqAEHBot",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "wGw2eTmGAqAEHBo2",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "OUj5WTmAUygefi7k",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "wGw2eTmGAqAEHBo2_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 683,
+          "y" : 340
+        }, {
+          "x" : 683,
+          "y" : 450
+        }, {
+          "x" : 780,
+          "y" : 450
+        }, {
+          "x" : 780,
+          "y" : 480
+        } ]
+      },
+      "source" : {
+        "id" : "7qw2eTmGAqAEHBoh",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "J6w2eTmGAqAEHBow",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "Eaw2eTmGAqAEHBok",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "rWXRWTmAUygefiyK",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Eaw2eTmGAqAEHBok_shape",
+        "type" : "Rectangle",
+        "x" : 930,
+        "y" : 260,
+        "width" : 230,
+        "height" : 80
+      }
+    }, {
+      "id" : "7qw2eTmGAqAEHBoh",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "4j7RWTmAUygefix_",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "7qw2eTmGAqAEHBoh_shape",
+        "type" : "Rectangle",
+        "x" : 570,
+        "y" : 260,
+        "width" : 230,
+        "height" : 80
+      }
+    }, {
+      "id" : "14w2eTmGAqAEHBam",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "G9JsEemAUygeIxAG",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "14w2eTmGAqAEHBam_shape",
+        "type" : "Rectangle",
+        "x" : 90,
+        "y" : 60,
+        "width" : 220,
+        "height" : 280
+      }
+    }, {
+      "id" : "J6w2eTmGAqAEHBow",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "c9k5WTmAUygefi6B",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "J6w2eTmGAqAEHBow_shape",
+        "type" : "Rectangle",
+        "x" : 700,
+        "y" : 480,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "L6w2eTmGAqAEHBoz",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "H8UFWTmAUygefi8I",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "L6w2eTmGAqAEHBoz_shape",
+        "type" : "Text",
+        "x" : 710,
+        "y" : 380,
+        "width" : 90,
+        "height" : 50,
+        "value" : ""
+      }
+    }, {
+      "id" : "u6w2eTmGAqAEHBot",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "EiY5WTmAUygefi52",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "u6w2eTmGAqAEHBot_shape",
+        "type" : "Rectangle",
+        "x" : 450,
+        "y" : 480,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "xQi2eTmGAqAEHBq3",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "C4E2eTmGAqAEHBp3",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "xQi2eTmGAqAEHBq3_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 310,
+          "y" : 90
+        }, {
+          "x" : 749,
+          "y" : 90
+        } ]
+      },
+      "source" : {
+        "id" : "14w2eTmGAqAEHBam",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "lKw2eTmGAqAEHBoP",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "CWw2eTmGAqAEHBpS",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "TfexWTmAUygefizZ",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "CWw2eTmGAqAEHBpS_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 859,
+          "y" : 120
+        }, {
+          "x" : 859,
+          "y" : 210
+        }, {
+          "x" : 678,
+          "y" : 210
+        }, {
+          "x" : 678,
+          "y" : 260
+        } ]
+      },
+      "source" : {
+        "id" : "lKw2eTmGAqAEHBoP",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "7qw2eTmGAqAEHBoh",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "aaw2eTmGAqAEHBon",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "O_EpWTmAUygefi3X",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "aaw2eTmGAqAEHBon_shape",
+        "type" : "Text",
+        "x" : 880,
+        "y" : 150,
+        "width" : 90,
+        "height" : 50,
+        "value" : ""
+      }
+    }, {
+      "id" : "yGw2eTmGAqAEHBo8",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "npU9HJmAUygeKyVj",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "yGw2eTmGAqAEHBo8_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 310,
+          "y" : 300
+        }, {
+          "x" : 570,
+          "y" : 300
+        } ]
+      },
+      "source" : {
+        "id" : "14w2eTmGAqAEHBam",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "7qw2eTmGAqAEHBoh",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "iJy2eTmGAqAEHBrL",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "Xxy2eTmGAqAEHBrK",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "iJy2eTmGAqAEHBrL_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 399,
+          "y" : 90
+        }, {
+          "x" : 399,
+          "y" : 299
+        } ]
+      },
+      "source" : {
+        "id" : "xQi2eTmGAqAEHBq3",
+        "type" : "RelationView"
+      },
+      "target" : {
+        "id" : "yGw2eTmGAqAEHBo8",
+        "type" : "RelationView"
+      }
+    } ]
+  } ]
+}
