@@ -998,7 +998,7 @@
       }, {
         "id" : "V8iRHJmAUygeKxqh",
         "name" : "Birth Biological Provenance",
-        "description" : "Birth Biological Provenance is a relator that reifies a Personís biological origin by mediating the Person to the biological and gestational participants relevant to that origin. In this model, it links the Person to exactly one Genetic Mother, exactly one Genetic Father, and exactly one Gestational Carrier, and it is in 1ñ1 correspondence with the Person it describes.\n\nThe same Genetic Mother, Genetic Father, or Gestational Carrier may be related to multiple Persons via distinct Birth Biological Provenance instances. This construct concerns biological/gestational provenance and is distinct from legal or social parentage.",
+        "description" : "Birth Biological Provenance is a relator that reifies a Person‚Äôs biological origin by mediating the Person to the biological and gestational participants relevant to that origin. In this model, it links the Person to exactly one Genetic Mother, exactly one Genetic Father, and exactly one Gestational Carrier, and it is in 1‚Äì1 correspondence with the Person it describes.\n\nThe same Genetic Mother, Genetic Father, or Gestational Carrier may be related to multiple Persons via distinct Birth Biological Provenance instances. This construct concerns biological/gestational provenance and is distinct from legal or social parentage.",
         "type" : "Class",
         "propertyAssignments" : {
           "synonyms" : "Biological Parentage and Gestation Provenance, Birth Biological Parentage Provenance"
@@ -1189,7 +1189,7 @@
       }, {
         "id" : "EiY5WTmAUygefi52",
         "name" : "Singleton Birth",
-        "description" : "Scope: definition of Singleton Birth and its distinction from Multiple Birth Component.\n\nSingleton Birth is a Single Birth that is not a component of any Multiple Birth (i.e., a standalone delivery of exactly one offspring). Singleton Birth and Multiple Birth Component form a Disjoint and Covering partition of Single Birth (ìsingle birth typeî), so every Single Birth is exactly one of these two specializations.",
+        "description" : "Scope: definition of Singleton Birth and its distinction from Multiple Birth Component.\n\nSingleton Birth is a Single Birth that is not a component of any Multiple Birth (i.e., a standalone delivery of exactly one offspring). Singleton Birth and Multiple Birth Component form a Disjoint and Covering partition of Single Birth (‚Äúsingle birth type‚Äù), so every Single Birth is exactly one of these two specializations.",
         "type" : "Class",
         "propertyAssignments" : {
           "synonyms" : "Non-component Single Birth, Non-multiple Single Birth"
@@ -1304,10 +1304,10 @@
         "isComplete" : true,
         "categorizer" : null,
         "generalizations" : [ {
-          "id" : "TfexWTmAUygefizZ",
+          "id" : "rZ.xWTmAUygefizj",
           "type" : "Generalization"
         }, {
-          "id" : "rZ.xWTmAUygefizj",
+          "id" : "TfexWTmAUygefizZ",
           "type" : "Generalization"
         } ]
       }, {
@@ -1320,10 +1320,10 @@
         "isComplete" : true,
         "categorizer" : null,
         "generalizations" : [ {
-          "id" : "vcD5WTmAUygefi7a",
+          "id" : "OUj5WTmAUygefi7k",
           "type" : "Generalization"
         }, {
-          "id" : "OUj5WTmAUygefi7k",
+          "id" : "vcD5WTmAUygefi7a",
           "type" : "Generalization"
         } ]
       }, {
@@ -1769,8 +1769,8 @@
         "type" : "Relation"
       }
     }, {
-      "id" : "OmUW4emAUygeIwWo",
-      "name" : "string",
+      "id" : "WmUW4emAUygeIwWk",
+      "name" : "int",
       "description" : null,
       "type" : "Class",
       "propertyAssignments" : null,
@@ -1784,8 +1784,8 @@
       "literals" : null,
       "restrictedTo" : [ "abstract" ]
     }, {
-      "id" : "WmUW4emAUygeIwWk",
-      "name" : "int",
+      "id" : "OmUW4emAUygeIwWo",
+      "name" : "string",
       "description" : null,
       "type" : "Class",
       "propertyAssignments" : null,
@@ -1810,6 +1810,47 @@
       "type" : "Package"
     },
     "contents" : [ {
+      "id" : "6bBGWTmAUygefiu6",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "XrBGWTmAUygefiu1",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "6bBGWTmAUygefiu6_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 660,
+          "y" : 370
+        }, {
+          "x" : 660,
+          "y" : 266
+        } ]
+      },
+      "source" : {
+        "id" : "HRcxKTmGAqAEHBco",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "AsiCWTmAUygefiin",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "HRcxKTmGAqAEHBco",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "6RcBHJmAUygeKxim",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "HRcxKTmGAqAEHBco_shape",
+        "type" : "Rectangle",
+        "x" : 550,
+        "y" : 370,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
       "id" : "I43jmTmAUygefh8b",
       "type" : "RelationView",
       "modelElement" : {
@@ -1836,19 +1877,45 @@
         "type" : "ClassView"
       }
     }, {
-      "id" : "NVntmTmAUygefhRR",
+      "id" : ".RGGWTmAUygefit1",
       "type" : "ClassView",
       "modelElement" : {
-        "id" : "tVntmTmAUygefhRS",
+        "id" : "Zw9yWTmAUygefikD",
         "type" : "Class"
       },
       "shape" : {
-        "id" : "NVntmTmAUygefhRR_shape",
+        "id" : ".RGGWTmAUygefit1_shape",
         "type" : "Rectangle",
-        "x" : 1005,
-        "y" : 370,
+        "x" : 550,
+        "y" : 96,
         "width" : 220,
         "height" : 60
+      }
+    }, {
+      "id" : "f1H2eTmGAqAEHBuP",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "C4E2eTmGAqAEHBp3",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "f1H2eTmGAqAEHBuP_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 314,
+          "y" : 398
+        }, {
+          "x" : 550,
+          "y" : 400
+        } ]
+      },
+      "source" : {
+        "id" : "wbY3_pmAUygeKxVG",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "HRcxKTmGAqAEHBco",
+        "type" : "ClassView"
       }
     }, {
       "id" : "dvOGWTmAUygefiuZ",
@@ -1862,10 +1929,10 @@
         "type" : "Path",
         "points" : [ {
           "x" : 661,
-          "y" : 157
+          "y" : 156
         }, {
           "x" : 661,
-          "y" : 206
+          "y" : 205
         } ]
       },
       "source" : {
@@ -1907,86 +1974,19 @@
         "height" : 60
       }
     }, {
-      "id" : "HRcxKTmGAqAEHBco",
+      "id" : "NVntmTmAUygefhRR",
       "type" : "ClassView",
       "modelElement" : {
-        "id" : "6RcBHJmAUygeKxim",
+        "id" : "tVntmTmAUygefhRS",
         "type" : "Class"
       },
       "shape" : {
-        "id" : "HRcxKTmGAqAEHBco_shape",
+        "id" : "NVntmTmAUygefhRR_shape",
         "type" : "Rectangle",
-        "x" : 550,
+        "x" : 1005,
         "y" : 370,
         "width" : 220,
         "height" : 60
-      }
-    }, {
-      "id" : ".RGGWTmAUygefit1",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "Zw9yWTmAUygefikD",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : ".RGGWTmAUygefit1_shape",
-        "type" : "Rectangle",
-        "x" : 550,
-        "y" : 96,
-        "width" : 220,
-        "height" : 60
-      }
-    }, {
-      "id" : "6bBGWTmAUygefiu6",
-      "type" : "RelationView",
-      "modelElement" : {
-        "id" : "XrBGWTmAUygefiu1",
-        "type" : "Relation"
-      },
-      "shape" : {
-        "id" : "6bBGWTmAUygefiu6_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 660,
-          "y" : 370
-        }, {
-          "x" : 660,
-          "y" : 267
-        } ]
-      },
-      "source" : {
-        "id" : "HRcxKTmGAqAEHBco",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "AsiCWTmAUygefiin",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "f1H2eTmGAqAEHBuP",
-      "type" : "RelationView",
-      "modelElement" : {
-        "id" : "C4E2eTmGAqAEHBp3",
-        "type" : "Relation"
-      },
-      "shape" : {
-        "id" : "f1H2eTmGAqAEHBuP_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 314,
-          "y" : 399
-        }, {
-          "x" : 550,
-          "y" : 400
-        } ]
-      },
-      "source" : {
-        "id" : "wbY3_pmAUygeKxVG",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "HRcxKTmGAqAEHBco",
-        "type" : "ClassView"
       }
     } ]
   }, {
@@ -1999,21 +1999,6 @@
       "type" : "Package"
     },
     "contents" : [ {
-      "id" : "sujbHJmAUygeKynM",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "sujbHJmAUygeKynN",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "sujbHJmAUygeKynM_shape",
-        "type" : "Rectangle",
-        "x" : 160,
-        "y" : 70,
-        "width" : 140,
-        "height" : 80
-      }
-    }, {
       "id" : "X4jkZFmGAqAEHA_Y",
       "type" : "ClassView",
       "modelElement" : {
@@ -2027,6 +2012,21 @@
         "y" : 70,
         "width" : 140,
         "height" : 220
+      }
+    }, {
+      "id" : "sujbHJmAUygeKynM",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "sujbHJmAUygeKynN",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "sujbHJmAUygeKynM_shape",
+        "type" : "Rectangle",
+        "x" : 160,
+        "y" : 70,
+        "width" : 140,
+        "height" : 80
       }
     }, {
       "id" : "K5y7HJmAUygeKyp8",
@@ -2047,7 +2047,7 @@
   }, {
     "id" : "2thsqTmGAqAEHDey",
     "name" : "Birth Attribute Derivation",
-    "description" : "Person includes birth-derived attributes computed from the Single Birth that creates the Person. Temporal values use the date component of Single Birth.start and the full timestamp of Single Birth.end as recorded.\n\nCurrent age is derived as full years by comparing Single Birth.start.date to todayís calendar date (subtracting one year if the birthday has not occurred yet this year). Birth year is Single Birth.start.date.year; birth date is the date part of Single Birth.start (ignoring time and UTC offset); and birth date-time is taken from Single Birth.end preserving date, clock time, and UTC offset (treat nanosecond as 0 if missing). Place-of-birth attributes (birth place address/country/city-or-location) are derived from the Birth Place used in the Single Birth and the Address applicable at the time of the Birth.",
+    "description" : "Person includes birth-derived attributes computed from the Single Birth that creates the Person. Temporal values use the date component of Single Birth.start and the full timestamp of Single Birth.end as recorded.\n\nCurrent age is derived as full years by comparing Single Birth.start.date to today‚Äôs calendar date (subtracting one year if the birthday has not occurred yet this year). Birth year is Single Birth.start.date.year; birth date is the date part of Single Birth.start (ignoring time and UTC offset); and birth date-time is taken from Single Birth.end preserving date, clock time, and UTC offset (treat nanosecond as 0 if missing). Place-of-birth attributes (birth place address/country/city-or-location) are derived from the Birth Place used in the Single Birth and the Address applicable at the time of the Birth.",
     "type" : "Diagram",
     "owner" : {
       "id" : "4vPWKTmGAqAEHBQi",
@@ -2072,56 +2072,37 @@
   }, {
     "id" : "ChibmTmAUygefiJX",
     "name" : "Birth Provenance",
-    "description" : "This diagram models biological birth provenance for a Person via a Birth Biological Provenance relator. Each Person is linked to exactly one provenance, which links the Person to exactly one Genetic Mother, one Genetic Father, and one Gestational Carrier; each contributor may participate in one or more provenances over time. Genetic Mother and Genetic Father are also connected directly to Person via the named material relations ìis genetic mother ofî and ìis genetic father ofî.\n\nScope is restricted to nuclear-DNA parentage with exactly one oocyte provider and one sperm provider per person (excluding additional contributors such as mitochondrial donation). Genetic Mother and Gestational Carrier specialize Karyotypic Female-sex Person; Genetic Father specializes Karyotypic Male-sex Person. A Person cannot be their own genetic mother, genetic father, or gestational carrier; prenatal stages are out of scope.",
+    "description" : "This diagram models biological birth provenance for a Person via a Birth Biological Provenance relator. Each Person is linked to exactly one provenance, which links the Person to exactly one Genetic Mother, one Genetic Father, and one Gestational Carrier; each contributor may participate in one or more provenances over time. Genetic Mother and Genetic Father are also connected directly to Person via the named material relations ‚Äúis genetic mother of‚Äù and ‚Äúis genetic father of‚Äù.\n\nScope is restricted to nuclear-DNA parentage with exactly one oocyte provider and one sperm provider per person (excluding additional contributors such as mitochondrial donation). Genetic Mother and Gestational Carrier specialize Karyotypic Female-sex Person; Genetic Father specializes Karyotypic Male-sex Person. A Person cannot be their own genetic mother, genetic father, or gestational carrier; prenatal stages are out of scope.",
     "type" : "Diagram",
     "owner" : {
       "id" : "4vPWKTmGAqAEHBQi",
       "type" : "Package"
     },
     "contents" : [ {
-      "id" : "0x17mTmAUygefiML",
-      "type" : "ClassView",
+      "id" : "EF17mTmAUygefiNk",
+      "type" : "RelationView",
       "modelElement" : {
-        "id" : "sbGxHJmAUygeKxu9",
-        "type" : "Class"
+        "id" : "byi9mTmAUygefhUo",
+        "type" : "Relation"
       },
       "shape" : {
-        "id" : "0x17mTmAUygefiML_shape",
-        "type" : "Rectangle",
-        "x" : 430,
-        "y" : 510,
-        "width" : 190,
-        "height" : 50
-      }
-    }, {
-      "id" : "TR17mTmAUygefiMI",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "V8iRHJmAUygeKxqh",
-        "type" : "Class"
+        "id" : "EF17mTmAUygefiNk_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 621,
+          "y" : 360
+        }, {
+          "x" : 819,
+          "y" : 360
+        } ]
       },
-      "shape" : {
-        "id" : "TR17mTmAUygefiMI_shape",
-        "type" : "Rectangle",
-        "x" : 430,
-        "y" : 340,
-        "width" : 190,
-        "height" : 50
-      }
-    }, {
-      "id" : "np17mTmAUygefiMs",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "tVntmTmAUygefhRS",
-        "type" : "Class"
+      "source" : {
+        "id" : "TR17mTmAUygefiMI",
+        "type" : "ClassView"
       },
-      "shape" : {
-        "id" : "np17mTmAUygefiMs_shape",
-        "type" : "Rectangle",
-        "x" : 820,
-        "y" : 340,
-        "width" : 190,
-        "height" : 50
+      "target" : {
+        "id" : "np17mTmAUygefiMs",
+        "type" : "ClassView"
       }
     }, {
       "id" : "CZ17mTmAUygefiM1",
@@ -2150,28 +2131,95 @@
         "type" : "ClassView"
       }
     }, {
-      "id" : "HZ17mTmAUygefiM_",
-      "type" : "RelationView",
+      "id" : "0x17mTmAUygefiML",
+      "type" : "ClassView",
       "modelElement" : {
-        "id" : "__sFHJmAUygeKyGI",
-        "type" : "Relation"
+        "id" : "sbGxHJmAUygeKxu9",
+        "type" : "Class"
       },
       "shape" : {
-        "id" : "HZ17mTmAUygefiM__path",
+        "id" : "0x17mTmAUygefiML_shape",
+        "type" : "Rectangle",
+        "x" : 430,
+        "y" : 510,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "gF17mTmAUygefiNh",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "PMPtmTmAUygefhRm",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "gF17mTmAUygefiNh_path",
         "type" : "Path",
         "points" : [ {
-          "x" : 429,
-          "y" : 195
+          "x" : 915,
+          "y" : 221
         }, {
-          "x" : 130,
-          "y" : 195
-        }, {
-          "x" : 130,
+          "x" : 915,
           "y" : 339
         } ]
       },
       "source" : {
+        "id" : "6J17mTmAUygefiMa",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "np17mTmAUygefiMs",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "YZ17mTmAUygefiMv",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "ywV5HJmAUygeKyDD",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "YZ17mTmAUygefiMv_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 819,
+          "y" : 195
+        }, {
+          "x" : 621,
+          "y" : 195
+        } ]
+      },
+      "source" : {
+        "id" : "6J17mTmAUygefiMa",
+        "type" : "ClassView"
+      },
+      "target" : {
         "id" : "Jx17mTmAUygefiMO",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "4517mTmAUygefiNE",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "iqGFHJmAUygeKyGo",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "4517mTmAUygefiNE_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 429,
+          "y" : 535
+        }, {
+          "x" : 130,
+          "y" : 535
+        }, {
+          "x" : 130,
+          "y" : 391
+        } ]
+      },
+      "source" : {
+        "id" : "0x17mTmAUygefiML",
         "type" : "ClassView"
       },
       "target" : {
@@ -2235,6 +2283,21 @@
         "height" : 50
       }
     }, {
+      "id" : "np17mTmAUygefiMs",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "tVntmTmAUygefhRS",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "np17mTmAUygefiMs_shape",
+        "type" : "Rectangle",
+        "x" : 820,
+        "y" : 340,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
       "id" : "6J17mTmAUygefiMa",
       "type" : "ClassView",
       "modelElement" : {
@@ -2248,102 +2311,6 @@
         "y" : 170,
         "width" : 190,
         "height" : 50
-      }
-    }, {
-      "id" : "Jx17mTmAUygefiMO",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "UlmxHJmAUygeKxvI",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "Jx17mTmAUygefiMO_shape",
-        "type" : "Rectangle",
-        "x" : 430,
-        "y" : 170,
-        "width" : 190,
-        "height" : 50
-      }
-    }, {
-      "id" : "EF17mTmAUygefiNk",
-      "type" : "RelationView",
-      "modelElement" : {
-        "id" : "byi9mTmAUygefhUo",
-        "type" : "Relation"
-      },
-      "shape" : {
-        "id" : "EF17mTmAUygefiNk_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 621,
-          "y" : 360
-        }, {
-          "x" : 819,
-          "y" : 360
-        } ]
-      },
-      "source" : {
-        "id" : "TR17mTmAUygefiMI",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "np17mTmAUygefiMs",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "4517mTmAUygefiNE",
-      "type" : "RelationView",
-      "modelElement" : {
-        "id" : "iqGFHJmAUygeKyGo",
-        "type" : "Relation"
-      },
-      "shape" : {
-        "id" : "4517mTmAUygefiNE_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 429,
-          "y" : 535
-        }, {
-          "x" : 130,
-          "y" : 535
-        }, {
-          "x" : 130,
-          "y" : 391
-        } ]
-      },
-      "source" : {
-        "id" : "0x17mTmAUygefiML",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "jx17mTmAUygefiMR",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "gF17mTmAUygefiNh",
-      "type" : "GeneralizationView",
-      "modelElement" : {
-        "id" : "PMPtmTmAUygefhRm",
-        "type" : "Generalization"
-      },
-      "shape" : {
-        "id" : "gF17mTmAUygefiNh_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 915,
-          "y" : 221
-        }, {
-          "x" : 915,
-          "y" : 339
-        } ]
-      },
-      "source" : {
-        "id" : "6J17mTmAUygefiMa",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "np17mTmAUygefiMs",
-        "type" : "ClassView"
       }
     }, {
       "id" : "tF17mTmAUygefiNu",
@@ -2398,36 +2365,69 @@
         "type" : "ClassView"
       }
     }, {
-      "id" : "YZ17mTmAUygefiMv",
-      "type" : "GeneralizationView",
+      "id" : "HZ17mTmAUygefiM_",
+      "type" : "RelationView",
       "modelElement" : {
-        "id" : "ywV5HJmAUygeKyDD",
-        "type" : "Generalization"
+        "id" : "__sFHJmAUygeKyGI",
+        "type" : "Relation"
       },
       "shape" : {
-        "id" : "YZ17mTmAUygefiMv_path",
+        "id" : "HZ17mTmAUygefiM__path",
         "type" : "Path",
         "points" : [ {
-          "x" : 819,
+          "x" : 429,
           "y" : 195
         }, {
-          "x" : 621,
+          "x" : 130,
           "y" : 195
+        }, {
+          "x" : 130,
+          "y" : 339
         } ]
       },
       "source" : {
-        "id" : "6J17mTmAUygefiMa",
+        "id" : "Jx17mTmAUygefiMO",
         "type" : "ClassView"
       },
       "target" : {
-        "id" : "Jx17mTmAUygefiMO",
+        "id" : "jx17mTmAUygefiMR",
         "type" : "ClassView"
+      }
+    }, {
+      "id" : "Jx17mTmAUygefiMO",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "UlmxHJmAUygeKxvI",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Jx17mTmAUygefiMO_shape",
+        "type" : "Rectangle",
+        "x" : 430,
+        "y" : 170,
+        "width" : 190,
+        "height" : 50
+      }
+    }, {
+      "id" : "TR17mTmAUygefiMI",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "V8iRHJmAUygeKxqh",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "TR17mTmAUygefiMI_shape",
+        "type" : "Rectangle",
+        "x" : 430,
+        "y" : 340,
+        "width" : 190,
+        "height" : 50
       }
     } ]
   }, {
     "id" : "2xdyWTmAUygefijv",
     "name" : "Addressable Place",
-    "description" : "Address characterizes Addressable Place via ìis address ofî. Multiplicity 1..* on both ends supports multiple addresses per place and (when needed) reuse of the same address across multiple addressable places.",
+    "description" : "Address characterizes Addressable Place via ‚Äúis address of‚Äù. Multiplicity 1..* on both ends supports multiple addresses per place and (when needed) reuse of the same address across multiple addressable places.",
     "type" : "Diagram",
     "owner" : {
       "id" : "czC2RemGAqAEHA48",
@@ -2500,6 +2500,98 @@
       "type" : "Package"
     },
     "contents" : [ {
+      "id" : "lKw2eTmGAqAEHBoP",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "6RcBHJmAUygeKxim",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "lKw2eTmGAqAEHBoP_shape",
+        "type" : "Rectangle",
+        "x" : 750,
+        "y" : 60,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "o6w2eTmGAqAEHBoq",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "rZ.xWTmAUygefizj",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "o6w2eTmGAqAEHBoq_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 860,
+          "y" : 120
+        }, {
+          "x" : 860,
+          "y" : 210
+        }, {
+          "x" : 1040,
+          "y" : 210
+        }, {
+          "x" : 1040,
+          "y" : 258
+        } ]
+      },
+      "source" : {
+        "id" : "lKw2eTmGAqAEHBoP",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Eaw2eTmGAqAEHBok",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "hu1FeTmGAqAEHBVc",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "rO1FeTmGAqAEHBVa",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "hu1FeTmGAqAEHBVc_shape",
+        "type" : "Text",
+        "x" : 400,
+        "y" : 160,
+        "width" : 80,
+        "height" : 50,
+        "value" : ""
+      }
+    }, {
+      "id" : "_Ww2eTmGAqAEHBpV",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "3gxxWTmAUygefizt",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "_Ww2eTmGAqAEHBpV_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 920,
+          "y" : 490
+        }, {
+          "x" : 1044,
+          "y" : 490
+        }, {
+          "x" : 1044,
+          "y" : 340
+        } ]
+      },
+      "source" : {
+        "id" : "J6w2eTmGAqAEHBow",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Eaw2eTmGAqAEHBok",
+        "type" : "ClassView"
+      }
+    }, {
       "id" : "82w2eTmGAqAEHBpa",
       "type" : "GeneralizationView",
       "modelElement" : {
@@ -2532,59 +2624,81 @@
         "type" : "ClassView"
       }
     }, {
-      "id" : "_Ww2eTmGAqAEHBpV",
-      "type" : "RelationView",
-      "modelElement" : {
-        "id" : "3gxxWTmAUygefizt",
-        "type" : "Relation"
-      },
-      "shape" : {
-        "id" : "_Ww2eTmGAqAEHBpV_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 920,
-          "y" : 490
-        }, {
-          "x" : 1044,
-          "y" : 490
-        }, {
-          "x" : 1044,
-          "y" : 340
-        } ]
-      },
-      "source" : {
-        "id" : "J6w2eTmGAqAEHBow",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "Eaw2eTmGAqAEHBok",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "iJy2eTmGAqAEHBrL",
+      "id" : "wGw2eTmGAqAEHBo2",
       "type" : "GeneralizationView",
       "modelElement" : {
-        "id" : "Xxy2eTmGAqAEHBrK",
+        "id" : "OUj5WTmAUygefi7k",
         "type" : "Generalization"
       },
       "shape" : {
-        "id" : "iJy2eTmGAqAEHBrL_path",
+        "id" : "wGw2eTmGAqAEHBo2_path",
         "type" : "Path",
         "points" : [ {
-          "x" : 399,
-          "y" : 90
+          "x" : 683,
+          "y" : 340
         }, {
-          "x" : 399,
-          "y" : 299
+          "x" : 683,
+          "y" : 450
+        }, {
+          "x" : 780,
+          "y" : 450
+        }, {
+          "x" : 780,
+          "y" : 480
         } ]
       },
       "source" : {
-        "id" : "xQi2eTmGAqAEHBq3",
-        "type" : "RelationView"
+        "id" : "7qw2eTmGAqAEHBoh",
+        "type" : "ClassView"
       },
       "target" : {
-        "id" : "yGw2eTmGAqAEHBo8",
-        "type" : "RelationView"
+        "id" : "J6w2eTmGAqAEHBow",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "Eaw2eTmGAqAEHBok",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "rWXRWTmAUygefiyK",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Eaw2eTmGAqAEHBok_shape",
+        "type" : "Rectangle",
+        "x" : 930,
+        "y" : 260,
+        "width" : 230,
+        "height" : 80
+      }
+    }, {
+      "id" : "7qw2eTmGAqAEHBoh",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "4j7RWTmAUygefix_",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "7qw2eTmGAqAEHBoh_shape",
+        "type" : "Rectangle",
+        "x" : 570,
+        "y" : 260,
+        "width" : 230,
+        "height" : 80
+      }
+    }, {
+      "id" : "14w2eTmGAqAEHBam",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "G9JsEemAUygeIxAG",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "14w2eTmGAqAEHBam_shape",
+        "type" : "Rectangle",
+        "x" : 90,
+        "y" : 60,
+        "width" : 220,
+        "height" : 280
       }
     }, {
       "id" : "J6w2eTmGAqAEHBow",
@@ -2618,35 +2732,76 @@
         "value" : ""
       }
     }, {
-      "id" : "wGw2eTmGAqAEHBo2",
-      "type" : "GeneralizationView",
+      "id" : "u6w2eTmGAqAEHBot",
+      "type" : "ClassView",
       "modelElement" : {
-        "id" : "OUj5WTmAUygefi7k",
-        "type" : "Generalization"
+        "id" : "EiY5WTmAUygefi52",
+        "type" : "Class"
       },
       "shape" : {
-        "id" : "wGw2eTmGAqAEHBo2_path",
+        "id" : "u6w2eTmGAqAEHBot_shape",
+        "type" : "Rectangle",
+        "x" : 450,
+        "y" : 480,
+        "width" : 220,
+        "height" : 60
+      }
+    }, {
+      "id" : "xQi2eTmGAqAEHBq3",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "C4E2eTmGAqAEHBp3",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "xQi2eTmGAqAEHBq3_path",
         "type" : "Path",
         "points" : [ {
-          "x" : 683,
-          "y" : 340
+          "x" : 310,
+          "y" : 90
         }, {
-          "x" : 683,
-          "y" : 450
-        }, {
-          "x" : 780,
-          "y" : 450
-        }, {
-          "x" : 780,
-          "y" : 480
+          "x" : 749,
+          "y" : 90
         } ]
       },
       "source" : {
-        "id" : "7qw2eTmGAqAEHBoh",
+        "id" : "14w2eTmGAqAEHBam",
         "type" : "ClassView"
       },
       "target" : {
-        "id" : "J6w2eTmGAqAEHBow",
+        "id" : "lKw2eTmGAqAEHBoP",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "CWw2eTmGAqAEHBpS",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "TfexWTmAUygefizZ",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "CWw2eTmGAqAEHBpS_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 859,
+          "y" : 120
+        }, {
+          "x" : 859,
+          "y" : 210
+        }, {
+          "x" : 678,
+          "y" : 210
+        }, {
+          "x" : 678,
+          "y" : 260
+        } ]
+      },
+      "source" : {
+        "id" : "lKw2eTmGAqAEHBoP",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "7qw2eTmGAqAEHBoh",
         "type" : "ClassView"
       }
     }, {
@@ -2692,185 +2847,30 @@
         "type" : "ClassView"
       }
     }, {
-      "id" : "7qw2eTmGAqAEHBoh",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "4j7RWTmAUygefix_",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "7qw2eTmGAqAEHBoh_shape",
-        "type" : "Rectangle",
-        "x" : 570,
-        "y" : 260,
-        "width" : 230,
-        "height" : 80
-      }
-    }, {
-      "id" : "lKw2eTmGAqAEHBoP",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "6RcBHJmAUygeKxim",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "lKw2eTmGAqAEHBoP_shape",
-        "type" : "Rectangle",
-        "x" : 750,
-        "y" : 60,
-        "width" : 220,
-        "height" : 60
-      }
-    }, {
-      "id" : "u6w2eTmGAqAEHBot",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "EiY5WTmAUygefi52",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "u6w2eTmGAqAEHBot_shape",
-        "type" : "Rectangle",
-        "x" : 450,
-        "y" : 480,
-        "width" : 220,
-        "height" : 60
-      }
-    }, {
-      "id" : "hu1FeTmGAqAEHBVc",
-      "type" : "GeneralizationSetView",
-      "modelElement" : {
-        "id" : "rO1FeTmGAqAEHBVa",
-        "type" : "GeneralizationSet"
-      },
-      "shape" : {
-        "id" : "hu1FeTmGAqAEHBVc_shape",
-        "type" : "Text",
-        "x" : 400,
-        "y" : 160,
-        "width" : 80,
-        "height" : 50,
-        "value" : ""
-      }
-    }, {
-      "id" : "CWw2eTmGAqAEHBpS",
+      "id" : "iJy2eTmGAqAEHBrL",
       "type" : "GeneralizationView",
       "modelElement" : {
-        "id" : "TfexWTmAUygefizZ",
+        "id" : "Xxy2eTmGAqAEHBrK",
         "type" : "Generalization"
       },
       "shape" : {
-        "id" : "CWw2eTmGAqAEHBpS_path",
+        "id" : "iJy2eTmGAqAEHBrL_path",
         "type" : "Path",
         "points" : [ {
-          "x" : 859,
-          "y" : 120
-        }, {
-          "x" : 859,
-          "y" : 210
-        }, {
-          "x" : 678,
-          "y" : 210
-        }, {
-          "x" : 678,
-          "y" : 260
-        } ]
-      },
-      "source" : {
-        "id" : "lKw2eTmGAqAEHBoP",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "7qw2eTmGAqAEHBoh",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "xQi2eTmGAqAEHBq3",
-      "type" : "RelationView",
-      "modelElement" : {
-        "id" : "C4E2eTmGAqAEHBp3",
-        "type" : "Relation"
-      },
-      "shape" : {
-        "id" : "xQi2eTmGAqAEHBq3_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 310,
+          "x" : 399,
           "y" : 90
         }, {
-          "x" : 749,
-          "y" : 90
+          "x" : 399,
+          "y" : 299
         } ]
       },
       "source" : {
-        "id" : "14w2eTmGAqAEHBam",
-        "type" : "ClassView"
+        "id" : "xQi2eTmGAqAEHBq3",
+        "type" : "RelationView"
       },
       "target" : {
-        "id" : "lKw2eTmGAqAEHBoP",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "o6w2eTmGAqAEHBoq",
-      "type" : "GeneralizationView",
-      "modelElement" : {
-        "id" : "rZ.xWTmAUygefizj",
-        "type" : "Generalization"
-      },
-      "shape" : {
-        "id" : "o6w2eTmGAqAEHBoq_path",
-        "type" : "Path",
-        "points" : [ {
-          "x" : 860,
-          "y" : 120
-        }, {
-          "x" : 860,
-          "y" : 210
-        }, {
-          "x" : 1040,
-          "y" : 210
-        }, {
-          "x" : 1040,
-          "y" : 258
-        } ]
-      },
-      "source" : {
-        "id" : "lKw2eTmGAqAEHBoP",
-        "type" : "ClassView"
-      },
-      "target" : {
-        "id" : "Eaw2eTmGAqAEHBok",
-        "type" : "ClassView"
-      }
-    }, {
-      "id" : "Eaw2eTmGAqAEHBok",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "rWXRWTmAUygefiyK",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "Eaw2eTmGAqAEHBok_shape",
-        "type" : "Rectangle",
-        "x" : 930,
-        "y" : 260,
-        "width" : 230,
-        "height" : 80
-      }
-    }, {
-      "id" : "14w2eTmGAqAEHBam",
-      "type" : "ClassView",
-      "modelElement" : {
-        "id" : "G9JsEemAUygeIxAG",
-        "type" : "Class"
-      },
-      "shape" : {
-        "id" : "14w2eTmGAqAEHBam_shape",
-        "type" : "Rectangle",
-        "x" : 90,
-        "y" : 60,
-        "width" : 220,
-        "height" : 280
+        "id" : "yGw2eTmGAqAEHBo8",
+        "type" : "RelationView"
       }
     } ]
   } ]
