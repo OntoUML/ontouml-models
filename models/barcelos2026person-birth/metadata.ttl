@@ -1,0 +1,52 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/97143b66-fcda-556b-a810-b5553fc284c3/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Health-RI Semantic Interoperability Initiative's Person Birth";
+    dct:issued "2026"^^xsd:gYear;
+    dcat:theme lcc:R;
+    skos:editorialNote "This Catalog entry contains the Person Birth extract from the larger Health-RI Ontology, together with supporting classes retained for structural coherence. Its scope covers person birth events and multiplicity; birth places and derived temporal attributes; and genetic and gestational provenance. Other Health-RI Ontology subject areas are outside this entry.";
+    dct:language "en";
+    dcat:landingPage <https://w3id.org/health-ri/semantic-interoperability>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/96/8280>,
+                    <https://orcid.org/0000-0003-0771-3516>,
+                    <https://orcid.org/0009-0006-1783-9082>,
+                    <https://orcid.org/0009-0002-3089-9558>,
+                    <https://orcid.org/0000-0002-7944-2594>,
+                    <https://orcid.org/0000-0003-4715-9070>,
+                    <https://orcid.org/0009-0000-0967-7294>,
+                    <https://orcid.org/0000-0001-8802-7002>;
+    dcat:keyword "human birth"@en,
+                 "biological parentage"@en,
+                 "birth event"@en,
+                 "birth provenance"@en;
+    dct:source <https://doi.org/10.5281/zenodo.20219613>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability;
+    ocmv:context ocmv:Industry,
+                 ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/barcelos2026person-birth"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-09-15T14:27:46.569822Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-09-15T14:27:46.569822Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/97143b66-fcda-556b-a810-b5553fc284c3> dcat:distribution <https://w3id.org/ontouml-models/distribution/d492bb64-e383-50b1-bcbc-e62337f506ec/>,
+                      <https://w3id.org/ontouml-models/distribution/e532c53d-5e25-507e-8e61-670b034fdbba/>,
+                      <https://w3id.org/ontouml-models/distribution/bc7505fa-d90b-55b0-baf6-e1f9f32940e1/>,
+                      <https://w3id.org/ontouml-models/distribution/11dfa23c-8bd4-5415-a9ce-c638b4d15ea4/>,
+                      <https://w3id.org/ontouml-models/distribution/273274e4-34ce-5eca-a631-7c62e803e59b/>,
+                      <https://w3id.org/ontouml-models/distribution/2a05bded-7ac9-5af3-96ba-6f63d4f92d95/>,
+                      <https://w3id.org/ontouml-models/distribution/20987213-1577-5de4-834a-7674342e99fc/>,
+                      <https://w3id.org/ontouml-models/distribution/e744dc72-4b61-5998-a244-6374e4bb3328/>,
+                      <https://w3id.org/ontouml-models/distribution/5f3ded6d-05f4-58b6-bfc1-3e86a0535b15/> .
