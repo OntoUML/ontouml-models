@@ -1,0 +1,44 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/bd724374-4959-582c-9ad2-42b8c5d2a314/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Capability-Object-Value Ontology";
+    mod:acronym "COVO";
+    dct:issued "2025"^^xsd:gYear;
+    dct:modified "2026"^^xsd:gYear;
+    dcat:theme lcc:H;
+    dct:language "en";
+    dcat:landingPage <https://github.com/sefanja/COVO>;
+    dct:license <https://creativecommons.org/licenses/by-sa/4.0/>;
+    dct:contributor <https://dblp.org/pid/325/6132>,
+                    <https://dblp.org/pid/131/1200>,
+                    <https://dblp.org/pid/r/EllaERoubtsova>,
+                    <https://dblp.org/pid/134/4947>,
+                    <https://dblp.org/pid/432/0581>,
+                    <https://dblp.org/pid/97/5771>,
+                    <https://dblp.org/pid/57/1255>;
+    dcat:keyword "capability"@en,
+                 "object"@en,
+                 "value stream"@en;
+    dct:source <https://doi.org/10.5281/zenodo.21828484>;
+    mod:designedForTask ocmv:ConceptualClarification;
+    ocmv:context ocmv:Industry;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Core;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/severin2026covo"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-09-17T10:52:55.610017Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-09-17T10:52:55.610017Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/bd724374-4959-582c-9ad2-42b8c5d2a314> dcat:distribution <https://w3id.org/ontouml-models/distribution/84f51460-ecd8-5496-bee6-d97848362b85/>,
+                      <https://w3id.org/ontouml-models/distribution/ac6f5382-d0f6-56f8-ad68-e8559030317f/>,
+                      <https://w3id.org/ontouml-models/distribution/c3a54108-5737-5206-a80f-9efc4ece9758/>,
+                      <https://w3id.org/ontouml-models/distribution/5c563b0a-db03-5909-9215-b5307c52547b/> .
