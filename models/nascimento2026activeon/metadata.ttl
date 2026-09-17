@@ -1,0 +1,41 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/aa09ac9a-3781-547a-b8aa-d1b8993860a2/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Activity in smart Environments Ontology";
+    mod:acronym "ActivEOn";
+    dct:issued "2024"^^xsd:gYear;
+    dct:modified "2026"^^xsd:gYear;
+    dcat:theme lcc:T;
+    dct:language "en";
+    dcat:landingPage <https://github.com/lvnascimento/activeon>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/45/3567>,
+                    <https://dblp.org/pid/o/JosePalazzoMoreiradeOliveira>;
+    dcat:keyword "activities"@en,
+                 "context"@en,
+                 "human activity"@en,
+                 "smart environment"@en;
+    dct:source <https://doi.org/10.5753/sbbd.2024.241224>,
+               <https://doi.org/10.5753/jidm.2026.5691>;
+    mod:designedForTask ocmv:Interoperability;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/nascimento2026activeon"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-09-17T12:16:33.401447Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-09-17T12:16:33.401447Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/aa09ac9a-3781-547a-b8aa-d1b8993860a2> dcat:distribution <https://w3id.org/ontouml-models/distribution/46eb648f-5a5f-50a9-b06f-321c5cc870b3/>,
+                      <https://w3id.org/ontouml-models/distribution/d63cb272-ed0a-5f35-9b66-1a0379e9b2e6/>,
+                      <https://w3id.org/ontouml-models/distribution/ef9c38bb-0f63-5684-b3a1-cadf71d15e2c/>,
+                      <https://w3id.org/ontouml-models/distribution/f8bb67c0-a87e-57c3-a1c2-6fd844e139b6/> .
