@@ -163,7 +163,7 @@ def allowed_output(path, plan):
     parts = path.split("/")
     return (plan["mode"] == "normal" and len(parts) == 3
             and "/".join(parts[:2]) == plan["models"][0]
-            and (parts[2] in {"metadata.yaml", "ontology.ttl", "metadata.ttl"}
+            and (parts[2] in {"metadata.yaml", "ontology.json", "ontology.ttl", "metadata.ttl"}
                  or (parts[2].startswith("metadata-") and parts[2].endswith(".ttl"))))
 
 

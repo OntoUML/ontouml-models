@@ -226,11 +226,21 @@ def bundle_for(plan, path="models/new/ontology.ttl"):
     return {"head": plan["head"], "base": plan["base"], "additions": [{"path": path, "contents": base64.b64encode(b"generated").decode()}]}
 
 
-@pytest.mark.parametrize("path", ["scripts/steal.py", ".github/workflows/steal.yml", "models/other/ontology.ttl", "models/new/ontology.json", "models/new/ontology.vpp", "../escape"])
+@pytest.mark.parametrize("path", ["scripts/steal.py", ".github/workflows/steal.yml", "models/other/ontology.ttl", "models/other/ontology.json", "models/new/ontology.vpp", "../escape"])
 def test_writeback_accepts_only_generated_files_in_target_model(path):
     plan = plan_for("models/new/ontology.json")
     with pytest.raises(automation.AutomationError):
         automation.validate_bundle(bundle_for(plan, path), plan)
+
+
+def test_writeback_accepts_normalized_ontology_json_in_target_model():
+    plan = plan_for("models/new/ontology.json")
+
+    additions = automation.validate_bundle(
+        bundle_for(plan, "models/new/ontology.json"), plan
+    )
+
+    assert additions[0]["path"] == "models/new/ontology.json"
 
 
 @pytest.mark.parametrize("change", ["sha", "duplicate", "encoding", "deletions"])
@@ -510,11 +520,16 @@ def test_source_only_model_real_generation_and_final_state_validation(tmp_path):
     model = make_model(root, name="new", include_ontology_turtle=False)
     (model / "new-diagrams/main.png").write_bytes(minimal_png())
     (model / "metadata.yaml").write_text(VALID_METADATA, encoding="utf-8")
-    shutil.copyfile(ROOT / "scripts/tests/fixtures/json2graph/minimal-single-language/ontology.json", model / "ontology.json")
+    source_json = (
+        ROOT / "scripts/tests/fixtures/json2graph/minimal-single-language/ontology.json"
+    ).read_text(encoding="utf-8")
+    source_json = source_json.replace("Minimal project", "Person’s birth — model")
+    (model / "ontology.json").write_bytes(source_json.encode("cp1252"))
     plan = plan_for("models/new/ontology.json", "models/new/metadata.yaml")
     with pytest.raises(Exception, match="Expected generated file"):
         validation.require_generated_outputs(root, plan)
     automation.process_data(root, plan)
+    assert (model / "ontology.json").read_bytes() == source_json.encode("utf-8")
     validation.require_generated_outputs(root, plan)
     before = automation.file_hashes(root)
     validation.validate_data(root, ROOT, plan)

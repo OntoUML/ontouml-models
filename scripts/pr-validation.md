@@ -76,9 +76,10 @@ remain unchanged.
   from the base. Contributor scripts, actions and dependencies never execute in
   `pull_request_target` or in a secret-bearing reporter/writeback job.
 - Generation has only `contents: read`. The subsequent writer has no PR code
-  checkout and accepts only model metadata, ontology Turtle, metadata YAML
-  normalization and root catalog output. It cannot write PR workflow files,
-  scripts, JSON/VPP sources or unrelated model folders.
+  checkout and accepts only model metadata, ontology Turtle, metadata YAML and
+  target-model ontology JSON normalization, and root catalog output. It cannot
+  write PR workflow files, scripts, VPP sources, other JSON sources or unrelated
+  model folders.
 - Final validation is explicitly dispatched from the default branch with a
   dedicated App token scoped only to **Actions: write**. The dispatched workflow
   itself has a read-only `GITHUB_TOKEN` and no environment/App secret. Candidate

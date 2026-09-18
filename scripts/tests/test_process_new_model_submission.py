@@ -201,6 +201,77 @@ def test_validate_required_sources_rejects_non_object_ontology_json(tmp_path: Pa
         module.validate_required_sources(model, root)
 
 
+def test_validate_required_sources_preserves_valid_utf8_bytes(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root)
+    ontology = model / "ontology.json"
+    original = '{\r\n  "id": "project_1",\r\n  "name": "Café model"\r\n}\r\n'.encode(
+        "utf-8"
+    )
+    ontology.write_bytes(original)
+
+    module.validate_required_sources(model, root)
+
+    assert ontology.read_bytes() == original
+
+
+def test_validate_required_sources_removes_utf8_bom(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root)
+    ontology = model / "ontology.json"
+    json_bytes = '{"id": "project_1", "name": "Café model"}\n'.encode("utf-8")
+    ontology.write_bytes(module.UTF8_BOM + json_bytes)
+
+    module.validate_required_sources(model, root)
+
+    assert ontology.read_bytes() == json_bytes
+
+
+def test_validate_required_sources_converts_windows_1252_to_utf8(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root)
+    ontology = model / "ontology.json"
+    text = '{"id": "project_1", "name": "Person’s birth — model"}\n'
+    original = text.encode("cp1252")
+    assert b"\x92" in original and b"\x97" in original
+    ontology.write_bytes(original)
+
+    module.validate_required_sources(model, root)
+
+    assert ontology.read_bytes() == text.encode("utf-8")
+
+
+def test_invalid_windows_1252_json_is_not_rewritten(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root)
+    ontology = model / "ontology.json"
+    original = b'{"id": "project_1", "name": "Person\x92s birth"'
+    ontology.write_bytes(original)
+
+    with pytest.raises(module.SubmissionProcessingError, match="not valid JSON"):
+        module.validate_required_sources(model, root)
+
+    assert ontology.read_bytes() == original
+
+
+def test_unsupported_encoding_is_not_rewritten(tmp_path: Path):
+    module = load_module()
+    root = make_repo(tmp_path)
+    model = make_model(root)
+    ontology = model / "ontology.json"
+    original = b'{"id": "project_1", "name": "Unsupported \x81 byte"}'
+    ontology.write_bytes(original)
+
+    with pytest.raises(module.SubmissionProcessingError, match="Windows-1252 fallback"):
+        module.validate_required_sources(model, root)
+
+    assert ontology.read_bytes() == original
+
+
 def test_validate_required_sources_rejects_empty_vpp(tmp_path: Path):
     module = load_module()
     root = make_repo(tmp_path)
