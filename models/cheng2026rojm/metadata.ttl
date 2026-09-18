@@ -1,0 +1,46 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/2ce29f79-f7ff-5226-99ab-4a2c47c5f02a/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Reference Ontology of Job Matching";
+    mod:acronym "ROJM";
+    dct:issued "2026"^^xsd:gYear;
+    dcat:theme lcc:H;
+    dct:language "en";
+    dcat:landingPage <https://github.com/LuotongCheng/ROJM-ontology>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/390/3995>,
+                    <https://dblp.org/pid/169/2246>,
+                    <https://dblp.org/pid/313/8160>,
+                    <https://dblp.org/pid/r/MBvRiemsdijk>,
+                    <https://dblp.org/pid/247/3524>;
+    dcat:keyword "job matching"@en,
+                 "sustainable employment"@en,
+                 "person–environment fit"@en;
+    dct:source <https://foisconference.org/assets/pdfs/satellitepreprints/Paper-185.pdf>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability,
+                        ocmv:OntologicalAnalysis;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/cheng2026rojm"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-09-18T12:31:55.134859Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-09-18T12:31:55.134859Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/2ce29f79-f7ff-5226-99ab-4a2c47c5f02a> dcat:distribution <https://w3id.org/ontouml-models/distribution/a94b4feb-afb4-5460-9d36-22bd423b37cd/>,
+                      <https://w3id.org/ontouml-models/distribution/08a4bd06-61ba-555e-a5f0-a4f23ac03311/>,
+                      <https://w3id.org/ontouml-models/distribution/847b7ce3-db6e-50cc-bf57-88686229f410/>,
+                      <https://w3id.org/ontouml-models/distribution/4419d2e6-60b8-5a2f-a8a7-29e7764358b0/>,
+                      <https://w3id.org/ontouml-models/distribution/3f3ba329-9a64-5053-aed4-547fa484df33/>,
+                      <https://w3id.org/ontouml-models/distribution/71a49705-ba28-56f1-bf58-0a6e8f1ce49e/>,
+                      <https://w3id.org/ontouml-models/distribution/2f23a4fb-7aef-53f3-9f2b-5fc7088885f3/> .
