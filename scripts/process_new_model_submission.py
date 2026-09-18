@@ -50,6 +50,7 @@ OPTIONAL_SOURCE_FILES = ("references.bib",)
 ACCEPTED_IMAGE_FOLDERS = ("original-diagrams", "new-diagrams")
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 CONTROL_CHARS = re.compile(r"[\x00-\x1f\x7f]")
+UTF8_BOM = b"\xef\xbb\xbf"
 NORMAL_SUBMISSION_MODE = "normal"
 BULK_GENERATED_MODE = "bulk-generated"
 ALLOWED_ROOT_GENERATED_FILES = frozenset({"catalog.ttl"})
@@ -170,28 +171,63 @@ def require_regular_file(path: Path, label: str, root: Path) -> None:
 
 
 def validate_ontology_json(path: Path, root: Path) -> None:
-    """Parse ontology.json as UTF-8 JSON and require a top-level object."""
+    """Normalize ontology.json to UTF-8, parse it, and require an object."""
 
     require_regular_file(path, "ontology.json", root)
     try:
-        with path.open("r", encoding="utf-8") as stream:
-            data = json.load(stream)
-    except UnicodeDecodeError as exc:
-        raise SubmissionProcessingError(
-            f"ontology.json is not valid UTF-8 JSON text: {path_for_display(path, root)}: {exc}"
-        ) from exc
-    except json.JSONDecodeError as exc:
-        raise SubmissionProcessingError(
-            f"ontology.json is not valid JSON: {path_for_display(path, root)}: {exc}"
-        ) from exc
+        original_bytes = path.read_bytes()
     except OSError as exc:
         raise SubmissionProcessingError(
             f"Could not read ontology.json: {path_for_display(path, root)}: {exc}"
         ) from exc
 
+    source_encoding: Optional[str] = None
+    if original_bytes.startswith(UTF8_BOM):
+        source_encoding = "UTF-8 with BOM"
+        try:
+            text = original_bytes[len(UTF8_BOM) :].decode("utf-8")
+        except UnicodeDecodeError as exc:
+            raise SubmissionProcessingError(
+                "ontology.json starts with a UTF-8 BOM but contains invalid UTF-8 "
+                f"text: {path_for_display(path, root)}: {exc}"
+            ) from exc
+    else:
+        try:
+            text = original_bytes.decode("utf-8")
+        except UnicodeDecodeError as utf8_error:
+            try:
+                text = original_bytes.decode("cp1252")
+            except UnicodeDecodeError as cp1252_error:
+                raise SubmissionProcessingError(
+                    "ontology.json is neither valid UTF-8 nor decodable using the "
+                    "Windows-1252 fallback: "
+                    f"{path_for_display(path, root)}: {utf8_error}"
+                ) from cp1252_error
+            source_encoding = "Windows-1252"
+
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError as exc:
+        raise SubmissionProcessingError(
+            f"ontology.json is not valid JSON: {path_for_display(path, root)}: {exc}"
+        ) from exc
+
     if not isinstance(data, dict):
         raise SubmissionProcessingError(
             f"ontology.json must contain a JSON object at the top level: {path_for_display(path, root)}"
+        )
+
+    if source_encoding is not None:
+        try:
+            path.write_bytes(text.encode("utf-8"))
+        except OSError as exc:
+            raise SubmissionProcessingError(
+                "Could not normalize ontology.json to UTF-8: "
+                f"{path_for_display(path, root)}: {exc}"
+            ) from exc
+        print(
+            f"Normalized ontology.json from {source_encoding} to UTF-8: "
+            f"{path_for_display(path, root)}"
         )
 
 

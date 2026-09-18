@@ -29,7 +29,7 @@ The helper script is intentionally an orchestrator. It does not duplicate conver
 
 All PRs to `master` enter the [PR validation controller](pr-validation.md). It classifies the complete changed-file list and runs only applicable processing and validation. Documentation and script-only PRs do not invoke model-submission generation. Mixed changes receive the union of applicable checks.
 
-For a one-model submission, automation validates the source files, generates `ontology.ttl`, synchronizes distribution/model metadata and `catalog.ttl`, and commits changed generated files to the PR branch. It then explicitly dispatches validation of that exact final head. The App-owned `PR validation` check succeeds only after final-state validation succeeds. The required repository ruleset, not a maintainer's memory of workflow progress, blocks an incomplete submission.
+For a one-model submission, automation validates the source files, normalizes `ontology.json` encoding when supported, generates `ontology.ttl`, synchronizes distribution/model metadata and `catalog.ttl`, and commits the resulting changes to the PR branch. It then explicitly dispatches validation of that exact final head. The App-owned `PR validation` check succeeds only after final-state validation succeeds. The required repository ruleset, not a maintainer's memory of workflow progress, blocks an incomplete submission.
 
 Same-repository writeback uses `GITHUB_TOKEN`. Fork writeback uses a narrowly scoped GitHub App installation token, which requires the fork owner to install the catalog automation App on that fork. A fork PR without applicable generation needs no fork write permission. Missing write authorization blocks generation explicitly; it does not silently accept missing outputs or require contributors to generate them manually. See the [setup and trust boundary](pr-validation.md#external-repository-configuration).
 
@@ -80,7 +80,7 @@ After validating/fixing `metadata.yaml` and before running the ontology generato
 
 - the target folder is a direct child of `models/`;
 - `metadata.yaml`, `ontology.json`, and `ontology.vpp` exist as files;
-- `ontology.json` is UTF-8 JSON with a top-level object;
+- `ontology.json` is JSON with a top-level object; BOM-free UTF-8 is preserved byte-for-byte, a UTF-8 BOM is removed, and text that fails strict UTF-8 decoding is converted using the Windows-1252 fallback only after JSON validation succeeds;
 - `ontology.vpp` exists, is non-empty, and has a valid filename shape;
 - at least one `.png` diagram exists in `original-diagrams/` or `new-diagrams/`;
 - each `.png` diagram has a PNG signature and IHDR header;
@@ -102,7 +102,7 @@ In a normal non-dry-run execution, the helper runs the repository scripts in thi
 
 ```text
 1. python scripts/validate_metadata_yaml.py [MODEL_FOLDER] --fix
-2. Helper-level source preflight checks for ontology.json, ontology.vpp, PNG diagrams, and optional references.bib path shape
+2. Helper-level normalization and preflight checks for ontology.json, ontology.vpp, PNG diagrams, and optional references.bib path shape
 3. python scripts/generate_ontology_turtle.py [MODEL_FOLDER]
 4. python scripts/validate_references_bib.py [MODEL_FOLDER]
 5. python scripts/generate_png_metadata.py [MODEL_FOLDER]
@@ -117,13 +117,13 @@ Ontology generation precedes Turtle distribution metadata generation. The distri
 
 After the helper succeeds, the workflow runs `python scripts/generate_catalog_file.py .`, then stages and commits changes. The local helper does not synchronize root `catalog.ttl` itself.
 
-The initial `--fix` step can rewrite `metadata.yaml`, removing comments and changing hand-formatted spacing. Its normalized source is inside the model folder staged by the workflow and can therefore appear in the bot commit alongside generated files. Review that source diff as well as the generated artifacts. The standalone helper's `--no-fix-metadata-yaml` option disables automatic YAML fixing; the workflow does not expose that option.
+The initial `--fix` step can rewrite `metadata.yaml`, removing comments and changing hand-formatted spacing. The source preflight can rewrite `ontology.json` as BOM-free UTF-8 when it has a UTF-8 BOM or requires the Windows-1252 fallback. These normalized sources are inside the model folder staged by the workflow and can therefore appear in the bot commit alongside generated files. Review those source diffs as well as the generated artifacts. The standalone helper's `--no-fix-metadata-yaml` option disables automatic YAML fixing; the workflow does not expose that option.
 
 ## Ontology generation and warnings
 
 The catalog wrapper uses the exact `ontouml-json2graph==2.0.1` dependency and the namespace `https://w3id.org/ontouml-models/model/<slug>#`. Project identity uses the JSON project ID under that namespace. If `metadata.yaml` declares one distinct language, generated names use that language tag; with multiple declared languages, names are untagged.
 
-The selected policies preserve invalid cardinalities and invalid stereotypes with warnings, omit unresolved diagram target links with warnings, and warn about unrepresented path-point order and property assignments. These warnings are nonfatal and remain visible in the workflow logs. Generation does not enable automatic source correction or transformation-provenance sidecars. See the [ontology generator guide](generate-ontology-turtle.md) for the exact policy effects and validation contract.
+The selected policies preserve invalid cardinalities and invalid stereotypes with warnings, omit unresolved diagram target links with warnings, and warn about unrepresented path-point order and property assignments. These warnings are nonfatal and remain visible in the workflow logs. Apart from the encoding normalization described above, generation does not enable automatic source correction or transformation-provenance sidecars. See the [ontology generator guide](generate-ontology-turtle.md) for the exact policy effects and validation contract.
 
 The wrapper generates and validates a candidate in temporary storage. It creates a missing `ontology.ttl`, atomically replaces an existing valid graph when it differs semantically, and preserves an isomorphic file byte-for-byte. Normal submissions do not use migration-only `--force-materialization`.
 
@@ -221,7 +221,7 @@ Use the [eight-scenario integration matrix](pr-validation.md#live-github-regress
 
 ## Automatic commits
 
-The controller writes only allowlisted generated files, permitted `metadata.yaml` normalization, and `catalog.ttl`. An atomic commit operation requires the PR branch still to have the expected source SHA; concurrent contributor updates are never overwritten. A no-op generation creates no commit. The final validation dispatch uses the resulting SHA whether or not a commit was necessary.
+The controller writes only allowlisted generated files, permitted `metadata.yaml` and `ontology.json` normalization, and `catalog.ttl`. An atomic commit operation requires the PR branch still to have the expected source SHA; concurrent contributor updates are never overwritten. A no-op generation creates no commit. The final validation dispatch uses the resulting SHA whether or not a commit was necessary.
 
 For legacy manual runs, commits still occur only when `commit_changes` is `true` and `dry_run` is `false`. Review the local/manual diff before committing after any failure. Required PR validation must still pass on the resulting head before merge.
 
