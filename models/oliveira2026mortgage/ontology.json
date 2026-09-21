@@ -1,0 +1,2578 @@
+{
+  "id" : "eAFZiZmD.AAAAQBO",
+  "name" : "Mortgage",
+  "description" : null,
+  "type" : "Project",
+  "model" : {
+    "id" : "eAFZiZmD.AAAAQBO_root",
+    "name" : "Mortgage",
+    "description" : null,
+    "type" : "Package",
+    "propertyAssignments" : null,
+    "contents" : [ {
+      "id" : "A_hc0LmGAqACkApV",
+      "name" : "Mortgage",
+      "description" : null,
+      "type" : "Package",
+      "propertyAssignments" : null,
+      "contents" : [ {
+        "id" : "fNXZiZmD.AAAAQWt",
+        "name" : "Hypotheek",
+        "description" : "Volgens het Nederlandse recht (Artikel 3:227 van het Burgerlijk Wetboek) is een hypotheek een beperkt zakelijk zekerheidsrecht dat wordt gevestigd op een registergoed—zoals een huis of grond—ter waarborging van de terugbetaling van een schuld. Het dient als het wettelijke onderpand voor de lener, waarbij de bank het \"recht van parate executie\" verkrijgt; dit geeft hen de bevoegdheid om bij wanbetaling het pand zonder tussenkomst van de rechter executoriaal te verkopen om de schuld te innen. Omdat het een \"zakelijk recht\" is dat aan het object zelf verbonden is en niet aan de persoon, blijft dit recht op de eigendomstitel rusten totdat de schuld is voldaan en de notaris de inschrijving officieel uit de openbare registers heeft doorgehaald.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "relator",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "i7_3izmGAqACkA.e",
+          "name" : "referentienummer",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBV",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "E1cPizmGAqACkA.g",
+          "name" : "referentiedatum",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : null,
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "relator" ]
+      }, {
+        "id" : "8W3ZiZmD.AAAAQW0",
+        "name" : "Onderpand",
+        "description" : "In de context van Nederlandse hypotheken verwijst onderpand naar het specifieke registergoed, zoals een huis of appartement, dat dient als fysieke zekerheid voor een lening. Volgens het Nederlandse recht biedt de waarde van het onderpand de geldverstrekker de garantie dat de schuld kan worden verhaald; als de lener niet aan de betalingsverplichtingen voldoet, oefent de bank haar hypotheekrecht uit om dit eigendom te verkopen — vaak via een executieverkoop of veiling — om het openstaande saldo te vereffenen. Omdat de lening wordt gedekt door dit tastbare bezit, is het risico voor de bank lager, wat doorgaans resulteert in gunstigere rentetarieven voor de lener in vergelijking met leningen zonder onderpand.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "roleMixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "oSaliZmD.AAAAQXl",
+          "name" : "soort",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "nSWliZmD.AAAAQXn",
+          "name" : "onderpandAdres",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "Tan1iZmD.AAAAQcm",
+        "name" : "Partij",
+        "description" : "De partijen die bij een hypotheek betrokken zijn als hypotheekgevers of hypotheeknemers.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "roleMixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "tZA9iZmD.AAAAQfm",
+        "name" : "Hypotheekgever",
+        "description" : "De lener die het recht op hypotheek geeft aan de bank. Als woningeigenaar verleen je de bank de zekerheid dat zij het huis mogen verkopen als je de lening niet terugbetaalt.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "roleMixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "X829iZmD.AAAAQf7",
+        "name" : "Hypotheeknemer",
+        "description" : "De geldverstrekker (de bank) die het recht op hypotheek neemt (aanvaardt). Zij krijgen hiermee het wettelijke onderpand als waarborg voor de verstrekte lening.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "roleMixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "cChjiZmD.AAAAQhS",
+        "name" : "Persoon Partij",
+        "description" : "Een handelingsbekwame natuurlijke persoon die betrokken is bij een hypotheek, meestal als hypotheekgever.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "role",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "no8t0LmGAqACkBFp",
+        "name" : "Rechtspersoon Partij",
+        "description" : null,
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "roleMixin",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "EqIsWLmGAqACkBaS",
+        "name" : "Bedrag",
+        "description" : null,
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "quality",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "pnc5iZmD.AAAAQXS",
+          "name" : "inschrijvingsbedrag",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBU",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "gQlFiZmD.AAAAQXU",
+          "name" : "inschrijvingsbedragOpslag",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBU",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "BpPFiZmD.AAAAQXW",
+          "name" : "inschrijvingsbedragInclusiefOpslag",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBU",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "quality" ]
+      }, {
+        "id" : "hCJ9iZmD.AAAAQgd",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Tan1iZmD.AAAAQcm",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "tZA9iZmD.AAAAQfm",
+          "type" : "Class"
+        }
+      }, {
+        "id" : ".fJ9iZmD.AAAAQgs",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Tan1iZmD.AAAAQcm",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "X829iZmD.AAAAQf7",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "2zrjiZmD.AAAAQjQ",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Tan1iZmD.AAAAQcm",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "cChjiZmD.AAAAQhS",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "k2Bd0LmGAqACkBHV",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Tan1iZmD.AAAAQcm",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "no8t0LmGAqACkBFp",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "xV1ziZmD.AAAAQkq",
+        "name" : "Partij Rol",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : true,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : ".fJ9iZmD.AAAAQgs",
+          "type" : "Generalization"
+        }, {
+          "id" : "hCJ9iZmD.AAAAQgd",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "NEHd0LmGAqACkBHg",
+        "name" : "partijtype",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : true,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "k2Bd0LmGAqACkBHV",
+          "type" : "Generalization"
+        }, {
+          "id" : "2zrjiZmD.AAAAQjQ",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "3FbMSZmD.AAAAQsi",
+        "name" : "gegarandeerd door",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "mediation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "3FbMSZmD.AAAAQsj",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "fNXZiZmD.AAAAQWt",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "3FbMSZmD.AAAAQsl",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "8W3ZiZmD.AAAAQW0",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "Ve4sSZmD.AAAAQtg",
+        "name" : "omvat",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "mediation",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "Ve4sSZmD.AAAAQth",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1..*",
+          "propertyType" : {
+            "id" : "fNXZiZmD.AAAAQWt",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "Ve4sSZmD.AAAAQtj",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "2..*",
+          "propertyType" : {
+            "id" : "Tan1iZmD.AAAAQcm",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      }, {
+        "id" : "QgtsWLmGAqACkBbV",
+        "name" : "is toegewezen aan",
+        "description" : null,
+        "type" : "Relation",
+        "propertyAssignments" : null,
+        "stereotype" : "characterization",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "QgtsWLmGAqACkBbW",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "EqIsWLmGAqACkBaS",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "QgtsWLmGAqACkBbY",
+          "name" : null,
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : true,
+          "isOrdered" : false,
+          "cardinality" : "1",
+          "propertyType" : {
+            "id" : "fNXZiZmD.AAAAQWt",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ]
+      } ]
+    }, {
+      "id" : "PYvc0LmGAqACkAqa",
+      "name" : "General",
+      "description" : null,
+      "type" : "Package",
+      "propertyAssignments" : null,
+      "contents" : [ {
+        "id" : "TFodiZmD.AAAAQeR",
+        "name" : "Natuurlijk Persoon",
+        "description" : "Een natuurlijk persoon is een menselijk individu dat, behoudens gebleken handelingsonbekwaamheid, in juridische zin drager van rechten en verplichtingen is.\n\nEen natuurlijk persoon kan zelfstandig in het rechtsverkeer optreden, en vormt daarmee, net als zijn juridische tegenhanger, de rechtspersoon (een abstracte juridische entiteit, bijvoorbeeld een vereniging), een rechtssubject.\n\nVolgens artikel 6 van de Universele Verklaring van de Rechten van de Mens heeft ieder mens het fundamentele mensenrecht om als (natuurlijk) persoon erkend te worden; een staat mag dus geen onderscheid maken tussen menselijke individuen in het al of niet toekennen van de juridische status van natuurlijk persoon. (Bron: https://nl.wikipedia.org/wiki/Natuurlijk_persoon)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "1v0TiZmD.AAAAQj0",
+          "name" : "volledigeNaam",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : ".4yTiZmD.AAAAQj4",
+          "name" : "geboren",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "eENTiZmD.AAAAQj6",
+          "name" : "geslacht",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "VofTiZmD.AAAAQj.",
+          "name" : "persoonAdres",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "fBJgSzmGAqACkBAP",
+        "name" : "Handelingsbekwaam Persoon",
+        "description" : "Handelingsbekwaamheid is de wettelijk gedefinieerde geschiktheid van een natuurlijk persoon om zelfstandig rechtshandelingen te kunnen en mogen verrichten. Het is een van de fundamentele beginselen van het Belgische en Nederlandse recht.\nEen persoon die niet in staat is zelf te beschikken wordt handelingsonbekwaam genoemd.\n\nUitgangspunt van de Nederlandse wet is handelingsbekwaamheid, met uitzondering van bij de wet genoemde situaties, artikel 32 Boek 3 (vermogensrecht) van het Burgerlijk Wetboek:\n\n1. \"Iedere natuurlijke persoon is bekwaam tot het verrichten van rechtshandelingen, voor zover de wet niet anders bepaalt\".\n\n2. \"Een rechtshandeling van een onbekwame natuurlijke persoon is vernietigbaar\".\nHet is belangrijk dat juridisch niet volledig handelingsbekwamen toch in staat zijn bepaalde rechtshandelingen te verrichten, bijvoorbeeld een betaling voor een gekocht product of geleverde dienst. Anders zou een minderjarige bijvoorbeeld niet zelfstandig een broodje kunnen kopen, of kunnen reizen met het openbaar vervoer.\n\nVerricht een minderjarige of een onder curatele gestelde toch een rechtshandeling, is deze vernietigbaar. Dat betekent dat de rechtshandeling nooit heeft plaatsgevonden en geen rechtsgevolg heeft gehad.\n\nVolgens artikel 1:234 BW (in Nederland) zijn minderjarigen handelingsbekwaam, als zij met toestemming van hun wettelijke vertegenwoordiger handelen en mits de wet niet anders bepaalt. Het gaat dan om rechtshandelingen die normaliter door minderjarigen van zijn leeftijd zelfstandig kunnen worden verricht. Via de kantonrechter kan een zestien- of zeventienjarige verzoeken om de bevoegdheid tot het verrichten van rechtshandelingen van meerderjarigen. Dit heet handlichting (zie artikel 1:235 BW).\n\nEen meerderjarige die door bijvoorbeeld een psychische aandoening of het stelselmatig consumeren van alcohol of drugs niet in staat is de eigen financiële en zakelijke belangen naar behoren te behartigen, kan door een rechtbank onder curatele gesteld worden als de omstandigheden objectief aantoonbaar zijn (art. 1:378 BW). Het gevolg van de maatregel is, dat degene die onder curatele is gesteld handelingsonbekwaam wordt en een ander de bevoegdheid krijgt het financieel en zakelijk beheer te voeren. De rechter stelt bij het verzoek steeds een psychiater aan om de persoon te onderzoeken, plus een curator met dezelfde bevoegdheden als een voogd bij minderjarigen. De curatele kan worden beëindigd middels een rechterlijk vonnis tot opheffing, als de eerdere redenen zijn komen te vervallen. (Bron: https://nl.wikipedia.org/wiki/Handelingsbekwaamheid)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "role",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "PbZwSzmGAqACkBC5",
+        "name" : "Rechtspersoon",
+        "description" : "Een rechtspersoon is een juridische constructie waardoor een abstracte entiteit of organisatie, als een volwaardig en handelingsbekwaam 'persoon', in het rechtsverkeer kan optreden en rechtshandelingen kan verrichten. Een rechtspersoon is een rechtssubject, met dezelfde rechten en plichten als een natuurlijk persoon. Dat houdt in dat een rechtspersoon bezittingen en schulden kan hebben, overeenkomsten kan aangaan, rechtszaken kan aanspannen of aangeklaagd kan worden. Een rechtspersoon heeft, evenals een natuurlijk persoon, rechtspersoonlijkheid.\n\nPubliekrechtelijke rechtspersonen, kerkgenootschappen en privaatrechtelijke rechtspersonen bezitten rechtspersoonlijkheid. Publiekrechtelijke rechtspersonen zijn: de Staat, de provincies, de gemeenten, de waterschappen en de lichamen waaraan krachtens de Grondwet verordenende bevoegdheid is verleend. Privaatrechtelijke rechtspersonen zijn: verenigingen, stichtingen, coöperaties, onderlinge waarborgmaatschappijen, naamloze vennootschappen, besloten vennootschappen met beperkte aansprakelijkheid.\n\nRechtspersonen worden geregeld in Boek 2 van het Burgerlijk Wetboek. (Bron: https://nl.wikipedia.org/wiki/Rechtspersoon)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "category",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : [ {
+          "id" : "0y0ISzmGAqACkBDc",
+          "name" : "statutaireNaam",
+          "description" : null,
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "Y_eISzmGAqACkBDg",
+          "name" : "statutaireZetel",
+          "description" : "Een statutaire zetel is de specifieke gemeente waar een rechtspersoon volgens de officiële statuten statutair gevestigd is.",
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        }, {
+          "id" : "QqXISzmGAqACkBDi",
+          "name" : "bezoekadres",
+          "description" : "De feitelijke locatie (straat, huisnummer, woonplaats) waar de entiteit haar bedrijfsactiviteiten uitvoert en officiële post kan ontvangen.",
+          "type" : "Property",
+          "propertyAssignments" : null,
+          "stereotype" : null,
+          "isDerived" : false,
+          "isReadOnly" : false,
+          "isOrdered" : false,
+          "cardinality" : null,
+          "propertyType" : {
+            "id" : "tAFZiZmD.AAAAQBZ",
+            "type" : "Class"
+          },
+          "subsettedProperties" : null,
+          "redefinedProperties" : null,
+          "aggregationKind" : "NONE"
+        } ],
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "Uf0m0LmGAqACkAtB",
+        "name" : "Rechtssubject",
+        "description" : "Een rechtssubject of persoon (in juridische zin) is een drager van subjectieve rechten en plichten. Deze bezit met andere woorden rechtspersoonlijkheid of juridische persoonlijkheid.\n\nIn de meeste hedendaagse rechtsstelsels worden twee soorten rechtssubjecten erkend: natuurlijke personen (mensen) en rechtspersonen. De woorden 'rechtspersoonlijkheid' en 'rechtspersoon' moeten niet door elkaar worden gehaald: het eerste woord heeft betrekking op alle rechtssubjecten (natuurlijke personen en rechtspersonen), het tweede woord alleen op de rechtssubjecten die geen natuurlijke persoon zijn.\n\nHoewel het woord iemand in het Nederlands normaal gesproken alleen op mensen slaat, wordt het in de Nederlandse wetgeving af en toe ook in deze ruime betekenis gebruikt, dus voor alle personen met inbegrip van rechtspersonen. Voorbeelden zijn de bepaling over de woonplaats van onder bewind gestelde personen (artikel 12 lid 2 van Boek 1 BW, het deel dat verder vooral over personen- en familierecht gaat) en de bepaling over goede trouw in het vermogensrecht (artikel 11 van Boek 3 BW).\n\nRechtspersonen worden nader verdeeld in privaatrechtelijke rechtspersonen (bijvoorbeeld een naamloze vennootschap, besloten vennootschap of vereniging) en publiekrechtelijke rechtspersonen (bijvoorbeeld de Staat, provincies, gemeenten en waterschappen) naargelang hun doel, dat ofwel privaat of publiek is. Private rechtspersonen dienen ter behartiging van private belangen (zoals bv. winstbejag), terwijl publiekrechtelijke rechtspersonen het algemeen belang dienen. (Bron: https://nl.wikipedia.org/wiki/Rechtssubject)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "category",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "Eh.F0LmGAqACkA4r",
+        "name" : "Publiekrechtelijke Rechtsperson",
+        "description" : "Een publiekrechtelijke rechtspersoon is een rechtspersoon die vaak een publiek doel heeft en is betrokken bij taken van algemeen belang die verband houden met de overheid. Bijvoorbeeld de Staat, een provincie, een gemeente, een waterschap of een lichaam waaraan krachtens de Grondwet verordenende bevoegdheid is verleend. Ook andere lichamen waaraan een deel van de overheidstaak is opgedragen kunnen rechtspersoonlijkheid bezitten en zijn dan een publiekrechtelijk rechtspersoon.\n\nEen publiekrechtelijke rechtspersoon is een organisatie of entiteit die is opgericht en functioneert volgens het publiekrecht, dat wil zeggen het recht dat betrekking heeft op de overheid en haar relatie met individuen en andere rechtspersonen. In tegenstelling tot een privaatrechtelijke rechtspersoon, zoals een bedrijf of een stichting, wordt een publiekrechtelijke rechtspersoon gecreëerd door een wet of een andere juridische regeling. Voor meer: Artikel 1 BW Boek 2. (Bron: https://catalogus.kadaster.nl/brk/nl/page/?uri=PubliekrechtelijkeRechtspersoon)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "category",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "AlVF0LmGAqACkA5F",
+        "name" : "Privaatrechtelijke Rechtsperson",
+        "description" : "Een privaatrechtelijk rechtspersoon is rechtspersoon die onderworpen is aan de regels van het privaatrecht. Privaatrecht is het recht dat betrekking heeft op de onderlinge relaties tussen individuen en andere rechtspersonen. In tegenstelling tot een publiekrechtelijke rechtspersoon, die is opgericht door de overheid en taken van algemeen belang vervult, wordt een privaatrechtelijke rechtspersoon opgericht door private personen of organisaties voor particuliere doeleinden. (Bron: https://catalogus.kadaster.nl/brk/nl/page/PrivaatrechtelijkeRechtspersoon)\n\nRechtspersonen kunnen net als natuurlijke personen zelfstandig optreden in het rechtsverkeer en hebben dezelfde rechten en plichten als natuurlijke personen (artikel 2:5 BW).\n\nIn artikel 2:3 BW wordt rechtspersoonlijkheid toegekend aan stichtingen, verenigingen, coöperaties, onderlinge waarborgmaatschappijen, naamloze en besloten vennootschappen; dat zijn de privaatrechtelijke rechtspersonen. De regels voor oprichting, liquidatie en werkwijzen van deze privaatrechtelijke rechtspersonen zijn opgenomen in boek 2 van het Burgerlijk Wetboek. Daar is ook te vinden welke organen de wet voor de diverse rechtspersonen benoemt en wat hun taken en bevoegdheden zijn. In de statuten van de verschillende rechtspersonen wordt het doel van de rechtspersoon en de interne organisatie verder uitgewerkt en vastgelegd. (Bron: https://vng.nl/artikelen/privaatrechtelijke-rechtspersonen)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "category",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "lROl0LmGAqACkA6w",
+        "name" : "Kerkgenootschap",
+        "description" : "Een kerkgenootschap is een zelfstandige organisatie die een kerk of godsdienstige gemeenschap vertegenwoordigt. In plaats van kerkgenootschap spreekt men ook wel over kerkelijke denominatie.\n\nIn Nederland wordt in artikel 2 van Boek 2 van het Burgerlijk Wetboek bepaald dat \"kerkgenootschappen alsmede hun zelfstandige onderdelen en lichamen waarin zij zijn verenigd\", rechtspersoonlijkheid bezitten. Bij de totstandkoming van dit Boek is nadrukkelijk vastgesteld dat het begrip 'kerkgenootschappen' meer omvat dan alleen christelijke en joodse geloofsgemeenschappen. Ook de in Nederland georganiseerde islamitische en boeddhistische genootschappen vallen er onder. In de praktijk zijn echter islamitische organisaties (onder meer moskeeorganisaties en de overkoepelende verbanden) en boeddhistische gemeenschappen in Nederland vrijwel allemaal als stichting of vereniging georganiseerd.\n\nIn de Handelsregisterwet 2007 is bepaald dat per 1 juli 2008 dergelijke kerken zich dienen in te schrijven in het handelsregister van ondernemingen en rechtspersonen; dit register wordt bijgehouden door de Kamer van Koophandel. (Bron: https://nl.wikipedia.org/wiki/Kerkgenootschap)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "category",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : false,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "siCV0LmGAqACkA9i",
+        "name" : "Vereniging",
+        "description" : "Een vereniging is een rechtspersoon met leden die is gericht op een bepaald doel, anders dan omschreven voor een coöperatie of onderlinge waarborgmaatschappij. Artikel 26 BW Boek 2. (Bron: https://catalogus.kadaster.nl/brk/nl/page/Vereniging)",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "dLyV0LmGAqACkA9x",
+        "name" : "Coöperatie",
+        "description" : "Volgens het Burgerlijk Wetboek Boek 2 (art. 2:53 BW) luidt de definitie: De coöperatie is een bij notariële akte als coöperatie opgerichte vereniging die zich blijkens haar statuten ten doel stelt in bepaalde stoffelijke behoeften van haar leden te voorzien krachtens overeenkomsten, anders dan van verzekering, met hen gesloten in het bedrijf dat zij te dien einde ten behoeve van haar leden uitoefent.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "w4WV0LmGAqACkA.D",
+        "name" : "Onderlinge Waarborgmaatschappij",
+        "description" : "Volgens het Burgerlijk Wetboek Boek 2 (art. 2:53 lid 2 BW) luidt de definitie:\n\nDe onderlinge waarborgmaatschappij is een als zodanig bij notariële akte opgerichte vereniging die zich blijkens haar statuten ten doel stelt met haar leden verzekeringsovereenkomsten te sluiten in het verzekeringsbedrijf dat zij te dien einde ten behoeve van haar leden uitoefent.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "yCeV0LmGAqACkA.S",
+        "name" : "Naamloze Vennootschap",
+        "description" : "Volgens het Burgerlijk Wetboek Boek 2 (art. 2:64 BW) luidt de definitie:\nDe naamloze vennootschap is een rechtspersoon met een in een of meer overdraagbare aandelen verdeeld kapitaal.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "nUJV0LmGAqACkA.r",
+        "name" : "Besloten Vennootschap",
+        "description" : "Volgens het Burgerlijk Wetboek Boek 2 (art. 2:175 BW) luidt de definitie:\nDe besloten vennootschap met beperkte aansprakelijkheid is een rechtspersoon met een in een of meer overdraagbare aandelen verdeeld kapitaal, waarvan de overdracht van aandelen is beperkt en die niet vrij overdraagbaar zijn.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : ".55V0LmGAqACkA.6",
+        "name" : "Stichting",
+        "description" : "Volgens het Burgerlijk Wetboek Boek 2 (art. 2:285 BW) luidt de definitie:\nEen stichting is een door een rechtshandeling in het leven geroepen rechtspersoon die geen leden kent en die met behulp van een daartoe bestemd vermogen een in de statuten vermeld doel tracht te verwezenlijken.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "0Ue10LmGAqACkA_l",
+        "name" : "Waterschap",
+        "description" : "Functionele overheden belast met de waterhuishouding; zij zijn de oudste democratische instituties van Nederland. Bron: BW, Art. 2:1 lid 1\nEen waterschap is een op basis van de Waterschapswet ingesteld openbaar lichaam dat in een bepaalde regio in Nederland tot taak heeft de waterhuishouding te regelen. Ook wordt de term waterschap gebruikt om de regio aan te duiden waarover die instantie zeggenschap heeft. Het gebied wordt deels bepaald door gemeente- of provinciegrenzen, maar vooral door stroomgebieden of afwateringsgebieden in een bepaalde regio.",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "I_e10LmGAqACkA_u",
+        "name" : "Gemeente",
+        "description" : "De lokale bestuurslaag en de meest nabije overheid voor de burger, bezit volledige rechtspersoonlijkheid. Bron: BW, Art. 2:1 lid 1",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "Gw.10LmGAqACkA_3",
+        "name" : "Provincie",
+        "description" : "Regionale bestuurslagen die een eigen rechtspersoonlijkheid bezitten om hun wettelijke taken uit te voeren. Bron: BW, Art. 2:1 lid 1",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "Sz.10LmGAqACkBAA",
+        "name" : "De Staat",
+        "description" : "De hoogste juridische entiteit van de overheid die optreedt in het privaatrechtelijke verkeer (bijv. bij contracten). Bron: BW, Art. 2:1 lid 1",
+        "type" : "Class",
+        "propertyAssignments" : null,
+        "stereotype" : "kind",
+        "isAbstract" : false,
+        "isDerived" : false,
+        "properties" : null,
+        "isExtensional" : null,
+        "isPowertype" : null,
+        "order" : null,
+        "literals" : null,
+        "restrictedTo" : [ "functional-complex" ]
+      }, {
+        "id" : "BaLgSzmGAqACkBBO",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "TFodiZmD.AAAAQeR",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "fBJgSzmGAqACkBAP",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "HYngSzmGAqACkBBh",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "fBJgSzmGAqACkBAP",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "cChjiZmD.AAAAQhS",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "yZ6m0LmGAqACkAty",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Uf0m0LmGAqACkAtB",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "TFodiZmD.AAAAQeR",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "w2Gm0LmGAqACkAuB",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Uf0m0LmGAqACkAtB",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "PbZwSzmGAqACkBC5",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "oVNl0LmGAqACkA7u",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "PbZwSzmGAqACkBC5",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "Eh.F0LmGAqACkA4r",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "y6tl0LmGAqACkA79",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "PbZwSzmGAqACkBC5",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "u4dl0LmGAqACkA8M",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "PbZwSzmGAqACkBC5",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "lROl0LmGAqACkA6w",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "SSN10LmGAqACkBAo",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Eh.F0LmGAqACkA4r",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "0Ue10LmGAqACkA_l",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "X4t10LmGAqACkBA3",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Eh.F0LmGAqACkA4r",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "Sz.10LmGAqACkBAA",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "iSd10LmGAqACkBBG",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Eh.F0LmGAqACkA4r",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "Gw.10LmGAqACkA_3",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "Fa910LmGAqACkBBV",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "Eh.F0LmGAqACkA4r",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "I_e10LmGAqACkA_u",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "UmmN0LmGAqACkBB3",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "siCV0LmGAqACkA9i",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "LxWN0LmGAqACkBCG",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "dLyV0LmGAqACkA9x",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "5l2N0LmGAqACkBCV",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : ".55V0LmGAqACkA.6",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "yNON0LmGAqACkBCk",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "yCeV0LmGAqACkA.S",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "jxuN0LmGAqACkBCz",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "w4WV0LmGAqACkA.D",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "Z2eN0LmGAqACkBDC",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "AlVF0LmGAqACkA5F",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "nUJV0LmGAqACkA.r",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "rKVt0LmGAqACkBGB",
+        "name" : null,
+        "description" : null,
+        "type" : "Generalization",
+        "propertyAssignments" : null,
+        "general" : {
+          "id" : "PbZwSzmGAqACkBC5",
+          "type" : "Class"
+        },
+        "specific" : {
+          "id" : "no8t0LmGAqACkBFp",
+          "type" : "Class"
+        }
+      }, {
+        "id" : "64MO0LmGAqACkAuJ",
+        "name" : "rechtssubjectype",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : false,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "w2Gm0LmGAqACkAuB",
+          "type" : "Generalization"
+        }, {
+          "id" : "yZ6m0LmGAqACkAty",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "wFLl0LmGAqACkA8U",
+        "name" : "rechtspersoontype",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : false,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "oVNl0LmGAqACkA7u",
+          "type" : "Generalization"
+        }, {
+          "id" : "u4dl0LmGAqACkA8M",
+          "type" : "Generalization"
+        }, {
+          "id" : "y6tl0LmGAqACkA79",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : "0cqN0LmGAqACkBBe",
+        "name" : "type publiekrechtelijke rechtspersoon",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : false,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "Fa910LmGAqACkBBV",
+          "type" : "Generalization"
+        }, {
+          "id" : "SSN10LmGAqACkBAo",
+          "type" : "Generalization"
+        }, {
+          "id" : "iSd10LmGAqACkBBG",
+          "type" : "Generalization"
+        }, {
+          "id" : "X4t10LmGAqACkBA3",
+          "type" : "Generalization"
+        } ]
+      }, {
+        "id" : ".uFN0LmGAqACkBDK",
+        "name" : "type privaatrechtelijke rechtspersoon",
+        "description" : null,
+        "type" : "GeneralizationSet",
+        "propertyAssignments" : null,
+        "isDisjoint" : true,
+        "isComplete" : false,
+        "categorizer" : null,
+        "generalizations" : [ {
+          "id" : "yNON0LmGAqACkBCk",
+          "type" : "Generalization"
+        }, {
+          "id" : "jxuN0LmGAqACkBCz",
+          "type" : "Generalization"
+        }, {
+          "id" : "LxWN0LmGAqACkBCG",
+          "type" : "Generalization"
+        }, {
+          "id" : "5l2N0LmGAqACkBCV",
+          "type" : "Generalization"
+        }, {
+          "id" : "UmmN0LmGAqACkBB3",
+          "type" : "Generalization"
+        }, {
+          "id" : "Z2eN0LmGAqACkBDC",
+          "type" : "Generalization"
+        } ]
+      } ]
+    }, {
+      "id" : "tAFZiZmD.AAAAQBU",
+      "name" : "float",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "datatype",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : null,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "abstract" ]
+    }, {
+      "id" : "tAFZiZmD.AAAAQBZ",
+      "name" : "string",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "datatype",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : null,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "abstract" ]
+    }, {
+      "id" : "tAFZiZmD.AAAAQBV",
+      "name" : "int",
+      "description" : null,
+      "type" : "Class",
+      "propertyAssignments" : null,
+      "stereotype" : "datatype",
+      "isAbstract" : false,
+      "isDerived" : false,
+      "properties" : null,
+      "isExtensional" : null,
+      "isPowertype" : null,
+      "order" : null,
+      "literals" : null,
+      "restrictedTo" : [ "abstract" ]
+    } ]
+  },
+  "diagrams" : [ {
+    "id" : "FozZiZmD.AAAAQWe",
+    "name" : "Mortgage",
+    "description" : null,
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "A_hc0LmGAqACkApV",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "vBJgSzmGAqACkBAO",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "fBJgSzmGAqACkBAP",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "vBJgSzmGAqACkBAO_shape",
+        "type" : "Rectangle",
+        "x" : 90,
+        "y" : 335,
+        "width" : 176,
+        "height" : 40
+      }
+    }, {
+      "id" : "5CJ9iZmD.AAAAQge",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "hCJ9iZmD.AAAAQgd",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "5CJ9iZmD.AAAAQge_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 424,
+          "y" : 284
+        }, {
+          "x" : 602,
+          "y" : 284
+        }, {
+          "x" : 602,
+          "y" : 244
+        }, {
+          "x" : 630,
+          "y" : 244
+        } ]
+      },
+      "source" : {
+        "id" : "Tan1iZmD.AAAAQcl",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "NZA9iZmD.AAAAQfl",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "X829iZmD.AAAAQf6",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "X829iZmD.AAAAQf7",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "X829iZmD.AAAAQf6_shape",
+        "type" : "Rectangle",
+        "x" : 630,
+        "y" : 304,
+        "width" : 107,
+        "height" : 40
+      }
+    }, {
+      "id" : "sChjiZmD.AAAAQhR",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "cChjiZmD.AAAAQhS",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "sChjiZmD.AAAAQhR_shape",
+        "type" : "Rectangle",
+        "x" : 268,
+        "y" : 431,
+        "width" : 90,
+        "height" : 40
+      }
+    }, {
+      "id" : "jFodiZmD.AAAAQeQ",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "TFodiZmD.AAAAQeR",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "jFodiZmD.AAAAQeQ_shape",
+        "type" : "Rectangle",
+        "x" : 110,
+        "y" : 204,
+        "width" : 133,
+        "height" : 90
+      }
+    }, {
+      "id" : "JfJ9iZmD.AAAAQgt",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : ".fJ9iZmD.AAAAQgs",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "JfJ9iZmD.AAAAQgt_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 424,
+          "y" : 284
+        }, {
+          "x" : 602,
+          "y" : 284
+        }, {
+          "x" : 603,
+          "y" : 324
+        }, {
+          "x" : 630,
+          "y" : 324
+        } ]
+      },
+      "source" : {
+        "id" : "Tan1iZmD.AAAAQcl",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "X829iZmD.AAAAQf6",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "Tan1iZmD.AAAAQcl",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Tan1iZmD.AAAAQcm",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Tan1iZmD.AAAAQcl_shape",
+        "type" : "Rectangle",
+        "x" : 328,
+        "y" : 264,
+        "width" : 95,
+        "height" : 40
+      }
+    }, {
+      "id" : "glbMSZmD.AAAAQsn",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "3FbMSZmD.AAAAQsi",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "glbMSZmD.AAAAQsn_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 442,
+          "y" : 153
+        }, {
+          "x" : 595,
+          "y" : 153
+        } ]
+      },
+      "source" : {
+        "id" : "3NXZiZmD.AAAAQWs",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "cW3ZiZmD.AAAAQWy",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "rV1ziZmD.AAAAQks",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "xV1ziZmD.AAAAQkq",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "rV1ziZmD.AAAAQks_shape",
+        "type" : "Text",
+        "x" : 530,
+        "y" : 238,
+        "width" : 70,
+        "height" : 41,
+        "value" : ""
+      }
+    }, {
+      "id" : "cW3ZiZmD.AAAAQWy",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "8W3ZiZmD.AAAAQW0",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "cW3ZiZmD.AAAAQWy_shape",
+        "type" : "Rectangle",
+        "x" : 595,
+        "y" : 120,
+        "width" : 144,
+        "height" : 64
+      }
+    }, {
+      "id" : "4qIsWLmGAqACkBaR",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "EqIsWLmGAqACkBaS",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "4qIsWLmGAqACkBaR_shape",
+        "type" : "Rectangle",
+        "x" : 258,
+        "y" : 9,
+        "width" : 233,
+        "height" : 76
+      }
+    }, {
+      "id" : "FaLgSzmGAqACkBBP",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "BaLgSzmGAqACkBBO",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "FaLgSzmGAqACkBBP_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 179,
+          "y" : 294
+        }, {
+          "x" : 179,
+          "y" : 335
+        } ]
+      },
+      "source" : {
+        "id" : "jFodiZmD.AAAAQeQ",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "vBJgSzmGAqACkBAO",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "3bZwSzmGAqACkBC4",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "PbZwSzmGAqACkBC5",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "3bZwSzmGAqACkBC4_shape",
+        "type" : "Rectangle",
+        "x" : 464,
+        "y" : 325,
+        "width" : 135,
+        "height" : 76
+      }
+    }, {
+      "id" : "BzrjiZmD.AAAAQjR",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "2zrjiZmD.AAAAQjQ",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "BzrjiZmD.AAAAQjR_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 373,
+          "y" : 305
+        }, {
+          "x" : 373,
+          "y" : 382
+        }, {
+          "x" : 308,
+          "y" : 382
+        }, {
+          "x" : 308,
+          "y" : 432
+        } ]
+      },
+      "source" : {
+        "id" : "Tan1iZmD.AAAAQcl",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "sChjiZmD.AAAAQhR",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "_YngSzmGAqACkBBi",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "HYngSzmGAqACkBBh",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "_YngSzmGAqACkBBi_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 179,
+          "y" : 376
+        }, {
+          "x" : 179,
+          "y" : 451
+        }, {
+          "x" : 268,
+          "y" : 451
+        } ]
+      },
+      "source" : {
+        "id" : "vBJgSzmGAqACkBAO",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "sChjiZmD.AAAAQhR",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "vEHd0LmGAqACkBHi",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "NEHd0LmGAqACkBHg",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "vEHd0LmGAqACkBHi_shape",
+        "type" : "Text",
+        "x" : 299,
+        "y" : 330,
+        "width" : 80,
+        "height" : 42,
+        "value" : ""
+      }
+    }, {
+      "id" : "C2Bd0LmGAqACkBHW",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "k2Bd0LmGAqACkBHV",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "C2Bd0LmGAqACkBHW_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 373,
+          "y" : 305
+        }, {
+          "x" : 373,
+          "y" : 382
+        }, {
+          "x" : 446,
+          "y" : 382
+        }, {
+          "x" : 446,
+          "y" : 436
+        } ]
+      },
+      "source" : {
+        "id" : "Tan1iZmD.AAAAQcl",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Ho8t0LmGAqACkBFo",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "Ho8t0LmGAqACkBFo",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "no8t0LmGAqACkBFp",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Ho8t0LmGAqACkBFo_shape",
+        "type" : "Rectangle",
+        "x" : 433,
+        "y" : 436,
+        "width" : 127,
+        "height" : 40
+      }
+    }, {
+      "id" : "je4sSZmD.AAAAQtl",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "Ve4sSZmD.AAAAQtg",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "je4sSZmD.AAAAQtl_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 375,
+          "y" : 185
+        }, {
+          "x" : 375,
+          "y" : 263
+        } ]
+      },
+      "source" : {
+        "id" : "3NXZiZmD.AAAAQWs",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Tan1iZmD.AAAAQcl",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "XKVt0LmGAqACkBGC",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "rKVt0LmGAqACkBGB",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "XKVt0LmGAqACkBGC_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 518,
+          "y" : 402
+        }, {
+          "x" : 518,
+          "y" : 436
+        } ]
+      },
+      "source" : {
+        "id" : "3bZwSzmGAqACkBC4",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Ho8t0LmGAqACkBFo",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "3NXZiZmD.AAAAQWs",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "fNXZiZmD.AAAAQWt",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "3NXZiZmD.AAAAQWs_shape",
+        "type" : "Rectangle",
+        "x" : 306,
+        "y" : 120,
+        "width" : 134,
+        "height" : 63
+      }
+    }, {
+      "id" : "0gtsWLmGAqACkBba",
+      "type" : "RelationView",
+      "modelElement" : {
+        "id" : "QgtsWLmGAqACkBbV",
+        "type" : "Relation"
+      },
+      "shape" : {
+        "id" : "0gtsWLmGAqACkBba_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 375,
+          "y" : 88
+        }, {
+          "x" : 375,
+          "y" : 120
+        } ]
+      },
+      "source" : {
+        "id" : "4qIsWLmGAqACkBaR",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "3NXZiZmD.AAAAQWs",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "NZA9iZmD.AAAAQfl",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "tZA9iZmD.AAAAQfm",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "NZA9iZmD.AAAAQfl_shape",
+        "type" : "Rectangle",
+        "x" : 630,
+        "y" : 224,
+        "width" : 103,
+        "height" : 40
+      }
+    } ]
+  }, {
+    "id" : "poV80LmGAqACkAsE",
+    "name" : "General",
+    "description" : null,
+    "type" : "Diagram",
+    "owner" : {
+      "id" : "PYvc0LmGAqACkAqa",
+      "type" : "Package"
+    },
+    "contents" : [ {
+      "id" : "N2eN0LmGAqACkBDD",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "Z2eN0LmGAqACkBDC",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "N2eN0LmGAqACkBDD_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 782,
+          "y" : 340
+        }, {
+          "x" : 782,
+          "y" : 387
+        }, {
+          "x" : 849,
+          "y" : 387
+        }, {
+          "x" : 850,
+          "y" : 518
+        } ]
+      },
+      "source" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "nUJV0LmGAqACkA.q",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "iz.10LmGAqACkA_.",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Sz.10LmGAqACkBAA",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "iz.10LmGAqACkA_._shape",
+        "type" : "Rectangle",
+        "x" : 544,
+        "y" : 466,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "8FLl0LmGAqACkA8W",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "wFLl0LmGAqACkA8U",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "8FLl0LmGAqACkA8W_shape",
+        "type" : "Text",
+        "x" : 583,
+        "y" : 225,
+        "width" : 110,
+        "height" : 42,
+        "value" : ""
+      }
+    }, {
+      "id" : "nxWN0LmGAqACkBCH",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "LxWN0LmGAqACkBCG",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "nxWN0LmGAqACkBCH_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 782,
+          "y" : 340
+        }, {
+          "x" : 782,
+          "y" : 387
+        }, {
+          "x" : 782,
+          "y" : 432
+        } ]
+      },
+      "source" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "tLyV0LmGAqACkA9w",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "nUJV0LmGAqACkA.q",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "nUJV0LmGAqACkA.r",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "nUJV0LmGAqACkA.q_shape",
+        "type" : "Rectangle",
+        "x" : 778,
+        "y" : 519,
+        "width" : 143,
+        "height" : 40
+      }
+    }, {
+      "id" : "Yh.F0LmGAqACkA4q",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Eh.F0LmGAqACkA4r",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Yh.F0LmGAqACkA4q_shape",
+        "type" : "Rectangle",
+        "x" : 354,
+        "y" : 346,
+        "width" : 193,
+        "height" : 40
+      }
+    }, {
+      "id" : "GNON0LmGAqACkBCl",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "yNON0LmGAqACkBCk",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "GNON0LmGAqACkBCl_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 782,
+          "y" : 340
+        }, {
+          "x" : 782,
+          "y" : 387
+        }, {
+          "x" : 1017,
+          "y" : 387
+        }, {
+          "x" : 1017,
+          "y" : 518
+        } ]
+      },
+      "source" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "yCeV0LmGAqACkA.R",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "FROl0LmGAqACkA6v",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "lROl0LmGAqACkA6w",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "FROl0LmGAqACkA6v_shape",
+        "type" : "Rectangle",
+        "x" : 560,
+        "y" : 346,
+        "width" : 109,
+        "height" : 40
+      }
+    }, {
+      "id" : "da910LmGAqACkBBW",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "Fa910LmGAqACkBBV",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "da910LmGAqACkBBW_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 464,
+          "y" : 387
+        }, {
+          "x" : 464,
+          "y" : 423
+        }, {
+          "x" : 463,
+          "y" : 465
+        } ]
+      },
+      "source" : {
+        "id" : "Yh.F0LmGAqACkA4q",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "w_e10LmGAqACkA_s",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "_FVF0LmGAqACkA5E",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "AlVF0LmGAqACkA5F",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "_FVF0LmGAqACkA5E_shape",
+        "type" : "Rectangle",
+        "x" : 686,
+        "y" : 300,
+        "width" : 190,
+        "height" : 40
+      }
+    }, {
+      "id" : "mZ6m0LmGAqACkAtz",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "yZ6m0LmGAqACkAty",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "mZ6m0LmGAqACkAtz_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 457,
+          "y" : 90
+        }, {
+          "x" : 457,
+          "y" : 115
+        }, {
+          "x" : 343,
+          "y" : 115
+        }, {
+          "x" : 343,
+          "y" : 139
+        } ]
+      },
+      "source" : {
+        "id" : "Ef0m0LmGAqACkAtA",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "LSwS0LmGAqACkAsm",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "siCV0LmGAqACkA9h",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "siCV0LmGAqACkA9i",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "siCV0LmGAqACkA9h_shape",
+        "type" : "Rectangle",
+        "x" : 638,
+        "y" : 433,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "E2Gm0LmGAqACkAuC",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "w2Gm0LmGAqACkAuB",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "E2Gm0LmGAqACkAuC_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 457,
+          "y" : 90
+        }, {
+          "x" : 457,
+          "y" : 115
+        }, {
+          "x" : 573,
+          "y" : 115
+        }, {
+          "x" : 573,
+          "y" : 139
+        } ]
+      },
+      "source" : {
+        "id" : "Ef0m0LmGAqACkAtA",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "bSwS0LmGAqACkAso",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "immN0LmGAqACkBB4",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "UmmN0LmGAqACkBB3",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "immN0LmGAqACkBB4_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 782,
+          "y" : 340
+        }, {
+          "x" : 782,
+          "y" : 387
+        }, {
+          "x" : 677,
+          "y" : 387
+        }, {
+          "x" : 678,
+          "y" : 432
+        } ]
+      },
+      "source" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "siCV0LmGAqACkA9h",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "yCeV0LmGAqACkA.R",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "yCeV0LmGAqACkA.S",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "yCeV0LmGAqACkA.R_shape",
+        "type" : "Rectangle",
+        "x" : 945,
+        "y" : 519,
+        "width" : 150,
+        "height" : 40
+      }
+    }, {
+      "id" : "N4MO0LmGAqACkAuL",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "64MO0LmGAqACkAuJ",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "N4MO0LmGAqACkAuL_shape",
+        "type" : "Text",
+        "x" : 359,
+        "y" : 100,
+        "width" : 101,
+        "height" : 42,
+        "value" : ""
+      }
+    }, {
+      "id" : "mSd10LmGAqACkBBH",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "iSd10LmGAqACkBBG",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "mSd10LmGAqACkBBH_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 464,
+          "y" : 387
+        }, {
+          "x" : 464,
+          "y" : 423
+        }, {
+          "x" : 399,
+          "y" : 423
+        }, {
+          "x" : 399,
+          "y" : 465
+        } ]
+      },
+      "source" : {
+        "id" : "Yh.F0LmGAqACkA4q",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "6w.10LmGAqACkA_1",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "6w.10LmGAqACkA_1",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Gw.10LmGAqACkA_3",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "6w.10LmGAqACkA_1_shape",
+        "type" : "Rectangle",
+        "x" : 359,
+        "y" : 466,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "EUe10LmGAqACkA_j",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "0Ue10LmGAqACkA_l",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "EUe10LmGAqACkA_j_shape",
+        "type" : "Rectangle",
+        "x" : 265,
+        "y" : 466,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "nSwS0LmGAqACkAsq",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "fBJgSzmGAqACkBAP",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "nSwS0LmGAqACkAsq_shape",
+        "type" : "Rectangle",
+        "x" : 255,
+        "y" : 269,
+        "width" : 177,
+        "height" : 40
+      }
+    }, {
+      "id" : "7xuN0LmGAqACkBC0",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "jxuN0LmGAqACkBCz",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "7xuN0LmGAqACkBC0_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 782,
+          "y" : 340
+        }, {
+          "x" : 782,
+          "y" : 387
+        }, {
+          "x" : 725,
+          "y" : 387
+        }, {
+          "x" : 724,
+          "y" : 518
+        } ]
+      },
+      "source" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "w4WV0LmGAqACkA.C",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "LSwS0LmGAqACkAsm",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "TFodiZmD.AAAAQeR",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "LSwS0LmGAqACkAsm_shape",
+        "type" : "Rectangle",
+        "x" : 277,
+        "y" : 140,
+        "width" : 133,
+        "height" : 92
+      }
+    }, {
+      "id" : "26tl0LmGAqACkA7.",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "y6tl0LmGAqACkA79",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "26tl0LmGAqACkA7._path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 574,
+          "y" : 219
+        }, {
+          "x" : 574,
+          "y" : 269
+        }, {
+          "x" : 783,
+          "y" : 268
+        }, {
+          "x" : 783,
+          "y" : 299
+        } ]
+      },
+      "source" : {
+        "id" : "bSwS0LmGAqACkAso",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "x4dl0LmGAqACkA8N",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "u4dl0LmGAqACkA8M",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "x4dl0LmGAqACkA8N_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 574,
+          "y" : 219
+        }, {
+          "x" : 574,
+          "y" : 345
+        } ]
+      },
+      "source" : {
+        "id" : "bSwS0LmGAqACkAso",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "FROl0LmGAqACkA6v",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "tLyV0LmGAqACkA9w",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "dLyV0LmGAqACkA9x",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "tLyV0LmGAqACkA9w_shape",
+        "type" : "Rectangle",
+        "x" : 733,
+        "y" : 433,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "sVNl0LmGAqACkA7v",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "oVNl0LmGAqACkA7u",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "sVNl0LmGAqACkA7v_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 574,
+          "y" : 219
+        }, {
+          "x" : 574,
+          "y" : 269
+        }, {
+          "x" : 470,
+          "y" : 268
+        }, {
+          "x" : 471,
+          "y" : 345
+        } ]
+      },
+      "source" : {
+        "id" : "bSwS0LmGAqACkAso",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "Yh.F0LmGAqACkA4q",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "dl2N0LmGAqACkBCW",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "5l2N0LmGAqACkBCV",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "dl2N0LmGAqACkBCW_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 782,
+          "y" : 340
+        }, {
+          "x" : 782,
+          "y" : 387
+        }, {
+          "x" : 906,
+          "y" : 387
+        }, {
+          "x" : 905,
+          "y" : 432
+        } ]
+      },
+      "source" : {
+        "id" : "_FVF0LmGAqACkA5E",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "e55V0LmGAqACkA.5",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "QEt10LmGAqACkBA4",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "X4t10LmGAqACkBA3",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "QEt10LmGAqACkBA4_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 464,
+          "y" : 387
+        }, {
+          "x" : 464,
+          "y" : 423
+        }, {
+          "x" : 583,
+          "y" : 423
+        }, {
+          "x" : 582,
+          "y" : 466
+        } ]
+      },
+      "source" : {
+        "id" : "Yh.F0LmGAqACkA4q",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "iz.10LmGAqACkA_.",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "e55V0LmGAqACkA.5",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : ".55V0LmGAqACkA.6",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "e55V0LmGAqACkA.5_shape",
+        "type" : "Rectangle",
+        "x" : 865,
+        "y" : 433,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "Ef0m0LmGAqACkAtA",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "Uf0m0LmGAqACkAtB",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "Ef0m0LmGAqACkAtA_shape",
+        "type" : "Rectangle",
+        "x" : 410,
+        "y" : 49,
+        "width" : 95,
+        "height" : 40
+      }
+    }, {
+      "id" : "ruFN0LmGAqACkBDM",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : ".uFN0LmGAqACkBDK",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "ruFN0LmGAqACkBDM_shape",
+        "type" : "Text",
+        "x" : 790,
+        "y" : 347,
+        "width" : 209,
+        "height" : 42,
+        "value" : ""
+      }
+    }, {
+      "id" : "XSwS0LmGAqACkAss",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "BaLgSzmGAqACkBBO",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "XSwS0LmGAqACkAss_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 343,
+          "y" : 233
+        }, {
+          "x" : 343,
+          "y" : 269
+        } ]
+      },
+      "source" : {
+        "id" : "LSwS0LmGAqACkAsm",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "nSwS0LmGAqACkAsq",
+        "type" : "ClassView"
+      }
+    }, {
+      "id" : "w_e10LmGAqACkA_s",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "I_e10LmGAqACkA_u",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "w_e10LmGAqACkA_s_shape",
+        "type" : "Rectangle",
+        "x" : 451,
+        "y" : 466,
+        "width" : 80,
+        "height" : 40
+      }
+    }, {
+      "id" : "w4WV0LmGAqACkA.C",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "w4WV0LmGAqACkA.D",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "w4WV0LmGAqACkA.C_shape",
+        "type" : "Rectangle",
+        "x" : 531,
+        "y" : 519,
+        "width" : 207,
+        "height" : 40
+      }
+    }, {
+      "id" : "1cqN0LmGAqACkBBg",
+      "type" : "GeneralizationSetView",
+      "modelElement" : {
+        "id" : "0cqN0LmGAqACkBBe",
+        "type" : "GeneralizationSet"
+      },
+      "shape" : {
+        "id" : "1cqN0LmGAqACkBBg_shape",
+        "type" : "Text",
+        "x" : 246,
+        "y" : 408,
+        "width" : 212,
+        "height" : 42,
+        "value" : ""
+      }
+    }, {
+      "id" : "bSwS0LmGAqACkAso",
+      "type" : "ClassView",
+      "modelElement" : {
+        "id" : "PbZwSzmGAqACkBC5",
+        "type" : "Class"
+      },
+      "shape" : {
+        "id" : "bSwS0LmGAqACkAso_shape",
+        "type" : "Rectangle",
+        "x" : 505,
+        "y" : 140,
+        "width" : 136,
+        "height" : 78
+      }
+    }, {
+      "id" : "2SN10LmGAqACkBAp",
+      "type" : "GeneralizationView",
+      "modelElement" : {
+        "id" : "SSN10LmGAqACkBAo",
+        "type" : "Generalization"
+      },
+      "shape" : {
+        "id" : "2SN10LmGAqACkBAp_path",
+        "type" : "Path",
+        "points" : [ {
+          "x" : 464,
+          "y" : 387
+        }, {
+          "x" : 464,
+          "y" : 423
+        }, {
+          "x" : 306,
+          "y" : 423
+        }, {
+          "x" : 305,
+          "y" : 465
+        } ]
+      },
+      "source" : {
+        "id" : "Yh.F0LmGAqACkA4q",
+        "type" : "ClassView"
+      },
+      "target" : {
+        "id" : "EUe10LmGAqACkA_j",
+        "type" : "ClassView"
+      }
+    } ]
+  } ]
+}
