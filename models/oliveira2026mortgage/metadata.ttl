@@ -1,0 +1,43 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/ad9c2939-46e9-52c0-9bfc-d09092b235af/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Dutch Mortgage Ontology";
+    dct:issued "2026"^^xsd:gYear;
+    dcat:theme lcc:K;
+    skos:editorialNote "Developed by Y.digital and the Royal Dutch Association of Civil-law Notaries (KNB) as a real-world industry project in the Netherlands.";
+    dct:language "nl";
+    dcat:landingPage <https://w3id.org/dutch-mortgage-ontology/git>;
+    dct:license <https://spdx.org/licenses/Apache-2.0.html>;
+    dct:contributor <https://dblp.org/pid/212/6684>,
+                    <https://www.linkedin.com/in/jan-lyckle-bijlsma-9a0644192/>,
+                    <https://www.linkedin.com/in/wouter-siepman/>,
+                    <https://dblp.org/pid/393/9493>;
+    dcat:keyword "mortgage"@en,
+                 "mortgage deed"@en,
+                 "Dutch mortgage law"@en,
+                 "civil-law notaries"@en;
+    dct:source <https://www.researchgate.net/publication/410578109_An_Ontological_Approach_to_Digital_Transformation_Toward_a_Semantic_Infrastructure_at_the_Royal_Dutch_Association_of_Civil-law_Notaries>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability;
+    ocmv:context ocmv:Industry;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/oliveira2026mortgage"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-09-21T08:35:35.767218Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-09-21T08:35:35.767218Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/ad9c2939-46e9-52c0-9bfc-d09092b235af> dcat:distribution <https://w3id.org/ontouml-models/distribution/7992e52a-e9fa-53d2-ad46-a0772859ef1b/>,
+                      <https://w3id.org/ontouml-models/distribution/bde9219b-a15c-5bdf-bfd2-2bb4c956aca4/>,
+                      <https://w3id.org/ontouml-models/distribution/12d2231b-c724-549a-be8c-833ce0eac49b/>,
+                      <https://w3id.org/ontouml-models/distribution/39be5b93-a80d-5d4c-a520-1249e6f268f0/>,
+                      <https://w3id.org/ontouml-models/distribution/2fc25cc3-23ba-5219-841d-c52cfc6b7ca9/> .
