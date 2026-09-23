@@ -121,7 +121,7 @@ The initial `--fix` step can rewrite `metadata.yaml`, removing comments and chan
 
 ## Ontology generation and warnings
 
-The catalog wrapper uses the exact `ontouml-json2graph==2.0.1` dependency and the namespace `https://w3id.org/ontouml-models/model/<slug>#`. Project identity uses the JSON project ID under that namespace. If `metadata.yaml` declares one distinct language, generated names use that language tag; with multiple declared languages, names are untagged.
+The catalog wrapper uses the exact `ontouml-json2graph==2.0.2` dependency and the namespace `https://w3id.org/ontouml-models/model/<slug>#`. Project identity uses the JSON project ID under that namespace. If `metadata.yaml` declares one distinct language, generated names use that language tag; with multiple declared languages, names are untagged.
 
 The selected policies preserve invalid cardinalities and invalid stereotypes with warnings, omit unresolved diagram target links with warnings, and warn about unrepresented path-point order and property assignments. These warnings are nonfatal and remain visible in the workflow logs. Apart from the encoding normalization described above, generation does not enable automatic source correction or transformation-provenance sidecars. See the [ontology generator guide](generate-ontology-turtle.md) for the exact policy effects and validation contract.
 

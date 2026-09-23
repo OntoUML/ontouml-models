@@ -36,7 +36,7 @@ Metadata generation is **not a stateless YAML-only conversion**. Existing RDF ca
 
 Export from Visual Paradigm to JSON is a contributor/tool step, commonly using the [OntoUML Plugin for Visual Paradigm](https://purl.org/ontouml-vp). Repository automation starts from the supplied JSON; it does not establish native-project/JSON equivalence.
 
-The repository wrapper pins `ontouml-json2graph==2.0.1`. If `metadata.yaml` declares one distinct language, generated `ontouml:name` literals use that language tag. With several distinct languages, names are untagged; the wrapper does not infer a language for each name. See the [conversion contract and examples](../scripts/generate-ontology-turtle.md#transformation-contract).
+The repository wrapper pins `ontouml-json2graph==2.0.2`. If `metadata.yaml` declares one distinct language, generated `ontouml:name` literals use that language tag. With several distinct languages, names are untagged; the wrapper does not infer a language for each name. See the [conversion contract and examples](../scripts/generate-ontology-turtle.md#transformation-contract).
 
 Conversion can succeed with warnings: invalid cardinalities and stereotypes are preserved under the selected policies, unresolved diagram target links are omitted, path-point order is not represented, and property-assignment maps are omitted. Consult the [exact warning policies](../scripts/generate-ontology-turtle.md#explicit-warning-policies) before assuming RDF is a lossless substitute for JSON. A stored `ocmv:isComplete` value is not proof of lossless conversion or native-project equivalence.
 

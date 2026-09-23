@@ -42,7 +42,7 @@ except ImportError as exc:  # pragma: no cover - dependency failure only
 
 
 CONVERTER_DISTRIBUTION = "ontouml-json2graph"
-REQUIRED_CONVERTER_VERSION = "2.0.1"
+REQUIRED_CONVERTER_VERSION = "2.0.2"
 DEFAULT_MODELS_DIR = "models"
 MODEL_BASE_IRI = "https://w3id.org/ontouml-models/model"
 ONTOLOGY_JSON = "ontology.json"
