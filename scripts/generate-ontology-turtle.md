@@ -17,8 +17,8 @@ Install the repository's script dependencies from the repository root:
 python -m pip install -r scripts/requirements.txt
 ```
 
-The wrapper requires exactly `ontouml-json2graph==2.0.1` and refuses to run with
-a different installed converter version. JSON2Graph 2.0.1 declares Python
+The wrapper requires exactly `ontouml-json2graph==2.0.2` and refuses to run with
+a different installed converter version. JSON2Graph 2.0.2 declares Python
 `>=3.10,<4.0`; the catalog workflow currently uses Python 3.11, and this
 integration has also been validated with Python 3.13.
 

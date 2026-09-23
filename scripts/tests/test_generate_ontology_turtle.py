@@ -134,17 +134,17 @@ def install_fake_converter(
     return temporary_directories
 
 
-def test_installed_converter_version_is_exactly_201() -> None:
+def test_installed_converter_version_is_exactly_202() -> None:
     module = load_module()
 
-    assert module.installed_converter_version() == "2.0.1"
+    assert module.installed_converter_version() == "2.0.2"
 
 
 def test_converter_version_mismatch_is_rejected(monkeypatch: pytest.MonkeyPatch) -> None:
     module = load_module()
     monkeypatch.setattr(module, "version", lambda _name: "2.0.0")
 
-    with pytest.raises(module.GeneratorSetupError, match="Expected.*2.0.1.*2.0.0"):
+    with pytest.raises(module.GeneratorSetupError, match="Expected.*2.0.2.*2.0.0"):
         module.installed_converter_version()
 
 
@@ -437,7 +437,7 @@ def test_invalid_candidate_never_overwrites_existing_output(
     install_fake_converter(module, monkeypatch, text="not valid Turtle")
 
     with pytest.raises(module.DatasetGenerationError) as error:
-        module.process_dataset(dataset, module.Config(), "2.0.1")
+        module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert error.value.category == "invalid-candidate-turtle"
     assert target.read_bytes() == original
@@ -459,7 +459,7 @@ def test_wrong_namespace_never_overwrites_existing_output(
     install_fake_converter(module, monkeypatch, text=wrong)
 
     with pytest.raises(module.DatasetGenerationError) as error:
-        module.process_dataset(dataset, module.Config(), "2.0.1")
+        module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert error.value.category == "wrong-namespace"
     assert target.read_bytes() == original
@@ -472,7 +472,7 @@ def test_new_output_is_created_after_validation_and_temp_output_is_cleaned(
     dataset = write_dataset(tmp_path)
     temporary_directories = install_fake_converter(module, monkeypatch)
 
-    result = module.process_dataset(dataset, module.Config(), "2.0.1")
+    result = module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert result.existed is False
     assert result.changed is True
@@ -493,7 +493,7 @@ def test_normal_mode_preserves_isomorphic_existing_bytes(
     target.write_bytes(historical)
     install_fake_converter(module, monkeypatch, text=generated)
 
-    result = module.process_dataset(dataset, module.Config(), "2.0.1")
+    result = module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert result.isomorphic is True
     assert result.changed is False
@@ -512,7 +512,7 @@ def test_normal_mode_replaces_semantically_different_existing_graph(
     target.write_text(old, encoding="utf-8")
     install_fake_converter(module, monkeypatch, text=new)
 
-    result = module.process_dataset(dataset, module.Config(), "2.0.1")
+    result = module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert result.isomorphic is False
     assert result.changed is True
@@ -533,7 +533,7 @@ def test_force_materialization_installs_isomorphic_byte_different_candidate(
     result = module.process_dataset(
         dataset,
         module.Config(force_materialization=True),
-        "2.0.1",
+        "2.0.2",
     )
 
     assert result.isomorphic is True
@@ -562,7 +562,7 @@ def test_atomic_replacement_failure_preserves_existing_output(
     monkeypatch.setattr(module.os, "replace", fail_replace)
 
     with pytest.raises(module.DatasetGenerationError) as error:
-        module.process_dataset(dataset, module.Config(), "2.0.1")
+        module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert error.value.category == "atomic-replacement-failed"
     assert target.read_bytes() == original
@@ -687,7 +687,7 @@ def test_json_reporting_is_machine_readable(
 
     assert exit_code == 0
     assert payload["ok"] is True
-    assert payload["converter_version"] == "2.0.1"
+    assert payload["converter_version"] == "2.0.2"
     assert payload["errors"] == []
     assert payload["results"][0]["slug"] == "example-model"
     assert payload["results"][0]["language"] == "en"
@@ -725,9 +725,9 @@ def test_real_minimal_single_language_generation_and_noop_rerun(
     module = load_module()
     dataset = copy_fixture(tmp_path, "minimal-single-language")
 
-    first = module.process_dataset(dataset, module.Config(), "2.0.1")
+    first = module.process_dataset(dataset, module.Config(), "2.0.2")
     first_bytes = (dataset / "ontology.ttl").read_bytes()
-    second = module.process_dataset(dataset, module.Config(), "2.0.1")
+    second = module.process_dataset(dataset, module.Config(), "2.0.2")
     graph = Graph().parse(dataset / "ontology.ttl")
     names = list(graph.objects(None, module.ONTOUML.name))
 
@@ -746,13 +746,35 @@ def test_real_minimal_single_language_generation_and_noop_rerun(
     assert list(dataset.glob("*.provenance.ttl")) == []
 
 
+def test_real_multiline_description_round_trips_without_physical_trailing_whitespace(
+    tmp_path: Path,
+) -> None:
+    module = load_module()
+    dataset = write_dataset(tmp_path, slug="multiline-description")
+    source = dataset / "ontology.json"
+    source_json = json.loads(source.read_text(encoding="utf-8"))
+    description = "First line   \nSecond line \r\nThird line"
+    source_json["description"] = description
+    source.write_text(json.dumps(source_json), encoding="utf-8")
+
+    result = module.process_dataset(dataset, module.Config(), "2.0.2")
+    output = dataset / "ontology.ttl"
+    serialized = output.read_text(encoding="utf-8")
+    graph = Graph().parse(output)
+    project = URIRef(module.base_uri_for_slug(dataset.name) + "project-1")
+
+    assert result.written is True
+    assert not any(line.endswith((" ", "\t")) for line in serialized.splitlines())
+    assert (project, module.ONTOUML.description, Literal(description)) in graph
+
+
 def test_real_minimal_multilingual_generation_uses_untagged_names(
     tmp_path: Path,
 ) -> None:
     module = load_module()
     dataset = copy_fixture(tmp_path, "minimal-multilingual")
 
-    result = module.process_dataset(dataset, module.Config(), "2.0.1")
+    result = module.process_dataset(dataset, module.Config(), "2.0.2")
     graph = Graph().parse(dataset / "ontology.ttl")
     names = list(graph.objects(None, module.ONTOUML.name))
 
@@ -768,7 +790,7 @@ def test_real_policy_fixture_emits_and_applies_all_selected_policies(
     module = load_module()
     dataset = copy_fixture(tmp_path, "policy-warnings")
 
-    result = module.process_dataset(dataset, module.Config(), "2.0.1")
+    result = module.process_dataset(dataset, module.Config(), "2.0.2")
     diagnostics = "\n".join(result.diagnostics)
     graph = Graph().parse(dataset / "ontology.ttl")
     base = module.base_uri_for_slug(dataset.name)
@@ -821,7 +843,7 @@ def test_invalid_json_fixtures_fail_without_creating_output(
     dataset = copy_fixture(tmp_path, fixture_name)
 
     with pytest.raises(module.DatasetGenerationError) as error:
-        module.process_dataset(dataset, module.Config(), "2.0.1")
+        module.process_dataset(dataset, module.Config(), "2.0.2")
 
     assert error.value.category == category
     assert not (dataset / "ontology.ttl").exists()
@@ -836,7 +858,7 @@ def test_representative_catalog_dataset_converts_without_writing(slug: str) -> N
     result = module.process_dataset(
         dataset,
         module.Config(dry_run=True),
-        "2.0.1",
+        "2.0.2",
     )
 
     assert result.candidate_triples > 0
