@@ -1,0 +1,42 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/49c34b63-634e-5504-9d71-6d59dd15e45d/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Hazard Ontology 61508";
+    mod:acronym "HO61508";
+    dct:issued "2026"^^xsd:gYear;
+    dcat:theme lcc:T;
+    skos:editorialNote "The ontology was developed from IEC 61508:2010 and grounded in UFO using OntoUML. HO61508 provides an abstract, modular representation of hazard-related concepts intended for reuse and extension in domain-specific safety ontologies.";
+    dct:language "en";
+    dcat:landingPage <https://github.com/jochumsson/ho61508/>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/296/4350>;
+    dcat:keyword "functional safety"@en,
+                 "hazard"@en,
+                 "hazard analysis"@en,
+                 "safety engineering"@en,
+                 "safety standards"@en,
+                 "IEC 61508"@en;
+    dct:source <https://doi.org/10.3850/ESREL2026061419_esrel26-p26241-cd>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:Interoperability;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/jochumsson2026hazard"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-11-16T14:25:48.381456Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-11-16T14:25:48.381456Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/49c34b63-634e-5504-9d71-6d59dd15e45d> dcat:distribution <https://w3id.org/ontouml-models/distribution/9af759e5-1770-5a2b-a04a-5e61c99deed5/>,
+                      <https://w3id.org/ontouml-models/distribution/6d0a84ea-da50-553e-8737-73176e5d88a9/>,
+                      <https://w3id.org/ontouml-models/distribution/33b2f26b-1b9b-519a-b685-5cabf15a3241/>,
+                      <https://w3id.org/ontouml-models/distribution/7b799613-a478-552f-a60a-b637f86e6cf7/> .
