@@ -1,0 +1,39 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/99baf811-384e-53ca-b54c-5a26cafd706c/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "DBLP Project";
+    dct:issued "2023"^^xsd:gYear;
+    dcat:theme lcc:Z;
+    skos:editorialNote "Developed as a university course project to model DBLP bibliographic information in OntoUML. The author approved inclusion in the OntoUML/UFO Catalog under CC BY 4.0.";
+    dct:language "en";
+    dcat:landingPage <https://github.com/vitordbo/Web-Ontology-DBLP>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://orcid.org/0009-0009-0732-4300>;
+    dcat:keyword "bibliographic databases"@en,
+                 "scientific publications"@en,
+                 "academic publishing"@en,
+                 "research collaboration"@en,
+                 "dblp"@en;
+    mod:designedForTask ocmv:Learning,
+                        ocmv:InformationRetrieval;
+    ocmv:context ocmv:Classroom;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/duarte2023dblp"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-11-16T14:43:45.677532Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-11-16T14:43:45.677532Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/99baf811-384e-53ca-b54c-5a26cafd706c> dcat:distribution <https://w3id.org/ontouml-models/distribution/936473ae-88f8-5718-8b0d-a651fb6c49c5/>,
+                      <https://w3id.org/ontouml-models/distribution/0cb9c36b-dd67-52d6-8218-9997980aa5f1/>,
+                      <https://w3id.org/ontouml-models/distribution/fde1d1b1-cef4-5839-8b6f-346bd668c1de/>,
+                      <https://w3id.org/ontouml-models/distribution/61281b67-a7b6-50da-a7b7-570cb0220077/> .
