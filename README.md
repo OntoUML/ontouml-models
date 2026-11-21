@@ -18,7 +18,7 @@ Also known as the FAIR Model Catalog for Ontology-Driven Conceptual Modeling Res
 > **Current source of catalog data:** This GitHub repository is the catalog's actively maintained and regularly updated **storage, distribution, and contribution layer**. The separately operated [FAIR Data Point (FDP)](https://w3id.org/ontouml-models/fdp/) has not been updated since its initial release, is currently outdated, and has no planned update or synchronization work at this time. Use this repository and its releases for current catalog content. See the [documentation index](documentation/README.md) for the full reader paths.
 
 > [!NOTE]
-> **Community dashboard:** The existing [catalog dashboard](http://w3id.org/ontouml-models/dashboard) is a community-contributed companion project that provides another view of the catalog. It is independently operated, is not an official component of the OntoUML/UFO Catalog, and may lag behind the maintained GitHub repository. It remains linked here in recognition of that contribution.
+> **Community dashboard:** Explore the catalog's models through the [OntoUML/UFO Catalog Dashboard](http://w3id.org/ontouml-models/dashboard), a community-developed, independently maintained interactive companion that stays synchronized with the catalog's releases.
 
 ## Table of Contents
 
