@@ -1,0 +1,40 @@
+@prefix fdpo: <https://w3id.org/fdp/fdp-o#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix lcc: <http://id.loc.gov/authorities/classification/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ocmv: <https://w3id.org/ontouml-models/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/ontouml-models/model/e00917ec-96b9-56a4-b1c5-6b6c8900a264/> a dcat:Dataset, mod:SemanticArtefact, dcat:Resource;
+    dct:isPartOf <https://w3id.org/ontouml-models/catalog/b663ca18-8085-44a7-bcfe-2c2b5ba1faa8>;
+    dct:title "Cultivars Ontology";
+    mod:acronym "COnto";
+    dct:issued "2026"^^xsd:gYear;
+    dcat:theme lcc:S;
+    dct:language "en";
+    dcat:landingPage <https://github.com/lvnascimento/conto>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:contributor <https://dblp.org/pid/45/3567>,
+                    <https://dblp.org/pid/o/JosePalazzoMoreiradeOliveira>;
+    dcat:keyword "cultivars"@en,
+                 "urban agriculture"@en,
+                 "organic agriculture"@en;
+    dct:source <https://doi.org/10.5753/sbbd.2026.249515>;
+    mod:designedForTask ocmv:ConceptualClarification,
+                        ocmv:DataPublication,
+                        ocmv:InformationRetrieval;
+    ocmv:context ocmv:Research;
+    ocmv:representationStyle ocmv:OntoumlStyle;
+    ocmv:ontologyType ocmv:Domain;
+    ocmv:storageUrl "https://github.com/OntoUML/ontouml-models/tree/master/models/nascimento2026conto"^^xsd:anyURI;
+    fdpo:metadataIssued "2026-11-23T15:07:12.248896Z"^^xsd:dateTime;
+    fdpo:metadataModified "2026-11-23T15:07:12.248896Z"^^xsd:dateTime .
+
+<https://w3id.org/ontouml-models/model/e00917ec-96b9-56a4-b1c5-6b6c8900a264> dcat:distribution <https://w3id.org/ontouml-models/distribution/61e0dc53-fd18-5450-8dab-15f47936debc/>,
+                      <https://w3id.org/ontouml-models/distribution/4a6a2687-a716-5545-8945-9f2bf8a9fdf0/>,
+                      <https://w3id.org/ontouml-models/distribution/8dd312f7-94e1-52dd-b52f-d207ff9abd87/>,
+                      <https://w3id.org/ontouml-models/distribution/61870b38-bce8-5cbf-9ebf-1f767e5a4152/> .
